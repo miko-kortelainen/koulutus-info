@@ -1,0 +1,30 @@
+import { Button, Center, Heading, Highlight, Stack } from "@chakra-ui/react";
+import { HiArrowRight } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+
+export default function LandingPage() {
+  const navigate = useNavigate();
+
+  function navigateToQuestionnaire() {
+    navigate("/questionnaire");
+  }
+
+  return (
+    <Center h={"100vh"}>
+      <Stack gap={10}>
+        <Stack textAlign={"center"}>
+          <Heading size="6xl">
+            <Highlight query="sinun" styles={{ color: "blue.400" }}>
+              Löydä sinun alasi!
+            </Highlight>
+          </Heading>
+          <Heading>Käy läpi koko suomen korkeakoulutarjonta.</Heading>
+        </Stack>
+
+        <Button variant="surface" onClick={navigateToQuestionnaire}>
+          Aloitetaan! <HiArrowRight />
+        </Button>
+      </Stack>
+    </Center>
+  );
+}

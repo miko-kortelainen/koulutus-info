@@ -1,0 +1,292 @@
+[
+  {
+    "title": "Humanistinen ala",
+    "description": "Viittomakieli ja tulkkaus",
+    "tutkintonimike": "tulkki (AMK)"
+  },
+  {
+    "title": "Humanistinen ala",
+    "description": "Yhteisöpedagogiikka",
+    "tutkintonimike": "yhteisöpedagogi (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Käsityö ja muotoilu",
+    "tutkintonimike": "artenomi (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Kuvataide",
+    "tutkintonimike": "kuvataiteilija (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Konservointi",
+    "tutkintonimike": "konservaattori (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Kulttuurituotanto",
+    "tutkintonimike": "kulttuurituottaja (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Viestintä ja media",
+    "tutkintonimike": "medianomi (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Muotoilu",
+    "tutkintonimike": "muotoilija (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Musiikkipedagogiikka",
+    "tutkintonimike": "musiikkipedagogi (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Musiikki",
+    "tutkintonimike": "muusikko (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Tanssinopetus",
+    "tutkintonimike": "tanssinopettaja (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Teatteri-ilmaisun ohjaus",
+    "tutkintonimike": "teatteri-ilmaisun ohjaaja (AMK)"
+  },
+  {
+    "title": "Kulttuuriala",
+    "description": "Vaatetusala",
+    "tutkintonimike": "vestonomi (AMK)"
+  },
+  {
+    "title": "Liiketalous",
+    "description": "Liiketalous",
+    "tutkintonimike": "tradenomi (AMK)"
+  },
+  {
+    "title": "Liiketalous",
+    "description": "Tietojenkäsittely",
+    "tutkintonimike": "tradenomi (AMK)"
+  },
+  {
+    "title": "Liiketalous",
+    "description": "Kirjasto- ja tietopalveluala",
+    "tutkintonimike": "tradenomi (AMK)"
+  },
+  {
+    "title": "Liiketalous",
+    "description": "Logistiikka",
+    "tutkintonimike": "tradenomi (AMK)"
+  },
+  {
+    "title": "Liiketalous",
+    "description": "Turvallisuusala",
+    "tutkintonimike": "tradenomi (AMK)"
+  },
+  {
+    "title": "Liiketalous",
+    "description": "Johdon assistenttikoulutus",
+    "tutkintonimike": "tradenomi (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Energia- ja ympäristötekniikka",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Tieto- ja viestintätekniikka",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Konetekniikka",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Prosessi- ja materiaalitekniikka",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Rakennus- ja yhdyskuntatekniikka",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Maanmittaus",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Sähkö- ja automaatiotekniikka",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Tuotantotalous",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Logistiikka, Palo- ja pelastusala",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Laboratorioala",
+    "tutkintonimike": "laboratorioanalyytikko (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Rakennusarkkitehtuuri",
+    "tutkintonimike": "rakennusarkkitehti (AMK)"
+  },
+  {
+    "title": "Tekniikka",
+    "description": "Rakennusala",
+    "tutkintonimike": "rakennusmestari (AMK)"
+  },
+  {
+    "title": "Merenkulku",
+    "description": "Merenkulku",
+    "tutkintonimike": "merikapteeni (AMK)"
+  },
+  {
+    "title": "Merenkulku",
+    "description": "Merenkulkutekniikka",
+    "tutkintonimike": "insinööri (AMK)"
+  },
+  {
+    "title": "Luonnonvara-ala",
+    "description": "Maatalous",
+    "tutkintonimike": "agrologi (AMK)"
+  },
+  {
+    "title": "Luonnonvara-ala",
+    "description": "Puutarhatalous",
+    "tutkintonimike": "hortonomi (AMK)"
+  },
+  {
+    "title": "Luonnonvara-ala",
+    "description": "Metsätalous",
+    "tutkintonimike": "metsätalousinsinööri (AMK)"
+  },
+  {
+    "title": "Luonnonvara-ala",
+    "description": "Ympäristöala",
+    "tutkintonimike": "ympäristösuunnittelija (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Apuvälinetekniikka",
+    "tutkintonimike": "apuvälineteknikko (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Laboratorioanalyysi",
+    "tutkintonimike": "bioanalyytikko (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Ensihoito",
+    "tutkintonimike": "ensihoitaja (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Fysioterapia",
+    "tutkintonimike": "fysioterapeutti (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Vanhustyö",
+    "tutkintonimike": "geronomi (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Hammastekniikka",
+    "tutkintonimike": "hammasteknikko (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Jalkaterapia",
+    "tutkintonimike": "jalkaterapeutti (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Kuntoutusohjaus",
+    "tutkintonimike": "kuntoutuksen ohjaaja (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Kätilötyö",
+    "tutkintonimike": "kätilö (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Naprapatia",
+    "tutkintonimike": "naprapaatti (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Optometria",
+    "tutkintonimike": "optometristi (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Osteopatia",
+    "tutkintonimike": "osteopaatti (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Radiografia ja sädehoito",
+    "tutkintonimike": "röntgenhoitaja (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Sairaanhoito",
+    "tutkintonimike": "sairaanhoitaja (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Sosiaaliala",
+    "tutkintonimike": "sosionomi (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Suun terveydenhuolto",
+    "tutkintonimike": "suuhygienisti (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Terveydenhoito",
+    "tutkintonimike": "terveydenhoitaja (AMK)"
+  },
+  {
+    "title": "Sosiaali- ja terveysala",
+    "description": "Toimintaterapia",
+    "tutkintonimike": "toimintaterapeutti (AMK)"
+  },
+  {
+    "title": "Kauneudenhoitoala",
+    "description": "Estetiikka ja kosmetiikka",
+    "tutkintonimike": "estenomi (AMK)"
+  },
+  {
+    "title": "Liikunta-ala",
+    "description": "Liikunnanohjaus",
+    "tutkintonimike": "liikunnanohjaaja (AMK)"
+  },
+  {
+    "title": "Matkailu- ja ravitsemisala",
+    "description": "Majoitus- ja ravitsemispalvelut",
+    "tutkintonimike": "restonomi (AMK)"
+  }
+]
