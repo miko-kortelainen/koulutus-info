@@ -1,15 +1,10 @@
 import { Box, Center, Heading, Progress, Stack, Text } from "@chakra-ui/react";
 import QuestionnaireCard from "./QuestionnaireCard";
 import { useState } from "react";
-
-type Question = {
-  title: string;
-  description: string;
-  tutkintonimike: string;
-};
+import { type DegreeData } from "./types/degree";
 
 import questionsJson from "./questions.json";
-const questions: Question[] = questionsJson;
+const questions: DegreeData[] = questionsJson;
 
 export default function QuestionnairePage() {
   const [allQuestionsAnswered, setAllQuestionsAnswered] = useState<boolean>(false);
@@ -19,11 +14,12 @@ export default function QuestionnairePage() {
   const [scores, setScores] = useState<Record<string, number>>({});
 
   function handleNextQuestion(a: "yes" | "no" | "maybe") {
-    const { tutkintonimike } = currentQuestion;
+    const { paaasiallinenTutkintoHakukohde } = currentQuestion;
 
     setScores((prev) => ({
       ...prev,
-      [tutkintonimike]: (prev[tutkintonimike] ?? 0) + (a === "yes" ? 2 : a === "maybe" ? 1 : -1),
+      [paaasiallinenTutkintoHakukohde]:
+        (prev[paaasiallinenTutkintoHakukohde] ?? 0) + (a === "yes" ? 2 : a === "maybe" ? 1 : -1),
     }));
 
     if (currentQuestionIndex === questions.length - 1) {
@@ -68,11 +64,7 @@ export default function QuestionnairePage() {
   return (
     <Center h="100vh">
       <Stack gap={4}>
-        <QuestionnaireCard
-          title={currentQuestion.title}
-          description={currentQuestion.description}
-          onAnswer={(a) => handleNextQuestion(a)}
-        />
+        <QuestionnaireCard degree={currentQuestion} onAnswer={(a) => handleNextQuestion(a)} />
         <Box opacity={currentQuestionIndex > 0 ? "75%" : "0%"} transition={"opacity 500ms ease-out"}>
           {progressBar}
         </Box>
