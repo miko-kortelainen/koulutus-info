@@ -1,10 +1,14 @@
-import { Box, Center, Heading, Progress, Stack, Text } from "@chakra-ui/react";
+import { Box, Center, Heading, Progress, Stack } from "@chakra-ui/react";
 import QuestionnaireCard from "./QuestionnaireCard";
 import { useState } from "react";
-import { type DegreeData } from "./types/degree";
+import { type BasicDegreeData, type DegreeData } from "./types/degree";
 
-import questionsJson from "./questions.json";
-const questions: DegreeData[] = questionsJson;
+import questionsJson from "./koulutukset.json";
+import degreeDataJson from "./questions.json";
+import DegreeCard from "./DegreeCard";
+
+const questions: BasicDegreeData[] = questionsJson;
+const degreeData: DegreeData[] = degreeDataJson;
 
 export default function QuestionnairePage() {
   const [allQuestionsAnswered, setAllQuestionsAnswered] = useState<boolean>(false);
@@ -14,12 +18,11 @@ export default function QuestionnairePage() {
   const [scores, setScores] = useState<Record<string, number>>({});
 
   function handleNextQuestion(a: "yes" | "no" | "maybe") {
-    const { paaasiallinenTutkintoHakukohde } = currentQuestion;
+    const { koulutus } = currentQuestion;
 
     setScores((prev) => ({
       ...prev,
-      [paaasiallinenTutkintoHakukohde]:
-        (prev[paaasiallinenTutkintoHakukohde] ?? 0) + (a === "yes" ? 2 : a === "maybe" ? 1 : -1),
+      [koulutus]: (prev[koulutus] ?? 0) + (a === "yes" ? 2 : a === "maybe" ? 1 : -1),
     }));
 
     if (currentQuestionIndex === questions.length - 1) {
@@ -46,24 +49,37 @@ export default function QuestionnairePage() {
       .filter(([, score]) => score > 0);
 
     return (
-      <Center h="100vh">
+      <Center h="100vh" px={8}>
         <Stack>
-          <Heading>Sinulle sopivat alat ovat:</Heading>
-          <Stack>
-            {ranked.map(([tutkintonimike, score]) => (
-              <Text key={tutkintonimike}>
-                {tutkintonimike} : {score}
-              </Text>
-            ))}
-          </Stack>
+          <Heading textAlign="center">Sinulle sopivat alat ovat:</Heading>
+          <Box maxH="900px" overflow="scroll">
+            <Stack px={5}>
+              {ranked.map(([tutkintonimike, score]) => {
+                // Etsitään kaikki ne kohteet, joiden hakukohde-kenttä sisältää tutkintonimikkeen
+                const filteredData = degreeData.filter((item) =>
+                  item.hakukohde.toLowerCase().includes(tutkintonimike.toLowerCase()),
+                );
+
+                return (
+                  <DegreeCard
+                    key={tutkintonimike}
+                    tutkintonimike={tutkintonimike}
+                    score={score}
+                    // Passataan suodatettu lista propseina (jos DegreeCard ottaa vastaan listan)
+                    degreeData={filteredData}
+                  />
+                );
+              })}
+            </Stack>
+          </Box>
         </Stack>
       </Center>
     );
   }
 
   return (
-    <Center h="100vh">
-      <Stack gap={4}>
+    <Center h="100vh" px={8}>
+      <Stack gap={4} maxWidth={"700px"}>
         <QuestionnaireCard degree={currentQuestion} onAnswer={(a) => handleNextQuestion(a)} />
         <Box opacity={currentQuestionIndex > 0 ? "75%" : "0%"} transition={"opacity 500ms ease-out"}>
           {progressBar}
