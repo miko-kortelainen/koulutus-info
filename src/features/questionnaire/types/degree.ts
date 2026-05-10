@@ -19,3 +19,11 @@ export type DegreeData = {
   ensisijaisetHakijatLkm: number;
   tietojoukkoPaivitettyPvm: string;
 };
+
+export type BasicDegreeData = {
+  title: string;
+  description: string;
+  tags: string[];
+  koulutus: string;
+  koulut: string[];
+};
