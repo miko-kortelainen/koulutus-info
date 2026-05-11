@@ -48,8 +48,8 @@ export default function QuestionnairePage() {
     </Progress.Root>
   );
 
-  const ListOfSchoolsForDegree = selectedDegree?.map((d) => (
-    <Card.Root key={d.hakukohde + d.toimipiste}>
+  const ListOfSchoolsForDegree = selectedDegree?.map((d, index) => (
+    <Card.Root key={`${d.hakukohde}, ${d.toimipiste}, ${index}`}>
       <Card.Header textWrap={"pretty"}>{d.hakukohde}</Card.Header>
       <Card.Body>
         <Stack>
