@@ -1,4 +1,5 @@
-import { Box, Center, Heading, Progress, Stack } from "@chakra-ui/react";
+import { Badge, Box, Card, Center, Group, Progress, Separator, Stack } from "@chakra-ui/react";
+import { HiLocationMarker, HiChartBar } from "react-icons/hi";
 import QuestionnaireCard from "./QuestionnaireCard";
 import { useState } from "react";
 import { type BasicDegreeData, type DegreeData } from "./types/degree";
@@ -11,11 +12,15 @@ const questions: BasicDegreeData[] = questionsJson;
 const degreeData: DegreeData[] = degreeDataJson;
 
 export default function QuestionnairePage() {
+  const [selectedDegree, setSelectedDegree] = useState<DegreeData[] | null>();
   const [allQuestionsAnswered, setAllQuestionsAnswered] = useState<boolean>(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const currentQuestion = questions[currentQuestionIndex];
-
   const [scores, setScores] = useState<Record<string, number>>({});
+
+  function handleShowDegreeInfo(degreeData: DegreeData[]) {
+    setSelectedDegree(degreeData);
+  }
 
   function handleNextQuestion(a: "yes" | "no" | "maybe") {
     const { koulutus } = currentQuestion;
@@ -43,6 +48,31 @@ export default function QuestionnairePage() {
     </Progress.Root>
   );
 
+  const ListOfSchoolsForDegree = selectedDegree?.map((d) => (
+    <Card.Root key={d.hakukohde + d.toimipiste}>
+      <Card.Header textWrap={"pretty"}>{d.hakukohde}</Card.Header>
+      <Card.Body>
+        <Stack>
+          <Badge colorPalette={"green"} mr={"auto"}>
+            <HiLocationMarker /> {d.korkeakoulu}
+          </Badge>
+
+          <Group>
+            <Badge colorPalette={"blue"}>
+              <HiChartBar />
+              {d.kaikkiHakijatLkm} hakijaa
+            </Badge>
+
+            <Badge colorPalette={"blue"}>
+              <HiChartBar />
+              {d.aloituspaikatLkm} aloituspaikkaa
+            </Badge>
+          </Group>
+        </Stack>
+      </Card.Body>
+    </Card.Root>
+  ));
+
   if (allQuestionsAnswered) {
     const ranked = Object.entries(scores)
       .sort(([, a], [, b]) => b - a)
@@ -50,12 +80,10 @@ export default function QuestionnairePage() {
 
     return (
       <Center h="100vh" px={8}>
-        <Stack>
-          <Heading textAlign="center">Sinulle sopivat alat ovat:</Heading>
-          <Box maxH="900px" overflow="scroll">
-            <Stack px={5}>
+        <Stack direction="row" w="1000px" alignItems={"center"}>
+          <Box h="900px" overflow="scroll" width="100%">
+            <Stack px={4} gap={6}>
               {ranked.map(([tutkintonimike, score]) => {
-                // Etsitään kaikki ne kohteet, joiden hakukohde-kenttä sisältää tutkintonimikkeen
                 const filteredData = degreeData.filter((item) =>
                   item.hakukohde.toLowerCase().includes(tutkintonimike.toLowerCase()),
                 );
@@ -65,11 +93,19 @@ export default function QuestionnairePage() {
                     key={tutkintonimike}
                     tutkintonimike={tutkintonimike}
                     score={score}
-                    // Passataan suodatettu lista propseina (jos DegreeCard ottaa vastaan listan)
                     degreeData={filteredData}
+                    onShowMore={handleShowDegreeInfo}
                   />
                 );
               })}
+            </Stack>
+          </Box>
+
+          <Separator orientation="vertical" height="980px" />
+
+          <Box h="900px" overflow="scroll" width="100%">
+            <Stack px={4} gap={6}>
+              {ListOfSchoolsForDegree}
             </Stack>
           </Box>
         </Stack>
