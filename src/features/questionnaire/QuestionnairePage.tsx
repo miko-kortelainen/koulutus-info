@@ -1,29 +1,28 @@
-import { Box, Center, Heading, Progress, Stack, Text } from "@chakra-ui/react";
-import QuestionnaireCard from "./QuestionnaireCard";
 import { useState } from "react";
+import { Box, Center, Progress, Stack } from "@chakra-ui/react";
+import { type BasicDegreeData, type DegreeData } from "./types/degree";
+import QuestionnaireCard from "./QuestionnaireCard";
+import ResultsPage from "./ResultsPage";
 
-type Question = {
-  title: string;
-  description: string;
-  tutkintonimike: string;
-};
+import questionsJson from "./koulutukset.json";
+import degreeDataJson from "./questions.json";
 
-import questionsJson from "./questions.json";
-const questions: Question[] = questionsJson;
+const questions: BasicDegreeData[] = questionsJson;
+const degreeData: DegreeData[] = degreeDataJson;
 
 export default function QuestionnairePage() {
+  const [selectedDegree, setSelectedDegree] = useState<DegreeData[] | undefined>();
   const [allQuestionsAnswered, setAllQuestionsAnswered] = useState<boolean>(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const currentQuestion = questions[currentQuestionIndex];
-
   const [scores, setScores] = useState<Record<string, number>>({});
 
   function handleNextQuestion(a: "yes" | "no" | "maybe") {
-    const { tutkintonimike } = currentQuestion;
+    const { koulutus } = currentQuestion;
 
     setScores((prev) => ({
       ...prev,
-      [tutkintonimike]: (prev[tutkintonimike] ?? 0) + (a === "yes" ? 2 : a === "maybe" ? 1 : -1),
+      [koulutus]: (prev[koulutus] ?? 0) + (a === "yes" ? 2 : a === "maybe" ? 1 : -1),
     }));
 
     if (currentQuestionIndex === questions.length - 1) {
@@ -34,7 +33,7 @@ export default function QuestionnairePage() {
     setCurrentQuestionIndex((prev) => prev + 1);
   }
 
-  const progressBar = (
+  const QuestionsProgress = (
     <Progress.Root value={(currentQuestionIndex / questions.length) * 100}>
       <Progress.Track>
         <Progress.Range />
@@ -45,36 +44,27 @@ export default function QuestionnairePage() {
   );
 
   if (allQuestionsAnswered) {
-    const ranked = Object.entries(scores)
+    // degrees what user deemed as interesting.
+    const interests = Object.entries(scores)
       .sort(([, a], [, b]) => b - a)
       .filter(([, score]) => score > 0);
 
     return (
-      <Center h="100vh">
-        <Stack>
-          <Heading>Sinulle sopivat alat ovat:</Heading>
-          <Stack>
-            {ranked.map(([tutkintonimike, score]) => (
-              <Text key={tutkintonimike}>
-                {tutkintonimike} : {score}
-              </Text>
-            ))}
-          </Stack>
-        </Stack>
-      </Center>
+      <ResultsPage
+        degreeData={degreeData}
+        interests={interests}
+        selectedDegree={selectedDegree}
+        onShowMore={(degreeData) => setSelectedDegree(degreeData)}
+      />
     );
   }
 
   return (
-    <Center h="100vh">
-      <Stack gap={4}>
-        <QuestionnaireCard
-          title={currentQuestion.title}
-          description={currentQuestion.description}
-          onAnswer={(a) => handleNextQuestion(a)}
-        />
+    <Center h="100vh" px={8} overflow={"hidden"}>
+      <Stack gap={4} maxWidth="700px" width="100%">
+        <QuestionnaireCard degree={currentQuestion} onAnswer={(a) => handleNextQuestion(a)} />
         <Box opacity={currentQuestionIndex > 0 ? "75%" : "0%"} transition={"opacity 500ms ease-out"}>
-          {progressBar}
+          {QuestionsProgress}
         </Box>
       </Stack>
     </Center>
