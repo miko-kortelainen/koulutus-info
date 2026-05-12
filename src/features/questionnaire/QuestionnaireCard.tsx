@@ -1,6 +1,6 @@
 import { Card, Text, Button, Heading, Stack, Badge } from "@chakra-ui/react";
-
 import { HiOutlineArrowSmDown, HiOutlineArrowSmUp } from "react-icons/hi";
+
 import { type BasicDegreeData } from "./types/degree";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 
 export default function QuestionnaireCard({ degree, onAnswer }: Props) {
   const DegreeTags = (
-    <Stack direction="row" gap={4}>
+    <Stack direction="row" gap={4} flexWrap={"wrap"}>
       {degree.tags.map((tag) => (
         <Badge key={tag} size="lg" width="fit" colorPalette={"cyan"}>
           {tag}
