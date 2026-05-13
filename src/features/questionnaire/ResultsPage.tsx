@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Card, Center, Group, Heading, Separator, Stack } from "@chakra-ui/react";
+import { Badge, Box, Card, Center, Group, Heading, Separator, Stack } from "@chakra-ui/react";
 import { HiLocationMarker, HiChartBar } from "react-icons/hi";
 import type { DegreeData } from "./types/degree";
 import DegreeCard from "./DegreeCard";
@@ -32,19 +32,13 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
               {d.aloituspaikatLkm} aloituspaikkaa
             </Badge>
           </Group>
-          {/* https://opintopolku.fi/konfo/fi/haku/XXXX?koulutustyyppi=amk-alempi */}
-          <Button size={"xs"} variant={"outline"} asChild>
-            <a href={`https://opintopolku.fi/konfo/fi/haku/${d.hakukohde}?koulutustyyppi=amk-alempi`}>
-              Etsi opintopolusta
-            </a>
-          </Button>
         </Stack>
       </Card.Body>
     </Card.Root>
   ));
 
   return (
-    <Center h="100vh" px={8}>
+    <Center h="100%" px={8}>
       <Stack direction="row" w="1000px" alignItems="center">
         <Box width="100%">
           <Heading textAlign="center" size="3xl" pb={4}>

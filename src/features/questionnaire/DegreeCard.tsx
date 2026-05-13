@@ -1,5 +1,5 @@
 import { Button, Card, Heading, Stack } from "@chakra-ui/react";
-import { HiChevronRight } from "react-icons/hi";
+import { HiChevronRight, HiExternalLink } from "react-icons/hi";
 import { type DegreeData } from "./types/degree";
 
 type Props = {
@@ -15,12 +15,24 @@ export default function DegreeCard({ tutkintonimike, degreeData, onShowMore }: P
       <Card.Header>
         <Stack direction="row">
           <Heading mr={"auto"}>{tutkintonimike}</Heading>
-          <Button size="xs" variant="outline" onClick={() => onShowMore(degreeData)}>
-            Koulutukset <HiChevronRight />
-          </Button>
         </Stack>
       </Card.Header>
-      <Card.Body></Card.Body>
+      <Card.Body>
+        <Stack direction="row">
+          <Button size="xs" variant="outline" asChild>
+            <a
+              target="_blank"
+              href={`https://opintopolku.fi/konfo/fi/haku/${tutkintonimike}?koulutustyyppi=amk-alempi`}
+            >
+              Etsi opintopolusta
+              <HiExternalLink />
+            </a>
+          </Button>
+          <Button colorPalette="green" size="xs" variant="outline" onClick={() => onShowMore(degreeData)} ml={"auto"}>
+            Näytä koulutukset <HiChevronRight />
+          </Button>
+        </Stack>
+      </Card.Body>
     </Card.Root>
   );
 }

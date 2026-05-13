@@ -10,7 +10,7 @@ export default function LandingPage() {
   }
 
   return (
-    <Center h={"100vh"}>
+    <Center h="100%">
       <Stack gap={10}>
         <Stack textAlign={"center"}>
           <Heading size="6xl">
