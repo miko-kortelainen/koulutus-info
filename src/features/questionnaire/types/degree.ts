@@ -1,10 +1,13 @@
 export type DegreeData = {
-  title: string;
-  description: string;
   koulutuksenAlkamisvuosi: number;
+  koulutuksenAlkamiskausi: "Syksy" | "Kevät" | string;
   hakukohde: string;
   hakutapa: string;
+  koulutusasteTaso1: string;
   koulutusasteTaso2: string;
+  koulutusalaTaso1: string;
+  koulutusalaTaso3: string;
+  okmOhjauksenAla: string;
   paaasiallinenTutkintoHakukohde: string;
   koulutuksenKieli: string;
   maakuntaHakukohde: string;
@@ -12,11 +15,10 @@ export type DegreeData = {
   sektori: string;
   korkeakoulu: string;
   toimipiste: string;
-  kooditPaaasiallinenTutkintoHakukohde: string;
   kooditHakukohde: string;
   aloituspaikatLkm: number;
-  kaikkiHakijatLkm: number;
-  ensisijaisetHakijatLkm: number;
+  kaikkiHakijatLkm: number | null;
+  ensisijaisetHakijatLkm: number | null;
   tietojoukkoPaivitettyPvm: string;
 };
 
