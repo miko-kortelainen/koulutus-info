@@ -63,7 +63,7 @@ export default function QuestionnairePage() {
     <Center h="100%">
       <Stack gap={4} maxWidth="700px" width="100%">
         <QuestionnaireCard degree={currentQuestion} onAnswer={(a) => handleNextQuestion(a)} />
-        <Box opacity={currentQuestionIndex > 0 ? "75%" : "0%"} transition={"opacity 500ms ease-out"}>
+        <Box opacity={currentQuestionIndex > 0 ? "75%" : "0%"} transition="opacity 500ms ease-out">
           {QuestionsProgress}
         </Box>
       </Stack>

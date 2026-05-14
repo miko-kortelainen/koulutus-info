@@ -12,7 +12,7 @@ export default function LandingPage() {
   return (
     <Center h="100%">
       <Stack gap={10}>
-        <Stack textAlign={"center"}>
+        <Stack textAlign="center">
           <Heading size="6xl">
             <Highlight query="sinun" styles={{ color: "blue.400" }}>
               Löydä sinun alasi!
