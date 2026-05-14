@@ -14,20 +14,20 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
   const ListOfSchools = selectedDegree?.map((d, index) => (
     // school card component
     <Card.Root key={`${d.hakukohde}, ${d.toimipiste}, ${index}`}>
-      <Card.Header textWrap={"pretty"}>{d.hakukohde}</Card.Header>
+      <Card.Header textWrap="pretty">{d.hakukohde}</Card.Header>
       <Card.Body>
         <Stack>
-          <Badge colorPalette={"green"} mr={"auto"}>
+          <Badge colorPalette="green" mr="auto">
             <HiLocationMarker /> {d.korkeakoulu}
           </Badge>
 
           <Group>
-            <Badge colorPalette={"blue"}>
+            <Badge colorPalette="blue">
               <HiChartBar />
               {d.kaikkiHakijatLkm} hakijaa
             </Badge>
 
-            <Badge colorPalette={"blue"}>
+            <Badge colorPalette="blue">
               <HiChartBar />
               {d.aloituspaikatLkm} aloituspaikkaa
             </Badge>
@@ -46,7 +46,7 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
           </Heading>
           <Separator mb={6} />
 
-          <Stack px={4} gap={6} h="900px" overflow="scroll" overflowX="hidden">
+          <Stack px={4} gap={6} h="900px" overflow="scroll" overflowX="hidden" data-cy="results-list">
             {interests.map(([tutkintonimike, score]) => {
               const filteredData = degreeData.filter((item) =>
                 item.hakukohde.toLowerCase().includes(tutkintonimike.toLowerCase()),
@@ -67,7 +67,7 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
 
         <Separator orientation="vertical" height="980px" />
 
-        <Box width="100%">
+        <Box width="100%" data-cy="results-page">
           <Heading textAlign="center" size="3xl" pb={4}>
             Koulutukset
           </Heading>

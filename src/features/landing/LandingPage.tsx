@@ -12,8 +12,8 @@ export default function LandingPage() {
   return (
     <Center h="100%">
       <Stack gap={10}>
-        <Stack textAlign={"center"}>
-          <Heading size="6xl">
+        <Stack textAlign="center">
+          <Heading size="6xl" data-cy="landing-page-header">
             <Highlight query="sinun" styles={{ color: "blue.400" }}>
               Löydä sinun alasi!
             </Highlight>
@@ -21,7 +21,7 @@ export default function LandingPage() {
           <Heading>Käy läpi koko suomen korkeakoulutarjonta.</Heading>
         </Stack>
 
-        <Button variant="surface" onClick={navigateToQuestionnaire}>
+        <Button variant="surface" onClick={navigateToQuestionnaire} data-cy="landing-page-start-button">
           Aloitetaan! <HiArrowRight />
         </Button>
       </Stack>
