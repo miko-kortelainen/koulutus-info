@@ -20,7 +20,7 @@ export default function QuestionnaireCard({ degree, onAnswer }: Props) {
   );
 
   return (
-    <Card.Root variant="elevated" p={4} textAlign="center" gap={2}>
+    <Card.Root variant="elevated" p={4} textAlign="center" gap={2} data-cy="questionnaire-card">
       <Card.Header textAlign="left">
         <Heading size="2xl" textWrap="balance">
           {degree.title}
@@ -38,14 +38,14 @@ export default function QuestionnaireCard({ degree, onAnswer }: Props) {
       <Card.Footer>
         <Stack flex={1} gap={6}>
           <Stack direction="row" gap={6}>
-            <Button flex={1} onClick={() => onAnswer("no")} colorPalette="red">
+            <Button flex={1} onClick={() => onAnswer("no")} colorPalette="red" data-cy="question-button-no">
               Ei kiitos <HiOutlineArrowSmDown />
             </Button>
-            <Button flex={1} onClick={() => onAnswer("yes")} colorPalette="green">
+            <Button flex={1} onClick={() => onAnswer("yes")} colorPalette="green" data-cy="question-button-yes">
               Jatkoon! <HiOutlineArrowSmUp />
             </Button>
           </Stack>
-          <Button variant="surface" onClick={() => onAnswer("maybe")}>
+          <Button variant="surface" onClick={() => onAnswer("maybe")} data-cy="question-button-maybe">
             En osaa sanoa
           </Button>
         </Stack>
