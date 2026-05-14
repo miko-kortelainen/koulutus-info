@@ -34,7 +34,7 @@ export default function QuestionnairePage() {
   }
 
   const QuestionsProgress = (
-    <Progress.Root value={(currentQuestionIndex / questions.length) * 100}>
+    <Progress.Root value={(currentQuestionIndex / questions.length) * 100} data-cy="question-page-progress-bar">
       <Progress.Track>
         <Progress.Range />
       </Progress.Track>

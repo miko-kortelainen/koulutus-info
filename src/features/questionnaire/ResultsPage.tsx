@@ -46,7 +46,7 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
           </Heading>
           <Separator mb={6} />
 
-          <Stack px={4} gap={6} h="900px" overflow="scroll" overflowX="hidden">
+          <Stack px={4} gap={6} h="900px" overflow="scroll" overflowX="hidden" data-cy="results-list">
             {interests.map(([tutkintonimike, score]) => {
               const filteredData = degreeData.filter((item) =>
                 item.hakukohde.toLowerCase().includes(tutkintonimike.toLowerCase()),
@@ -67,7 +67,7 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
 
         <Separator orientation="vertical" height="980px" />
 
-        <Box width="100%">
+        <Box width="100%" data-cy="results-page">
           <Heading textAlign="center" size="3xl" pb={4}>
             Koulutukset
           </Heading>
