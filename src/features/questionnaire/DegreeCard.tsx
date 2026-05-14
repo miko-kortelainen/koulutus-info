@@ -14,7 +14,7 @@ export default function DegreeCard({ tutkintonimike, degreeData, onShowMore }: P
     <Card.Root>
       <Card.Header>
         <Stack direction="row">
-          <Heading mr={"auto"}>{tutkintonimike}</Heading>
+          <Heading mr="auto">{tutkintonimike}</Heading>
         </Stack>
       </Card.Header>
       <Card.Body>
@@ -28,7 +28,7 @@ export default function DegreeCard({ tutkintonimike, degreeData, onShowMore }: P
               <HiExternalLink />
             </a>
           </Button>
-          <Button colorPalette="green" size="xs" variant="outline" onClick={() => onShowMore(degreeData)} ml={"auto"}>
+          <Button colorPalette="green" size="xs" variant="outline" onClick={() => onShowMore(degreeData)} ml="auto">
             Näytä koulutukset <HiChevronRight />
           </Button>
         </Stack>
