@@ -14,20 +14,20 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
   const ListOfSchools = selectedDegree?.map((d, index) => (
     // school card component
     <Card.Root key={`${d.hakukohde}, ${d.toimipiste}, ${index}`}>
-      <Card.Header textWrap={"pretty"}>{d.hakukohde}</Card.Header>
+      <Card.Header textWrap="pretty">{d.hakukohde}</Card.Header>
       <Card.Body>
         <Stack>
-          <Badge colorPalette={"green"} mr={"auto"}>
+          <Badge colorPalette="green" mr="auto">
             <HiLocationMarker /> {d.korkeakoulu}
           </Badge>
 
           <Group>
-            <Badge colorPalette={"blue"}>
+            <Badge colorPalette="blue">
               <HiChartBar />
               {d.kaikkiHakijatLkm} hakijaa
             </Badge>
 
-            <Badge colorPalette={"blue"}>
+            <Badge colorPalette="blue">
               <HiChartBar />
               {d.aloituspaikatLkm} aloituspaikkaa
             </Badge>
