@@ -1,5 +1,14 @@
-import { Badge, Box, Card, Center, Group, Heading, Separator, Stack } from "@chakra-ui/react";
-import { HiLocationMarker, HiChartBar } from "react-icons/hi";
+import {
+  Badge,
+  Box,
+  Card,
+  Center,
+  Group,
+  Heading,
+  Separator,
+  Stack,
+} from "@chakra-ui/react";
+import { HiLocationMarker, HiChartBar, HiExternalLink } from "react-icons/hi";
 import type { DegreeData } from "./types/degree";
 import DegreeCard from "./DegreeCard";
 
@@ -10,7 +19,12 @@ type Props = {
   onShowMore: (degreeData: DegreeData[]) => void;
 };
 
-export default function ResultsPage({ interests, degreeData, selectedDegree, onShowMore }: Props) {
+export default function ResultsPage({
+  interests,
+  degreeData,
+  selectedDegree,
+  onShowMore,
+}: Props) {
   const ListOfSchools = selectedDegree?.map((d, index) => (
     // school card component
     <Card.Root key={`${d.hakukohde}, ${d.toimipiste}, ${index}`}>
@@ -31,6 +45,18 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
               <HiChartBar />
               {d.aloituspaikatLkm} aloituspaikkaa
             </Badge>
+
+            {d.opintopolku_toteutus_oid ? (
+              <Badge colorPalette="green" asChild ml="auto">
+                <a
+                  href={`https://opintopolku.fi/konfo/fi/toteutus/${d.opintopolku_toteutus_oid}`}
+                  target="_blank"
+                >
+                  Katso opintopolussa <HiExternalLink />
+                </a>
+                )
+              </Badge>
+            ) : null}
           </Group>
         </Stack>
       </Card.Body>
@@ -46,10 +72,19 @@ export default function ResultsPage({ interests, degreeData, selectedDegree, onS
           </Heading>
           <Separator mb={6} />
 
-          <Stack px={4} gap={6} h="900px" overflow="scroll" overflowX="hidden" data-cy="results-list">
+          <Stack
+            px={4}
+            gap={6}
+            h="900px"
+            overflow="scroll"
+            overflowX="hidden"
+            data-cy="results-list"
+          >
             {interests.map(([tutkintonimike, score]) => {
               const filteredData = degreeData.filter((item) =>
-                item.hakukohde.toLowerCase().includes(tutkintonimike.toLowerCase()),
+                item.hakukohde
+                  .toLowerCase()
+                  .includes(tutkintonimike.toLowerCase()),
               );
 
               return (
