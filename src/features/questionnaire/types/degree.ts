@@ -1,6 +1,6 @@
 export type DegreeData = {
   koulutuksenAlkamisvuosi: number;
-  koulutuksenAlkamiskausi: "Syksy" | "Kevät" | string;
+  koulutuksenAlkamiskausi: string;
   hakukohde: string;
   hakutapa: string;
   koulutusasteTaso1: string;
@@ -20,6 +20,8 @@ export type DegreeData = {
   kaikkiHakijatLkm: number | null;
   ensisijaisetHakijatLkm: number | null;
   tietojoukkoPaivitettyPvm: string;
+  opintopolku_toteutus_oid: string | null;
+  opintopolku_koulutus_oid: string | null;
 };
 
 export type BasicDegreeData = {

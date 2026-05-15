@@ -21,7 +21,11 @@ export default function LandingPage() {
           <Heading>Käy läpi koko suomen korkeakoulutarjonta.</Heading>
         </Stack>
 
-        <Button variant="surface" onClick={navigateToQuestionnaire} data-cy="landing-page-start-button">
+        <Button
+          variant="surface"
+          onClick={navigateToQuestionnaire}
+          data-cy="landing-page-start-button"
+        >
           Aloitetaan! <HiArrowRight />
         </Button>
       </Stack>
