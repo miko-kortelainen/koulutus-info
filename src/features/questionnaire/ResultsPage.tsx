@@ -1,7 +1,7 @@
-import { Badge, Box, Card, Center, Group, Heading, Separator, Stack } from "@chakra-ui/react";
-import { HiLocationMarker, HiChartBar, HiExternalLink } from "react-icons/hi";
+import { Box, Center, Heading, Separator, Stack } from "@chakra-ui/react";
 import type { DegreeData } from "./types/degree";
 import DegreeCard from "./DegreeCard";
+import SchoolCard from "./SchoolCard";
 
 type Props = {
   interests: [string, number][];
@@ -12,38 +12,7 @@ type Props = {
 
 export default function ResultsPage({ interests, degreeData, selectedDegree, onShowMore }: Props) {
   const ListOfSchools = selectedDegree?.map((d, index) => (
-    // school card component
-    <Card.Root key={`${d.hakukohde}, ${d.toimipiste}, ${index}`}>
-      <Card.Header textWrap="pretty">{d.hakukohde}</Card.Header>
-      <Card.Body>
-        <Stack>
-          <Badge colorPalette="green" mr="auto">
-            <HiLocationMarker /> {d.korkeakoulu}
-          </Badge>
-
-          <Group>
-            <Badge colorPalette="blue">
-              <HiChartBar />
-              {d.kaikkiHakijatLkm} hakijaa
-            </Badge>
-
-            <Badge colorPalette="blue">
-              <HiChartBar />
-              {d.aloituspaikatLkm} aloituspaikkaa
-            </Badge>
-
-            {d.opintopolku_toteutus_oid ? (
-              <Badge colorPalette="green" asChild ml="auto">
-                <a href={`https://opintopolku.fi/konfo/fi/toteutus/${d.opintopolku_toteutus_oid}`} target="_blank">
-                  Katso opintopolussa <HiExternalLink />
-                </a>
-                )
-              </Badge>
-            ) : null}
-          </Group>
-        </Stack>
-      </Card.Body>
-    </Card.Root>
+    <SchoolCard degree={d} key={`${d.hakukohde}, ${d.toimipiste}, ${index}`} />
   ));
 
   return (
