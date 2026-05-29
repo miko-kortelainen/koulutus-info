@@ -1,0 +1,850 @@
+[
+  {
+    "title": "tulkki (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "tulkki (AMK)",
+    "koulut": [
+      "Diakonia",
+      "Humanistinen"
+    ]
+  },
+  {
+    "title": "yhteisöpedagogi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "yhteisöpedagogi (AMK)",
+    "koulut": [
+      "Centria",
+      "Humanistinen",
+      "Kaakkois-Suomen"
+    ]
+  },
+  {
+    "title": "artenomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "artenomi (AMK)",
+    "koulut": [
+      "Hämeen",
+      "Kaakkois-Suomen"
+    ]
+  },
+  {
+    "title": "kuvataiteilija (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "kuvataiteilija (AMK)",
+    "koulut": [
+      "Lapin",
+      "Lab",
+      "Satakunnan",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "konservaattori (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "konservaattori (AMK)",
+    "koulut": [
+      "Metropolia"
+    ]
+  },
+  {
+    "title": "kulttuurituottaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "kulttuurituottaja (AMK)",
+    "koulut": [
+      "Arcada",
+      "Humanistinen",
+      "Metropolia",
+      "Seinäjoen"
+    ]
+  },
+  {
+    "title": "medianomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "medianomi (AMK)",
+    "koulut": [
+      "Arcada",
+      "Haaga-Helia",
+      "Karelia",
+      "Lab",
+      "Metropolia",
+      "Oulun",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "muotoilija (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "muotoilija (AMK)",
+    "koulut": [
+      "Kaakkois-Suomen",
+      "Lab",
+      "Metropolia",
+      "Savonia",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "musiikkipedagogi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "musiikkipedagogi (AMK)",
+    "koulut": [
+      "Centria",
+      "Jyväskylän",
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "muusikko (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "muusikko (AMK)",
+    "koulut": [
+      "Metropolia",
+      "Tampereen",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "tanssinopettaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "tanssinopettaja (AMK)",
+    "koulut": [
+      "Oulun",
+      "Savonia",
+      "Turun"
+    ]
+  },
+  {
+    "title": "teatteri-ilmaisun ohjaaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "teatteri-ilmaisun ohjaaja (AMK)",
+    "koulut": [
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "vestonomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "vestonomi (AMK)",
+    "koulut": [
+      "Metropolia"
+    ]
+  },
+  {
+    "title": "tradenomi (AMK), Liiketalous",
+    "description": "",
+    "tags": [],
+    "koulutus": "tradenomi (AMK), Liiketalous",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Haaga-Helia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "tradenomi (AMK), Tietojenkäsittely",
+    "description": "",
+    "tags": [],
+    "koulutus": "tradenomi (AMK), Tietojenkäsittely",
+    "koulut": [
+      "Centria",
+      "Haaga-Helia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "tradenomi (AMK), Kirjasto- ja tietopalveluala",
+    "description": "",
+    "tags": [],
+    "koulutus": "tradenomi (AMK), Kirjasto- ja tietopalveluala",
+    "koulut": [
+      "Seinäjoen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "tradenomi (AMK), Logistiikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "tradenomi (AMK), Logistiikka",
+    "koulut": [
+      "Kaakkois-Suomen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "tradenomi (AMK), Turvallisuusala",
+    "description": "",
+    "tags": [],
+    "koulutus": "tradenomi (AMK), Turvallisuusala",
+    "koulut": [
+      "Kaakkois-Suomen",
+      "Laurea",
+      "Haaga-Helia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Energia- ja ympäristötekniikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Energia- ja ympäristötekniikka",
+    "koulut": [
+      "Arcada",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Karelia",
+      "Lab",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Tieto- ja viestintätekniikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Tieto- ja viestintätekniikka",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Metropolian",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Konetekniikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Konetekniikka",
+    "koulut": [
+      "Centria",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasa",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Prosessi- ja materiaalitekniikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Prosessi- ja materiaalitekniikka",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Hämeen",
+      "Kaakkois-Suomen",
+      "Lab",
+      "Metropolia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Satakunnan"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Rakennus- ja yhdyskuntatekniikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Rakennus- ja yhdyskuntatekniikka",
+    "koulut": [
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Maanmittaus",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Maanmittaus",
+    "koulut": [
+      "Lapin",
+      "Metropolia",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Sähkö- ja automaatiotekniikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Sähkö- ja automaatiotekniikka",
+    "koulut": [
+      "Centria",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "LAB",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Tuotantotalous",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Tuotantotalous",
+    "koulut": [
+      "Centria",
+      "Metropolia",
+      "Satakunnan",
+      "Savonia",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Logistiikka",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Logistiikka",
+    "koulut": [
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Satakunnan",
+      "Savonia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Palo- ja pelastusala",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Palo- ja pelastusala",
+    "koulut": [
+      "Savonia"
+    ]
+  },
+  {
+    "title": "laboratorioanalyytikko (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "laboratorioanalyytikko (AMK)",
+    "koulut": [
+      "Metropolia"
+    ]
+  },
+  {
+    "title": "rakennusarkkitehti (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "rakennusarkkitehti (AMK)",
+    "koulut": [
+      "Metropolia",
+      "Oulun",
+      "Savonian",
+      "Tampereen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "rakennusmestari (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "rakennusmestari (AMK)",
+    "koulut": [
+      "Hämeen",
+      "Jyväskylän",
+      "Lab",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "merikapteeni (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "merikapteeni (AMK)",
+    "koulut": [
+      "Kaakkois-Suomen",
+      "Satakunnan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "insinööri (AMK), Merenkulku",
+    "description": "",
+    "tags": [],
+    "koulutus": "insinööri (AMK), Merenkulku",
+    "koulut": [
+      "Kaakkois-Suomen",
+      "Satakunnan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "agrologi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "agrologi (AMK)",
+    "koulut": [
+      "Hämeen",
+      "Jyväskylän",
+      "Lapin",
+      "Oulun",
+      "Savonia",
+      "Seinäjoen",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "hortonomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "hortonomi (AMK)",
+    "koulut": [
+      "Hämeen",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "metsätalousinsinööri (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "metsätalousinsinööri (AMK)",
+    "koulut": [
+      "Hämeen",
+      "Kaakkois-Suomen",
+      "Karelia",
+      "Lapin",
+      "Tampereen",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "ympäristösuunnittelija (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "ympäristösuunnittelija (AMK)",
+    "koulut": [
+      "Hämeen",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "apuvälineteknikko (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "apuvälineteknikko (AMK)",
+    "koulut": [
+      "Metropolia"
+    ]
+  },
+  {
+    "title": "bioanalyytikko (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "bioanalyytikko (AMK)",
+    "koulut": [
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "ensihoitaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "ensihoitaja (AMK)",
+    "koulut": [
+      "Arcada",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Lab",
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Tampereen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "fysioterapeutti (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "fysioterapeutti (AMK)",
+    "koulut": [
+      "Arcada",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "geronomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "geronomi (AMK)",
+    "koulut": [
+      "Kaakkois-Suomen",
+      "Lapin",
+      "Karelia",
+      "Metropolia",
+      "Satakunnan",
+      "Seinäjoen"
+    ]
+  },
+  {
+    "title": "hammasteknikko (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "hammasteknikko (AMK)",
+    "koulut": [
+      "Turun"
+    ]
+  },
+  {
+    "title": "jalkaterapeutti (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "jalkaterapeutti (AMK)",
+    "koulut": [
+      "Metropolia",
+      "Kaakkois-Suomen"
+    ]
+  },
+  {
+    "title": "kuntoutuksen ohjaaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "kuntoutuksen ohjaaja (AMK)",
+    "koulut": [
+      "Jyväskylän",
+      "Satakunnan",
+      "Laurea"
+    ]
+  },
+  {
+    "title": "kätilö (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "kätilö (AMK)",
+    "koulut": [
+      "Arcada",
+      "Jyväskylän",
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Tampereen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "naprapaatti (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "naprapaatti (AMK)",
+    "koulut": [
+      "Yh Novia",
+      "Kaakkois-Suomen"
+    ]
+  },
+  {
+    "title": "optometristi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "optometristi (AMK)",
+    "koulut": [
+      "Metropolia",
+      "Oulun"
+    ]
+  },
+  {
+    "title": "osteopaatti (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "osteopaatti (AMK)",
+    "koulut": [
+      "Metropolia"
+    ]
+  },
+  {
+    "title": "röntgenhoitaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "röntgenhoitaja (AMK)",
+    "koulut": [
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "sairaanhoitaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "sairaanhoitaja (AMK)",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Diakonia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "sosionomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "sosionomi (AMK)",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Diakonia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "suuhygienisti (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "suuhygienisti (AMK)",
+    "koulut": [
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Tampereen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "terveydenhoitaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "terveydenhoitaja (AMK)",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Diakonia",
+      "Hämeen",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "toimintaterapeutti (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "toimintaterapeutti (AMK)",
+    "koulut": [
+      "Arcada",
+      "Jyväskylän",
+      "Karelia",
+      "Metropolia",
+      "Oulun",
+      "Turun"
+    ]
+  },
+  {
+    "title": "estenomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "estenomi (AMK)",
+    "koulut": [
+      "Laurea",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "liikunnanohjaaja (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "liikunnanohjaaja (AMK)",
+    "koulut": [
+      "Arcada",
+      "Haaga-Helia",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Lapin"
+    ]
+  },
+  {
+    "title": "restonomi (AMK)",
+    "description": "",
+    "tags": [],
+    "koulutus": "restonomi (AMK)",
+    "koulut": [
+      "Haaga-Helia",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Yh Novia"
+    ]
+  }
+]
