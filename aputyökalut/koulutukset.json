@@ -1,0 +1,654 @@
+[
+  {
+    "title": "Nuorisotyö, yhteisöt ja sosiaalinen vahvistaminen",
+    "description": "Opit tukemaan yksilöiden kasvua, vahvistamaan yhteisöjen toimivuutta ja edistämään yhdenvertaisuutta erilaisissa nuorisotyön ja järjestötoiminnan ympäristöissä. \n\nKoulutus sopii arvopohjaiselle ja oma-aloitteiselle tekijälle, joka haluaa vaikuttaa yhteiskunnan hyvinvointiin, kohdata ihmisiä ja toimia asiantuntijana muuttuvissa sosiaalisissa tilanteissa.",
+    "tags": ["Nuoriso-ohjaaja", "Järjestökoordinaattori", "Työllisyysohjaaja", "Kirkon nuorisotyönohjaaja"],
+    "koulutus": "yhteisöpedagogi (AMK)",
+    "koulut": ["Centria", "Humanistinen", "Kaakkois-Suomen"]
+  },
+  {
+    "title": "Käsityömuotoilu, UI/UX ja kestävä valmistus",
+    "description": "Opit hallitsemaan luovan prosessin ideasta valmiiksi tuotteeksi tai tilaksi, painottuen joko uuden muotoiluun tai vanhan entisöintiin. \n\nKoulutus sopii käsistään kätevälle ja visuaaliselle ratkaisijalle, joka haluaa yhdistää perinteiset menetelmät moderniin liiketoiminta-ajatteluun ja kestäviin materiaalivalintoihin.",
+    "tags": ["Muotoilija", "Restauroija", "Projektiasiantuntija", "Käsityöalan yrittäjä"],
+    "koulutus": "artenomi (AMK)",
+    "koulut": ["Hämeen", "Kaakkois-Suomen"]
+  },
+  {
+    "title": "Visuaalinen ilmaisu",
+    "description": "Opit kehittämään omaa ilmaisua, käyttämään kuvallisia menetelmiä ja rakentamaan teoksia, projekteja tai näyttelykokonaisuuksia erilaisiin ympäristöihin. \n\nKoulutus sopii luovalle tekijälle, joka haluaa tarkastella maailmaa visuaalisesti, työskennellä itsenäisesti ja tehdä taiteesta ammatillisen välineen viestintään, kokemuksiin ja yhteiskunnalliseen keskusteluun.",
+    "tags": ["Kuvataiteilija", "Kuvittaja", "Taideohjaaja", "Näyttelysuunnittelija"],
+    "koulutus": "kuvataiteilija (AMK)",
+    "koulut": ["Lapin", "Lab", "Satakunnan", "Turun", "Yh Novia"]
+  },
+  {
+    "title": "Kulttuuriperinnön säilyttäminen",
+    "description": "Opit tutkimaan, dokumentoimaan, suojaamaan ja käsittelemään esineitä, taidetta ja historiallisia materiaaleja vastuullisesti. \n\nKoulutus sopii tarkalle ja kärsivälliselle ihmiselle, jota kiinnostavat käsillä tekeminen, historia, materiaalit sekä se, miten menneisyyden jäljet säilyvät tuleville sukupolville.",
+    "tags": ["Konservaattori", "Restauroija", "Museokonservaattori", "Konservointiyrittäjä"],
+    "koulutus": "konservaattori (AMK)",
+    "koulut": ["Metropolia"]
+  },
+  {
+    "title": "Tapahtumat, yleisöt ja luovan alan projektit",
+    "description": "Opit suunnittelemaan, rahoittamaan, markkinoimaan ja toteuttamaan kulttuuri- ja tapahtumakokonaisuuksia yhdessä taiteilijoiden, organisaatioiden ja yleisöjen kanssa. \n\nKoulutus sopii järjestelmälliselle ja sosiaaliselle tekijälle, joka haluaa yhdistää luovuuden, projektinhallinnan ja käytännön toteutuksen.",
+    "tags": ["Kulttuurituottaja", "Tapahtumatuottaja", "Projektikoordinaattori", "Tuotantopäällikkö"],
+    "koulutus": "kulttuurituottaja (AMK)",
+    "koulut": ["Arcada", "Humanistinen", "Metropolia", "Seinäjoen"]
+  },
+  {
+    "title": "Tarinankerronta, sisällöt ja digitaaliset mediat",
+    "description": "Opit suunnittelemaan ja tuottamaan sisältöjä kuvan, äänen, tekstin, videon, pelien, journalismin tai digitaalisten palvelujen keinoin. \n\nKoulutus sopii ihmiselle, joka haluaa kertoa tarinoita, ymmärtää yleisöjä ja tehdä luovaa työtä muuttuvissa mediaympäristöissä.",
+    "tags": ["Toimittaja", "Tiedottaja", "Valokuvaaja", "Tuottaja"],
+    "koulutus": "medianomi (AMK)",
+    "koulut": ["Arcada", "Haaga-Helia", "Karelia", "Lab", "Metropolia", "Oulun", "Tampereen", "Turun", "Yh Novia"]
+  },
+  {
+    "title": "Käyttäjälähtöiset ratkaisut, tuotteet ja palvelut",
+    "description": "Opit kehittämään visuaalisia, toiminnallisia ja käyttäjille merkityksellisiä ratkaisuja tuotteisiin, palveluihin, tiloihin tai digitaalisiin kokemuksiin. \n\nKoulutus sopii luovalle ongelmanratkaisijalle, joka haluaa yhdistää estetiikan, käytettävyyden, materiaalit ja ihmisten arjen tarpeet.",
+    "tags": ["Graafinen suunnittelija", "Palvelumuotoilija", "UX/UI-suunnittelija", "Tuotemuotoilija"],
+    "koulutus": "muotoilija (AMK)",
+    "koulut": ["Kaakkois-Suomen", "Lab", "Metropolia", "Savonia", "Yh Novia"]
+  },
+  {
+    "title": "Musiikin opettaminen ja oppimisen ohjaaminen",
+    "description": "Opit kehittämään musiikillista osaamista ja ohjaamaan eri-ikäisiä oppijoita instrumentti-, laulu-, yhtye- tai musiikin hahmotustaitojen parissa. \n\nKoulutus sopii esiintymisestä, vuorovaikutuksesta ja oppimisen tukemisesta kiinnostuneelle, joka haluaa auttaa muita löytämään oman suhteensa musiikkiin.",
+    "tags": ["Soitonopettaja", "Laulunopettaja", "Varhaisiän musiikinopettaja", "Kuoronjohtaja"],
+    "koulutus": "musiikkipedagogi (AMK)",
+    "koulut": ["Centria", "Jyväskylän", "Metropolia", "Oulun", "Savonia", "Tampereen", "Turun", "Yh Novia"]
+  },
+  {
+    "title": "Esiintyminen, säveltaide ja ammatillinen muusikkous",
+    "description": "Opit syventämään instrumentti- tai lauluosaamista, tulkintaa, yhteissoittoa, esiintymisvalmiuksia ja taiteellista identiteettiä. \n\nKoulutus sopii määrätietoiselle esiintyjälle ja tekijälle, joka haluaa rakentaa uran musiikin parissa lavalla, studiossa, projekteissa tai monialaisissa tuotannoissa.",
+    "tags": ["Muusikko", "Säveltäjä", "Musiikkituottaja", "Ääniteknikko"],
+    "koulutus": "muusikko (AMK)",
+    "koulut": ["Metropolia", "Tampereen", "Yh Novia"]
+  },
+  {
+    "title": "Liikkeen, ilmaisun ja oppimisen ohjaaminen",
+    "description": "Opit kehittämään kehotietoisuutta, tanssitekniikkaa, pedagogiikkaa ja luovaa ilmaisua eri ryhmien kanssa. \n\nKoulutus sopii liikunnalliselle ja vuorovaikutteiselle ihmiselle, joka haluaa tukea muiden taiteellista, fyysistä ja ilmaisullista kasvua.",
+    "tags": ["Tanssinopettaja", "Tanssija", "Koreografi", "Taidekasvattaja"],
+    "koulutus": "tanssinopettaja (AMK)",
+    "koulut": ["Oulun", "Savonia", "Turun"]
+  },
+  {
+    "title": "Esittävä taide, ryhmät ja yhteisöllinen ilmaisu",
+    "description": "Opit käyttämään draamaa, esiintymistä, ohjaamista ja osallistavia menetelmiä ryhmien, yhteisöjen ja erilaisten tuotantojen kanssa. \n\nKoulutus sopii ihmiselle, joka haluaa yhdistää luovuuden, vuorovaikutuksen ja esittävän taiteen keinot osallisuuden, oppimisen ja kokemusten rakentamiseen.",
+    "tags": ["Esityksen ohjaaja", "Teatteripedagogi", "Yleisötyöntekijä", "Esiintyjä"],
+    "koulutus": "teatteri-ilmaisun ohjaaja (AMK)",
+    "koulut": ["Turun", "Yh Novia"]
+  },
+  {
+    "title": "Vaatetusalan suunnittelu, tuotanto ja vastuullisuus",
+    "description": "Opit ymmärtämään vaatteiden suunnittelua, mitoitusta, materiaaleja, tuotantoketjuja, kaupallisuutta ja kestävää kehittämistä. \n\nKoulutus sopii muodista, tekniikasta ja kuluttajakäyttäytymisestä kiinnostuneelle, joka haluaa rakentaa toimivia ja vastuullisia ratkaisuja pukeutumisen alalle.",
+    "tags": ["Vaatetussuunnittelija", "Mallimestari", "Tuotepäällikkö", "Vaatetusalan asiantuntija"],
+    "koulutus": "vestonomi (AMK)",
+    "koulut": ["Metropolia"]
+  },
+  {
+    "title": "Liiketoiminta, myynti ja organisaatioiden kehittäminen",
+    "description": "Opit ymmärtämään yritysten toimintaa, taloutta, markkinointia, myyntiä, johtamista ja asiakassuhteita käytännönläheisesti. \n\nKoulutus sopii ihmiselle, joka haluaa toimia asiantuntija-, kehittämis- tai esihenkilötehtävissä ja rakentaa ratkaisuja organisaatioiden kasvuun ja arjen päätöksentekoon.",
+    "tags": ["Myyntipäällikkö", "Taloushallinnon asiantuntija", "Markkinointikoordinaattori", "HR-asiantuntija"],
+    "koulutus": "tradenomi (AMK), Liiketalous",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Haaga-Helia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Digitaaliset palvelut, ohjelmistot ja data",
+    "description": "Opit suunnittelemaan, kehittämään ja ylläpitämään tietojärjestelmiä, sovelluksia, verkkopalveluja ja dataan perustuvia ratkaisuja. \n\nKoulutus sopii loogiselle ongelmanratkaisijalle, jota kiinnostavat teknologia, käyttäjät ja se, miten digitaaliset työkalut parantavat yritysten ja ihmisten arkea.",
+    "tags": ["Full Stack -kehittäjä", "Pilvipalveluasiantuntija", "Tietoturva-asiantuntija", "Tietokanta-asiantuntija"],
+    "koulutus": "tradenomi (AMK), Tietojenkäsittely",
+    "koulut": [
+      "Centria",
+      "Haaga-Helia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Tiedon järjestäminen, asiakaspalvelu ja lukemisen edistäminen",
+    "description": "Opit hankkimaan, jäsentämään, välittämään ja arvioimaan tietoa sekä kehittämään palveluja erilaisille käyttäjäryhmille. \n\nKoulutus sopii ihmiselle, joka pitää tiedosta, kulttuurista ja asiakastyöstä ja haluaa auttaa muita löytämään luotettavia aineistoja ja merkityksellisiä sisältöjä.",
+    "tags": ["Kirjastonhoitaja", "Tietopalveluasiantuntija", "Informaatikko", "Kirjastopalvelujen kehittäjä"],
+    "koulutus": "tradenomi (AMK), Kirjasto- ja tietopalveluala",
+    "koulut": ["Seinäjoen", "Turun"]
+  },
+  {
+    "title": "Toimitusketjut, kuljetukset ja liiketoiminnan virrat",
+    "description": "Opit suunnittelemaan ja kehittämään tavaroiden, palvelujen, tiedon ja materiaalien liikkumista yritysten ja verkostojen välillä. \n\nKoulutus sopii järjestelmälliselle ongelmanratkaisijalle, joka haluaa tehdä arjen prosesseista sujuvampia, tehokkaampia ja vastuullisempia.",
+    "tags": ["Hankintapäällikkö", "Huolitsija", "Kuljetussuunnittelija", "Logistiikkapäällikkö"],
+    "koulutus": "tradenomi (AMK), Logistiikka",
+    "koulut": ["Kaakkois-Suomen", "Turun"]
+  },
+  {
+    "title": "Riskienhallinta, varautuminen ja turvallisuuden johtaminen",
+    "description": "Opit arvioimaan uhkia, suunnittelemaan turvallisuusratkaisuja, kehittämään toimintamalleja ja tukemaan organisaatioiden jatkuvuutta häiriötilanteissa. \n\nKoulutus sopii analyyttiselle ja vastuulliselle ihmiselle, joka haluaa parantaa ihmisten, yritysten ja yhteiskunnan toimintavarmuutta.",
+    "tags": ["Turvallisuuspäällikkö", "Turvallisuusasiantuntija", "Riskienhallinnan asiantuntija", "Palotarkastaja"],
+    "koulutus": "tradenomi (AMK), Turvallisuusala",
+    "koulut": ["Kaakkois-Suomen", "Laurea", "Haaga-Helia"]
+  },
+  {
+    "title": "Puhdas energia, ympäristövaikutukset ja kestävät järjestelmät",
+    "description": "Puhdas energia, ympäristövaikutukset ja kestävät järjestelmät | Opit kehittämään teknisiä ratkaisuja energiantuotantoon, energiatehokkuuteen, ympäristömittauksiin ja luonnonvarojen vastuulliseen käyttöön. \n\nKoulutus sopii ihmiselle, joka haluaa ratkaista ilmaston, resurssien ja tekniikan haasteita käytännönläheisesti.",
+    "tags": [
+      "Energiatekniikan insinööri",
+      "Ympäristöinsinööri",
+      "Energiantuotannon asiantuntija",
+      "Energiatehokkuusasiantuntija"
+    ],
+    "koulutus": "insinööri (AMK), Energia- ja ympäristötekniikka",
+    "koulut": [
+      "Arcada",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Karelia",
+      "Lab",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Ohjelmistot, verkot ja älykkäät teknologiat",
+    "description": "Opit rakentamaan digitaalisia järjestelmiä, ohjelmistoja, tietoverkkoja, laitteita tai kyberturvallisuuteen liittyviä ratkaisuja. \n\nKoulutus sopii teknisesti uteliaalle ihmiselle, joka haluaa luoda toimivia palveluja ja infrastruktuureja yhteiskunnan, yritysten ja käyttäjien tarpeisiin.",
+    "tags": [
+      "Ohjelmistokehittäjä",
+      "Tietoverkkoasiantuntija",
+      "Kyberturvallisuusasiantuntija",
+      "Sulautettujen järjestelmien kehittäjä"
+    ],
+    "koulutus": "insinööri (AMK), Tieto- ja viestintätekniikka",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Metropolian",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Koneet, tuotanto ja tekninen suunnittelu",
+    "description": "Opit suunnittelemaan, kehittämään ja valmistamaan koneita, laitteita, tuotantomenetelmiä ja teknisiä järjestelmiä. \n\nKoulutus sopii käytännönläheiselle tekijälle, jota kiinnostavat mekaniikka, materiaalit, 3D-suunnittelu ja teollisuuden ongelmien ratkaiseminen.",
+    "tags": ["Konesuunnittelija", "Tuotantoinsinööri", "Laatuinsinööri", "Projekti-insinööri"],
+    "koulutus": "insinööri (AMK), Konetekniikka",
+    "koulut": [
+      "Centria",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasa",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Teolliset prosessit, materiaalit ja laadukas tuotanto",
+    "description": "Opit ymmärtämään raaka-aineiden, materiaalien, kemiallisten tai teollisten prosessien sekä tuotannon hallinnan kokonaisuuksia. \n\nKoulutus sopii ihmiselle, joka haluaa kehittää turvallisia, tehokkaita ja kestäviä ratkaisuja teollisuuden ja valmistuksen tarpeisiin.",
+    "tags": ["Materiaalitekniikan insinööri", "Prosessi-insinööri", "Laatuinsinööri", "Tuotekehitysinsinööri"],
+    "koulutus": "insinööri (AMK), Prosessi- ja materiaalitekniikka",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Hämeen",
+      "Kaakkois-Suomen",
+      "Lab",
+      "Metropolia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Satakunnan"
+    ]
+  },
+  {
+    "title": "Rakennetun ympäristön suunnittelu ja toteutus",
+    "description": "Opit suunnittelemaan, rakentamaan ja ylläpitämään rakennuksia, infrastruktuuria, liikenneympäristöjä ja teknisiä ratkaisuja, jotka vaikuttavat ihmisten arkeen. \n\nKoulutus sopii vastuulliselle ongelmanratkaisijalle, joka haluaa nähdä työnsä jäljen kaupungeissa, kodeissa ja yhteisöissä.",
+    "tags": ["Rakennusinsinööri", "LVI-insinööri", "Työmaainsinööri", "Rakennesuunnittelija"],
+    "koulutus": "insinööri (AMK), Rakennus- ja yhdyskuntatekniikka",
+    "koulut": [
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Paikkatieto, mittaukset ja maankäytön ratkaisut",
+    "description": "Opit hyödyntämään mittaustekniikkaa, paikkatietoa, kartoitusta ja kiinteistöihin liittyvää asiantuntemusta rakentamisen ja maankäytön tukena. \n\nKoulutus sopii tarkkuutta arvostavalle ihmiselle, jota kiinnostavat teknologia, ympäristö, kartat ja fyysisen maailman mallintaminen digitaalisesti.",
+    "tags": ["Maanmittausinsinööri", "Mittausinsinööri", "Kaavoittaja", "Paikkatietoasiantuntija"],
+    "koulutus": "insinööri (AMK), Maanmittaus",
+    "koulut": ["Lapin", "Metropolia", "Yh Novia"]
+  },
+  {
+    "title": "Sähköjärjestelmät, automaatio ja älykäs ohjaus",
+    "description": "Opit suunnittelemaan ja kehittämään sähköisiä järjestelmiä, automaatiota, mittauksia, ohjauksia ja teollisuuden tai rakennusten teknisiä ratkaisuja. \n\nKoulutus sopii ihmiselle, joka haluaa ymmärtää, miten energia, laitteet ja järjestelmät saadaan toimimaan turvallisesti ja tehokkaasti.",
+    "tags": ["Automaatioinsinööri", "Sähköinsinööri", "Sähkösuunnittelija", "Käyttöönottoinsinööri"],
+    "koulutus": "insinööri (AMK), Sähkö- ja automaatiotekniikka",
+    "koulut": [
+      "Centria",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "LAB",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Tekniikan, talouden ja johtamisen yhdistäminen",
+    "description": "Opit kehittämään tuotantoa, palveluja, projekteja ja liiketoimintaa yhdistämällä teknisen ymmärryksen taloudelliseen ajatteluun. \n\nKoulutus sopii ihmiselle, joka haluaa parantaa organisaatioiden tehokkuutta, laatua ja päätöksentekoa teknologiaa hyödyntäen.",
+    "tags": ["Tuotantotalousinsinööri", "Projektipäällikkö", "Prosessikehittäjä", "Hankintapäällikkö"],
+    "koulutus": "insinööri (AMK), Tuotantotalous",
+    "koulut": ["Centria", "Metropolia", "Satakunnan", "Savonia", "Turun", "Yh Novia"]
+  },
+  {
+    "title": "Kuljetukset, järjestelmät ja tekninen toimitusketju",
+    "description": "Opit suunnittelemaan ja optimoimaan kuljetus-, varasto-, tuotanto- ja jakelujärjestelmiä teknisestä näkökulmasta. \n\nKoulutus sopii ihmiselle, joka pitää kokonaisuuksien hahmottamisesta ja haluaa kehittää sujuvia, kustannustehokkaita ja kestäviä verkostoja.",
+    "tags": [
+      "Logistiikkainsinööri",
+      "Tuotannonsuunnittelija",
+      "Varastonhallinnan asiantuntija",
+      "Kuljetussuunnittelija"
+    ],
+    "koulutus": "insinööri (AMK), Logistiikka",
+    "koulut": ["Hämeen", "Jyväskylän", "Kaakkois-Suomen", "Satakunnan", "Savonia"]
+  },
+  {
+    "title": "Mittaukset, analytiikka ja laboratoriotyön tarkkuus",
+    "description": "Opit tekemään näytteiden tutkimista, mittauksia, laadunvarmistusta ja analyysimenetelmien soveltamista erilaisissa laboratorioympäristöissä. \n\nKoulutus sopii tarkalle ja huolelliselle ihmiselle, jota kiinnostavat luonnontieteet, tutkimusmenetelmät ja luotettavien tulosten tuottaminen.",
+    "tags": ["Laboratorioanalyytikko", "Laadunvalvonta-analyytikko", "Tutkimusassistentti", "Kemikaalivastaava"],
+    "koulutus": "laboratorioanalyytikko (AMK)",
+    "koulut": ["Metropolia"]
+  },
+  {
+    "title": "Rakennusten suunnittelu, toimivuus ja estetiikka",
+    "description": "Opit suunnittelemaan tiloja, rakennuksia ja ympäristöjä, joissa yhdistyvät käytettävyys, rakenteellinen ymmärrys, visuaalisuus ja määräykset. \n\nKoulutus sopii ihmiselle, joka haluaa yhdistää luovuuden ja teknisen ajattelun konkreettisiksi suunnitelmiksi.",
+    "tags": ["Rakennusarkkitehti", "Rakennussuunnittelija", "Arkkitehtisuunnittelija", "Pääsuunnittelijan avustaja"],
+    "koulutus": "rakennusarkkitehti (AMK)",
+    "koulut": ["Metropolia", "Oulun", "Savonian", "Tampereen", "Turun"]
+  },
+  {
+    "title": "Työmaiden johtaminen ja rakentamisen käytäntö",
+    "description": "Opit ohjaamaan rakennushankkeiden toteutusta, aikatauluja, laatua, kustannuksia, työturvallisuutta ja työmaan arjen yhteistyötä. \n\nKoulutus sopii käytännönläheiselle ja vastuulliselle ihmiselle, joka haluaa johtaa rakentamista lähellä tekemistä ja ihmisiä.",
+    "tags": ["Rakennusmestari", "Työnjohtaja", "Työmaamestari", "Valvoja"],
+    "koulutus": "rakennusmestari (AMK)",
+    "koulut": [
+      "Hämeen",
+      "Jyväskylän",
+      "Lab",
+      "Lapin",
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Alusten johtaminen ja kansainvälinen meriliikenne",
+    "description": "Opit navigointia, meriturvallisuutta, aluksen operointia, johtamista ja kansainvälisen merenkulun toimintaympäristöä. \n\nKoulutus sopii vastuuta kantavalle ihmiselle, joka haluaa työskennellä liikkuvassa, kansainvälisessä ja tarkkaa päätöksentekoa vaativassa ympäristössä.",
+    "tags": ["Perämies", "Yliperämies", "Päällikkö", "Merenkulun kouluttaja"],
+    "koulutus": "merikapteeni (AMK)",
+    "koulut": ["Kaakkois-Suomen", "Satakunnan", "Yh Novia"]
+  },
+  {
+    "title": "Laivakoneistot, meritekniikka ja tekninen turvallisuus",
+    "description": "Opit käyttämään, valvomaan ja kehittämään alusten teknisiä järjestelmiä, koneistoja, energiaa ja huoltoa vaativissa olosuhteissa. \n\nKoulutus sopii teknisesti suuntautuneelle ihmiselle, joka haluaa yhdistää koneet, turvallisuuden ja kansainvälisen meriympäristön.",
+    "tags": ["Vahtikonemestari", "Konemestari", "Konepäällikkö", "Laivatekninen asiantuntija"],
+    "koulutus": "insinööri (AMK), Merenkulku",
+    "koulut": ["Kaakkois-Suomen", "Satakunnan", "Yh Novia"]
+  },
+  {
+    "title": "Maaseutuelinkeinot, ruuantuotanto ja biotalous",
+    "description": "Opit kehittämään maatilojen, maaseutuyritysten, ruokaketjujen ja luonnonvarojen käyttöä taloudellisesti, ekologisesti ja käytännönläheisesti. \n\nKoulutus sopii ihmiselle, jota kiinnostavat eläimet, kasvit, yrittäjyys, ruuantuotanto ja kestävän maaseudun tulevaisuus.",
+    "tags": ["Neuvonta-agrologi", "Maaseutuasiamies", "Maatalousyrittäjä", "Tuotantoneuvoja"],
+    "koulutus": "agrologi (AMK)",
+    "koulut": ["Hämeen", "Jyväskylän", "Lapin", "Oulun", "Savonia", "Seinäjoen", "Yh Novia"]
+  },
+  {
+    "title": "Puutarhatalous, kasvit ja vihreät ympäristöt",
+    "description": "Opit kasvien tuotantoa, viheralueiden suunnittelua, ylläpitoa, kasvutekijöitä, kestävää viljelyä ja alan liiketoimintaa. \n\nKoulutus sopii ihmiselle, jota kiinnostavat kasvit, ulkotilat, ympäristö ja konkreettinen työ luonnon ja rakennetun ympäristön rajapinnassa.",
+    "tags": ["Hortonomi", "Viheraluesuunnittelija", "Puutarhatuotannon työnjohtaja", "Puutarha-alan yrittäjä"],
+    "koulutus": "hortonomi (AMK)",
+    "koulut": ["Hämeen", "Yh Novia"]
+  },
+  {
+    "title": "Metsät, luonnonvarat ja vastuullinen käyttö",
+    "description": "Opit suunnittelemaan metsien hoitoa, käyttöä, mittausta, neuvontaa ja luonnon monimuotoisuuden huomioimista talouden ja ympäristön näkökulmista. \n\nKoulutus sopii ihmiselle, joka viihtyy luonnossa, arvostaa itsenäistä työotetta ja haluaa vaikuttaa metsien kestävään tulevaisuuteen.",
+    "tags": ["Metsätalousinsinööri", "Metsäsuunnittelija", "Puunhankinta-asiantuntija", "Metsäneuvoja"],
+    "koulutus": "metsätalousinsinööri (AMK)",
+    "koulut": ["Hämeen", "Kaakkois-Suomen", "Karelia", "Lapin", "Tampereen", "Yh Novia"]
+  },
+  {
+    "title": "Luonto, maankäyttö ja kestävät ympäristöratkaisut",
+    "description": "Opit arvioimaan ympäristövaikutuksia, suunnittelemaan luonnon ja rakennetun ympäristön käyttöä sekä tukemaan kestävää päätöksentekoa. \n\nKoulutus sopii ihmiselle, joka haluaa yhdistää ekologisen ajattelun, paikkatiedon, suunnittelun ja käytännön kehittämistyön.",
+    "tags": ["Ympäristösuunnittelija", "Ympäristöasiantuntija", "Luontokartoittaja", "Ympäristövalvoja"],
+    "koulutus": "ympäristösuunnittelija (AMK)",
+    "koulut": ["Hämeen", "Yh Novia"]
+  },
+  {
+    "title": "Toimintakykyä tukevat yksilölliset ratkaisut",
+    "description": "Opit suunnittelemaan, sovittamaan ja kehittämään teknisiä ratkaisuja, jotka tukevat liikkumista, arkea, esteettömyyttä ja osallistumista. \n\nKoulutus sopii teknisestä ongelmanratkaisusta ja ihmisten auttamisesta kiinnostuneelle, joka haluaa parantaa elämänlaatua käytännöllisillä välineillä ja palveluilla.",
+    "tags": ["Apuvälineteknikko", "Apuvälinearvioija", "Ortoosiasiantuntija", "Apuvälinepalvelujen asiantuntija"],
+    "koulutus": "apuvälineteknikko (AMK)",
+    "koulut": ["Metropolia"]
+  },
+  {
+    "title": "Laboratoriotutkimukset terveyden tukena",
+    "description": "Opit ottamaan ja analysoimaan näytteitä, käyttämään tutkimusmenetelmiä ja tuottamaan luotettavaa tietoa hoidon, diagnostiikan ja seurannan tueksi. \n\nKoulutus sopii tarkalle ihmiselle, jota kiinnostavat biologia, kemia, terveys ja huolellinen työ teknologian sekä potilasnäytteiden parissa.",
+    "tags": [
+      "Bioanalyytikko",
+      "Laboratoriohoitaja",
+      "Näytteenoton asiantuntija",
+      "Kliinisen laboratorion asiantuntija"
+    ],
+    "koulutus": "bioanalyytikko (AMK)",
+    "koulut": ["Metropolia", "Oulun", "Savonia", "Tampereen", "Turun", "Yh Novia"]
+  },
+  {
+    "title": "Akuutti hoito, päätöksenteko ja kenttätyö",
+    "description": "Opit arvioimaan potilaan tilaa, tekemään nopeita hoitoratkaisuja ja toimimaan vaativissa tilanteissa osana terveydenhuollon palveluketjua. \n\nKoulutus sopii paineensietokykyiselle ja toimintavalmiille ihmiselle, joka haluaa auttaa äkillisissä tilanteissa ja tehdä merkityksellistä työtä ihmisten turvallisuuden eteen.",
+    "tags": ["Ensihoitaja", "Sairaankuljettaja", "Päivystyshoitaja", "Kenttäjohtaja"],
+    "koulutus": "ensihoitaja (AMK)",
+    "koulut": ["Arcada", "Kaakkois-Suomen", "Kajaanin", "Lab", "Metropolia", "Oulun", "Savonia", "Tampereen", "Turun"]
+  },
+  {
+    "title": "Liikkumisen, kuntoutumisen ja toimintakyvyn asiantuntijuus",
+    "description": "Opit arvioimaan kehon toimintaa, ohjaamaan harjoittelua ja tukemaan palautumista, liikkumista sekä arjen toimintakykyä. \n\nKoulutus sopii liikunnasta, anatomiasta ja ihmisten kohtaamisesta kiinnostuneelle, joka haluaa auttaa asiakkaita vahvistumaan ja pärjäämään paremmin arjessa.",
+    "tags": ["Fysioterapeutti", "Kuntoutusohjaaja", "Työfysioterapeutti", "Liikuntaneuvoja"],
+    "koulutus": "fysioterapeutti (AMK)",
+    "koulut": [
+      "Arcada",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun"
+    ]
+  },
+  {
+    "title": "Ikääntyminen, hyvinvointi ja palvelujen kehittäminen",
+    "description": "Opit tukemaan ikääntyvien ihmisten toimintakykyä, osallisuutta, palvelutarpeita ja hyvää arkea monialaisessa yhteistyössä. \n\nKoulutus sopii empaattiselle ja kehittämishaluiselle ihmiselle, joka haluaa vaikuttaa vanhenemisen kokemukseen, palveluihin ja yhteiskunnan ikäystävällisyyteen.",
+    "tags": ["Geronomi", "Seniorineuvoja", "Vanhustyön ohjaaja", "Muistikoordinaattori"],
+    "koulutus": "geronomi (AMK)",
+    "koulut": ["Kaakkois-Suomen", "Lapin", "Karelia", "Metropolia", "Satakunnan", "Seinäjoen"]
+  },
+  {
+    "title": "Suun terveyden tekniset ratkaisut",
+    "description": "Opit valmistamaan ja suunnittelemaan yksilöllisiä suun alueen rakenteita, joissa tarvitaan tarkkuutta, materiaaliymmärrystä, muotoilua ja teknistä osaamista. \n\nKoulutus sopii kädentaitoiselle ja huolelliselle ihmiselle, joka haluaa yhdistää terveysalan, teknologian ja pikkutarkan valmistustyön.",
+    "tags": ["Hammasteknikko", "Erikoishammasteknikko", "Proteesiteknikko", "Hammaslaboratorioyrittäjä"],
+    "koulutus": "hammasteknikko (AMK)",
+    "koulut": ["Turun"]
+  },
+  {
+    "title": "Alaraajojen terveys, liikkuminen ja omahoidon ohjaus",
+    "description": "Opit arvioimaan alaraajojen toimintaa, hoitamaan ongelmia, ehkäisemään vaivoja ja tukemaan turvallista liikkumista eri asiakasryhmillä. \n\nKoulutus sopii ihmiselle, jota kiinnostavat anatomia, käytännön hoitotyö ja asiakkaiden arjen toimintakyvyn parantaminen.",
+    "tags": ["Jalkaterapeutti", "Jalkaterveyden asiantuntija", "Alaraaja-asiantuntija", "Jalkaterapiayrittäjä"],
+    "koulutus": "jalkaterapeutti (AMK)",
+    "koulut": ["Metropolia", "Kaakkois-Suomen"]
+  },
+  {
+    "title": "Palvelupolut, ohjaus ja arjen toimintakyky",
+    "description": "Opit tukemaan asiakkaiden kuntoutumista, koordinoimaan palveluja ja rakentamaan ratkaisuja, jotka auttavat ihmistä toimimaan omassa arjessaan. \n\nKoulutus sopii ihmiselle, joka haluaa yhdistää sosiaali- ja terveysalan, palvelujärjestelmän tuntemuksen ja asiakaslähtöisen ohjauksen.",
+    "tags": ["Kuntoutuksen ohjaaja", "Palveluohjaaja", "Työkykykoordinaattori", "Kuntoutussuunnittelija"],
+    "koulutus": "kuntoutuksen ohjaaja (AMK)",
+    "koulut": ["Jyväskylän", "Satakunnan", "Laurea"]
+  },
+  {
+    "title": "Raskaus, synnytys ja perheiden kokonaisvaltainen tuki",
+    "description": "Opit tukemaan seksuaali- ja lisääntymisterveyttä, raskauden seurantaa, synnytystä, vastasyntyneen hoitoa ja perheiden hyvinvointia. \n\nKoulutus sopii rauhalliselle ja vastuulliselle ihmiselle, joka haluaa olla mukana elämän suurissa hetkissä ja tehdä vaativaa hoitotyötä läheisessä vuorovaikutuksessa.",
+    "tags": ["Kätilö", "Sairaanhoitaja", "Synnytyssalikätilö", "Neuvolakätilö"],
+    "koulutus": "kätilö (AMK)",
+    "koulut": ["Arcada", "Jyväskylän", "Metropolia", "Oulun", "Savonia", "Tampereen", "Turun"]
+  },
+  {
+    "title": "Tuki- ja liikuntaelinten tutkiminen ja manuaalinen hoito",
+    "description": "Opit arvioimaan kehon toimintaa, hoitamaan kipua ja liikkumisen häiriöitä sekä ohjaamaan harjoittelua ja omahoitoa. \n\nKoulutus sopii ihmiselle, jota kiinnostavat anatomia, käsillä tehtävä hoitotyö, liikunta ja asiakkaiden toimintakyvyn parantaminen.",
+    "tags": ["Naprapaatti", "Manuaaliterapeutti", "TULE-asiantuntija", "Naprapatiayrittäjä"],
+    "koulutus": "naprapaatti (AMK)",
+    "koulut": ["Yh Novia", "Kaakkois-Suomen"]
+  },
+  {
+    "title": "Näkeminen, silmien tutkiminen ja asiakaslähtöiset ratkaisut",
+    "description": "Opit tutkimaan näköä, tunnistamaan silmien terveyteen liittyviä havaintoja ja ratkaisemaan näkemisen tarpeita optisilla välineillä sekä ohjauksella. \n\nKoulutus sopii tarkalle ja asiakaspalveluhenkiselle ihmiselle, jota kiinnostavat terveys, teknologia ja ihmisten arjen sujuvoittaminen hyvän näkemisen kautta.",
+    "tags": ["Optometristi", "Optikko", "Piilolasioptikko", "Näönhuollon asiantuntija"],
+    "koulutus": "optometristi (AMK)",
+    "koulut": ["Metropolia", "Oulun"]
+  },
+  {
+    "title": "Kehon toiminnan tutkiminen ja käsillä tehtävä hoito",
+    "description": "Opit tarkastelemaan kehon rakenteita, liikettä ja toimintaa kokonaisuutena sekä käyttämään manuaalisia menetelmiä hyvinvoinnin ja toimintakyvyn tukena. \n\nKoulutus sopii ihmiselle, jota kiinnostavat anatomia, kehotietoisuus, asiakaskohtaaminen ja yksilöllinen hoitotyö.",
+    "tags": ["Osteopaatti", "Manuaaliterapeutti", "Osteopatiayrittäjä", "TULE-asiantuntija"],
+    "koulutus": "osteopaatti (AMK)",
+    "koulut": ["Metropolia"]
+  },
+  {
+    "title": "Kuvantaminen, säteilyn turvallinen käyttö ja potilastyö",
+    "description": "Opit toteuttamaan lääketieteellisiä kuvantamistutkimuksia, käyttämään vaativaa teknologiaa ja huolehtimaan potilaan turvallisuudesta tutkimustilanteissa. \n\nKoulutus sopii ihmiselle, joka haluaa yhdistää terveysalan, tekniikan, tarkkuuden ja vastuullisen asiakaskohtaamisen.",
+    "tags": ["Röntgenhoitaja", "Radiografian asiantuntija", "Sädehoitaja", "Kuvantamisen asiantuntija"],
+    "koulutus": "röntgenhoitaja (AMK)",
+    "koulut": ["Metropolia", "Oulun", "Savonia", "Tampereen", "Turun", "Yh Novia"]
+  },
+  {
+    "title": "Hoitotyö, kliininen osaaminen ja ihmisten kohtaaminen",
+    "description": "Opit arvioimaan, suunnittelemaan ja toteuttamaan hoitoa eri-ikäisten ja erilaisissa elämäntilanteissa olevien asiakkaiden kanssa. \n\nKoulutus sopii empaattiselle ja vastuulliselle ihmiselle, joka haluaa tehdä käytännönläheistä, merkityksellistä ja monipuolista työtä terveyden edistämiseksi.",
+    "tags": ["Sairaanhoitaja", "Kotisairaanhoitaja", "Päivystyshoitaja", "Kliininen asiantuntija"],
+    "koulutus": "sairaanhoitaja (AMK)",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Diakonia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Sosiaalinen tuki, osallisuus ja arjen palvelut",
+    "description": "Opit tukemaan ihmisten hyvinvointia, osallisuutta, kasvua ja arjen selviytymistä erilaisissa elämäntilanteissa. \n\nKoulutus sopii vuorovaikutustaitoiselle ihmiselle, joka haluaa työskennellä lasten, nuorten, perheiden, aikuisten tai yhteisöjen parissa ja edistää yhdenvertaisuutta.",
+    "tags": ["Sosiaaliohjaaja", "Palveluohjaaja", "Varhaiskasvatuksen sosionomi", "Perhetyöntekijä"],
+    "koulutus": "sosionomi (AMK)",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Diakonia",
+      "Hämeen",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Suun terveyden edistäminen ja ehkäisevä hoito",
+    "description": "Opit tutkimaan, hoitamaan ja ohjaamaan suun terveyteen liittyviä asioita sekä ehkäisemään sairauksia asiakaslähtöisesti. \n\nKoulutus sopii tarkalle ja palveluhenkiselle ihmiselle, joka haluaa yhdistää terveysneuvonnan, käytännön hoitotyön ja asiakkaiden hyvinvoinnin tukemisen.",
+    "tags": ["Suuhygienisti", "Suun terveyden edistäjä", "Suuhygieniayrittäjä", "Hammashoitolan asiantuntija"],
+    "koulutus": "suuhygienisti (AMK)",
+    "koulut": ["Metropolia", "Oulun", "Savonia", "Tampereen", "Turun"]
+  },
+  {
+    "title": "Ennaltaehkäisy, perheiden tuki ja kansanterveys",
+    "description": "Opit edistämään terveyttä, ehkäisemään sairauksia ja tukemaan yksilöitä, perheitä sekä yhteisöjä eri elämänvaiheissa. \n\nKoulutus sopii ihmiselle, joka haluaa tehdä ohjaavaa, kohtaavaa ja yhteiskunnallisesti vaikuttavaa työtä neuvoloissa, kouluissa, työterveydessä tai muissa palveluissa.",
+    "tags": ["Terveydenhoitaja", "Kouluterveydenhoitaja", "Neuvolaterveydenhoitaja", "Työterveyshoitaja"],
+    "koulutus": "terveydenhoitaja (AMK)",
+    "koulut": [
+      "Arcada",
+      "Centria",
+      "Diakonia",
+      "Hämeen",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Metropolia",
+      "Oulun",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Turun",
+      "Vaasan",
+      "Yh Novia"
+    ]
+  },
+  {
+    "title": "Arjen taidot, osallistuminen ja kuntouttavat ratkaisut",
+    "description": "Opit arvioimaan ja tukemaan ihmisen kykyä toimia arjen tilanteissa, opinnoissa, työssä, vapaa-ajalla ja sosiaalisissa ympäristöissä. \n\nKoulutus sopii luovalle ja asiakaslähtöiselle ihmiselle, joka haluaa etsiä käytännöllisiä keinoja itsenäisyyden, osallisuuden ja toimintakyvyn vahvistamiseen.",
+    "tags": ["Toimintaterapeutti", "Kuntoutuksen asiantuntija", "Toimintaterapiayrittäjä", "Apuvälineasiantuntija"],
+    "koulutus": "toimintaterapeutti (AMK)",
+    "koulut": ["Arcada", "Jyväskylän", "Karelia", "Metropolia", "Oulun", "Turun"]
+  },
+  {
+    "title": "Kauneudenhoitoalan asiantuntijuus ja liiketoiminta",
+    "description": "Opit ymmärtämään ihonhoitoa, kosmetiikkaa, palveluja, myyntiä, asiakaskokemusta ja alan yritystoimintaa. \n\nKoulutus sopii ihmiselle, jota kiinnostavat hyvinvointi, estetiikka, brändit ja palvelujen kehittäminen kaupallisessa ja asiakaslähtöisessä ympäristössä.",
+    "tags": [
+      "Kauneudenhoitoalan opettaja",
+      "Kosmetiikkamyyjä",
+      "Kosmetiikan tuoteasiantuntija",
+      "Kauneudenhoitoalan yrittäjä"
+    ],
+    "koulutus": "estenomi (AMK)",
+    "koulut": ["Laurea", "Yh Novia"]
+  },
+  {
+    "title": "Liikunnan edistäminen, valmennus ja hyvinvointi",
+    "description": "Opit suunnittelemaan, ohjaamaan ja kehittämään liikuntaa, valmennusta ja hyvinvointipalveluja erilaisille ryhmille. \n\nKoulutus sopii aktiiviselle ja innostavalle ihmiselle, joka haluaa auttaa muita liikkumaan, oppimaan ja vahvistamaan terveyttään käytännön ohjauksen kautta.",
+    "tags": ["Liikunnanohjaaja", "Urheiluvalmentaja", "Hyvinvointivalmentaja", "Liikuntapalvelujen kehittäjä"],
+    "koulutus": "liikunnanohjaaja (AMK)",
+    "koulut": ["Arcada", "Haaga-Helia", "Kaakkois-Suomen", "Kajaanin", "Lapin"]
+  },
+  {
+    "title": "Matkailu, ravintolat ja elämykselliset palvelut",
+    "description": "Opit kehittämään palveluja, asiakaskokemuksia, tapahtumia, matkailua, ravintolatoimintaa ja alan liiketoimintaa. \n\nKoulutus sopii palveluhenkiselle ihmiselle, joka haluaa yhdistää ihmiset, elämykset, kaupallisen ajattelun ja käytännön johtamisen.",
+    "tags": ["Hotellipäällikkö", "Ravintolapäällikkö", "Matkailupalvelujen kehittäjä", "Keittiöpäällikkö"],
+    "koulutus": "restonomi (AMK)",
+    "koulut": [
+      "Haaga-Helia",
+      "Jyväskylän",
+      "Kaakkois-Suomen",
+      "Kajaanin",
+      "Karelia",
+      "Lab",
+      "Lapin",
+      "Laurea",
+      "Satakunnan",
+      "Savonia",
+      "Seinäjoen",
+      "Tampereen",
+      "Yh Novia"
+    ]
+  }
+]
