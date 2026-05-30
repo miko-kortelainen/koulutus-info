@@ -1,6 +1,7 @@
 # Manually added
-/aputyökalut
-*/screenshots
+aputyökalut/
+*/*/screenshots
+testdata
 
 # Logs
 logs
@@ -145,3 +146,4 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+.vscode/launch.json
