@@ -1,11 +1,5 @@
 package models
 
-// placeholder
-type SchoolResponse struct {
-	Message string `json:"message"`
-	Status  string `json:"status"`
-}
-
 type VipunenData struct {
 	KooditHakukohde        string `json:"kooditHakukohde"`
 	Hakukohde              string `json:"hakukohde"`
