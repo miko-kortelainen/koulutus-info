@@ -31,7 +31,7 @@ func GetStatistics(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// merge duplicates
+	// merge duplicates into one since kaikkiHakijatLkm and aloituspaikatLkm are in different items.
 	merged := services.MergeRecords(data)
 	if len(merged) == 0 {
 		log.Printf("warn: MergeRecords returned 0 results from %d records", len(data))
