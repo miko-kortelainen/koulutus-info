@@ -1,12 +1,12 @@
 import { Button, Card, Heading, Stack } from "@chakra-ui/react";
 import { HiChevronRight, HiExternalLink } from "react-icons/hi";
-import { type DegreeData } from "./types/degree";
+import { type VipunenData } from "../../types.gen";
 
 type Props = {
   tutkintonimike: string;
   score?: number;
-  degreeData: DegreeData[];
-  onShowMore: (degreeData: DegreeData[]) => void;
+  degreeData: VipunenData[];
+  onShowMore: (degreeData: VipunenData[]) => void;
 };
 
 export default function DegreeCard({ tutkintonimike, degreeData, onShowMore }: Props) {

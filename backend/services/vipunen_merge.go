@@ -1,18 +1,9 @@
 package services
 
-import "school-api/models"
-
-type MergedRecord struct {
-	KooditHakukohde        string `json:"kooditHakukohde"`
-	Hakukohde              string `json:"hakukohde"`
-	Korkeakoulu            string `json:"korkeakoulu"`
-	AloituspaikatLkm       int    `json:"aloituspaikatLkm"`
-	KaikkiHakijatLkm       int    `json:"kaikkiHakijatLkm"`
-	EnsisijaisetHakijatLkm int    `json:"ensisijaisetHakijatLkm"`
-	KoulutuksenKieli       string `json:"koulutuksenKieli"`
-	Sektori                string `json:"sektori"`
-	KoulutusAla            string `json:"koulutusalaTaso1"`
-}
+import (
+	"school-api/models"
+	"sort"
+)
 
 func addIfNotNil(sum *int, val *int) {
 	if val != nil {
@@ -20,12 +11,12 @@ func addIfNotNil(sum *int, val *int) {
 	}
 }
 
-func MergeRecords(records []models.VipunenData) []MergedRecord {
+func MergeRecords(records []models.VipunenData) []models.VipunenData {
 	type accumulator struct {
-		merged MergedRecord
+		merged models.VipunenData
 	}
 
-	grouped := make(map[string]*MergedRecord)
+	grouped := make(map[string]*models.VipunenData)
 
 	order := []string{}
 
@@ -33,7 +24,7 @@ func MergeRecords(records []models.VipunenData) []MergedRecord {
 		key := r.KooditHakukohde
 
 		if _, exists := grouped[key]; !exists {
-			grouped[key] = &MergedRecord{
+			grouped[key] = &models.VipunenData{
 				KooditHakukohde:  r.KooditHakukohde,
 				Hakukohde:        r.Hakukohde,
 				Korkeakoulu:      r.Korkeakoulu,
@@ -45,14 +36,19 @@ func MergeRecords(records []models.VipunenData) []MergedRecord {
 		}
 
 		m := grouped[key]
-		addIfNotNil(&m.AloituspaikatLkm, r.AloituspaikatLkm)
-		addIfNotNil(&m.KaikkiHakijatLkm, r.KaikkiHakijatLkm)
-		addIfNotNil(&m.EnsisijaisetHakijatLkm, r.EnsisijaisetHakijatLkm)
+		addIfNotNil(&m.AloituspaikatLkm, &r.AloituspaikatLkm)
+		addIfNotNil(&m.KaikkiHakijatLkm, &r.KaikkiHakijatLkm)
+		addIfNotNil(&m.EnsisijaisetHakijatLkm, &r.EnsisijaisetHakijatLkm)
 	}
 
-	result := make([]MergedRecord, 0, len(order))
+	result := make([]models.VipunenData, 0, len(order))
 	for _, key := range order {
 		result = append(result, *grouped[key])
 	}
+
+	sort.Slice(result, func(i, j int) bool {
+		return result[i].Hakukohde < result[j].Hakukohde
+	})
+
 	return result
 }
