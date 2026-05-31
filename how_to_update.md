@@ -14,5 +14,5 @@ https://api.vipunen.fi/api/swagger-ui/index.html
 #### FIQL filters used
 
 ```sql
-koulutuksenAlkamisvuosi=='2026' and hakutapa=='Yhteishaku' and koulutusasteTaso1=='Alempi korkeakouluaste' and aloituspaikatLkm>0
+koulutuksenAlkamisvuosi=='2026' and hakutapa=='Yhteishaku' and koulutusasteTaso1=='Alempi korkeakouluaste'
 ```
