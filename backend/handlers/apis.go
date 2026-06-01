@@ -41,6 +41,7 @@ func GetStatistics(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// sort data or fallback to default order
 	services.SortVipunenData(data, order)
 
 	json.NewEncoder(w).Encode(data)

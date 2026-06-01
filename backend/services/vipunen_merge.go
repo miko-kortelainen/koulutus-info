@@ -12,38 +12,28 @@ func addIfNotNil(sum *int, val *int) {
 }
 
 func MergeRecords(records []models.VipunenData) []models.VipunenData {
-	type accumulator struct {
-		merged models.VipunenData
-	}
-
 	grouped := make(map[string]*models.VipunenData)
-
-	order := []string{}
 
 	for _, r := range records {
 		key := r.KooditHakukohde
 
 		if _, exists := grouped[key]; !exists {
-			grouped[key] = &models.VipunenData{
-				KooditHakukohde:  r.KooditHakukohde,
-				Hakukohde:        r.Hakukohde,
-				Korkeakoulu:      r.Korkeakoulu,
-				KoulutuksenKieli: r.KoulutuksenKieli,
-				Sektori:          r.Sektori,
-				KoulutusAla:      r.KoulutusAla,
-			}
-			order = append(order, key)
+			first := r
+			first.AloituspaikatLkm = 0
+			first.KaikkiHakijatLkm = 0
+			first.EnsisijaisetHakijatLkm = 0
+			grouped[key] = &first
 		}
 
 		m := grouped[key]
-		addIfNotNil(&m.AloituspaikatLkm, &r.AloituspaikatLkm)
-		addIfNotNil(&m.KaikkiHakijatLkm, &r.KaikkiHakijatLkm)
-		addIfNotNil(&m.EnsisijaisetHakijatLkm, &r.EnsisijaisetHakijatLkm)
+		m.AloituspaikatLkm += r.AloituspaikatLkm
+		m.KaikkiHakijatLkm += r.KaikkiHakijatLkm
+		m.EnsisijaisetHakijatLkm += r.EnsisijaisetHakijatLkm
 	}
 
-	result := make([]models.VipunenData, 0, len(order))
-	for _, key := range order {
-		result = append(result, *grouped[key])
+	result := make([]models.VipunenData, 0, len(grouped))
+	for _, v := range grouped {
+		result = append(result, *v)
 	}
 
 	sort.Slice(result, func(i, j int) bool {
