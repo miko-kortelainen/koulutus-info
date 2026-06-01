@@ -42,7 +42,7 @@ func GetVipunenDataCached() ([]models.VipunenData, error) {
 		VipunenCache.LastUpdated = time.Now()
 		VipunenCache.mu.Unlock()
 
-		return freshData, nil
+		return mergedData, nil
 	}
 
 	fmt.Println("/api/statistics/: using cached data.")
