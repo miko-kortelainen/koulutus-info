@@ -32,10 +32,10 @@ export interface VipunenData {
   kooditHakukohde: string;
   hakukohde: string;
   korkeakoulu: string;
-  aloituspaikatLkm?: number /* int */;
-  kaikkiHakijatLkm?: number /* int */;
-  ensisijaisetHakijatLkm?: number /* int */;
   koulutuksenKieli: string;
   sektori: string;
   koulutusalaTaso1: string;
+  aloituspaikatLkm: number /* int */;
+  kaikkiHakijatLkm: number /* int */;
+  ensisijaisetHakijatLkm: number /* int */;
 }
