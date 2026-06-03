@@ -1,9 +1,9 @@
 import { Card, Stack, Badge, Group } from "@chakra-ui/react";
-import { HiLocationMarker, HiChartBar, HiExternalLink } from "react-icons/hi";
-import type { DegreeData } from "./types/degree";
+import { HiLocationMarker, HiChartBar } from "react-icons/hi";
+import { type VipunenData } from "../../types.gen";
 
 type Props = {
-  degree: DegreeData;
+  degree: VipunenData;
 };
 
 export default function SchoolCard({ degree }: Props) {
@@ -26,15 +26,6 @@ export default function SchoolCard({ degree }: Props) {
               <HiChartBar />
               {degree.aloituspaikatLkm} aloituspaikkaa
             </Badge>
-
-            {degree.opintopolku_toteutus_oid ? (
-              <Badge colorPalette="green" asChild ml="auto">
-                <a href={`https://opintopolku.fi/konfo/fi/toteutus/${degree.opintopolku_toteutus_oid}`} target="_blank">
-                  Katso opintopolussa <HiExternalLink />
-                </a>
-                )
-              </Badge>
-            ) : null}
           </Group>
         </Stack>
       </Card.Body>
