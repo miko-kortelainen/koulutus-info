@@ -1,6 +1,6 @@
 import { Stack, Center, Text, HStack, IconButton, ButtonGroup } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
-import SchoolCard from "../questionnaire/SchoolCard";
+import SchoolCard from "./SchoolCard";
 import { useQuery } from "@tanstack/react-query";
 import { getStatistics } from "../../apis";
 import { useState } from "react";

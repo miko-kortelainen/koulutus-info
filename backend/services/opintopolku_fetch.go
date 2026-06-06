@@ -1,9 +1,7 @@
 package services
 
 import (
-	"encoding/json"
 	"fmt"
-	"net/http"
 	"net/url"
 	"school-api/models"
 	"strconv"
@@ -59,16 +57,10 @@ func FetchOpintopolkuData(apiURL string) (*models.OpintopolkuData, error) {
 }
 
 func fetchOpintopolkuPage(reqURL string) (*models.OpintopolkuData, error) {
-	resp, err := http.Get(reqURL)
-	if err != nil {
-		return nil, fmt.Errorf("failed to fetch from opintopolku: %w", err)
-	}
-	defer resp.Body.Close()
-
 	var apiResp models.OpintopolkuData
-	err = json.NewDecoder(resp.Body).Decode(&apiResp)
-	if err != nil {
-		return nil, fmt.Errorf("failed to decode JSON: %w", err)
+
+	if err := fetchJSON("opintopolku", reqURL, &apiResp); err != nil {
+		return nil, err
 	}
 
 	return &apiResp, nil
