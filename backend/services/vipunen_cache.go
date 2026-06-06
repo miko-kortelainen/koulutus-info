@@ -21,6 +21,7 @@ func GetVipunenDataCached() ([]models.VipunenData, error) {
 	VipunenCache.mu.RLock()
 	dataExists := len(VipunenCache.Data) > 0
 	timeSinceUpdate := time.Since(VipunenCache.LastUpdated)
+	cachedData := copyVipunenData(VipunenCache.Data)
 	VipunenCache.mu.RUnlock()
 
 	// if no cache or data is stale
@@ -42,9 +43,19 @@ func GetVipunenDataCached() ([]models.VipunenData, error) {
 		VipunenCache.LastUpdated = time.Now()
 		VipunenCache.mu.Unlock()
 
-		return mergedData, nil
+		return copyVipunenData(mergedData), nil
 	}
 
 	fmt.Println("/api/statistics/: using cached data.")
-	return VipunenCache.Data, nil
+	return cachedData, nil
+}
+
+func copyVipunenData(data []models.VipunenData) []models.VipunenData {
+	if len(data) == 0 {
+		return nil
+	}
+
+	copied := make([]models.VipunenData, len(data))
+	copy(copied, data)
+	return copied
 }
