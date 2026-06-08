@@ -29,8 +29,8 @@ func GetStatistics(w http.ResponseWriter, r *http.Request) {
 		order = services.OrderAsc
 	}
 
-	// fetch statistics from vipunen API
-	data, err := services.GetVipunenDataCached()
+	// fetch statistics from vipunen API (already sorted by order)
+	data, err := services.GetVipunenDataCached(order)
 	if err != nil {
 		http.Error(w, "Failed to fetch statistics", http.StatusInternalServerError)
 		return
@@ -40,9 +40,6 @@ func GetStatistics(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "No data available", http.StatusNotFound)
 		return
 	}
-
-	// sort data or fallback to default order
-	services.SortVipunenData(data, order)
 
 	json.NewEncoder(w).Encode(data)
 }
