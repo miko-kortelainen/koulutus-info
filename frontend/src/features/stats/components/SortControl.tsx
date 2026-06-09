@@ -1,4 +1,4 @@
-import { HStack, Select, createListCollection } from "@chakra-ui/react";
+import { Select, createListCollection } from "@chakra-ui/react";
 
 export type SortOption = "asc" | "desc" | "most_popular" | "least_popular" | "most_spots" | "least_spots";
 
