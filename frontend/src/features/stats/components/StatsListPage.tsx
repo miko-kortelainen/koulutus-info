@@ -21,17 +21,17 @@ export default function DegreeListPage() {
   return (
     <Center h="100%" px={8}>
       <Stack direction="column" gap={4} width="800px" p={2}>
-        <HStack justify="space-between">
-          <SortControl value={sortOrder} onChange={setSortOrder} />
+        <Stack direction="row" px={4} gap={8}>
           <SearchInput
             value={searchTerm}
             onChange={(value) => {
               setSearchTerm(value);
               setPage(1);
             }}
-            placeholder="Hae koulutuksia"
+            placeholder="Hae koulua tai linjaa"
           />
-        </HStack>
+          <SortControl value={sortOrder} onChange={setSortOrder} />
+        </Stack>
         {query.isPending ? <Text>Haetaan tietoja...</Text> : null}
         {query.isError ? <Text>Haku keskeytetty virheen takia.</Text> : null}
 

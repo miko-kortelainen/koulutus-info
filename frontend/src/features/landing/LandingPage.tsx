@@ -14,11 +14,11 @@ export default function LandingPage() {
       <Stack gap={10}>
         <Stack textAlign="center">
           <Heading size="6xl" data-cy="landing-page-header">
-            <Highlight query="sinun" styles={{ color: "blue.400" }}>
-              Löydä sinun alasi!
+            <Highlight query="korkeakoulutuksia" styles={{ color: "blue.400" }}>
+              Etsi korkeakoulutuksia
             </Highlight>
           </Heading>
-          <Heading>Käy läpi koko suomen korkeakoulutarjonta.</Heading>
+          <Heading>Tutkaile yhteishaun hakijamääriä.</Heading>
         </Stack>
 
         <Button variant="surface" onClick={navigateToDegrees} data-cy="landing-page-start-button">
