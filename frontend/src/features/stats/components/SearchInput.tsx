@@ -7,7 +7,5 @@ interface SearchInputProps {
 }
 
 export default function SearchInput({ value, onChange, placeholder = "Search" }: SearchInputProps) {
-  return (
-    <Input maxW="320px" placeholder={placeholder} value={value} onChange={(event) => onChange(event.target.value)} />
-  );
+  return <Input flex={2} placeholder={placeholder} value={value} onChange={(event) => onChange(event.target.value)} />;
 }
