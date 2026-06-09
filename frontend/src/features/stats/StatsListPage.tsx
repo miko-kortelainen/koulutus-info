@@ -1,11 +1,10 @@
 import { useMemo, useState } from "react";
-import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Input } from "@chakra-ui/react";
+import { Stack, Center, Text, HStack, IconButton, ButtonGroup } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
-import { useQuery } from "@tanstack/react-query";
-import { getStatistics } from "@/api/api";
-import type { VipunenData } from "@/types.gen";
-import SortControl, { type SortOption } from "./SortControl";
-import SchoolCard from "./DegreeStatsCard";
+import SortControl, { type SortOption } from "./components/SortControl";
+import SchoolCard from "./components/DegreeStatsCard";
+import SearchInput from "./components/SearchInput";
+import useStatisticsQuery from "./hooks/useStatisticsQuery";
 
 const PAGE_SIZE = 10;
 
@@ -13,13 +12,7 @@ export default function DegreeListPage() {
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [searchTerm, setSearchTerm] = useState("");
-  const query = useQuery<VipunenData[]>({
-    queryKey: ["statistics", sortOrder],
-    queryFn: () => getStatistics(sortOrder),
-    refetchOnWindowFocus: false,
-    staleTime: Infinity, // old: 30 * 60 * 1000
-    gcTime: 10 * 60 * 1000, // 10 min
-  });
+  const query = useStatisticsQuery(sortOrder);
 
   const filteredData = useMemo(() => {
     const data = query.data ?? [];
@@ -51,23 +44,20 @@ export default function DegreeListPage() {
       <Stack direction="column" gap={4} width="800px" p={2}>
         <HStack justify="space-between">
           <SortControl value={sortOrder} onChange={setSortOrder} />
-          <Input
-            maxW="320px"
-            placeholder="Search statistics"
+          <SearchInput
             value={searchTerm}
-            onChange={(event) => {
-              setSearchTerm(event.target.value);
+            onChange={(value) => {
+              setSearchTerm(value);
               setPage(1);
             }}
+            placeholder="Search statistics"
           />
         </HStack>
         {query.isPending ? <Text>Fetching statistics..</Text> : null}
         {query.isError ? <Text>Error fetching statistics..</Text> : null}
 
         <Stack direction="column" height="1200px" overflowY="scroll" gap={4} px={4}>
-          {!query.isPending && !query.isError && paginated.length === 0 ? (
-            <Text>No statistics found.</Text>
-          ) : null}
+          {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {paginated.map((d, index) => (
             <SchoolCard degree={d} key={`${d.hakukohde}, ${index}`} />
           ))}
