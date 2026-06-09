@@ -1,6 +1,6 @@
 import { Card, Stack, Badge, Group } from "@chakra-ui/react";
 import { HiLocationMarker, HiChartBar } from "react-icons/hi";
-import { type VipunenData } from "../../types.gen";
+import { type VipunenData } from "../../../types.gen";
 
 type Props = {
   degree: VipunenData;

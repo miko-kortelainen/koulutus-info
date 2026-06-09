@@ -1,4 +1,4 @@
-import { type VipunenData } from "./types.gen";
+import { type VipunenData } from "../types.gen";
 
 export async function getStatistics(sortQ?: string): Promise<VipunenData[]> {
   const res = await fetch(`/api/statistics?order=${sortQ || "asc"}`);
