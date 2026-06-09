@@ -3,7 +3,7 @@ import LandingPage from "./features/landing/LandingPage";
 import { Box, Flex } from "@chakra-ui/react";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import DegreeListPage from "./features/stats/StatsListPage";
+import DegreeListPage from "./features/stats/components/StatsListPage";
 
 function App() {
   return (
