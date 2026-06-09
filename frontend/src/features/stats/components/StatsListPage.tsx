@@ -6,6 +6,7 @@ import SchoolCard from "./DegreeStatsCard";
 import SearchInput from "./SearchInput";
 import useStatisticsQuery from "../hooks/useStatisticsQuery";
 import useFilteredStatistics from "../hooks/useFilteredStatistics";
+import DegreeStatsCardSkeleton from "./DegreeStatsCardSkeleton";
 
 const PAGE_SIZE = 10;
 
@@ -18,24 +19,26 @@ export default function DegreeListPage() {
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
+  const degreeSkeletonList = Array.from({ length: 10 }).map((_, i) => <DegreeStatsCardSkeleton key={i} />);
+
   return (
     <Center h="100%" px={8}>
       <Stack direction="column" gap={4} width="800px" p={2}>
-        <HStack justify="space-between">
-          <SortControl value={sortOrder} onChange={setSortOrder} />
+        <Stack direction="row" px={4} gap={8}>
           <SearchInput
             value={searchTerm}
             onChange={(value) => {
               setSearchTerm(value);
               setPage(1);
             }}
-            placeholder="Hae koulutuksia"
+            placeholder="Hae koulua tai linjaa"
           />
-        </HStack>
-        {query.isPending ? <Text>Haetaan tietoja...</Text> : null}
-        {query.isError ? <Text>Haku keskeytetty virheen takia.</Text> : null}
+          <SortControl value={sortOrder} onChange={setSortOrder} />
+        </Stack>
 
         <Stack direction="column" height="1200px" overflowY="scroll" gap={4} px={4}>
+          {query.isPending ? degreeSkeletonList : null}
+          {query.isError ? <Text>Haku keskeytetty virheen takia.</Text> : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {paginated.map((d, index) => (
             <SchoolCard degree={d} key={`${d.hakukohde}, ${index}`} />
