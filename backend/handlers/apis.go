@@ -41,5 +41,5 @@ func GetStatistics(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	json.NewEncoder(w).Encode(data)
+	json.NewEncoder(w).Encode(services.TransformVipunenData(data))
 }
