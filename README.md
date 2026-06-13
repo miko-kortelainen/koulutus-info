@@ -1,6 +1,6 @@
 # koulutus-info
 
-Selaa korkeakoulujen yhteishaun hakijamääriä ja muita tilastoja.
+katsele AMK yhteishaun hakijoiden ja aloituspaikkojen määriä helppokäyttöisessä ja visuaalisesti miellyttävässä käyttöliittymässä.
 
 ## Usage
 
