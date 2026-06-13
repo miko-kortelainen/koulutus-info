@@ -1,0 +1,6 @@
+- listaus opintopolun korkekoulutarjonnasta
+  - simppeli haku, (filtterit ja sorting)
+  - yksittäisen koulutuksen kortti
+    - perustiedot
+    - linkki koulun omalle sivulle
+    - linkki opetussuunnitelmaan (jos tarjolla)

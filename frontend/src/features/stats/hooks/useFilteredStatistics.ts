@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import type { VipunenData } from "@/types.gen";
+import type { StatisticsResponse } from "@/types.gen";
 
-export default function useFilteredStatistics(data: VipunenData[] | undefined, searchTerm: string) {
+export default function useFilteredStatistics(data: StatisticsResponse | undefined, searchTerm: string) {
   return useMemo(() => {
     const items = data ?? [];
     const normalizedSearch = searchTerm.trim().toLocaleLowerCase();

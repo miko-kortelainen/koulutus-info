@@ -47,43 +47,34 @@
 /api/schools
 
 ```json
-{
-  "total": 298,
-  "hits": [
-    {
-      "koulutukset": [
-        {
-          "nimi": {
-            "fi": "Agrologi (AMK)",
-            "sv": "Agrolog (YH)",
-            "en": "Bachelor of Natural Resources (UAS), Agronomist"
-          }
-        }
-      ],
-      "toteutukset": [
-        {
-          "toteutusOid": "1.2.246.562.17.00000000000000003034",
-          "toteutusNimi": {
-            "fi": "Agrologi (AMK), monimuoto-opinnot, Rovaniemi"
-          },
-          "oppilaitosNimi": {
-            "fi": "Lapin ammattikorkeakoulu",
-            "sv": "Lapin ammattikorkeakoulu",
-            "en": "Lapland University of Applied Sciences"
-          }
-        },
-        {
-          "toteutusOid": "1.2.246.562.17.00000000000000035917",
-          "toteutusNimi": {
-            "fi": "Agrologi (AMK), Turku, päivätoteutus",
-            "sv": "Agrolog (YH), Åbo, dagstudier"
-          },
-          "oppilaitosNimi": {
-            "fi": "Yrkeshögskolan Novia",
-            "sv": "Yrkeshögskolan Novia",
-            "en": "Novia University of Applied Sciences"
-          }
-        },
-      ]
+[
+  {
+    "nimi": {
+      "fi": "Agrologi (AMK)",
+      "en": "Bachelor of Natural Resources (UAS), Agronomist"
     },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003034",
+        "toteutusNimi": {
+          "fi": "Agrologi (AMK), monimuoto-opinnot, Rovaniemi"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035917",
+        "toteutusNimi": {
+          "fi": "Agrologi (AMK), Turku, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Yrkeshögskolan Novia",
+          "en": "Novia University of Applied Sciences"
+        }
+      }
+    ]
+  }
+]
 ```
