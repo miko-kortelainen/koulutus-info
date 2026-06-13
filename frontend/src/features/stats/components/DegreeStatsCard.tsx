@@ -6,7 +6,7 @@ type Props = {
   degree: VipunenData;
 };
 
-export default function SchoolCard({ degree }: Props) {
+export default function DegreeStatCard({ degree }: Props) {
   return (
     <Card.Root>
       <Card.Header textWrap="pretty">{degree.hakukohde}</Card.Header>
