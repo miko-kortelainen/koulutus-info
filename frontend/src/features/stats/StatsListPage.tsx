@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Stack, Center, Text, HStack, IconButton, ButtonGroup } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
 import SortControl, { type SortOption } from "./components/SortControl";
-import SchoolCard from "./components/DegreeStatsCard";
+import DegreeStatCard from "./components/DegreeStatsCard";
 import SearchInput from "./components/SearchInput";
 import useStatisticsQuery from "./hooks/useStatisticsQuery";
 
@@ -59,7 +59,7 @@ export default function StatsListPage() {
         <Stack direction="column" height="1200px" overflowY="scroll" gap={4} px={4}>
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {paginated.map((d, index) => (
-            <SchoolCard degree={d} key={`${d.hakukohde}, ${index}`} />
+            <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />
           ))}
         </Stack>
 
