@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 export default function LandingPage() {
   const navigate = useNavigate();
 
-  function navigateToDegrees() {
-    navigate("/koulutukset");
+  function navigateToStats() {
+    navigate("/hakijamaarat");
   }
 
   return (
@@ -21,7 +21,7 @@ export default function LandingPage() {
           <Heading>Tutkaile yhteishaun hakijamääriä.</Heading>
         </Stack>
 
-        <Button variant="surface" onClick={navigateToDegrees} data-cy="landing-page-start-button">
+        <Button variant="surface" onClick={navigateToStats} data-cy="landing-page-start-button">
           Aloitetaan! <HiArrowRight />
         </Button>
       </Stack>

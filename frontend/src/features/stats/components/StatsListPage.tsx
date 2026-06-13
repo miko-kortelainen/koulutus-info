@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Stack, Center, Text, HStack, IconButton, ButtonGroup } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
 import SortControl, { type SortOption } from "./SortControl";
-import SchoolCard from "./DegreeStatsCard";
+import DegreeStatCard from "./DegreeStatsCard";
 import SearchInput from "./SearchInput";
 import useStatisticsQuery from "../hooks/useStatisticsQuery";
 import useFilteredStatistics from "../hooks/useFilteredStatistics";
@@ -10,7 +10,7 @@ import DegreeStatsCardSkeleton from "./DegreeStatsCardSkeleton";
 
 const PAGE_SIZE = 10;
 
-export default function DegreeListPage() {
+export default function StatsListPage() {
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,7 +41,7 @@ export default function DegreeListPage() {
           {query.isError ? <Text>Haku keskeytetty virheen takia.</Text> : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {paginated.map((d, index) => (
-            <SchoolCard degree={d} key={`${d.hakukohde}, ${index}`} />
+            <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />
           ))}
         </Stack>
 

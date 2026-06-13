@@ -24,6 +24,27 @@ export interface LanguageStrings {
   sv?: string;
   en?: string;
 }
+/**
+ * SchoolsResponse is the optimized response for /api/schools:
+ * a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
+ */
+export type SchoolsResponse = KoulutusEntry[];
+export interface KoulutusEntry {
+  nimi: LocalizedName;
+  toteutukset: ToteutusEntry[];
+}
+export interface ToteutusEntry {
+  toteutusOid: string;
+  toteutusNimi: LocalizedName;
+  oppilaitosNimi: LocalizedName;
+}
+/**
+ * LocalizedName only carries Finnish + English names.
+ */
+export interface LocalizedName {
+  fi?: string;
+  en?: string;
+}
 
 //////////
 // source: vipunen.go
@@ -35,6 +56,23 @@ export interface VipunenData {
   koulutuksenKieli: string;
   sektori: string;
   koulutusalaTaso1: string;
+  valintatapajononTyyppi?: string;
+  aloituspaikatLkm: number /* int */;
+  kaikkiHakijatLkm: number /* int */;
+  ensisijaisetHakijatLkm: number /* int */;
+}
+/**
+ * StatisticsResponse is the optimized response for /api/statistics:
+ * a flat array of statistics entries with the fields we expose to the API.
+ */
+export type StatisticsResponse = StatisticsEntry[];
+export interface StatisticsEntry {
+  kooditHakukohde: string;
+  hakukohde: string;
+  korkeakoulu?: string;
+  koulutuksenKieli?: string;
+  sektori?: string;
+  koulutusalaTaso1?: string;
   aloituspaikatLkm: number /* int */;
   kaikkiHakijatLkm: number /* int */;
   ensisijaisetHakijatLkm: number /* int */;
