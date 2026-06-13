@@ -1,6 +1,6 @@
 # koulutus-info
 
-katsele AMK yhteishaun hakijoiden ja aloituspaikkojen määriä helppokäyttöisessä ja visuaalisesti miellyttävässä käyttöliittymässä.
+full-stack projekti, jossa voit selata korkeakoulujen yhteishaun hakijoiden ja aloituspaikkojen määriä sekä koulutustarjontaa helppokäyttöisessä ja visuaalisesti miellyttävässä käyttöliittymässä.
 
 ## Usage
 
