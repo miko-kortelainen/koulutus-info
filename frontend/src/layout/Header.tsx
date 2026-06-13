@@ -5,7 +5,8 @@ export default function Header() {
   const navigate = useNavigate();
 
   const landing = () => navigate("/");
-  const degrees = () => navigate("/koulutukset");
+  const stats = () => navigate("/hakijamaarat");
+  const schools = () => navigate("/koulutukset");
 
   return (
     <Box p={2} px={6} textAlign="left">
@@ -16,7 +17,13 @@ export default function Header() {
 
         <Separator orientation="vertical" />
 
-        <Link fontSize="xl" onClick={degrees}>
+        <Link fontSize="xl" onClick={stats}>
+          hakijamäärät
+        </Link>
+
+        <Separator orientation="vertical" />
+
+        <Link fontSize="xl" onClick={schools}>
           koulutukset
         </Link>
       </Stack>
