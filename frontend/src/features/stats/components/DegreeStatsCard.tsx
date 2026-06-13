@@ -1,9 +1,9 @@
 import { Card, Stack, Badge, Group } from "@chakra-ui/react";
 import { HiLocationMarker, HiChartBar } from "react-icons/hi";
-import { type VipunenData } from "../../../types.gen";
+import { type StatisticsEntry } from "../../../types.gen";
 
 type Props = {
-  degree: VipunenData;
+  degree: StatisticsEntry;
 };
 
 export default function DegreeStatCard({ degree }: Props) {
