@@ -10,7 +10,7 @@ import DegreeStatsCardSkeleton from "./DegreeStatsCardSkeleton";
 
 const PAGE_SIZE = 10;
 
-export default function DegreeListPage() {
+export default function StatsListPage() {
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [searchTerm, setSearchTerm] = useState("");

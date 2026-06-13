@@ -3,7 +3,8 @@ import LandingPage from "./features/landing/LandingPage";
 import { Box, Flex } from "@chakra-ui/react";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import DegreeListPage from "./features/stats/components/StatsListPage";
+import StatsListPage from "./features/stats/components/StatsListPage";
+import SchoolsListPage from "./features/schools/SchoolsListPage";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Box flex={1}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/koulutukset" element={<DegreeListPage />} />
+            <Route path="/hakijamaarat" element={<StatsListPage />} />
+            <Route path="/koulutukset" element={<SchoolsListPage />} />
           </Routes>
         </Box>
 
