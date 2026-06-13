@@ -61,3 +61,19 @@ export interface VipunenData {
   kaikkiHakijatLkm: number /* int */;
   ensisijaisetHakijatLkm: number /* int */;
 }
+/**
+ * StatisticsResponse is the optimized response for /api/statistics:
+ * a flat array of statistics entries with the fields we expose to the API.
+ */
+export type StatisticsResponse = StatisticsEntry[];
+export interface StatisticsEntry {
+  kooditHakukohde: string;
+  hakukohde: string;
+  korkeakoulu?: string;
+  koulutuksenKieli?: string;
+  sektori?: string;
+  koulutusalaTaso1?: string;
+  aloituspaikatLkm: number /* int */;
+  kaikkiHakijatLkm: number /* int */;
+  ensisijaisetHakijatLkm: number /* int */;
+}
