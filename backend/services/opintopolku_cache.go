@@ -19,14 +19,15 @@ const OpintopolkuURL = "https://opintopolku.fi/konfo-backend/external/search/kou
 
 func GetOpintopolkuDataCached() (*models.OpintopolkuData, error) {
 	OpintopolkuCache.mu.RLock()
-	dataExists := OpintopolkuCache.Data != nil && len(OpintopolkuCache.Data.Hits) > 0
+	cachedData := OpintopolkuCache.Data
+	dataExists := cachedData != nil && len(cachedData.Hits) > 0
 	timeSinceUpdate := time.Since(OpintopolkuCache.LastUpdated)
 	OpintopolkuCache.mu.RUnlock()
 
 	// if no cache or data is stale
 	if !dataExists || timeSinceUpdate > 24*time.Hour {
 
-		fmt.Println("/api/statistics/: data not in cache or it's stale, requesting new...")
+		fmt.Println("/api/schools/: data not in cache or it's stale, requesting new...")
 
 		freshData, err := FetchOpintopolkuData(OpintopolkuURL)
 		if err != nil {
@@ -42,5 +43,5 @@ func GetOpintopolkuDataCached() (*models.OpintopolkuData, error) {
 	}
 
 	fmt.Println("/api/schools/: using cached data.")
-	return OpintopolkuCache.Data, nil
+	return cachedData, nil
 }
