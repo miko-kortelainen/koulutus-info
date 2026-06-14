@@ -29,6 +29,7 @@ func GetOpintopolkuDataCached() (*models.OpintopolkuData, error) {
 
 		fmt.Println("/api/schools/: data not in cache or it's stale, requesting new...")
 
+		// get fresh data from opintopolku API
 		freshData, err := FetchOpintopolkuData(OpintopolkuURL)
 		if err != nil {
 			return nil, err

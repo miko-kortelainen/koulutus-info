@@ -1,8 +1,9 @@
 package services
 
 import (
+	"cmp"
 	"school-api/models"
-	"sort"
+	"slices"
 )
 
 var allowedValintatapajononTyypit = map[string]bool{
@@ -70,8 +71,8 @@ func collectKept(grouped map[string]*models.VipunenData, keep map[string]bool) [
 		}
 	}
 
-	sort.Slice(result, func(i, j int) bool {
-		return result[i].Hakukohde < result[j].Hakukohde
+	slices.SortStableFunc(result, func(a, b models.VipunenData) int {
+		return cmp.Compare(a.Hakukohde, b.Hakukohde)
 	})
 
 	return result
