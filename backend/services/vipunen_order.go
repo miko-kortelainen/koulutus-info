@@ -1,27 +1,28 @@
 package services
 
 import (
+	"cmp"
 	"school-api/models"
-	"sort"
+	"slices"
 )
 
 func SortVipunenData(data []models.VipunenData, order Order) {
-	sort.Slice(data, func(i, j int) bool {
+	slices.SortStableFunc(data, func(a, b models.VipunenData) int {
 		switch order {
 		case OrderAsc:
-			return (data)[i].Hakukohde < (data)[j].Hakukohde
+			return cmp.Compare(a.Hakukohde, b.Hakukohde)
 		case OrderDesc:
-			return (data)[i].Hakukohde > (data)[j].Hakukohde
+			return cmp.Compare(b.Hakukohde, a.Hakukohde)
 		case OrderMostPopular:
-			return (data)[i].KaikkiHakijatLkm > (data)[j].KaikkiHakijatLkm
+			return cmp.Compare(b.KaikkiHakijatLkm, a.KaikkiHakijatLkm)
 		case OrderLeastPopular:
-			return (data)[i].KaikkiHakijatLkm < (data)[j].KaikkiHakijatLkm
+			return cmp.Compare(a.KaikkiHakijatLkm, b.KaikkiHakijatLkm)
 		case OrderMostSpots:
-			return (data)[i].AloituspaikatLkm > (data)[j].AloituspaikatLkm
+			return cmp.Compare(b.AloituspaikatLkm, a.AloituspaikatLkm)
 		case OrderLeastSpots:
-			return (data)[i].AloituspaikatLkm < (data)[j].AloituspaikatLkm
+			return cmp.Compare(a.AloituspaikatLkm, b.AloituspaikatLkm)
 		default:
-			return (data)[i].Hakukohde < (data)[j].Hakukohde
+			return cmp.Compare(a.Hakukohde, b.Hakukohde)
 		}
 	})
 }
