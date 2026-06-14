@@ -21,9 +21,9 @@ var allOrders = []Order{OrderAsc, OrderDesc, OrderMostPopular, OrderLeastPopular
 
 func GetVipunenDataCached(order Order) ([]models.VipunenData, error) {
 	VipunenCache.mu.RLock()
-	dataExists := len(VipunenCache.Sorted) > 0
-	timeSinceUpdate := time.Since(VipunenCache.LastUpdated)
 	cachedData := VipunenCache.Sorted[order]
+	dataExists := len(cachedData) > 0
+	timeSinceUpdate := time.Since(VipunenCache.LastUpdated)
 	VipunenCache.mu.RUnlock()
 
 	// if no cache or data is stale
