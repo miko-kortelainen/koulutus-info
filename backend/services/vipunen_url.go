@@ -1,7 +1,6 @@
 package services
 
 import (
-	"fmt"
 	"net/url"
 	"strings"
 )
@@ -11,15 +10,13 @@ const (
 	VipunenBaseURL = "https://api.vipunen.fi/api/resources/korkeakoulutus_hakeneet_ja_paikan_vastaanottaneet/data"
 
 	FilterKoulutuksenAlkamisvuosi = "2026"
-
-	FilterHakutapa = "Yhteishaku"
-
-	FilterKoulutusasteTaso1 = "Alempi korkeakouluaste"
+	FilterHakutapa                = "Yhteishaku"
+	FilterKoulutusasteTaso1       = "Alempi korkeakouluaste"
 )
 
 // helper func for fiql query building
 func eq(field, value string) string {
-	return fmt.Sprintf("%s=='%s'", field, value)
+	return field + "=='" + value + "'"
 }
 
 // construct the Vipunen API URL from the filters.
