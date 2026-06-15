@@ -40,5 +40,6 @@ func toLocalizedName(s models.LanguageStrings) models.LocalizedName {
 	return models.LocalizedName{
 		Fi: s.Fi,
 		En: s.En,
+		Sv: s.Sv,
 	}
 }
