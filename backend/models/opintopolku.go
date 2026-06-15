@@ -33,8 +33,8 @@ type LanguageStrings struct {
 type SchoolsResponse []KoulutusEntry
 
 type KoulutusEntry struct {
-	Nimi        LocalizedName     `json:"nimi"`
-	Toteutukset []ToteutusEntry   `json:"toteutukset"`
+	Nimi        LocalizedName   `json:"nimi"`
+	Toteutukset []ToteutusEntry `json:"toteutukset"`
 }
 
 type ToteutusEntry struct {
@@ -47,4 +47,5 @@ type ToteutusEntry struct {
 type LocalizedName struct {
 	Fi string `json:"fi,omitempty"`
 	En string `json:"en,omitempty"`
+	Sv string `json:"sv,omitempty"`
 }
