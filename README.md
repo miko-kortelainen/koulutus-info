@@ -44,3 +44,7 @@ docker compose up --build
 
 - **[Opintopolku](https://opintopolku.fi)**
 - **[Vipunen](https://vipunen.fi)**
+
+## Development methodology
+
+This project was **NOT** vibecoded, AI was used strictly as a tool to be more efficient, reduce repetetive typing, speed up documentation writing, and boilerplate code generation. I mainly used GitHub Copilot and Antigravity CLI.
