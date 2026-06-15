@@ -44,6 +44,7 @@ export interface ToteutusEntry {
 export interface LocalizedName {
   fi?: string;
   en?: string;
+  sv?: string;
 }
 
 //////////
