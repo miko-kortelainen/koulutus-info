@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"school-api/models"
 	"school-api/services"
 )
 
@@ -14,21 +15,6 @@ const (
 	statisticsOutputPath = "../frontend/public/data/statistics.json"
 	schoolsOutputPath    = "../frontend/public/data/schools.json"
 )
-
-type config struct {
-	Vipunen     vipunenConfig     `json:"vipunen"`
-	Opintopolku opintopolkuConfig `json:"opintopolku"`
-}
-
-type vipunenConfig struct {
-	AineistoURL  string `json:"aineistoUrl"`
-	TilastoVuosi string `json:"tilastoVuosi"`
-}
-
-type opintopolkuConfig struct {
-	YhteishakuOID     string   `json:"yhteishakuOid"`
-	Alkamisajankohdat []string `json:"alkamisajankohdat"`
-}
 
 func main() {
 	if err := run(os.Args[1:]); err != nil {
@@ -62,8 +48,8 @@ func run(args []string) error {
 	}
 }
 
-func readConfig(path string) (config, error) {
-	var cfg config
+func readConfig(path string) (models.Config, error) {
+	var cfg models.Config
 
 	file, err := os.Open(path)
 	if err != nil {
@@ -80,7 +66,7 @@ func readConfig(path string) (config, error) {
 	return cfg, nil
 }
 
-func generateVipunen(cfg vipunenConfig) error {
+func generateVipunen(cfg models.VipunenConfig) error {
 	apiURL, err := services.BuildVipunenURL(cfg.AineistoURL, cfg.TilastoVuosi)
 	if err != nil {
 		return fmt.Errorf("invalid Vipunen configuration: %w", err)
@@ -108,7 +94,7 @@ func generateVipunen(cfg vipunenConfig) error {
 	return nil
 }
 
-func generateOpintopolku(cfg opintopolkuConfig) error {
+func generateOpintopolku(cfg models.OpintopolkuConfig) error {
 	apiURL, selection, err := services.BuildOpintopolkuURL(cfg.YhteishakuOID, cfg.Alkamisajankohdat)
 	if err != nil {
 		return fmt.Errorf("invalid Opintopolku configuration: %w", err)
