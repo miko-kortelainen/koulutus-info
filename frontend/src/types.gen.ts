@@ -25,7 +25,7 @@ export interface LanguageStrings {
   en?: string;
 }
 /**
- * SchoolsResponse is the optimized response for /api/schools:
+ * SchoolsResponse is the optimized schools.json format:
  * a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
  */
 export type SchoolsResponse = KoulutusEntry[];
@@ -63,8 +63,7 @@ export interface VipunenData {
   ensisijaisetHakijatLkm: number /* int */;
 }
 /**
- * StatisticsResponse is the optimized response for /api/statistics:
- * a flat array of statistics entries with the fields we expose to the API.
+ * StatisticsResponse is the optimized statistics.json format.
  */
 export type StatisticsResponse = StatisticsEntry[];
 export interface StatisticsEntry {

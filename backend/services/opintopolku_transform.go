@@ -2,8 +2,8 @@ package services
 
 import "school-api/models"
 
-// converts the raw Opintopolku data into the
-// optimized /api/schools response format: a flat array of koulutus entries,
+// TransformOpintopolkuData converts raw Opintopolku data into the optimized
+// schools.json format: a flat array of koulutus entries.
 func TransformOpintopolkuData(data *models.OpintopolkuData) models.SchoolsResponse {
 	if data == nil {
 		return models.SchoolsResponse{}
