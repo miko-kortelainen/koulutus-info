@@ -1,6 +1,6 @@
 FROM node:22-alpine AS build
 
-RUN corepack enable && corepack prepare pnpm@11.1.1 --activate
+RUN npm install -g pnpm@11.1.1
 
 WORKDIR /app
 
