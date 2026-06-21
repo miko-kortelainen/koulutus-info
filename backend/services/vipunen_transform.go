@@ -3,7 +3,7 @@ package services
 import "school-api/models"
 
 // TransformVipunenData converts internal VipunenData records into the
-// API-friendly StatisticsResponse used by /api/statistics.
+// statistics.json output format.
 func TransformVipunenData(data []models.VipunenData) models.StatisticsResponse {
 	if len(data) == 0 {
 		return models.StatisticsResponse{}
