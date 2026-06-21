@@ -1,21 +1,5 @@
 services:
-  backend:
-    build: ./backend
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./backend:/app
-    working_dir: /app
-
   frontend:
     build: ./frontend
     ports:
-      - "5173:5173"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    working_dir: /app
-    environment:
-      - VITE_API_URL=http://backend:8080
-    depends_on:
-      - backend
+      - "8080:80"

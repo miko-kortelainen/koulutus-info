@@ -26,9 +26,9 @@ type LanguageStrings struct {
 	En string `json:"en,omitempty"`
 }
 
-// --- Optimized output format for /api/schools ---
+// --- Optimized output format for schools.json ---
 
-// SchoolsResponse is the optimized response for /api/schools:
+// SchoolsResponse is the optimized schools.json format:
 // a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
 type SchoolsResponse []KoulutusEntry
 

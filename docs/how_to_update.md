@@ -1,19 +1,49 @@
-#### Vipunen API
+# Updating static data
 
-Vipunen api url:
-https://api.vipunen.fi/api/resources/korkeakoulutus_hakeneet_ja_paikan_vastaanottaneet/data?filter=koulutuksenAlkamisvuosi%3D%3D%272026%27%20and%20hakutapa%3D%3D%27Yhteishaku%27%20and%20koulutusasteTaso1%3D%3D%27Alempi%20korkeakouluaste%27
+The datasets are updated independently because Vipunen and Opintopolku publish changes on different schedules.
 
-Vipunen swagger api docs:  
-https://api.vipunen.fi/api/swagger-ui/index.html
+## Vipunen statistics
 
----
+1. Set `vipunen.aineistoUrl` and `vipunen.tilastoVuosi` in `backend/config.json`.
+2. Generate the statistics:
 
-#### Opintopolku API
+   ```sh
+   cd backend
+   go run . vipunen
+   ```
 
-Resource used: `korkeakoulutus_hakeneet_ja_paikan_vastaanottaneet`
+3. Review and commit `frontend/public/data/statistics.json`.
 
-FIQL filters used:
+## Opintopolku schools
 
-```sql
-koulutuksenAlkamisvuosi=='2026' and hakutapa=='Yhteishaku' and koulutusasteTaso1=='Alempi korkeakouluaste'
+1. Set `opintopolku.yhteishakuOid` in `backend/config.json`.
+2. If the OID is not available, leave it empty and set `opintopolku.alkamisajankohdat` as a fallback.
+3. Generate the schools:
+
+   ```sh
+   cd backend
+   go run . opintopolku
+   ```
+
+4. Review and commit `frontend/public/data/schools.json`.
+
+The joint-application OID is currently found and configured manually. Automatic scraping from the Opintopolku website is outside the current implementation.
+
+## Updating both datasets
+
+After checking both source configurations:
+
+```sh
+cd backend
+go run . all
+```
+
+Review the JSON diffs before committing them. A failed generation leaves the existing file unchanged.
+
+## Deployment
+
+Build the frontend-only production container after committing the generated files:
+
+```sh
+docker compose up --build
 ```

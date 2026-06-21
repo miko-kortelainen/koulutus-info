@@ -1,35 +1,26 @@
 # Frontend
 
-A React SPA built with Vite that displays school data and statistics from the backend.
+A React SPA built with Vite that displays the committed datasets in `public/data/`.
 
-## Quick Start
+## Quick start
 
 ```sh
-# Install dependencies
 pnpm install
-
-# Start the dev server
 pnpm dev
 ```
 
-## Tech Stack
+## Production
 
-- **Core:** React 19, Vite, pnpm
-- **Styling:** Chakra UI
-- **Routing:** React Router (`src/App.tsx`)
-- **Data:** Native `fetch` + TanStack Query
-- **Types:** Auto-generated from backend (`src/types.gen.ts` — do not edit manually)
+The multi-stage Docker image builds the Vite application and serves it with nginx. Build it from the repository root with:
 
-## Architecture
-
-The app uses a **Feature-Based Architecture**. Code is grouped by domain rather than file type.
-
-```text
-src/
-├── features/    # Domain-specific pages and logic (e.g. schools/, stats/)
-├── components/  # Shared, reusable UI building blocks
-├── layout/      # Global layout wrappers (e.g. Navbars)
-├── api/         # Functions to communicate with the backend
-├── types.gen.ts # Auto-generated backend types
-└── App.tsx      # Main router
+```sh
+docker compose up --build
 ```
+
+## Tech stack
+
+- React 19 and Vite
+- Chakra UI
+- React Router
+- Native `fetch` and TanStack Query
+- Types generated from the Go output models in `src/types.gen.ts`

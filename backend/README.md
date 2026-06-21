@@ -1,28 +1,32 @@
-# Backend
+# Data generator
 
-A Go REST API that fetches and transforms data from Opintopolku and Vipunen for the frontend.
+The Go application fetches and prepares static frontend datasets from Vipunen and Opintopolku. It is an offline update tool, not a deployed server.
 
-## Quick Start
+## Configuration
+
+Edit `config.json` before generating data:
+
+- `vipunen.aineistoUrl`: Vipunen dataset endpoint.
+- `vipunen.tilastoVuosi`: historical statistics year.
+- `opintopolku.yhteishakuOid`: preferred joint-application OID.
+- `opintopolku.alkamisajankohdat`: fallback start terms used only when `yhteishakuOid` is empty.
+
+The joint-application OID is updated manually. Automatic discovery from the Opintopolku website is intentionally deferred.
+
+## Commands
+
+Run commands from this directory:
 
 ```sh
-# Start the server (runs on localhost:8080)
-go run main.go
-
-# Generate frontend TypeScript types from Go structs
-tygo generate
+go run . vipunen
+go run . opintopolku
+go run . all
 ```
 
-## Endpoints
+The generator writes `statistics.json` and `schools.json` under `frontend/public/data/`. Review and commit those files before deploying the frontend.
 
-- `GET /api/schools`
-- `GET /api/statistics`
+Generate frontend TypeScript types after changing exported data models:
 
-## Architecture
-
-Flow: `Router (main.go) -> Handlers (handlers/) -> Business Logic (services/)`
-
-- `main.go` - Application entry point and router.
-- `handlers/` - API route definitions and request/response parsing.
-- `services/` - 3rd party API calls, data transformation, caching.
-- `models/` - Data structures (used by Tygo to generate frontend types).
-- `docs/` - In-depth documentation.
+```sh
+tygo generate
+```
