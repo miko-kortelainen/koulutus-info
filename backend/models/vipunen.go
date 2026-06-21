@@ -13,10 +13,9 @@ type VipunenData struct {
 	EnsisijaisetHakijatLkm int     `json:"ensisijaisetHakijatLkm"`
 }
 
-// --- Optimized output format for /api/statistics ---
+// --- Optimized output format for statistics.json ---
 
-// StatisticsResponse is the optimized response for /api/statistics:
-// a flat array of statistics entries with the fields we expose to the API.
+// StatisticsResponse is the optimized statistics.json format.
 type StatisticsResponse []StatisticsEntry
 
 type StatisticsEntry struct {
