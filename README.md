@@ -2,8 +2,6 @@
 
 Selaa korkeakoulujen yhteishaun hakijoiden ja aloituspaikkojen määriä sekä koulutustarjontaa helppokäyttöisessä ja visuaalisesti miellyttävässä käyttöliittymässä.
 
-The deployed application is a static React frontend. Its JSON datasets are generated manually from Vipunen and Opintopolku when their source data changes.
-
 ## Prerequisites
 
 - [Go](https://go.dev/) 1.26+ for updating data
