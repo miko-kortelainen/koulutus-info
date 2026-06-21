@@ -14,8 +14,8 @@ export default function StatsListPage() {
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [searchTerm, setSearchTerm] = useState("");
-  const query = useStatisticsQuery(sortOrder);
-  const filteredData = useFilteredStatistics(query.data, searchTerm);
+  const query = useStatisticsQuery();
+  const filteredData = useFilteredStatistics(query.data, searchTerm, sortOrder);
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
@@ -33,7 +33,13 @@ export default function StatsListPage() {
             }}
             placeholder="Hae koulua tai linjaa"
           />
-          <SortControl value={sortOrder} onChange={setSortOrder} />
+          <SortControl
+            value={sortOrder}
+            onChange={(value) => {
+              setSortOrder(value);
+              setPage(1);
+            }}
+          />
         </Stack>
 
         <Stack direction="column" height="1200px" overflowY="scroll" gap={4} px={4}>
