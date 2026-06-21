@@ -26,15 +26,15 @@ type LanguageStrings struct {
 	En string `json:"en,omitempty"`
 }
 
-// --- Optimized output format for /api/schools ---
+// --- Optimized output format for schools.json ---
 
-// SchoolsResponse is the optimized response for /api/schools:
+// SchoolsResponse is the optimized schools.json format:
 // a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
 type SchoolsResponse []KoulutusEntry
 
 type KoulutusEntry struct {
-	Nimi        LocalizedName     `json:"nimi"`
-	Toteutukset []ToteutusEntry   `json:"toteutukset"`
+	Nimi        LocalizedName   `json:"nimi"`
+	Toteutukset []ToteutusEntry `json:"toteutukset"`
 }
 
 type ToteutusEntry struct {
@@ -47,4 +47,5 @@ type ToteutusEntry struct {
 type LocalizedName struct {
 	Fi string `json:"fi,omitempty"`
 	En string `json:"en,omitempty"`
+	Sv string `json:"sv,omitempty"`
 }

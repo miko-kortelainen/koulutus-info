@@ -8,27 +8,32 @@ import (
 
 // Vipunen API filter parameters
 const (
-	VipunenBaseURL = "https://api.vipunen.fi/api/resources/korkeakoulutus_hakeneet_ja_paikan_vastaanottaneet/data"
-
-	FilterKoulutuksenAlkamisvuosi = "2026"
-
-	FilterHakutapa = "Yhteishaku"
-
+	FilterHakutapa          = "Yhteishaku"
 	FilterKoulutusasteTaso1 = "Alempi korkeakouluaste"
 )
 
 // helper func for fiql query building
 func eq(field, value string) string {
-	return fmt.Sprintf("%s=='%s'", field, value)
+	return field + "=='" + value + "'"
 }
 
 // construct the Vipunen API URL from the filters.
-func buildVipunenURL() string {
+func BuildVipunenURL(baseURL, tilastoVuosi string) (string, error) {
+	if strings.TrimSpace(baseURL) == "" {
+		return "", fmt.Errorf("aineistoUrl is required")
+	}
+	if strings.TrimSpace(tilastoVuosi) == "" {
+		return "", fmt.Errorf("tilastoVuosi is required")
+	}
+	if _, err := url.ParseRequestURI(baseURL); err != nil {
+		return "", fmt.Errorf("invalid aineistoUrl: %w", err)
+	}
+
 	filters := []string{
-		eq("koulutuksenAlkamisvuosi", FilterKoulutuksenAlkamisvuosi),
+		eq("koulutuksenAlkamisvuosi", tilastoVuosi),
 		eq("hakutapa", FilterHakutapa),
 		eq("koulutusasteTaso1", FilterKoulutusasteTaso1),
 	}
 	filter := url.QueryEscape(strings.Join(filters, " and "))
-	return VipunenBaseURL + "?filter=" + filter
+	return baseURL + "?filter=" + filter, nil
 }

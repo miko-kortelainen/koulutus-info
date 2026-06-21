@@ -1,28 +1,18 @@
 # koulutus-info
 
-selaa korkeakoulujen yhteishaun hakijoiden ja aloituspaikkojen määriä sekä koulutustarjontaa helppokäyttöisessä ja visuaalisesti miellyttävässä käyttöliittymässä.
+Selaa korkeakoulujen yhteishaun hakijoiden ja aloituspaikkojen määriä sekä koulutustarjontaa helppokäyttöisessä ja visuaalisesti miellyttävässä käyttöliittymässä.
 
-## Usage
+The deployed application is a static React frontend. Its JSON datasets are generated manually from Vipunen and Opintopolku when their source data changes.
 
-### Prerequisites
+## Prerequisites
 
-- [Go](https://go.dev/) 1.26+
-- [Node.js](https://nodejs.org/) 20+
-- [pnpm](https://pnpm.io/) 11+
-- [Docker](https://www.docker.com/)
+- [Go](https://go.dev/) 1.26+ for updating data
+- [Node.js](https://nodejs.org/) 20+ and [pnpm](https://pnpm.io/) 11+ for frontend development
+- [Docker](https://www.docker.com/) for the production container
 
-### Local development
+## Local development
 
-**Backend:**
-
-```sh
-cd backend
-go run main.go
-```
-
-Backend starts to URL: `http://localhost:8080`.
-
-**Frontend:**
+The committed files under `frontend/public/data/` are available through the Vite development server.
 
 ```sh
 cd frontend
@@ -30,21 +20,19 @@ pnpm install
 pnpm dev
 ```
 
-Frontend starts to URL `http://localhost:5173`.
+Open `http://localhost:5173`.
 
-### With Docker
+See [docs/how_to_update.md](docs/how_to_update.md) before updating either dataset.
 
-Start the whole stack with one command:
+## Production container
 
 ```sh
 docker compose up --build
 ```
 
-## 3rd party APIs used
+Open `http://localhost:8080`. The container includes only nginx, the frontend build, and the generated JSON files.
 
-- **[Opintopolku](https://opintopolku.fi)**
-- **[Vipunen](https://vipunen.fi)**
+## Data sources
 
-## Development methodology
-
-This project was **NOT** vibecoded, AI was used strictly as a tool to be more efficient, reduce repetetive typing, speed up documentation writing, and boilerplate code generation. I mainly used GitHub Copilot and Antigravity CLI.
+- [Opintopolku](https://opintopolku.fi)
+- [Vipunen](https://vipunen.fi)
