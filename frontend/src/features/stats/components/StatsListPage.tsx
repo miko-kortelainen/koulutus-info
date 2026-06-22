@@ -14,7 +14,7 @@ const PAGE_SIZE = 10;
 export default function StatsListPage() {
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
-  const [selectedYear, setSelectedYear] = useState<YearOption>("2025");
+  const [selectedYear, setSelectedYear] = useState<YearOption>("2026");
   const [searchTerm, setSearchTerm] = useState("");
   const query = useStatisticsQuery(selectedYear);
   const filteredData = useFilteredStatistics(query.data, searchTerm, sortOrder);
