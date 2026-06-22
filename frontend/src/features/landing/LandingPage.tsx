@@ -10,18 +10,20 @@ export default function LandingPage() {
   }
 
   return (
-    <Center h="100%">
-      <Stack gap={10}>
+    <Center h="100%" border="1px solid red">
+      <Stack gap={10} px="10">
         <Stack textAlign="center">
-          <Heading size="6xl" data-cy="landing-page-header">
+          <Heading size={{ base: "3xl", md: "5xl" }}>
             <Highlight query="korkeakoulutuksia" styles={{ color: "blue.400" }}>
               Etsi korkeakoulutuksia
             </Highlight>
           </Heading>
-          <Heading>Tutkaile yhteishaun hakijamääriä.</Heading>
+          <Heading size={{ base: "sm" }}>
+            Tutki korkeakoulujen yhteishaun hakijamääriä, trendejä sekä koulutustarjontaa.
+          </Heading>
         </Stack>
 
-        <Button variant="surface" onClick={navigateToStats} data-cy="landing-page-start-button">
+        <Button size={{ base: "sm", md: "lg" }} variant="surface" onClick={navigateToStats}>
           Aloitetaan! <HiArrowRight />
         </Button>
       </Stack>
