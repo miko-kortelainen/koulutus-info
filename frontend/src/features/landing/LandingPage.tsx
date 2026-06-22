@@ -12,10 +12,10 @@ export default function LandingPage() {
   return (
     <Center h="100%">
       <Stack gap={10} px="10">
-        <Stack textAlign="center">
+        <Stack textAlign="center" gap={10}>
           <Heading size={{ base: "3xl", md: "5xl" }}>
-            <Highlight query="korkeakoulutuksia" styles={{ color: "blue.400" }}>
-              Etsi korkeakoulutuksia
+            <Highlight query="yhteishaku" styles={{ color: "green.400" }}>
+              yhteishaku.app
             </Highlight>
           </Heading>
           <Heading size={{ base: "sm" }}>
@@ -23,7 +23,7 @@ export default function LandingPage() {
           </Heading>
         </Stack>
 
-        <Button size={{ base: "sm", md: "lg" }} variant="surface" onClick={navigateToStats}>
+        <Button size={{ base: "xs", md: "lg" }} variant="surface" onClick={navigateToStats}>
           Aloitetaan! <HiArrowRight />
         </Button>
       </Stack>
