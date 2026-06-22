@@ -26,6 +26,7 @@ export default function SchoolsListPage() {
   return (
     <>
       <title>Koulutukset - Yliopistot ja ammattikorkeakoulut</title>
+      <meta name="description" content="Selaa yliopistojen ja ammattikorkeakoulujen koulutustarjontaa." />
       <Center h="100%" px={4}>
         <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
           <Stack direction="row" gap={2}>

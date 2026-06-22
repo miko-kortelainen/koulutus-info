@@ -40,6 +40,10 @@ export default function StatsListPage() {
   return (
     <>
       <title>Hakijamäärät - Edellisvuosien yhteishaun tilastoja</title>
+      <meta
+        name="description"
+        content="Selaa korkeakoulujen yhteishaun hakijamääriä vuodelta 2026 sekä aiemmilta vuosilta."
+      />
       <Center h="100%" px={4}>
         <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
           <Stack direction={{ base: "column", md: "row" }} gap={2}>
