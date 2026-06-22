@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group } from "@chakra-ui/react";
+import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group, Alert } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
 import SortControl, { type SortOption } from "./SortControl";
 import DegreeStatCard from "./DegreeStatsCard";
@@ -30,9 +30,16 @@ export default function StatsListPage() {
     });
   }
 
+  const errorAlert = (
+    <Alert.Root status="error">
+      <Alert.Indicator />
+      <Alert.Title>Jotain meni vikaan, yritä uudelleen.</Alert.Title>
+    </Alert.Root>
+  );
+
   return (
     <Center h="100%" px={4}>
-      <Stack direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
+      <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
         <Stack direction={{ base: "column", md: "row" }} gap={2}>
           <SearchInput
             value={searchTerm}
@@ -62,7 +69,7 @@ export default function StatsListPage() {
 
         <Stack direction="column" gap={4}>
           {query.isPending ? degreeSkeletonList : null}
-          {query.isError ? <Text>Haku keskeytetty virheen takia.</Text> : null}
+          {query.isError ? errorAlert : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {paginated.map((d, index) => (
             <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />

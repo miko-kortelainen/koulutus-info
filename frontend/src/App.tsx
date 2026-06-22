@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Box flex={1}>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route index element={<LandingPage />} />
             <Route path="/hakijamaarat" element={<StatsListPage />} />
             <Route path="/koulutukset" element={<SchoolsListPage />} />
           </Routes>
