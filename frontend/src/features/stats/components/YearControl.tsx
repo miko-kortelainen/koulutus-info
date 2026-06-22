@@ -19,6 +19,7 @@ interface YearControlProps {
 export default function YearControl({ value, onChange }: YearControlProps) {
   return (
     <Select.Root
+      size="sm"
       collection={collection}
       value={[value]}
       onValueChange={(e) => onChange(e.value[0] as YearOption)}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Stack, Center, Text, HStack, IconButton, ButtonGroup } from "@chakra-ui/react";
+import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
 import SortControl, { type SortOption } from "./SortControl";
 import DegreeStatCard from "./DegreeStatsCard";
@@ -23,10 +23,17 @@ export default function StatsListPage() {
 
   const degreeSkeletonList = Array.from({ length: 10 }).map((_, i) => <DegreeStatsCardSkeleton key={i} />);
 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }
+
   return (
     <Center h="100%" px={8}>
-      <Stack direction="column" gap={4} width="800px" p={2}>
-        <Stack direction="row" px={4} gap={8}>
+      <Stack direction="column" gap={4} p={2} width={{ base: "100dvw", md: "80dvw" }}>
+        <Stack direction={{ base: "column", md: "row" }} gap={2}>
           <SearchInput
             value={searchTerm}
             onChange={(value) => {
@@ -35,23 +42,25 @@ export default function StatsListPage() {
             }}
             placeholder="Hae koulua tai linjaa"
           />
-          <SortControl
-            value={sortOrder}
-            onChange={(value) => {
-              setSortOrder(value);
-              setPage(1);
-            }}
-          />
-          <YearControl
-            value={selectedYear}
-            onChange={(value) => {
-              setSelectedYear(value);
-              setPage(1);
-            }}
-          />
+          <Group flex={1}>
+            <SortControl
+              value={sortOrder}
+              onChange={(value) => {
+                setSortOrder(value);
+                setPage(1);
+              }}
+            />
+            <YearControl
+              value={selectedYear}
+              onChange={(value) => {
+                setSelectedYear(value);
+                setPage(1);
+              }}
+            />
+          </Group>
         </Stack>
 
-        <Stack direction="column" height="1200px" overflowY="scroll" gap={4} px={4}>
+        <Stack direction="column" gap={4}>
           {query.isPending ? degreeSkeletonList : null}
           {query.isError ? <Text>Haku keskeytetty virheen takia.</Text> : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
@@ -70,7 +79,9 @@ export default function StatsListPage() {
             <ButtonGroup variant="ghost">
               <Pagination.Items
                 render={(page) => (
-                  <IconButton variant={{ base: "ghost", _selected: "outline" }}>{page.value}</IconButton>
+                  <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => scrollToTop()}>
+                    {page.value}
+                  </IconButton>
                 )}
               />
             </ButtonGroup>

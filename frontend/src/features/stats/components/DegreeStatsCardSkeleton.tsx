@@ -1,25 +1,19 @@
-import { Card, Stack, Badge, Group, Skeleton } from "@chakra-ui/react";
+import { Card, Stack, Group, Skeleton } from "@chakra-ui/react";
 
 export default function DegreeStatsCardSkeleton() {
   return (
-    <Card.Root>
+    <Card.Root size="sm" zIndex={-1}>
       <Card.Header>
-        <Skeleton height="24px" width="80%" />
+        <Skeleton height="16px" width="180px" />
       </Card.Header>
       <Card.Body>
         <Stack>
-          <Badge mr="auto" p={0}>
-            <Skeleton height="16px" width="120px" />
-          </Badge>
+          <Skeleton height="16px" width="120px" />
 
           <Group>
-            <Badge p={0}>
-              <Skeleton height="16px" width="80px" />
-            </Badge>
+            <Skeleton height="17px" width="80px" />
 
-            <Badge p={0}>
-              <Skeleton height="16px" width="100px" />
-            </Badge>
+            <Skeleton height="17px" width="100px" />
           </Group>
         </Stack>
       </Card.Body>
