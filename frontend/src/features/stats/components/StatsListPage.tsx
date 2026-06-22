@@ -38,63 +38,72 @@ export default function StatsListPage() {
   );
 
   return (
-    <Center h="100%" px={4}>
-      <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
-        <Stack direction={{ base: "column", md: "row" }} gap={2}>
-          <SearchInput
-            value={searchTerm}
-            onChange={(value) => {
-              setSearchTerm(value);
-              setPage(1);
-            }}
-            placeholder="Hae koulua tai linjaa"
-          />
-          <Group flex={1}>
-            <SortControl
-              value={sortOrder}
+    <>
+      <title>Hakijamäärät - Edellisvuosien yhteishaun tilastoja</title>
+      <meta
+        name="description"
+        content="Selaa korkeakoulujen yhteishaun hakijamääriä vuodelta 2026 sekä aiemmilta vuosilta."
+      />
+      <Center h="100%" px={4}>
+        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
+          <Stack direction={{ base: "column", md: "row" }} gap={2}>
+            <SearchInput
+              value={searchTerm}
               onChange={(value) => {
-                setSortOrder(value);
+                setSearchTerm(value);
                 setPage(1);
               }}
+              placeholder="Hae koulua tai linjaa"
             />
-            <YearControl
-              value={selectedYear}
-              onChange={(value) => {
-                setSelectedYear(value);
-                setPage(1);
-              }}
-            />
-          </Group>
-        </Stack>
-
-        <Stack direction="column" gap={4}>
-          {query.isPending ? degreeSkeletonList : null}
-          {query.isError ? errorAlert : null}
-          {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
-          {paginated.map((d, index) => (
-            <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />
-          ))}
-        </Stack>
-
-        <Pagination.Root
-          count={filteredData.length}
-          pageSize={PAGE_SIZE}
-          page={page}
-          onPageChange={(e) => setPage(e.page)}
-        >
-          <HStack justify="center">
-            <ButtonGroup variant="ghost">
-              <Pagination.Items
-                render={(page) => (
-                  <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => scrollToTop()}>
-                    {page.value}
-                  </IconButton>
-                )}
+            <Group flex={1}>
+              <SortControl
+                value={sortOrder}
+                onChange={(value) => {
+                  setSortOrder(value);
+                  setPage(1);
+                }}
               />
-            </ButtonGroup>
-          </HStack>
-        </Pagination.Root>
-      </Stack>
-    </Center>
+              <YearControl
+                value={selectedYear}
+                onChange={(value) => {
+                  setSelectedYear(value);
+                  setPage(1);
+                }}
+              />
+            </Group>
+          </Stack>
+
+          <Stack direction="column" gap={4}>
+            {query.isPending ? degreeSkeletonList : null}
+            {query.isError ? errorAlert : null}
+            {!query.isPending && !query.isError && paginated.length === 0 ? (
+              <Text>Ei tuloksia hakusanoilla.</Text>
+            ) : null}
+            {paginated.map((d, index) => (
+              <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />
+            ))}
+          </Stack>
+
+          <Pagination.Root
+            count={filteredData.length}
+            pageSize={PAGE_SIZE}
+            page={page}
+            onPageChange={(e) => setPage(e.page)}
+          >
+            <HStack justify="center">
+              <ButtonGroup variant="ghost">
+                <Pagination.Items
+                  render={(page) => (
+                    <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => scrollToTop()}>
+                      {page.value}
+                    </IconButton>
+                  )}
+                />
+              </ButtonGroup>
+            </HStack>
+          </Pagination.Root>
+        </Stack>
+      </Center>
+    </>
   );
 }
