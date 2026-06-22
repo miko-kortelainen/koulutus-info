@@ -23,7 +23,7 @@ go run . opintopolku
 go run . all
 ```
 
-The generator writes `statistics.json` and `schools.json` under `frontend/public/data/`. Review and commit those files before deploying the frontend.
+The generator writes `statistics-<year>.json` and `schools.json` under `frontend/public/data/`. Statistics from existing years are left unchanged. Review and commit the generated files before deploying the frontend.
 
 Generate frontend TypeScript types after changing exported data models:
 

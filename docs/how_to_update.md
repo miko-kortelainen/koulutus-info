@@ -12,7 +12,7 @@ The datasets are updated independently because Vipunen and Opintopolku publish c
    go run . vipunen
    ```
 
-3. Review and commit `frontend/public/data/statistics.json`.
+3. Review and commit `frontend/public/data/statistics-<year>.json`. Existing years are left unchanged.
 
 ## Opintopolku schools
 
