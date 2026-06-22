@@ -7,14 +7,16 @@ import SearchInput from "./SearchInput";
 import useStatisticsQuery from "../hooks/useStatisticsQuery";
 import useFilteredStatistics from "../hooks/useFilteredStatistics";
 import DegreeStatsCardSkeleton from "./DegreeStatsCardSkeleton";
+import YearControl, { type YearOption } from "./YearControl";
 
 const PAGE_SIZE = 10;
 
 export default function StatsListPage() {
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
+  const [selectedYear, setSelectedYear] = useState<YearOption>("2025");
   const [searchTerm, setSearchTerm] = useState("");
-  const query = useStatisticsQuery();
+  const query = useStatisticsQuery(selectedYear);
   const filteredData = useFilteredStatistics(query.data, searchTerm, sortOrder);
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -37,6 +39,13 @@ export default function StatsListPage() {
             value={sortOrder}
             onChange={(value) => {
               setSortOrder(value);
+              setPage(1);
+            }}
+          />
+          <YearControl
+            value={selectedYear}
+            onChange={(value) => {
+              setSelectedYear(value);
               setPage(1);
             }}
           />
