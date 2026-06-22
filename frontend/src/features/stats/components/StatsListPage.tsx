@@ -31,8 +31,8 @@ export default function StatsListPage() {
   }
 
   return (
-    <Center h="100%" px={8}>
-      <Stack direction="column" gap={4} p={2} width={{ base: "100dvw", md: "80dvw" }}>
+    <Center h="100%" px={4}>
+      <Stack direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
         <Stack direction={{ base: "column", md: "row" }} gap={2}>
           <SearchInput
             value={searchTerm}

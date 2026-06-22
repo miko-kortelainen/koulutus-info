@@ -3,8 +3,8 @@ import { Box, Text } from "@chakra-ui/react";
 export default function Footer() {
   return (
     <Box p={2} textAlign="center">
-      <Text fontSize="xs" color="gray">
-        made by Miko Kortelainen | tilastojen lähde: Vipunen - opetushallinnon tilastopalvelu
+      <Text fontSize={{ base: "2xs", md: "xs" }} color="gray">
+        Lähteet: Vipunen - opetushallinnon tilastopalvelu & Opintopolku.fi
       </Text>
     </Box>
   );
