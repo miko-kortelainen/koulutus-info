@@ -7,5 +7,14 @@ interface SearchInputProps {
 }
 
 export default function SearchInput({ value, onChange, placeholder = "Search" }: SearchInputProps) {
-  return <Input flex={2} placeholder={placeholder} value={value} onChange={(event) => onChange(event.target.value)} />;
+  return (
+    <Input
+      minHeight="9"
+      size="sm"
+      flex={1}
+      placeholder={placeholder}
+      value={value}
+      onChange={(event) => onChange(event.target.value)}
+    />
+  );
 }

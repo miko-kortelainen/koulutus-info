@@ -9,8 +9,8 @@ export default function Header() {
   const schools = () => navigate("/koulutukset");
 
   return (
-    <Box p={2} px={6} textAlign="left">
-      <Stack direction="row">
+    <Box p={3} px={6}>
+      <Stack direction="row" justifyContent={{ base: "center", md: "left" }}>
         <Link fontSize="xl" onClick={landing}>
           etusivu
         </Link>
