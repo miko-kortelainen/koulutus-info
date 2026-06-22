@@ -7,7 +7,7 @@ export default function Header() {
   const landing = () => navigate("/");
   const stats = () => navigate("/hakijamaarat");
   const schools = () => navigate("/koulutukset");
-  const trends = () => navigate("/trendit");
+  // const trends = () => navigate("/trendit");
 
   return (
     <Box p={3} px={6}>
@@ -22,9 +22,9 @@ export default function Header() {
 
         <Link onClick={schools}>koulutukset</Link>
 
-        <Separator orientation="vertical" />
+        {/* <Separator orientation="vertical" />
 
-        <Link onClick={trends}>trendit</Link>
+        <Link onClick={trends}>trendit</Link> */}
       </Stack>
     </Box>
   );

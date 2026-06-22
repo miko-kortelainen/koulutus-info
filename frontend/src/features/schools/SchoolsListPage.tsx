@@ -16,10 +16,17 @@ export default function SchoolsListPage() {
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }
+
   return (
-    <Center h="100%" px={8}>
-      <Stack direction="column" gap={4} width="800px" p={2}>
-        <Stack direction="row" px={4} gap={8}>
+    <Center h="100%" px={4}>
+      <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
+        <Stack direction="row" gap={2}>
           <SearchInput
             value={searchTerm}
             onChange={(value) => {
@@ -33,7 +40,7 @@ export default function SchoolsListPage() {
         {query.isError ? <Text>Virhe</Text> : null}
         {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
 
-        <Stack direction="column" height="1200px" overflowY="scroll" gap={4} px={4}>
+        <Stack direction="column" gap={4}>
           {paginated.map((t, index) => (
             <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi} ${index}`} toteutus={t} />
           ))}
@@ -49,7 +56,9 @@ export default function SchoolsListPage() {
             <ButtonGroup variant="ghost">
               <Pagination.Items
                 render={(page) => (
-                  <IconButton variant={{ base: "ghost", _selected: "outline" }}>{page.value}</IconButton>
+                  <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => scrollToTop()}>
+                    {page.value}
+                  </IconButton>
                 )}
               />
             </ButtonGroup>

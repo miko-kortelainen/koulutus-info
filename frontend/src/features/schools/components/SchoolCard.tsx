@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Group } from "@chakra-ui/react";
+import { Badge, Button, Card, Text, VStack } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 import { type ToteutusEntry } from "../../../types.gen";
 
@@ -14,22 +14,26 @@ export default function SchoolCard({ toteutus }: Props) {
     toteutus.toteutusNimi.fi || toteutus.toteutusNimi.en || toteutus.toteutusNimi.sv || "virheellinen nimi";
 
   return (
-    <Card.Root>
-      <Card.Header textWrap="pretty">{degreeName}</Card.Header>
+    <Card.Root size="sm">
+      <Card.Header>
+        <Text fontSize="sm" textWrap="pretty">
+          {degreeName}
+        </Text>
+      </Card.Header>
       <Card.Body>
-        <Group alignItems="flex-end">
-          <Badge colorPalette="green" mr="auto">
+        <VStack alignItems="flex-start">
+          <Badge colorPalette="green" size="sm">
             <HiLocationMarker /> {schoolName}
           </Badge>
 
           {toteutus.toteutusOid ? (
-            <Button size="xs" variant="outline">
+            <Button size="2xs" variant="outline">
               <a href={toteutusURL} target="_blank">
                 Katso opintopolussa
               </a>
             </Button>
           ) : null}
-        </Group>
+        </VStack>
       </Card.Body>
     </Card.Root>
   );
