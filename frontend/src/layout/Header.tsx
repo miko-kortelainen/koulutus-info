@@ -7,25 +7,24 @@ export default function Header() {
   const landing = () => navigate("/");
   const stats = () => navigate("/hakijamaarat");
   const schools = () => navigate("/koulutukset");
+  const trends = () => navigate("/trendit");
 
   return (
-    <Box p={2} px={6} textAlign="left">
-      <Stack direction="row">
-        <Link fontSize="xl" onClick={landing}>
-          etusivu
-        </Link>
+    <Box p={3} px={6}>
+      <Stack direction="row" justifyContent={{ base: "center", md: "left" }} fontSize={{ base: "lg", md: "xl" }}>
+        <Link onClick={landing}>etusivu</Link>
 
         <Separator orientation="vertical" />
 
-        <Link fontSize="xl" onClick={stats}>
-          hakijamäärät
-        </Link>
+        <Link onClick={stats}>hakijamäärät</Link>
 
         <Separator orientation="vertical" />
 
-        <Link fontSize="xl" onClick={schools}>
-          koulutukset
-        </Link>
+        <Link onClick={schools}>koulutukset</Link>
+
+        <Separator orientation="vertical" />
+
+        <Link onClick={trends}>trendit</Link>
       </Stack>
     </Box>
   );

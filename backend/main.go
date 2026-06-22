@@ -11,9 +11,9 @@ import (
 )
 
 const (
-	configPath           = "config.json"
-	statisticsOutputPath = "../frontend/public/data/statistics.json"
-	schoolsOutputPath    = "../frontend/public/data/schools.json"
+	configPath        = "config.json"
+	dataOutputDir     = "../frontend/public/data"
+	schoolsOutputPath = dataOutputDir + "/schools.json"
 )
 
 func main() {
@@ -71,6 +71,10 @@ func generateVipunen(cfg models.VipunenConfig) error {
 	if err != nil {
 		return fmt.Errorf("invalid Vipunen configuration: %w", err)
 	}
+	outputPath, err := statisticsOutputPath(cfg.TilastoVuosi)
+	if err != nil {
+		return fmt.Errorf("invalid Vipunen configuration: %w", err)
+	}
 
 	fetched, err := services.FetchVipunenData(apiURL)
 	if err != nil {
@@ -86,12 +90,25 @@ func generateVipunen(cfg models.VipunenConfig) error {
 		return errors.New("Vipunen produced no statistics after cleanup")
 	}
 
-	if err := writeJSON(statisticsOutputPath, statistics); err != nil {
+	if err := writeJSON(outputPath, statistics); err != nil {
 		return err
 	}
 
-	fmt.Printf("Vipunen: year=%s fetched=%d generated=%d output=%s\n", cfg.TilastoVuosi, len(fetched), len(statistics), statisticsOutputPath)
+	fmt.Printf("Vipunen: year=%s fetched=%d generated=%d output=%s\n", cfg.TilastoVuosi, len(fetched), len(statistics), outputPath)
 	return nil
+}
+
+func statisticsOutputPath(year string) (string, error) {
+	if len(year) != 4 {
+		return "", errors.New("tilastoVuosi must be a four-digit year")
+	}
+	for _, character := range year {
+		if character < '0' || character > '9' {
+			return "", errors.New("tilastoVuosi must be a four-digit year")
+		}
+	}
+
+	return filepath.Join(dataOutputDir, "statistics-"+year+".json"), nil
 }
 
 func generateOpintopolku(cfg models.OpintopolkuConfig) error {
