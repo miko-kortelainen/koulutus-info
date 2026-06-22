@@ -21,6 +21,7 @@ interface SortControlProps {
 export default function SortControl({ value, onChange }: SortControlProps) {
   return (
     <Select.Root
+      size="sm"
       collection={collection}
       value={[value]}
       onValueChange={(e) => onChange(e.value[0] as SortOption)}

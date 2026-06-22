@@ -1,10 +1,10 @@
 {
   "vipunen": {
     "aineistoUrl": "https://api.vipunen.fi/api/resources/korkeakoulutus_hakeneet_ja_paikan_vastaanottaneet/data",
-    "tilastoVuosi": "2025"
+    "tilastoVuosi": "2026"
   },
   "opintopolku": {
-    "yhteishakuOid": "1.2.246.562.29.00000000000000087775",
+    "yhteishakuOid": "",
     "alkamisajankohdat": ["2026-kevat", "2026-syksy"]
   }
 }
