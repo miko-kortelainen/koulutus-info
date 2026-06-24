@@ -9,7 +9,7 @@ export default function LandingPage() {
 
   return (
     <>
-      <Center h="100%">
+      <Center flex={1}>
         <Stack gap={10} px="10">
           <Stack textAlign="center" gap={10}>
             <Heading size={{ base: "3xl", md: "5xl" }}>
