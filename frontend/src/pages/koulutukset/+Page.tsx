@@ -1,4 +1,4 @@
-import { ButtonGroup, Center, HStack, IconButton, Pagination, Stack, Text } from "@chakra-ui/react";
+import { ButtonGroup, Center, Heading, HStack, IconButton, Pagination, Stack, Text } from "@chakra-ui/react";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "./components/SchoolCard";
 import { useState } from "react";
@@ -27,6 +27,7 @@ export default function SchoolsListPage() {
     <>
       <Center h="100%" px={4}>
         <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
+          <Heading as="h1" size="md" srOnly>Koulutukset</Heading>
           <Stack direction="row" gap={2}>
             <SearchInput
               value={searchTerm}

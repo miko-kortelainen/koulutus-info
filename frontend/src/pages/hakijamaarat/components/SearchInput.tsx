@@ -13,6 +13,7 @@ export default function SearchInput({ value, onChange, placeholder = "Search" }:
       size="sm"
       flex={1}
       placeholder={placeholder}
+      aria-label={placeholder}
       value={value}
       onChange={(event) => onChange(event.target.value)}
     />
