@@ -6,14 +6,14 @@ on:
       - main
     # Only run this workflow if there are changes in the following
     paths:
-      - docs/**
+      - frontend/**
       - .github/workflows/website-deploy.yml
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           version: 10
 
@@ -24,7 +24,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
           branch: gh-pages
-          folder: docs/dist/client
+          folder: frontend/dist/client
           # Remove previous build files
           clean: true
           # Remove history — avoiding exploding Git repository size
