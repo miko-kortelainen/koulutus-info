@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Text, VStack } from "@chakra-ui/react";
+import { Badge, Card, Link, Text, VStack } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 import { type ToteutusEntry } from "../../../types.gen";
 
@@ -27,11 +27,9 @@ export default function SchoolCard({ toteutus }: Props) {
           </Badge>
 
           {toteutus.toteutusOid ? (
-            <Button size="2xs" variant="outline">
-              <a href={toteutusURL} target="_blank">
-                Katso opintopolussa
-              </a>
-            </Button>
+            <Link href={toteutusURL} target="_blank" rel="noopener noreferrer" fontSize="xs">
+              Katso opintopolussa
+            </Link>
           ) : null}
         </VStack>
       </Card.Body>
