@@ -1,0 +1,29 @@
+{
+  "apis": [
+    {
+      "apiTitle": "Schools and degree programs",
+      "apiDescription": "Current list of Finnish higher education institutions and their degree programs in the joint application (yhteishaku).",
+      "apiDescriptionUrl": "/data/schools.json"
+    },
+    {
+      "apiTitle": "Application statistics 2026",
+      "apiDescription": "Applicant counts and available places for Finnish higher education programs in 2026.",
+      "apiDescriptionUrl": "/data/statistics-2026.json"
+    },
+    {
+      "apiTitle": "Application statistics 2025",
+      "apiDescription": "Applicant counts and available places for Finnish higher education programs in 2025.",
+      "apiDescriptionUrl": "/data/statistics-2025.json"
+    },
+    {
+      "apiTitle": "Application statistics 2024",
+      "apiDescription": "Applicant counts and available places for Finnish higher education programs in 2024.",
+      "apiDescriptionUrl": "/data/statistics-2024.json"
+    },
+    {
+      "apiTitle": "Application statistics 2023",
+      "apiDescription": "Applicant counts and available places for Finnish higher education programs in 2023.",
+      "apiDescriptionUrl": "/data/statistics-2023.json"
+    }
+  ]
+}
