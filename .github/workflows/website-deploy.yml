@@ -1,33 +1,30 @@
 name: Website Deployment
 on:
   push:
-    # Only deploy upon new commits to `main`
     branches:
       - main
-    # Only run this workflow if there are changes in the following
     paths:
       - frontend/**
       - .github/workflows/website-deploy.yml
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v6
         with:
           version: 10
-
       - run: pnpm install
       - run: pnpm run build
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
           branch: gh-pages
           folder: frontend/dist/client
-          # Remove previous build files
           clean: true
-          # Remove history — avoiding exploding Git repository size
           single-commit: true
 permissions:
   contents: write
