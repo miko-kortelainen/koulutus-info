@@ -26,6 +26,7 @@ export default function SortControl({ value, onChange }: SortControlProps) {
       value={[value]}
       onValueChange={(e) => onChange(e.value[0] as SortOption)}
       flex={1}
+      aria-label="Järjestys"
     >
       <Select.HiddenSelect />
       <Select.Control>
