@@ -41,7 +41,9 @@ export default function StatsListPage() {
     <>
       <Center h="100%" px={4}>
         <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
-          <Heading as="h1" size="md" srOnly>Hakijamäärät</Heading>
+          <Heading as="h1" size="md" srOnly>
+            Hakijamäärät
+          </Heading>
           <Stack direction={{ base: "column", md: "row" }} gap={2} zIndex={10}>
             <SearchInput
               value={searchTerm}
