@@ -1,4 +1,4 @@
-import type { YearOption } from "@/features/stats/components/YearControl";
+import type { YearOption } from "@/pages/hakijamaarat/components/YearControl";
 import type { SchoolsResponse, StatisticsResponse } from "../types.gen";
 
 export async function getStatistics(year: YearOption): Promise<StatisticsResponse> {

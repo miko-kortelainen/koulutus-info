@@ -2,7 +2,7 @@ import { ButtonGroup, Center, HStack, IconButton, Pagination, Stack, Text } from
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "./components/SchoolCard";
 import { useState } from "react";
-import SearchInput from "../stats/components/SearchInput";
+import SearchInput from "./components/SearchInput";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
 
 const PAGE_SIZE = 10;

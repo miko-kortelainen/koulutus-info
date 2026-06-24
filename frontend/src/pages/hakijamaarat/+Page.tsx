@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group, Alert } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
-import SortControl, { type SortOption } from "./SortControl";
-import DegreeStatCard from "./DegreeStatsCard";
-import SearchInput from "./SearchInput";
-import useStatisticsQuery from "../hooks/useStatisticsQuery";
-import useFilteredStatistics from "../hooks/useFilteredStatistics";
-import DegreeStatsCardSkeleton from "./DegreeStatsCardSkeleton";
-import YearControl, { type YearOption } from "./YearControl";
+import SortControl, { type SortOption } from "./components/SortControl";
+import DegreeStatCard from "./components/DegreeStatsCard";
+import SearchInput from "./components/SearchInput";
+import useStatisticsQuery from "./hooks/useStatisticsQuery";
+import useFilteredStatistics from "./hooks/useFilteredStatistics";
+import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
+import YearControl, { type YearOption } from "./components/YearControl";
 
 const PAGE_SIZE = 10;
 
