@@ -8,7 +8,7 @@ type Props = {
 
 export default function DegreeStatCard({ degree }: Props) {
   return (
-    <Card.Root size="sm" zIndex={-1}>
+    <Card.Root size="sm" zIndex={1}>
       <Card.Header textWrap="pretty">
         <Text fontSize="sm">{degree.hakukohde}</Text>
       </Card.Header>

@@ -2,7 +2,7 @@ import { Card, Stack, Group, Skeleton } from "@chakra-ui/react";
 
 export default function DegreeStatsCardSkeleton() {
   return (
-    <Card.Root size="sm" zIndex={-1}>
+    <Card.Root size="sm">
       <Card.Header>
         <Skeleton height="16px" width="180px" />
       </Card.Header>
