@@ -1,10 +1,8 @@
 import { Button, Center, Heading, Highlight, Stack } from "@chakra-ui/react";
 import { HiArrowRight } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
+import { navigate } from "vike/client/router";
 
 export default function LandingPage() {
-  const navigate = useNavigate();
-
   function navigateToStats() {
     navigate("/hakijamaarat");
   }

@@ -1,9 +1,7 @@
 import { Box, Link, Separator, Stack } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { navigate } from "vike/client/router";
 
 export default function Header() {
-  const navigate = useNavigate();
-
   const landing = () => navigate("/");
   const stats = () => navigate("/hakijamaarat");
   const schools = () => navigate("/koulutukset");
