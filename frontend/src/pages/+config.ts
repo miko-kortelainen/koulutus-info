@@ -5,4 +5,5 @@ export default {
   title: "Yhteishaku.app - Korkeakoulujen yhteishaun hakijamäärät ja tarjonta",
   prerender: true,
   extends: vikeReact,
+  htmlAttributes: { lang: "fi" },
 } satisfies Config;

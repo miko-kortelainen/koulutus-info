@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Flex height="100dvh" direction="column">
       <Header />
-      <Box flex={1}>{children}</Box>
+      <Box as="main" flex={1}>{children}</Box>
       <Footer />
     </Flex>
   );

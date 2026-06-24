@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group, Alert } from "@chakra-ui/react";
+import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
 import SortControl, { type SortOption } from "./components/SortControl";
 import DegreeStatCard from "./components/DegreeStatsCard";
@@ -41,6 +41,7 @@ export default function StatsListPage() {
     <>
       <Center h="100%" px={4}>
         <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
+          <Heading as="h1" size="md" srOnly>Hakijamäärät</Heading>
           <Stack direction={{ base: "column", md: "row" }} gap={2} zIndex={10}>
             <SearchInput
               value={searchTerm}

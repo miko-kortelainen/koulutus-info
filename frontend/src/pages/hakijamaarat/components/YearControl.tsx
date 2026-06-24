@@ -24,6 +24,7 @@ export default function YearControl({ value, onChange }: YearControlProps) {
       value={[value]}
       onValueChange={(e) => onChange(e.value[0] as YearOption)}
       flex={1}
+      aria-label="Vuosi"
     >
       <Select.HiddenSelect />
       <Select.Control>
