@@ -2,7 +2,7 @@ import vikeReact from "vike-react/config";
 import type { Config } from "vike/types";
 
 export default {
+  title: "Yhteishaku.app - Korkeakoulujen yhteishaun hakijamäärät ja tarjonta",
   prerender: true,
-  title: "yhteishaku.app",
   extends: vikeReact,
 } satisfies Config;

@@ -9,11 +9,6 @@ export default function LandingPage() {
 
   return (
     <>
-      <title>yhteishaku.app - Korkeakoulujen hakijamäärät ja koulutustarjonta</title>
-      <meta
-        name="description"
-        content="Tutki korkeakoulujen yhteishaun hakijamääriä, trendejä sekä koulutustarjontaa."
-      />
       <Center h="100%">
         <Stack gap={10} px="10">
           <Stack textAlign="center" gap={10}>

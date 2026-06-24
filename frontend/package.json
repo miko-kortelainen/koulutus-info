@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vike dev",
     "build": "vike build",
-    "lint": "tsc --noEmit && eslint .",
+    "lint": "tsc -b --noEmit && eslint .",
     "preview": "vike preview"
   },
   "dependencies": {
