@@ -7,9 +7,10 @@ interface TopBarListProps {
   color?: string;
   label?: string;
   showPercent?: boolean;
+  skeletonCount?: number;
 }
 
-export default function TopBarList({ data, isLoading, color = "teal.solid", label = "Nimi", showPercent = true }: TopBarListProps) {
+export default function TopBarList({ data, isLoading, color = "teal.solid", label = "Nimi", showPercent = true, skeletonCount = 5 }: TopBarListProps) {
   const chart = useChart<BarListData>({
     data,
     sort: { by: "value", direction: "desc" },
@@ -19,7 +20,7 @@ export default function TopBarList({ data, isLoading, color = "teal.solid", labe
   if (isLoading) {
     return (
       <Stack gap={2}>
-        {Array.from({ length: 5 }).map((_, i) => (
+        {Array.from({ length: skeletonCount }).map((_, i) => (
           <Skeleton key={i} height="40px" borderRadius="md" />
         ))}
       </Stack>
