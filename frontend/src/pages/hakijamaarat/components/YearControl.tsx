@@ -24,11 +24,10 @@ export default function YearControl({ value, onChange }: YearControlProps) {
       value={[value]}
       onValueChange={(e) => onChange(e.value[0] as YearOption)}
       flex={1}
-      aria-label="Vuosi"
     >
-      <Select.HiddenSelect />
+      <Select.HiddenSelect aria-label="Vuosi" />
       <Select.Control>
-        <Select.Trigger>
+        <Select.Trigger aria-label="Vuosi">
           <Select.ValueText placeholder="Valitse vuosi" />
         </Select.Trigger>
         <Select.IndicatorGroup>
