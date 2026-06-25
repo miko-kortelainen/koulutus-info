@@ -1,27 +1,23 @@
 import { ButtonGroup, Center, Heading, HStack, IconButton, Pagination, Stack, Text } from "@chakra-ui/react";
+import { useData } from "vike-react/useData";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "./components/SchoolCard";
 import { useState } from "react";
-import SearchInput from "./components/SearchInput";
+import SearchInput from "@/pages/hakijamaarat/components/SearchInput";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
+import type { SchoolsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
 
 export default function SchoolsListPage() {
+  const ssrData = useData<SchoolsResponse>();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const query = useSchoolsQuery();
+  const query = useSchoolsQuery(ssrData);
   const toteutukset = query.data && query.data.flatMap((k) => k.toteutukset);
   const filteredData = useFilteredDegrees(toteutukset, searchTerm);
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "auto",
-    });
-  }
 
   return (
     <>
@@ -58,7 +54,7 @@ export default function SchoolsListPage() {
               <ButtonGroup variant="ghost">
                 <Pagination.Items
                   render={(page) => (
-                    <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => scrollToTop()}>
+                    <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}>
                       {page.value}
                     </IconButton>
                   )}

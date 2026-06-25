@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Alert, Card, Center, Heading, Stack } from "@chakra-ui/react";
+import { useData } from "vike-react/useData";
 import YearControl, { type YearOption } from "@/pages/hakijamaarat/components/YearControl";
 import useStatisticsQuery from "@/pages/hakijamaarat/hooks/useStatisticsQuery";
 import useTrendsData from "./hooks/useTrendsData";
 import TopBarList from "./components/TopBarList";
+import type { StatisticsResponse } from "@/types.gen";
 
 export default function TrendsPage() {
+  const ssrData = useData<StatisticsResponse>();
   const [selectedYear, setSelectedYear] = useState<YearOption>("2026");
-  const query = useStatisticsQuery(selectedYear);
+  const query = useStatisticsQuery(selectedYear, selectedYear === "2026" ? ssrData : undefined);
   const trends = useTrendsData(query.data);
 
   return (
