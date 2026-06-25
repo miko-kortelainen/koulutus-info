@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getStatistics } from "@/api/api";
 import type { StatisticsResponse } from "@/types.gen";
-import type { YearOption } from "../components/YearControl";
+import type { YearOption } from "../components/yearOptions";
 
 export default function useStatisticsQuery(year: YearOption, initialData?: StatisticsResponse) {
   return useQuery<StatisticsResponse>({

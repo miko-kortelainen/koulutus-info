@@ -1,13 +1,5 @@
 import { Select, createListCollection } from "@chakra-ui/react";
-
-export type YearOption = "2025" | "2024" | "2023" | "2026";
-
-const YEAR_OPTIONS: { label: string; value: YearOption }[] = [
-  { label: "2026", value: "2026" },
-  { label: "2025", value: "2025" },
-  { label: "2024", value: "2024" },
-  { label: "2023", value: "2023" },
-];
+import { YEAR_OPTIONS, type YearOption } from "./yearOptions";
 
 const collection = createListCollection({ items: YEAR_OPTIONS });
 
