@@ -138,7 +138,7 @@ export default function TrendsPage() {
               data={trends.sektoriData}
               isLoading={query.isPending}
               color="purple.solid"
-              label="Sektori"
+
               showPercent={false}
               compareData={compareYear ? compareTrends.sektoriData : undefined}
               selectedYear={selectedYear}
