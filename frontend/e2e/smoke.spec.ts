@@ -24,7 +24,7 @@ test("nav links navigate to all pages", async ({ page }) => {
 
 test("/hakijamaarat: loads data and search filters results", async ({ page }) => {
   await page.goto("/hakijamaarat");
-  // wait for data to appear (any Badge text from cards)
+  await page.waitForLoadState("networkidle");
   await expect(page.getByText("hakijaa").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
@@ -37,7 +37,7 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
   await page.goto("/koulutukset");
-  await expect(page.getByText("Haetaan")).not.toBeVisible({ timeout: 10000 });
+  await page.waitForLoadState("networkidle");
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
@@ -49,6 +49,7 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
 
 test("/hakijamaarat: year switcher fetches different data", async ({ page }) => {
   await page.goto("/hakijamaarat");
+  await page.waitForLoadState("networkidle");
   await expect(page.getByText("hakijaa").first()).toBeVisible({ timeout: 10000 });
 
   const [response] = await Promise.all([
