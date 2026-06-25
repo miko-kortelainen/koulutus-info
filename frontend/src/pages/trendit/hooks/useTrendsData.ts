@@ -7,7 +7,7 @@ export interface TrendsData {
   sektoriData: { name: string; value: number }[];
 }
 
-export default function useTrendsData(data: StatisticsEntry[] | undefined): TrendsData {
+export default function useTrendsData(data: StatisticsEntry[] | undefined, limit = 10): TrendsData {
   return useMemo(() => {
     const items = data ?? [];
 
@@ -25,9 +25,9 @@ export default function useTrendsData(data: StatisticsEntry[] | undefined): Tren
     };
 
     return {
-      topKoulutusalat: aggregate("koulutusalaTaso1", 10),
-      topKorkeakoulut: aggregate("korkeakoulu", 10),
+      topKoulutusalat: aggregate("koulutusalaTaso1", limit > 0 ? limit : undefined),
+      topKorkeakoulut: aggregate("korkeakoulu", limit > 0 ? limit : undefined),
       sektoriData: aggregate("sektori"),
     };
-  }, [data]);
+  }, [data, limit]);
 }
