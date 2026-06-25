@@ -10,9 +10,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </Box>
       <Footer />
-    {/* impeccable-live-start */}
-<script src="http://localhost:8400/live.js"></script>
-{/* impeccable-live-end */}
-</Flex>
+    </Flex>
   );
 }
