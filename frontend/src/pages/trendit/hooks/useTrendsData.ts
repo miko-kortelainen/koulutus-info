@@ -25,8 +25,8 @@ export default function useTrendsData(data: StatisticsEntry[] | undefined, limit
     };
 
     return {
-      topKoulutusalat: aggregate("koulutusalaTaso1", limit || undefined),
-      topKorkeakoulut: aggregate("korkeakoulu", limit || undefined),
+      topKoulutusalat: aggregate("koulutusalaTaso1", limit > 0 ? limit : undefined),
+      topKorkeakoulut: aggregate("korkeakoulu", limit > 0 ? limit : undefined),
       sektoriData: aggregate("sektori"),
     };
   }, [data, limit]);
