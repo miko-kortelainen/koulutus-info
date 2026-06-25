@@ -8,7 +8,8 @@ import SearchInput from "./components/SearchInput";
 import useStatisticsQuery from "./hooks/useStatisticsQuery";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
-import YearControl, { type YearOption } from "./components/YearControl";
+import YearControl from "./components/YearControl";
+import { type YearOption } from "./components/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
