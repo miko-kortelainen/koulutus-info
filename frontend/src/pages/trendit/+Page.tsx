@@ -36,7 +36,7 @@ export default function TrendsPage() {
             <Heading as="h2" size="sm">
               Suosituimmat koulutusalat
             </Heading>
-            <TopBarList data={trends.topKoulutusalat} isLoading={query.isPending} color="teal.solid" />
+            <TopBarList data={trends.topKoulutusalat} isLoading={query.isPending} color="teal.fg" skeletonCount={10} />
           </Card.Body>
         </Card.Root>
 
@@ -45,7 +45,7 @@ export default function TrendsPage() {
             <Heading as="h2" size="sm">
               Suosituimmat korkeakoulut
             </Heading>
-            <TopBarList data={trends.topKorkeakoulut} isLoading={query.isPending} color="blue.solid" />
+            <TopBarList data={trends.topKorkeakoulut} isLoading={query.isPending} color="blue.solid" skeletonCount={10} />
           </Card.Body>
         </Card.Root>
 
