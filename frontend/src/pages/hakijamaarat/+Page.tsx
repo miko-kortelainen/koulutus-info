@@ -26,13 +26,6 @@ export default function StatsListPage() {
 
   const degreeSkeletonList = Array.from({ length: 10 }).map((_, i) => <DegreeStatsCardSkeleton key={i} />);
 
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "auto",
-    });
-  }
-
   const errorAlert = (
     <Alert.Root status="error">
       <Alert.Indicator />
@@ -95,7 +88,7 @@ export default function StatsListPage() {
               <ButtonGroup variant="ghost">
                 <Pagination.Items
                   render={(page) => (
-                    <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => scrollToTop()}>
+                    <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}>
                       {page.value}
                     </IconButton>
                   )}
