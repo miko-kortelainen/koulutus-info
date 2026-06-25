@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
+import { useData } from "vike-react/useData";
 import SortControl, { type SortOption } from "./components/SortControl";
 import DegreeStatCard from "./components/DegreeStatsCard";
 import SearchInput from "./components/SearchInput";
@@ -8,15 +9,17 @@ import useStatisticsQuery from "./hooks/useStatisticsQuery";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import YearControl, { type YearOption } from "./components/YearControl";
+import type { StatisticsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
 
 export default function StatsListPage() {
+  const ssrData = useData<StatisticsResponse>();
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [selectedYear, setSelectedYear] = useState<YearOption>("2026");
   const [searchTerm, setSearchTerm] = useState("");
-  const query = useStatisticsQuery(selectedYear);
+  const query = useStatisticsQuery(selectedYear, selectedYear === "2026" ? ssrData : undefined);
   const filteredData = useFilteredStatistics(query.data, searchTerm, sortOrder);
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
