@@ -1,16 +1,19 @@
 import { ButtonGroup, Center, Heading, HStack, IconButton, Pagination, Stack, Text } from "@chakra-ui/react";
+import { useData } from "vike-react/useData";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "./components/SchoolCard";
 import { useState } from "react";
 import SearchInput from "./components/SearchInput";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
+import type { SchoolsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
 
 export default function SchoolsListPage() {
+  const ssrData = useData<SchoolsResponse>();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const query = useSchoolsQuery();
+  const query = useSchoolsQuery(ssrData);
   const toteutukset = query.data && query.data.flatMap((k) => k.toteutukset);
   const filteredData = useFilteredDegrees(toteutukset, searchTerm);
 
