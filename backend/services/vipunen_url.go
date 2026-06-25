@@ -7,10 +7,7 @@ import (
 )
 
 // Vipunen API filter parameters
-const (
-	FilterHakutapa          = "Yhteishaku"
-	FilterKoulutusasteTaso1 = "Alempi korkeakouluaste"
-)
+const FilterHakutapa = "Yhteishaku"
 
 // helper func for fiql query building
 func eq(field, value string) string {
@@ -32,7 +29,6 @@ func BuildVipunenURL(baseURL, tilastoVuosi string) (string, error) {
 	filters := []string{
 		eq("koulutuksenAlkamisvuosi", tilastoVuosi),
 		eq("hakutapa", FilterHakutapa),
-		eq("koulutusasteTaso1", FilterKoulutusasteTaso1),
 	}
 	filter := url.QueryEscape(strings.Join(filters, " and "))
 	return baseURL + "?filter=" + filter, nil
