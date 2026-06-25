@@ -8,7 +8,8 @@
     "dev": "vike dev",
     "build": "vike build",
     "lint": "tsc -b --noEmit && eslint .",
-    "preview": "vike preview"
+    "preview": "vike preview",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@chakra-ui/charts": "^3.36.0",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.61.1",
     "@tanstack/eslint-plugin-query": "^5.100.14",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
