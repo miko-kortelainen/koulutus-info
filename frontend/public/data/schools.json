@@ -2415,26 +2415,6 @@
     },
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000032671",
-        "toteutusNimi": {
-          "fi": "Insinööri (AMK), bio- ja elintarviketekniikka"
-        },
-        "oppilaitosNimi": {
-          "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
-        }
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Insinööri (AMK), bio- ja elintarviketekniikka",
-      "en": "Bachelor of Engineering (UAS), Biotechnology, Food Industry",
-      "sv": "Ingenjör (YH), bio- och livsmedelsteknik"
-    },
-    "toteutukset": [
-      {
         "toteutusOid": "1.2.246.562.17.00000000000000011426",
         "toteutusNimi": {
           "fi": "Insinööri (AMK), Bio- ja elintarviketekniikka, monimuotototeutus"
@@ -2465,6 +2445,26 @@
           "fi": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences",
           "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), bio- ja elintarviketekniikka",
+      "en": "Bachelor of Engineering (UAS), Biotechnology, Food Industry",
+      "sv": "Ingenjör (YH), bio- och livsmedelsteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000032671",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), bio- ja elintarviketekniikka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
         }
       }
     ]
@@ -4974,20 +4974,20 @@
   },
   {
     "nimi": {
-      "fi": "Fil. maist., kemia",
-      "en": "Master of Science, Chemistry",
-      "sv": "Fil. mag., kemi"
+      "fi": "Luonnont. kand., kemia",
+      "en": "Bachelor of Science, Chemistry",
+      "sv": "Nat. kand., kemi"
     },
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000003001",
+        "toteutusOid": "1.2.246.562.17.00000000000000028056",
         "toteutusNimi": {
-          "fi": "Kemia, kandidaatti ja maisteri (3 v + 2 v)"
+          "fi": "Kemia, Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "en": "University of Turku",
-          "sv": "Åbo universitet"
+          "fi": "Itä-Suomen yliopisto",
+          "en": "University of Eastern Finland",
+          "sv": "Östra Finlands Universitet"
         }
       }
     ]
@@ -5999,26 +5999,6 @@
     },
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000003472",
-        "toteutusNimi": {
-          "fi": "Laboratorioanalyytikko (AMK), laboratorioanalytiikka, päiväopinnot"
-        },
-        "oppilaitosNimi": {
-          "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
-        }
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Laboratorioanalyytikko (AMK)",
-      "en": "Bachelor of Laboratory Services (UAS)",
-      "sv": "Laboratorieanalytiker (YH)"
-    },
-    "toteutukset": [
-      {
         "toteutusOid": "1.2.246.562.17.00000000000000035783",
         "toteutusNimi": {
           "fi": "Laboratorioanalyytikko (AMK), monimuoto-opinnot, Lahti"
@@ -6038,6 +6018,26 @@
           "fi": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences",
           "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Laboratorioanalyytikko (AMK)",
+      "en": "Bachelor of Laboratory Services (UAS)",
+      "sv": "Laboratorieanalytiker (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003472",
+        "toteutusNimi": {
+          "fi": "Laboratorioanalyytikko (AMK), laboratorioanalytiikka, päiväopinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
         }
       }
     ]
@@ -7561,26 +7561,6 @@
   },
   {
     "nimi": {
-      "fi": "Fil. maist., musiikkitiede ja musiikkikasvatus",
-      "en": "Master of Arts, Musicology and Music Education",
-      "sv": "Fil. mag., musikvetenskap och musikpedagogik"
-    },
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000035700",
-        "toteutusNimi": {
-          "fi": "Musiikkikasvatuksen kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v), syksy 2026"
-        },
-        "oppilaitosNimi": {
-          "fi": "Jyväskylän yliopisto",
-          "en": "University of Jyväskylä",
-          "sv": "Jyväskylä universitet"
-        }
-      }
-    ]
-  },
-  {
-    "nimi": {
       "fi": "Kasvatust. kand. (alempi), musiikinopettaja (ei opettajankelpoisuutta)",
       "en": "Bachelor of Arts (Education), Music Teacher (no Teacher Competence)",
       "sv": "Ped. kand. (lägre), musiklärare (inte lärarbehörighet)"
@@ -7595,6 +7575,26 @@
           "fi": "Oulun yliopisto",
           "en": "University of Oulu",
           "sv": "Uleåborgs universitet"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., musiikkitiede ja musiikkikasvatus",
+      "en": "Master of Arts, Musicology and Music Education",
+      "sv": "Fil. mag., musikvetenskap och musikpedagogik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035700",
+        "toteutusNimi": {
+          "fi": "Musiikkikasvatuksen kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v), syksy 2026"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän yliopisto",
+          "en": "University of Jyväskylä",
+          "sv": "Jyväskylä universitet"
         }
       }
     ]
@@ -9253,17 +9253,6 @@
         }
       },
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000000563",
-        "toteutusNimi": {
-          "fi": "Sairaanhoitaja (AMK), Hoitotyö, monimuotototeutus, Pori"
-        },
-        "oppilaitosNimi": {
-          "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
-        }
-      },
-      {
         "toteutusOid": "1.2.246.562.17.00000000000000000487",
         "toteutusNimi": {
           "fi": "Sairaanhoitaja (AMK), Hoitotyö, päivätoteutus, Pori"
@@ -10889,6 +10878,26 @@
   },
   {
     "nimi": {
+      "fi": "Valtiot. maist., taloustieteet",
+      "en": "Master of Social Sciences, Economics",
+      "sv": "Pol. mag., ekonomivetenskaper"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003379",
+        "toteutusNimi": {
+          "fi": "Taloustiede, valtiotieteiden kandidaatti ja maisteri (3 v + 2 v)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun yliopisto",
+          "en": "University of Turku",
+          "sv": "Åbo universitet"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
       "fi": "Valtiot. kand. (alempi), taloustieteet",
       "en": "Bachelor of Social Sciences, Economics",
       "sv": "Pol. kand. (lägre), ekonomivetenskaper"
@@ -10904,26 +10913,6 @@
           "fi": "Helsingin yliopisto",
           "en": "University of Helsinki",
           "sv": "Helsingfors universitet"
-        }
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Valtiot. maist., taloustieteet",
-      "en": "Master of Social Sciences, Economics",
-      "sv": "Pol. mag., ekonomivetenskaper"
-    },
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000003379",
-        "toteutusNimi": {
-          "fi": "Taloustiede, valtiotieteiden kandidaatti ja maisteri (3 v + 2 v)"
-        },
-        "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "en": "University of Turku",
-          "sv": "Åbo universitet"
         }
       }
     ]
@@ -12224,17 +12213,6 @@
         "toteutusOid": "1.2.246.562.17.00000000000000035202",
         "toteutusNimi": {
           "fi": "Tradenomi (AMK), Ostot ja hankinnat, päivätoteutus, Rauma"
-        },
-        "oppilaitosNimi": {
-          "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
-        }
-      },
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000000423",
-        "toteutusNimi": {
-          "fi": "Tradenomi (AMK), Liiketalous, verkkototeutus, Huittinen"
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
