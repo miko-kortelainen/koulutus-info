@@ -76,4 +76,6 @@ export interface StatisticsEntry {
   aloituspaikatLkm: number /* int */;
   kaikkiHakijatLkm: number /* int */;
   ensisijaisetHakijatLkm: number /* int */;
+  alinHyvaksyttyPistemaara?: number;
+  ylinHyvaksyttyPistemaara?: number;
 }
