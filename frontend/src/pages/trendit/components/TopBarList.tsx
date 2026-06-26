@@ -18,7 +18,7 @@ const BAR_H = "2";
 export default function TopBarList({
   data,
   isLoading,
-  color = "teal.solid",
+  color = "blue.solid",
   showPercent = true,
   skeletonCount = 5,
   compareData,
