@@ -37,9 +37,7 @@ export default function TrendsPage() {
         <Heading as="h1" size="lg">
           Trendit
         </Heading>
-        <Text color="fg.muted">
-          Mitkä koulutusalat ja korkeakoulut keräävät eniten hakijoita – ja miten trendi on muuttunut vuosien varrella.
-        </Text>
+        <Text color="fg.muted">Vertaile koulutusalojen ja korkeakoulujen hakijamääriä.</Text>
       </Stack>
 
       <div aria-live="polite" aria-atomic="true">

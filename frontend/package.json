@@ -9,7 +9,8 @@
     "build": "tsx scripts/sitemap.ts && vike build",
     "lint": "tsc -b --noEmit && eslint .",
     "preview": "vike preview",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "format": "prettier --write src"
   },
   "dependencies": {
     "@chakra-ui/charts": "^3.36.0",
