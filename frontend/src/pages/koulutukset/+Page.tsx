@@ -1,4 +1,5 @@
-import { ButtonGroup, Center, Heading, HStack, IconButton, Pagination, Stack, Text } from "@chakra-ui/react";
+import { ButtonGroup, Heading, HStack, IconButton, Pagination, Stack, Text } from "@chakra-ui/react";
+import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "./components/SchoolCard";
@@ -21,11 +22,15 @@ export default function SchoolsListPage() {
 
   return (
     <>
-      <Center h="100%" px={4}>
-        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "75%" }}>
-          <Heading as="h1" size="md" srOnly>
-            Koulutukset
-          </Heading>
+      <PageContainer>
+          <Stack gap={1}>
+            <Heading as="h1" size="lg">
+              Koulutukset
+            </Heading>
+            <Text color="fg.muted">
+              Selaa korkeakoulujen koulutustarjontaa ja löydä sinulle sopiva koulutus.
+            </Text>
+          </Stack>
           <Stack direction="row" gap={2}>
             <SearchInput
               value={searchTerm}
@@ -67,8 +72,7 @@ export default function SchoolsListPage() {
               </ButtonGroup>
             </HStack>
           </Pagination.Root>
-        </Stack>
-      </Center>
+      </PageContainer>
     </>
   );
 }
