@@ -55,6 +55,12 @@ func accumulate(m *models.VipunenData, r models.VipunenData) {
 	m.AloituspaikatLkm += r.AloituspaikatLkm
 	m.KaikkiHakijatLkm += r.KaikkiHakijatLkm
 	m.EnsisijaisetHakijatLkm += r.EnsisijaisetHakijatLkm
+	if m.AlinHyvaksyttyPistemaara == nil {
+		m.AlinHyvaksyttyPistemaara = r.AlinHyvaksyttyPistemaara
+	}
+	if m.YlinHyvaksyttyPistemaara == nil {
+		m.YlinHyvaksyttyPistemaara = r.YlinHyvaksyttyPistemaara
+	}
 }
 
 // reports whether r has an allowed valintatapajononTyyppi.
