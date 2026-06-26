@@ -25,8 +25,7 @@ export default function TrendsPage() {
   );
 
   const query = useStatisticsQuery(selectedYear, selectedYear === "2026" ? ssrData : undefined);
-  const compareQuery = useStatisticsQuery(compareYear as YearOption, undefined);
-  // ponytail: compareQuery runs even when compareYear is "", but react-query gcTime keeps it cheap; disable if perf matters
+  const compareQuery = useStatisticsQuery(compareYear as YearOption, undefined, !!compareYear);
 
   const koulutusalaTrends = useKoulutusalaTrends(ssrData);
   const trends = useTrendsData(query.data);
