@@ -22,8 +22,10 @@ export default function SchoolsListPage() {
   return (
     <>
       <Center h="100%" px={4}>
-        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
-          <Heading as="h1" size="md" srOnly>Koulutukset</Heading>
+        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "75%" }}>
+          <Heading as="h1" size="md" srOnly>
+            Koulutukset
+          </Heading>
           <Stack direction="row" gap={2}>
             <SearchInput
               value={searchTerm}
@@ -54,7 +56,10 @@ export default function SchoolsListPage() {
               <ButtonGroup variant="ghost">
                 <Pagination.Items
                   render={(page) => (
-                    <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}>
+                    <IconButton
+                      variant={{ base: "ghost", _selected: "outline" }}
+                      onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
+                    >
                       {page.value}
                     </IconButton>
                   )}

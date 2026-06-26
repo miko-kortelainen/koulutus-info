@@ -1,6 +1,7 @@
-import { Card, Stack, Badge, Group, Text } from "@chakra-ui/react";
-import { HiLocationMarker, HiChartBar } from "react-icons/hi";
+import { Card, Stack, Badge, Group, Text, Stat } from "@chakra-ui/react";
+import { HiLocationMarker } from "react-icons/hi";
 import { type StatisticsEntry } from "../../../types.gen";
+import { COLORS } from "../../../theme";
 
 type Props = {
   degree: StatisticsEntry;
@@ -8,26 +9,28 @@ type Props = {
 
 export default function DegreeStatCard({ degree }: Props) {
   return (
-    <Card.Root size="sm" zIndex={1}>
-      <Card.Header textWrap="pretty">
-        <Text fontSize="sm">{degree.hakukohde}</Text>
+    <Card.Root size="md" zIndex={1}>
+      <Card.Header textWrap="balanced">
+        <Text fontSize="lg" fontWeight={"semibold"}>
+          {degree.hakukohde}
+        </Text>
       </Card.Header>
       <Card.Body>
         <Stack>
-          <Badge colorPalette="green" mr="auto">
+          <Badge colorPalette={COLORS.accent} mr="auto" size={"md"}>
             <HiLocationMarker /> {degree.korkeakoulu}
           </Badge>
 
           <Group>
-            <Badge colorPalette="blue">
-              <HiChartBar />
-              {(degree.kaikkiHakijatLkm ?? 0) < 5 ? "~1-5 hakijaa" : `${degree.kaikkiHakijatLkm} hakijaa`}
-            </Badge>
+            <Stat.Root>
+              <Stat.Label>Hakijat</Stat.Label>
+              <Stat.ValueText>{(degree.kaikkiHakijatLkm ?? 0) < 5 ? "1-5" : degree.kaikkiHakijatLkm}</Stat.ValueText>
+            </Stat.Root>
 
-            <Badge colorPalette="blue">
-              <HiChartBar />
-              {degree.aloituspaikatLkm} aloituspaikkaa
-            </Badge>
+            <Stat.Root>
+              <Stat.Label>Aloituspaikat</Stat.Label>
+              <Stat.ValueText>{(degree.aloituspaikatLkm ?? 0) < 5 ? "alle 5" : degree.aloituspaikatLkm}</Stat.ValueText>
+            </Stat.Root>
           </Group>
         </Stack>
       </Card.Body>
