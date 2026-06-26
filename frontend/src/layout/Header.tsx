@@ -4,7 +4,15 @@ export default function Header() {
   return (
     <Box as="header" p={3} px={6}>
       <Box as="nav" aria-label="Päävalikko">
-        <Stack as="ul" direction="row" justifyContent={{ base: "center", md: "left" }} fontSize={{ base: "lg", md: "xl" }} listStyleType="none" p={0} m={0}>
+        <Stack
+          as="ul"
+          direction="row"
+          justifyContent={{ base: "center", md: "left" }}
+          fontSize={{ base: "lg", md: "xl" }}
+          listStyleType="none"
+          p={0}
+          m={0}
+        >
           <li>
             <Link as="a" href="/">
               etusivu

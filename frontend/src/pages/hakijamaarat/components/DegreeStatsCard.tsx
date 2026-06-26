@@ -31,20 +31,6 @@ export default function DegreeStatCard({ degree }: Props) {
               <Stat.Label>Aloituspaikat</Stat.Label>
               <Stat.ValueText>{(degree.aloituspaikatLkm ?? 0) < 5 ? "alle 5" : degree.aloituspaikatLkm}</Stat.ValueText>
             </Stat.Root>
-
-            {degree.alinHyvaksyttyPistemaara != null && (
-              <Stat.Root>
-                <Stat.Label>Alin pisteet</Stat.Label>
-                <Stat.ValueText>{degree.alinHyvaksyttyPistemaara}</Stat.ValueText>
-              </Stat.Root>
-            )}
-
-            {degree.ylinHyvaksyttyPistemaara != null && (
-              <Stat.Root>
-                <Stat.Label>Ylin pisteet</Stat.Label>
-                <Stat.ValueText>{degree.ylinHyvaksyttyPistemaara}</Stat.ValueText>
-              </Stat.Root>
-            )}
           </Group>
         </Stack>
       </Card.Body>

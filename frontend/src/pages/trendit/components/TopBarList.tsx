@@ -43,9 +43,7 @@ export default function TopBarList({
   const maxValue = sorted[0]?.value ?? 1;
   const total = sorted.reduce((sum, d) => sum + d.value, 0);
 
-  const compareValueMap = compareData
-    ? new Map(compareData.map((item) => [item.name, item.value]))
-    : null;
+  const compareValueMap = compareData ? new Map(compareData.map((item) => [item.name, item.value])) : null;
 
   return (
     <Stack gap={0}>
@@ -60,14 +58,32 @@ export default function TopBarList({
             <Text fontSize="xs" color="fg.muted" w="16" textAlign="right" flexShrink={0} fontWeight="medium">
               {compareYear ?? "Vertailu"}
             </Text>
-            <Text fontSize="xs" color="fg.muted" w="20" textAlign="right" flexShrink={0} fontWeight="medium" display={{ base: "none", md: "block" }}>
+            <Text
+              fontSize="xs"
+              color="fg.muted"
+              w="20"
+              textAlign="right"
+              flexShrink={0}
+              fontWeight="medium"
+              display={{ base: "none", md: "block" }}
+            >
               Muutos
             </Text>
           </>
-        ) : showPercent && (
-          <Text fontSize="xs" color="fg.muted" w="16" textAlign="right" flexShrink={0} fontWeight="medium" display={{ base: "none", md: "block" }}>
-            %
-          </Text>
+        ) : (
+          showPercent && (
+            <Text
+              fontSize="xs"
+              color="fg.muted"
+              w="16"
+              textAlign="right"
+              flexShrink={0}
+              fontWeight="medium"
+              display={{ base: "none", md: "block" }}
+            >
+              %
+            </Text>
+          )
         )}
       </Flex>
 
@@ -78,11 +94,13 @@ export default function TopBarList({
 
         return (
           <Flex key={name} align="center" gap={2} minH="10" py={1}>
-                <Text w="6" textAlign="right" fontSize="xs" color="fg.muted" flexShrink={0}>
+            <Text w="6" textAlign="right" fontSize="xs" color="fg.muted" flexShrink={0}>
               {i + 1}.
             </Text>
             <Box flex="1" minW={0}>
-              <Text fontSize="sm" lineClamp={1} mb={1}>{name}</Text>
+              <Text fontSize="sm" lineClamp={1} mb={1}>
+                {name}
+              </Text>
               <Box bg={color} h={BAR_H} borderRadius="sm" width={`${(item.value / maxValue) * 100}%`} />
             </Box>
             <Text fontSize="sm" textAlign="right" w="16" flexShrink={0}>
@@ -95,18 +113,33 @@ export default function TopBarList({
                 </Text>
                 <Box w="20" flexShrink={0} textAlign="right" display={{ base: "none", md: "block" }}>
                   {valueDiff != null ? (
-                    <Badge size="sm" colorPalette={valueDiff > 0 ? "green" : valueDiff < 0 ? "red" : "gray"} variant="subtle">
+                    <Badge
+                      size="sm"
+                      colorPalette={valueDiff > 0 ? "green" : valueDiff < 0 ? "red" : "gray"}
+                      variant="subtle"
+                    >
                       {valueDiff > 0 ? `+${fmt.format(valueDiff)}` : valueDiff < 0 ? fmt.format(valueDiff) : "–"}
                     </Badge>
                   ) : (
-                    <Badge size="sm" colorPalette="blue" variant="subtle">uusi</Badge>
+                    <Badge size="sm" colorPalette="blue" variant="subtle">
+                      uusi
+                    </Badge>
                   )}
                 </Box>
               </>
-            ) : showPercent && (
-              <Text fontSize="sm" textAlign="right" w="16" flexShrink={0} color="fg.muted" display={{ base: "none", md: "block" }}>
-                {((item.value / total) * 100).toFixed(1)} %
-              </Text>
+            ) : (
+              showPercent && (
+                <Text
+                  fontSize="sm"
+                  textAlign="right"
+                  w="16"
+                  flexShrink={0}
+                  color="fg.muted"
+                  display={{ base: "none", md: "block" }}
+                >
+                  {((item.value / total) * 100).toFixed(1)} %
+                </Text>
+              )
             )}
           </Flex>
         );
