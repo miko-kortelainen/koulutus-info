@@ -1,5 +1,5 @@
 import type { Config } from "vike/types";
 
 export default {
-  title: "Trendit - koulutusalojen, korkeakoulujen ja sektoreiden hakijatilastot",
+  title: "Trendit – hakijatilastot koulutusaloittain ja korkeakouluittain",
 } satisfies Config;
