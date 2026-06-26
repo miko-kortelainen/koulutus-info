@@ -57,10 +57,10 @@ export default function TopBarList({
         </Text>
         {compareValueMap ? (
           <>
-            <Text fontSize="xs" color="fg.muted" w="16" textAlign="right" flexShrink={0} fontWeight="medium" display={{ base: "none", md: "block" }}>
+            <Text fontSize="xs" color="fg.muted" w="16" textAlign="right" flexShrink={0} fontWeight="medium">
               {compareYear ?? "Vertailu"}
             </Text>
-            <Text fontSize="xs" color="fg.muted" w="20" textAlign="right" flexShrink={0} fontWeight="medium">
+            <Text fontSize="xs" color="fg.muted" w="20" textAlign="right" flexShrink={0} fontWeight="medium" display={{ base: "none", md: "block" }}>
               Muutos
             </Text>
           </>
@@ -90,10 +90,10 @@ export default function TopBarList({
             </Text>
             {compareValueMap ? (
               <>
-                <Text fontSize="sm" textAlign="right" w="16" flexShrink={0} color="fg.muted" display={{ base: "none", md: "block" }}>
+                <Text fontSize="sm" textAlign="right" w="16" flexShrink={0} color="fg.muted">
                   {compareValue != null ? fmt.format(compareValue) : "–"}
                 </Text>
-                <Box w="20" flexShrink={0} textAlign="right">
+                <Box w="20" flexShrink={0} textAlign="right" display={{ base: "none", md: "block" }}>
                   {valueDiff != null ? (
                     <Badge size="sm" colorPalette={valueDiff > 0 ? "green" : valueDiff < 0 ? "red" : "gray"} variant="subtle">
                       {valueDiff > 0 ? `+${fmt.format(valueDiff)}` : valueDiff < 0 ? fmt.format(valueDiff) : "–"}

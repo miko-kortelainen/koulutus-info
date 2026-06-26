@@ -11,6 +11,10 @@ export const COLORS = {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const config = defineConfig({
+  globalCss: {
+    // ponytail: stops Chromium mobile from bouncing at scroll edges, which triggers toolbar flicker
+    body: { overscrollBehaviorY: "contain" },
+  },
   theme: {
     semanticTokens: {
       colors: {
