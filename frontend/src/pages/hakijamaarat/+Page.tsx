@@ -37,7 +37,7 @@ export default function StatsListPage() {
   return (
     <>
       <Center h="100%" px={4}>
-        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "80%" }}>
+        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "75%" }}>
           <Heading as="h1" size="md" srOnly>
             Hakijamäärät
           </Heading>
@@ -89,7 +89,10 @@ export default function StatsListPage() {
               <ButtonGroup variant="ghost">
                 <Pagination.Items
                   render={(page) => (
-                    <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}>
+                    <IconButton
+                      variant={{ base: "ghost", _selected: "outline" }}
+                      onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
+                    >
                       {page.value}
                     </IconButton>
                   )}

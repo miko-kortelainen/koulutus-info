@@ -1,6 +1,7 @@
 import { Badge, Card, Link, Text, VStack } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 import { type ToteutusEntry } from "../../../types.gen";
+import { COLORS } from "../../../theme";
 
 type Props = {
   toteutus: ToteutusEntry;
@@ -14,20 +15,27 @@ export default function SchoolCard({ toteutus }: Props) {
     toteutus.toteutusNimi.fi || toteutus.toteutusNimi.en || toteutus.toteutusNimi.sv || "virheellinen nimi";
 
   return (
-    <Card.Root size="sm">
+    <Card.Root size="md">
       <Card.Header>
-        <Text fontSize="sm" textWrap="pretty">
+        <Text fontSize="lg" fontWeight={"semibold"} textWrap="balanced">
           {degreeName}
         </Text>
       </Card.Header>
       <Card.Body>
         <VStack alignItems="flex-start">
-          <Badge colorPalette="green" size="sm">
+          <Badge colorPalette={COLORS.accent} size="md">
             <HiLocationMarker /> {schoolName}
           </Badge>
 
           {toteutus.toteutusOid ? (
-            <Link href={toteutusURL} target="_blank" rel="noopener noreferrer" fontSize="xs">
+            <Link
+              href={toteutusURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              fontSize="sm"
+              textDecoration={"underline"}
+              textDecorationStyle={"dotted"}
+            >
               Katso opintopolussa
             </Link>
           ) : null}

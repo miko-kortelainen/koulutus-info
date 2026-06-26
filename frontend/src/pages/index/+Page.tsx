@@ -1,6 +1,7 @@
 import { Button, Center, Heading, Highlight, Stack, Text } from "@chakra-ui/react";
 import { HiArrowRight } from "react-icons/hi";
 import { navigate } from "vike/client/router";
+import { COLORS } from "../../theme";
 
 export default function LandingPage() {
   function navigateToStats() {
@@ -13,7 +14,7 @@ export default function LandingPage() {
         <Stack gap={10} px="10" textAlign="center" alignItems="center" textWrap="pretty">
           <Stack gap={10}>
             <Heading size={{ base: "3xl", md: "5xl" }} fontWeight="bold">
-              <Highlight query="yhteishaku" styles={{ color: "green.400" }}>
+              <Highlight query="yhteishaku" styles={{ color: `${COLORS.accent}.400` }}>
                 yhteishaku.app
               </Highlight>
             </Heading>
@@ -22,7 +23,7 @@ export default function LandingPage() {
             </Text>
           </Stack>
 
-          <Button size={{ base: "xs", md: "lg" }} colorPalette="green" onClick={navigateToStats}>
+          <Button size={{ base: "xs", md: "lg" }} colorPalette={COLORS.accent} onClick={navigateToStats}>
             Aloitetaan! <HiArrowRight />
           </Button>
         </Stack>
