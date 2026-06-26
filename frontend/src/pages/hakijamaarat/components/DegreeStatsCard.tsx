@@ -1,6 +1,7 @@
 import { Card, Stack, Badge, Group, Text, Stat } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 import { type StatisticsEntry } from "../../../types.gen";
+import { COLORS } from "../../../theme";
 
 type Props = {
   degree: StatisticsEntry;
@@ -16,7 +17,7 @@ export default function DegreeStatCard({ degree }: Props) {
       </Card.Header>
       <Card.Body>
         <Stack>
-          <Badge colorPalette="blue" mr="auto" size={"md"}>
+          <Badge colorPalette={COLORS.accent} mr="auto" size={"md"}>
             <HiLocationMarker /> {degree.korkeakoulu}
           </Badge>
 

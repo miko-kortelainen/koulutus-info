@@ -1,6 +1,7 @@
 import { Badge, Card, Link, Text, VStack } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 import { type ToteutusEntry } from "../../../types.gen";
+import { COLORS } from "../../../theme";
 
 type Props = {
   toteutus: ToteutusEntry;
@@ -22,7 +23,7 @@ export default function SchoolCard({ toteutus }: Props) {
       </Card.Header>
       <Card.Body>
         <VStack alignItems="flex-start">
-          <Badge colorPalette="green" size="md">
+          <Badge colorPalette={COLORS.accent} size="md">
             <HiLocationMarker /> {schoolName}
           </Badge>
 
