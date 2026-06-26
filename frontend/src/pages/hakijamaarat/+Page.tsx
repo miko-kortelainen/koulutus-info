@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading } from "@chakra-ui/react";
+import { Stack, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
+import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import SortControl, { type SortOption } from "./components/SortControl";
 import DegreeStatCard from "./components/DegreeStatsCard";
@@ -36,11 +37,15 @@ export default function StatsListPage() {
 
   return (
     <>
-      <Center h="100%" px={4}>
-        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "75%" }}>
-          <Heading as="h1" size="md" srOnly>
-            Hakijamäärät
-          </Heading>
+      <PageContainer>
+          <Stack gap={1}>
+            <Heading as="h1" size="lg">
+              Hakijamäärät
+            </Heading>
+            <Text color="fg.muted">
+              Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.
+            </Text>
+          </Stack>
           <Stack direction={{ base: "column", md: "row" }} gap={2} zIndex={10}>
             <SearchInput
               value={searchTerm}
@@ -100,8 +105,7 @@ export default function StatsListPage() {
               </ButtonGroup>
             </HStack>
           </Pagination.Root>
-        </Stack>
-      </Center>
+      </PageContainer>
     </>
   );
 }
