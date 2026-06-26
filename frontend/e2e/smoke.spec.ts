@@ -25,14 +25,14 @@ test("nav links navigate to all pages", async ({ page }) => {
 test("/hakijamaarat: loads data and search filters results", async ({ page }) => {
   await page.goto("/hakijamaarat");
   await page.waitForLoadState("networkidle");
-  await expect(page.getByText("hakijaa").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
   await search.fill("xxxnotexist");
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
 
   await search.clear();
-  await expect(page.getByText("hakijaa").first()).toBeVisible();
+  await expect(page.getByText("Hakijat").first()).toBeVisible();
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
@@ -50,14 +50,14 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
 test("/hakijamaarat: year switcher fetches different data", async ({ page }) => {
   await page.goto("/hakijamaarat");
   await page.waitForLoadState("networkidle");
-  await expect(page.getByText("hakijaa").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   const [response] = await Promise.all([
     page.waitForResponse((r) => r.url().includes("statistics-2025.json")),
     page.locator('select[aria-label="Vuosi"]').selectOption("2025"),
   ]);
   expect(response.status()).toBe(200);
-  await expect(page.getByText("hakijaa").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {
