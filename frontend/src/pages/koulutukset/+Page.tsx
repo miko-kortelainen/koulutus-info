@@ -26,7 +26,7 @@ export default function SchoolsListPage() {
         <Heading as="h1" size="lg">
           Koulutukset
         </Heading>
-        <Text color="fg.muted">Selaa korkeakoulujen koulutustarjontaa ja löydä sinulle sopiva koulutus.</Text>
+        <Text color="fg.muted">Korkeakoulujen syksyn 2026 yhteishaun koulutustarjonta.</Text>
       </Stack>
 
       <Stack direction="row" gap={2}>

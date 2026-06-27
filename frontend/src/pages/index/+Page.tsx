@@ -40,10 +40,11 @@ export default function LandingPage() {
 
           <Button
             size={{ base: "xs", md: "lg" }}
-            colorPalette={COLORS.accent}
             onClick={navigateToStats}
             width={{ base: "100%" }}
             letterSpacing={"wide"}
+            bgColor={"#10652F"}
+            color={"white"}
           >
             Aloitetaan! <HiCursorClick />
           </Button>
