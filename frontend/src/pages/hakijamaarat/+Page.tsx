@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Stack, Center, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading } from "@chakra-ui/react";
+import { Stack, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
+import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import SortControl, { type SortOption } from "./components/SortControl";
 import DegreeStatCard from "./components/DegreeStatsCard";
@@ -36,72 +37,71 @@ export default function StatsListPage() {
 
   return (
     <>
-      <Center h="100%" px={4}>
-        <Stack height="100%" direction="column" gap={4} p={2} width={{ base: "100%", md: "75%" }}>
-          <Heading as="h1" size="md" srOnly>
+      <PageContainer>
+        <Stack gap={1}>
+          <Heading as="h1" size="lg">
             Hakijamäärät
           </Heading>
-          <Stack direction={{ base: "column", md: "row" }} gap={2} zIndex={10}>
-            <SearchInput
-              value={searchTerm}
+          <Text color="fg.muted">Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.</Text>
+        </Stack>
+        <Stack direction={{ base: "column", md: "row" }} gap={2} zIndex={10}>
+          <SearchInput
+            value={searchTerm}
+            onChange={(value) => {
+              setSearchTerm(value);
+              setPage(1);
+            }}
+            placeholder="Hae koulua tai linjaa"
+          />
+          <Group flex={1}>
+            <SortControl
+              value={sortOrder}
               onChange={(value) => {
-                setSearchTerm(value);
+                setSortOrder(value);
                 setPage(1);
               }}
-              placeholder="Hae koulua tai linjaa"
             />
-            <Group flex={1}>
-              <SortControl
-                value={sortOrder}
-                onChange={(value) => {
-                  setSortOrder(value);
-                  setPage(1);
-                }}
-              />
-              <YearControl
-                value={selectedYear}
-                onChange={(value) => {
-                  setSelectedYear(value);
-                  setPage(1);
-                }}
-              />
-            </Group>
-          </Stack>
-
-          <Stack direction="column" gap={4}>
-            {query.isPending ? degreeSkeletonList : null}
-            {query.isError ? errorAlert : null}
-            {!query.isPending && !query.isError && paginated.length === 0 ? (
-              <Text>Ei tuloksia hakusanoilla.</Text>
-            ) : null}
-            {paginated.map((d, index) => (
-              <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />
-            ))}
-          </Stack>
-
-          <Pagination.Root
-            count={filteredData.length}
-            pageSize={PAGE_SIZE}
-            page={page}
-            onPageChange={(e) => setPage(e.page)}
-          >
-            <HStack justify="center">
-              <ButtonGroup variant="ghost">
-                <Pagination.Items
-                  render={(page) => (
-                    <IconButton
-                      variant={{ base: "ghost", _selected: "outline" }}
-                      onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-                    >
-                      {page.value}
-                    </IconButton>
-                  )}
-                />
-              </ButtonGroup>
-            </HStack>
-          </Pagination.Root>
+            <YearControl
+              value={selectedYear}
+              onChange={(value) => {
+                setSelectedYear(value);
+                setPage(1);
+              }}
+            />
+          </Group>
         </Stack>
-      </Center>
+
+        <Stack direction="column" gap={4}>
+          {query.isPending ? degreeSkeletonList : null}
+          {query.isError ? errorAlert : null}
+          {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
+          {paginated.map((d, index) => (
+            <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />
+          ))}
+        </Stack>
+
+        <Pagination.Root
+          count={filteredData.length}
+          pageSize={PAGE_SIZE}
+          page={page}
+          onPageChange={(e) => setPage(e.page)}
+        >
+          <HStack justify="center">
+            <ButtonGroup variant="ghost">
+              <Pagination.Items
+                render={(page) => (
+                  <IconButton
+                    variant={{ base: "ghost", _selected: "outline" }}
+                    onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
+                  >
+                    {page.value}
+                  </IconButton>
+                )}
+              />
+            </ButtonGroup>
+          </HStack>
+        </Pagination.Root>
+      </PageContainer>
     </>
   );
 }

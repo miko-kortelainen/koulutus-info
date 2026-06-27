@@ -27,8 +27,8 @@ func FetchOpintopolkuData(apiURL string) (*models.OpintopolkuData, error) {
 		u.RawQuery = q.Encode()
 		reqURL := u.String()
 
-		apiResp, err := fetchOpintopolkuPage(reqURL)
-		if err != nil {
+		var apiResp models.OpintopolkuData
+		if err := fetchJSON("opintopolku", reqURL, &apiResp); err != nil {
 			return nil, fmt.Errorf("error processing page %d: %w", page, err)
 		}
 
@@ -56,12 +56,3 @@ func FetchOpintopolkuData(apiURL string) (*models.OpintopolkuData, error) {
 	}, nil
 }
 
-func fetchOpintopolkuPage(reqURL string) (*models.OpintopolkuData, error) {
-	var apiResp models.OpintopolkuData
-
-	if err := fetchJSON("opintopolku", reqURL, &apiResp); err != nil {
-		return nil, err
-	}
-
-	return &apiResp, nil
-}

@@ -8,9 +8,11 @@ type VipunenData struct {
 	Sektori                string  `json:"sektori"`
 	KoulutusAla            string  `json:"koulutusalaTaso1"`
 	ValintatapajononTyyppi *string `json:"valintatapajononTyyppi,omitempty"`
-	AloituspaikatLkm       int     `json:"aloituspaikatLkm"`
-	KaikkiHakijatLkm       int     `json:"kaikkiHakijatLkm"`
-	EnsisijaisetHakijatLkm int     `json:"ensisijaisetHakijatLkm"`
+	AloituspaikatLkm           int      `json:"aloituspaikatLkm"`
+	KaikkiHakijatLkm           int      `json:"kaikkiHakijatLkm"`
+	EnsisijaisetHakijatLkm     int      `json:"ensisijaisetHakijatLkm"`
+	AlinHyvaksyttyPistemaara   *float64 `json:"alinHyvaksyttyPistemaara"`
+	YlinHyvaksyttyPistemaara   *float64 `json:"ylinHyvaksyttyPistemaara"`
 }
 
 // --- Optimized output format for statistics.json ---
@@ -25,7 +27,9 @@ type StatisticsEntry struct {
 	KoulutuksenKieli       string `json:"koulutuksenKieli,omitempty"`
 	Sektori                string `json:"sektori,omitempty"`
 	KoulutusAla            string `json:"koulutusalaTaso1,omitempty"`
-	AloituspaikatLkm       int    `json:"aloituspaikatLkm"`
-	KaikkiHakijatLkm       int    `json:"kaikkiHakijatLkm"`
-	EnsisijaisetHakijatLkm int    `json:"ensisijaisetHakijatLkm"`
+	AloituspaikatLkm           int      `json:"aloituspaikatLkm"`
+	KaikkiHakijatLkm           int      `json:"kaikkiHakijatLkm"`
+	EnsisijaisetHakijatLkm     int      `json:"ensisijaisetHakijatLkm"`
+	AlinHyvaksyttyPistemaara   *float64 `json:"alinHyvaksyttyPistemaara,omitempty"`
+	YlinHyvaksyttyPistemaara   *float64 `json:"ylinHyvaksyttyPistemaara,omitempty"`
 }

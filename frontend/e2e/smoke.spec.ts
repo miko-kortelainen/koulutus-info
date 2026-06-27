@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const NAV_LABEL = "Päävalikko";
+const NAV_LABEL = "Navigointi";
 
 test("homepage loads and nav is visible", async ({ page }) => {
   await page.goto("/");

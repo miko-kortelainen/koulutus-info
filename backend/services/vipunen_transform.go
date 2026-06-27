@@ -18,9 +18,11 @@ func TransformVipunenData(data []models.VipunenData) models.StatisticsResponse {
 			KoulutuksenKieli:       d.KoulutuksenKieli,
 			Sektori:                d.Sektori,
 			KoulutusAla:            d.KoulutusAla,
-			AloituspaikatLkm:       d.AloituspaikatLkm,
-			KaikkiHakijatLkm:       d.KaikkiHakijatLkm,
-			EnsisijaisetHakijatLkm: d.EnsisijaisetHakijatLkm,
+			AloituspaikatLkm:         d.AloituspaikatLkm,
+			KaikkiHakijatLkm:         d.KaikkiHakijatLkm,
+			EnsisijaisetHakijatLkm:   d.EnsisijaisetHakijatLkm,
+			AlinHyvaksyttyPistemaara: d.AlinHyvaksyttyPistemaara,
+			YlinHyvaksyttyPistemaara: d.YlinHyvaksyttyPistemaara,
 		})
 	}
 

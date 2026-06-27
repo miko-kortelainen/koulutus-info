@@ -33,19 +33,12 @@ type LanguageStrings struct {
 type SchoolsResponse []KoulutusEntry
 
 type KoulutusEntry struct {
-	Nimi        LocalizedName   `json:"nimi"`
+	Nimi        LanguageStrings   `json:"nimi"`
 	Toteutukset []ToteutusEntry `json:"toteutukset"`
 }
 
 type ToteutusEntry struct {
-	ToteutusOid    string        `json:"toteutusOid"`
-	ToteutusNimi   LocalizedName `json:"toteutusNimi"`
-	OppilaitosNimi LocalizedName `json:"oppilaitosNimi"`
-}
-
-// LocalizedName only carries Finnish + English names.
-type LocalizedName struct {
-	Fi string `json:"fi,omitempty"`
-	En string `json:"en,omitempty"`
-	Sv string `json:"sv,omitempty"`
+	ToteutusOid    string          `json:"toteutusOid"`
+	ToteutusNimi   LanguageStrings `json:"toteutusNimi"`
+	OppilaitosNimi LanguageStrings `json:"oppilaitosNimi"`
 }

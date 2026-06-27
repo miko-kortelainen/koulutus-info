@@ -16,7 +16,7 @@ function aggregate(data: StatisticsResponse): Map<string, number> {
 }
 
 const years = YEAR_OPTIONS.map((y) => y.value); // ["2026", "2025", "2024", "2023"]
-const chronological = [...years].reverse();       // ["2023", "2024", "2025", "2026"]
+const chronological = [...years].reverse(); // ["2023", "2024", "2025", "2026"]
 
 export type TrendPoint = { year: string } & Record<string, string | number>;
 
@@ -35,7 +35,7 @@ export function useKoulutusalaTrends(ssrData2026?: StatisticsResponse) {
 
   // Aggregate all years, keyed by year string
   const aggByYear = new Map(
-    years.map((year, i) => [year, results[i]?.data ? aggregate(results[i].data!) : new Map<string, number>()])
+    years.map((year, i) => [year, results[i]?.data ? aggregate(results[i].data!) : new Map<string, number>()]),
   );
 
   // Union of all koulutusala names across all years

@@ -5,9 +5,6 @@
   },
   "opintopolku": {
     "yhteishakuOid": "1.2.246.562.29.00000000000000087775",
-    "alkamisajankohdat": [
-      "2026-kevat",
-      "2026-syksy"
-    ]
+    "alkamisajankohdat": ["2026-kevat", "2026-syksy"]
   }
 }
