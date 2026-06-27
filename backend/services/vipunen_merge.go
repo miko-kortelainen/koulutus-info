@@ -12,12 +12,6 @@ var allowedValintatapajononTyypit = map[string]bool{
 	"Yhteispisteet":   true,
 }
 
-func addIfNotNil(sum *int, val *int) {
-	if val != nil {
-		*sum += *val
-	}
-}
-
 func MergeRecords(records []models.VipunenData) []models.VipunenData {
 	grouped := make(map[string]*models.VipunenData)
 	// tracks which hakukohde groups have at least one allowed valintatapajononTyyppi
