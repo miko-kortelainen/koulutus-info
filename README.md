@@ -1,36 +1,29 @@
-# koulutus-info
+<div align="center">
+<img src="./docs/banner.png" alt="banneri">
+</div>
 
-Selaa korkeakoulujen yhteishaun hakijoiden ja aloituspaikkojen määriä sekä koulutustarjontaa helppokäyttöisessä ja visuaalisesti miellyttävässä käyttöliittymässä.
+## Development
 
-## Prerequisites
+### Prerequisites
 
 - [Go](https://go.dev/) 1.26+ for updating data
 - [Node.js](https://nodejs.org/) 20+ and [pnpm](https://pnpm.io/) 11+ for frontend development
-- [Docker](https://www.docker.com/) for the production container
 
-## Local development
-
-The committed files under `frontend/public/data/` are available through the Vite development server.
+### Local development
 
 ```sh
 cd frontend
 pnpm install
-pnpm dev
+pnpm run dev
 ```
 
-Open `http://localhost:5173`.
+Open `http://localhost:3000`.
 
-See [docs/how_to_update.md](docs/how_to_update.md) before updating either dataset.
+### Updating data
 
-## Production container
+See [`backend/README.md`](./backend/README.md) for instructions on regenerating the static datasets from Vipunen and Opintopolku.
 
-```sh
-docker compose up --build
-```
+### Data sources
 
-Open `http://localhost:8080`. The container includes only nginx, the frontend build, and the generated JSON files.
-
-## Data sources
-
-- [Opintopolku](https://opintopolku.fi)
+- [Opintopolku.fi](https://opintopolku.fi)
 - [Vipunen](https://vipunen.fi)
