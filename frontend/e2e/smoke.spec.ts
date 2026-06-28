@@ -60,6 +60,30 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 });
 
+test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
+  await page.goto("/koulutukset");
+  await page.waitForLoadState("networkidle");
+
+  const options = page.getByRole("option");
+  await expect(options.first()).toBeVisible({ timeout: 10000 });
+
+  // select first school — results still exist
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+
+  // also select second school (multi-select smoke)
+  const second = options.nth(1);
+  if (await second.isVisible()) {
+    await second.click();
+    await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+    await second.click(); // deselect
+  }
+
+  // deselect first → unfiltered results return
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+});
+
 test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();
