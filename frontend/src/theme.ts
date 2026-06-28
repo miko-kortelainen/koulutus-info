@@ -2,11 +2,15 @@ import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 
 // ─── TWEAK THESE TO TRY DIFFERENT PALETTES ───────────────────────────────────
 export const COLORS = {
-  pageBg: "#0d1410", // page / body background   oklch(0.09, 0.006, 145)
-  cardBgMuted: "#141e15", // subtle surfaces / inputs oklch(0.13, 0.008, 145)
-  cardBg: "#1c2b1e", // Card.Root panels         oklch(0.18, 0.010, 145)
-  border: "#2c4230", // card / component borders oklch(0.28, 0.014, 145)
+  pageBg: "oklch(0.182 0.013 159.669)",
+  cardBgMuted: "oklch(0.222 0.023 147.385)",
+  cardBg: "oklch(0.271 0.031 148.127)",
+  border: "oklch(0.355 0.042 149.518)",
   accent: "green", // Chakra colorPalette name for badges, buttons
+  yellowGreen: "oklch(0.757 0.183 133)",
+  ghostWhite: "oklch(0.97 0.007 281)",
+  mintLeaf: "oklch(0.44 0.063 152.071)",
+  honeyBronze: "oklch(0.821 0.148 68)",
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -16,15 +20,23 @@ const config = defineConfig({
     body: { overscrollBehaviorY: "contain" },
   },
   theme: {
+    tokens: {
+      colors: {
+        pageBg: { value: COLORS.pageBg },
+        cardBg: { value: COLORS.cardBg },
+        cardBgMuted: { value: COLORS.cardBgMuted },
+        borderColor: { value: COLORS.border },
+      },
+    },
     semanticTokens: {
       colors: {
         bg: {
-          DEFAULT: { value: { _light: "white", _dark: COLORS.pageBg } },
-          panel: { value: { _light: "white", _dark: COLORS.cardBg } },
-          muted: { value: { _light: "{colors.gray.100}", _dark: COLORS.cardBgMuted } },
+          DEFAULT: { value: { _light: "white", _dark: "{colors.pageBg}" } },
+          panel: { value: { _light: "white", _dark: "{colors.cardBg}" } },
+          muted: { value: { _light: "{colors.gray.100}", _dark: "{colors.cardBgMuted}" } },
         },
         border: {
-          DEFAULT: { value: { _light: "{colors.gray.200}", _dark: COLORS.border } },
+          DEFAULT: { value: { _light: "{colors.gray.200}", _dark: "{colors.borderColor}" } },
         },
       },
     },
