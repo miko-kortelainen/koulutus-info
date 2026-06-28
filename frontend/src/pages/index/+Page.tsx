@@ -43,7 +43,7 @@ export default function LandingPage() {
             onClick={navigateToStats}
             width={{ base: "100%" }}
             letterSpacing={"wide"}
-            bgColor={"#10652F"}
+            bgColor={"oklch(0.389 0.097 145)"}
             color={"white"}
           >
             Aloitetaan! <HiCursorClick />
