@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-const BFF_URL =
-  "https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-896dbaaf-a0a9-4b7d-b162-432be6944d13/default/yhteishaku-bff";
+const BFF_URL = "https://opinto-vector-3lpaz.ondigitalocean.app/search";
 
 export type SemanticSearchResult = {
   id: string;
