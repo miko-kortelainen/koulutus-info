@@ -8,9 +8,8 @@ export default function Header() {
           as="ul"
           direction="row"
           justifyContent={{ base: "center", md: "left" }}
-          fontSize={{ base: "lg", md: "xl" }}
-          listStyleType="none"
-          gap={6}
+          fontSize={{ base: "md", md: "xl" }}
+          gap={{ base: 5, md: 8 }}
         >
           <li>
             <Link as="a" href="/hakijamaarat">
@@ -29,8 +28,14 @@ export default function Header() {
               trendit
             </Link>
           </li>
+
+          <li>
+            <Link as="a" href="/hukassa">
+              hukassa?
+            </Link>
+          </li>
         </Stack>
-        <Separator aria-hidden="true" mt={2} />
+        <Separator aria-hidden="true" mt={{ base: 2, md: 3 }} />
       </Box>
     </Box>
   );
