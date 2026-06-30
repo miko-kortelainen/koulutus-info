@@ -24,21 +24,21 @@ export default function DegreeStatCard({ degree }: Props) {
   return (
     <Card.Root size="md" zIndex={1}>
       <Card.Header>
-        <Text fontSize={{ base: "sm", md: "lg" }} fontWeight={"semibold"} textWrap="pretty">
+        <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" textWrap="pretty">
           {degree.hakukohde}
         </Text>
       </Card.Header>
       <Card.Body>
         <Stack>
-          <HStack alignItems={"center"}>
-            <Badge bg={COLORS.mintLeaf} fontWeight={"semibold"} mr="auto" size={{ base: "sm", md: "lg" }}>
+          <HStack alignItems="center">
+            <Badge bg={COLORS.mintLeaf} fontWeight="semibold" mr="auto" size={{ base: "sm", md: "lg" }}>
               <HiLocationMarker /> {degree.korkeakoulu}
             </Badge>
           </HStack>
 
           <Separator />
 
-          <HStack alignItems={"flex-start"} gap={2}>
+          <HStack alignItems="flex-start" gap={2}>
             <Stat.Root size={{ base: "sm", md: "md" }} flex={{ base: 3, md: 1 }}>
               <Stat.Label fontSize={{ base: "xs", md: "md" }}>Aloituspaikat</Stat.Label>
               <Stat.ValueText>{(degree.aloituspaikatLkm ?? 0) < 5 ? "alle 5" : degree.aloituspaikatLkm}</Stat.ValueText>
@@ -60,12 +60,12 @@ export default function DegreeStatCard({ degree }: Props) {
           </HStack>
 
           {tier ? (
-            <HStack alignItems={"center"} ml={"auto"}>
-              <Text color={"fg.muted"} fontSize={{ base: "xs", md: "sm" }}>
+            <HStack alignItems="center" ml="auto">
+              <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
                 Hakijapaine:
               </Text>
               <Tooltip showArrow content={`${hakijapaine!.toFixed(2)} hakijaa / paikka`}>
-                <Badge size={{ base: "sm", md: "lg" }} bg={tier.bg} color={tier.color} fontWeight={"semibold"}>
+                <Badge size={{ base: "sm", md: "lg" }} bg={tier.bg} color={tier.color} fontWeight="semibold">
                   {tier.label}
                 </Badge>
               </Tooltip>

@@ -59,7 +59,7 @@ export default function SchoolsListPage() {
 
       <Stack direction={{ base: "column", md: "row" }} align="start" gap={4}>
         <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
-          <Text color={"fg.muted"} fontSize={"sm"} ml={2} p={2}>
+          <Text color="fg.muted" fontSize="sm" ml={2} p={2}>
             Suodata koulujen perusteella
           </Text>
           <Listbox.Root
@@ -75,7 +75,7 @@ export default function SchoolsListPage() {
               {schoolCollection.items.map((item) => (
                 <Listbox.Item key={item.value} item={item}>
                   <ItemCheckmark />
-                  <Listbox.ItemText mb={"2px"}>{item.label}</Listbox.ItemText>
+                  <Listbox.ItemText mb="2px">{item.label}</Listbox.ItemText>
                 </Listbox.Item>
               ))}
             </Listbox.Content>

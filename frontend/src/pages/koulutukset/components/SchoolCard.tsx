@@ -17,13 +17,13 @@ export default function SchoolCard({ toteutus }: Props) {
   return (
     <Card.Root size="md">
       <Card.Header>
-        <Text fontSize="lg" fontWeight={"semibold"} textWrap="balanced">
+        <Text fontSize="lg" fontWeight="semibold" textWrap="balanced">
           {degreeName}
         </Text>
       </Card.Header>
       <Card.Body>
         <VStack alignItems="flex-start">
-          <Badge bg={COLORS.mintLeaf} color={"oklch(0.058 0 0)"} fontWeight={"semibold"} size="md">
+          <Badge bg={COLORS.mintLeaf} color="oklch(0.058 0 0)" fontWeight="semibold" size="md">
             <HiLocationMarker color={COLORS.border} /> {schoolName}
           </Badge>
 
@@ -33,8 +33,8 @@ export default function SchoolCard({ toteutus }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               fontSize="sm"
-              textDecoration={"underline"}
-              textDecorationStyle={"dotted"}
+              textDecoration="underline"
+              textDecorationStyle="dotted"
             >
               Katso opintopolussa
             </Link>
