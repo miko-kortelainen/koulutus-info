@@ -1,4 +1,4 @@
-import { Card, Stack, Badge, Group, Text, Stat, HStack, Separator } from "@chakra-ui/react";
+import { Card, Stack, Badge, Text, Stat, HStack, Separator } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 import { type StatisticsEntry } from "../../../types.gen";
 import { COLORS } from "../../../theme";
