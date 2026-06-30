@@ -8,12 +8,12 @@ type Props = {
 
 export default function SuggestionCard({ result }: Props) {
   const sopivuus = (
-    <Progress.Root value={result.score * 100} width="100%" alignItems={"center"}>
+    <Progress.Root value={result.score * 100} width="100%" alignItems="center">
       <HStack gap="5">
         <Progress.Track flex="1">
           <Progress.Range bg={COLORS.yellowGreen} />
         </Progress.Track>
-        <Progress.ValueText color={"fg.muted"}>{`${(result.score * 100).toFixed(2)}% sopiva`}</Progress.ValueText>
+        <Progress.ValueText color="fg.muted">{`${(result.score * 100).toFixed(2)}% sopiva`}</Progress.ValueText>
       </HStack>
     </Progress.Root>
   );
@@ -21,7 +21,7 @@ export default function SuggestionCard({ result }: Props) {
   return (
     <Card.Root size="sm">
       <Card.Header>
-        <Text fontSize={{ base: "sm", md: "md" }} fontWeight={"semibold"} textWrap="balanced">
+        <Text fontSize={{ base: "sm", md: "md" }} fontWeight="semibold" textWrap="balanced">
           {result.label}
         </Text>
       </Card.Header>
@@ -33,8 +33,8 @@ export default function SuggestionCard({ result }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             fontSize="sm"
-            textDecoration={"underline"}
-            textDecorationStyle={"dotted"}
+            textDecoration="underline"
+            textDecorationStyle="dotted"
           >
             Katso opintopolussa
           </Link>
