@@ -4,7 +4,12 @@ const BFF_URL = "https://opinto-vector-3lpaz.ondigitalocean.app/search";
 
 export type SemanticSearchResult = {
   id: string;
+  koulutusOid: string;
   label: string;
+  school: string;
+  cities: string[];
+  description: string;
+  type: string;
   score: number;
   url: string;
 };

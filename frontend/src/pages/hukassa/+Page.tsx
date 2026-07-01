@@ -12,7 +12,7 @@ export default function HukassaPage() {
   const [query, setQuery] = useState("");
   const { data, isFetching, error } = useSemanticSearch(query);
 
-  const suggestionCardSkeletonList = Array.from({ length: 10 }).map((_, i) => <SuggestionCardSkeleton key={i} />);
+  const suggestionCardSkeletonList = Array.from({ length: 5 }).map((_, i) => <SuggestionCardSkeleton key={i} />);
 
   return (
     <PageContainer>
@@ -20,9 +20,9 @@ export default function HukassaPage() {
         <Heading as="h1" size="lg">
           Hukassa?
         </Heading>
-        <Text color="fg.muted">
+        <Text color="fg.muted" textWrapMode="wrap" textWrap="pretty">
           Etko tiedä mitä haluaisit opiskella? Syötä alas vapain sanoin mitkä asiat sinua kiinnostaa ja näe sinulle
-          sopivia koulutusvaihtoehtoja.
+          sopivia yhteishaussa olevia koulutusvaihtoehtoja.
         </Text>
       </Stack>
       <HStack>

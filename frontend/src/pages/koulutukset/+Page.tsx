@@ -58,7 +58,15 @@ export default function SchoolsListPage() {
       </Stack>
 
       <Stack direction={{ base: "column", md: "row" }} align="start" gap={4}>
-        <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
+        <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
+          <SearchInput
+            value={searchTerm}
+            onChange={(value) => {
+              setSearchTerm(value);
+              setPage(1);
+            }}
+            placeholder="Etsi koulutuksia"
+          />
           <Text color="fg.muted" fontSize="sm" ml={2} p={2}>
             Suodata koulujen perusteella
           </Text>
@@ -83,15 +91,6 @@ export default function SchoolsListPage() {
         </Stack>
 
         <Stack flex={1} gap={4}>
-          <SearchInput
-            value={searchTerm}
-            onChange={(value) => {
-              setSearchTerm(value);
-              setPage(1);
-            }}
-            placeholder="Etsi koulutuksia"
-          />
-
           {query.isPending ? <Text>Haetaan</Text> : null}
           {query.isError ? <Text>Virhe</Text> : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
