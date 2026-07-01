@@ -14,11 +14,13 @@ export type SemanticSearchResult = {
   url: string;
 };
 
-export default function useSemanticSearch(query: string) {
+export default function useSemanticSearch(rawQuery: string) {
+  const query = rawQuery.trim();
+
   return useQuery<SemanticSearchResult[]>({
     queryKey: ["semanticSearch", query],
-    queryFn: async () => {
-      const res = await fetch(`${BFF_URL}?q=${encodeURIComponent(query)}`);
+    queryFn: async ({ signal }) => {
+      const res = await fetch(`${BFF_URL}?q=${encodeURIComponent(query)}`, { signal });
       if (!res.ok) throw new Error(`BFF error ${res.status}`);
       return res.json();
     },
