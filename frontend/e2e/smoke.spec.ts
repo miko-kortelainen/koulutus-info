@@ -20,6 +20,9 @@ test("nav links navigate to all pages", async ({ page }) => {
 
   await nav.getByRole("link", { name: "trendit" }).click();
   await expect(page).toHaveURL("/trendit");
+
+  await nav.getByRole("link", { name: "hukassa?" }).click();
+  await expect(page).toHaveURL("/hukassa");
 });
 
 test("/hakijamaarat: loads data and search filters results", async ({ page }) => {
@@ -58,6 +61,42 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
   ]);
   expect(response.status()).toBe(200);
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
+});
+
+test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
+  await page.goto("/koulutukset");
+  await page.waitForLoadState("networkidle");
+
+  const options = page.getByRole("option");
+  await expect(options.first()).toBeVisible({ timeout: 10000 });
+
+  // select first school — results still exist
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+
+  // also select second school (multi-select smoke)
+  const second = options.nth(1);
+  if (await second.isVisible()) {
+    await second.click();
+    await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+    await second.click(); // deselect
+  }
+
+  // deselect first → unfiltered results return
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+});
+
+test("/hukassa: search returns suggestion results", async ({ page }) => {
+  await page.goto("/hukassa");
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("heading", { name: "Hukassa?" })).toBeVisible();
+
+  await page.getByPlaceholder("Minua kiinnostaa...").fill("ohjelmointi ja tietotekniikka");
+  await page.getByRole("button", { name: "Hae" }).click();
+
+  await expect(page.getByText("Sinulle sopivimmat koulutukset:")).toBeVisible({ timeout: 15000 });
+  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {
