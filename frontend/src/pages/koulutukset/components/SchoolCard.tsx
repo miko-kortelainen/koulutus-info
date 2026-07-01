@@ -23,8 +23,8 @@ export default function SchoolCard({ toteutus }: Props) {
       </Card.Header>
       <Card.Body>
         <VStack alignItems="flex-start">
-          <Badge bg={COLORS.mintLeaf} color="oklch(0.058 0 0)" fontWeight="semibold" size="md">
-            <HiLocationMarker color={COLORS.border} /> {schoolName}
+          <Badge bg={COLORS.mintLeaf} fontWeight="semibold" size={{ base: "sm", md: "lg" }}>
+            <HiLocationMarker /> {schoolName}
           </Badge>
 
           {toteutus.toteutusOid ? (
