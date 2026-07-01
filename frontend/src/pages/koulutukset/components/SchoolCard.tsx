@@ -23,7 +23,13 @@ export default function SchoolCard({ toteutus }: Props) {
       </Card.Header>
       <Card.Body>
         <VStack alignItems="flex-start">
-          <Badge bg={COLORS.mintLeaf} fontWeight="semibold" size={{ base: "sm", md: "lg" }}>
+          <Badge
+            bg={COLORS.accent}
+            color={COLORS.text}
+            fontWeight="semibold"
+            letterSpacing={"wide"}
+            size={{ base: "sm", md: "lg" }}
+          >
             <HiLocationMarker /> {schoolName}
           </Badge>
 

@@ -31,7 +31,14 @@ export default function DegreeStatCard({ degree }: Props) {
       <Card.Body>
         <Stack>
           <HStack alignItems="center">
-            <Badge bg={COLORS.mintLeaf} fontWeight="semibold" mr="auto" size={{ base: "sm", md: "lg" }}>
+            <Badge
+              bg={COLORS.accent}
+              color={COLORS.text}
+              fontWeight="semibold"
+              letterSpacing={"wide"}
+              mr="auto"
+              size={{ base: "sm", md: "lg" }}
+            >
               <HiLocationMarker /> {degree.korkeakoulu}
             </Badge>
           </HStack>
