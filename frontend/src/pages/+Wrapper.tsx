@@ -8,7 +8,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider value={system}>
-        <Theme appearance="dark">{children}</Theme>
+        <Theme appearance="light">{children}</Theme>
       </ChakraProvider>
     </QueryClientProvider>
   );

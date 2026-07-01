@@ -1,16 +1,15 @@
 import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 
 // ─── TWEAK THESE TO TRY DIFFERENT PALETTES ───────────────────────────────────
+// Exactly 3 base colors + alpha-derived neutrals (no new hues).
 export const COLORS = {
-  pageBg: "oklch(0.182 0.013 159.669)",
-  cardBgMuted: "oklch(0.222 0.023 147.385)",
-  cardBg: "oklch(0.271 0.031 148.127)",
-  border: "oklch(0.355 0.042 149.518)",
-  accent: "green", // Chakra colorPalette name for badges, buttons
-  yellowGreen: "oklch(0.757 0.183 133)",
-  ghostWhite: "oklch(0.97 0.007 281)",
-  mintLeaf: "oklch(0.44 0.063 152.071)",
-  honeyBronze: "oklch(0.821 0.148 68)",
+  bg: "oklch(0.997 0.004 197.089)", // white page/card bg
+  text: "oklch(0.266 0.008 17.636)", // dark grey/near-black — text, borders, icons
+  accent: "oklch(0.713 0.156 126.033)", // the one accent — CTAs/badges/highlights only
+
+  // Derived neutrals: shades of `text`, not new hues.
+  border: "oklch(0.266 0.008 17.636 / 0.16)", // hairline borders (composited on a solid bg, alpha is fine)
+  surfaceMuted: "oklch(0.965 0.002 17.636)", // solid — used by portaled overlays (Select, Menu, Tooltip), must not be see-through
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -22,21 +21,30 @@ const config = defineConfig({
   theme: {
     tokens: {
       colors: {
-        pageBg: { value: COLORS.pageBg },
-        cardBg: { value: COLORS.cardBg },
-        cardBgMuted: { value: COLORS.cardBgMuted },
+        bg: { value: COLORS.bg },
+        text: { value: COLORS.text },
+        accent: { value: COLORS.accent },
         borderColor: { value: COLORS.border },
+        surfaceMuted: { value: COLORS.surfaceMuted },
       },
     },
     semanticTokens: {
       colors: {
         bg: {
-          DEFAULT: { value: { _light: "white", _dark: "{colors.pageBg}" } },
-          panel: { value: { _light: "white", _dark: "{colors.cardBg}" } },
-          muted: { value: { _light: "{colors.gray.100}", _dark: "{colors.cardBgMuted}" } },
+          DEFAULT: { value: "{colors.bg}" },
+          panel: { value: "{colors.surfaceMuted}" },
+          muted: { value: "{colors.surfaceMuted}" },
         },
         border: {
-          DEFAULT: { value: { _light: "{colors.gray.200}", _dark: "{colors.borderColor}" } },
+          DEFAULT: { value: "{colors.borderColor}" },
+        },
+        fg: {
+          DEFAULT: { value: "{colors.text}" },
+          muted: { value: "oklch(0.266 0.008 17.636 / 0.72)" },
+        },
+        // Chakra's Link (and other gray-colorPalette defaults) reads gray.fg, not fg.DEFAULT.
+        gray: {
+          fg: { value: "{colors.text}" },
         },
       },
     },
