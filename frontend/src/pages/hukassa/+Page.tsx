@@ -34,7 +34,7 @@ export default function HukassaPage() {
           placeholder="Minua kiinnostaa..."
         />
 
-        <Button bg={COLORS.accent} color={COLORS.text} type="submit" onClick={() => setQuery(input)} size="sm">
+        <Button bg={COLORS.accent} color={COLORS.text} type="submit" onClick={() => setQuery(input.trim())} size="sm">
           Hae
         </Button>
       </HStack>
