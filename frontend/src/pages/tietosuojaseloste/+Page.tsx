@@ -25,8 +25,7 @@ export default function TietosuojaselosteePage() {
           <Text>Yhteishaku.app ei kerää henkilötietoja eikä käytä markkinointipalveluita.</Text>
           <Text>
             Verkkopalvelun teknisestä toimittamisesta vastaavat GitHub Pages ja Cloudflare, jotka voivat käsitellä
-            esimerkiksi IP-osoitteita ja muita teknisiä yhteystietoja palvelun tarjoamiseksi ja tietoturvan
-            varmistamiseksi.
+            esimerkiksi IP-osoitteita ja muita teknisiä tietoja palvelun tarjoamiseksi ja tietoturvan varmistamiseksi.
           </Text>
           <Text>
             Palvelu käyttää{" "}
@@ -38,8 +37,31 @@ export default function TietosuojaselosteePage() {
             >
               Cloudflare Web Analyticsia
             </Link>{" "}
-            kävijätilastojen seurantaan. Cloudflare kerää aggregoitua tietoa kuten sivulatausmäärät ja selaintyypit
-            ilman evästeitä tai yksilöivien tunnisteiden tallentamista.
+            kävijätilastojen seurantaan. <br />
+            Cloudflare kerää tietoa kuten sivulatausmäärät ja selaintyypit ilman evästeitä tai yksilöivien tunnisteiden
+            tallentamista.
+          </Text>
+        </Stack>
+
+        <Stack gap={2}>
+          <Heading size="md">Tekoälyavusteinen haku (/hukassa)</Heading>
+          <Text>
+            /hukassa -sivun hakutoiminto lähettää kirjoittamasi hakutekstin palvelun taustajärjestelmään, joka käyttää
+            Googlen Gemini embedding- rajapintaa sopivien koulutusvaihtoehtojen löytämiseen. Google käsittelee
+            hakutekstin{" "}
+            <Link
+              href="https://ai.google.dev/gemini-api/terms"
+              color="blue.500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gemini API -käyttöehtojensa
+            </Link>
+            mukaisesti.
+          </Text>
+          <Text>
+            Yhteishaku.app ei tallenna hakutekstejä eikä yhdistä niitä käyttäjään. Älä kirjoita hakukenttään
+            henkilötietoja, kuten nimeä tai yhteystietoja.
           </Text>
         </Stack>
 

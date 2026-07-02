@@ -25,7 +25,13 @@ export default function HukassaPage() {
           sopivia yhteishaussa olevia koulutusvaihtoehtoja.
         </Text>
       </Stack>
-      <HStack>
+      <HStack
+        as="form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          setQuery(input.trim());
+        }}
+      >
         <SearchInput
           value={input}
           onChange={(value) => {
@@ -34,7 +40,7 @@ export default function HukassaPage() {
           placeholder="Minua kiinnostaa..."
         />
 
-        <Button bg={COLORS.accent} color={COLORS.text} type="submit" onClick={() => setQuery(input.trim())} size="sm">
+        <Button bg={COLORS.accent} color={COLORS.text} type="submit" size="sm">
           Hae
         </Button>
       </HStack>
