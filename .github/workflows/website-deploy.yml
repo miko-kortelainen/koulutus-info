@@ -6,25 +6,35 @@ on:
     paths:
       - frontend/**
       - .github/workflows/website-deploy.yml
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: frontend
     steps:
       - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@v6.0.9
         with:
-          version: 10
+          version: 11
       - run: pnpm install
       - run: pnpm run build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.8.0
+      - uses: actions/upload-pages-artifact@v5
         with:
-          branch: gh-pages
-          folder: frontend/dist/client
-          clean: true
-          single-commit: true
-permissions:
-  contents: write
+          path: frontend/dist/client
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
