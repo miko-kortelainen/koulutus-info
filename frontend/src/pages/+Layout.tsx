@@ -4,7 +4,7 @@ import Footer from "../layout/Footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Flex minHeight="100dvh" direction="column">
+    <Flex minHeight="100svh" direction="column">
       <Header />
       <Box as="main" flex={1} display="flex" flexDirection="column">
         {children}
