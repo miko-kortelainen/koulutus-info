@@ -1,0 +1,1 @@
+import{C as e}from"./chunk-CGMkREg0.js";import{D as t,Sn as n,vn as r}from"./chunk-DOtkfLM3.js";var i=r(),a=(0,e(n(),1).forwardRef)(function(e,n){return(0,i.jsx)(t,{align:`center`,...e,direction:`column`,ref:n})});a.displayName=`VStack`;export{a as t};

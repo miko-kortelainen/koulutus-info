@@ -1,0 +1,1 @@
+import{D as e,k as t,vn as n}from"./chunk-DOtkfLM3.js";var r=n();function i({children:n}){return(0,r.jsx)(t,{h:`100%`,px:{base:2,md:4},children:(0,r.jsx)(e,{height:`100%`,direction:`column`,gap:4,p:2,width:{base:`100%`,md:`60rem`},children:n})})}export{i as t};

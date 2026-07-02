@@ -1,0 +1,5006 @@
+[
+  {
+    "nimi": {
+      "fi": "Agrologi (AMK)",
+      "en": "Bachelor of Natural Resources (UAS), Agronomist",
+      "sv": "Agrolog (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000611",
+        "toteutusNimi": {
+          "fi": "Agrologi (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Artenomi (AMK)",
+      "en": "Bachelor of Culture and Arts (UAS), Crafts and Design",
+      "sv": "Artenom (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030637",
+        "toteutusNimi": {
+          "fi": "Artenomi (AMK), Digitaalisten ratkaisujen muotoilu"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Bioanalyytikko (AMK): laboratoriohoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Biomedical Laboratory Technologist (Polytechnic)",
+      "sv": "Bioanalytiker (YH): laboratorieskötare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000543",
+        "toteutusNimi": {
+          "fi": "Bioanalyytikko (AMK), bioanalytiikka, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Geronomi (ylempi AMK)",
+      "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse",
+      "sv": "Geronom (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031417",
+        "toteutusNimi": {
+          "fi": "Digiajan palvelujohtamisen asiantuntija, verkko-opinnot, 60/90 op, Lapin AMK Master School (ylempi AMK), syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000728",
+        "toteutusNimi": {
+          "fi": "Digimarkkinoinnin johtaminen, tradenomi (ylempi AMK)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002203",
+        "toteutusNimi": {
+          "fi": "Digitaalisten terveyspalveluiden ja terveyden edistämisen asiantuntija, verkko-opinnot, 60/90 op, Lapin AMK Master School (ylempi AMK), syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Geronomi (ylempi AMK)",
+      "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse",
+      "sv": "Geronom (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008304",
+        "toteutusNimi": {
+          "fi": "Ennakoinnin ja kehittämisen asiantuntija, verkko-opinnot, 60/90 op, Lapin AMK Master School (ylempi AMK), syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Ensihoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Emergency Nurse",
+      "sv": "Förstavårdare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008417",
+        "toteutusNimi": {
+          "fi": "Ensihoitaja (AMK), päivätoteutus, syksyn haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031299",
+        "toteutusNimi": {
+          "fi": "Ensihoitaja (AMK), ensihoidon tutkinto-ohjelma, verkkopainotteinen muuntokoulutus, Seinäjoki"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002914",
+        "toteutusNimi": {
+          "fi": "Ensihoitaja, (AMK), ensihoito, päiväopinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000620",
+        "toteutusNimi": {
+          "fi": "Ensihoitaja (AMK), lähiopinnot, Lappeenranta"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003217",
+        "toteutusNimi": {
+          "fi": "Ensihoitaja (AMK), monimuotototeutus, Kotka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Estenomi (ylempi AMK)",
+      "en": "Master of Beauty and Cosmetics (UAS)",
+      "sv": "Estenom (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023821",
+        "toteutusNimi": {
+          "en": "Master of Beauty and Cosmetics (UAS), Degree Programme in Development and Management of Cosmetics Expertise"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fysioterapeutti (AMK)",
+      "en": "Bachelor of Health Care (UAS), Physiotherapist",
+      "sv": "Fysioterapeut (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036551",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002341",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035989",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), monimuotototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000761",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000468",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), fysioterapia, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039141",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), päivä- tai monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences",
+          "sv": "Karelia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017197",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000499",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), verkkopainotteiset monimuoto-opinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000598",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), verkkopainotteiset monimuoto-opinnot, Lappeenranta"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002922",
+        "toteutusNimi": {
+          "fi": "Fysioterapeutti (AMK), monimuotototeutus, Savonlinna"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Geronomi (AMK)",
+      "en": "Bachelor of Social Services and Health Care (UAS), Geriatry Nurse",
+      "sv": "Geronom (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026073",
+        "toteutusNimi": {
+          "fi": "Geronomi (AMK), monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), ympäristötekniikka",
+      "en": "Master of Engineering (UAS), Environmental Engineering",
+      "sv": "Ingenjör (högre YH), miljöteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003758",
+        "toteutusNimi": {
+          "fi": "Hiilineutraali yhteiskunta (ylempi AMK), insinööri, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000010158",
+        "toteutusNimi": {
+          "fi": "HR, viestintä ja johtaminen, tradenomi (ylempi AMK)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000028385",
+        "toteutusNimi": {
+          "fi": "Hyvinvoinnin uudistuva asiantuntijuus ja johtaminen (ylempi AMK), Pori "
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), sähkötekniikka",
+      "en": "Bachelor of Engineering (UAS), Electrical Engineering",
+      "sv": "Ingenjör (YH), elektroteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000005807",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Akkutekniikan muuntokoulutus, verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), bio- ja elintarviketekniikka",
+      "en": "Bachelor of Engineering (UAS), Biotechnology, Food Industry",
+      "sv": "Ingenjör (YH), bio- och livsmedelsteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011426",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Bio- ja elintarviketekniikka, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), kemia",
+      "en": "Bachelor of Engineering (UAS), Chemistry",
+      "sv": "Ingenjör (YH), kemi"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038649",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), biomateriaalit ja elintarviketekniikka, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK),Energia- ja Ympäristötekniikka",
+      "en": "Bachelor of Engineering (UAS), Energy and Enviromental Engineering",
+      "sv": "Ingenjör (YH), Energi- och Miljöteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035087",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Energy and Electrical Engineering, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035100",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Water Engineering and Circular Economy, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030978",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), ympäristöteknologia ja kiertotalouden ratkaisut, monimuoto-opinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), konetekniikka",
+      "en": "Bachelor of Engineering (UAS), Mechanical Engineering",
+      "sv": "Ingenjör (YH), maskinteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002484",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), konetekniikka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000996",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Konetekniikka, monimuotototeutus, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008423",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), konetekniikka, päivätoteutus, syksyn haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000020744",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Mechanical Engineering"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000549",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Konetekniikan tutkinto-ohjelma, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001575",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Industrial Management, päivätoteutus",
+          "en": "Bachelor of Engineering, Industrial Management, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences",
+          "sv": "Karelia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000633",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), konetekniikka, monimuotototeutus, Iisalmi"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000477",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), konetekniikka, monimuotototeutus, Kuopio"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000618",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), konetekniikka, monimuoto-opinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), logistiikka",
+      "en": "Bachelor of Engineering (UAS), Logistics",
+      "sv": "Ingenjör (YH), logistik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035997",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), logistiikka, monimuotototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001987",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), logistiikka, monimuotototeutus, Kotka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), merenkulku",
+      "en": "Bachelor of Engineering (UAS), Navigation Technology",
+      "sv": "Ingenjör (YH), sjöfart"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000793",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), merenkulku, laivatekniikka, Kotka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), kemia",
+      "en": "Bachelor of Engineering (UAS), Chemistry",
+      "sv": "Ingenjör (YH), kemi"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000485",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), prosessi- ja materiaalitekniikka, kemiantekniikka, monimuotototeutus / Kokkola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000027643",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Biotechnology, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000623",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Biotuotetekniikan tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000556",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), puuteknologia, monimuoto-opinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001972",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), biotuotetekniikka, monimuotototeutus, Savonlinna"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), rakennustekniikka ja yhdyskuntatekniikka",
+      "en": "Bachelor of Engineering (UAS), Building Construction, Community Development",
+      "sv": "Ingenjör (YH), byggnadsteknik och samhällsteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030829",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), rakennus- ja yhdyskuntatekniikka, muuntokoulutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002287",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), rakennus- ja yhdyskuntatekniikka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008486",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Rakennustekniikka, Kiinteistönpitotekniikka ja korjausrakentaminen, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000021473",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), kestävä kaupunkisuunnittelu, monimuoto-opinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000024875",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), rakennustekniikka, monimuotototeutus, Savonlinna"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), sähkötekniikka",
+      "en": "Bachelor of Engineering (UAS), Electrical Engineering",
+      "sv": "Ingenjör (YH), elektroteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002590",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), sähkö- ja automaatiotekniikka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031269",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), sähkö- ja automaatiotekniikka, verkkopainotteinen monimuotototeutus / Kokkola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000599",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), sähkö- ja automaatiotekniikka, verkkopainotteinen monimuotototeutus / Ylivieska"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035995",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), sähkö- ja automaatiotekniikka, monimuotototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023985",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Sähköinen talotekniikka, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001233",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Sähkö- ja automaatiotekniikan tutkinto-ohjelma, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000539",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), sähkö- ja automaatiotekniikka, päiväopinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017167",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), sähkö- ja automaatiotekniikka, monimuoto-opinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), LVI-tekniikka",
+      "en": "Bachelor of Engineering (UAS), Heating and Ventilation Engineering",
+      "sv": "Ingenjör (YH), VVS-teknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008485",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), LVI-talotekniikka, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000007054",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), talotekniikka, monimuotototeutus, Mikkeli"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tietotekniikka",
+      "en": "BEng (UAS), IT",
+      "sv": "Ingenjör (YH), datateknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008617",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tieto- ja viestintätekniikka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035563",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tieto- ja viestintätekniikka (muuntokoulutus IT-tradenomista), verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008328",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tieto- ja viestintätekniikka, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035996",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tieto- ja viestintätekniikka, verkkototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038146",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Information and Communications Technology, Cyber-Physical Systems, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038152",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Information and Communications Technology, Data Engineering and AI, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038153",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Information and Communications Technology, Software Engineering, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001427",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Information Technology, daytime studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000494",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tieto- ja viestintätekniikka, päiväopinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023848",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tietotekniikka, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023378",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Game Technologies, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tuotantotalous",
+      "en": "Bachelor of Engineering (UAS), Industrial Management",
+      "sv": "Ingenjör (YH), produktionsekonomi"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000014861",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Industrial Engineering and Management, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), ympäristötekniikka",
+      "en": "Bachelor of Engineering (UAS), Environmental Engineering",
+      "sv": "Ingenjör (YH), miljöteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011284",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), ympäristöteknologia, monimuotototeutus, Mikkeli"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), tietotekniikka",
+      "en": "Master of Engineering (UAS), Information Technology",
+      "sv": "Ingenjör (högre YH), datateknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000456",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), Dataosaamisen ja tekoälyn ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), automaatiotekniikka",
+      "en": "Master of Engineering (UAS), Automation Engineering",
+      "sv": "Ingenjör (högre YH), automationsteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036580",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), elinkaaren hallinta, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology",
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023221",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), Energiamurroksen johtaminen, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000024141",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), Energiamurroksen johtaminen, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023328",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), Energiamurroksen johtaminen, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences",
+          "sv": "Kajaanin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), energia- ja ympäristötekn.",
+      "en": "Master of Engineering (UAS), Energy and Enviromental Engineering",
+      "sv": "Ingenjör (högre YH), energi- och miljöteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036579",
+        "toteutusNimi": {
+          "fi": " Insinööri (ylempi AMK), kestävä energia, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), tietotekniikka",
+      "en": "Master of Engineering (UAS), Information Technology",
+      "sv": "Ingenjör (högre YH), datateknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008403",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), kyberturvallisuus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology",
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039301",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), Insinööri 5.0, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), projekti- ja myyntijohtaminen",
+      "en": "Master of Engineering (UAS), project and sales management",
+      "sv": "Ingenjör (högre yh), projekt- och säljledning"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000786",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), projektijohtaminen "
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), rakennustekniikka ja yhdyskuntatekniikka",
+      "en": "Master of Engineering (UAS), Building Construction, Community Development",
+      "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002601",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), rakentaminen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), tietotekniikka",
+      "en": "Master of Engineering (UAS), Information Technology",
+      "sv": "Ingenjör (högre YH), datateknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039166",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), tekoäly asiantuntijatyössä"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology",
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000376",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), Terveysteknologian ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), tietotekniikka",
+      "en": "Master of Engineering (UAS), Information Technology",
+      "sv": "Ingenjör (högre YH), datateknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002885",
+        "toteutusNimi": {
+          "fi": "Digitalisaation kehittäminen ja  johtaminen, insinööri (YAMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038717",
+        "toteutusNimi": {
+          "fi": "Kestävän hyvinvoinnin innovaatio- ja projektijohtaminen, ylempi AMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., tietojenkäsittelytiede",
+      "en": "Master of Science, Computer Science",
+      "sv": "Fil. mag., datavetenskap"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039336",
+        "toteutusNimi": {
+          "fi": "Koulutusteknologian maisteriohjelma, filosofian maisteri (2 v), kevät 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän yliopisto",
+          "en": "University of Jyväskylä",
+          "sv": "Jyväskylä universitet"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or Unknown Polytechnic Master's  Degree in Social Services",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom socialbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000016915",
+        "toteutusNimi": {
+          "fi": "Kriisinkestävä sosiaali- ja terveydenhuolto, sosiaali- ja terveysalan ylempi AMK, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kuvataiteilija (ylempi AMK)",
+      "en": "Master of Culture and Arts (UAS), Visual Artist",
+      "sv": "Bildkonstnär (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000587",
+        "toteutusNimi": {
+          "fi": "Kulttuurialan ylempi AMK, kulttuurihyvinvointi"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muotoilija (ylempi AMK)",
+      "en": "Master of Culture and Arts (UAS), Designer",
+      "sv": "Formgivare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000406",
+        "toteutusNimi": {
+          "fi": "Kulttuurihyvinvointi, kulttuurialan ylempi AMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kuvataiteilija (AMK)",
+      "en": "Bachelor of Culture and Arts (UAS), Visual Artist",
+      "sv": "Bildkonstnär (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017155",
+        "toteutusNimi": {
+          "fi": "Kuvataiteilija (AMK), valokuvataide, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kätilö (AMK)",
+      "en": "Bachelor of Health Care (UAS), Midwife",
+      "sv": "Barnmorska (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036576",
+        "toteutusNimi": {
+          "fi": "Kätilö (AMK), päivätoteutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000984",
+        "toteutusNimi": {
+          "fi": "Kätilö (AMK), kätilötyö, päiväopinnot (täydentävä)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000532",
+        "toteutusNimi": {
+          "fi": "Kätilö (AMK), kätilötyö, päiväopinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000488",
+        "toteutusNimi": {
+          "fi": "Kätilö (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Terveydenhoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Public Health Nurse",
+      "sv": "Hälsovårdare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031364",
+        "toteutusNimi": {
+          "fi": "Lapin AMK, Terveydenhoitaja (AMK), muuntokoulutus, verkko-opinnot, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Liikunnanohjaaja (AMK)",
+      "en": "Bachelor of Sports Studies, Sports Instructor (UAS)",
+      "sv": "Idrottsinstruktör (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000022908",
+        "toteutusNimi": {
+          "fi": "Liikunnanohjaaja (AMK), monimuotototeutus, Helsinki"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000420",
+        "toteutusNimi": {
+          "fi": "Liikunnanohjaaja (AMK), Liikunnan ja vapaa-ajan koulutus, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences",
+          "sv": "Kajaanin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023898",
+        "toteutusNimi": {
+          "fi": "Liikunnanohjaaja (AMK), monimuotototeutus, Savonlinna"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kasvatust. kand. (alempi), luokanopettaja (ei opettajankelpoisuutta)",
+      "en": "Bachelor of Arts (Education), Class Teacher (no Teacher Competence)",
+      "sv": "Ped. kand. (lägre), klasslärare (inte lärarbehörighet)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039056",
+        "toteutusNimi": {
+          "fi": "Luokanopettajan aikuiskoulutuksen kandidaatti- ja maisteriohjelma (Kokkolan yliopistokeskus Chydenius), kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), kevät 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän yliopisto",
+          "en": "University of Jyväskylä",
+          "sv": "Jyväskylä universitet"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), tietotekniikka",
+      "en": "Master of Engineering (UAS), Information Technology",
+      "sv": "Ingenjör (högre YH), datateknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038386",
+        "toteutusNimi": {
+          "fi": "Master's Degree, Software and AI Engineering",
+          "en": "Master's Degree, Software and AI Engineering"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Medianomi (ylempi AMK)",
+      "en": "Master of Culture and Arts (UAS), Media",
+      "sv": "Medianom (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000014884",
+        "toteutusNimi": {
+          "fi": "Medianomi (ylempi AMK), journalismi"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Medianomi (ylempi AMK)",
+      "en": "Master of Culture and Arts (UAS), Media",
+      "sv": "Medianom (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031211",
+        "toteutusNimi": {
+          "fi": "Medianomi (ylempi AMK), luova kerronta ja nonfiktio"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Merikapteeni (AMK)",
+      "en": "Bachelor of Maritime Management",
+      "sv": "Sjökapten (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000790",
+        "toteutusNimi": {
+          "fi": "Merikapteeni (AMK), merenkulku, Kotka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Metsätalousinsinööri (AMK)",
+      "en": "Bachelor of Natural Resources (UAS), Forestry",
+      "sv": "Skogsbruksingenjör (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000544",
+        "toteutusNimi": {
+          "fi": "Metsätalousinsinööri (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muotoilija (AMK)",
+      "en": "Bachelor of Culture and Arts (UAS), Designer",
+      "sv": "Formgivare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000478",
+        "toteutusNimi": {
+          "fi": "Muotoilija (AMK), palvelumuotoilu, monimuotototeutus, Kouvola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023897",
+        "toteutusNimi": {
+          "fi": "Muotoilija (AMK), esiintymisasu ja digitaalinen puvustus, päivätoteutus, Kouvola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023845",
+        "toteutusNimi": {
+          "fi": "Muotoilija (AMK), ekologinen muotoilu, päivätoteutus, Kouvola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031121",
+        "toteutusNimi": {
+          "en": "Bachelor of Culture and Arts, Game Art, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031124",
+        "toteutusNimi": {
+          "en": "Bachelor of Culture and Arts, Game Art, online studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Musiikkipedagogi (ylempi AMK)",
+      "en": "Master of Culture and Arts (UAS), Music Educator",
+      "sv": "Musikpedagog (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000462",
+        "toteutusNimi": {
+          "fi": "Musiikin ylempi tutkinto-ohjelma, Musiikkipedagogi (ylempi AMK)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muusikko (ylempi AMK)",
+      "en": "Master of Culture and Arts (UAS), Musician",
+      "sv": "Musiker (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039420",
+        "toteutusNimi": {
+          "fi": "Musiikin ylempi tutkinto-ohjelma, Muusikko (ylempi AMK)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Optometristi (AMK): optikko (AMK)",
+      "en": "Bachelor of Health Care (UAS), Optometrist",
+      "sv": "Optometriker (YH): optiker (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000028487",
+        "toteutusNimi": {
+          "fi": "Optometristi (AMK), optometria, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Rakennusarkkitehti (ylempi AMK)",
+      "en": "Master of Construction Architecture (UAS)",
+      "sv": "Byggnadsarkitekt (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039414",
+        "toteutusNimi": {
+          "fi": "Rakennusarkkitehti (ylempi AMK), Rakennussuunnittelun ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Rakennusmestari (AMK)",
+      "en": "Bachelor of Engineering (UAS), Construction Management",
+      "sv": "Byggmästare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000016583",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003090",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), rakennus- ja yhdyskuntatekniikka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008333",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036574",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), monimuotototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038639",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017207",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), infrarakentaminen, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017201",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), talonrakennus, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000550",
+        "toteutusNimi": {
+          "fi": "Rakennusmestari (AMK), rakennusalan työnjohto, monimuoto-opinnot, Lappeenranta"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (AMK), liikkeenjohto",
+      "en": "Bachelor of Hospitality Management (UAS), Business Management",
+      "sv": "Restonom (YH), affärsledning"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008490",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), elämyspalveluiden tuottamisen ja johtamisen koulutus, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (AMK), matkailu",
+      "en": "Bachelor of Hospitality Management (UAS), Tourism",
+      "sv": "Restonom (YH), turism"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023847",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), matkailu- ja ravitsemisala, verkkototeutus, Mikkeli"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (AMK), majoitus- ja ravitsemisala",
+      "en": "Bachelor of Hospitality Management (UAS), Hotel and Restaurant",
+      "sv": "Restonom (YH), inkvarterings- och kosthållsbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038040",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), matkailu-, ravitsemis- ja tapahtumapalveluala, verkko-opinnot, Rovaniemi, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000040325",
+        "toteutusNimi": {
+          "en": "Bachelor of Hospitality Management, International Tourism Management, full-time studies, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037636",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), palveluliiketoiminta, monimuotototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037570",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), matkailu- ja tapahtumaliiketoiminnan johtaminen, monimuotototeutus, Porvoo"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037461",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), majoitus- ja ravintolaliiketoiminnan kehittäminen, monimuotototeutus, Helsinki, Pasila"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037574",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), ruokatuotannon johtaminen, monimuotototeutus, Pasila"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037578",
+        "toteutusNimi": {
+          "en": "Bachelor of Hospitality Management, Strategic Hospitality Management, Pasila, Finland"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037989",
+        "toteutusNimi": {
+          "en": "Bachelor of Hospitality Management, Tourism, (blended studies), Helsinki, KAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences",
+          "sv": "Kajaanin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037866",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), Matkailu, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences",
+          "sv": "Kajaanin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosionomi (ylempi AMK), sosiaaliala",
+      "en": "Master of Social Services (UAS), Social Services",
+      "sv": "Socionom (högre YH), socialbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017163",
+        "toteutusNimi": {
+          "fi": "Rikosseuraamusalan kehittäminen ja johtaminen (ylempi AMK)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Röntgenhoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Radiographer",
+      "sv": "Röntgenskötare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000591",
+        "toteutusNimi": {
+          "fi": "Röntgenhoitaja (AMK), radiografia ja sädehoito, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001111",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001112",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000669",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000414",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuoto-opinnot, Kemi, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008630",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), Valkeakoski"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003376",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), Hämeenlinna"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039139",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), maahanmuuttajille suunnattu koulutus, hoitotyö, monimuotototeutus, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000563",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), Hoitotyö, verkkopainotteinen monimuotototeutus, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031064",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031065",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000426",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000006936",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035994",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), päivätoteutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035993",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038596",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus, Salo, syksyn haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008413",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), päivätoteutus, syksyn haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031205",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), verkko-opinnot, Salo"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000507",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000625",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), Sairaanhoitajan tutkinto-ohjelma, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000421",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), Sairaanhoitajan tutkinto-ohjelma, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002244",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039436",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), verkkototeutus lähihoitajataustaisille"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000613",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), sairaanhoitotyö, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000408",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), sairaanhoitotyö, päiväopinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001493",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Nursing, daytime studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000503",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences",
+          "sv": "Karelia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003313",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus, Iisalmi"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000437",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus, Kuopio"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000006621",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), verkkopainotteiset monimuoto-opinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000393",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), lähiopinnot, Lappeenranta "
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000580",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuoto-opinnot, Kajaani"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences",
+          "sv": "Kajaanin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002461",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus, Savonlinna"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002207",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus, Kotka"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000605",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus, Mikkeli"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000524",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), Diakoninen hoitotyö, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023451",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000530",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), digitalisaation asiantuntija sosiaali- ja terveysalalla, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosiaali- ja terveysalan AMK-jatkotutkinto, muu tai tuntematon ala",
+      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field",
+      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000007883",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK ), Hyvinvoinnin asiantuntija, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000491",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), sosiaali- ja terveysalan kehittäminen ja johtaminen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000024236",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), kuntoutus- ja hyvinvointipalvelujen kehittämisen asiantuntija, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000828",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), mielenterveys- ja päihdetyön kehittäjä, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosiaali- ja terveysalan AMK-jatkotutkinto, muu tai tuntematon ala",
+      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field",
+      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039243",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK ), Monialainen palvelujen kehittäminen verkkototeutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039399",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), Moninaisten yhteisöjen ja palveluiden kehittäminen, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008420",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), Tulevaisuuden johtaja sosiaali- ja terveysalalla, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035801",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), Vaikuttava ja monialainen johtaminen, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosiaali- ja terveysalan AMK, rikosseuraamusala",
+      "en": "Polytechnic Bachelor's  Degree in Health Care, Correctional Services",
+      "sv": "Yrkeshögskoleexamen inom hälsovård och det sociala området, brottspåföljdsområdet"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000476",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), rikosseuraamusala, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000415",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, Dataosaamisen ja tekoälyn ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000005473",
+        "toteutusNimi": {
+          "fi": "Digitaaliset palvelut sosiaali- ja terveysalalla, sosiaali- ja terveysalan ylempi AMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000492",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, gerontologinen asiantuntijuus, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002802",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, kliininen asiantuntija"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017175",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, kliininen asiantuntija, syöpää sairastavan hoito"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000579",
+        "toteutusNimi": {
+          "fi": "Kulttuurihyvinvointi, sosiaali- ja terveysalan ylempi AMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037490",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, sosiaali- ja terveysalan digitaalisen turvallisuuden asiantuntija, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000005705",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, sosiaali- ja terveysalan kehittäminen ja johtaminen, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036582",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, terveyden edistäminen, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000559",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, Terveyden edistämisen ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038663",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, terveyden ja hyvinvoinnin edistäminen, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (ylempi AMK)",
+      "en": "Master of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (högre YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000520",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysalan ylempi AMK, Terveysteknologian ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosionomi (AMK), sosiaaliala",
+      "en": "Bachelor of Social Services (UAS), Social Services",
+      "sv": "Socionom (YH), socialbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000007245",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), Diakoniatyö, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosionomi (AMK), sosiaaliala",
+      "en": "Bachelor of Social Services (UAS), Social Services",
+      "sv": "Socionom (YH), socialbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001065",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), monimuoto"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000607",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000005556",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023178",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003101",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkko-opinnot, Kemi, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000590",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), muuntokoulutus 90 -120 op"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000925",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), monimuotototeutus / Kokkola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030477",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000404",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000006937",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008418",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), päivätoteutus, syksyn haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000024005",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), varhaiskasvatus, monimuotototeutus (rajattu pohjakoulutus)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000447",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), Sosionomin tutkinto-ohjelma, monimuotototeutus (rajattu pohjakoulutus)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001066",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011329",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000578",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), sosiaaliala, varhaiskasvatus, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000021076",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), sosiaaliohjaus, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000021082",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), sosiaaliohjaus, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001438",
+        "toteutusNimi": {
+          "en": "Bachelor of Social Services"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000545",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences",
+          "sv": "Karelia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002349",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences",
+          "sv": "Karelia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038660",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), varhaiskasvatus, monimuotototeutus, Pohjois-Savo"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017193",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000585",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000427",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkopainotteiset monimuoto-opinnot, Lappeenranta"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023899",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000497",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), monimuotototeutus, Mikkeli"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosionomi (ylempi AMK), sosiaaliala",
+      "en": "Master of Social Services (UAS), Social Services",
+      "sv": "Socionom (högre YH), socialbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000831",
+        "toteutusNimi": {
+          "fi": "Sosionomi (ylempi AMK), varhaisen tuen asiantuntija"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Suuhygienisti (AMK): hammashuoltaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Dental Hygienist",
+      "sv": "Munhygienist (YH): tandhygienist (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000405",
+        "toteutusNimi": {
+          "fi": "Suuhygienisti (AMK), suun terveydenhuolto, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), rakennustekniikka ja yhdyskuntatekniikka",
+      "en": "Master of Engineering (UAS), Building Construction, Community Development",
+      "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036581",
+        "toteutusNimi": {
+          "fi": "Tekniikan ylempi AMK, rakennustekniikka, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Terveydenhoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Public Health Nurse",
+      "sv": "Hälsovårdare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002263",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000016243",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), muuntokoulutus 60 op."
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000483",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), muuntokoulutus 60 op, verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008330",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000016705",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000645",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017170",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), terveydenhoitajan tutkinto-ohjelma, verkkopainotteinen muuntokoulutus "
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008377",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences",
+          "sv": "Diakonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000481",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), terveydenhoitotyö, päiväopinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003072",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), terveydenhoitotyö, verkko-opinnot (täydentävä)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000631",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000016983",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), monimuotototeutus, Mikkeli"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., tietojenkäsittelytiede",
+      "en": "Master of Science, Computer Science",
+      "sv": "Fil. mag., datavetenskap"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039341",
+        "toteutusNimi": {
+          "fi": "Tietojenkäsittelytieteen maisteriohjelma (Kokkolan yliopistokeskus Chydenius), filosofian maisteri (2 v), kevät 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän yliopisto",
+          "en": "University of Jyväskylä",
+          "sv": "Jyväskylä universitet"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Luonnont. kand., tietojenkäsittelytiede",
+      "en": "Bachelor of Science, Computer Science",
+      "sv": "Nat. kand., datavetenskap"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039322",
+        "toteutusNimi": {
+          "fi": "Tietojenkäsittelytieteen kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri, (3 v + 2 v), kevät 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän yliopisto",
+          "en": "University of Jyväskylä",
+          "sv": "Jyväskylä universitet"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., tietojenkäsittelytiede",
+      "en": "Master of Science, Computer Science",
+      "sv": "Fil. mag., datavetenskap"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039340",
+        "toteutusNimi": {
+          "fi": "Tietojenkäsittelytieteen maisteriohjelma, filosofian maisteri (2 v), kevät 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän yliopisto",
+          "en": "University of Jyväskylä",
+          "sv": "Jyväskylä universitet"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Toimintaterapeutti (AMK)",
+      "en": "Bachelor of Health Care (UAS), Occupational Therapist",
+      "sv": "Ergoterapeut (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035991",
+        "toteutusNimi": {
+          "fi": "Toimintaterapeutti (AMK), monimuotototeutus, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000441",
+        "toteutusNimi": {
+          "fi": "Toimintaterapeutti (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000451",
+        "toteutusNimi": {
+          "fi": "Toimintaterapeutti (AMK), toimintaterapia, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011424",
+        "toteutusNimi": {
+          "fi": "Toimintaterapeutti (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences",
+          "sv": "Karelia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001156",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001155",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000449",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, oikeustradenomin koulutus, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000573",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000506",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, verkko-opinnot, Rovaniemi, suuntautumisena Taloushallinto ja tilintarkastus tai Riskienhallinta ja yritysjuridiikka, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000502",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, esihenkilötyö ja johtaminen, verkko-opetus, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002230",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), hevosalan liiketoiminta"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000375",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, muuntokoulutus 90 -120 op"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000401",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, verkkopainotteinen monimuotototeutus / Ylivieska"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000362",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, verkkopainotteinen monimuotototeutus / Pietarsaari"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000423",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), Liiketalous, verkkototeutus, Huittinen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035384",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), Oikeustradenomi, verkkototeutus, Huittinen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003851",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008374",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), Pk-yrittäjyys, verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences",
+          "sv": "Seinäjoen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031208",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), markkinointi ja myynti, monimuotototeutus, Salo"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000560",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), mediatuotanto, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017071",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), Liiketalouden tutkinto-ohjelma, oikeustradenomi, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030887",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), Liiketalouden tutkinto-ohjelma, Talous, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000021461",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000628",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011276",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous Helsinki"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002685",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous ja logistiikka, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003268",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, lähiopinnot, Lahti"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038035",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, verkkototeutus, Kouvola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001982",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), liiketalous, verkkototeutus, Mikkeli"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), tietojenkäsittely",
+      "en": "Bachelor of Business Administration (UAS), Data Processing",
+      "sv": "Tradenom (YH), databehandling"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030969",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), tietojenkäsittely, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000381",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), tietojenkäsittely, kyberturvallisuus, monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000005840",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), tietojenkäsittely, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000636",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), tietojenkäsittely, AI-ratkaisut liiketoiminnassa, verkko-opinnot, Tornio, syksyn 2026 yhteishaku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences",
+          "sv": "Lapin ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039410",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), tietojenkäsittely, AI-ratkaisut liiketoiminnassa, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences",
+          "sv": "Oulun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000009237",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), tietojenkäsittely"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000787",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), tietojenkäsittely, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), turvallisuusala",
+      "en": "Bachelor of Business Administration (UAS), Security Management",
+      "sv": "Tradenom (YH), säkerhetsbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000553",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), turvallisuuden ja riskienhallinnan koulutus, päivä- tai monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000899",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Asiakassuuntautuneen liiketoiminnan kehittäminen, verkko-opinnot "
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039389",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), brändin johtaminen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000635",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Dataosaamisen ja tekoälyn ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), tietojenkäsittely",
+      "en": "Master of Business Administration (UAS), Data Processing",
+      "sv": "Tradenom (högre YH), databehandling"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000554",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Digitaalisten tulevaisuuksien muotoilu"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field",
+      "sv": "Tradenom (högre YH), annat eller okänt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000572",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), digitalisaation asiantuntija sosiaali- ja terveysalalla, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000574",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Ennakointi ja visionäärinen johtajuus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038661",
+        "toteutusNimi": {
+          "fi": "Tradenomi (YAMK), Esihenkilötyö ja työyhteisön johtaminen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023567",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), henkilöstöjohtamisen kehittäjä"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035681",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Insinööri (ylempi AMK), Artenomi (ylempi AMK), Luonnonvara-ala (ylempi AMK), Sosiaali- ja terveysala (ylempi AMK), Yrittäjyyden ja yritystoiminnan kehittäminen, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences",
+          "sv": "Hämeen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031234",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Kaupallistaminen - Ideoista euroiksi, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences",
+          "sv": "LAB-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field",
+      "sv": "Tradenom (högre YH), annat eller okänt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008409",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), kyberturvallisuus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003002",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Muutosjohtaminen, monimuoto-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000431",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), projektijohtaminen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037491",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), talous ja johtaminen julkishallinnossa, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences",
+          "sv": "Jyväskylän ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031220",
+        "toteutusNimi": {
+          "fi": "Tradenomi (YAMK), Talous ja johtaminen julkishallinnossa, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031173",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Talous ja johtaminen julkishallinnossa"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039694",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Energialiiketoiminnan johtaminen, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039027",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Energialiiketoiminnan johtaminen, verkko-opinnot"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences",
+          "sv": "Kajaanin ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039167",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), tekoäly asiantuntijatyössä"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000407",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Terveysteknologian ylempi tutkinto-ohjelma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field",
+      "sv": "Tradenom (högre YH), annat eller okänt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002612",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Tulevaisuuden johtaminen, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), turvallisuusala",
+      "en": "Master of Business Administration (UAS), Security Management",
+      "sv": "Tradenom (högre YH), säkerhetsbranschen"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000417",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), Turvallisuusjohtaminen"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000024139",
+        "toteutusNimi": {
+          "fi": "Työhyvinvoinnin johtaminen sosiaali- ja terveysalalla (ylempi AMK)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences",
+          "sv": "Laurea-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Yhteisöpedagogi (AMK)",
+      "en": "Bachelor of Humanities (UAS), Community Educator",
+      "sv": "Samhällspedagog (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031268",
+        "toteutusNimi": {
+          "fi": "Yhteisöpedagogi (AMK), kirkon nuorisotyö, muuntokoulutus 90op, verkkopainotteinen monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences",
+          "sv": "Centria-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001018",
+        "toteutusNimi": {
+          "fi": "Yhteisöpedagogi (AMK), työyhteisön kehittäjä, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Humanistinen ammattikorkeakoulu",
+          "en": "Humak University of Applied Sciences",
+          "sv": "Humanistinen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000922",
+        "toteutusNimi": {
+          "fi": "Yhteisöpedagogi (AMK), järjestö- ja nuorisotyö, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Humanistinen ammattikorkeakoulu",
+          "en": "Humak University of Applied Sciences",
+          "sv": "Humanistinen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023846",
+        "toteutusNimi": {
+          "fi": "Yhteisöpedagogi (AMK), nuorisokasvatus ja nuorisotyö, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030837",
+        "toteutusNimi": {
+          "fi": "Ylempi AMK, innovaatiotoiminnan asiantuntija"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030845",
+        "toteutusNimi": {
+          "fi": "Ylempi AMK, kokonaisturvallisuuden asiantuntija"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences",
+          "sv": "Savonia-ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000031224",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Operations and Business, full-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001616",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Business, Full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences",
+          "sv": "Tampereen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000009871",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Business"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000010027",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Aviation Business"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001591",
+        "toteutusNimi": {
+          "fi": "Bachelor of Business Administration, International Business, päivätoteutus",
+          "en": "Bachelor of Business Administration, International Business, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences",
+          "sv": "Karelia-ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001643",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Digital International Business, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), tietojenkäsittely",
+      "en": "Bachelor of Business Administration (UAS), Data Processing",
+      "sv": "Tradenom (YH), databehandling"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000009206",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Business Information Technology"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000005793",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Business, full-time studies, Rauma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK",
+          "sv": "Satakunnan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tuotantotalous",
+      "en": "Bachelor of Engineering (UAS), Industrial Management",
+      "sv": "Ingenjör (YH), produktionsekonomi"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037128",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Industrial Engineering"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), energiatekniikka",
+      "en": "Bachelor of Engineering (UAS), Energy Engineering",
+      "sv": "Ingenjör (YH), energiteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000007879",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Energy Technology, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences",
+          "sv": "Vaasan ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tuotantotalous",
+      "en": "Bachelor of Engineering (UAS), Industrial Management",
+      "sv": "Ingenjör (YH), produktionsekonomi"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037112",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Industrial Management, daytime studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse",
+      "sv": "Sjukskötare (YH)"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038652",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Nursing, TopUp, Autumn joint application 2026"
+        },
+        "oppilaitosNimi": {
+          "fi": "Yrkeshögskolan Arcada",
+          "en": "Arcada University of Applied Sciences",
+          "sv": "Yrkeshögskolan Arcada"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), tietotekniikka",
+      "en": "Master of Engineering (UAS), Information Technology",
+      "sv": "Ingenjör (högre YH), datateknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030310",
+        "toteutusNimi": {
+          "en": "Digital Industry and AI: Master of Engineering, Master of Business Administration"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030610",
+        "toteutusNimi": {
+          "en": "Master of Social Services and Health Care, Disaster Management"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), sähkövoimatekniikka",
+      "en": "Master of Engineering (UAS), Electrical Power Engineering",
+      "sv": "Ingenjör (högre YH), elkraftsteknik"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037747",
+        "toteutusNimi": {
+          "en": "Electrical Engineering Product Development, Master of Engineering"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000582",
+        "toteutusNimi": {
+          "en": "Master of Business Administration, Business Management, part-time"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences",
+          "sv": "Turun ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), tietojenkäsittely",
+      "en": "Master of Business Administration (UAS), Data Processing",
+      "sv": "Tradenom (högre YH), databehandling"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011597",
+        "toteutusNimi": {
+          "en": "Master of Business Administration, Business Technologies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038522",
+        "toteutusNimi": {
+          "en": "Master of Business Administration, International Business Management, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000486",
+        "toteutusNimi": {
+          "en": "Master of Business Administration, International Business Management, part-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011596",
+        "toteutusNimi": {
+          "en": "Master of Business Administration, Leading Business Transformation"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000014835",
+        "toteutusNimi": {
+          "en": "Master of Business Administration, Strategising in Organisations, remote studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "en": "MBA (UAS), Econ., Adm., Mark.",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011598",
+        "toteutusNimi": {
+          "en": "Master of Business Administration, Sustainable Aviation Business, remote studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology",
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030656",
+        "toteutusNimi": {
+          "en": "Master of Engineering, Smart Industry, blended studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences",
+          "sv": "Metropolia Ammattikorkeakoulu"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (ylempi AMK), matkailu",
+      "en": "Master of Hospitality Management (UAS), Tourism",
+      "sv": "Restonom (högre YH), turism"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000029801",
+        "toteutusNimi": {
+          "en": "Master of Hospitality Management, Service Business Management"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "en": "Haaga-Helia University of Applied Sciences",
+          "sv": "Haaga-Helia yrkeshögskola"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field",
+      "sv": "Tradenom (högre YH), annat eller okänt område"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000030315",
+        "toteutusNimi": {
+          "en": "Strategic Supply Chain Management: Master of Engineering, Master of Business Administration"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+        }
+      }
+    ]
+  }
+]

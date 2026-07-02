@@ -1,0 +1,1 @@
+import{ln as e}from"./chunk-DOtkfLM3.js";var{PropsProvider:t,withContext:n}=e({key:`badge`}),r=n(`span`);export{r as t};
