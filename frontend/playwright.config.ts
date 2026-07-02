@@ -6,7 +6,7 @@ export default defineConfig({
     baseURL: "http://localhost:3000",
   },
   webServer: {
-    command: "pnpm dev",
+    command: "pnpm build && pnpm preview",
     url: "http://localhost:3000",
     reuseExistingServer: true,
   },

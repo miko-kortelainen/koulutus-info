@@ -1,33 +1,45 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 
-const NAV_LABEL = "Navigointi";
+const NAV_LABEL = "navigointi";
 
-test("homepage loads and nav is visible", async ({ page }) => {
+async function gotoReady(page: Page, url: string) {
+  await page.goto(url);
+  await page.waitForLoadState("networkidle");
+}
+
+// click can land before hydration, so retry until the drawer actually opens
+async function openNavDrawer(page: Page) {
+  await expect(async () => {
+    await page.getByRole("button", { name: "avaa navigointi" }).click();
+    await expect(page.getByRole("navigation", { name: NAV_LABEL })).toBeVisible({ timeout: 1000 });
+  }).toPass();
+}
+
+test("homepage loads and nav drawer opens", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("navigation", { name: NAV_LABEL })).toBeVisible();
   await expect(page.getByRole("heading", { name: "yhteishaku.app" })).toBeVisible();
+  await openNavDrawer(page);
 });
 
 test("nav links navigate to all pages", async ({ page }) => {
   await page.goto("/");
   const nav = page.getByRole("navigation", { name: NAV_LABEL });
 
-  await nav.getByRole("link", { name: "hakijamäärät" }).click();
-  await expect(page).toHaveURL("/hakijamaarat");
-
-  await nav.getByRole("link", { name: "koulutukset" }).click();
-  await expect(page).toHaveURL("/koulutukset");
-
-  await nav.getByRole("link", { name: "trendit" }).click();
-  await expect(page).toHaveURL("/trendit");
-
-  await nav.getByRole("link", { name: "hukassa?" }).click();
-  await expect(page).toHaveURL("/hukassa");
+  // drawer closes on link click, so reopen before each navigation
+  for (const [label, url] of [
+    ["hakijamäärät", "/hakijamaarat"],
+    ["koulutukset", "/koulutukset"],
+    ["trendit", "/trendit"],
+    ["hukassa?", "/hukassa"],
+  ] as const) {
+    await openNavDrawer(page);
+    await nav.getByRole("link", { name: label }).click();
+    await expect(page).toHaveURL(url);
+  }
 });
 
 test("/hakijamaarat: loads data and search filters results", async ({ page }) => {
-  await page.goto("/hakijamaarat");
-  await page.waitForLoadState("networkidle");
+  await gotoReady(page, "/hakijamaarat");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
@@ -39,8 +51,7 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
-  await page.goto("/koulutukset");
-  await page.waitForLoadState("networkidle");
+  await gotoReady(page, "/koulutukset");
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
@@ -51,8 +62,7 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
 });
 
 test("/hakijamaarat: year switcher fetches different data", async ({ page }) => {
-  await page.goto("/hakijamaarat");
-  await page.waitForLoadState("networkidle");
+  await gotoReady(page, "/hakijamaarat");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   const [response] = await Promise.all([
@@ -64,8 +74,7 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
 });
 
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
-  await page.goto("/koulutukset");
-  await page.waitForLoadState("networkidle");
+  await gotoReady(page, "/koulutukset");
 
   const options = page.getByRole("option");
   await expect(options.first()).toBeVisible({ timeout: 10000 });
@@ -88,8 +97,7 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
 });
 
 test("/hukassa: search returns suggestion results", async ({ page }) => {
-  await page.goto("/hukassa");
-  await page.waitForLoadState("networkidle");
+  await gotoReady(page, "/hukassa");
   await expect(page.getByRole("heading", { name: "Hukassa?" })).toBeVisible();
 
   await page.getByPlaceholder("Minua kiinnostaa...").fill("ohjelmointi ja tietotekniikka");
@@ -103,6 +111,6 @@ test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Suosituimmat korkeakoulut" })).toBeVisible();
-  // wait for at least one bar item to appear (data loaded)
-  await expect(page.locator("li, [role='listitem']").first()).toBeVisible({ timeout: 10000 });
+  // "Hakijaa" column header renders only after skeletons are replaced by data
+  await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
 });
