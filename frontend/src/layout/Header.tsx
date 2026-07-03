@@ -7,6 +7,7 @@ const links = [
   { href: "/koulutukset", label: "koulutukset", description: "Selaa yhteishaussa olevia koulutuksia" },
   { href: "/trendit", label: "trendit", description: "Vertaa alojen ja koulujen hakijamääriä" },
   { href: "/hukassa", label: "hukassa?", description: "Apua koulutusvalinnan tekemiseen" },
+  { href: "/palaute", label: "palaute", description: "Anna palautetta tai kehitysehdotus" },
 ];
 
 export default function Header() {
