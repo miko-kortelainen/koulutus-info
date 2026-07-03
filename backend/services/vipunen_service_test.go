@@ -13,7 +13,7 @@ func TestMergeRecords(t *testing.T) {
 		t.Fatalf("failed to read test file: %v", err)
 	}
 
-	var records []models.VipunenData
+	var records []models.StatisticsEntry
 	if err := json.Unmarshal(data, &records); err != nil {
 		t.Fatalf("failed to unmarshal test data %v", err)
 	}
