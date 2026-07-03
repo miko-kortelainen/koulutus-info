@@ -136,9 +136,9 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
 
   await page.getByRole("link", { name: "Vertaile" }).click();
   await expect(page).toHaveURL(/\/vertaile\?a=.+&b=.+&vuosi=2026/);
-  await expect(page.getByRole("heading", { name: "Vertaile hakukohteita" })).toBeVisible();
-  await expect(page.getByText("Hakijapaine", { exact: true })).toBeVisible({ timeout: 10000 });
-  await expect(page.getByText("hakijaa/paikka").first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
+  await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Kaikki hakijat")).toHaveCount(2);
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {
