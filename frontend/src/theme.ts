@@ -32,7 +32,7 @@ const config = defineConfig({
     semanticTokens: {
       colors: {
         bg: {
-          DEFAULT: { value: "{colors.bg}" },
+          // DEFAULT: { value: "{colors.bg}" },
           panel: { value: "{colors.surfaceMuted}" },
           muted: { value: "{colors.surfaceMuted}" },
         },
