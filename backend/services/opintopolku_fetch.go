@@ -28,7 +28,7 @@ func FetchOpintopolkuData(apiURL string) (*models.OpintopolkuData, error) {
 		reqURL := u.String()
 
 		var apiResp models.OpintopolkuData
-		if err := fetchJSON("opintopolku", reqURL, &apiResp); err != nil {
+		if err := FetchJSON("opintopolku", reqURL, &apiResp); err != nil {
 			return nil, fmt.Errorf("error processing page %d: %w", page, err)
 		}
 

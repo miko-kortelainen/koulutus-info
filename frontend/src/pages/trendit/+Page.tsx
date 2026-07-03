@@ -151,7 +151,7 @@ export default function TrendsPage() {
       <Card.Root variant="outline" borderLeftWidth="4px" borderLeftColor="teal.solid">
         <Card.Body gap={4}>
           <Heading as="h2" size="sm">
-            Hakijamäärät koulutusaloittain vuosittain
+            Hakijamäärien trendit koulutusaloittain
           </Heading>
           <KoulutusalaTrendChart
             chartData={koulutusalaTrends.chartData}

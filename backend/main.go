@@ -67,25 +67,21 @@ func readConfig(path string) (models.Config, error) {
 }
 
 func generateVipunen(cfg models.VipunenConfig) error {
-	apiURL, err := services.BuildVipunenURL(cfg.AineistoURL, cfg.TilastoVuosi)
+	apiURL, err := services.BuildVipunenURL(cfg)
 	if err != nil {
 		return fmt.Errorf("invalid Vipunen configuration: %w", err)
 	}
-	outputPath, err := statisticsOutputPath(cfg.TilastoVuosi)
-	if err != nil {
-		return fmt.Errorf("invalid Vipunen configuration: %w", err)
-	}
+	outputPath := filepath.Join(dataOutputDir, fmt.Sprintf("statistics-%d.json", cfg.TilastoVuosi))
 
-	fetched, err := services.FetchVipunenData(apiURL)
-	if err != nil {
+	var fetched []models.StatisticsEntry
+	if err := services.FetchJSON("vipunen", apiURL, &fetched); err != nil {
 		return err
 	}
 	if len(fetched) == 0 {
 		return errors.New("Vipunen returned no records")
 	}
 
-	merged := services.MergeRecords(fetched)
-	statistics := services.TransformVipunenData(merged)
+	statistics := services.MergeRecords(fetched)
 	if len(statistics) == 0 {
 		return errors.New("Vipunen produced no statistics after cleanup")
 	}
@@ -94,21 +90,8 @@ func generateVipunen(cfg models.VipunenConfig) error {
 		return err
 	}
 
-	fmt.Printf("Vipunen: year=%s fetched=%d generated=%d output=%s\n", cfg.TilastoVuosi, len(fetched), len(statistics), outputPath)
+	fmt.Printf("Vipunen: year=%d fetched=%d generated=%d output=%s\n", cfg.TilastoVuosi, len(fetched), len(statistics), outputPath)
 	return nil
-}
-
-func statisticsOutputPath(year string) (string, error) {
-	if len(year) != 4 {
-		return "", errors.New("tilastoVuosi must be a four-digit year")
-	}
-	for _, character := range year {
-		if character < '0' || character > '9' {
-			return "", errors.New("tilastoVuosi must be a four-digit year")
-		}
-	}
-
-	return filepath.Join(dataOutputDir, "statistics-"+year+".json"), nil
 }
 
 func generateOpintopolku(cfg models.OpintopolkuConfig) error {

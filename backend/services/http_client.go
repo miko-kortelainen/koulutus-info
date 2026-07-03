@@ -11,7 +11,7 @@ var externalAPIClient = &http.Client{
 	Timeout: 15 * time.Second,
 }
 
-func fetchJSON(apiName, reqURL string, target any) error {
+func FetchJSON(apiName, reqURL string, target any) error {
 	resp, err := externalAPIClient.Get(reqURL)
 	if err != nil {
 		return fmt.Errorf("failed to fetch from %s: %w", apiName, err)
