@@ -31,6 +31,7 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["koulutukset", "/koulutukset"],
     ["trendit", "/trendit"],
     ["hukassa?", "/hukassa"],
+    ["palaute", "/palaute"],
   ] as const) {
     await openNavDrawer(page);
     await nav.getByRole("link", { name: label }).click();
@@ -105,6 +106,20 @@ test("/hukassa: search returns suggestion results", async ({ page }) => {
 
   await expect(page.getByText("Sinulle sopivimmat koulutukset:")).toBeVisible({ timeout: 15000 });
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible();
+});
+
+test("/palaute: submits feedback and shows thank you message", async ({ page }) => {
+  await page.route("https://formsubmit.co/**", (route) =>
+    route.fulfill({ status: 200, contentType: "application/json", body: "{}" }),
+  );
+
+  await page.goto("/palaute");
+  await expect(page.getByRole("heading", { name: "Palaute" })).toBeVisible();
+
+  await page.getByPlaceholder("Kirjoita palautteesi tähän...").fill("Testipalaute");
+  await page.getByRole("button", { name: "Lähetä" }).click();
+
+  await expect(page.getByText("Kiitos palautteesta!")).toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {
