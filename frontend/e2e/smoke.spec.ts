@@ -122,6 +122,25 @@ test("/palaute: submits feedback and shows thank you message", async ({ page }) 
   await expect(page.getByText("Kiitos palautteesta!")).toBeVisible();
 });
 
+test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side comparison", async ({ page }) => {
+  await gotoReady(page, "/hakijamaarat");
+  await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
+
+  // click can land before hydration, so retry until the button reads "Valittu ✓"
+  await expect(async () => {
+    await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+    await expect(page.getByRole("button", { name: "Valittu ✓" }).first()).toBeVisible({ timeout: 1000 });
+  }).toPass();
+  await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+  await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2);
+
+  await page.getByRole("link", { name: "Vertaile" }).click();
+  await expect(page).toHaveURL(/\/vertaile\?a=.+&b=.+&vuosi=2026/);
+  await expect(page.getByRole("heading", { name: "Vertaile hakukohteita" })).toBeVisible();
+  await expect(page.getByText("Hakijapaine", { exact: true })).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("hakijaa/paikka").first()).toBeVisible();
+});
+
 test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();

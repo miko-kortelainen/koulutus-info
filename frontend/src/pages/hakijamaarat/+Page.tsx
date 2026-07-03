@@ -1,18 +1,19 @@
-import { useState } from "react";
-import { Stack, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading } from "@chakra-ui/react";
+import { useCallback, useState } from "react";
+import { Stack, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading, Box } from "@chakra-ui/react";
 import { Pagination } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import SortControl, { type SortOption } from "./components/SortControl";
 import DegreeStatCard from "./components/DegreeStatsCard";
 import SearchInput from "./components/SearchInput";
-import useStatisticsQuery from "./hooks/useStatisticsQuery";
+import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
 import useDebounce from "@/hooks/useDebounce";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import YearControl from "./components/YearControl";
 import { type YearOption } from "./components/yearOptions";
-import type { StatisticsResponse } from "@/types.gen";
+import CompareBar from "./components/CompareBar";
+import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
 
@@ -22,7 +23,18 @@ export default function StatsListPage() {
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [selectedYear, setSelectedYear] = useState<YearOption>("2026");
   const [searchTerm, setSearchTerm] = useState("");
+  const [compareSelection, setCompareSelection] = useState<StatisticsEntry[]>([]);
   const query = useStatisticsQuery(selectedYear, selectedYear === "2026" ? ssrData : undefined);
+
+  const toggleCompare = useCallback((degree: StatisticsEntry) => {
+    setCompareSelection((prev) =>
+      prev.some((d) => d.kooditHakukohde === degree.kooditHakukohde)
+        ? prev.filter((d) => d.kooditHakukohde !== degree.kooditHakukohde)
+        : prev.length < 2
+          ? [...prev, degree]
+          : prev,
+    );
+  }, []);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredStatistics(query.data, debouncedSearchTerm, sortOrder);
 
@@ -68,6 +80,7 @@ export default function StatsListPage() {
               onChange={(value) => {
                 setSelectedYear(value);
                 setPage(1);
+                setCompareSelection([]);
               }}
             />
           </Group>
@@ -78,7 +91,13 @@ export default function StatsListPage() {
           {query.isError ? errorAlert : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {paginated.map((d, index) => (
-            <DegreeStatCard degree={d} key={`${d.hakukohde}, ${index}`} />
+            <DegreeStatCard
+              degree={d}
+              key={`${d.hakukohde}, ${index}`}
+              isSelected={compareSelection.some((s) => s.kooditHakukohde === d.kooditHakukohde)}
+              selectionFull={compareSelection.length === 2}
+              onToggleCompare={toggleCompare}
+            />
           ))}
         </Stack>
 
@@ -103,7 +122,9 @@ export default function StatsListPage() {
             </ButtonGroup>
           </HStack>
         </Pagination.Root>
+        {compareSelection.length > 0 ? <Box h="72px" /> : null}
       </PageContainer>
+      <CompareBar selected={compareSelection} year={selectedYear} onRemove={toggleCompare} />
     </>
   );
 }
