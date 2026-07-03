@@ -4,7 +4,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { type StatisticsEntry } from "../../../types.gen";
 import { COLORS } from "../../../theme";
 import { Tooltip } from "../../../components/ui/tooltip";
-import { getTier } from "../../../components/hakijapaineTier";
+import { formatCount, getTier } from "../../../components/hakijapaineTier";
 
 type Props = {
   degree: StatisticsEntry;
@@ -44,21 +44,19 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
           <HStack alignItems="flex-start" gap={2}>
             <Stat.Root size={{ base: "sm", md: "md" }} flex={{ base: 3, md: 1 }}>
               <Stat.Label fontSize={{ base: "xs", md: "md" }}>Aloituspaikat</Stat.Label>
-              <Stat.ValueText>{(degree.aloituspaikatLkm ?? 0) < 5 ? "alle 5" : degree.aloituspaikatLkm}</Stat.ValueText>
+              <Stat.ValueText>{formatCount(degree.aloituspaikatLkm)}</Stat.ValueText>
             </Stat.Root>
 
             <Stat.Root size={{ base: "sm", md: "md" }} flex={{ base: 4, md: 1 }}>
               <Stat.Label fontSize={{ base: "xs", md: "md" }} p={0}>
                 Ensisijaiset hakijat
               </Stat.Label>
-              <Stat.ValueText>
-                {(degree.ensisijaisetHakijatLkm ?? 0) < 5 ? "alle 5" : degree.ensisijaisetHakijatLkm}
-              </Stat.ValueText>
+              <Stat.ValueText>{formatCount(degree.ensisijaisetHakijatLkm)}</Stat.ValueText>
             </Stat.Root>
 
             <Stat.Root size={{ base: "sm", md: "md" }} flex={{ base: 4, md: 1 }}>
               <Stat.Label fontSize={{ base: "xs", md: "md" }}>Kaikki hakijat</Stat.Label>
-              <Stat.ValueText>{(degree.kaikkiHakijatLkm ?? 0) < 5 ? "alle 5" : degree.kaikkiHakijatLkm}</Stat.ValueText>
+              <Stat.ValueText>{formatCount(degree.kaikkiHakijatLkm)}</Stat.ValueText>
             </Stat.Root>
           </HStack>
 

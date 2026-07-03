@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
-import { Badge, Card, HStack, Heading, Separator, Stack, Stat, VStack } from "@chakra-ui/react";
+import { Badge, Card, HStack, Heading, Separator, Stack, Stat } from "@chakra-ui/react";
 import type { StatisticsEntry } from "@/types.gen";
-import { getTier } from "@/components/hakijapaineTier";
+import { formatCount, getTier } from "@/components/hakijapaineTier";
 import { HiOutlineArrowCircleDown, HiOutlineArrowCircleUp } from "react-icons/hi";
 
 interface ComparisonTableProps {
@@ -11,8 +11,6 @@ interface ComparisonTableProps {
 
 type Trend = "up" | "down" | undefined;
 
-const formatCount = (n: number) => (n < 5 ? "alle 5" : String(n));
-
 const hakijapaine = (e: StatisticsEntry) => (e.aloituspaikatLkm ? e.ensisijaisetHakijatLkm / e.aloituspaikatLkm : null);
 
 const paineTrend = (value: number | null, other: number | null): Trend =>
@@ -21,6 +19,12 @@ const paineTrend = (value: number | null, other: number | null): Trend =>
 // masked values ("alle 5") are not comparable, so those get no trend arrow
 const countTrend = (value: number, other: number): Trend =>
   value < 5 || other < 5 ? undefined : paineTrend(value, other);
+
+const COUNT_ROWS = [
+  ["Kaikki hakijat", "kaikkiHakijatLkm"],
+  ["Ensisijaiset hakijat", "ensisijaisetHakijatLkm"],
+  ["Aloituspaikat", "aloituspaikatLkm"],
+] as const;
 
 function TrendIcon({ trend }: { trend: Trend }) {
   if (!trend) return null;
@@ -42,7 +46,7 @@ function PairRow({ left, right }: { left: ReactNode; right: ReactNode }) {
   );
 }
 
-function StatCard({ label, value, trend }: { label: string; value: ReactNode; trend?: Trend }) {
+function StatCard({ label, value, trend, badge }: { label: string; value: ReactNode; trend?: Trend; badge?: ReactNode }) {
   return (
     <Card.Root size="sm" flex={1} minW={0}>
       <Card.Body>
@@ -55,43 +59,26 @@ function StatCard({ label, value, trend }: { label: string; value: ReactNode; tr
             <TrendIcon trend={trend} />
           </HStack>
         </Stat.Root>
+        {badge}
       </Card.Body>
     </Card.Root>
   );
 }
 
-function PressureCard({ paine, trend }: { paine: number | null; trend: Trend }) {
+function paineBadge(paine: number | null) {
   const tier = paine != null ? getTier(paine) : null;
-  return (
-    <Card.Root size="sm" flex={1} minW={0}>
-      <Card.Body>
-        <VStack alignItems="start">
-          <Stat.Root size="sm">
-            <Stat.Label fontSize="xs" color="fg.muted">
-              Hakijapaine
-            </Stat.Label>
-            <HStack gap={1}>
-              <Stat.ValueText fontSize={{ base: "sm", md: "xl" }}>
-                {paine != null ? paine.toFixed(2) : "n/a"}
-              </Stat.ValueText>
-              <TrendIcon trend={trend} />
-            </HStack>
-          </Stat.Root>
-          {tier ? (
-            <Badge
-              bg={tier.bg}
-              color={tier.color}
-              fontWeight="semibold"
-              alignSelf="flex-start"
-              size={{ base: "xs", md: "md" }}
-            >
-              {tier.label}
-            </Badge>
-          ) : null}
-        </VStack>
-      </Card.Body>
-    </Card.Root>
-  );
+  return tier ? (
+    <Badge
+      bg={tier.bg}
+      color={tier.color}
+      fontWeight="semibold"
+      alignSelf="flex-start"
+      size={{ base: "xs", md: "md" }}
+      mt={2}
+    >
+      {tier.label}
+    </Badge>
+  ) : null;
 }
 
 export default function ComparisonTable({ a, b }: ComparisonTableProps) {
@@ -116,57 +103,30 @@ export default function ComparisonTable({ a, b }: ComparisonTableProps) {
         left={<StatCard label="Korkeakoulu" value={a.korkeakoulu ?? "-"} />}
         right={<StatCard label="Korkeakoulu" value={b.korkeakoulu ?? "-"} />}
       />
+      {COUNT_ROWS.map(([label, field]) => (
+        <PairRow
+          key={field}
+          left={<StatCard label={label} value={formatCount(a[field])} trend={countTrend(a[field], b[field])} />}
+          right={<StatCard label={label} value={formatCount(b[field])} trend={countTrend(b[field], a[field])} />}
+        />
+      ))}
       <PairRow
         left={
           <StatCard
-            label="Kaikki hakijat"
-            value={formatCount(a.kaikkiHakijatLkm)}
-            trend={countTrend(a.kaikkiHakijatLkm, b.kaikkiHakijatLkm)}
+            label="Hakijapaine"
+            value={paineA != null ? paineA.toFixed(2) : "n/a"}
+            trend={paineTrend(paineA, paineB)}
+            badge={paineBadge(paineA)}
           />
         }
         right={
           <StatCard
-            label="Kaikki hakijat"
-            value={formatCount(b.kaikkiHakijatLkm)}
-            trend={countTrend(b.kaikkiHakijatLkm, a.kaikkiHakijatLkm)}
+            label="Hakijapaine"
+            value={paineB != null ? paineB.toFixed(2) : "n/a"}
+            trend={paineTrend(paineB, paineA)}
+            badge={paineBadge(paineB)}
           />
         }
-      />
-      <PairRow
-        left={
-          <StatCard
-            label="Ensisijaiset hakijat"
-            value={formatCount(a.ensisijaisetHakijatLkm)}
-            trend={countTrend(a.ensisijaisetHakijatLkm, b.ensisijaisetHakijatLkm)}
-          />
-        }
-        right={
-          <StatCard
-            label="Ensisijaiset hakijat"
-            value={formatCount(b.ensisijaisetHakijatLkm)}
-            trend={countTrend(b.ensisijaisetHakijatLkm, a.ensisijaisetHakijatLkm)}
-          />
-        }
-      />
-      <PairRow
-        left={
-          <StatCard
-            label="Aloituspaikat"
-            value={formatCount(a.aloituspaikatLkm)}
-            trend={countTrend(a.aloituspaikatLkm, b.aloituspaikatLkm)}
-          />
-        }
-        right={
-          <StatCard
-            label="Aloituspaikat"
-            value={formatCount(b.aloituspaikatLkm)}
-            trend={countTrend(b.aloituspaikatLkm, a.aloituspaikatLkm)}
-          />
-        }
-      />
-      <PairRow
-        left={<PressureCard paine={paineA} trend={paineTrend(paineA, paineB)} />}
-        right={<PressureCard paine={paineB} trend={paineTrend(paineB, paineA)} />}
       />
     </Stack>
   );
