@@ -1,7 +1,9 @@
 {
   "vipunen": {
     "aineistoUrl": "https://api.vipunen.fi/api/resources/korkeakoulutus_hakeneet_ja_paikan_vastaanottaneet/data",
-    "tilastoVuosi": "2026"
+    "tilastoVuosi": 2026,
+    "hakutapa": "Yhteishaku",
+    "eiKoulutuksenKieli": "vain englanti"
   },
   "opintopolku": {
     "yhteishakuOid": "1.2.246.562.29.00000000000000087775",
