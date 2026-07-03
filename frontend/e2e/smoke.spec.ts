@@ -113,24 +113,20 @@ test("/palaute: submits feedback and shows thank you message", async ({ page }) 
     route.fulfill({ status: 200, contentType: "application/json", body: "{}" }),
   );
 
-  await page.goto("/palaute");
+  await gotoReady(page, "/palaute");
   await expect(page.getByRole("heading", { name: "Palaute" })).toBeVisible();
 
   await page.getByPlaceholder("Kirjoita palautteesi tähän...").fill("Testipalaute");
   await page.getByRole("button", { name: "Lähetä" }).click();
-
-  await expect(page.getByText("Kiitos palautteesta!")).toBeVisible();
+  await expect(page.getByText("Kiitos palautteesta!")).toBeVisible({ timeout: 1000 });
 });
 
 test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side comparison", async ({ page }) => {
   await gotoReady(page, "/hakijamaarat");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
-  // click can land before hydration, so retry until the button reads "Valittu ✓"
-  await expect(async () => {
-    await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
-    await expect(page.getByRole("button", { name: "Valittu ✓" }).first()).toBeVisible({ timeout: 1000 });
-  }).toPass();
+  await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+  await expect(page.getByRole("button", { name: "Valittu ✓" }).first()).toBeVisible({ timeout: 1000 });
   await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
   await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2);
 
