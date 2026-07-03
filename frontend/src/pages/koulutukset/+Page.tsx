@@ -23,6 +23,7 @@ import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "./components/SchoolCard";
 import { useMemo, useState } from "react";
 import SearchInput from "@/pages/hakijamaarat/components/SearchInput";
+import useDebounce from "@/hooks/useDebounce";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
 import type { SchoolsResponse } from "@/types.gen";
 
@@ -43,7 +44,8 @@ export default function SchoolsListPage() {
     () => createListCollection({ items: uniqueSchools.map((s) => ({ label: s, value: s })) }),
     [uniqueSchools],
   );
-  const filteredData = useFilteredDegrees(toteutukset, searchTerm, selectedSchools);
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+  const filteredData = useFilteredDegrees(toteutukset, debouncedSearchTerm, selectedSchools);
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
