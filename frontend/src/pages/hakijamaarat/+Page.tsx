@@ -8,6 +8,7 @@ import DegreeStatCard from "./components/DegreeStatsCard";
 import SearchInput from "./components/SearchInput";
 import useStatisticsQuery from "./hooks/useStatisticsQuery";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
+import useDebounce from "@/hooks/useDebounce";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import YearControl from "./components/YearControl";
 import { type YearOption } from "./components/yearOptions";
@@ -22,7 +23,8 @@ export default function StatsListPage() {
   const [selectedYear, setSelectedYear] = useState<YearOption>("2026");
   const [searchTerm, setSearchTerm] = useState("");
   const query = useStatisticsQuery(selectedYear, selectedYear === "2026" ? ssrData : undefined);
-  const filteredData = useFilteredStatistics(query.data, searchTerm, sortOrder);
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+  const filteredData = useFilteredStatistics(query.data, debouncedSearchTerm, sortOrder);
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 

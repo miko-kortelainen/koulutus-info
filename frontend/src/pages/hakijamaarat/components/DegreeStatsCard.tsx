@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Card, Stack, Badge, Text, Stat, HStack, Separator } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 import { type StatisticsEntry } from "../../../types.gen";
@@ -17,7 +18,7 @@ type Props = {
   degree: StatisticsEntry;
 };
 
-export default function DegreeStatCard({ degree }: Props) {
+function DegreeStatCard({ degree }: Props) {
   const hakijapaine = degree.aloituspaikatLkm ? degree.ensisijaisetHakijatLkm / degree.aloituspaikatLkm : null;
   const tier = hakijapaine != null ? getTier(hakijapaine) : null;
 
@@ -83,3 +84,5 @@ export default function DegreeStatCard({ degree }: Props) {
     </Card.Root>
   );
 }
+
+export default memo(DegreeStatCard);
