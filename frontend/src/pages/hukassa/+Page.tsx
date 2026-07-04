@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Em, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 import useSemanticSearch from "./hooks/useSemanticSearch";
-import SearchInput from "../hakijamaarat/components/SearchInput";
+import SearchInput from "@/components/SearchInput";
 import { COLORS } from "@/theme";
 import PageContainer from "@/layout/PageContainer";
 import SuggestionCard from "./components/SuggestionCard";

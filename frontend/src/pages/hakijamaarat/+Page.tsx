@@ -5,7 +5,7 @@ import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import SortControl, { type SortOption } from "./components/SortControl";
 import DegreeStatCard from "./components/DegreeStatsCard";
-import SearchInput from "./components/SearchInput";
+import SearchInput from "@/components/SearchInput";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
 import useDebounce from "@/hooks/useDebounce";

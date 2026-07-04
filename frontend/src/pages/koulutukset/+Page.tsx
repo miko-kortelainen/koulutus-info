@@ -22,7 +22,7 @@ import { useData } from "vike-react/useData";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "./components/SchoolCard";
 import { useMemo, useState } from "react";
-import SearchInput from "@/pages/hakijamaarat/components/SearchInput";
+import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
 import type { SchoolsResponse } from "@/types.gen";

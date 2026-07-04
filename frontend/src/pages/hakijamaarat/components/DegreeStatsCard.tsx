@@ -4,7 +4,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { type StatisticsEntry } from "../../../types.gen";
 import { COLORS } from "../../../theme";
 import { Tooltip } from "../../../components/ui/tooltip";
-import { formatCount, getTier } from "../../../components/hakijapaineTier";
+import { formatCount, getHakijapaine, getTier } from "../../../components/hakijapaineTier";
 
 type Props = {
   degree: StatisticsEntry;
@@ -14,7 +14,7 @@ type Props = {
 };
 
 function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: Props) {
-  const hakijapaine = degree.aloituspaikatLkm ? degree.ensisijaisetHakijatLkm / degree.aloituspaikatLkm : null;
+  const hakijapaine = getHakijapaine(degree);
   const tier = hakijapaine != null ? getTier(hakijapaine) : null;
 
   return (
