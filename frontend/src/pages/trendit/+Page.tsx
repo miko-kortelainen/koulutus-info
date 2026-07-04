@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Alert, Box, Card, Heading, Select, Stack, Text, createListCollection } from "@chakra-ui/react";
+import { Alert, Box, Heading, Select, Stack, Text, createListCollection } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import YearControl from "@/pages/hakijamaarat/components/YearControl";
@@ -9,6 +9,7 @@ import useTrendsData from "./hooks/useTrendsData";
 import { useKoulutusalaTrends } from "./hooks/useKoulutusalaTrends";
 import TopBarList from "./components/TopBarList";
 import KoulutusalaTrendChart from "./components/KoulutusalaTrendChart";
+import TrendCard from "./components/TrendCard";
 import type { StatisticsResponse } from "@/types.gen";
 
 export default function TrendsPage() {
@@ -101,75 +102,55 @@ export default function TrendsPage() {
   );
 
   const applicantsByField = (
-    <Card.Root variant="outline" borderLeftWidth="4px" borderLeftColor="green.solid">
-      <Card.Body gap={4}>
-        <Heading as="h2" size="sm">
-          Suosituimmat koulutusalat
-        </Heading>
-        <TopBarList
-          data={trends.topKoulutusalat}
-          isLoading={query.isPending}
-          color="green.solid"
-          skeletonCount={10}
-          compareData={compareYear ? compareTrends.topKoulutusalat : undefined}
-          selectedYear={selectedYear}
-          compareYear={compareYear || undefined}
-        />
-      </Card.Body>
-    </Card.Root>
+    <TrendCard title="Suosituimmat koulutusalat" color="green.solid">
+      <TopBarList
+        data={trends.topKoulutusalat}
+        isLoading={query.isPending}
+        color="green.solid"
+        skeletonCount={10}
+        compareData={compareYear ? compareTrends.topKoulutusalat : undefined}
+        selectedYear={selectedYear}
+        compareYear={compareYear || undefined}
+      />
+    </TrendCard>
   );
 
   const applicantsBySchool = (
-    <Card.Root variant="outline" borderLeftWidth="4px" borderLeftColor="blue.solid">
-      <Card.Body gap={4}>
-        <Heading as="h2" size="sm">
-          Suosituimmat korkeakoulut
-        </Heading>
-        <TopBarList
-          data={trends.topKorkeakoulut}
-          isLoading={query.isPending}
-          color="blue.solid"
-          skeletonCount={10}
-          compareData={compareYear ? compareTrends.topKorkeakoulut : undefined}
-          selectedYear={selectedYear}
-          compareYear={compareYear || undefined}
-        />
-      </Card.Body>
-    </Card.Root>
+    <TrendCard title="Suosituimmat korkeakoulut" color="blue.solid">
+      <TopBarList
+        data={trends.topKorkeakoulut}
+        isLoading={query.isPending}
+        color="blue.solid"
+        skeletonCount={10}
+        compareData={compareYear ? compareTrends.topKorkeakoulut : undefined}
+        selectedYear={selectedYear}
+        compareYear={compareYear || undefined}
+      />
+    </TrendCard>
   );
 
   const applicantsBySector = (
-    <Card.Root variant="outline" borderLeftWidth="4px" borderLeftColor="purple.solid">
-      <Card.Body gap={4}>
-        <Heading as="h2" size="sm">
-          Hakijat sektoreittain
-        </Heading>
-        <TopBarList
-          data={trends.sektoriData}
-          isLoading={query.isPending}
-          color="purple.solid"
-          showPercent={false}
-          compareData={compareYear ? compareTrends.sektoriData : undefined}
-          selectedYear={selectedYear}
-          compareYear={compareYear || undefined}
-        />
-      </Card.Body>
-    </Card.Root>
+    <TrendCard title="Hakijat sektoreittain" color="purple.solid">
+      <TopBarList
+        data={trends.sektoriData}
+        isLoading={query.isPending}
+        color="purple.solid"
+        showPercent={false}
+        compareData={compareYear ? compareTrends.sektoriData : undefined}
+        selectedYear={selectedYear}
+        compareYear={compareYear || undefined}
+      />
+    </TrendCard>
   );
 
   const applicantsByYear = (
-    <Card.Root variant="outline" borderLeftWidth="4px" borderLeftColor="teal.solid">
-      <Card.Body gap={4}>
-        <Heading as="h2" size="sm">
-          Hakijamäärien trendit koulutusaloittain
-        </Heading>
-        <KoulutusalaTrendChart
-          chartData={koulutusalaTrends.chartData}
-          topByGrowth={koulutusalaTrends.topByGrowth}
-          isLoading={koulutusalaTrends.isLoading}
-        />
-      </Card.Body>
-    </Card.Root>
+    <TrendCard title="Hakijamäärien trendit koulutusaloittain" color="teal.solid">
+      <KoulutusalaTrendChart
+        chartData={koulutusalaTrends.chartData}
+        topByGrowth={koulutusalaTrends.topByGrowth}
+        isLoading={koulutusalaTrends.isLoading}
+      />
+    </TrendCard>
   );
 
   const yearSelectors = (

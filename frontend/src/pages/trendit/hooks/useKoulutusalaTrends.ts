@@ -1,19 +1,10 @@
 import { useQueries } from "@tanstack/react-query";
-import { getStatistics } from "@/api/api";
+import { statisticsQueryOptions } from "@/hooks/useStatisticsQuery";
 import { YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
+import { sumByKey } from "../components/sumByKey";
 
 const TOP_N = 5;
-
-function aggregate(data: StatisticsResponse): Map<string, number> {
-  const map = new Map<string, number>();
-  for (const item of data) {
-    const k = item.koulutusalaTaso1;
-    if (!k) continue;
-    map.set(k, (map.get(k) ?? 0) + item.ensisijaisetHakijatLkm);
-  }
-  return map;
-}
 
 const years = YEAR_OPTIONS.map((y) => y.value); // ["2026", "2025", "2024", "2023"]
 const chronological = [...years].reverse(); // ["2023", "2024", "2025", "2026"]
@@ -22,20 +13,17 @@ export type TrendPoint = { year: string } & Record<string, string | number>;
 
 export function useKoulutusalaTrends(ssrData2026?: StatisticsResponse) {
   const results = useQueries({
-    queries: years.map((year) => ({
-      queryKey: ["statistics", year],
-      queryFn: () => getStatistics(year),
-      initialData: year === "2026" ? ssrData2026 : undefined,
-      staleTime: Infinity,
-      gcTime: 10 * 60 * 1000,
-    })),
+    queries: years.map((year) => statisticsQueryOptions(year, year === "2026" ? ssrData2026 : undefined)),
   });
 
   const isLoading = results.some((r) => r.isPending && !r.data);
 
   // Aggregate all years, keyed by year string
   const aggByYear = new Map(
-    years.map((year, i) => [year, results[i]?.data ? aggregate(results[i].data!) : new Map<string, number>()]),
+    years.map((year, i) => [
+      year,
+      results[i]?.data ? sumByKey(results[i].data!, "koulutusalaTaso1") : new Map<string, number>(),
+    ]),
   );
 
   // Union of all koulutusala names across all years
