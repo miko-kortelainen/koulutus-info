@@ -35,11 +35,10 @@ export default function StatsListPage() {
           : prev,
     );
   }, []);
+
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredStatistics(query.data, debouncedSearchTerm, sortOrder);
-
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-
   const degreeSkeletonList = Array.from({ length: 10 }).map((_, i) => <DegreeStatsCardSkeleton key={i} />);
 
   const errorAlert = (
@@ -49,79 +48,88 @@ export default function StatsListPage() {
     </Alert.Root>
   );
 
+  const header = (
+    <Stack gap={1}>
+      <Heading as="h1" size="lg">
+        Hakijamäärät
+      </Heading>
+      <Text color="fg.muted">Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.</Text>
+    </Stack>
+  );
+
+  const sortControls = (
+    <Stack direction={{ base: "column", md: "row" }} gap={2} zIndex={10}>
+      <SearchInput
+        value={searchTerm}
+        onChange={(value) => {
+          setSearchTerm(value);
+          setPage(1);
+        }}
+        placeholder="Hae koulua tai linjaa"
+      />
+      <Group flex={1}>
+        <SortControl
+          value={sortOrder}
+          onChange={(value) => {
+            setSortOrder(value);
+            setPage(1);
+          }}
+        />
+        <YearControl
+          value={selectedYear}
+          onChange={(value) => {
+            setSelectedYear(value);
+            setPage(1);
+            setCompareSelection([]);
+          }}
+        />
+      </Group>
+    </Stack>
+  );
+
+  const cardList = (
+    <Stack direction="column" gap={4}>
+      {query.isPending ? degreeSkeletonList : null}
+      {query.isError ? errorAlert : null}
+      {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
+      {paginated.map((d, index) => (
+        <DegreeStatCard
+          degree={d}
+          key={`${d.hakukohde}, ${index}`}
+          isSelected={compareSelection.some((s) => s.kooditHakukohde === d.kooditHakukohde)}
+          selectionFull={compareSelection.length === 2}
+          onToggleCompare={toggleCompare}
+        />
+      ))}
+    </Stack>
+  );
+
+  const pagination = (
+    <Pagination.Root count={filteredData.length} pageSize={PAGE_SIZE} page={page} onPageChange={(e) => setPage(e.page)}>
+      <HStack justify="center">
+        <ButtonGroup variant="ghost">
+          <Pagination.Items
+            render={(page) => (
+              <IconButton
+                variant={{ base: "ghost", _selected: "outline" }}
+                onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
+              >
+                {page.value}
+              </IconButton>
+            )}
+          />
+        </ButtonGroup>
+      </HStack>
+    </Pagination.Root>
+  );
+
   return (
     <>
       <PageContainer>
-        <Stack gap={1}>
-          <Heading as="h1" size="lg">
-            Hakijamäärät
-          </Heading>
-          <Text color="fg.muted">Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.</Text>
-        </Stack>
-        <Stack direction={{ base: "column", md: "row" }} gap={2} zIndex={10}>
-          <SearchInput
-            value={searchTerm}
-            onChange={(value) => {
-              setSearchTerm(value);
-              setPage(1);
-            }}
-            placeholder="Hae koulua tai linjaa"
-          />
-          <Group flex={1}>
-            <SortControl
-              value={sortOrder}
-              onChange={(value) => {
-                setSortOrder(value);
-                setPage(1);
-              }}
-            />
-            <YearControl
-              value={selectedYear}
-              onChange={(value) => {
-                setSelectedYear(value);
-                setPage(1);
-                setCompareSelection([]);
-              }}
-            />
-          </Group>
-        </Stack>
-
-        <Stack direction="column" gap={4}>
-          {query.isPending ? degreeSkeletonList : null}
-          {query.isError ? errorAlert : null}
-          {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
-          {paginated.map((d, index) => (
-            <DegreeStatCard
-              degree={d}
-              key={`${d.hakukohde}, ${index}`}
-              isSelected={compareSelection.some((s) => s.kooditHakukohde === d.kooditHakukohde)}
-              selectionFull={compareSelection.length === 2}
-              onToggleCompare={toggleCompare}
-            />
-          ))}
-        </Stack>
-
-        <Pagination.Root
-          count={filteredData.length}
-          pageSize={PAGE_SIZE}
-          page={page}
-          onPageChange={(e) => setPage(e.page)}
-        >
-          <HStack justify="center">
-            <ButtonGroup variant="ghost">
-              <Pagination.Items
-                render={(page) => (
-                  <IconButton
-                    variant={{ base: "ghost", _selected: "outline" }}
-                    onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-                  >
-                    {page.value}
-                  </IconButton>
-                )}
-              />
-            </ButtonGroup>
-          </HStack>
-        </Pagination.Root>
+        {header}
+        {sortControls}
+        {cardList}
+        {pagination}
         {compareSelection.length > 0 ? <Box h="72px" /> : null}
       </PageContainer>
       <CompareBar selected={compareSelection} year={selectedYear} onRemove={toggleCompare} />
