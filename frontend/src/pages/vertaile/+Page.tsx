@@ -61,18 +61,21 @@ export default function ComparePage() {
     body = <ComparisonTable a={entryA} b={entryB} />;
   }
 
+  const header = (
+    <Stack gap={1}>
+      <Heading as="h1" size="lg">
+        Vertailu
+      </Heading>
+      <Text color="fg.muted">
+        Vertaa kahta hakukohdetta rinnakkain. <br /> Tilastovuosi {year}.
+      </Text>
+      <Separator my={2} />
+    </Stack>
+  );
+
   return (
     <PageContainer>
-      <Stack gap={1}>
-        <Heading as="h1" size="lg">
-          Vertailu
-        </Heading>
-        <Text color="fg.muted">
-          Vertaa kahta hakukohdetta rinnakkain. <br /> Tilastovuosi {year}.
-        </Text>
-        <Separator my={2} />
-      </Stack>
-
+      {header}
       {body}
     </PageContainer>
   );

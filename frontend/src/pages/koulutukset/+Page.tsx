@@ -49,81 +49,90 @@ export default function SchoolsListPage() {
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
+  const header = (
+    <Stack gap={1}>
+      <Heading as="h1" size="lg">
+        Koulutukset
+      </Heading>
+      <Text color="fg.muted">Korkeakoulujen syksyn 2026 yhteishaussa olevat toteutukset.</Text>
+      <Separator mt={2} />
+    </Stack>
+  );
+
+  const sortControls = (
+    <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
+      <SearchInput
+        value={searchTerm}
+        onChange={(value) => {
+          setSearchTerm(value);
+          setPage(1);
+        }}
+        placeholder="Etsi koulutuksia"
+      />
+      <Text color="fg.muted" fontSize="sm" ml={2} p={2}>
+        Suodata koulujen perusteella
+      </Text>
+      <Listbox.Root
+        selectionMode="multiple"
+        collection={schoolCollection}
+        value={[...selectedSchools]}
+        onValueChange={(details) => {
+          setSelectedSchools(new Set(details.value));
+          setPage(1);
+        }}
+      >
+        <Listbox.Content maxH={{ base: "56", md: "100%" }} gap={2}>
+          {schoolCollection.items.map((item) => (
+            <Listbox.Item key={item.value} item={item}>
+              <ItemCheckmark />
+              <Listbox.ItemText mb="2px">{item.label}</Listbox.ItemText>
+            </Listbox.Item>
+          ))}
+        </Listbox.Content>
+      </Listbox.Root>
+    </Stack>
+  );
+
+  const cardList = (
+    <Stack direction="column" gap={4}>
+      {paginated.map((t, index) => (
+        <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi} ${index}`} toteutus={t} />
+      ))}
+    </Stack>
+  );
+
+  const pagination = (
+    <Pagination.Root count={filteredData.length} pageSize={PAGE_SIZE} page={page} onPageChange={(e) => setPage(e.page)}>
+      <HStack justify="center">
+        <ButtonGroup variant="ghost">
+          <Pagination.Items
+            render={(page) => (
+              <IconButton
+                variant={{ base: "ghost", _selected: "outline" }}
+                onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
+              >
+                {page.value}
+              </IconButton>
+            )}
+          />
+        </ButtonGroup>
+      </HStack>
+    </Pagination.Root>
+  );
+
   return (
     <PageContainer>
-      <Stack gap={1}>
-        <Heading as="h1" size="lg">
-          Koulutukset
-        </Heading>
-        <Text color="fg.muted">Korkeakoulujen syksyn 2026 yhteishaussa olevat toteutukset.</Text>
-        <Separator mt={2} />
-      </Stack>
+      {header}
 
       <Stack direction={{ base: "column", md: "row" }} align="start" gap={4}>
-        <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
-          <SearchInput
-            value={searchTerm}
-            onChange={(value) => {
-              setSearchTerm(value);
-              setPage(1);
-            }}
-            placeholder="Etsi koulutuksia"
-          />
-          <Text color="fg.muted" fontSize="sm" ml={2} p={2}>
-            Suodata koulujen perusteella
-          </Text>
-          <Listbox.Root
-            selectionMode="multiple"
-            collection={schoolCollection}
-            value={[...selectedSchools]}
-            onValueChange={(details) => {
-              setSelectedSchools(new Set(details.value));
-              setPage(1);
-            }}
-          >
-            <Listbox.Content maxH={{ base: "56", md: "100%" }} gap={2}>
-              {schoolCollection.items.map((item) => (
-                <Listbox.Item key={item.value} item={item}>
-                  <ItemCheckmark />
-                  <Listbox.ItemText mb="2px">{item.label}</Listbox.ItemText>
-                </Listbox.Item>
-              ))}
-            </Listbox.Content>
-          </Listbox.Root>
-        </Stack>
+        {sortControls}
 
         <Stack flex={1} gap={4}>
           {query.isPending ? <Text>Haetaan</Text> : null}
           {query.isError ? <Text>Virhe</Text> : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
-
-          <Stack direction="column" gap={4}>
-            {paginated.map((t, index) => (
-              <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi} ${index}`} toteutus={t} />
-            ))}
-          </Stack>
-
-          <Pagination.Root
-            count={filteredData.length}
-            pageSize={PAGE_SIZE}
-            page={page}
-            onPageChange={(e) => setPage(e.page)}
-          >
-            <HStack justify="center">
-              <ButtonGroup variant="ghost">
-                <Pagination.Items
-                  render={(page) => (
-                    <IconButton
-                      variant={{ base: "ghost", _selected: "outline" }}
-                      onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-                    >
-                      {page.value}
-                    </IconButton>
-                  )}
-                />
-              </ButtonGroup>
-            </HStack>
-          </Pagination.Root>
+          {cardList}
+          {pagination}
         </Stack>
       </Stack>
     </PageContainer>
