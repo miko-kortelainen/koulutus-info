@@ -13,7 +13,7 @@ export default function LandingPage() {
       <Center flex={1}>
         <Stack gap={{ base: "10", md: "20" }} px="10" textAlign="center" alignItems="center">
           <Stack gap={{ base: "6", md: "12" }}>
-            <Heading size={{ base: "3xl", md: "5xl" }} fontWeight="bold" letterSpacing="widest">
+            <Heading as="h1" size={{ base: "3xl", md: "5xl" }} fontWeight="bold" letterSpacing="widest">
               yhteishaku.app
             </Heading>
             <VStack>
