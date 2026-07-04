@@ -1,13 +1,42 @@
 import { COLORS } from "@/theme";
-import { Box, CloseButton, Drawer, IconButton, Link, Portal, Separator, Stack, Text } from "@chakra-ui/react";
-import { HiMenu } from "react-icons/hi";
+import { Box, CloseButton, Drawer, HStack, IconButton, Link, Portal, Separator, Stack, Text } from "@chakra-ui/react";
+import {
+  HiOutlineAcademicCap,
+  HiOutlineChartBar,
+  HiOutlineChatAlt2,
+  HiOutlineQuestionMarkCircle,
+  HiOutlineTrendingUp,
+  HiMenu,
+  HiOutlineEmojiSad,
+} from "react-icons/hi";
 
 const links = [
-  { href: "/hakijamaarat", label: "hakijamäärät", description: "Katso hakijamäärät koulutuksittain" },
-  { href: "/koulutukset", label: "koulutukset", description: "Selaa yhteishaussa olevia koulutuksia" },
-  { href: "/trendit", label: "trendit", description: "Vertaa alojen ja koulujen hakijamääriä" },
-  { href: "/hukassa", label: "hukassa?", description: "Apua koulutusvalinnan tekemiseen" },
-  { href: "/palaute", label: "palaute", description: "Anna palautetta tai kehitysehdotus" },
+  {
+    href: "/hakijamaarat",
+    label: "hakijamäärät",
+    description: "Katso hakijamäärät koulutuksittain",
+    icon: HiOutlineChartBar,
+  },
+  {
+    href: "/koulutukset",
+    label: "koulutukset",
+    description: "Selaa yhteishaussa olevia koulutuksia",
+    icon: HiOutlineAcademicCap,
+  },
+  {
+    href: "/trendit",
+    label: "trendit",
+    description: "Vertaa alojen ja koulujen hakijamääriä",
+    icon: HiOutlineTrendingUp,
+  },
+  {
+    href: "/hukassa",
+    label: "hukassa?",
+    description: "Apua koulutusvalinnan tekemiseen",
+    icon: HiOutlineEmojiSad,
+  },
+  { href: "/ukk", label: "ukk", description: "Usein kysytyt kysymykset", icon: HiOutlineQuestionMarkCircle },
+  { href: "/palaute", label: "palaute", description: "Anna palautetta tai kehitysehdotus", icon: HiOutlineChatAlt2 },
 ];
 
 export default function Header() {
@@ -31,12 +60,15 @@ export default function Header() {
               <Drawer.Body>
                 <Box as="nav" aria-label="navigointi">
                   <Stack as="ul" gap={{ base: 8, md: 10 }} fontSize="xl" listStyleType="none">
-                    {links.map(({ href, label, description }) => (
+                    {links.map(({ href, label, description, icon: Icon }) => (
                       <Box as="li" key={href}>
                         {/* ActionTrigger closes the drawer on click; vike client routing keeps the layout mounted */}
                         <Drawer.ActionTrigger asChild>
                           <Link href={href} display="block">
-                            {label}
+                            <HStack gap={2}>
+                              <Icon size="1rem" color={COLORS.accent} />
+                              <Text as="span">{label}</Text>
+                            </HStack>
                             <Text
                               fontSize="sm"
                               color="fg.muted"
