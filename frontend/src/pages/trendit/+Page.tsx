@@ -4,7 +4,7 @@ import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import YearControl from "@/pages/hakijamaarat/components/YearControl";
 import { type YearOption, YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
-import useStatisticsQuery from "@/pages/hakijamaarat/hooks/useStatisticsQuery";
+import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import useTrendsData from "./hooks/useTrendsData";
 import { useKoulutusalaTrends } from "./hooks/useKoulutusalaTrends";
 import TopBarList from "./components/TopBarList";
