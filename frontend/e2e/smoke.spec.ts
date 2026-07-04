@@ -1,5 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 
+test.describe.configure({ mode: "parallel" });
+
 const NAV_LABEL = "navigointi";
 
 async function gotoReady(page: Page, url: string) {
@@ -32,6 +34,7 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["trendit", "/trendit"],
     ["hukassa?", "/hukassa"],
     ["palaute", "/palaute"],
+    ["ukk", "/ukk"],
   ] as const) {
     await openNavDrawer(page);
     await nav.getByRole("link", { name: label }).click();
