@@ -4,7 +4,7 @@ import { Pagination } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import SortControl, { type SortOption } from "./components/SortControl";
-import DegreeStatCard from "./components/DegreeStatsCard";
+import DegreeStatCard from "@/components/DegreeStatsCard";
 import SearchInput from "@/components/SearchInput";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
@@ -12,7 +12,7 @@ import useDebounce from "@/hooks/useDebounce";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import YearControl from "./components/YearControl";
 import { type YearOption } from "./components/yearOptions";
-import CompareBar from "./components/CompareBar";
+import CompareBar from "@/components/CompareBar";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;

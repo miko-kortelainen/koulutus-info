@@ -1,16 +1,17 @@
 import { memo } from "react";
 import { Card, Stack, Badge, Text, Stat, HStack, Separator, Button } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
-import { type StatisticsEntry } from "../../../types.gen";
-import { COLORS } from "../../../theme";
-import { Tooltip } from "../../../components/ui/tooltip";
-import { formatCount, getHakijapaine, getTier } from "../../../components/hakijapaineTier";
+import { type StatisticsEntry } from "@/types.gen";
+import { COLORS } from "@/theme";
+import { Tooltip } from "@/components/ui/tooltip";
+import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
+import { slugifySchoolName } from "@/components/slug";
 
 type Props = {
   degree: StatisticsEntry;
-  isSelected: boolean;
-  selectionFull: boolean;
-  onToggleCompare: (degree: StatisticsEntry) => void;
+  isSelected?: boolean;
+  selectionFull?: boolean;
+  onToggleCompare?: (degree: StatisticsEntry) => void;
 };
 
 function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: Props) {
@@ -28,6 +29,7 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
         <Stack>
           <HStack alignItems="center">
             <Badge
+              asChild
               bg={COLORS.accent}
               color={COLORS.text}
               fontWeight="semibold"
@@ -35,7 +37,9 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
               mr="auto"
               size={{ base: "sm", md: "lg" }}
             >
-              <HiLocationMarker /> {degree.korkeakoulu}
+              <a href={`/koulut/${slugifySchoolName(degree.korkeakoulu ?? "")}`}>
+                <HiLocationMarker /> {degree.korkeakoulu}
+              </a>
             </Badge>
           </HStack>
 
@@ -73,15 +77,17 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
                 </Text>
               </HStack>
             ) : null}
-            <Button
-              size={{ base: "2xs", md: "sm" }}
-              variant={isSelected ? "solid" : "surface"}
-              bg={COLORS.accent}
-              disabled={!isSelected && selectionFull}
-              onClick={() => onToggleCompare(degree)}
-            >
-              {isSelected ? "Valittu ✓" : "Vertaile"}
-            </Button>
+            {onToggleCompare ? (
+              <Button
+                size={{ base: "2xs", md: "sm" }}
+                variant={isSelected ? "solid" : "surface"}
+                bg={COLORS.accent}
+                disabled={!isSelected && selectionFull}
+                onClick={() => onToggleCompare(degree)}
+              >
+                {isSelected ? "Valittu ✓" : "Vertaile"}
+              </Button>
+            ) : null}
           </HStack>
         </Stack>
       </Card.Body>

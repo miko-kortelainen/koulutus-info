@@ -20,7 +20,7 @@ const ItemCheckmark = () => {
 import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
-import SchoolCard from "./components/SchoolCard";
+import SchoolCard from "@/components/SchoolCard";
 import { useMemo, useState } from "react";
 import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
