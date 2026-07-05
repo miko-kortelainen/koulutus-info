@@ -6,14 +6,14 @@ import { COLORS } from "@/theme";
 import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
 import { slugifySchoolName } from "@/components/slug";
 
-type Props = {
+interface DegreeStatsCardProps {
   degree: StatisticsEntry;
   isSelected?: boolean;
   selectionFull?: boolean;
   onToggleCompare?: (degree: StatisticsEntry) => void;
-};
+}
 
-function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: Props) {
+function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: DegreeStatsCardProps) {
   const hakijapaine = getHakijapaine(degree);
   const tier = hakijapaine != null ? getTier(hakijapaine) : null;
 
