@@ -1,45 +1,39 @@
-import { ChartRoot, ChartTooltip, ChartLegend, useChart } from "@chakra-ui/charts";
+import { ChartRoot, ChartTooltip, useChart } from "@chakra-ui/charts";
 import { Skeleton } from "@chakra-ui/react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Legend } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts";
 import type { TrendPoint } from "../hooks/useKoulutusalaTrends";
 
-const COLORS = ["blue.solid", "green.solid", "orange.solid", "purple.solid", "red.solid"] as const;
 const fmt = new Intl.NumberFormat("fi-FI");
 
 interface Props {
   chartData: TrendPoint[];
-  topByGrowth: string[];
   isLoading: boolean;
 }
 
-export default function KoulutusalaTrendChart({ chartData, topByGrowth, isLoading }: Props) {
+export default function KoulutusalaTrendChart({ chartData, isLoading }: Props) {
   const chart = useChart({
     data: chartData,
-    series: topByGrowth.map((name, i) => ({ name, color: COLORS[i] ?? "gray.solid" })),
+    series: [{ name: "total", color: "oklch(0.71 0.098 101)" }],
   });
 
-  if (isLoading) return <Skeleton height="280px" borderRadius="md" />;
+  if (isLoading) return <Skeleton height="150px" borderRadius="md" />;
 
   return (
-    <ChartRoot chart={chart} h="280px">
+    <ChartRoot chart={chart} h="150px">
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={chart.data} margin={{ top: 4, right: 8, bottom: 4, left: 0 }}>
+        <LineChart data={chart.data} margin={{ top: 10, right: 8, left: 16 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--chakra-colors-border-subtle)" />
           <XAxis dataKey="year" tick={{ fontSize: 12 }} />
-          <YAxis tickFormatter={(v) => fmt.format(v)} tick={{ fontSize: 11 }} width={58} />
+          <YAxis tickFormatter={(v) => fmt.format(v)} tick={{ fontSize: 11 }} width={32} />
           <Tooltip content={<ChartTooltip />} />
-          <Legend content={<ChartLegend />} />
-          {chart.series.map((s) => (
-            <Line
-              key={s.name as string}
-              type="monotone"
-              dataKey={s.name as string}
-              stroke={chart.color(s.color)}
-              strokeWidth={2}
-              dot={{ r: 4, fill: chart.color(s.color) }}
-              activeDot={{ r: 6 }}
-            />
-          ))}
+          <Line
+            type="linear"
+            dataKey="total"
+            stroke={chart.color("oklch(0.71 0.098 101)")}
+            strokeWidth={2}
+            dot={{ r: 2, fill: chart.color("oklch(0.71 0.098 101)") }}
+            activeDot={{ r: 6 }}
+          />
         </LineChart>
       </ResponsiveContainer>
     </ChartRoot>

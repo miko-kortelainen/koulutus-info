@@ -2,14 +2,11 @@ import { useQueries } from "@tanstack/react-query";
 import { statisticsQueryOptions } from "@/hooks/useStatisticsQuery";
 import { YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
-import { sumByKey } from "../components/sumByKey";
-
-const TOP_N = 5;
 
 const years = YEAR_OPTIONS.map((y) => y.value); // ["2026", "2025", "2024", "2023"]
 const chronological = [...years].reverse(); // ["2023", "2024", "2025", "2026"]
 
-export type TrendPoint = { year: string } & Record<string, string | number>;
+export type TrendPoint = { year: string; total: number };
 
 export function useKoulutusalaTrends(ssrData2026?: StatisticsResponse) {
   const results = useQueries({
@@ -18,34 +15,14 @@ export function useKoulutusalaTrends(ssrData2026?: StatisticsResponse) {
 
   const isLoading = results.some((r) => r.isPending && !r.data);
 
-  // Aggregate all years, keyed by year string
-  const aggByYear = new Map(
+  const totalByYear = new Map(
     years.map((year, i) => [
       year,
-      results[i]?.data ? sumByKey(results[i].data!, "koulutusalaTaso1") : new Map<string, number>(),
+      (results[i]?.data ?? []).reduce((sum, entry) => sum + entry.ensisijaisetHakijatLkm, 0),
     ]),
   );
 
-  // Union of all koulutusala names across all years
-  const allNames = new Set<string>();
-  for (const agg of aggByYear.values()) for (const k of agg.keys()) allNames.add(k);
+  const chartData: TrendPoint[] = chronological.map((year) => ({ year, total: totalByYear.get(year) ?? 0 }));
 
-  const latestAgg = aggByYear.get(years[0]) ?? new Map<string, number>();
-  const oldestAgg = aggByYear.get(years[years.length - 1]) ?? new Map<string, number>();
-
-  const topByGrowth = Array.from(allNames)
-    .map((name) => ({ name, change: (latestAgg.get(name) ?? 0) - (oldestAgg.get(name) ?? 0) }))
-    .sort((a, b) => Math.abs(b.change) - Math.abs(a.change))
-    .slice(0, TOP_N)
-    .map(({ name }) => name);
-
-  // Chart data includes all fields so either mode can slice from it
-  const chartData: TrendPoint[] = chronological.map((year) => {
-    const agg = aggByYear.get(year)!;
-    const entry: TrendPoint = { year };
-    for (const name of allNames) entry[name] = agg.get(name) ?? 0;
-    return entry;
-  });
-
-  return { chartData, topByGrowth, isLoading };
+  return { chartData, isLoading };
 }
