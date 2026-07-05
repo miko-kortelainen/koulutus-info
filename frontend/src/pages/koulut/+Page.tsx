@@ -1,7 +1,9 @@
-import { Card, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import type { SchoolListItem } from "./+data";
+import { COLORS } from "@/theme";
+import SchoolListCard from "./components/SchoolListCard";
 
 // ponytail: every school has statistics rows today; add a fallback section if stats-less schools ever appear
 const SECTIONS = [
@@ -17,37 +19,50 @@ export default function SchoolIndexPage() {
       <Heading as="h1" size="lg">
         Koulut
       </Heading>
-      <Text color="fg.muted">Syksyn 2026 yhteishaussa mukana olevat korkeakoulut.</Text>
+      <Text color="fg.muted" fontSize="sm">
+        Tilastovuoden 2026 yhteishaussa olevat koulut.
+      </Text>
       <Separator mt={2} />
     </Stack>
   );
 
+  const tabList = (
+    <Tabs.List>
+      {SECTIONS.map(({ heading }) => (
+        <Tabs.Trigger
+          key={heading}
+          value={heading}
+          flex={1}
+          justifyContent="center"
+          fontWeight="semibold"
+          letterSpacing="wide"
+        >
+          {heading}
+        </Tabs.Trigger>
+      ))}
+      <Tabs.Indicator bg={COLORS.surfaceMuted} />
+    </Tabs.List>
+  );
+
+  const tabContent = SECTIONS.map(({ sektori, heading }) => (
+    <Tabs.Content key={heading} value={heading}>
+      <Stack gap={4}>
+        {schools
+          .filter((s) => s.sektori === sektori)
+          .map((school) => (
+            <SchoolListCard key={school.slug} school={school} />
+          ))}
+      </Stack>
+    </Tabs.Content>
+  ));
+
   return (
     <PageContainer>
       {header}
-      {SECTIONS.map(({ sektori, heading }) => {
-        const items = schools.filter((s) => s.sektori === sektori);
-        if (items.length === 0) return null;
-        return (
-          <Stack key={heading} gap={4}>
-            <Heading as="h2" size="md">
-              {heading}
-            </Heading>
-            {items.map((school) => (
-              <Card.Root key={school.slug} size="sm" asChild _hover={{ borderColor: "fg.muted" }}>
-                <a href={`/koulut/${school.slug}`}>
-                  <Card.Body>
-                    <Text fontWeight="semibold">{school.name}</Text>
-                    <Text color="fg.muted" fontSize="sm">
-                      {school.hakukohteet} hakukohdetta · {school.ensisijaisetHakijat} ensisijaista hakijaa
-                    </Text>
-                  </Card.Body>
-                </a>
-              </Card.Root>
-            ))}
-          </Stack>
-        );
-      })}
+      <Tabs.Root defaultValue={SECTIONS[0].heading} size="sm">
+        {tabList}
+        {tabContent}
+      </Tabs.Root>
     </PageContainer>
   );
 }

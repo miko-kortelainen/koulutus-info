@@ -18,7 +18,7 @@ export default function SchoolCard({ toteutus }: Props) {
   return (
     <Card.Root size="md">
       <Card.Header>
-        <Text fontSize="lg" fontWeight="semibold" textWrap="balanced">
+        <Text fontSize="sm" fontWeight="semibold" textWrap="pretty">
           {degreeName}
         </Text>
       </Card.Header>
