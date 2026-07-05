@@ -13,6 +13,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
     aloituspaikatLkm: school.aloituspaikat,
     ensisijaisetHakijatLkm: school.ensisijaisetHakijat,
   });
+
   const tier = hakijapaine != null ? getTier(hakijapaine) : null;
 
   const availabilityBadge =

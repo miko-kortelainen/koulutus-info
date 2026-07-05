@@ -12,5 +12,7 @@ export const getTier = (ratio: number) => TIERS.find((t) => ratio < t.maxExclusi
 export const getHakijapaine = (entry: Pick<StatisticsEntry, "aloituspaikatLkm" | "ensisijaisetHakijatLkm">) =>
   entry.aloituspaikatLkm ? entry.ensisijaisetHakijatLkm / entry.aloituspaikatLkm : null;
 
+const numberFormat = new Intl.NumberFormat("fi-FI");
+
 // Vipunen masks counts under 5
-export const formatCount = (n: number) => (n < 5 ? "alle 5" : String(n));
+export const formatCount = (n: number) => (n < 5 ? "alle 5" : numberFormat.format(n));
