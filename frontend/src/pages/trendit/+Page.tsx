@@ -102,11 +102,11 @@ export default function TrendsPage() {
   );
 
   const applicantsByField = (
-    <TrendCard title="Suosituimmat koulutusalat" color="green.solid">
+    <TrendCard title="Suosituimmat koulutusalat" color="oklch(0.68 0.13 132)">
       <TopBarList
         data={trends.topKoulutusalat}
         isLoading={query.isPending}
-        color="green.solid"
+        color="oklch(0.68 0.13 132)"
         skeletonCount={10}
         compareData={compareYear ? compareTrends.topKoulutusalat : undefined}
         selectedYear={selectedYear}
@@ -116,11 +116,11 @@ export default function TrendsPage() {
   );
 
   const applicantsBySchool = (
-    <TrendCard title="Suosituimmat korkeakoulut" color="blue.solid">
+    <TrendCard title="Suosituimmat korkeakoulut" color="oklch(0.6 0.072 214)">
       <TopBarList
         data={trends.topKorkeakoulut}
         isLoading={query.isPending}
-        color="blue.solid"
+        color="oklch(0.6 0.072 214)"
         skeletonCount={10}
         compareData={compareYear ? compareTrends.topKorkeakoulut : undefined}
         selectedYear={selectedYear}
@@ -130,11 +130,11 @@ export default function TrendsPage() {
   );
 
   const applicantsBySector = (
-    <TrendCard title="Hakijat sektoreittain" color="purple.solid">
+    <TrendCard title="Hakijat sektoreittain" color="oklch(0.62 0.108 46)">
       <TopBarList
         data={trends.sektoriData}
         isLoading={query.isPending}
-        color="purple.solid"
+        color="oklch(0.62 0.108 46)"
         showPercent={false}
         compareData={compareYear ? compareTrends.sektoriData : undefined}
         selectedYear={selectedYear}
@@ -144,12 +144,8 @@ export default function TrendsPage() {
   );
 
   const applicantsByYear = (
-    <TrendCard title="Hakijamäärien trendit koulutusaloittain" color="teal.solid">
-      <KoulutusalaTrendChart
-        chartData={koulutusalaTrends.chartData}
-        topByGrowth={koulutusalaTrends.topByGrowth}
-        isLoading={koulutusalaTrends.isLoading}
-      />
+    <TrendCard title="Hakijamäärien trendi" color="oklch(0.71 0.098 101)">
+      <KoulutusalaTrendChart chartData={koulutusalaTrends.chartData} isLoading={koulutusalaTrends.isLoading} />
     </TrendCard>
   );
 
