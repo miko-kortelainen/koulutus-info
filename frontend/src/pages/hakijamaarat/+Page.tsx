@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
-import { Stack, Text, HStack, IconButton, ButtonGroup, Group, Alert, Heading, Box } from "@chakra-ui/react";
-import { Pagination } from "@chakra-ui/react";
+import { Stack, Text, Group, Alert, Heading, Box } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
+import Pagination from "@/components/Pagination";
 import { useData } from "vike-react/useData";
 import SortControl, { type SortOption } from "./components/SortControl";
 import DegreeStatCard from "@/components/DegreeStatsCard";
@@ -104,32 +104,13 @@ export default function StatsListPage() {
     </Stack>
   );
 
-  const pagination = (
-    <Pagination.Root count={filteredData.length} pageSize={PAGE_SIZE} page={page} onPageChange={(e) => setPage(e.page)}>
-      <HStack justify="center">
-        <ButtonGroup variant="ghost">
-          <Pagination.Items
-            render={(page) => (
-              <IconButton
-                variant={{ base: "ghost", _selected: "outline" }}
-                onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-              >
-                {page.value}
-              </IconButton>
-            )}
-          />
-        </ButtonGroup>
-      </HStack>
-    </Pagination.Root>
-  );
-
   return (
     <>
       <PageContainer>
         {header}
         {sortControls}
         {cardList}
-        {pagination}
+        <Pagination count={filteredData.length} page={page} pageSize={PAGE_SIZE} onPageChange={setPage} />
         {compareSelection.length > 0 ? <Box h="72px" /> : null}
       </PageContainer>
       <CompareBar selected={compareSelection} year={selectedYear} onRemove={toggleCompare} />

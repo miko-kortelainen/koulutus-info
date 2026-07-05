@@ -5,15 +5,16 @@ import type { TrendPoint } from "../hooks/useKoulutusalaTrends";
 
 const fmt = new Intl.NumberFormat("fi-FI");
 
-interface Props {
+interface KoulutusalaTrendChartProps {
   chartData: TrendPoint[];
   isLoading: boolean;
+  color: string;
 }
 
-export default function KoulutusalaTrendChart({ chartData, isLoading }: Props) {
+export default function KoulutusalaTrendChart({ chartData, isLoading, color }: KoulutusalaTrendChartProps) {
   const chart = useChart({
     data: chartData,
-    series: [{ name: "total", color: "oklch(0.71 0.098 101)" }],
+    series: [{ name: "total", color }],
   });
 
   if (isLoading) return <Skeleton height="150px" borderRadius="md" />;
@@ -29,9 +30,9 @@ export default function KoulutusalaTrendChart({ chartData, isLoading }: Props) {
           <Line
             type="linear"
             dataKey="total"
-            stroke={chart.color("oklch(0.71 0.098 101)")}
+            stroke={chart.color(color)}
             strokeWidth={2}
-            dot={{ r: 2, fill: chart.color("oklch(0.71 0.098 101)") }}
+            dot={{ r: 2, fill: chart.color(color) }}
             activeDot={{ r: 6 }}
           />
         </LineChart>

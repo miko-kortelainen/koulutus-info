@@ -11,6 +11,7 @@ import TopBarList from "./components/TopBarList";
 import KoulutusalaTrendChart from "./components/KoulutusalaTrendChart";
 import TrendCard from "./components/TrendCard";
 import type { StatisticsResponse } from "@/types.gen";
+import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
 
 export default function TrendsPage() {
   const ssrData = useData<StatisticsResponse>();
@@ -102,11 +103,11 @@ export default function TrendsPage() {
   );
 
   const applicantsByField = (
-    <TrendCard title="Suosituimmat koulutusalat" color="oklch(0.68 0.13 132)">
+    <TrendCard title="Suosituimmat koulutusalat" color={FIELD_COLOR}>
       <TopBarList
         data={trends.topKoulutusalat}
         isLoading={query.isPending}
-        color="oklch(0.68 0.13 132)"
+        color={FIELD_COLOR}
         skeletonCount={10}
         compareData={compareYear ? compareTrends.topKoulutusalat : undefined}
         selectedYear={selectedYear}
@@ -116,11 +117,11 @@ export default function TrendsPage() {
   );
 
   const applicantsBySchool = (
-    <TrendCard title="Suosituimmat korkeakoulut" color="oklch(0.6 0.072 214)">
+    <TrendCard title="Suosituimmat korkeakoulut" color={SCHOOL_COLOR}>
       <TopBarList
         data={trends.topKorkeakoulut}
         isLoading={query.isPending}
-        color="oklch(0.6 0.072 214)"
+        color={SCHOOL_COLOR}
         skeletonCount={10}
         compareData={compareYear ? compareTrends.topKorkeakoulut : undefined}
         selectedYear={selectedYear}
@@ -130,11 +131,11 @@ export default function TrendsPage() {
   );
 
   const applicantsBySector = (
-    <TrendCard title="Hakijat sektoreittain" color="oklch(0.62 0.108 46)">
+    <TrendCard title="Hakijat sektoreittain" color={SECTOR_COLOR}>
       <TopBarList
         data={trends.sektoriData}
         isLoading={query.isPending}
-        color="oklch(0.62 0.108 46)"
+        color={SECTOR_COLOR}
         showPercent={false}
         compareData={compareYear ? compareTrends.sektoriData : undefined}
         selectedYear={selectedYear}
@@ -144,8 +145,12 @@ export default function TrendsPage() {
   );
 
   const applicantsByYear = (
-    <TrendCard title="Hakijamäärien trendi" color="oklch(0.71 0.098 101)">
-      <KoulutusalaTrendChart chartData={koulutusalaTrends.chartData} isLoading={koulutusalaTrends.isLoading} />
+    <TrendCard title="Hakijamäärien trendi" color={TREND_COLOR}>
+      <KoulutusalaTrendChart
+        chartData={koulutusalaTrends.chartData}
+        isLoading={koulutusalaTrends.isLoading}
+        color={TREND_COLOR}
+      />
     </TrendCard>
   );
 

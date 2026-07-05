@@ -1,27 +1,12 @@
 import { useState } from "react";
-import { ButtonGroup, Heading, HStack, IconButton, Pagination, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import SchoolCard from "@/components/SchoolCard";
 import DegreeStatCard from "@/components/DegreeStatsCard";
+import Pagination from "@/components/Pagination";
 import type { SchoolPageData } from "./+data";
 import { COLORS } from "@/theme";
-
-const pagination = (count: number, page: number, pageSize: number, onPageChange: (page: number) => void) => (
-  <Pagination.Root count={count} pageSize={pageSize} page={page} onPageChange={(e) => onPageChange(e.page)}>
-    <HStack justify="center">
-      <ButtonGroup variant="ghost">
-        <Pagination.Items
-          render={(page) => (
-            <IconButton variant={{ base: "ghost", _selected: "outline" }} onClick={() => window.scrollTo(0, 0)}>
-              {page.value}
-            </IconButton>
-          )}
-        />
-      </ButtonGroup>
-    </HStack>
-  </Pagination.Root>
-);
 
 export default function SchoolPage() {
   const { schoolName, toteutukset, statistics } = useData<SchoolPageData>();
@@ -49,7 +34,7 @@ export default function SchoolPage() {
       {paginatedProgramList.map((t, index) => (
         <SchoolCard key={`${t.toteutusOid} ${index}`} toteutus={t} />
       ))}
-      {pagination(toteutukset.length, programPage, pageSize, setProgramPage)}
+      <Pagination count={toteutukset.length} page={programPage} pageSize={pageSize} onPageChange={setProgramPage} />
     </Stack>
   );
 
@@ -59,7 +44,7 @@ export default function SchoolPage() {
       {paginatedStatsList.map((d, index) => (
         <DegreeStatCard degree={d} key={`${d.kooditHakukohde} ${index}`} />
       ))}
-      {pagination(statistics.length, statsPage, pageSize, setStatsPage)}
+      <Pagination count={statistics.length} page={statsPage} pageSize={pageSize} onPageChange={setStatsPage} />
     </Stack>
   );
 

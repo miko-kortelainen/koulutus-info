@@ -1,11 +1,7 @@
 import {
-  ButtonGroup,
   Checkmark,
   Heading,
-  HStack,
-  IconButton,
   Listbox,
-  Pagination,
   Separator,
   Stack,
   Text,
@@ -18,6 +14,7 @@ const ItemCheckmark = () => {
   return <Checkmark filled size="sm" checked={selected} disabled={disabled} />;
 };
 import PageContainer from "@/layout/PageContainer";
+import Pagination from "@/components/Pagination";
 import { useData } from "vike-react/useData";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 import SchoolCard from "@/components/SchoolCard";
@@ -101,25 +98,6 @@ export default function SchoolsListPage() {
     </Stack>
   );
 
-  const pagination = (
-    <Pagination.Root count={filteredData.length} pageSize={PAGE_SIZE} page={page} onPageChange={(e) => setPage(e.page)}>
-      <HStack justify="center">
-        <ButtonGroup variant="ghost">
-          <Pagination.Items
-            render={(page) => (
-              <IconButton
-                variant={{ base: "ghost", _selected: "outline" }}
-                onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-              >
-                {page.value}
-              </IconButton>
-            )}
-          />
-        </ButtonGroup>
-      </HStack>
-    </Pagination.Root>
-  );
-
   return (
     <PageContainer>
       {header}
@@ -132,7 +110,7 @@ export default function SchoolsListPage() {
           {query.isError ? <Text>Virhe</Text> : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {cardList}
-          {pagination}
+          <Pagination count={filteredData.length} page={page} pageSize={PAGE_SIZE} onPageChange={setPage} />
         </Stack>
       </Stack>
     </PageContainer>

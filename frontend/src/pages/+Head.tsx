@@ -3,7 +3,7 @@ import favicon from "../../public/favicon.png";
 export function Head() {
   return (
     <>
-      <link rel="icon" href={favicon} type="image/svg+xml" />
+      <link rel="icon" href={favicon} type="image/png" />
       <meta
         name="description"
         content="Tutki korkeakoulujen yhteishaun hakijamääriä, trendejä sekä koulutustarjontaa."
