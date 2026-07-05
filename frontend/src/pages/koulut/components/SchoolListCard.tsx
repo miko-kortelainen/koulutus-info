@@ -17,7 +17,13 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
 
   const availabilityBadge =
     school.koulutuksia > 0 ? (
-      <Badge bg={COLORS.accent} color={COLORS.text} size="xs" fontWeight="semibold" width="fit-content">
+      <Badge
+        bg={COLORS.accent}
+        color={COLORS.text}
+        size={{ base: "xs", md: "md" }}
+        fontWeight="semibold"
+        width="fit-content"
+      >
         Mukana syksyn yhteishaussa!
       </Badge>
     ) : null;
@@ -26,7 +32,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
     <HStack gap={2} flex={1} width="100%">
       <Group flex={1}>
         <HiOutlineAcademicCap color={COLORS.accent} />
-        <Text fontWeight="semibold" fontSize="xs" letterSpacing="wide">
+        <Text fontWeight="semibold" fontSize={{ base: "xs", md: "md" }} letterSpacing="wide">
           {school.name}
         </Text>
       </Group>
@@ -35,17 +41,17 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
   );
 
   const hakijaStats = (
-    <Text color="fg.muted" fontSize="xs" mt={1}>
+    <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }} mt={1}>
       {formatCount(school.kaikkiHakijat)} hakijaa · {formatCount(school.ensisijaisetHakijat)} ensisijaista hakijaa
     </Text>
   );
 
   const tierBadge = tier ? (
     <HStack alignItems="center" gap={1} mt={1}>
-      <Badge size="xs" bg={tier.bg} color={tier.color} fontWeight="semibold">
+      <Badge size={{ base: "xs", md: "md" }} bg={tier.bg} color={tier.color} fontWeight="semibold">
         {tier.label}
       </Badge>
-      <Text color="fg.muted" fontSize="xs">
+      <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }}>
         hakijapaine
       </Text>
     </HStack>
