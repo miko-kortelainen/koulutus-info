@@ -7,7 +7,10 @@ import (
 )
 
 // MergeRecords collapses per-valintatapajono Vipunen rows into one record per
-// hakukohde, summing counts and taking the first non-nil score bounds.
+// hakukohde. Applicant counts are per selection queue and overlap (the same
+// applicant is evaluated in multiple queues at once), so we take the max
+// across queues rather than summing them. AloituspaikatLkm is always
+// reported on a single row per hakukohde, so summing it is safe.
 func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 	grouped := make(map[string]*models.StatisticsEntry)
 
@@ -23,8 +26,8 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 			grouped[r.KooditHakukohde] = m
 		}
 		m.AloituspaikatLkm += r.AloituspaikatLkm
-		m.KaikkiHakijatLkm += r.KaikkiHakijatLkm
-		m.EnsisijaisetHakijatLkm += r.EnsisijaisetHakijatLkm
+		m.KaikkiHakijatLkm = max(m.KaikkiHakijatLkm, r.KaikkiHakijatLkm)
+		m.EnsisijaisetHakijatLkm = max(m.EnsisijaisetHakijatLkm, r.EnsisijaisetHakijatLkm)
 		if m.AlinHyvaksyttyPistemaara == nil {
 			m.AlinHyvaksyttyPistemaara = r.AlinHyvaksyttyPistemaara
 		}
