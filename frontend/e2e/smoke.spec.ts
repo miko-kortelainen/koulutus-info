@@ -24,13 +24,13 @@ test("nav links navigate to all pages", async ({ page }) => {
 
   // drawer closes on link click, so reopen before each navigation
   for (const [label, url] of [
-    ["hakijamäärät", "/hakijamaarat"],
-    ["koulutukset", "/koulutukset"],
-    ["koulut", "/koulut"],
-    ["trendit", "/trendit"],
-    ["hukassa?", "/hukassa"],
-    ["palaute", "/palaute"],
-    ["ukk", "/ukk"],
+    ["hakijamäärät", "/hakijamaarat/"],
+    ["koulutukset", "/koulutukset/"],
+    ["koulut", "/koulut/"],
+    ["trendit", "/trendit/"],
+    ["hukassa?", "/hukassa/"],
+    ["palaute", "/palaute/"],
+    ["ukk", "/ukk/"],
   ] as const) {
     await openNavDrawer(page);
     // anchored regex: nav link names are "label + description" concatenated, and short labels
@@ -158,7 +158,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
 
   await page.getByRole("link", { name: "Vertaile" }).click();
   // vuosi=2026 matches the hardcoded default year fallback in pages/vertaile/+Page.tsx — bump both together
-  await expect(page).toHaveURL(/\/vertaile\?a=.+&b=.+&vuosi=2026/);
+  await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026/);
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
   await expect(page.getByText("Kaikki hakijat")).toHaveCount(2);

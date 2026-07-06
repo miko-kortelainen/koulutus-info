@@ -13,37 +13,37 @@ import {
 
 const links = [
   {
-    href: "/hakijamaarat",
+    href: "/hakijamaarat/",
     label: "hakijamäärät",
     description: "Katso hakijamäärät koulutuksittain",
     icon: HiOutlineChartBar,
   },
   {
-    href: "/koulutukset",
+    href: "/koulutukset/",
     label: "koulutukset",
     description: "Selaa yhteishaussa olevia koulutuksia",
     icon: HiOutlineAcademicCap,
   },
   {
-    href: "/koulut",
+    href: "/koulut/",
     label: "koulut",
     description: "Selaa korkeakouluja ja niiden tilastoja",
     icon: HiOutlineLibrary,
   },
   {
-    href: "/trendit",
+    href: "/trendit/",
     label: "trendit",
     description: "Vertaa alojen ja koulujen hakijamääriä",
     icon: HiOutlineTrendingUp,
   },
   {
-    href: "/hukassa",
+    href: "/hukassa/",
     label: "hukassa?",
     description: "Apua koulutusvalinnan tekemiseen",
     icon: HiOutlineEmojiSad,
   },
-  { href: "/ukk", label: "ukk", description: "Usein kysytyt kysymykset", icon: HiOutlineQuestionMarkCircle },
-  { href: "/palaute", label: "palaute", description: "Anna palautetta tai kehitysehdotus", icon: HiOutlineChatAlt2 },
+  { href: "/ukk/", label: "ukk", description: "Usein kysytyt kysymykset", icon: HiOutlineQuestionMarkCircle },
+  { href: "/palaute/", label: "palaute", description: "Anna palautetta tai kehitysehdotus", icon: HiOutlineChatAlt2 },
 ];
 
 export default function Header() {

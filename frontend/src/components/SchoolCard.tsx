@@ -32,7 +32,7 @@ export default function SchoolCard({ toteutus }: Props) {
             letterSpacing="wide"
             size={{ base: "sm", md: "lg" }}
           >
-            <a href={`/koulut/${slugifySchoolName(schoolName)}`}>
+            <a href={`/koulut/${slugifySchoolName(schoolName)}/`}>
               <HiLocationMarker /> {schoolName}
             </a>
           </Badge>
