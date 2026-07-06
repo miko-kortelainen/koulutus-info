@@ -9,6 +9,7 @@ import {
   HiMenu,
   HiOutlineEmojiSad,
   HiOutlineLibrary,
+  HiOutlineHeart,
 } from "react-icons/hi";
 
 const links = [
@@ -29,6 +30,12 @@ const links = [
     label: "koulut",
     description: "Selaa korkeakouluja ja niiden tilastoja",
     icon: HiOutlineLibrary,
+  },
+  {
+    href: "/tallennetut/",
+    label: "tallennetut",
+    description: "Katso tallentamasi koulutukset",
+    icon: HiOutlineHeart,
   },
   {
     href: "/trendit/",
