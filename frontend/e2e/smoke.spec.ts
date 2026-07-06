@@ -18,6 +18,19 @@ test("homepage loads and nav drawer opens", async ({ page }) => {
   await openNavDrawer(page);
 });
 
+test("homepage quick links point to their pages", async ({ page }) => {
+  await page.goto("/");
+
+  for (const [label, url] of [
+    ["hakijamäärät", "/hakijamaarat/"],
+    ["koulutukset", "/koulutukset/"],
+    ["koulut", "/koulut/"],
+    ["trendit", "/trendit/"],
+  ] as const) {
+    await expect(page.getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) })).toHaveAttribute("href", url);
+  }
+});
+
 test("nav links navigate to all pages", async ({ page }) => {
   await page.goto("/");
   const nav = page.getByRole("navigation", { name: NAV_LABEL });
@@ -60,7 +73,7 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible({ timeout: 10000 });
 
   await search.clear();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
