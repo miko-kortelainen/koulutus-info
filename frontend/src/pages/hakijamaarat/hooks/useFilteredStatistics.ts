@@ -15,13 +15,26 @@ export default function useFilteredStatistics(
   data: StatisticsResponse | undefined,
   searchTerm: string,
   sortOrder: SortOption,
+  selectedSektorit: Set<string>,
+  selectedKunnat: Set<string>,
+  selectedSchools: Set<string>,
 ) {
   const items = useMemo(() => data ?? [], [data]);
-  const fuse = useMemo(() => new Fuse(items, FUSE_OPTIONS), [items]);
+
+  const byFilters = useMemo(() => {
+    return items.filter(
+      (d) =>
+        (!selectedSektorit.size || selectedSektorit.has(d.sektori ?? "")) &&
+        (!selectedKunnat.size || selectedKunnat.has(d.kuntaHakukohde ?? "")) &&
+        (!selectedSchools.size || selectedSchools.has(d.korkeakoulu ?? "")),
+    );
+  }, [items, selectedSektorit, selectedKunnat, selectedSchools]);
+
+  const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
 
   return useMemo(() => {
     const normalizedSearch = searchTerm.trim();
-    const filtered = normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : items;
+    const filtered = normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : byFilters;
 
     return [...filtered].sort((a, b) => {
       switch (sortOrder) {
@@ -39,5 +52,5 @@ export default function useFilteredStatistics(
           return a.hakukohde.localeCompare(b.hakukohde);
       }
     });
-  }, [fuse, items, searchTerm, sortOrder]);
+  }, [fuse, byFilters, searchTerm, sortOrder]);
 }
