@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Badge, Card, HStack, Heading, Separator, Stack, Stat } from "@chakra-ui/react";
 import type { StatisticsEntry } from "@/types.gen";
-import { formatCount, getTier } from "@/components/hakijapaineTier";
+import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
 import { HiOutlineArrowCircleDown, HiOutlineArrowCircleUp } from "react-icons/hi";
 
 interface ComparisonTableProps {
@@ -10,8 +10,6 @@ interface ComparisonTableProps {
 }
 
 type Trend = "up" | "down" | undefined;
-
-const hakijapaine = (e: StatisticsEntry) => (e.aloituspaikatLkm ? e.ensisijaisetHakijatLkm / e.aloituspaikatLkm : null);
 
 const paineTrend = (value: number | null, other: number | null): Trend =>
   value == null || other == null || value === other ? undefined : value > other ? "up" : "down";
@@ -82,8 +80,8 @@ function paineBadge(paine: number | null) {
 }
 
 export default function ComparisonTable({ a, b }: ComparisonTableProps) {
-  const paineA = hakijapaine(a);
-  const paineB = hakijapaine(b);
+  const paineA = getHakijapaine(a);
+  const paineB = getHakijapaine(b);
 
   return (
     <Stack gap={4}>

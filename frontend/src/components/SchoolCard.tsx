@@ -1,7 +1,8 @@
 import { Badge, Card, Link, Text, VStack } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
-import { type ToteutusEntry } from "../../../types.gen";
-import { COLORS } from "../../../theme";
+import { type ToteutusEntry } from "@/types.gen";
+import { COLORS } from "@/theme";
+import { slugifySchoolName } from "@/components/slug";
 
 type Props = {
   toteutus: ToteutusEntry;
@@ -17,20 +18,23 @@ export default function SchoolCard({ toteutus }: Props) {
   return (
     <Card.Root size="md">
       <Card.Header>
-        <Text fontSize="lg" fontWeight="semibold" textWrap="balanced">
+        <Text fontSize="sm" fontWeight="semibold" textWrap="pretty">
           {degreeName}
         </Text>
       </Card.Header>
       <Card.Body>
         <VStack alignItems="flex-start">
           <Badge
+            asChild
             bg={COLORS.accent}
             color={COLORS.text}
             fontWeight="semibold"
-            letterSpacing={"wide"}
+            letterSpacing="wide"
             size={{ base: "sm", md: "lg" }}
           >
-            <HiLocationMarker /> {schoolName}
+            <a href={`/koulut/${slugifySchoolName(schoolName)}`}>
+              <HiLocationMarker /> {schoolName}
+            </a>
           </Badge>
 
           {toteutus.toteutusOid ? (

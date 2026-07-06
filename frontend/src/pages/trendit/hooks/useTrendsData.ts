@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import type { StatisticsEntry } from "@/types.gen";
+import { sumByKey, type SumKey } from "../components/sumByKey";
 
 export interface TrendsData {
   topKoulutusalat: { name: string; value: number }[];
@@ -11,14 +12,8 @@ export default function useTrendsData(data: StatisticsEntry[] | undefined, limit
   return useMemo(() => {
     const items = data ?? [];
 
-    const aggregate = (key: keyof StatisticsEntry, topN?: number) => {
-      const map = new Map<string, number>();
-      for (const item of items) {
-        const k = item[key] as string | undefined;
-        if (!k) continue;
-        map.set(k, (map.get(k) ?? 0) + item.ensisijaisetHakijatLkm);
-      }
-      const sorted = Array.from(map.entries())
+    const aggregate = (key: SumKey, topN?: number) => {
+      const sorted = Array.from(sumByKey(items, key).entries())
         .map(([name, value]) => ({ name, value }))
         .sort((a, b) => b.value - a.value);
       return topN ? sorted.slice(0, topN) : sorted;
