@@ -32,7 +32,7 @@ export default function SuggestionCard({ result }: Props) {
             <Badge
               bg={COLORS.accent}
               fontWeight="semibold"
-              letterSpacing={"wide"}
+              letterSpacing="wide"
               mr="auto"
               size={{ base: "sm", md: "lg" }}
             >

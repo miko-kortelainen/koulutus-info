@@ -82,33 +82,36 @@ const QUESTIONS = [
   },
 ];
 
+const header = (
+  <Heading as="h1" size="lg">
+    Usein kysytyt kysymykset
+  </Heading>
+);
+
+const questionList = QUESTIONS.map(({ question, answer }) => (
+  <Accordion.Item key={question} value={question}>
+    <Accordion.ItemTrigger>
+      <Heading size="md" flex="1" textAlign="start">
+        {question}
+      </Heading>
+      <Accordion.ItemIndicator />
+    </Accordion.ItemTrigger>
+    <Accordion.ItemContent>
+      <Accordion.ItemBody>
+        <Text textWrap="pretty" color="fg.muted" fontSize={{ base: "sm", md: "md" }}>
+          {answer}
+        </Text>
+      </Accordion.ItemBody>
+    </Accordion.ItemContent>
+  </Accordion.Item>
+));
+
 export default function UKKPage() {
   return (
     <PageContainer>
+      {header}
       <Stack gap={6} py={8}>
-        <Heading as="h1" size="2xl">
-          Usein kysytyt kysymykset
-        </Heading>
-
-        <Accordion.Root collapsible>
-          {QUESTIONS.map(({ question, answer }) => (
-            <Accordion.Item key={question} value={question}>
-              <Accordion.ItemTrigger>
-                <Heading size="md" flex="1" textAlign="start">
-                  {question}
-                </Heading>
-                <Accordion.ItemIndicator />
-              </Accordion.ItemTrigger>
-              <Accordion.ItemContent>
-                <Accordion.ItemBody>
-                  <Text textWrap="pretty" color="fg.muted" fontSize={{ base: "sm", md: "md" }}>
-                    {answer}
-                  </Text>
-                </Accordion.ItemBody>
-              </Accordion.ItemContent>
-            </Accordion.Item>
-          ))}
-        </Accordion.Root>
+        <Accordion.Root collapsible>{questionList}</Accordion.Root>
       </Stack>
     </PageContainer>
   );

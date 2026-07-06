@@ -2,8 +2,8 @@
   {
     "nimi": {
       "fi": "Agrologi (AMK)",
-      "en": "Bachelor of Natural Resources (UAS), Agronomist",
-      "sv": "Agrolog (YH)"
+      "sv": "Agrolog (YH)",
+      "en": "Bachelor of Natural Resources (UAS), Agronomist"
     },
     "toteutukset": [
       {
@@ -13,8 +13,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       }
     ]
@@ -22,8 +22,8 @@
   {
     "nimi": {
       "fi": "Artenomi (AMK)",
-      "en": "Bachelor of Culture and Arts (UAS), Crafts and Design",
-      "sv": "Artenom (YH)"
+      "sv": "Artenom (YH)",
+      "en": "Bachelor of Culture and Arts (UAS), Crafts and Design"
     },
     "toteutukset": [
       {
@@ -33,8 +33,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       }
     ]
@@ -42,8 +42,8 @@
   {
     "nimi": {
       "fi": "Bioanalyytikko (AMK): laboratoriohoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Biomedical Laboratory Technologist (Polytechnic)",
-      "sv": "Bioanalytiker (YH): laboratorieskötare (YH)"
+      "sv": "Bioanalytiker (YH): laboratorieskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Biomedical Laboratory Technologist (Polytechnic)"
     },
     "toteutukset": [
       {
@@ -53,8 +53,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -62,8 +62,8 @@
   {
     "nimi": {
       "fi": "Geronomi (ylempi AMK)",
-      "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse",
-      "sv": "Geronom (högre YH)"
+      "sv": "Geronom (högre YH)",
+      "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse"
     },
     "toteutukset": [
       {
@@ -73,8 +73,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       }
     ]
@@ -82,8 +82,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -93,8 +93,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -102,8 +102,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -113,8 +113,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       }
     ]
@@ -122,8 +122,8 @@
   {
     "nimi": {
       "fi": "Geronomi (ylempi AMK)",
-      "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse",
-      "sv": "Geronom (högre YH)"
+      "sv": "Geronom (högre YH)",
+      "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse"
     },
     "toteutukset": [
       {
@@ -133,8 +133,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       }
     ]
@@ -142,8 +142,8 @@
   {
     "nimi": {
       "fi": "Ensihoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Emergency Nurse",
-      "sv": "Förstavårdare (YH)"
+      "sv": "Förstavårdare (YH)",
+      "en": "Bachelor of Health Care (UAS), Emergency Nurse"
     },
     "toteutukset": [
       {
@@ -153,8 +153,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -164,8 +164,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -175,8 +175,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -186,8 +186,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -197,8 +197,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -206,8 +206,8 @@
   {
     "nimi": {
       "fi": "Estenomi (ylempi AMK)",
-      "en": "Master of Beauty and Cosmetics (UAS)",
-      "sv": "Estenom (högre YH)"
+      "sv": "Estenom (högre YH)",
+      "en": "Master of Beauty and Cosmetics (UAS)"
     },
     "toteutukset": [
       {
@@ -217,8 +217,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -226,8 +226,8 @@
   {
     "nimi": {
       "fi": "Fysioterapeutti (AMK)",
-      "en": "Bachelor of Health Care (UAS), Physiotherapist",
-      "sv": "Fysioterapeut (YH)"
+      "sv": "Fysioterapeut (YH)",
+      "en": "Bachelor of Health Care (UAS), Physiotherapist"
     },
     "toteutukset": [
       {
@@ -237,8 +237,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -248,8 +248,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -259,8 +259,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -270,8 +270,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -281,8 +281,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -292,8 +292,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences",
-          "sv": "Karelia-ammattikorkeakoulu"
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         }
       },
       {
@@ -303,8 +303,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -314,8 +314,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -325,8 +325,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -336,8 +336,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -345,8 +345,8 @@
   {
     "nimi": {
       "fi": "Geronomi (AMK)",
-      "en": "Bachelor of Social Services and Health Care (UAS), Geriatry Nurse",
-      "sv": "Geronom (YH)"
+      "sv": "Geronom (YH)",
+      "en": "Bachelor of Social Services and Health Care (UAS), Geriatry Nurse"
     },
     "toteutukset": [
       {
@@ -356,8 +356,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -365,8 +365,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), ympäristötekniikka",
-      "en": "Master of Engineering (UAS), Environmental Engineering",
-      "sv": "Ingenjör (högre YH), miljöteknik"
+      "sv": "Ingenjör (högre YH), miljöteknik",
+      "en": "Master of Engineering (UAS), Environmental Engineering"
     },
     "toteutukset": [
       {
@@ -376,8 +376,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       }
     ]
@@ -385,8 +385,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -396,8 +396,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -405,8 +405,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -416,8 +416,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       }
     ]
@@ -425,8 +425,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), sähkötekniikka",
-      "en": "Bachelor of Engineering (UAS), Electrical Engineering",
-      "sv": "Ingenjör (YH), elektroteknik"
+      "sv": "Ingenjör (YH), elektroteknik",
+      "en": "Bachelor of Engineering (UAS), Electrical Engineering"
     },
     "toteutukset": [
       {
@@ -436,8 +436,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       }
     ]
@@ -445,8 +445,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), bio- ja elintarviketekniikka",
-      "en": "Bachelor of Engineering (UAS), Biotechnology, Food Industry",
-      "sv": "Ingenjör (YH), bio- och livsmedelsteknik"
+      "sv": "Ingenjör (YH), bio- och livsmedelsteknik",
+      "en": "Bachelor of Engineering (UAS), Biotechnology, Food Industry"
     },
     "toteutukset": [
       {
@@ -456,8 +456,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       }
     ]
@@ -465,8 +465,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), kemia",
-      "en": "Bachelor of Engineering (UAS), Chemistry",
-      "sv": "Ingenjör (YH), kemi"
+      "sv": "Ingenjör (YH), kemi",
+      "en": "Bachelor of Engineering (UAS), Chemistry"
     },
     "toteutukset": [
       {
@@ -476,8 +476,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -485,8 +485,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK),Energia- ja Ympäristötekniikka",
-      "en": "Bachelor of Engineering (UAS), Energy and Enviromental Engineering",
-      "sv": "Ingenjör (YH), Energi- och Miljöteknik"
+      "sv": "Ingenjör (YH), Energi- och Miljöteknik",
+      "en": "Bachelor of Engineering (UAS), Energy and Enviromental Engineering"
     },
     "toteutukset": [
       {
@@ -496,8 +496,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -507,8 +507,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -518,8 +518,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       }
     ]
@@ -527,8 +527,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), konetekniikka",
-      "en": "Bachelor of Engineering (UAS), Mechanical Engineering",
-      "sv": "Ingenjör (YH), maskinteknik"
+      "sv": "Ingenjör (YH), maskinteknik",
+      "en": "Bachelor of Engineering (UAS), Mechanical Engineering"
     },
     "toteutukset": [
       {
@@ -538,8 +538,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -549,8 +549,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       },
       {
@@ -560,8 +560,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -571,8 +571,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -582,8 +582,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -594,8 +594,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences",
-          "sv": "Karelia-ammattikorkeakoulu"
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         }
       },
       {
@@ -605,8 +605,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -616,8 +616,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -627,8 +627,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       }
     ]
@@ -636,8 +636,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), logistiikka",
-      "en": "Bachelor of Engineering (UAS), Logistics",
-      "sv": "Ingenjör (YH), logistik"
+      "sv": "Ingenjör (YH), logistik",
+      "en": "Bachelor of Engineering (UAS), Logistics"
     },
     "toteutukset": [
       {
@@ -647,8 +647,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -658,8 +658,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -667,8 +667,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), merenkulku",
-      "en": "Bachelor of Engineering (UAS), Navigation Technology",
-      "sv": "Ingenjör (YH), sjöfart"
+      "sv": "Ingenjör (YH), sjöfart",
+      "en": "Bachelor of Engineering (UAS), Navigation Technology"
     },
     "toteutukset": [
       {
@@ -678,8 +678,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -687,8 +687,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), kemia",
-      "en": "Bachelor of Engineering (UAS), Chemistry",
-      "sv": "Ingenjör (YH), kemi"
+      "sv": "Ingenjör (YH), kemi",
+      "en": "Bachelor of Engineering (UAS), Chemistry"
     },
     "toteutukset": [
       {
@@ -698,8 +698,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -709,8 +709,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -720,8 +720,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -731,8 +731,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -742,8 +742,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -751,8 +751,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), rakennustekniikka ja yhdyskuntatekniikka",
-      "en": "Bachelor of Engineering (UAS), Building Construction, Community Development",
-      "sv": "Ingenjör (YH), byggnadsteknik och samhällsteknik"
+      "sv": "Ingenjör (YH), byggnadsteknik och samhällsteknik",
+      "en": "Bachelor of Engineering (UAS), Building Construction, Community Development"
     },
     "toteutukset": [
       {
@@ -762,8 +762,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -773,8 +773,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -784,8 +784,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -795,8 +795,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -806,8 +806,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -815,8 +815,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), sähkötekniikka",
-      "en": "Bachelor of Engineering (UAS), Electrical Engineering",
-      "sv": "Ingenjör (YH), elektroteknik"
+      "sv": "Ingenjör (YH), elektroteknik",
+      "en": "Bachelor of Engineering (UAS), Electrical Engineering"
     },
     "toteutukset": [
       {
@@ -826,8 +826,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -837,8 +837,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -848,8 +848,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -859,8 +859,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -870,8 +870,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -881,8 +881,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -892,8 +892,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -903,8 +903,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       }
     ]
@@ -912,8 +912,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), LVI-tekniikka",
-      "en": "Bachelor of Engineering (UAS), Heating and Ventilation Engineering",
-      "sv": "Ingenjör (YH), VVS-teknik"
+      "sv": "Ingenjör (YH), VVS-teknik",
+      "en": "Bachelor of Engineering (UAS), Heating and Ventilation Engineering"
     },
     "toteutukset": [
       {
@@ -923,8 +923,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -934,8 +934,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -943,8 +943,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), tietotekniikka",
-      "en": "BEng (UAS), IT",
-      "sv": "Ingenjör (YH), datateknik"
+      "sv": "Ingenjör (YH), datateknik",
+      "en": "BEng (UAS), IT"
     },
     "toteutukset": [
       {
@@ -954,8 +954,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -965,8 +965,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -976,8 +976,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -987,8 +987,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -998,8 +998,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -1009,8 +1009,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -1020,8 +1020,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -1031,8 +1031,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -1042,8 +1042,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -1053,8 +1053,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -1064,8 +1064,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1073,8 +1073,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), tuotantotalous",
-      "en": "Bachelor of Engineering (UAS), Industrial Management",
-      "sv": "Ingenjör (YH), produktionsekonomi"
+      "sv": "Ingenjör (YH), produktionsekonomi",
+      "en": "Bachelor of Engineering (UAS), Industrial Management"
     },
     "toteutukset": [
       {
@@ -1084,8 +1084,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -1093,8 +1093,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), ympäristötekniikka",
-      "en": "Bachelor of Engineering (UAS), Environmental Engineering",
-      "sv": "Ingenjör (YH), miljöteknik"
+      "sv": "Ingenjör (YH), miljöteknik",
+      "en": "Bachelor of Engineering (UAS), Environmental Engineering"
     },
     "toteutukset": [
       {
@@ -1104,8 +1104,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1113,8 +1113,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), tietotekniikka",
-      "en": "Master of Engineering (UAS), Information Technology",
-      "sv": "Ingenjör (högre YH), datateknik"
+      "sv": "Ingenjör (högre YH), datateknik",
+      "en": "Master of Engineering (UAS), Information Technology"
     },
     "toteutukset": [
       {
@@ -1124,8 +1124,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -1133,8 +1133,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), automaatiotekniikka",
-      "en": "Master of Engineering (UAS), Automation Engineering",
-      "sv": "Ingenjör (högre YH), automationsteknik"
+      "sv": "Ingenjör (högre YH), automationsteknik",
+      "en": "Master of Engineering (UAS), Automation Engineering"
     },
     "toteutukset": [
       {
@@ -1144,8 +1144,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       }
     ]
@@ -1153,8 +1153,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
-      "en": "Master of Engineering (UAS), Other or Unknown Technology",
-      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
     "toteutukset": [
       {
@@ -1164,8 +1164,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       },
       {
@@ -1175,8 +1175,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -1186,48 +1186,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kajaanin ammattikorkeakoulu",
-          "en": "Kajaani University of Applied Sciences",
-          "sv": "Kajaanin ammattikorkeakoulu"
-        }
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Insinööri (ylempi AMK), energia- ja ympäristötekn.",
-      "en": "Master of Engineering (UAS), Energy and Enviromental Engineering",
-      "sv": "Ingenjör (högre YH), energi- och miljöteknik"
-    },
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000036579",
-        "toteutusNimi": {
-          "fi": " Insinööri (ylempi AMK), kestävä energia, syksyn 2026 haku"
-        },
-        "oppilaitosNimi": {
-          "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
-        }
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Insinööri (ylempi AMK), tietotekniikka",
-      "en": "Master of Engineering (UAS), Information Technology",
-      "sv": "Ingenjör (högre YH), datateknik"
-    },
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000008403",
-        "toteutusNimi": {
-          "fi": "Insinööri (ylempi AMK), kyberturvallisuus"
-        },
-        "oppilaitosNimi": {
-          "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
         }
       }
     ]
@@ -1235,8 +1195,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
-      "en": "Master of Engineering (UAS), Other or Unknown Technology",
-      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
     "toteutukset": [
       {
@@ -1246,8 +1206,48 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), energia- ja ympäristötekn.",
+      "sv": "Ingenjör (högre YH), energi- och miljöteknik",
+      "en": "Master of Engineering (UAS), Energy and Enviromental Engineering"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036579",
+        "toteutusNimi": {
+          "fi": " Insinööri (ylempi AMK), kestävä energia, syksyn 2026 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        }
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (ylempi AMK), tietotekniikka",
+      "sv": "Ingenjör (högre YH), datateknik",
+      "en": "Master of Engineering (UAS), Information Technology"
+    },
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008403",
+        "toteutusNimi": {
+          "fi": "Insinööri (ylempi AMK), kyberturvallisuus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun ammattikorkeakoulu",
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -1255,8 +1255,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), projekti- ja myyntijohtaminen",
-      "en": "Master of Engineering (UAS), project and sales management",
-      "sv": "Ingenjör (högre yh), projekt- och säljledning"
+      "sv": "Ingenjör (högre yh), projekt- och säljledning",
+      "en": "Master of Engineering (UAS), project and sales management"
     },
     "toteutukset": [
       {
@@ -1266,8 +1266,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -1275,8 +1275,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), rakennustekniikka ja yhdyskuntatekniikka",
-      "en": "Master of Engineering (UAS), Building Construction, Community Development",
-      "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik"
+      "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik",
+      "en": "Master of Engineering (UAS), Building Construction, Community Development"
     },
     "toteutukset": [
       {
@@ -1286,8 +1286,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -1295,8 +1295,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), tietotekniikka",
-      "en": "Master of Engineering (UAS), Information Technology",
-      "sv": "Ingenjör (högre YH), datateknik"
+      "sv": "Ingenjör (högre YH), datateknik",
+      "en": "Master of Engineering (UAS), Information Technology"
     },
     "toteutukset": [
       {
@@ -1306,8 +1306,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       }
     ]
@@ -1315,8 +1315,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
-      "en": "Master of Engineering (UAS), Other or Unknown Technology",
-      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
     "toteutukset": [
       {
@@ -1326,8 +1326,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -1335,8 +1335,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), tietotekniikka",
-      "en": "Master of Engineering (UAS), Information Technology",
-      "sv": "Ingenjör (högre YH), datateknik"
+      "sv": "Ingenjör (högre YH), datateknik",
+      "en": "Master of Engineering (UAS), Information Technology"
     },
     "toteutukset": [
       {
@@ -1346,8 +1346,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       }
     ]
@@ -1355,8 +1355,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -1366,8 +1366,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1375,8 +1375,8 @@
   {
     "nimi": {
       "fi": "Fil. maist., tietojenkäsittelytiede",
-      "en": "Master of Science, Computer Science",
-      "sv": "Fil. mag., datavetenskap"
+      "sv": "Fil. mag., datavetenskap",
+      "en": "Master of Science, Computer Science"
     },
     "toteutukset": [
       {
@@ -1386,8 +1386,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän yliopisto",
-          "en": "University of Jyväskylä",
-          "sv": "Jyväskylä universitet"
+          "sv": "Jyväskylä universitet",
+          "en": "University of Jyväskylä"
         }
       }
     ]
@@ -1395,8 +1395,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or Unknown Polytechnic Master's  Degree in Social Services",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom socialbranschen"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom socialbranschen",
+      "en": "Other or Unknown Polytechnic Master's  Degree in Social Services"
     },
     "toteutukset": [
       {
@@ -1406,8 +1406,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1415,8 +1415,8 @@
   {
     "nimi": {
       "fi": "Kuvataiteilija (ylempi AMK)",
-      "en": "Master of Culture and Arts (UAS), Visual Artist",
-      "sv": "Bildkonstnär (högre YH)"
+      "sv": "Bildkonstnär (högre YH)",
+      "en": "Master of Culture and Arts (UAS), Visual Artist"
     },
     "toteutukset": [
       {
@@ -1426,8 +1426,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -1435,8 +1435,8 @@
   {
     "nimi": {
       "fi": "Muotoilija (ylempi AMK)",
-      "en": "Master of Culture and Arts (UAS), Designer",
-      "sv": "Formgivare (högre YH)"
+      "sv": "Formgivare (högre YH)",
+      "en": "Master of Culture and Arts (UAS), Designer"
     },
     "toteutukset": [
       {
@@ -1446,8 +1446,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1455,8 +1455,8 @@
   {
     "nimi": {
       "fi": "Kuvataiteilija (AMK)",
-      "en": "Bachelor of Culture and Arts (UAS), Visual Artist",
-      "sv": "Bildkonstnär (YH)"
+      "sv": "Bildkonstnär (YH)",
+      "en": "Bachelor of Culture and Arts (UAS), Visual Artist"
     },
     "toteutukset": [
       {
@@ -1466,8 +1466,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -1475,8 +1475,8 @@
   {
     "nimi": {
       "fi": "Kätilö (AMK)",
-      "en": "Bachelor of Health Care (UAS), Midwife",
-      "sv": "Barnmorska (YH)"
+      "sv": "Barnmorska (YH)",
+      "en": "Bachelor of Health Care (UAS), Midwife"
     },
     "toteutukset": [
       {
@@ -1486,8 +1486,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -1497,8 +1497,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -1508,8 +1508,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -1519,8 +1519,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -1528,8 +1528,8 @@
   {
     "nimi": {
       "fi": "Terveydenhoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Public Health Nurse",
-      "sv": "Hälsovårdare (YH)"
+      "sv": "Hälsovårdare (YH)",
+      "en": "Bachelor of Health Care (UAS), Public Health Nurse"
     },
     "toteutukset": [
       {
@@ -1539,8 +1539,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       }
     ]
@@ -1548,8 +1548,8 @@
   {
     "nimi": {
       "fi": "Liikunnanohjaaja (AMK)",
-      "en": "Bachelor of Sports Studies, Sports Instructor (UAS)",
-      "sv": "Idrottsinstruktör (YH)"
+      "sv": "Idrottsinstruktör (YH)",
+      "en": "Bachelor of Sports Studies, Sports Instructor (UAS)"
     },
     "toteutukset": [
       {
@@ -1559,8 +1559,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -1570,8 +1570,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kajaanin ammattikorkeakoulu",
-          "en": "Kajaani University of Applied Sciences",
-          "sv": "Kajaanin ammattikorkeakoulu"
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
         }
       },
       {
@@ -1581,8 +1581,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1590,8 +1590,8 @@
   {
     "nimi": {
       "fi": "Kasvatust. kand. (alempi), luokanopettaja (ei opettajankelpoisuutta)",
-      "en": "Bachelor of Arts (Education), Class Teacher (no Teacher Competence)",
-      "sv": "Ped. kand. (lägre), klasslärare (inte lärarbehörighet)"
+      "sv": "Ped. kand. (lägre), klasslärare (inte lärarbehörighet)",
+      "en": "Bachelor of Arts (Education), Class Teacher (no Teacher Competence)"
     },
     "toteutukset": [
       {
@@ -1601,8 +1601,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän yliopisto",
-          "en": "University of Jyväskylä",
-          "sv": "Jyväskylä universitet"
+          "sv": "Jyväskylä universitet",
+          "en": "University of Jyväskylä"
         }
       }
     ]
@@ -1610,8 +1610,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), tietotekniikka",
-      "en": "Master of Engineering (UAS), Information Technology",
-      "sv": "Ingenjör (högre YH), datateknik"
+      "sv": "Ingenjör (högre YH), datateknik",
+      "en": "Master of Engineering (UAS), Information Technology"
     },
     "toteutukset": [
       {
@@ -1622,8 +1622,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       }
     ]
@@ -1631,8 +1631,8 @@
   {
     "nimi": {
       "fi": "Medianomi (ylempi AMK)",
-      "en": "Master of Culture and Arts (UAS), Media",
-      "sv": "Medianom (högre YH)"
+      "sv": "Medianom (högre YH)",
+      "en": "Master of Culture and Arts (UAS), Media"
     },
     "toteutukset": [
       {
@@ -1642,8 +1642,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       }
     ]
@@ -1651,8 +1651,8 @@
   {
     "nimi": {
       "fi": "Medianomi (ylempi AMK)",
-      "en": "Master of Culture and Arts (UAS), Media",
-      "sv": "Medianom (högre YH)"
+      "sv": "Medianom (högre YH)",
+      "en": "Master of Culture and Arts (UAS), Media"
     },
     "toteutukset": [
       {
@@ -1662,8 +1662,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -1671,8 +1671,8 @@
   {
     "nimi": {
       "fi": "Merikapteeni (AMK)",
-      "en": "Bachelor of Maritime Management",
-      "sv": "Sjökapten (YH)"
+      "sv": "Sjökapten (YH)",
+      "en": "Bachelor of Maritime Management"
     },
     "toteutukset": [
       {
@@ -1682,8 +1682,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1691,8 +1691,8 @@
   {
     "nimi": {
       "fi": "Metsätalousinsinööri (AMK)",
-      "en": "Bachelor of Natural Resources (UAS), Forestry",
-      "sv": "Skogsbruksingenjör (YH)"
+      "sv": "Skogsbruksingenjör (YH)",
+      "en": "Bachelor of Natural Resources (UAS), Forestry"
     },
     "toteutukset": [
       {
@@ -1702,8 +1702,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       }
     ]
@@ -1711,8 +1711,8 @@
   {
     "nimi": {
       "fi": "Muotoilija (AMK)",
-      "en": "Bachelor of Culture and Arts (UAS), Designer",
-      "sv": "Formgivare (YH)"
+      "sv": "Formgivare (YH)",
+      "en": "Bachelor of Culture and Arts (UAS), Designer"
     },
     "toteutukset": [
       {
@@ -1722,8 +1722,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -1733,8 +1733,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -1744,8 +1744,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -1755,8 +1755,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -1766,8 +1766,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1775,8 +1775,8 @@
   {
     "nimi": {
       "fi": "Musiikkipedagogi (ylempi AMK)",
-      "en": "Master of Culture and Arts (UAS), Music Educator",
-      "sv": "Musikpedagog (högre YH)"
+      "sv": "Musikpedagog (högre YH)",
+      "en": "Master of Culture and Arts (UAS), Music Educator"
     },
     "toteutukset": [
       {
@@ -1786,8 +1786,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -1795,8 +1795,8 @@
   {
     "nimi": {
       "fi": "Muusikko (ylempi AMK)",
-      "en": "Master of Culture and Arts (UAS), Musician",
-      "sv": "Musiker (högre YH)"
+      "sv": "Musiker (högre YH)",
+      "en": "Master of Culture and Arts (UAS), Musician"
     },
     "toteutukset": [
       {
@@ -1806,8 +1806,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -1815,8 +1815,8 @@
   {
     "nimi": {
       "fi": "Optometristi (AMK): optikko (AMK)",
-      "en": "Bachelor of Health Care (UAS), Optometrist",
-      "sv": "Optometriker (YH): optiker (YH)"
+      "sv": "Optometriker (YH): optiker (YH)",
+      "en": "Bachelor of Health Care (UAS), Optometrist"
     },
     "toteutukset": [
       {
@@ -1826,8 +1826,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -1835,8 +1835,8 @@
   {
     "nimi": {
       "fi": "Rakennusarkkitehti (ylempi AMK)",
-      "en": "Master of Construction Architecture (UAS)",
-      "sv": "Byggnadsarkitekt (högre YH)"
+      "sv": "Byggnadsarkitekt (högre YH)",
+      "en": "Master of Construction Architecture (UAS)"
     },
     "toteutukset": [
       {
@@ -1846,8 +1846,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -1855,8 +1855,8 @@
   {
     "nimi": {
       "fi": "Rakennusmestari (AMK)",
-      "en": "Bachelor of Engineering (UAS), Construction Management",
-      "sv": "Byggmästare (YH)"
+      "sv": "Byggmästare (YH)",
+      "en": "Bachelor of Engineering (UAS), Construction Management"
     },
     "toteutukset": [
       {
@@ -1866,8 +1866,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -1877,8 +1877,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -1888,8 +1888,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -1899,8 +1899,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -1910,8 +1910,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -1921,8 +1921,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -1932,8 +1932,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -1943,8 +1943,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       }
     ]
@@ -1952,8 +1952,8 @@
   {
     "nimi": {
       "fi": "Restonomi (AMK), liikkeenjohto",
-      "en": "Bachelor of Hospitality Management (UAS), Business Management",
-      "sv": "Restonom (YH), affärsledning"
+      "sv": "Restonom (YH), affärsledning",
+      "en": "Bachelor of Hospitality Management (UAS), Business Management"
     },
     "toteutukset": [
       {
@@ -1963,8 +1963,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -1972,8 +1972,8 @@
   {
     "nimi": {
       "fi": "Restonomi (AMK), matkailu",
-      "en": "Bachelor of Hospitality Management (UAS), Tourism",
-      "sv": "Restonom (YH), turism"
+      "sv": "Restonom (YH), turism",
+      "en": "Bachelor of Hospitality Management (UAS), Tourism"
     },
     "toteutukset": [
       {
@@ -1983,8 +1983,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -1992,8 +1992,8 @@
   {
     "nimi": {
       "fi": "Restonomi (AMK), majoitus- ja ravitsemisala",
-      "en": "Bachelor of Hospitality Management (UAS), Hotel and Restaurant",
-      "sv": "Restonom (YH), inkvarterings- och kosthållsbranschen"
+      "sv": "Restonom (YH), inkvarterings- och kosthållsbranschen",
+      "en": "Bachelor of Hospitality Management (UAS), Hotel and Restaurant"
     },
     "toteutukset": [
       {
@@ -2003,8 +2003,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -2014,8 +2014,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       },
       {
@@ -2025,8 +2025,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -2036,8 +2036,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -2047,8 +2047,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -2058,8 +2058,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -2069,8 +2069,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -2080,8 +2080,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kajaanin ammattikorkeakoulu",
-          "en": "Kajaani University of Applied Sciences",
-          "sv": "Kajaanin ammattikorkeakoulu"
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
         }
       },
       {
@@ -2091,8 +2091,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kajaanin ammattikorkeakoulu",
-          "en": "Kajaani University of Applied Sciences",
-          "sv": "Kajaanin ammattikorkeakoulu"
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
         }
       }
     ]
@@ -2100,8 +2100,8 @@
   {
     "nimi": {
       "fi": "Sosionomi (ylempi AMK), sosiaaliala",
-      "en": "Master of Social Services (UAS), Social Services",
-      "sv": "Socionom (högre YH), socialbranschen"
+      "sv": "Socionom (högre YH), socialbranschen",
+      "en": "Master of Social Services (UAS), Social Services"
     },
     "toteutukset": [
       {
@@ -2111,8 +2111,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -2120,8 +2120,8 @@
   {
     "nimi": {
       "fi": "Röntgenhoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Radiographer",
-      "sv": "Röntgenskötare (YH)"
+      "sv": "Röntgenskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Radiographer"
     },
     "toteutukset": [
       {
@@ -2131,8 +2131,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -2140,8 +2140,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (YH)"
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2151,8 +2151,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -2162,8 +2162,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -2173,8 +2173,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       },
       {
@@ -2184,8 +2184,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -2195,8 +2195,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -2206,8 +2206,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -2217,8 +2217,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       },
       {
@@ -2228,8 +2228,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       },
       {
@@ -2239,8 +2239,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -2250,8 +2250,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -2261,8 +2261,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       },
       {
@@ -2272,8 +2272,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       },
       {
@@ -2283,8 +2283,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -2294,8 +2294,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -2305,8 +2305,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -2316,8 +2316,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -2327,8 +2327,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -2338,8 +2338,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -2349,8 +2349,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -2360,8 +2360,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -2371,8 +2371,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       },
       {
@@ -2382,8 +2382,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       },
       {
@@ -2393,8 +2393,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -2404,8 +2404,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -2415,8 +2415,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -2426,8 +2426,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences",
-          "sv": "Karelia-ammattikorkeakoulu"
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         }
       },
       {
@@ -2437,8 +2437,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -2448,8 +2448,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -2459,8 +2459,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -2470,8 +2470,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -2481,8 +2481,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kajaanin ammattikorkeakoulu",
-          "en": "Kajaani University of Applied Sciences",
-          "sv": "Kajaanin ammattikorkeakoulu"
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
         }
       },
       {
@@ -2492,8 +2492,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -2503,8 +2503,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -2514,8 +2514,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -2523,8 +2523,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (YH)"
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2534,8 +2534,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       }
     ]
@@ -2543,8 +2543,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (YH)"
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2554,8 +2554,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       }
     ]
@@ -2563,8 +2563,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2574,8 +2574,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -2583,8 +2583,8 @@
   {
     "nimi": {
       "fi": "Sosiaali- ja terveysalan AMK-jatkotutkinto, muu tai tuntematon ala",
-      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field",
-      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område"
+      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område",
+      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field"
     },
     "toteutukset": [
       {
@@ -2594,8 +2594,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       }
     ]
@@ -2603,8 +2603,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2614,8 +2614,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -2623,8 +2623,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2634,8 +2634,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -2643,8 +2643,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2654,8 +2654,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -2663,8 +2663,8 @@
   {
     "nimi": {
       "fi": "Sosiaali- ja terveysalan AMK-jatkotutkinto, muu tai tuntematon ala",
-      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field",
-      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område"
+      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område",
+      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field"
     },
     "toteutukset": [
       {
@@ -2674,8 +2674,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       }
     ]
@@ -2683,8 +2683,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2694,8 +2694,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       }
     ]
@@ -2703,8 +2703,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2714,8 +2714,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       }
     ]
@@ -2723,8 +2723,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2734,8 +2734,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       }
     ]
@@ -2743,8 +2743,8 @@
   {
     "nimi": {
       "fi": "Sosiaali- ja terveysalan AMK, rikosseuraamusala",
-      "en": "Polytechnic Bachelor's  Degree in Health Care, Correctional Services",
-      "sv": "Yrkeshögskoleexamen inom hälsovård och det sociala området, brottspåföljdsområdet"
+      "sv": "Yrkeshögskoleexamen inom hälsovård och det sociala området, brottspåföljdsområdet",
+      "en": "Polytechnic Bachelor's  Degree in Health Care, Correctional Services"
     },
     "toteutukset": [
       {
@@ -2754,8 +2754,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -2763,8 +2763,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2774,8 +2774,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -2783,8 +2783,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2794,8 +2794,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -2803,8 +2803,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2814,8 +2814,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -2823,8 +2823,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2834,8 +2834,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -2843,8 +2843,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2854,8 +2854,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -2863,8 +2863,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2874,8 +2874,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -2883,8 +2883,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2894,8 +2894,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       }
     ]
@@ -2903,8 +2903,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2914,8 +2914,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -2923,8 +2923,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2934,8 +2934,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       }
     ]
@@ -2943,8 +2943,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -2954,8 +2954,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -2963,8 +2963,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2974,8 +2974,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -2983,8 +2983,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (ylempi AMK)",
-      "en": "Master of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (högre YH)"
+      "sv": "Sjukskötare (högre YH)",
+      "en": "Master of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -2994,8 +2994,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -3003,8 +3003,8 @@
   {
     "nimi": {
       "fi": "Sosionomi (AMK), sosiaaliala",
-      "en": "Bachelor of Social Services (UAS), Social Services",
-      "sv": "Socionom (YH), socialbranschen"
+      "sv": "Socionom (YH), socialbranschen",
+      "en": "Bachelor of Social Services (UAS), Social Services"
     },
     "toteutukset": [
       {
@@ -3014,8 +3014,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       }
     ]
@@ -3023,8 +3023,8 @@
   {
     "nimi": {
       "fi": "Sosionomi (AMK), sosiaaliala",
-      "en": "Bachelor of Social Services (UAS), Social Services",
-      "sv": "Socionom (YH), socialbranschen"
+      "sv": "Socionom (YH), socialbranschen",
+      "en": "Bachelor of Social Services (UAS), Social Services"
     },
     "toteutukset": [
       {
@@ -3034,8 +3034,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3045,8 +3045,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3056,8 +3056,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3067,8 +3067,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       },
       {
@@ -3078,8 +3078,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -3089,8 +3089,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -3100,8 +3100,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -3111,8 +3111,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -3122,8 +3122,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       },
       {
@@ -3133,8 +3133,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       },
       {
@@ -3144,8 +3144,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -3155,8 +3155,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -3166,8 +3166,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -3177,8 +3177,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       },
       {
@@ -3188,8 +3188,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       },
       {
@@ -3199,8 +3199,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3210,8 +3210,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3221,8 +3221,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3232,8 +3232,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3243,8 +3243,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences",
-          "sv": "Karelia-ammattikorkeakoulu"
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         }
       },
       {
@@ -3254,8 +3254,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences",
-          "sv": "Karelia-ammattikorkeakoulu"
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         }
       },
       {
@@ -3265,8 +3265,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -3276,8 +3276,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -3287,8 +3287,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -3298,8 +3298,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -3309,8 +3309,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -3320,8 +3320,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -3329,8 +3329,8 @@
   {
     "nimi": {
       "fi": "Sosionomi (ylempi AMK), sosiaaliala",
-      "en": "Master of Social Services (UAS), Social Services",
-      "sv": "Socionom (högre YH), socialbranschen"
+      "sv": "Socionom (högre YH), socialbranschen",
+      "en": "Master of Social Services (UAS), Social Services"
     },
     "toteutukset": [
       {
@@ -3340,8 +3340,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -3349,8 +3349,8 @@
   {
     "nimi": {
       "fi": "Suuhygienisti (AMK): hammashuoltaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Dental Hygienist",
-      "sv": "Munhygienist (YH): tandhygienist (YH)"
+      "sv": "Munhygienist (YH): tandhygienist (YH)",
+      "en": "Bachelor of Health Care (UAS), Dental Hygienist"
     },
     "toteutukset": [
       {
@@ -3360,8 +3360,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -3369,8 +3369,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), rakennustekniikka ja yhdyskuntatekniikka",
-      "en": "Master of Engineering (UAS), Building Construction, Community Development",
-      "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik"
+      "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik",
+      "en": "Master of Engineering (UAS), Building Construction, Community Development"
     },
     "toteutukset": [
       {
@@ -3380,8 +3380,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       }
     ]
@@ -3389,8 +3389,8 @@
   {
     "nimi": {
       "fi": "Terveydenhoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Public Health Nurse",
-      "sv": "Hälsovårdare (YH)"
+      "sv": "Hälsovårdare (YH)",
+      "en": "Bachelor of Health Care (UAS), Public Health Nurse"
     },
     "toteutukset": [
       {
@@ -3400,8 +3400,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3411,8 +3411,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -3422,8 +3422,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -3433,8 +3433,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -3444,8 +3444,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       },
       {
@@ -3455,8 +3455,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -3466,8 +3466,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -3477,8 +3477,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Diakonia-ammattikorkeakoulu",
-          "en": "Diaconia University of Applied Sciences",
-          "sv": "Diakonia-ammattikorkeakoulu"
+          "sv": "Diakonia-ammattikorkeakoulu",
+          "en": "Diaconia University of Applied Sciences"
         }
       },
       {
@@ -3488,8 +3488,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3499,8 +3499,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3510,8 +3510,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       },
       {
@@ -3521,8 +3521,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -3530,8 +3530,8 @@
   {
     "nimi": {
       "fi": "Fil. maist., tietojenkäsittelytiede",
-      "en": "Master of Science, Computer Science",
-      "sv": "Fil. mag., datavetenskap"
+      "sv": "Fil. mag., datavetenskap",
+      "en": "Master of Science, Computer Science"
     },
     "toteutukset": [
       {
@@ -3541,8 +3541,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän yliopisto",
-          "en": "University of Jyväskylä",
-          "sv": "Jyväskylä universitet"
+          "sv": "Jyväskylä universitet",
+          "en": "University of Jyväskylä"
         }
       }
     ]
@@ -3550,8 +3550,8 @@
   {
     "nimi": {
       "fi": "Luonnont. kand., tietojenkäsittelytiede",
-      "en": "Bachelor of Science, Computer Science",
-      "sv": "Nat. kand., datavetenskap"
+      "sv": "Nat. kand., datavetenskap",
+      "en": "Bachelor of Science, Computer Science"
     },
     "toteutukset": [
       {
@@ -3561,8 +3561,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän yliopisto",
-          "en": "University of Jyväskylä",
-          "sv": "Jyväskylä universitet"
+          "sv": "Jyväskylä universitet",
+          "en": "University of Jyväskylä"
         }
       }
     ]
@@ -3570,8 +3570,8 @@
   {
     "nimi": {
       "fi": "Fil. maist., tietojenkäsittelytiede",
-      "en": "Master of Science, Computer Science",
-      "sv": "Fil. mag., datavetenskap"
+      "sv": "Fil. mag., datavetenskap",
+      "en": "Master of Science, Computer Science"
     },
     "toteutukset": [
       {
@@ -3581,8 +3581,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän yliopisto",
-          "en": "University of Jyväskylä",
-          "sv": "Jyväskylä universitet"
+          "sv": "Jyväskylä universitet",
+          "en": "University of Jyväskylä"
         }
       }
     ]
@@ -3590,8 +3590,8 @@
   {
     "nimi": {
       "fi": "Toimintaterapeutti (AMK)",
-      "en": "Bachelor of Health Care (UAS), Occupational Therapist",
-      "sv": "Ergoterapeut (YH)"
+      "sv": "Ergoterapeut (YH)",
+      "en": "Bachelor of Health Care (UAS), Occupational Therapist"
     },
     "toteutukset": [
       {
@@ -3601,8 +3601,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -3612,8 +3612,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -3623,8 +3623,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3634,8 +3634,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences",
-          "sv": "Karelia-ammattikorkeakoulu"
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         }
       }
     ]
@@ -3643,8 +3643,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
-      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
-      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
     "toteutukset": [
       {
@@ -3654,8 +3654,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3665,8 +3665,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3676,8 +3676,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3687,8 +3687,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3698,8 +3698,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -3709,8 +3709,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -3720,8 +3720,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -3731,8 +3731,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       },
       {
@@ -3742,8 +3742,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -3753,8 +3753,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -3764,8 +3764,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       },
       {
@@ -3775,8 +3775,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       },
       {
@@ -3786,8 +3786,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -3797,8 +3797,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Seinäjoen ammattikorkeakoulu",
-          "en": "Seinäjoki University of Applied Sciences",
-          "sv": "Seinäjoen ammattikorkeakoulu"
+          "sv": "Seinäjoen ammattikorkeakoulu",
+          "en": "Seinäjoki University of Applied Sciences"
         }
       },
       {
@@ -3808,8 +3808,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -3819,8 +3819,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -3830,8 +3830,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -3841,8 +3841,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -3852,8 +3852,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3863,8 +3863,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       },
       {
@@ -3874,8 +3874,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -3885,8 +3885,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -3896,8 +3896,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       },
       {
@@ -3907,8 +3907,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -3918,8 +3918,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -3927,8 +3927,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (AMK), tietojenkäsittely",
-      "en": "Bachelor of Business Administration (UAS), Data Processing",
-      "sv": "Tradenom (YH), databehandling"
+      "sv": "Tradenom (YH), databehandling",
+      "en": "Bachelor of Business Administration (UAS), Data Processing"
     },
     "toteutukset": [
       {
@@ -3938,8 +3938,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3949,8 +3949,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3960,8 +3960,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       },
       {
@@ -3971,8 +3971,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Lapin ammattikorkeakoulu",
-          "en": "Lapland University of Applied Sciences",
-          "sv": "Lapin ammattikorkeakoulu"
+          "sv": "Lapin ammattikorkeakoulu",
+          "en": "Lapland University of Applied Sciences"
         }
       },
       {
@@ -3982,8 +3982,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Oulun ammattikorkeakoulu",
-          "en": "Oulu University of Applied Sciences",
-          "sv": "Oulun ammattikorkeakoulu"
+          "sv": "Oulun ammattikorkeakoulu",
+          "en": "Oulu University of Applied Sciences"
         }
       },
       {
@@ -3993,8 +3993,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -4004,8 +4004,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -4013,8 +4013,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (AMK), turvallisuusala",
-      "en": "Bachelor of Business Administration (UAS), Security Management",
-      "sv": "Tradenom (YH), säkerhetsbranschen"
+      "sv": "Tradenom (YH), säkerhetsbranschen",
+      "en": "Bachelor of Business Administration (UAS), Security Management"
     },
     "toteutukset": [
       {
@@ -4024,8 +4024,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -4033,8 +4033,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4044,8 +4044,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       }
     ]
@@ -4053,8 +4053,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4064,8 +4064,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -4073,8 +4073,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4084,8 +4084,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -4093,8 +4093,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), tietojenkäsittely",
-      "en": "Master of Business Administration (UAS), Data Processing",
-      "sv": "Tradenom (högre YH), databehandling"
+      "sv": "Tradenom (högre YH), databehandling",
+      "en": "Master of Business Administration (UAS), Data Processing"
     },
     "toteutukset": [
       {
@@ -4104,8 +4104,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -4113,8 +4113,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
-      "en": "Master of Business Administration (UAS), Other or Unknown Field",
-      "sv": "Tradenom (högre YH), annat eller okänt område"
+      "sv": "Tradenom (högre YH), annat eller okänt område",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
     "toteutukset": [
       {
@@ -4124,8 +4124,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -4133,8 +4133,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4144,8 +4144,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -4153,8 +4153,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4164,8 +4164,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -4173,8 +4173,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4184,8 +4184,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -4193,8 +4193,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4204,8 +4204,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
-          "en": "Häme University of Applied Sciences",
-          "sv": "Hämeen ammattikorkeakoulu"
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
         }
       }
     ]
@@ -4213,8 +4213,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4224,8 +4224,8 @@
         },
         "oppilaitosNimi": {
           "fi": "LAB-ammattikorkeakoulu",
-          "en": "LAB University of Applied Sciences",
-          "sv": "LAB-ammattikorkeakoulu"
+          "sv": "LAB-ammattikorkeakoulu",
+          "en": "LAB University of Applied Sciences"
         }
       }
     ]
@@ -4233,8 +4233,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
-      "en": "Master of Business Administration (UAS), Other or Unknown Field",
-      "sv": "Tradenom (högre YH), annat eller okänt område"
+      "sv": "Tradenom (högre YH), annat eller okänt område",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
     "toteutukset": [
       {
@@ -4244,8 +4244,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -4253,8 +4253,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4264,8 +4264,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -4273,8 +4273,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4284,8 +4284,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -4293,8 +4293,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4304,8 +4304,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Jyväskylän ammattikorkeakoulu",
-          "en": "Jamk University of Applied Sciences",
-          "sv": "Jyväskylän ammattikorkeakoulu"
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
         }
       },
       {
@@ -4315,8 +4315,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -4326,8 +4326,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -4335,8 +4335,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4346,8 +4346,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       },
       {
@@ -4357,8 +4357,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kajaanin ammattikorkeakoulu",
-          "en": "Kajaani University of Applied Sciences",
-          "sv": "Kajaanin ammattikorkeakoulu"
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
         }
       }
     ]
@@ -4366,8 +4366,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4377,8 +4377,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       }
     ]
@@ -4386,8 +4386,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4397,8 +4397,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       }
     ]
@@ -4406,8 +4406,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
-      "en": "Master of Business Administration (UAS), Other or Unknown Field",
-      "sv": "Tradenom (högre YH), annat eller okänt område"
+      "sv": "Tradenom (högre YH), annat eller okänt område",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
     "toteutukset": [
       {
@@ -4417,8 +4417,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       }
     ]
@@ -4426,8 +4426,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), turvallisuusala",
-      "en": "Master of Business Administration (UAS), Security Management",
-      "sv": "Tradenom (högre YH), säkerhetsbranschen"
+      "sv": "Tradenom (högre YH), säkerhetsbranschen",
+      "en": "Master of Business Administration (UAS), Security Management"
     },
     "toteutukset": [
       {
@@ -4437,8 +4437,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -4446,8 +4446,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -4457,8 +4457,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Laurea-ammattikorkeakoulu",
-          "en": "Laurea University of Applied Sciences",
-          "sv": "Laurea-ammattikorkeakoulu"
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
         }
       }
     ]
@@ -4466,8 +4466,8 @@
   {
     "nimi": {
       "fi": "Yhteisöpedagogi (AMK)",
-      "en": "Bachelor of Humanities (UAS), Community Educator",
-      "sv": "Samhällspedagog (YH)"
+      "sv": "Samhällspedagog (YH)",
+      "en": "Bachelor of Humanities (UAS), Community Educator"
     },
     "toteutukset": [
       {
@@ -4477,8 +4477,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences",
-          "sv": "Centria-ammattikorkeakoulu"
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         }
       },
       {
@@ -4488,8 +4488,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Humanistinen ammattikorkeakoulu",
-          "en": "Humak University of Applied Sciences",
-          "sv": "Humanistinen ammattikorkeakoulu"
+          "sv": "Humanistinen ammattikorkeakoulu",
+          "en": "Humak University of Applied Sciences"
         }
       },
       {
@@ -4499,8 +4499,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Humanistinen ammattikorkeakoulu",
-          "en": "Humak University of Applied Sciences",
-          "sv": "Humanistinen ammattikorkeakoulu"
+          "sv": "Humanistinen ammattikorkeakoulu",
+          "en": "Humak University of Applied Sciences"
         }
       },
       {
@@ -4510,8 +4510,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -4519,8 +4519,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4530,8 +4530,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -4539,8 +4539,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
-      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
-      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
     "toteutukset": [
       {
@@ -4550,8 +4550,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Savonia-ammattikorkeakoulu",
-          "en": "Savonia University of Applied Sciences",
-          "sv": "Savonia-ammattikorkeakoulu"
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
         }
       }
     ]
@@ -4559,8 +4559,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
-      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
-      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
     "toteutukset": [
       {
@@ -4570,8 +4570,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       },
       {
@@ -4581,8 +4581,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Tampereen ammattikorkeakoulu",
-          "en": "Tampere University of Applied Sciences",
-          "sv": "Tampereen ammattikorkeakoulu"
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
         }
       },
       {
@@ -4592,8 +4592,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -4603,8 +4603,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       },
       {
@@ -4615,8 +4615,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences",
-          "sv": "Karelia-ammattikorkeakoulu"
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         }
       },
       {
@@ -4626,8 +4626,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -4635,8 +4635,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (AMK), tietojenkäsittely",
-      "en": "Bachelor of Business Administration (UAS), Data Processing",
-      "sv": "Tradenom (YH), databehandling"
+      "sv": "Tradenom (YH), databehandling",
+      "en": "Bachelor of Business Administration (UAS), Data Processing"
     },
     "toteutukset": [
       {
@@ -4646,8 +4646,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       }
     ]
@@ -4655,8 +4655,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
-      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing",
-      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
     "toteutukset": [
       {
@@ -4666,8 +4666,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK",
-          "sv": "Satakunnan ammattikorkeakoulu"
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         }
       }
     ]
@@ -4675,8 +4675,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), tuotantotalous",
-      "en": "Bachelor of Engineering (UAS), Industrial Management",
-      "sv": "Ingenjör (YH), produktionsekonomi"
+      "sv": "Ingenjör (YH), produktionsekonomi",
+      "en": "Bachelor of Engineering (UAS), Industrial Management"
     },
     "toteutukset": [
       {
@@ -4686,8 +4686,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       }
     ]
@@ -4695,8 +4695,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), energiatekniikka",
-      "en": "Bachelor of Engineering (UAS), Energy Engineering",
-      "sv": "Ingenjör (YH), energiteknik"
+      "sv": "Ingenjör (YH), energiteknik",
+      "en": "Bachelor of Engineering (UAS), Energy Engineering"
     },
     "toteutukset": [
       {
@@ -4706,8 +4706,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Vaasan ammattikorkeakoulu",
-          "en": "Vaasa University of Applied Sciences",
-          "sv": "Vaasan ammattikorkeakoulu"
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
         }
       }
     ]
@@ -4715,8 +4715,8 @@
   {
     "nimi": {
       "fi": "Insinööri (AMK), tuotantotalous",
-      "en": "Bachelor of Engineering (UAS), Industrial Management",
-      "sv": "Ingenjör (YH), produktionsekonomi"
+      "sv": "Ingenjör (YH), produktionsekonomi",
+      "en": "Bachelor of Engineering (UAS), Industrial Management"
     },
     "toteutukset": [
       {
@@ -4726,8 +4726,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -4735,8 +4735,8 @@
   {
     "nimi": {
       "fi": "Sairaanhoitaja (AMK)",
-      "en": "Bachelor of Health Care (UAS), Registered Nurse",
-      "sv": "Sjukskötare (YH)"
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
     "toteutukset": [
       {
@@ -4746,8 +4746,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Yrkeshögskolan Arcada",
-          "en": "Arcada University of Applied Sciences",
-          "sv": "Yrkeshögskolan Arcada"
+          "sv": "Yrkeshögskolan Arcada",
+          "en": "Arcada University of Applied Sciences"
         }
       }
     ]
@@ -4755,8 +4755,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), tietotekniikka",
-      "en": "Master of Engineering (UAS), Information Technology",
-      "sv": "Ingenjör (högre YH), datateknik"
+      "sv": "Ingenjör (högre YH), datateknik",
+      "en": "Master of Engineering (UAS), Information Technology"
     },
     "toteutukset": [
       {
@@ -4766,8 +4766,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -4775,8 +4775,8 @@
   {
     "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
-      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare",
-      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård"
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
     "toteutukset": [
       {
@@ -4786,8 +4786,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -4795,8 +4795,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), sähkövoimatekniikka",
-      "en": "Master of Engineering (UAS), Electrical Power Engineering",
-      "sv": "Ingenjör (högre YH), elkraftsteknik"
+      "sv": "Ingenjör (högre YH), elkraftsteknik",
+      "en": "Master of Engineering (UAS), Electrical Power Engineering"
     },
     "toteutukset": [
       {
@@ -4806,8 +4806,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -4815,8 +4815,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4826,8 +4826,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Turun ammattikorkeakoulu",
-          "en": "Turku University of Applied Sciences",
-          "sv": "Turun ammattikorkeakoulu"
+          "sv": "Turun ammattikorkeakoulu",
+          "en": "Turku University of Applied Sciences"
         }
       }
     ]
@@ -4835,8 +4835,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), tietojenkäsittely",
-      "en": "Master of Business Administration (UAS), Data Processing",
-      "sv": "Tradenom (högre YH), databehandling"
+      "sv": "Tradenom (högre YH), databehandling",
+      "en": "Master of Business Administration (UAS), Data Processing"
     },
     "toteutukset": [
       {
@@ -4846,8 +4846,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       }
     ]
@@ -4855,8 +4855,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4866,8 +4866,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       },
       {
@@ -4877,8 +4877,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]
@@ -4886,8 +4886,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4897,8 +4897,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       }
     ]
@@ -4906,8 +4906,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4917,8 +4917,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       }
     ]
@@ -4926,8 +4926,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
-      "en": "MBA (UAS), Econ., Adm., Mark.",
-      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring"
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
     },
     "toteutukset": [
       {
@@ -4937,8 +4937,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       }
     ]
@@ -4946,8 +4946,8 @@
   {
     "nimi": {
       "fi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
-      "en": "Master of Engineering (UAS), Other or Unknown Technology",
-      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område"
+      "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
+      "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
     "toteutukset": [
       {
@@ -4957,8 +4957,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences",
-          "sv": "Metropolia Ammattikorkeakoulu"
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         }
       }
     ]
@@ -4966,8 +4966,8 @@
   {
     "nimi": {
       "fi": "Restonomi (ylempi AMK), matkailu",
-      "en": "Master of Hospitality Management (UAS), Tourism",
-      "sv": "Restonom (högre YH), turism"
+      "sv": "Restonom (högre YH), turism",
+      "en": "Master of Hospitality Management (UAS), Tourism"
     },
     "toteutukset": [
       {
@@ -4977,8 +4977,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Haaga-Helia ammattikorkeakoulu",
-          "en": "Haaga-Helia University of Applied Sciences",
-          "sv": "Haaga-Helia yrkeshögskola"
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
         }
       }
     ]
@@ -4986,8 +4986,8 @@
   {
     "nimi": {
       "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
-      "en": "Master of Business Administration (UAS), Other or Unknown Field",
-      "sv": "Tradenom (högre YH), annat eller okänt område"
+      "sv": "Tradenom (högre YH), annat eller okänt område",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
     "toteutukset": [
       {
@@ -4997,8 +4997,8 @@
         },
         "oppilaitosNimi": {
           "fi": "Kaakkois-Suomen ammattikorkeakoulu",
-          "en": "South-Eastern Finland University of Applied Sciences Xamk",
-          "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
         }
       }
     ]

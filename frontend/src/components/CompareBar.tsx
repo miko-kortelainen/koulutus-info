@@ -1,11 +1,10 @@
 import { ActionBar, Button, HStack, Portal, Tag } from "@chakra-ui/react";
 import type { StatisticsEntry } from "@/types.gen";
-import type { YearOption } from "./yearOptions";
 import { COLORS } from "@/theme";
 
 interface CompareBarProps {
   selected: StatisticsEntry[];
-  year: YearOption;
+  year: string;
   onRemove: (degree: StatisticsEntry) => void;
 }
 
