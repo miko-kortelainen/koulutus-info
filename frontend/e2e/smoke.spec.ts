@@ -79,6 +79,23 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 });
 
+test("/hakijamaarat: koulu filter narrows results", async ({ page }) => {
+  await page.goto("/hakijamaarat");
+  await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
+
+  // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
+  await page.getByRole("button", { name: "Koulu" }).click();
+  const options = page.getByRole("option");
+  await expect(options.first()).toBeVisible({ timeout: 10000 });
+
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+
+  // deselect → unfiltered results return
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+});
+
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
   await page.goto("/koulutukset");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
