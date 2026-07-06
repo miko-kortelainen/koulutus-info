@@ -27,6 +27,7 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
     ["koulut", "/koulut/"],
+    ["tallennetut", "/tallennetut/"],
     ["trendit", "/trendit/"],
     ["hukassa?", "/hukassa/"],
     ["palaute", "/palaute/"],
@@ -120,6 +121,24 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   // deselect first → unfiltered results return
   await options.first().click();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+});
+
+test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears it", async ({ page }) => {
+  await page.goto("/koulutukset");
+  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
+
+  // click can land before hydration, so retry until the toggle actually takes effect
+  await expect(async () => {
+    await page.getByRole("button", { name: "Tallenna" }).first().click();
+    await expect(page.getByRole("button", { name: "Poista tallennetuista" }).first()).toBeVisible({ timeout: 1000 });
+  }).toPass();
+
+  await page.goto("/tallennetut");
+  await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).not.toBeVisible();
+  await expect(page.getByRole("button", { name: "Poista tallennetuista" })).toHaveCount(1);
+
+  await page.getByRole("button", { name: "Poista tallennetuista" }).click();
+  await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).toBeVisible();
 });
 
 test("/hukassa: search returns suggestion results", async ({ page }) => {
