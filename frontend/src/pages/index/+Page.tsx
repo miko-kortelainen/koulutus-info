@@ -5,7 +5,7 @@ import { COLORS } from "../../theme";
 
 export default function LandingPage() {
   function navigateToStats() {
-    navigate("/hakijamaarat");
+    navigate("/hakijamaarat/");
   }
 
   return (

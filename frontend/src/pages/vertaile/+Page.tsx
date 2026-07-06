@@ -27,7 +27,7 @@ export default function ComparePage() {
   const backLink = (
     <Text>
       Valitse vertailtavat hakukohteet{" "}
-      <Link href="/hakijamaarat" textDecoration="underline">
+      <Link href="/hakijamaarat/" textDecoration="underline">
         hakijamäärät-sivulta
       </Link>
     </Text>
