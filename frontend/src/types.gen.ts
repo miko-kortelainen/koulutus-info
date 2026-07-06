@@ -79,6 +79,7 @@ export interface StatisticsEntry {
   kooditHakukohde: string;
   hakukohde: string;
   korkeakoulu?: string;
+  kuntaHakukohde?: string;
   koulutuksenKieli?: string;
   sektori?: string;
   koulutusalaTaso1?: string;
