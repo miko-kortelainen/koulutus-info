@@ -19,16 +19,22 @@ func TransformOpintopolkuData(data *models.OpintopolkuData) models.SchoolsRespon
 
 		toteutukset := make([]models.ToteutusEntry, 0, len(school.Toteutukset))
 		for _, t := range school.Toteutukset {
+			kunnat := make([]string, 0, len(t.Kunnat))
+			for _, k := range t.Kunnat {
+				kunnat = append(kunnat, k.Nimi.Fi)
+			}
 			toteutukset = append(toteutukset, models.ToteutusEntry{
 				ToteutusOid:    t.ToteutusOid,
 				ToteutusNimi:   t.ToteutusNimi,
 				OppilaitosNimi: t.OppilaitosNimi,
+				Kunnat:         kunnat,
 			})
 		}
 
 		result = append(result, models.KoulutusEntry{
-			Nimi:        nimi,
-			Toteutukset: toteutukset,
+			Nimi:           nimi,
+			Koulutustyyppi: school.Koulutustyyppi,
+			Toteutukset:    toteutukset,
 		})
 	}
 

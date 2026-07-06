@@ -6,14 +6,20 @@ type OpintopolkuData struct {
 }
 
 type School struct {
-	Koulutukset []Koulutus `json:"koulutukset"`
-	Toteutukset []Toteutus `json:"toteutukset"`
+	Koulutukset    []Koulutus `json:"koulutukset"`
+	Toteutukset    []Toteutus `json:"toteutukset"`
+	Koulutustyyppi string     `json:"koulutustyyppi"`
 }
 
 type Toteutus struct {
 	ToteutusOid    string          `json:"toteutusOid"`
 	ToteutusNimi   LanguageStrings `json:"toteutusNimi"`
 	OppilaitosNimi LanguageStrings `json:"oppilaitosNimi"`
+	Kunnat         []Kunta         `json:"kunnat"`
+}
+
+type Kunta struct {
+	Nimi LanguageStrings `json:"nimi"`
 }
 
 type Koulutus struct {
@@ -33,12 +39,14 @@ type LanguageStrings struct {
 type SchoolsResponse []KoulutusEntry
 
 type KoulutusEntry struct {
-	Nimi        LanguageStrings   `json:"nimi"`
-	Toteutukset []ToteutusEntry `json:"toteutukset"`
+	Nimi           LanguageStrings `json:"nimi"`
+	Koulutustyyppi string          `json:"koulutustyyppi"`
+	Toteutukset    []ToteutusEntry `json:"toteutukset"`
 }
 
 type ToteutusEntry struct {
-	ToteutusOid    string          `json:"toteutusOid"`
-	ToteutusNimi   LanguageStrings `json:"toteutusNimi"`
+	ToteutusOid    string            `json:"toteutusOid"`
+	ToteutusNimi   LanguageStrings   `json:"toteutusNimi"`
 	OppilaitosNimi LanguageStrings `json:"oppilaitosNimi"`
+	Kunnat         []string        `json:"kunnat"`
 }

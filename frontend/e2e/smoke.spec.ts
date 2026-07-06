@@ -55,7 +55,7 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
   await page.goto("/koulutukset");
-  await expect(page.getByRole("option").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
@@ -81,7 +81,10 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
 
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
   await page.goto("/koulutukset");
+  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
+  // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
+  await page.getByRole("button", { name: "Koulu" }).click();
   const options = page.getByRole("option");
   await expect(options.first()).toBeVisible({ timeout: 10000 });
 

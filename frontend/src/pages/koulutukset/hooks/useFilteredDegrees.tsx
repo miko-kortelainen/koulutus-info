@@ -2,6 +2,8 @@ import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { ToteutusEntry } from "@/types.gen";
 
+export type ToteutusWithSektori = ToteutusEntry & { koulutustyyppi: string };
+
 const FUSE_OPTIONS = {
   keys: [
     { name: "toteutusNimi.fi", weight: 2 },
@@ -17,19 +19,26 @@ const FUSE_OPTIONS = {
 };
 
 export default function useFilteredDegrees(
-  data: ToteutusEntry[] | undefined,
+  data: ToteutusWithSektori[] | undefined,
   searchTerm: string,
+  selectedSektorit: Set<string>,
+  selectedKunnat: Set<string>,
   selectedSchools: Set<string>,
 ) {
-  const bySchool = useMemo(() => {
+  const byFilters = useMemo(() => {
     const items = data ?? [];
-    return selectedSchools.size ? items.filter((t) => selectedSchools.has(t.oppilaitosNimi.fi ?? "")) : items;
-  }, [data, selectedSchools]);
+    return items.filter(
+      (t) =>
+        (!selectedSektorit.size || selectedSektorit.has(t.koulutustyyppi)) &&
+        (!selectedKunnat.size || t.kunnat.some((k) => selectedKunnat.has(k))) &&
+        (!selectedSchools.size || selectedSchools.has(t.oppilaitosNimi.fi ?? "")),
+    );
+  }, [data, selectedSektorit, selectedKunnat, selectedSchools]);
 
-  const fuse = useMemo(() => new Fuse(bySchool, FUSE_OPTIONS), [bySchool]);
+  const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
 
   return useMemo(() => {
     const normalizedSearch = searchTerm.trim();
-    return normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : bySchool;
-  }, [fuse, bySchool, searchTerm]);
+    return normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : byFilters;
+  }, [fuse, byFilters, searchTerm]);
 }

@@ -1,18 +1,16 @@
 import {
+  Accordion,
   Checkmark,
   Heading,
   Listbox,
   Separator,
+  Span,
   Stack,
   Text,
   createListCollection,
   useListboxItemContext,
+  type ListCollection,
 } from "@chakra-ui/react";
-
-const ItemCheckmark = () => {
-  const { selected, disabled } = useListboxItemContext();
-  return <Checkmark filled size="sm" checked={selected} disabled={disabled} />;
-};
 import PageContainer from "@/layout/PageContainer";
 import Pagination from "@/components/Pagination";
 import { useData } from "vike-react/useData";
@@ -26,25 +24,99 @@ import type { SchoolsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
 
+const SEKTORI_LABELS: Record<string, string> = {
+  amk: "Ammattikorkeakoulu",
+  yo: "Yliopisto",
+};
+
+function toCollection(values: (string | undefined)[] | undefined, label = (v: string) => v) {
+  const unique = [...new Set(values?.filter((v): v is string => Boolean(v)))].sort();
+  return createListCollection({ items: unique.map((v) => ({ label: label(v), value: v })) });
+}
+
+const ItemCheckmark = () => {
+  const { selected, disabled } = useListboxItemContext();
+  return <Checkmark filled size="sm" checked={selected} disabled={disabled} />;
+};
+
+interface FilterItemProps {
+  value: string;
+  label: string;
+  collection: ListCollection<{ label: string; value: string }>;
+  selected: Set<string>;
+  onChange: (values: string[]) => void;
+}
+
+function FilterItem({ value, label, collection, selected, onChange }: FilterItemProps) {
+  return (
+    <Accordion.Item value={value}>
+      <Accordion.ItemTrigger>
+        <Span flex="1">
+          {label}
+          {selected.size > 0 ? ` (${selected.size})` : ""}
+        </Span>
+        <Accordion.ItemIndicator />
+      </Accordion.ItemTrigger>
+      <Accordion.ItemContent>
+        <Accordion.ItemBody>
+          <Listbox.Root
+            selectionMode="multiple"
+            collection={collection}
+            value={[...selected]}
+            onValueChange={(details) => onChange(details.value)}
+          >
+            <Listbox.Content maxH="56" gap={2}>
+              {collection.items.map((item) => (
+                <Listbox.Item key={item.value} item={item}>
+                  <ItemCheckmark />
+                  <Listbox.ItemText mb="2px">{item.label}</Listbox.ItemText>
+                </Listbox.Item>
+              ))}
+            </Listbox.Content>
+          </Listbox.Root>
+        </Accordion.ItemBody>
+      </Accordion.ItemContent>
+    </Accordion.Item>
+  );
+}
+
 export default function SchoolsListPage() {
   const ssrData = useData<SchoolsResponse>();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
+  const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
   const query = useSchoolsQuery(ssrData);
-  const toteutukset = query.data && query.data.flatMap((k) => k.toteutukset);
-  const uniqueSchools = useMemo(
-    () => [...new Set(toteutukset?.map((t) => t.oppilaitosNimi.fi ?? "").filter(Boolean))].sort(),
-    [toteutukset],
+  const toteutukset = useMemo(
+    () => query.data?.flatMap((k) => k.toteutukset.map((t) => ({ ...t, koulutustyyppi: k.koulutustyyppi }))),
+    [query.data],
   );
-  const schoolCollection = useMemo(
-    () => createListCollection({ items: uniqueSchools.map((s) => ({ label: s, value: s })) }),
-    [uniqueSchools],
+  const sektoriCollection = useMemo(
+    () =>
+      toCollection(
+        query.data?.map((k) => k.koulutustyyppi),
+        (s) => SEKTORI_LABELS[s] ?? s,
+      ),
+    [query.data],
   );
+  const kuntaCollection = useMemo(() => toCollection(toteutukset?.flatMap((t) => t.kunnat)), [toteutukset]);
+  const schoolCollection = useMemo(() => toCollection(toteutukset?.map((t) => t.oppilaitosNimi.fi)), [toteutukset]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
-  const filteredData = useFilteredDegrees(toteutukset, debouncedSearchTerm, selectedSchools);
+  const filteredData = useFilteredDegrees(
+    toteutukset,
+    debouncedSearchTerm,
+    selectedSektorit,
+    selectedKunnat,
+    selectedSchools,
+  );
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
+  const selectFilter = (setter: (values: Set<string>) => void) => (values: string[]) => {
+    setter(new Set(values));
+    setPage(1);
+  };
 
   const header = (
     <Stack gap={1}>
@@ -66,27 +138,29 @@ export default function SchoolsListPage() {
         }}
         placeholder="Etsi koulutuksia"
       />
-      <Text color="fg.muted" fontSize="sm" ml={2} p={2}>
-        Suodata koulujen perusteella
-      </Text>
-      <Listbox.Root
-        selectionMode="multiple"
-        collection={schoolCollection}
-        value={[...selectedSchools]}
-        onValueChange={(details) => {
-          setSelectedSchools(new Set(details.value));
-          setPage(1);
-        }}
-      >
-        <Listbox.Content maxH={{ base: "56", md: "100%" }} gap={2}>
-          {schoolCollection.items.map((item) => (
-            <Listbox.Item key={item.value} item={item}>
-              <ItemCheckmark />
-              <Listbox.ItemText mb="2px">{item.label}</Listbox.ItemText>
-            </Listbox.Item>
-          ))}
-        </Listbox.Content>
-      </Listbox.Root>
+      <Accordion.Root multiple>
+        <FilterItem
+          value="sektori"
+          label="Sektori"
+          collection={sektoriCollection}
+          selected={selectedSektorit}
+          onChange={selectFilter(setSelectedSektorit)}
+        />
+        <FilterItem
+          value="kunta"
+          label="Kunta"
+          collection={kuntaCollection}
+          selected={selectedKunnat}
+          onChange={selectFilter(setSelectedKunnat)}
+        />
+        <FilterItem
+          value="koulu"
+          label="Koulu"
+          collection={schoolCollection}
+          selected={selectedSchools}
+          onChange={selectFilter(setSelectedSchools)}
+        />
+      </Accordion.Root>
     </Stack>
   );
 
