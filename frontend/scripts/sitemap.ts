@@ -5,11 +5,11 @@ import { slugifySchoolName } from "../src/components/slug";
 const date = new Date().toISOString().split("T")[0];
 const paths = [
   "/",
-  "/hakijamaarat",
-  "/koulutukset",
-  "/koulut",
-  "/trendit",
-  ...schoolNames().map((name) => `/koulut/${slugifySchoolName(name)}`),
+  "/hakijamaarat/",
+  "/koulutukset/",
+  "/koulut/",
+  "/trendit/",
+  ...schoolNames().map((name) => `/koulut/${slugifySchoolName(name)}/`),
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

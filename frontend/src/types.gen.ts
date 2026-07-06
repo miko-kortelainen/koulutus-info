@@ -28,11 +28,16 @@ export interface OpintopolkuData {
 export interface School {
   koulutukset: Koulutus[];
   toteutukset: Toteutus[];
+  koulutustyyppi: string;
 }
 export interface Toteutus {
   toteutusOid: string;
   toteutusNimi: LanguageStrings;
   oppilaitosNimi: LanguageStrings;
+  kunnat: Kunta[];
+}
+export interface Kunta {
+  nimi: LanguageStrings;
 }
 export interface Koulutus {
   nimi: LanguageStrings;
@@ -49,12 +54,14 @@ export interface LanguageStrings {
 export type SchoolsResponse = KoulutusEntry[];
 export interface KoulutusEntry {
   nimi: LanguageStrings;
+  koulutustyyppi: string;
   toteutukset: ToteutusEntry[];
 }
 export interface ToteutusEntry {
   toteutusOid: string;
   toteutusNimi: LanguageStrings;
   oppilaitosNimi: LanguageStrings;
+  kunnat: string[];
 }
 
 //////////
@@ -72,6 +79,7 @@ export interface StatisticsEntry {
   kooditHakukohde: string;
   hakukohde: string;
   korkeakoulu?: string;
+  kuntaHakukohde?: string;
   koulutuksenKieli?: string;
   sektori?: string;
   koulutusalaTaso1?: string;

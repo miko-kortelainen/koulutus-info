@@ -1,56 +1,75 @@
-import { Badge, Button, Center, Heading, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
-import { HiCursorClick } from "react-icons/hi";
-import { navigate } from "vike/client/router";
+import { Group, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "../../theme";
+import useCountdown from "./hooks/useCountdown";
+import QuickLinkCard from "./components/QuickLinkCard";
+import { quickLinks } from "./components/quickLinks";
 
 export default function LandingPage() {
-  function navigateToStats() {
-    navigate("/hakijamaarat");
-  }
+  const timeLeft = useCountdown();
+
+  const countdownTiles = timeLeft
+    ? [
+        { value: timeLeft.days, label: "päivää" },
+        { value: timeLeft.hours, label: "tuntia" },
+        { value: timeLeft.minutes, label: "minuuttia" },
+      ]
+    : [];
+
+  const hero = (
+    <VStack gap={{ base: "14", md: "20" }} textAlign="center" alignItems="center">
+      <Stack gap={{ base: "2", md: "7" }}>
+        <VStack gap={0}>
+          <Group flexDir="column">
+            <Image src="/images/logo.png" alt="yhteishaku.app" boxSize={{ base: "16", md: "28" }} />
+            <Heading as="h1" size={{ base: "3xl", md: "5xl" }} fontWeight="bold" letterSpacing="widest">
+              yhteishaku.app
+            </Heading>
+          </Group>
+
+          <Text fontSize={{ base: "sm", md: "md" }} color="fg.muted" fontWeight="semibold" textWrap="pretty">
+            Opiskelemaan pyrkivän paras työkalu!
+          </Text>
+        </VStack>
+      </Stack>
+    </VStack>
+  );
+
+  const countdown = countdownTiles.length > 0 && (
+    <VStack>
+      <Text fontSize={{ base: "xs", md: "md" }} color="fg.muted" letterSpacing="wide">
+        Syksyn 2026 yhteishaun alkuun
+      </Text>
+      <SimpleGrid columns={3} gap={6} textAlign="center" width="100%">
+        {countdownTiles.map(({ value, label }) => (
+          <VStack key={label} gap={0}>
+            <Heading size="2xl" color={COLORS.accent}>
+              {value}
+            </Heading>
+            <Text fontSize={{ base: "xs", md: "md" }} color="fg.muted">
+              {label}
+            </Text>
+          </VStack>
+        ))}
+      </SimpleGrid>
+    </VStack>
+  );
+
+  const quickLinksSection = (
+    <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} width="100%">
+      {quickLinks.map((link) => (
+        <QuickLinkCard key={link.href} {...link} />
+      ))}
+    </SimpleGrid>
+  );
 
   return (
-    <>
-      <Center flex={1}>
-        <Stack gap={{ base: "14", md: "20" }} px="10" textAlign="center" alignItems="center">
-          <Stack gap={{ base: "4", md: "7" }}>
-            <VStack>
-              <Image src="/images/logo.png" alt="yhteishaku.app" boxSize={{ base: "16", md: "28" }} />
-              <Heading as="h1" size={{ base: "3xl", md: "5xl" }} fontWeight="bold" letterSpacing="widest">
-                yhteishaku.app
-              </Heading>
-            </VStack>
-            <VStack>
-              <Text fontSize={{ base: "md", md: "xl" }} fontWeight="semibold" textWrap="pretty">
-                Selaa ja vertaile korkeakoulujen yhteishaun
-              </Text>
-              <HStack justifyContent="center" gap={4} width="100%">
-                <Badge letterSpacing="wide" size={{ base: "md", md: "lg" }} bg={COLORS.accent} color={COLORS.text}>
-                  Hakijamääriä
-                </Badge>
-
-                <Badge letterSpacing="wide" size={{ base: "md", md: "lg" }} bg={COLORS.accent} color={COLORS.text}>
-                  Trendejä
-                </Badge>
-
-                <Badge letterSpacing="wide" size={{ base: "md", md: "lg" }} bg={COLORS.accent} color={COLORS.text}>
-                  Koulutuksia
-                </Badge>
-              </HStack>
-            </VStack>
-          </Stack>
-
-          <Button
-            size={{ base: "xs", md: "lg" }}
-            onClick={navigateToStats}
-            width={{ base: "80%" }}
-            letterSpacing="wide"
-            bgColor={COLORS.accent}
-            color={COLORS.text}
-          >
-            Aloitetaan! <HiCursorClick />
-          </Button>
-        </Stack>
-      </Center>
-    </>
+    <PageContainer>
+      <VStack gap={10} flex={1} justifyContent="center">
+        {hero}
+        {countdown}
+        {quickLinksSection}
+      </VStack>
+    </PageContainer>
   );
 }

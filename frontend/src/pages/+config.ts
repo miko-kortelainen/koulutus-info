@@ -6,4 +6,5 @@ export default {
   prerender: true,
   extends: vikeReact,
   htmlAttributes: { lang: "fi" },
+  trailingSlash: true,
 } satisfies Config;

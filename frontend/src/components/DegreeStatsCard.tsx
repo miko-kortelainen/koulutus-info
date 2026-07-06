@@ -28,7 +28,7 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
         mr="auto"
         size={{ base: "sm", md: "lg" }}
       >
-        <a href={`/koulut/${slugifySchoolName(degree.korkeakoulu ?? "")}`}>
+        <a href={`/koulut/${slugifySchoolName(degree.korkeakoulu ?? "")}/`}>
           <HiLocationMarker /> {degree.korkeakoulu}
         </a>
       </Badge>

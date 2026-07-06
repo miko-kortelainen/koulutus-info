@@ -18,19 +18,33 @@ test("homepage loads and nav drawer opens", async ({ page }) => {
   await openNavDrawer(page);
 });
 
+test("homepage quick links point to their pages", async ({ page }) => {
+  await page.goto("/");
+
+  for (const [label, url] of [
+    ["hakijamäärät", "/hakijamaarat/"],
+    ["koulutukset", "/koulutukset/"],
+    ["koulut", "/koulut/"],
+    ["trendit", "/trendit/"],
+  ] as const) {
+    await expect(page.getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) })).toHaveAttribute("href", url);
+  }
+});
+
 test("nav links navigate to all pages", async ({ page }) => {
   await page.goto("/");
   const nav = page.getByRole("navigation", { name: NAV_LABEL });
 
   // drawer closes on link click, so reopen before each navigation
   for (const [label, url] of [
-    ["hakijamäärät", "/hakijamaarat"],
-    ["koulutukset", "/koulutukset"],
-    ["koulut", "/koulut"],
-    ["trendit", "/trendit"],
-    ["hukassa?", "/hukassa"],
-    ["palaute", "/palaute"],
-    ["ukk", "/ukk"],
+    ["hakijamäärät", "/hakijamaarat/"],
+    ["koulutukset", "/koulutukset/"],
+    ["koulut", "/koulut/"],
+    ["tallennetut", "/tallennetut/"],
+    ["trendit", "/trendit/"],
+    ["hukassa?", "/hukassa/"],
+    ["palaute", "/palaute/"],
+    ["ukk", "/ukk/"],
   ] as const) {
     await openNavDrawer(page);
     // anchored regex: nav link names are "label + description" concatenated, and short labels
@@ -55,11 +69,11 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
   await page.goto("/koulutukset");
-  await expect(page.getByRole("option").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible({ timeout: 10000 });
 
   await search.clear();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
@@ -79,9 +93,29 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 });
 
+test("/hakijamaarat: koulu filter narrows results", async ({ page }) => {
+  await page.goto("/hakijamaarat");
+  await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
+
+  // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
+  await page.getByRole("button", { name: "Koulu" }).click();
+  const options = page.getByRole("option");
+  await expect(options.first()).toBeVisible({ timeout: 10000 });
+
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+
+  // deselect → unfiltered results return
+  await options.first().click();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+});
+
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
   await page.goto("/koulutukset");
+  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
+  // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
+  await page.getByRole("button", { name: "Koulu" }).click();
   const options = page.getByRole("option");
   await expect(options.first()).toBeVisible({ timeout: 10000 });
 
@@ -100,6 +134,24 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   // deselect first → unfiltered results return
   await options.first().click();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+});
+
+test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears it", async ({ page }) => {
+  await page.goto("/koulutukset");
+  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
+
+  // click can land before hydration, so retry until the toggle actually takes effect
+  await expect(async () => {
+    await page.getByRole("button", { name: "Tallenna" }).first().click();
+    await expect(page.getByRole("button", { name: "Poista tallennetuista" }).first()).toBeVisible({ timeout: 1000 });
+  }).toPass();
+
+  await page.goto("/tallennetut");
+  await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).not.toBeVisible();
+  await expect(page.getByRole("button", { name: "Poista tallennetuista" })).toHaveCount(1);
+
+  await page.getByRole("button", { name: "Poista tallennetuista" }).click();
+  await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).toBeVisible();
 });
 
 test("/hukassa: search returns suggestion results", async ({ page }) => {
@@ -138,7 +190,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
 
   await page.getByRole("link", { name: "Vertaile" }).click();
   // vuosi=2026 matches the hardcoded default year fallback in pages/vertaile/+Page.tsx — bump both together
-  await expect(page).toHaveURL(/\/vertaile\?a=.+&b=.+&vuosi=2026/);
+  await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026/);
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
   await expect(page.getByText("Kaikki hakijat")).toHaveCount(2);
