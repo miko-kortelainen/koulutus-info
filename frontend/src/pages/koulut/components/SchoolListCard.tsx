@@ -60,7 +60,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
 
   return (
     <Card.Root size="sm" asChild>
-      <a href={`/koulut/${school.slug}`}>
+      <a href={`/koulut/${school.slug}/`}>
         <Card.Body>
           <VStack alignItems="flex-start">
             {nameRow}

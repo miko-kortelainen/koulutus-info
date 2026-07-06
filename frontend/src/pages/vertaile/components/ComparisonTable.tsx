@@ -44,7 +44,17 @@ function PairRow({ left, right }: { left: ReactNode; right: ReactNode }) {
   );
 }
 
-function StatCard({ label, value, trend, badge }: { label: string; value: ReactNode; trend?: Trend; badge?: ReactNode }) {
+function StatCard({
+  label,
+  value,
+  trend,
+  badge,
+}: {
+  label: string;
+  value: ReactNode;
+  trend?: Trend;
+  badge?: ReactNode;
+}) {
   return (
     <Card.Root size="sm" flex={1} minW={0}>
       <Card.Body>

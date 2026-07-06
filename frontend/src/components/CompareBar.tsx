@@ -11,7 +11,7 @@ interface CompareBarProps {
 export default function CompareBar({ selected, year, onRemove }: CompareBarProps) {
   const compareHref =
     selected.length === 2
-      ? `/vertaile?a=${encodeURIComponent(selected[0].kooditHakukohde)}&b=${encodeURIComponent(selected[1].kooditHakukohde)}&vuosi=${year}`
+      ? `/vertaile/?a=${encodeURIComponent(selected[0].kooditHakukohde)}&b=${encodeURIComponent(selected[1].kooditHakukohde)}&vuosi=${year}`
       : undefined;
 
   return (

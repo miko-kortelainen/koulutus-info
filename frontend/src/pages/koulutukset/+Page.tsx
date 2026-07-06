@@ -1,18 +1,4 @@
-import {
-  Checkmark,
-  Heading,
-  Listbox,
-  Separator,
-  Stack,
-  Text,
-  createListCollection,
-  useListboxItemContext,
-} from "@chakra-ui/react";
-
-const ItemCheckmark = () => {
-  const { selected, disabled } = useListboxItemContext();
-  return <Checkmark filled size="sm" checked={selected} disabled={disabled} />;
-};
+import { Accordion, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
 import Pagination from "@/components/Pagination";
 import { useData } from "vike-react/useData";
@@ -22,27 +8,46 @@ import { useMemo, useState } from "react";
 import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
+import { toCollection, FilterItem, selectFilter } from "@/components/FilterAccordion";
 import type { SchoolsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
+
+const SEKTORI_LABELS: Record<string, string> = {
+  amk: "Ammattikorkeakoulu",
+  yo: "Yliopisto",
+};
 
 export default function SchoolsListPage() {
   const ssrData = useData<SchoolsResponse>();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
+  const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
   const query = useSchoolsQuery(ssrData);
-  const toteutukset = query.data && query.data.flatMap((k) => k.toteutukset);
-  const uniqueSchools = useMemo(
-    () => [...new Set(toteutukset?.map((t) => t.oppilaitosNimi.fi ?? "").filter(Boolean))].sort(),
-    [toteutukset],
+  const toteutukset = useMemo(
+    () => query.data?.flatMap((k) => k.toteutukset.map((t) => ({ ...t, koulutustyyppi: k.koulutustyyppi }))),
+    [query.data],
   );
-  const schoolCollection = useMemo(
-    () => createListCollection({ items: uniqueSchools.map((s) => ({ label: s, value: s })) }),
-    [uniqueSchools],
+  const sektoriCollection = useMemo(
+    () =>
+      toCollection(
+        query.data?.map((k) => k.koulutustyyppi),
+        (s) => SEKTORI_LABELS[s] ?? s,
+      ),
+    [query.data],
   );
+  const kuntaCollection = useMemo(() => toCollection(toteutukset?.flatMap((t) => t.kunnat)), [toteutukset]);
+  const schoolCollection = useMemo(() => toCollection(toteutukset?.map((t) => t.oppilaitosNimi.fi)), [toteutukset]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
-  const filteredData = useFilteredDegrees(toteutukset, debouncedSearchTerm, selectedSchools);
+  const filteredData = useFilteredDegrees(
+    toteutukset,
+    debouncedSearchTerm,
+    selectedSektorit,
+    selectedKunnat,
+    selectedSchools,
+  );
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
@@ -66,27 +71,29 @@ export default function SchoolsListPage() {
         }}
         placeholder="Etsi koulutuksia"
       />
-      <Text color="fg.muted" fontSize="sm" ml={2} p={2}>
-        Suodata koulujen perusteella
-      </Text>
-      <Listbox.Root
-        selectionMode="multiple"
-        collection={schoolCollection}
-        value={[...selectedSchools]}
-        onValueChange={(details) => {
-          setSelectedSchools(new Set(details.value));
-          setPage(1);
-        }}
-      >
-        <Listbox.Content maxH={{ base: "56", md: "100%" }} gap={2}>
-          {schoolCollection.items.map((item) => (
-            <Listbox.Item key={item.value} item={item}>
-              <ItemCheckmark />
-              <Listbox.ItemText mb="2px">{item.label}</Listbox.ItemText>
-            </Listbox.Item>
-          ))}
-        </Listbox.Content>
-      </Listbox.Root>
+      <Accordion.Root multiple>
+        <FilterItem
+          value="sektori"
+          label="Sektori"
+          collection={sektoriCollection}
+          selected={selectedSektorit}
+          onChange={selectFilter(setSelectedSektorit, () => setPage(1))}
+        />
+        <FilterItem
+          value="kunta"
+          label="Kunta"
+          collection={kuntaCollection}
+          selected={selectedKunnat}
+          onChange={selectFilter(setSelectedKunnat, () => setPage(1))}
+        />
+        <FilterItem
+          value="koulu"
+          label="Koulu"
+          collection={schoolCollection}
+          selected={selectedSchools}
+          onChange={selectFilter(setSelectedSchools, () => setPage(1))}
+        />
+      </Accordion.Root>
     </Stack>
   );
 
