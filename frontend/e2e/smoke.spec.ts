@@ -42,7 +42,6 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["koulut", "/koulut/"],
     ["tallennetut", "/tallennetut/"],
     ["trendit", "/trendit/"],
-    ["hukassa?", "/hukassa/"],
     ["palaute", "/palaute/"],
     ["ukk", "/ukk/"],
   ] as const) {
@@ -152,17 +151,6 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
 
   await page.getByRole("button", { name: "Poista tallennetuista" }).click();
   await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).toBeVisible();
-});
-
-test("/hukassa: search returns suggestion results", async ({ page }) => {
-  await page.goto("/hukassa");
-  await expect(page.getByRole("heading", { name: "Hukassa?" })).toBeVisible();
-
-  await page.getByPlaceholder("Minua kiinnostaa...").fill("ohjelmointi ja tietotekniikka");
-  await page.getByRole("button", { name: "Hae" }).click();
-
-  await expect(page.getByText("Sinulle sopivimmat koulutukset:")).toBeVisible({ timeout: 15000 });
-  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible();
 });
 
 test("/palaute: submits feedback and shows thank you message", async ({ page }) => {
