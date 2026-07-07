@@ -3,7 +3,7 @@ import { Alert, Heading, Link, Separator, Skeleton, Stack, Text } from "@chakra-
 import { usePageContext } from "vike-react/usePageContext";
 import PageContainer from "@/layout/PageContainer";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
-import { YEAR_OPTIONS, type YearOption } from "@/pages/hakijamaarat/components/yearOptions";
+import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/pages/hakijamaarat/components/yearOptions";
 import ComparisonTable from "./components/ComparisonTable";
 
 export default function ComparePage() {
@@ -17,7 +17,7 @@ export default function ComparePage() {
   );
 
   const { a, b, vuosi } = mounted ? urlParsed.search : {};
-  const year: YearOption = YEAR_OPTIONS.some((y) => y.value === vuosi) ? (vuosi as YearOption) : "2026";
+  const year: YearOption = YEAR_OPTIONS.some((y) => y.value === vuosi) ? (vuosi as YearOption) : CURRENT_YEAR;
   const hasParams = Boolean(a && b);
   const query = useStatisticsQuery(year, undefined, hasParams);
 

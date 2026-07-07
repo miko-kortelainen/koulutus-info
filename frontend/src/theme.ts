@@ -14,11 +14,6 @@ export const COLORS = {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const config = defineConfig({
-  globalCss: {
-    // ponytail: stops mobile bounce at scroll edges, which triggers toolbar flicker (Chromium via body, WebKit via html)
-    html: { overscrollBehaviorY: "contain" },
-    body: { overscrollBehaviorY: "contain" },
-  },
   theme: {
     tokens: {
       colors: {
@@ -32,7 +27,6 @@ const config = defineConfig({
     semanticTokens: {
       colors: {
         bg: {
-          // DEFAULT: { value: "{colors.bg}" },
           panel: { value: "{colors.surfaceMuted}" },
           muted: { value: "{colors.surfaceMuted}" },
         },

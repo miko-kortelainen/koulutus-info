@@ -42,7 +42,6 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["koulut", "/koulut/"],
     ["tallennetut", "/tallennetut/"],
     ["trendit", "/trendit/"],
-    ["hukassa?", "/hukassa/"],
     ["palaute", "/palaute/"],
     ["ukk", "/ukk/"],
   ] as const) {
@@ -154,17 +153,6 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
   await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).toBeVisible();
 });
 
-test("/hukassa: search returns suggestion results", async ({ page }) => {
-  await page.goto("/hukassa");
-  await expect(page.getByRole("heading", { name: "Hukassa?" })).toBeVisible();
-
-  await page.getByPlaceholder("Minua kiinnostaa...").fill("ohjelmointi ja tietotekniikka");
-  await page.getByRole("button", { name: "Hae" }).click();
-
-  await expect(page.getByText("Sinulle sopivimmat koulutukset:")).toBeVisible({ timeout: 15000 });
-  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible();
-});
-
 test("/palaute: submits feedback and shows thank you message", async ({ page }) => {
   // formsubmit.co is a third-party form backend — stub it so its downtime can't fail this suite
   await page.route("https://formsubmit.co/**", (route) =>
@@ -189,7 +177,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2);
 
   await page.getByRole("link", { name: "Vertaile" }).click();
-  // vuosi=2026 matches the hardcoded default year fallback in pages/vertaile/+Page.tsx — bump both together
+  // vuosi=2026 mirrors CURRENT_YEAR in pages/hakijamaarat/components/yearOptions.ts — update together
   await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026/);
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });

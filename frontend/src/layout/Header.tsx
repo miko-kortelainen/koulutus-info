@@ -7,7 +7,6 @@ import {
   HiOutlineQuestionMarkCircle,
   HiOutlineTrendingUp,
   HiMenu,
-  HiOutlineEmojiSad,
   HiOutlineLibrary,
   HiOutlineHeart,
 } from "react-icons/hi";
@@ -42,12 +41,6 @@ const links = [
     label: "trendit",
     description: "Vertaa alojen ja koulujen hakijamääriä",
     icon: HiOutlineTrendingUp,
-  },
-  {
-    href: "/hukassa/",
-    label: "hukassa?",
-    description: "Apua koulutusvalinnan tekemiseen",
-    icon: HiOutlineEmojiSad,
   },
   { href: "/ukk/", label: "ukk", description: "Usein kysytyt kysymykset", icon: HiOutlineQuestionMarkCircle },
   { href: "/palaute/", label: "palaute", description: "Anna palautetta tai kehitysehdotus", icon: HiOutlineChatAlt2 },

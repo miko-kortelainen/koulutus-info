@@ -1,9 +1,7 @@
 import fs from "fs";
 import { slugifySchoolName } from "../components/slug";
-import { YEAR_OPTIONS } from "../pages/hakijamaarat/components/yearOptions";
+import { CURRENT_YEAR } from "../pages/hakijamaarat/components/yearOptions";
 import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
-
-export const CURRENT_YEAR = YEAR_OPTIONS[0].value;
 
 const cache = new Map<string, unknown>();
 
