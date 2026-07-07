@@ -4,8 +4,8 @@ import { useData } from "vike-react/useData";
 import type { SchoolListItem } from "./+data";
 import { COLORS } from "@/theme";
 import SchoolListCard from "./components/SchoolListCard";
+import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 
-// ponytail: every school has statistics rows today; add a fallback section if stats-less schools ever appear
 const SECTIONS = [
   { sektori: "Yliopistokoulutus", heading: "Yliopistot" },
   { sektori: "Ammattikorkeakoulukoulutus", heading: "Ammattikorkeakoulut" },
@@ -20,7 +20,7 @@ export default function SchoolIndexPage() {
         Koulut
       </Heading>
       <Text color="fg.muted" fontSize="sm">
-        Tilastovuoden 2026 yhteishaussa olevat koulut.
+        Tilastovuoden {CURRENT_YEAR} yhteishaussa olevat koulut.
       </Text>
       <Separator mt={2} />
     </Stack>

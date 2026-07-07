@@ -35,10 +35,10 @@ export default function LandingPage() {
     </VStack>
   );
 
-  const countdown = countdownTiles.length > 0 && (
+  const countdown = timeLeft && (
     <VStack>
       <Text fontSize={{ base: "xs", md: "md" }} color="fg.muted" letterSpacing="wide">
-        Syksyn 2026 yhteishaun alkuun
+        {timeLeft.label} alkuun
       </Text>
       <SimpleGrid columns={3} gap={6} textAlign="center" width="100%">
         {countdownTiles.map(({ value, label }) => (

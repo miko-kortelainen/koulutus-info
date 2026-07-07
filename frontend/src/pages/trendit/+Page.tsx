@@ -3,7 +3,7 @@ import { Alert, Box, Heading, Select, Stack, Text, createListCollection } from "
 import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
 import YearControl from "@/pages/hakijamaarat/components/YearControl";
-import { type YearOption, YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
+import { type YearOption, YEAR_OPTIONS, CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import useTrendsData from "./hooks/useTrendsData";
 import { useKoulutusalaTrends } from "./hooks/useKoulutusalaTrends";
@@ -15,7 +15,7 @@ import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
 
 export default function TrendsPage() {
   const ssrData = useData<StatisticsResponse>();
-  const [selectedYear, setSelectedYear] = useState<YearOption>("2026");
+  const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
   const [compareYear, setCompareYear] = useState<YearOption | "">("");
 
   const compareCollection = useMemo(
@@ -26,7 +26,7 @@ export default function TrendsPage() {
     [selectedYear],
   );
 
-  const query = useStatisticsQuery(selectedYear, selectedYear === "2026" ? ssrData : undefined);
+  const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? ssrData : undefined);
   const compareQuery = useStatisticsQuery(compareYear as YearOption, undefined, !!compareYear);
 
   const koulutusalaTrends = useKoulutusalaTrends(ssrData);

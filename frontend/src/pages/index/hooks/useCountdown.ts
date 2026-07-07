@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
-
-const YHTEISHAKU_PAATTYY = new Date("2026-08-31T23:59:59");
+import { YHTEISHAKU_ROUNDS } from "@/config/season";
 
 interface TimeLeft {
   days: number;
   hours: number;
   minutes: number;
+  label: string;
 }
 
-function computeTimeLeft(): TimeLeft {
-  const diffMs = Math.max(0, YHTEISHAKU_PAATTYY.getTime() - Date.now());
+function computeTimeLeft(): TimeLeft | undefined {
+  const now = Date.now();
+  const nextRound = YHTEISHAKU_ROUNDS.find((round) => new Date(round.start).getTime() > now);
+  if (!nextRound) return undefined;
+
+  const diffMs = new Date(nextRound.start).getTime() - now;
   return {
     days: Math.floor(diffMs / (1000 * 60 * 60 * 24)),
     hours: Math.floor((diffMs / (1000 * 60 * 60)) % 24),
     minutes: Math.floor((diffMs / (1000 * 60)) % 60),
+    label: nextRound.label,
   };
 }
 
