@@ -30,44 +30,50 @@ export default function PalautePage() {
     }
   }
 
-  return (
-    <PageContainer>
-      <Stack gap={1}>
-        <Heading as="h1" size="lg">
-          Palaute
-        </Heading>
-        <Text color="fg.muted" textWrapMode="wrap" textWrap="pretty">
-          Huomasitko bugin tai keksitkö kehitysidean? Kerro siitä alla.
-        </Text>
+  const header = (
+    <Stack gap={1}>
+      <Heading as="h1" size="lg">
+        Palaute
+      </Heading>
+      <Text color="fg.muted" textWrapMode="wrap" textWrap="pretty">
+        Huomasitko bugin tai keksitkö kehitysidean? Kerro siitä alla.
+      </Text>
+    </Stack>
+  );
+
+  const form =
+    status === "sent" ? (
+      <Text color="fg.muted">Kiitos palautteesta!</Text>
+    ) : (
+      <Stack as="form" gap={2} onSubmit={handleSubmit}>
+        <Textarea
+          name="message"
+          required
+          minH="10rem"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Kirjoita palautteesi tähän..."
+        />
+
+        <Button
+          bg={COLORS.accent}
+          color={COLORS.text}
+          type="submit"
+          size="sm"
+          alignSelf="flex-end"
+          loading={status === "sending"}
+        >
+          Lähetä
+        </Button>
+
+        {status === "error" && <Text color="fg.muted">Lähetys epäonnistui, yritä uudelleen.</Text>}
       </Stack>
+    );
 
-      {status === "sent" ? (
-        <Text color="fg.muted">Kiitos palautteesta!</Text>
-      ) : (
-        <Stack as="form" gap={2} onSubmit={handleSubmit}>
-          <Textarea
-            name="message"
-            required
-            minH="10rem"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="Kirjoita palautteesi tähän..."
-          />
-
-          <Button
-            bg={COLORS.accent}
-            color={COLORS.text}
-            type="submit"
-            size="sm"
-            alignSelf="flex-start"
-            loading={status === "sending"}
-          >
-            Lähetä
-          </Button>
-
-          {status === "error" && <Text color="fg.muted">Lähetys epäonnistui, yritä uudelleen.</Text>}
-        </Stack>
-      )}
+  return (
+    <PageContainer align="flex-start">
+      {header}
+      {form}
     </PageContainer>
   );
 }
