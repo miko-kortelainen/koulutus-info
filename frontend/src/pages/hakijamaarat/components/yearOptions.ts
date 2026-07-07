@@ -11,3 +11,5 @@ export const YEAR_OPTIONS = [
 ] as const;
 
 export type YearOption = (typeof YEAR_OPTIONS)[number]["value"];
+
+export const CURRENT_YEAR = YEAR_OPTIONS[0].value;

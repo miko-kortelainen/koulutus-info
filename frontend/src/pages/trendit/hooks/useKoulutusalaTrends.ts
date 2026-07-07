@@ -1,6 +1,6 @@
 import { useQueries } from "@tanstack/react-query";
 import { statisticsQueryOptions } from "@/hooks/useStatisticsQuery";
-import { YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
+import { CURRENT_YEAR, YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 
 const years = YEAR_OPTIONS.map((y) => y.value); // newest first
@@ -8,9 +8,9 @@ const chronological = [...years].reverse();
 
 export type TrendPoint = { year: string; total: number };
 
-export function useKoulutusalaTrends(ssrData2026?: StatisticsResponse) {
+export function useKoulutusalaTrends(ssrDataCurrentYear?: StatisticsResponse) {
   const results = useQueries({
-    queries: years.map((year) => statisticsQueryOptions(year, year === "2026" ? ssrData2026 : undefined)),
+    queries: years.map((year) => statisticsQueryOptions(year, year === CURRENT_YEAR ? ssrDataCurrentYear : undefined)),
   });
 
   const isLoading = results.some((r) => r.isPending && !r.data);

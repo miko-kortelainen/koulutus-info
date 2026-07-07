@@ -7,6 +7,7 @@ import DegreeStatCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import type { SchoolPageData } from "./+data";
 import { COLORS } from "@/theme";
+import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 
 export default function SchoolPage() {
   const { schoolName, toteutukset, statistics } = useData<SchoolPageData>();
@@ -22,7 +23,7 @@ export default function SchoolPage() {
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         {toteutukset.length > 0
           ? "Yhteishaussa olevat toteutukset ja edellisten hakijamäärät."
-          : "2026 menneiden yhteishakujen hakijamäärät."}
+          : `${CURRENT_YEAR} menneiden yhteishakujen hakijamäärät.`}
       </Text>
       <Separator mt={2} />
     </Stack>
@@ -50,7 +51,7 @@ export default function SchoolPage() {
 
   const tabs = [
     { value: "koulutukset", label: "Yhteishaku", content: programList, visible: toteutukset.length > 0 },
-    { value: "hakijamaarat", label: "Hakijamäärät 2026", content: statsList, visible: statistics.length > 0 },
+    { value: "hakijamaarat", label: `Hakijamäärät ${CURRENT_YEAR}`, content: statsList, visible: statistics.length > 0 },
   ].filter((t) => t.visible);
 
   return (
