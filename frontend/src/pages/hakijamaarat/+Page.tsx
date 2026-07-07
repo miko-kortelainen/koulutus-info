@@ -11,7 +11,7 @@ import useFilteredStatistics from "./hooks/useFilteredStatistics";
 import useDebounce from "@/hooks/useDebounce";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import YearControl from "./components/YearControl";
-import { type YearOption } from "./components/yearOptions";
+import { CURRENT_YEAR, type YearOption } from "./components/yearOptions";
 import CompareBar from "@/components/CompareBar";
 import { toCollection, FilterItem, selectFilter } from "@/components/FilterAccordion";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
@@ -27,13 +27,13 @@ export default function StatsListPage() {
   const ssrData = useData<StatisticsResponse>();
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
-  const [selectedYear, setSelectedYear] = useState<YearOption>("2026");
+  const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
   const [searchTerm, setSearchTerm] = useState("");
   const [compareSelection, setCompareSelection] = useState<StatisticsEntry[]>([]);
   const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
-  const query = useStatisticsQuery(selectedYear, selectedYear === "2026" ? ssrData : undefined);
+  const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? ssrData : undefined);
 
   const toggleCompare = useCallback((degree: StatisticsEntry) => {
     setCompareSelection((prev) =>
