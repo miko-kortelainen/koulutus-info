@@ -14,11 +14,6 @@ export const COLORS = {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const config = defineConfig({
-  globalCss: {
-    // ponytail: stops mobile bounce at scroll edges, which triggers toolbar flicker (Chromium via body, WebKit via html)
-    html: { overscrollBehaviorY: "contain" },
-    body: { overscrollBehaviorY: "contain" },
-  },
   theme: {
     tokens: {
       colors: {
