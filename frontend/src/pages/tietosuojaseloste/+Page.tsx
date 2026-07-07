@@ -44,28 +44,6 @@ export default function TietosuojaselosteePage() {
         </Stack>
 
         <Stack gap={2}>
-          <Heading size="md">Tekoälyavusteinen haku (/hukassa)</Heading>
-          <Text>
-            /hukassa -sivun hakutoiminto lähettää kirjoittamasi hakutekstin palvelun taustajärjestelmään, joka käyttää
-            Googlen Gemini embedding- rajapintaa sopivien koulutusvaihtoehtojen löytämiseen. Google käsittelee
-            hakutekstin{" "}
-            <Link
-              href="https://ai.google.dev/gemini-api/terms"
-              color="blue.500"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Gemini API -käyttöehtojensa
-            </Link>
-            mukaisesti.
-          </Text>
-          <Text>
-            Yhteishaku.app ei tallenna hakutekstejä eikä yhdistä niitä käyttäjään. Älä kirjoita hakukenttään
-            henkilötietoja, kuten nimeä tai yhteystietoja.
-          </Text>
-        </Stack>
-
-        <Stack gap={2}>
           <Heading size="md">Tietolähteet</Heading>
           <Text>Palvelussa käytetyt lähteet ovat:</Text>
           <Stack as="ul" gap={1} pl={4} listStyleType="disc">
