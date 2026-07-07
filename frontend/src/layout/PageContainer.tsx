@@ -1,12 +1,17 @@
-import { Center, Stack } from "@chakra-ui/react";
+import { Flex, Stack } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 
-export default function PageContainer({ children }: { children: ReactNode }) {
+interface PageContainerProps {
+  children: ReactNode;
+  align?: "center" | "flex-start";
+}
+
+export default function PageContainer({ children, align = "center" }: PageContainerProps) {
   return (
-    <Center flex={1} px={{ base: 4, md: 6 }}>
+    <Flex flex={1} justify="center" align={align} px={{ base: 4, md: 6 }}>
       <Stack height="100%" direction="column" gap={4} py={2} width={{ base: "100%", md: "60rem" }}>
         {children}
       </Stack>
-    </Center>
+    </Flex>
   );
 }

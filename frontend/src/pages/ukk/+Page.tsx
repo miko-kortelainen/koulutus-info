@@ -88,7 +88,7 @@ const header = (
   </Heading>
 );
 
-const questionList = QUESTIONS.map(({ question, answer }) => (
+const questionAccordions = QUESTIONS.map(({ question, answer }) => (
   <Accordion.Item key={question} value={question}>
     <Accordion.ItemTrigger>
       <Heading size="md" flex="1" textAlign="start">
@@ -106,13 +106,17 @@ const questionList = QUESTIONS.map(({ question, answer }) => (
   </Accordion.Item>
 ));
 
+const questionStack = (
+  <Stack gap={6} py={2}>
+    <Accordion.Root collapsible>{questionAccordions}</Accordion.Root>
+  </Stack>
+);
+
 export default function UKKPage() {
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
-      <Stack gap={6} py={8}>
-        <Accordion.Root collapsible>{questionList}</Accordion.Root>
-      </Stack>
+      {questionStack}
     </PageContainer>
   );
 }
