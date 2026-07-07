@@ -5,7 +5,6 @@ import type { SchoolListItem } from "./+data";
 import { COLORS } from "@/theme";
 import SchoolListCard from "./components/SchoolListCard";
 
-// ponytail: every school has statistics rows today; add a fallback section if stats-less schools ever appear
 const SECTIONS = [
   { sektori: "Yliopistokoulutus", heading: "Yliopistot" },
   { sektori: "Ammattikorkeakoulukoulutus", heading: "Ammattikorkeakoulut" },
