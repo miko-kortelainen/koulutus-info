@@ -3,8 +3,8 @@ import { statisticsQueryOptions } from "@/hooks/useStatisticsQuery";
 import { YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 
-const years = YEAR_OPTIONS.map((y) => y.value); // ["2026", "2025", "2024", "2023"]
-const chronological = [...years].reverse(); // ["2023", "2024", "2025", "2026"]
+const years = YEAR_OPTIONS.map((y) => y.value); // newest first
+const chronological = [...years].reverse();
 
 export type TrendPoint = { year: string; total: number };
 
