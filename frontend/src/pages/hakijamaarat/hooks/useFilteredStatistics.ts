@@ -50,6 +50,8 @@ export default function useFilteredStatistics(
           return a.aloituspaikatLkm - b.aloituspaikatLkm;
         case "asc":
           return a.hakukohde.localeCompare(b.hakukohde);
+        default:
+          return 0;
       }
     });
   }, [fuse, byFilters, searchTerm, sortOrder]);

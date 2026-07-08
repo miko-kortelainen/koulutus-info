@@ -51,7 +51,12 @@ export default function SchoolPage() {
 
   const tabs = [
     { value: "koulutukset", label: "Yhteishaku", content: programList, visible: toteutukset.length > 0 },
-    { value: "hakijamaarat", label: `Hakijamäärät ${CURRENT_YEAR}`, content: statsList, visible: statistics.length > 0 },
+    {
+      value: "hakijamaarat",
+      label: `Hakijamäärät ${CURRENT_YEAR}`,
+      content: statsList,
+      visible: statistics.length > 0,
+    },
   ].filter((t) => t.visible);
 
   return (
