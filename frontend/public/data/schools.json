@@ -17,9 +17,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       }
     ]
   },
@@ -41,9 +39,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       }
     ]
   },
@@ -65,9 +61,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -89,9 +83,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       }
     ]
   },
@@ -113,9 +105,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -137,9 +127,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       }
     ]
   },
@@ -161,9 +149,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       }
     ]
   },
@@ -185,9 +171,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031299",
@@ -199,10 +183,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere",
-          "Seinäjoki"
-        ]
+        "kunnat": ["Tampere", "Seinäjoki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002914",
@@ -214,9 +195,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000620",
@@ -228,9 +207,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lappeenranta"
-        ]
+        "kunnat": ["Lappeenranta"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003217",
@@ -242,9 +219,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       }
     ]
   },
@@ -266,9 +241,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       }
     ]
   },
@@ -290,9 +263,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002341",
@@ -304,9 +275,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035989",
@@ -318,9 +287,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000761",
@@ -332,9 +299,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000468",
@@ -346,9 +311,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039141",
@@ -360,9 +323,7 @@
           "sv": "Karelia-ammattikorkeakoulu",
           "en": "Karelia University of Applied Sciences"
         },
-        "kunnat": [
-          "Joensuu"
-        ]
+        "kunnat": ["Joensuu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017197",
@@ -374,9 +335,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000499",
@@ -388,9 +347,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000598",
@@ -402,9 +359,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lappeenranta"
-        ]
+        "kunnat": ["Lappeenranta"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002922",
@@ -416,9 +371,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna"
-        ]
+        "kunnat": ["Savonlinna"]
       }
     ]
   },
@@ -440,9 +393,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -464,9 +415,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       }
     ]
   },
@@ -488,9 +437,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       }
     ]
   },
@@ -512,9 +459,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori"
-        ]
+        "kunnat": ["Pori"]
       }
     ]
   },
@@ -536,9 +481,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       }
     ]
   },
@@ -560,9 +503,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       }
     ]
   },
@@ -584,9 +525,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -608,9 +547,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035100",
@@ -622,9 +559,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030978",
@@ -636,9 +571,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       }
     ]
   },
@@ -660,9 +593,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Riihimäki"
-        ]
+        "kunnat": ["Riihimäki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000996",
@@ -674,9 +605,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori"
-        ]
+        "kunnat": ["Pori"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008423",
@@ -688,9 +617,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000020744",
@@ -702,9 +629,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000549",
@@ -716,9 +641,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001575",
@@ -731,9 +654,7 @@
           "sv": "Karelia-ammattikorkeakoulu",
           "en": "Karelia University of Applied Sciences"
         },
-        "kunnat": [
-          "Joensuu"
-        ]
+        "kunnat": ["Joensuu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000633",
@@ -745,9 +666,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Iisalmi"
-        ]
+        "kunnat": ["Iisalmi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000477",
@@ -759,9 +678,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000618",
@@ -773,9 +690,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       }
     ]
   },
@@ -797,9 +712,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001987",
@@ -811,9 +724,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       }
     ]
   },
@@ -835,9 +746,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       }
     ]
   },
@@ -859,9 +768,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000027643",
@@ -873,9 +780,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000623",
@@ -887,9 +792,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000556",
@@ -901,9 +804,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001972",
@@ -915,9 +816,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna"
-        ]
+        "kunnat": ["Savonlinna"]
       }
     ]
   },
@@ -939,9 +838,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002287",
@@ -953,9 +850,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008486",
@@ -967,9 +862,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000021473",
@@ -981,9 +874,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000024875",
@@ -995,9 +886,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna"
-        ]
+        "kunnat": ["Savonlinna"]
       }
     ]
   },
@@ -1019,9 +908,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Valkeakoski"
-        ]
+        "kunnat": ["Valkeakoski"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031269",
@@ -1033,9 +920,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000599",
@@ -1047,9 +932,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Ylivieska"
-        ]
+        "kunnat": ["Ylivieska"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035995",
@@ -1061,9 +944,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023985",
@@ -1075,9 +956,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001233",
@@ -1089,9 +968,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000539",
@@ -1103,9 +980,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017167",
@@ -1117,9 +992,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       }
     ]
   },
@@ -1141,9 +1014,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000007054",
@@ -1155,9 +1026,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -1179,9 +1048,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Riihimäki"
-        ]
+        "kunnat": ["Riihimäki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035563",
@@ -1193,9 +1060,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008328",
@@ -1207,9 +1072,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035996",
@@ -1221,9 +1084,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038146",
@@ -1235,9 +1096,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038152",
@@ -1249,9 +1108,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038153",
@@ -1263,9 +1120,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001427",
@@ -1277,9 +1132,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000494",
@@ -1291,9 +1144,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023848",
@@ -1305,9 +1156,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023378",
@@ -1319,9 +1168,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       }
     ]
   },
@@ -1343,9 +1190,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -1367,9 +1212,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -1391,9 +1234,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -1415,9 +1256,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -1439,9 +1278,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000024141",
@@ -1453,9 +1290,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023328",
@@ -1467,9 +1302,7 @@
           "sv": "Kajaanin ammattikorkeakoulu",
           "en": "Kajaani University of Applied Sciences"
         },
-        "kunnat": [
-          "Kajaani"
-        ]
+        "kunnat": ["Kajaani"]
       }
     ]
   },
@@ -1491,9 +1324,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       }
     ]
   },
@@ -1515,9 +1346,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -1539,9 +1368,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -1563,9 +1390,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -1587,9 +1412,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -1611,9 +1434,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       }
     ]
   },
@@ -1635,9 +1456,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -1659,9 +1478,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       }
     ]
   },
@@ -1683,9 +1500,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna"
-        ]
+        "kunnat": ["Savonlinna"]
       }
     ]
   },
@@ -1707,9 +1522,7 @@
           "sv": "Jyväskylä universitet",
           "en": "University of Jyväskylä"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -1731,9 +1544,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       }
     ]
   },
@@ -1755,9 +1566,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -1779,9 +1588,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       }
     ]
   },
@@ -1803,9 +1610,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -1827,9 +1632,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000984",
@@ -1841,9 +1644,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000532",
@@ -1855,9 +1656,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000488",
@@ -1869,9 +1668,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -1893,9 +1690,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       }
     ]
   },
@@ -1917,9 +1712,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000420",
@@ -1931,9 +1724,7 @@
           "sv": "Kajaanin ammattikorkeakoulu",
           "en": "Kajaani University of Applied Sciences"
         },
-        "kunnat": [
-          "Kajaani"
-        ]
+        "kunnat": ["Kajaani"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023898",
@@ -1945,9 +1736,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna"
-        ]
+        "kunnat": ["Savonlinna"]
       }
     ]
   },
@@ -1969,9 +1758,7 @@
           "sv": "Jyväskylä universitet",
           "en": "University of Jyväskylä"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       }
     ]
   },
@@ -1994,9 +1781,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       }
     ]
   },
@@ -2018,9 +1803,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -2042,9 +1825,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -2066,9 +1847,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       }
     ]
   },
@@ -2090,9 +1869,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       }
     ]
   },
@@ -2114,9 +1891,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023897",
@@ -2128,9 +1903,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023845",
@@ -2142,9 +1915,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031121",
@@ -2156,9 +1927,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031124",
@@ -2170,9 +1939,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       }
     ]
   },
@@ -2194,9 +1961,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -2218,9 +1983,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -2242,9 +2005,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -2266,9 +2027,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -2290,9 +2049,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003090",
@@ -2304,9 +2061,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008333",
@@ -2318,9 +2073,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000036574",
@@ -2332,9 +2085,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038639",
@@ -2346,9 +2097,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017207",
@@ -2360,9 +2109,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017201",
@@ -2374,9 +2121,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000550",
@@ -2388,9 +2133,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lappeenranta"
-        ]
+        "kunnat": ["Lappeenranta"]
       }
     ]
   },
@@ -2412,9 +2155,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       }
     ]
   },
@@ -2436,9 +2177,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -2460,9 +2199,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000040325",
@@ -2474,9 +2211,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori"
-        ]
+        "kunnat": ["Pori"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037636",
@@ -2488,9 +2223,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037570",
@@ -2502,9 +2235,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Porvoo"
-        ]
+        "kunnat": ["Porvoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037461",
@@ -2516,9 +2247,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037574",
@@ -2530,9 +2259,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037578",
@@ -2544,9 +2271,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037989",
@@ -2558,9 +2283,7 @@
           "sv": "Kajaanin ammattikorkeakoulu",
           "en": "Kajaani University of Applied Sciences"
         },
-        "kunnat": [
-          "Kajaani"
-        ]
+        "kunnat": ["Kajaani"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037866",
@@ -2572,9 +2295,7 @@
           "sv": "Kajaanin ammattikorkeakoulu",
           "en": "Kajaani University of Applied Sciences"
         },
-        "kunnat": [
-          "Kajaani"
-        ]
+        "kunnat": ["Kajaani"]
       }
     ]
   },
@@ -2596,9 +2317,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       }
     ]
   },
@@ -2620,9 +2339,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -2644,12 +2361,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Hyvinkää",
-          "Espoo",
-          "Porvoo",
-          "Lohja"
-        ]
+        "kunnat": ["Hyvinkää", "Espoo", "Porvoo", "Lohja"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001112",
@@ -2661,9 +2373,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000669",
@@ -2675,9 +2385,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000414",
@@ -2689,9 +2397,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Kemi"
-        ]
+        "kunnat": ["Kemi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008630",
@@ -2703,9 +2409,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Valkeakoski"
-        ]
+        "kunnat": ["Valkeakoski"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003376",
@@ -2717,9 +2421,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039139",
@@ -2731,9 +2433,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori"
-        ]
+        "kunnat": ["Pori"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000563",
@@ -2745,9 +2445,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori"
-        ]
+        "kunnat": ["Pori"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031064",
@@ -2759,9 +2457,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031065",
@@ -2773,9 +2469,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000426",
@@ -2787,9 +2481,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000006936",
@@ -2801,9 +2493,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035994",
@@ -2815,9 +2505,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035993",
@@ -2829,9 +2517,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038596",
@@ -2843,9 +2529,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Salo"
-        ]
+        "kunnat": ["Salo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008413",
@@ -2857,9 +2541,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031205",
@@ -2871,9 +2553,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Salo"
-        ]
+        "kunnat": ["Salo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000507",
@@ -2885,9 +2565,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000625",
@@ -2899,9 +2577,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000421",
@@ -2913,9 +2589,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002244",
@@ -2927,9 +2601,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039436",
@@ -2941,11 +2613,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu",
-          "Helsinki",
-          "Pieksämäki"
-        ]
+        "kunnat": ["Oulu", "Helsinki", "Pieksämäki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000613",
@@ -2957,9 +2625,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000408",
@@ -2971,9 +2637,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001493",
@@ -2985,9 +2649,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000503",
@@ -2999,9 +2661,7 @@
           "sv": "Karelia-ammattikorkeakoulu",
           "en": "Karelia University of Applied Sciences"
         },
-        "kunnat": [
-          "Joensuu"
-        ]
+        "kunnat": ["Joensuu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003313",
@@ -3013,9 +2673,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Iisalmi"
-        ]
+        "kunnat": ["Iisalmi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000437",
@@ -3027,9 +2685,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000006621",
@@ -3041,9 +2697,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000393",
@@ -3055,9 +2709,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lappeenranta"
-        ]
+        "kunnat": ["Lappeenranta"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000580",
@@ -3069,9 +2721,7 @@
           "sv": "Kajaanin ammattikorkeakoulu",
           "en": "Kajaani University of Applied Sciences"
         },
-        "kunnat": [
-          "Kajaani"
-        ]
+        "kunnat": ["Kajaani"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002461",
@@ -3083,9 +2733,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna"
-        ]
+        "kunnat": ["Savonlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002207",
@@ -3097,9 +2745,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000605",
@@ -3111,9 +2757,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -3135,11 +2779,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Pori",
-          "Oulu",
-          "Helsinki"
-        ]
+        "kunnat": ["Pori", "Oulu", "Helsinki"]
       }
     ]
   },
@@ -3161,9 +2801,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       }
     ]
   },
@@ -3185,9 +2823,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -3209,9 +2845,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       }
     ]
   },
@@ -3233,9 +2867,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -3257,9 +2889,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -3281,9 +2911,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -3305,9 +2933,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       }
     ]
   },
@@ -3329,9 +2955,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -3353,9 +2977,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       }
     ]
   },
@@ -3377,9 +2999,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -3401,9 +3021,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       }
     ]
   },
@@ -3425,9 +3043,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -3449,10 +3065,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna",
-          "Kouvola"
-        ]
+        "kunnat": ["Savonlinna", "Kouvola"]
       }
     ]
   },
@@ -3474,9 +3087,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -3498,9 +3109,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -3522,9 +3131,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -3546,9 +3153,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       }
     ]
   },
@@ -3570,9 +3175,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -3594,9 +3197,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -3618,9 +3219,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -3642,9 +3241,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -3666,9 +3263,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -3690,9 +3285,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -3714,12 +3307,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Pori",
-          "Pieksämäki",
-          "Oulu",
-          "Helsinki"
-        ]
+        "kunnat": ["Pori", "Pieksämäki", "Oulu", "Helsinki"]
       }
     ]
   },
@@ -3741,13 +3329,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa",
-          "Hyvinkää",
-          "Espoo",
-          "Porvoo",
-          "Lohja"
-        ]
+        "kunnat": ["Vantaa", "Hyvinkää", "Espoo", "Porvoo", "Lohja"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000607",
@@ -3759,9 +3341,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000005556",
@@ -3773,10 +3353,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo",
-          "Vantaa"
-        ]
+        "kunnat": ["Espoo", "Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023178",
@@ -3788,9 +3365,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003101",
@@ -3802,9 +3377,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Kemi"
-        ]
+        "kunnat": ["Kemi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000590",
@@ -3816,9 +3389,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000925",
@@ -3830,9 +3401,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030477",
@@ -3844,9 +3413,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000404",
@@ -3858,9 +3425,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000006937",
@@ -3872,9 +3437,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008418",
@@ -3886,9 +3449,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000024005",
@@ -3900,9 +3461,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000447",
@@ -3914,9 +3473,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001066",
@@ -3928,12 +3485,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Pori",
-          "Pieksämäki",
-          "Oulu",
-          "Helsinki"
-        ]
+        "kunnat": ["Pori", "Pieksämäki", "Oulu", "Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011329",
@@ -3945,9 +3497,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000578",
@@ -3959,9 +3509,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000021076",
@@ -3973,9 +3521,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000021082",
@@ -3987,9 +3533,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001438",
@@ -4001,9 +3545,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000545",
@@ -4015,9 +3557,7 @@
           "sv": "Karelia-ammattikorkeakoulu",
           "en": "Karelia University of Applied Sciences"
         },
-        "kunnat": [
-          "Joensuu"
-        ]
+        "kunnat": ["Joensuu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002349",
@@ -4029,9 +3569,7 @@
           "sv": "Karelia-ammattikorkeakoulu",
           "en": "Karelia University of Applied Sciences"
         },
-        "kunnat": [
-          "Joensuu"
-        ]
+        "kunnat": ["Joensuu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038660",
@@ -4043,9 +3581,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017193",
@@ -4057,9 +3593,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000585",
@@ -4071,9 +3605,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000427",
@@ -4085,9 +3617,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lappeenranta"
-        ]
+        "kunnat": ["Lappeenranta"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023899",
@@ -4099,9 +3629,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000497",
@@ -4113,9 +3641,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -4137,9 +3663,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -4161,9 +3685,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -4185,9 +3707,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -4209,10 +3729,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa",
-          "Espoo"
-        ]
+        "kunnat": ["Vantaa", "Espoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000016243",
@@ -4224,9 +3741,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000483",
@@ -4238,9 +3753,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008330",
@@ -4252,9 +3765,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000016705",
@@ -4266,9 +3777,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000645",
@@ -4280,9 +3789,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017170",
@@ -4294,9 +3801,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008377",
@@ -4308,10 +3813,7 @@
           "sv": "Diakonia-ammattikorkeakoulu",
           "en": "Diaconia University of Applied Sciences"
         },
-        "kunnat": [
-          "Pori",
-          "Helsinki"
-        ]
+        "kunnat": ["Pori", "Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000481",
@@ -4323,9 +3825,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003072",
@@ -4337,9 +3837,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000631",
@@ -4351,9 +3849,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000016983",
@@ -4365,9 +3861,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -4389,9 +3883,7 @@
           "sv": "Jyväskylä universitet",
           "en": "University of Jyväskylä"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       }
     ]
   },
@@ -4413,9 +3905,7 @@
           "sv": "Jyväskylä universitet",
           "en": "University of Jyväskylä"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -4437,9 +3927,7 @@
           "sv": "Jyväskylä universitet",
           "en": "University of Jyväskylä"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       }
     ]
   },
@@ -4461,9 +3949,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000441",
@@ -4475,9 +3961,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000451",
@@ -4489,9 +3973,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011424",
@@ -4503,9 +3985,7 @@
           "sv": "Karelia-ammattikorkeakoulu",
           "en": "Karelia University of Applied Sciences"
         },
-        "kunnat": [
-          "Joensuu"
-        ]
+        "kunnat": ["Joensuu"]
       }
     ]
   },
@@ -4527,10 +4007,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo",
-          "Lohja"
-        ]
+        "kunnat": ["Espoo", "Lohja"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001155",
@@ -4542,11 +4019,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa",
-          "Espoo",
-          "Hyvinkää"
-        ]
+        "kunnat": ["Vantaa", "Espoo", "Hyvinkää"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000449",
@@ -4558,10 +4031,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo",
-          "Hyvinkää"
-        ]
+        "kunnat": ["Espoo", "Hyvinkää"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000573",
@@ -4573,9 +4043,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000506",
@@ -4587,9 +4055,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Rovaniemi"
-        ]
+        "kunnat": ["Rovaniemi"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000502",
@@ -4601,9 +4067,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Tornio"
-        ]
+        "kunnat": ["Tornio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002230",
@@ -4615,9 +4079,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Forssa"
-        ]
+        "kunnat": ["Forssa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000375",
@@ -4629,9 +4091,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000401",
@@ -4643,9 +4103,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Ylivieska"
-        ]
+        "kunnat": ["Ylivieska"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000362",
@@ -4657,9 +4115,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Pietarsaari"
-        ]
+        "kunnat": ["Pietarsaari"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000423",
@@ -4671,10 +4127,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori",
-          "Huittinen"
-        ]
+        "kunnat": ["Pori", "Huittinen"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035384",
@@ -4686,10 +4139,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori",
-          "Huittinen"
-        ]
+        "kunnat": ["Pori", "Huittinen"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003851",
@@ -4701,9 +4151,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008374",
@@ -4715,9 +4163,7 @@
           "sv": "Seinäjoen ammattikorkeakoulu",
           "en": "Seinäjoki University of Applied Sciences"
         },
-        "kunnat": [
-          "Seinäjoki"
-        ]
+        "kunnat": ["Seinäjoki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031208",
@@ -4729,9 +4175,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Salo"
-        ]
+        "kunnat": ["Salo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000560",
@@ -4743,9 +4187,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017071",
@@ -4757,9 +4199,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030887",
@@ -4771,9 +4211,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000021461",
@@ -4785,10 +4223,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki",
-          "Vantaa"
-        ]
+        "kunnat": ["Helsinki", "Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000628",
@@ -4800,10 +4235,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki",
-          "Vantaa"
-        ]
+        "kunnat": ["Helsinki", "Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011276",
@@ -4815,9 +4247,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002685",
@@ -4829,9 +4259,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003268",
@@ -4843,9 +4271,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038035",
@@ -4857,9 +4283,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001982",
@@ -4871,9 +4295,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -4895,9 +4317,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000381",
@@ -4909,9 +4329,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000005840",
@@ -4923,10 +4341,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa",
-          "Espoo"
-        ]
+        "kunnat": ["Vantaa", "Espoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000636",
@@ -4938,9 +4353,7 @@
           "sv": "Lapin ammattikorkeakoulu",
           "en": "Lapland University of Applied Sciences"
         },
-        "kunnat": [
-          "Tornio"
-        ]
+        "kunnat": ["Tornio"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039410",
@@ -4952,9 +4365,7 @@
           "sv": "Oulun ammattikorkeakoulu",
           "en": "Oulu University of Applied Sciences"
         },
-        "kunnat": [
-          "Oulu"
-        ]
+        "kunnat": ["Oulu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000009237",
@@ -4966,9 +4377,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000787",
@@ -4980,9 +4389,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -5004,9 +4411,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       }
     ]
   },
@@ -5028,9 +4433,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       }
     ]
   },
@@ -5052,9 +4455,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       }
     ]
   },
@@ -5076,9 +4477,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -5100,9 +4499,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       }
     ]
   },
@@ -5124,9 +4521,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -5148,9 +4543,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       }
     ]
   },
@@ -5172,9 +4565,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -5196,9 +4587,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -5220,9 +4609,7 @@
           "sv": "Hämeen ammattikorkeakoulu",
           "en": "Häme University of Applied Sciences"
         },
-        "kunnat": [
-          "Hämeenlinna"
-        ]
+        "kunnat": ["Hämeenlinna"]
       }
     ]
   },
@@ -5244,9 +4631,7 @@
           "sv": "LAB-ammattikorkeakoulu",
           "en": "LAB University of Applied Sciences"
         },
-        "kunnat": [
-          "Lahti"
-        ]
+        "kunnat": ["Lahti"]
       }
     ]
   },
@@ -5268,9 +4653,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -5292,10 +4675,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki",
-          "Vantaa"
-        ]
+        "kunnat": ["Helsinki", "Vantaa"]
       }
     ]
   },
@@ -5317,9 +4697,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -5341,9 +4719,7 @@
           "sv": "Jyväskylän ammattikorkeakoulu",
           "en": "Jamk University of Applied Sciences"
         },
-        "kunnat": [
-          "Jyväskylä"
-        ]
+        "kunnat": ["Jyväskylä"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031220",
@@ -5355,9 +4731,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031173",
@@ -5369,9 +4743,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -5393,9 +4765,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039027",
@@ -5407,9 +4777,7 @@
           "sv": "Kajaanin ammattikorkeakoulu",
           "en": "Kajaani University of Applied Sciences"
         },
-        "kunnat": [
-          "Kajaani"
-        ]
+        "kunnat": ["Kajaani"]
       }
     ]
   },
@@ -5431,9 +4799,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       }
     ]
   },
@@ -5455,9 +4821,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       }
     ]
   },
@@ -5479,9 +4843,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Pori"
-        ]
+        "kunnat": ["Pori"]
       }
     ]
   },
@@ -5503,9 +4865,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       }
     ]
   },
@@ -5527,10 +4887,7 @@
           "sv": "Laurea-ammattikorkeakoulu",
           "en": "Laurea University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo",
-          "Vantaa"
-        ]
+        "kunnat": ["Espoo", "Vantaa"]
       }
     ]
   },
@@ -5552,9 +4909,7 @@
           "sv": "Centria-ammattikorkeakoulu",
           "en": "Centria University of Applied Sciences"
         },
-        "kunnat": [
-          "Kokkola"
-        ]
+        "kunnat": ["Kokkola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001018",
@@ -5566,9 +4921,7 @@
           "sv": "Humanistinen ammattikorkeakoulu",
           "en": "Humak University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000922",
@@ -5580,9 +4933,7 @@
           "sv": "Humanistinen ammattikorkeakoulu",
           "en": "Humak University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023846",
@@ -5594,9 +4945,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Mikkeli"
-        ]
+        "kunnat": ["Mikkeli"]
       }
     ]
   },
@@ -5618,9 +4967,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -5642,9 +4989,7 @@
           "sv": "Savonia-ammattikorkeakoulu",
           "en": "Savonia University of Applied Sciences"
         },
-        "kunnat": [
-          "Kuopio"
-        ]
+        "kunnat": ["Kuopio"]
       }
     ]
   },
@@ -5666,9 +5011,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001616",
@@ -5680,9 +5023,7 @@
           "sv": "Tampereen ammattikorkeakoulu",
           "en": "Tampere University of Applied Sciences"
         },
-        "kunnat": [
-          "Tampere"
-        ]
+        "kunnat": ["Tampere"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000009871",
@@ -5694,9 +5035,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000010027",
@@ -5708,9 +5047,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Porvoo"
-        ]
+        "kunnat": ["Porvoo"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001591",
@@ -5723,9 +5060,7 @@
           "sv": "Karelia-ammattikorkeakoulu",
           "en": "Karelia University of Applied Sciences"
         },
-        "kunnat": [
-          "Joensuu"
-        ]
+        "kunnat": ["Joensuu"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001643",
@@ -5737,9 +5072,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       }
     ]
   },
@@ -5761,9 +5094,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -5785,9 +5116,7 @@
           "sv": "Satakunnan ammattikorkeakoulu",
           "en": "Satakunta University of Applied Sciences SAMK"
         },
-        "kunnat": [
-          "Rauma"
-        ]
+        "kunnat": ["Rauma"]
       }
     ]
   },
@@ -5809,9 +5138,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       }
     ]
   },
@@ -5833,9 +5160,7 @@
           "sv": "Vaasan ammattikorkeakoulu",
           "en": "Vaasa University of Applied Sciences"
         },
-        "kunnat": [
-          "Vaasa"
-        ]
+        "kunnat": ["Vaasa"]
       }
     ]
   },
@@ -5857,9 +5182,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Espoo"
-        ]
+        "kunnat": ["Espoo"]
       }
     ]
   },
@@ -5881,9 +5204,7 @@
           "sv": "Yrkeshögskolan Arcada",
           "en": "Arcada University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -5905,10 +5226,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka",
-          "Kouvola"
-        ]
+        "kunnat": ["Kotka", "Kouvola"]
       }
     ]
   },
@@ -5930,9 +5248,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka"
-        ]
+        "kunnat": ["Kotka"]
       }
     ]
   },
@@ -5954,10 +5270,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Savonlinna",
-          "Kouvola"
-        ]
+        "kunnat": ["Savonlinna", "Kouvola"]
       }
     ]
   },
@@ -5979,9 +5292,7 @@
           "sv": "Turun ammattikorkeakoulu",
           "en": "Turku University of Applied Sciences"
         },
-        "kunnat": [
-          "Turku"
-        ]
+        "kunnat": ["Turku"]
       }
     ]
   },
@@ -6003,9 +5314,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -6027,9 +5336,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000486",
@@ -6041,9 +5348,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kouvola"
-        ]
+        "kunnat": ["Kouvola"]
       }
     ]
   },
@@ -6065,9 +5370,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -6089,9 +5392,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -6113,9 +5414,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -6137,9 +5436,7 @@
           "sv": "Metropolia Ammattikorkeakoulu",
           "en": "Metropolia University of Applied Sciences"
         },
-        "kunnat": [
-          "Vantaa"
-        ]
+        "kunnat": ["Vantaa"]
       }
     ]
   },
@@ -6161,9 +5458,7 @@
           "sv": "Haaga-Helia yrkeshögskola",
           "en": "Haaga-Helia University of Applied Sciences"
         },
-        "kunnat": [
-          "Helsinki"
-        ]
+        "kunnat": ["Helsinki"]
       }
     ]
   },
@@ -6185,10 +5480,7 @@
           "sv": "Kaakkois-Suomen ammattikorkeakoulu",
           "en": "South-Eastern Finland University of Applied Sciences Xamk"
         },
-        "kunnat": [
-          "Kotka",
-          "Kouvola"
-        ]
+        "kunnat": ["Kotka", "Kouvola"]
       }
     ]
   }
