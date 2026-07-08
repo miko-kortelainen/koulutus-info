@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "node:fs";
 import { slugifySchoolName } from "../components/slug";
 import { CURRENT_YEAR } from "../pages/hakijamaarat/components/yearOptions";
 import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";

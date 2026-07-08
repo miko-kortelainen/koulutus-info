@@ -1,6 +1,6 @@
 import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { HiHeart, HiLocationMarker, HiOutlineHeart } from "react-icons/hi";
-import { type ToteutusEntry } from "@/types.gen";
+import type { ToteutusEntry } from "@/types.gen";
 import { COLORS } from "@/theme";
 import { slugifySchoolName } from "@/components/slug";
 import useFavorites from "@/hooks/useFavorites";

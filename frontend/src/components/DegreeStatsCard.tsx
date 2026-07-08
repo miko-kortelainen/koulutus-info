@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { Card, Stack, Badge, Text, Stat, HStack, Separator, Button } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
-import { type StatisticsEntry } from "@/types.gen";
+import type { StatisticsEntry } from "@/types.gen";
 import { COLORS } from "@/theme";
 import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
 import { slugifySchoolName } from "@/components/slug";

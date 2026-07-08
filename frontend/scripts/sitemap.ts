@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { writeFileSync } from "node:fs";
 import { schoolNames } from "../src/api/loadData";
 import { slugifySchoolName } from "../src/components/slug";
 
