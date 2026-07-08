@@ -21,7 +21,7 @@ ${paths
     <lastmod>${date}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${i === 0 ? "1.0" : "0.8"}</priority>
-  </url>`
+  </url>`,
   )
   .join("\n")}
 </urlset>
