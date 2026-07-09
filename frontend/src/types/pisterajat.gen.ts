@@ -15,23 +15,16 @@ export interface School {
   programmes: Programme[];
 }
 /**
- * Programme contains the cutoff scores grouped by selection method.
+ * Programme contains the cutoff scores for one programme.
  */
 export interface Programme {
-  name: string;
-  selectionMethods: SelectionMethod[];
-}
-/**
- * SelectionMethod contains the cutoff scores for one selection method.
- */
-export interface SelectionMethod {
   name: string;
   cutoffs: Cutoff[];
 }
 /**
- * Cutoff is one admission cutoff score and its qualifier.
+ * Cutoff is one selection method and its admission cutoff score.
  */
 export interface Cutoff {
-  detail: string;
+  selectionMethod: string;
   score: number /* float64 */;
 }

@@ -10,8 +10,8 @@ import (
 
 func TestRunWritesJSONToStdout(t *testing.T) {
 	inputPath := filepath.Join(t.TempDir(), "pisterajat.csv")
-	csv := "Koulu;Ohjelma;Valintatapa;Tarkenne;Pisteraja\n" +
-		"School A;Programme 1;Certificate;All applicants;100,50\n"
+	csv := "Koulu;Ohjelma;Valintatapa;Pisteraja\n" +
+		"School A;Programme 1;Certificate, all applicants;100,50\n"
 	if err := os.WriteFile(inputPath, []byte(csv), 0644); err != nil {
 		t.Fatal(err)
 	}
@@ -22,7 +22,7 @@ func TestRunWritesJSONToStdout(t *testing.T) {
 		t.Fatalf("run() error = %v", err)
 	}
 
-	want := "[\n  {\n    \"name\": \"School A\",\n    \"programmes\": [\n      {\n        \"name\": \"Programme 1\",\n        \"selectionMethods\": [\n          {\n            \"name\": \"Certificate\",\n            \"cutoffs\": [\n              {\n                \"detail\": \"All applicants\",\n                \"score\": 100.5\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n]\n"
+	want := "[\n  {\n    \"name\": \"School A\",\n    \"programmes\": [\n      {\n        \"name\": \"Programme 1\",\n        \"cutoffs\": [\n          {\n            \"selectionMethod\": \"Certificate, all applicants\",\n            \"score\": 100.5\n          }\n        ]\n      }\n    ]\n  }\n]\n"
 	if stdout.String() != want {
 		t.Errorf("stdout = %q, want %q", stdout.String(), want)
 	}
