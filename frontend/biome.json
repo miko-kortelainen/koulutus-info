@@ -6,7 +6,8 @@
     "useIgnoreFile": false
   },
   "files": {
-    "includes": ["**", "!!**/dist", "!!**/public/icons.svg"]
+    "includes": ["**", "!!**/dist"],
+    "ignoreUnknown": true
   },
   "formatter": {
     "enabled": true,
@@ -14,12 +15,8 @@
     "lineWidth": 120
   },
   "linter": {
-    "enabled": true,
     "rules": {
       "preset": "recommended",
-      "style": {
-        "noNonNullAssertion": "off"
-      },
       "suspicious": {
         "noArrayIndexKey": "off"
       }
