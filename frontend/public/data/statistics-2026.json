@@ -84,18 +84,6 @@
     "ensisijaisetHakijatLkm": 47
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083345",
-    "hakukohde": "Agrologi (AMK), päivätoteutus",
-    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
-    "kuntaHakukohde": "Seinäjoki",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Maa- ja metsätalousalat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 74,
-    "ensisijaisetHakijatLkm": 43
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082180",
     "hakukohde": "Agrologi (AMK), päivätoteutus",
     "korkeakoulu": "Savonia-ammattikorkeakoulu",
@@ -106,6 +94,18 @@
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 32,
     "ensisijaisetHakijatLkm": 18
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083345",
+    "hakukohde": "Agrologi (AMK), päivätoteutus",
+    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
+    "kuntaHakukohde": "Seinäjoki",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Maa- ja metsätalousalat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 74,
+    "ensisijaisetHakijatLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083995",
@@ -216,18 +216,6 @@
     "ensisijaisetHakijatLkm": 158
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082785",
-    "hakukohde": "Artenomi (AMK), älykäs ja kestävä muotoilu, päivätoteutus, kevään yhteishaku",
-    "korkeakoulu": "Hämeen ammattikorkeakoulu",
-    "kuntaHakukohde": "Hämeenlinna",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Humanistiset ja taidealat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 0,
-    "ensisijaisetHakijatLkm": 0
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083548",
     "hakukohde": "Artenomi (AMK), älykäs ja kestävä muotoilu, päivätoteutus, kevään yhteishaku",
     "korkeakoulu": "Hämeen ammattikorkeakoulu",
@@ -238,6 +226,18 @@
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 124,
     "ensisijaisetHakijatLkm": 28
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082785",
+    "hakukohde": "Artenomi (AMK), älykäs ja kestävä muotoilu, päivätoteutus, kevään yhteishaku",
+    "korkeakoulu": "Hämeen ammattikorkeakoulu",
+    "kuntaHakukohde": "Hämeenlinna",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Humanistiset ja taidealat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 0,
+    "ensisijaisetHakijatLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083248",
@@ -444,18 +444,6 @@
     "ensisijaisetHakijatLkm": 9
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081845",
-    "hakukohde": "Barnmorska (YH), dagstudier",
-    "korkeakoulu": "Yrkeshögskolan Novia",
-    "kuntaHakukohde": "Vaasa",
-    "koulutuksenKieli": "vain ruotsi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 12,
-    "kaikkiHakijatLkm": 84,
-    "ensisijaisetHakijatLkm": 19
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082576",
     "hakukohde": "Barnmorska (YH), dagstudier",
     "korkeakoulu": "Yrkeshögskolan Arcada",
@@ -466,6 +454,18 @@
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 74,
     "ensisijaisetHakijatLkm": 12
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081845",
+    "hakukohde": "Barnmorska (YH), dagstudier",
+    "korkeakoulu": "Yrkeshögskolan Novia",
+    "kuntaHakukohde": "Vaasa",
+    "koulutuksenKieli": "vain ruotsi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 12,
+    "kaikkiHakijatLkm": 84,
+    "ensisijaisetHakijatLkm": 19
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081325",
@@ -1272,18 +1272,6 @@
     "ensisijaisetHakijatLkm": 137
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073207",
-    "hakukohde": "Ensihoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 704,
-    "ensisijaisetHakijatLkm": 205
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082182",
     "hakukohde": "Ensihoitaja (AMK), päivätoteutus",
     "korkeakoulu": "Savonia-ammattikorkeakoulu",
@@ -1306,6 +1294,18 @@
     "aloituspaikatLkm": 24,
     "kaikkiHakijatLkm": 973,
     "ensisijaisetHakijatLkm": 184
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073207",
+    "hakukohde": "Ensihoitaja (AMK), päivätoteutus",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 704,
+    "ensisijaisetHakijatLkm": 205
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082912",
@@ -1836,42 +1836,6 @@
     "ensisijaisetHakijatLkm": 199
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082916",
-    "hakukohde": "Fysioterapeutti (AMK), päivätoteutus",
-    "korkeakoulu": "Tampereen ammattikorkeakoulu",
-    "kuntaHakukohde": "Tampere",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 1422,
-    "ensisijaisetHakijatLkm": 340
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083362",
-    "hakukohde": "Fysioterapeutti (AMK), päivätoteutus",
-    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
-    "kuntaHakukohde": "Seinäjoki",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 293,
-    "ensisijaisetHakijatLkm": 48
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073968",
-    "hakukohde": "Fysioterapeutti (AMK), päivätoteutus",
-    "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
-    "kuntaHakukohde": "Jyväskylä",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 795,
-    "ensisijaisetHakijatLkm": 131
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081861",
     "hakukohde": "Fysioterapeutti (AMK), päivätoteutus",
     "korkeakoulu": "Turun ammattikorkeakoulu",
@@ -1894,6 +1858,42 @@
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 238,
     "ensisijaisetHakijatLkm": 36
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082916",
+    "hakukohde": "Fysioterapeutti (AMK), päivätoteutus",
+    "korkeakoulu": "Tampereen ammattikorkeakoulu",
+    "kuntaHakukohde": "Tampere",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 1422,
+    "ensisijaisetHakijatLkm": 340
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073968",
+    "hakukohde": "Fysioterapeutti (AMK), päivätoteutus",
+    "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
+    "kuntaHakukohde": "Jyväskylä",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 795,
+    "ensisijaisetHakijatLkm": 131
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083362",
+    "hakukohde": "Fysioterapeutti (AMK), päivätoteutus",
+    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
+    "kuntaHakukohde": "Seinäjoki",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 293,
+    "ensisijaisetHakijatLkm": 48
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082185",
@@ -1932,18 +1932,6 @@
     "ensisijaisetHakijatLkm": 18
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000077912",
-    "hakukohde": "Företagsledning och organisation, ekonomie magister (2 år)",
-    "korkeakoulu": "Svenska handelshögskolan",
-    "kuntaHakukohde": "Vaasa",
-    "koulutuksenKieli": "vain ruotsi",
-    "sektori": "Yliopistokoulutus",
-    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 8,
-    "kaikkiHakijatLkm": 33,
-    "ensisijaisetHakijatLkm": 13
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000077913",
     "hakukohde": "Företagsledning och organisation, ekonomie magister (2 år)",
     "korkeakoulu": "Svenska handelshögskolan",
@@ -1954,6 +1942,18 @@
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 80,
     "ensisijaisetHakijatLkm": 37
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000077912",
+    "hakukohde": "Företagsledning och organisation, ekonomie magister (2 år)",
+    "korkeakoulu": "Svenska handelshögskolan",
+    "kuntaHakukohde": "Vaasa",
+    "koulutuksenKieli": "vain ruotsi",
+    "sektori": "Yliopistokoulutus",
+    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
+    "aloituspaikatLkm": 8,
+    "kaikkiHakijatLkm": 33,
+    "ensisijaisetHakijatLkm": 13
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082635",
@@ -2052,18 +2052,6 @@
     "ensisijaisetHakijatLkm": 19
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081531",
-    "hakukohde": "Geronomi (AMK), monimuotototeutus",
-    "korkeakoulu": "Karelia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Joensuu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 23,
-    "ensisijaisetHakijatLkm": 9
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083552",
     "hakukohde": "Geronomi (AMK), monimuotototeutus",
     "korkeakoulu": "Kaakkois-Suomen ammattikorkeakoulu",
@@ -2074,6 +2062,18 @@
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 34,
     "ensisijaisetHakijatLkm": 13
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081531",
+    "hakukohde": "Geronomi (AMK), monimuotototeutus",
+    "korkeakoulu": "Karelia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Joensuu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 23,
+    "ensisijaisetHakijatLkm": 9
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083369",
@@ -2604,18 +2604,6 @@
     "ensisijaisetHakijatLkm": 30
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082581",
-    "hakukohde": "Ingenjör (YH), informationsteknik, dagstudier",
-    "korkeakoulu": "Yrkeshögskolan Arcada",
-    "kuntaHakukohde": "Helsinki",
-    "koulutuksenKieli": "vain ruotsi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 104,
-    "ensisijaisetHakijatLkm": 24
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081934",
     "hakukohde": "Ingenjör (YH), informationsteknik, dagstudier",
     "korkeakoulu": "Yrkeshögskolan Novia",
@@ -2626,6 +2614,18 @@
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 81,
     "ensisijaisetHakijatLkm": 21
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082581",
+    "hakukohde": "Ingenjör (YH), informationsteknik, dagstudier",
+    "korkeakoulu": "Yrkeshögskolan Arcada",
+    "kuntaHakukohde": "Helsinki",
+    "koulutuksenKieli": "vain ruotsi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 104,
+    "ensisijaisetHakijatLkm": 24
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081935",
@@ -2796,6 +2796,18 @@
     "ensisijaisetHakijatLkm": 61
   },
   {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083377",
+    "hakukohde": "Insinööri (AMK), Konetekniikka, päivätoteutus",
+    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
+    "kuntaHakukohde": "Seinäjoki",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 60,
+    "kaikkiHakijatLkm": 153,
+    "ensisijaisetHakijatLkm": 45
+  },
+  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082926",
     "hakukohde": "Insinööri (AMK), Konetekniikka, päivätoteutus",
     "korkeakoulu": "Tampereen ammattikorkeakoulu",
@@ -2818,18 +2830,6 @@
     "aloituspaikatLkm": 50,
     "kaikkiHakijatLkm": 97,
     "ensisijaisetHakijatLkm": 22
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083377",
-    "hakukohde": "Insinööri (AMK), Konetekniikka, päivätoteutus",
-    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
-    "kuntaHakukohde": "Seinäjoki",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 60,
-    "kaikkiHakijatLkm": 153,
-    "ensisijaisetHakijatLkm": 45
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082821",
@@ -3084,18 +3084,6 @@
     "ensisijaisetHakijatLkm": 27
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082971",
-    "hakukohde": "Insinööri (AMK), Tietotekniikka, päivätoteutus",
-    "korkeakoulu": "Tampereen ammattikorkeakoulu",
-    "kuntaHakukohde": "Tampere",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
-    "aloituspaikatLkm": 73,
-    "kaikkiHakijatLkm": 669,
-    "ensisijaisetHakijatLkm": 143
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083393",
     "hakukohde": "Insinööri (AMK), Tietotekniikka, päivätoteutus",
     "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
@@ -3106,6 +3094,18 @@
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 85,
     "ensisijaisetHakijatLkm": 20
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082971",
+    "hakukohde": "Insinööri (AMK), Tietotekniikka, päivätoteutus",
+    "korkeakoulu": "Tampereen ammattikorkeakoulu",
+    "kuntaHakukohde": "Tampere",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
+    "aloituspaikatLkm": 73,
+    "kaikkiHakijatLkm": 669,
+    "ensisijaisetHakijatLkm": 143
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082881",
@@ -3168,18 +3168,6 @@
     "ensisijaisetHakijatLkm": 72
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083510",
-    "hakukohde": "Insinööri (AMK), bio- ja elintarviketekniikka, monimuotototeutus, kevään yhteishaku",
-    "korkeakoulu": "Hämeen ammattikorkeakoulu",
-    "kuntaHakukohde": "Hämeenlinna",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 35,
-    "kaikkiHakijatLkm": 180,
-    "ensisijaisetHakijatLkm": 46
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082796",
     "hakukohde": "Insinööri (AMK), bio- ja elintarviketekniikka, monimuotototeutus, kevään yhteishaku",
     "korkeakoulu": "Hämeen ammattikorkeakoulu",
@@ -3190,6 +3178,18 @@
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 0,
     "ensisijaisetHakijatLkm": 0
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083510",
+    "hakukohde": "Insinööri (AMK), bio- ja elintarviketekniikka, monimuotototeutus, kevään yhteishaku",
+    "korkeakoulu": "Hämeen ammattikorkeakoulu",
+    "kuntaHakukohde": "Hämeenlinna",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 35,
+    "kaikkiHakijatLkm": 180,
+    "ensisijaisetHakijatLkm": 46
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082798",
@@ -3276,18 +3276,6 @@
     "ensisijaisetHakijatLkm": 81
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073232",
-    "hakukohde": "Insinööri (AMK), energia- ja ympäristötekniikka, monimuotototeutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 247,
-    "ensisijaisetHakijatLkm": 61
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073916",
     "hakukohde": "Insinööri (AMK), energia- ja ympäristötekniikka, monimuotototeutus",
     "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
@@ -3300,16 +3288,16 @@
     "ensisijaisetHakijatLkm": 45
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073234",
-    "hakukohde": "Insinööri (AMK), energia- ja ympäristötekniikka, päivätoteutus",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073232",
+    "hakukohde": "Insinööri (AMK), energia- ja ympäristötekniikka, monimuotototeutus",
     "korkeakoulu": "Oulun ammattikorkeakoulu",
     "kuntaHakukohde": "Oulu",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Tekniikan alat",
     "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 224,
-    "ensisijaisetHakijatLkm": 25
+    "kaikkiHakijatLkm": 247,
+    "ensisijaisetHakijatLkm": 61
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073918",
@@ -3324,6 +3312,18 @@
     "ensisijaisetHakijatLkm": 30
   },
   {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073234",
+    "hakukohde": "Insinööri (AMK), energia- ja ympäristötekniikka, päivätoteutus",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 224,
+    "ensisijaisetHakijatLkm": 25
+  },
+  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000074501",
     "hakukohde": "Insinööri (AMK), energia- ja ympäristötekniikka, päivätoteutus",
     "korkeakoulu": "Vaasan ammattikorkeakoulu",
@@ -3334,18 +3334,6 @@
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 0,
     "ensisijaisetHakijatLkm": 0
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083296",
-    "hakukohde": "Insinööri (AMK), energiatekniikka, monimuotototeutus",
-    "korkeakoulu": "Savonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Varkaus",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 120,
-    "ensisijaisetHakijatLkm": 28
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082559",
@@ -3360,16 +3348,16 @@
     "ensisijaisetHakijatLkm": 23
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081501",
-    "hakukohde": "Insinööri (AMK), energiatekniikka, päivätoteutus",
-    "korkeakoulu": "Kaakkois-Suomen ammattikorkeakoulu",
-    "kuntaHakukohde": "Kotka",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083296",
+    "hakukohde": "Insinööri (AMK), energiatekniikka, monimuotototeutus",
+    "korkeakoulu": "Savonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Varkaus",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 100,
-    "ensisijaisetHakijatLkm": 25
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 120,
+    "ensisijaisetHakijatLkm": 28
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082766",
@@ -3382,6 +3370,18 @@
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 273,
     "ensisijaisetHakijatLkm": 30
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081501",
+    "hakukohde": "Insinööri (AMK), energiatekniikka, päivätoteutus",
+    "korkeakoulu": "Kaakkois-Suomen ammattikorkeakoulu",
+    "kuntaHakukohde": "Kotka",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 100,
+    "ensisijaisetHakijatLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000084801",
@@ -3456,18 +3456,6 @@
     "ensisijaisetHakijatLkm": 44
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081867",
-    "hakukohde": "Insinööri (AMK), konetekniikka, monimuotototeutus",
-    "korkeakoulu": "Turun ammattikorkeakoulu",
-    "kuntaHakukohde": "Turku",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 45,
-    "kaikkiHakijatLkm": 388,
-    "ensisijaisetHakijatLkm": 100
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073919",
     "hakukohde": "Insinööri (AMK), konetekniikka, monimuotototeutus",
     "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
@@ -3478,6 +3466,18 @@
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 269,
     "ensisijaisetHakijatLkm": 59
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081867",
+    "hakukohde": "Insinööri (AMK), konetekniikka, monimuotototeutus",
+    "korkeakoulu": "Turun ammattikorkeakoulu",
+    "kuntaHakukohde": "Turku",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 45,
+    "kaikkiHakijatLkm": 388,
+    "ensisijaisetHakijatLkm": 100
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082799",
@@ -3516,16 +3516,16 @@
     "ensisijaisetHakijatLkm": 6
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082200",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073239",
     "hakukohde": "Insinööri (AMK), konetekniikka, päivätoteutus",
-    "korkeakoulu": "Savonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Kuopio",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 70,
-    "kaikkiHakijatLkm": 193,
-    "ensisijaisetHakijatLkm": 50
+    "aloituspaikatLkm": 100,
+    "kaikkiHakijatLkm": 432,
+    "ensisijaisetHakijatLkm": 99
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073920",
@@ -3540,30 +3540,6 @@
     "ensisijaisetHakijatLkm": 29
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081869",
-    "hakukohde": "Insinööri (AMK), konetekniikka, päivätoteutus",
-    "korkeakoulu": "Turun ammattikorkeakoulu",
-    "kuntaHakukohde": "Turku",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 83,
-    "kaikkiHakijatLkm": 445,
-    "ensisijaisetHakijatLkm": 74
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073239",
-    "hakukohde": "Insinööri (AMK), konetekniikka, päivätoteutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 100,
-    "kaikkiHakijatLkm": 432,
-    "ensisijaisetHakijatLkm": 99
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000074503",
     "hakukohde": "Insinööri (AMK), konetekniikka, päivätoteutus",
     "korkeakoulu": "Vaasan ammattikorkeakoulu",
@@ -3574,6 +3550,30 @@
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 167,
     "ensisijaisetHakijatLkm": 17
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082200",
+    "hakukohde": "Insinööri (AMK), konetekniikka, päivätoteutus",
+    "korkeakoulu": "Savonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Kuopio",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 70,
+    "kaikkiHakijatLkm": 193,
+    "ensisijaisetHakijatLkm": 50
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081869",
+    "hakukohde": "Insinööri (AMK), konetekniikka, päivätoteutus",
+    "korkeakoulu": "Turun ammattikorkeakoulu",
+    "kuntaHakukohde": "Turku",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 83,
+    "kaikkiHakijatLkm": 445,
+    "ensisijaisetHakijatLkm": 74
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083497",
@@ -4116,6 +4116,18 @@
     "ensisijaisetHakijatLkm": 6
   },
   {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000074504",
+    "hakukohde": "Insinööri (AMK), sähkö- ja automaatiotekniikka, päivätoteutus",
+    "korkeakoulu": "Vaasan ammattikorkeakoulu",
+    "kuntaHakukohde": "Vaasa",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 215,
+    "ensisijaisetHakijatLkm": 38
+  },
+  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073245",
     "hakukohde": "Insinööri (AMK), sähkö- ja automaatiotekniikka, päivätoteutus",
     "korkeakoulu": "Oulun ammattikorkeakoulu",
@@ -4138,18 +4150,6 @@
     "aloituspaikatLkm": 50,
     "kaikkiHakijatLkm": 461,
     "ensisijaisetHakijatLkm": 70
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081880",
-    "hakukohde": "Insinööri (AMK), sähkö- ja automaatiotekniikka, päivätoteutus",
-    "korkeakoulu": "Turun ammattikorkeakoulu",
-    "kuntaHakukohde": "Turku",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 60,
-    "kaikkiHakijatLkm": 628,
-    "ensisijaisetHakijatLkm": 143
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082205",
@@ -4176,16 +4176,16 @@
     "ensisijaisetHakijatLkm": 14
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000074504",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081880",
     "hakukohde": "Insinööri (AMK), sähkö- ja automaatiotekniikka, päivätoteutus",
-    "korkeakoulu": "Vaasan ammattikorkeakoulu",
-    "kuntaHakukohde": "Vaasa",
+    "korkeakoulu": "Turun ammattikorkeakoulu",
+    "kuntaHakukohde": "Turku",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 215,
-    "ensisijaisetHakijatLkm": 38
+    "aloituspaikatLkm": 60,
+    "kaikkiHakijatLkm": 628,
+    "ensisijaisetHakijatLkm": 143
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083501",
@@ -4416,18 +4416,6 @@
     "ensisijaisetHakijatLkm": 126
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073188",
-    "hakukohde": "Insinööri (AMK), tieto- ja viestintätekniikka, päivätoteutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
-    "aloituspaikatLkm": 100,
-    "kaikkiHakijatLkm": 308,
-    "ensisijaisetHakijatLkm": 76
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073946",
     "hakukohde": "Insinööri (AMK), tieto- ja viestintätekniikka, päivätoteutus",
     "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
@@ -4438,6 +4426,18 @@
     "aloituspaikatLkm": 90,
     "kaikkiHakijatLkm": 362,
     "ensisijaisetHakijatLkm": 74
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073188",
+    "hakukohde": "Insinööri (AMK), tieto- ja viestintätekniikka, päivätoteutus",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
+    "aloituspaikatLkm": 100,
+    "kaikkiHakijatLkm": 308,
+    "ensisijaisetHakijatLkm": 76
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083511",
@@ -5640,18 +5640,6 @@
     "ensisijaisetHakijatLkm": 1410
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073927",
-    "hakukohde": "Kauppatieteet, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
-    "korkeakoulu": "Oulun yliopisto",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Yliopistokoulutus",
-    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 180,
-    "kaikkiHakijatLkm": 2297,
-    "ensisijaisetHakijatLkm": 497
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083228",
     "hakukohde": "Kauppatieteet, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
     "korkeakoulu": "Vaasan yliopisto",
@@ -5674,6 +5662,18 @@
     "aloituspaikatLkm": 369,
     "kaikkiHakijatLkm": 7422,
     "ensisijaisetHakijatLkm": 4078
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073927",
+    "hakukohde": "Kauppatieteet, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+    "korkeakoulu": "Oulun yliopisto",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Yliopistokoulutus",
+    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
+    "aloituspaikatLkm": 180,
+    "kaikkiHakijatLkm": 2297,
+    "ensisijaisetHakijatLkm": 497
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000080959",
@@ -6828,18 +6828,6 @@
     "ensisijaisetHakijatLkm": 146
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082927",
-    "hakukohde": "Kätilö (AMK), päivätoteutus",
-    "korkeakoulu": "Tampereen ammattikorkeakoulu",
-    "kuntaHakukohde": "Tampere",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 20,
-    "kaikkiHakijatLkm": 882,
-    "ensisijaisetHakijatLkm": 223
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000074014",
     "hakukohde": "Kätilö (AMK), päivätoteutus",
     "korkeakoulu": "Oulun ammattikorkeakoulu",
@@ -6850,6 +6838,18 @@
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 454,
     "ensisijaisetHakijatLkm": 114
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082927",
+    "hakukohde": "Kätilö (AMK), päivätoteutus",
+    "korkeakoulu": "Tampereen ammattikorkeakoulu",
+    "kuntaHakukohde": "Tampere",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 20,
+    "kaikkiHakijatLkm": 882,
+    "ensisijaisetHakijatLkm": 223
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000080842",
@@ -10716,18 +10716,6 @@
     "ensisijaisetHakijatLkm": 12
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083616",
-    "hakukohde": "Maisterihaku, kirjallisuuden maisteriohjelma, filosofian maisteri (2 v)",
-    "korkeakoulu": "Jyväskylän yliopisto",
-    "kuntaHakukohde": "Jyväskylä",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Yliopistokoulutus",
-    "koulutusalaTaso1": "Humanistiset ja taidealat",
-    "aloituspaikatLkm": 5,
-    "kaikkiHakijatLkm": 11,
-    "ensisijaisetHakijatLkm": 7
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083462",
     "hakukohde": "Maisterihaku, kirjallisuuden maisteriohjelma, filosofian maisteri (2 v)",
     "korkeakoulu": "Jyväskylän yliopisto",
@@ -10738,6 +10726,18 @@
     "aloituspaikatLkm": 5,
     "kaikkiHakijatLkm": 0,
     "ensisijaisetHakijatLkm": 0
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083616",
+    "hakukohde": "Maisterihaku, kirjallisuuden maisteriohjelma, filosofian maisteri (2 v)",
+    "korkeakoulu": "Jyväskylän yliopisto",
+    "kuntaHakukohde": "Jyväskylä",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Yliopistokoulutus",
+    "koulutusalaTaso1": "Humanistiset ja taidealat",
+    "aloituspaikatLkm": 5,
+    "kaikkiHakijatLkm": 11,
+    "ensisijaisetHakijatLkm": 7
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000075324",
@@ -12972,18 +12972,6 @@
     "ensisijaisetHakijatLkm": 15
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081529",
-    "hakukohde": "Metsätalousinsinööri (AMK), päivätoteutus",
-    "korkeakoulu": "Karelia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Joensuu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Maa- ja metsätalousalat",
-    "aloituspaikatLkm": 55,
-    "kaikkiHakijatLkm": 179,
-    "ensisijaisetHakijatLkm": 39
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082944",
     "hakukohde": "Metsätalousinsinööri (AMK), päivätoteutus",
     "korkeakoulu": "Tampereen ammattikorkeakoulu",
@@ -12994,6 +12982,18 @@
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 338,
     "ensisijaisetHakijatLkm": 65
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081529",
+    "hakukohde": "Metsätalousinsinööri (AMK), päivätoteutus",
+    "korkeakoulu": "Karelia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Joensuu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Maa- ja metsätalousalat",
+    "aloituspaikatLkm": 55,
+    "kaikkiHakijatLkm": 179,
+    "ensisijaisetHakijatLkm": 39
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082908",
@@ -13416,18 +13416,6 @@
     "ensisijaisetHakijatLkm": 16
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073190",
-    "hakukohde": "Musiikkipedagogi (AMK), päivätoteutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Kasvatusalat",
-    "aloituspaikatLkm": 25,
-    "kaikkiHakijatLkm": 54,
-    "ensisijaisetHakijatLkm": 19
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081975",
     "hakukohde": "Musiikkipedagogi (AMK), päivätoteutus",
     "korkeakoulu": "Savonia-ammattikorkeakoulu",
@@ -13438,6 +13426,18 @@
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 26,
     "ensisijaisetHakijatLkm": 16
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073190",
+    "hakukohde": "Musiikkipedagogi (AMK), päivätoteutus",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Kasvatusalat",
+    "aloituspaikatLkm": 25,
+    "kaikkiHakijatLkm": 54,
+    "ensisijaisetHakijatLkm": 19
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081061",
@@ -14508,18 +14508,6 @@
     "ensisijaisetHakijatLkm": 27
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082947",
-    "hakukohde": "Rakennusarkkitehti (AMK), päivätoteutus",
-    "korkeakoulu": "Tampereen ammattikorkeakoulu",
-    "kuntaHakukohde": "Tampere",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 32,
-    "kaikkiHakijatLkm": 423,
-    "ensisijaisetHakijatLkm": 100
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081941",
     "hakukohde": "Rakennusarkkitehti (AMK), päivätoteutus",
     "korkeakoulu": "Turun ammattikorkeakoulu",
@@ -14532,18 +14520,6 @@
     "ensisijaisetHakijatLkm": 68
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082194",
-    "hakukohde": "Rakennusarkkitehti (AMK), päivätoteutus",
-    "korkeakoulu": "Savonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Kuopio",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 35,
-    "kaikkiHakijatLkm": 132,
-    "ensisijaisetHakijatLkm": 14
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073241",
     "hakukohde": "Rakennusarkkitehti (AMK), päivätoteutus",
     "korkeakoulu": "Oulun ammattikorkeakoulu",
@@ -14554,6 +14530,30 @@
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 192,
     "ensisijaisetHakijatLkm": 48
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082947",
+    "hakukohde": "Rakennusarkkitehti (AMK), päivätoteutus",
+    "korkeakoulu": "Tampereen ammattikorkeakoulu",
+    "kuntaHakukohde": "Tampere",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 32,
+    "kaikkiHakijatLkm": 423,
+    "ensisijaisetHakijatLkm": 100
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082194",
+    "hakukohde": "Rakennusarkkitehti (AMK), päivätoteutus",
+    "korkeakoulu": "Savonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Kuopio",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 35,
+    "kaikkiHakijatLkm": 132,
+    "ensisijaisetHakijatLkm": 14
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000080882",
@@ -15096,18 +15096,6 @@
     "ensisijaisetHakijatLkm": 28
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082930",
-    "hakukohde": "Röntgenhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Tampereen ammattikorkeakoulu",
-    "kuntaHakukohde": "Tampere",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 684,
-    "ensisijaisetHakijatLkm": 105
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082620",
     "hakukohde": "Röntgenhoitaja (AMK), päivätoteutus",
     "korkeakoulu": "Turun ammattikorkeakoulu",
@@ -15118,6 +15106,18 @@
     "aloituspaikatLkm": 16,
     "kaikkiHakijatLkm": 479,
     "ensisijaisetHakijatLkm": 65
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082930",
+    "hakukohde": "Röntgenhoitaja (AMK), päivätoteutus",
+    "korkeakoulu": "Tampereen ammattikorkeakoulu",
+    "kuntaHakukohde": "Tampere",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 684,
+    "ensisijaisetHakijatLkm": 105
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000080876",
@@ -15240,30 +15240,6 @@
     "ensisijaisetHakijatLkm": 23
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000074493",
-    "hakukohde": "Sairaanhoitaja (AMK), monimuotototeutus",
-    "korkeakoulu": "Vaasan ammattikorkeakoulu",
-    "kuntaHakukohde": "Vaasa",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 88,
-    "ensisijaisetHakijatLkm": 26
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083573",
-    "hakukohde": "Sairaanhoitaja (AMK), monimuotototeutus",
-    "korkeakoulu": "Diakonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Pori",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 90,
-    "ensisijaisetHakijatLkm": 15
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000080973",
     "hakukohde": "Sairaanhoitaja (AMK), monimuotototeutus",
     "korkeakoulu": "Karelia-ammattikorkeakoulu",
@@ -15288,6 +15264,18 @@
     "ensisijaisetHakijatLkm": 79
   },
   {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083573",
+    "hakukohde": "Sairaanhoitaja (AMK), monimuotototeutus",
+    "korkeakoulu": "Diakonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Pori",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 90,
+    "ensisijaisetHakijatLkm": 15
+  },
+  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082994",
     "hakukohde": "Sairaanhoitaja (AMK), monimuotototeutus",
     "korkeakoulu": "Tampereen ammattikorkeakoulu",
@@ -15298,6 +15286,18 @@
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 563,
     "ensisijaisetHakijatLkm": 74
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000074493",
+    "hakukohde": "Sairaanhoitaja (AMK), monimuotototeutus",
+    "korkeakoulu": "Vaasan ammattikorkeakoulu",
+    "kuntaHakukohde": "Vaasa",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 88,
+    "ensisijaisetHakijatLkm": 26
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083276",
@@ -15444,30 +15444,6 @@
     "ensisijaisetHakijatLkm": 19
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000074490",
-    "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Vaasan ammattikorkeakoulu",
-    "kuntaHakukohde": "Vaasa",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 40,
-    "kaikkiHakijatLkm": 118,
-    "ensisijaisetHakijatLkm": 12
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073970",
-    "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
-    "kuntaHakukohde": "Jyväskylä",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 35,
-    "kaikkiHakijatLkm": 292,
-    "ensisijaisetHakijatLkm": 43
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083405",
     "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
     "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
@@ -15480,28 +15456,16 @@
     "ensisijaisetHakijatLkm": 31
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082985",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000074490",
     "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Tampereen ammattikorkeakoulu",
-    "kuntaHakukohde": "Tampere",
+    "korkeakoulu": "Vaasan ammattikorkeakoulu",
+    "kuntaHakukohde": "Vaasa",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 124,
-    "kaikkiHakijatLkm": 698,
-    "ensisijaisetHakijatLkm": 103
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082189",
-    "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Savonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Kuopio",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 50,
-    "kaikkiHakijatLkm": 231,
-    "ensisijaisetHakijatLkm": 47
+    "aloituspaikatLkm": 40,
+    "kaikkiHakijatLkm": 118,
+    "ensisijaisetHakijatLkm": 12
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073211",
@@ -15516,16 +15480,28 @@
     "ensisijaisetHakijatLkm": 46
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083569",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000080986",
     "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Diakonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Helsinki",
+    "korkeakoulu": "Karelia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Joensuu",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 45,
-    "kaikkiHakijatLkm": 592,
-    "ensisijaisetHakijatLkm": 96
+    "aloituspaikatLkm": 35,
+    "kaikkiHakijatLkm": 99,
+    "ensisijaisetHakijatLkm": 13
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082985",
+    "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
+    "korkeakoulu": "Tampereen ammattikorkeakoulu",
+    "kuntaHakukohde": "Tampere",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 124,
+    "kaikkiHakijatLkm": 698,
+    "ensisijaisetHakijatLkm": 103
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081973",
@@ -15540,16 +15516,40 @@
     "ensisijaisetHakijatLkm": 90
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000080986",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083569",
     "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Karelia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Joensuu",
+    "korkeakoulu": "Diakonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Helsinki",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 45,
+    "kaikkiHakijatLkm": 592,
+    "ensisijaisetHakijatLkm": 96
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082189",
+    "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
+    "korkeakoulu": "Savonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Kuopio",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 50,
+    "kaikkiHakijatLkm": 231,
+    "ensisijaisetHakijatLkm": 47
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073970",
+    "hakukohde": "Sairaanhoitaja (AMK), päivätoteutus",
+    "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
+    "kuntaHakukohde": "Jyväskylä",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
-    "kaikkiHakijatLkm": 99,
-    "ensisijaisetHakijatLkm": 13
+    "kaikkiHakijatLkm": 292,
+    "ensisijaisetHakijatLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083538",
@@ -15672,18 +15672,6 @@
     "ensisijaisetHakijatLkm": 36
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083409",
-    "hakukohde": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus",
-    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
-    "kuntaHakukohde": "Seinäjoki",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 145,
-    "ensisijaisetHakijatLkm": 32
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073212",
     "hakukohde": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus",
     "korkeakoulu": "Oulun ammattikorkeakoulu",
@@ -15694,6 +15682,18 @@
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 212,
     "ensisijaisetHakijatLkm": 44
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083409",
+    "hakukohde": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus",
+    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
+    "kuntaHakukohde": "Seinäjoki",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 145,
+    "ensisijaisetHakijatLkm": 32
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083565",
@@ -16908,18 +16908,6 @@
     "ensisijaisetHakijatLkm": 91
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000080993",
-    "hakukohde": "Sosionomi (AMK), monimuotototeutus",
-    "korkeakoulu": "Karelia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Joensuu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 25,
-    "kaikkiHakijatLkm": 311,
-    "ensisijaisetHakijatLkm": 93
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083275",
     "hakukohde": "Sosionomi (AMK), monimuotototeutus",
     "korkeakoulu": "Savonia-ammattikorkeakoulu",
@@ -16930,6 +16918,18 @@
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 669,
     "ensisijaisetHakijatLkm": 249
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000080993",
+    "hakukohde": "Sosionomi (AMK), monimuotototeutus",
+    "korkeakoulu": "Karelia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Joensuu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 25,
+    "kaikkiHakijatLkm": 311,
+    "ensisijaisetHakijatLkm": 93
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083541",
@@ -16968,18 +16968,6 @@
     "ensisijaisetHakijatLkm": 137
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082851",
-    "hakukohde": "Sosionomi (AMK), monimuotototeutus, kevään yhteishaku",
-    "korkeakoulu": "Hämeen ammattikorkeakoulu",
-    "kuntaHakukohde": "Hämeenlinna",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 60,
-    "kaikkiHakijatLkm": 823,
-    "ensisijaisetHakijatLkm": 184
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082849",
     "hakukohde": "Sosionomi (AMK), monimuotototeutus, kevään yhteishaku",
     "korkeakoulu": "Hämeen ammattikorkeakoulu",
@@ -16990,6 +16978,18 @@
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 0,
     "ensisijaisetHakijatLkm": 0
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082851",
+    "hakukohde": "Sosionomi (AMK), monimuotototeutus, kevään yhteishaku",
+    "korkeakoulu": "Hämeen ammattikorkeakoulu",
+    "kuntaHakukohde": "Hämeenlinna",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 60,
+    "kaikkiHakijatLkm": 823,
+    "ensisijaisetHakijatLkm": 184
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081606",
@@ -17028,18 +17028,6 @@
     "ensisijaisetHakijatLkm": 240
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081573",
-    "hakukohde": "Sosionomi (AMK), päivätoteutus",
-    "korkeakoulu": "Karelia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Joensuu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 28,
-    "kaikkiHakijatLkm": 221,
-    "ensisijaisetHakijatLkm": 56
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082945",
     "hakukohde": "Sosionomi (AMK), päivätoteutus",
     "korkeakoulu": "Tampereen ammattikorkeakoulu",
@@ -17050,18 +17038,6 @@
     "aloituspaikatLkm": 90,
     "kaikkiHakijatLkm": 1565,
     "ensisijaisetHakijatLkm": 417
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083412",
-    "hakukohde": "Sosionomi (AMK), päivätoteutus",
-    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
-    "kuntaHakukohde": "Seinäjoki",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 34,
-    "kaikkiHakijatLkm": 322,
-    "ensisijaisetHakijatLkm": 70
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083575",
@@ -17086,6 +17062,30 @@
     "aloituspaikatLkm": 60,
     "kaikkiHakijatLkm": 245,
     "ensisijaisetHakijatLkm": 39
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081573",
+    "hakukohde": "Sosionomi (AMK), päivätoteutus",
+    "korkeakoulu": "Karelia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Joensuu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 28,
+    "kaikkiHakijatLkm": 221,
+    "ensisijaisetHakijatLkm": 56
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083412",
+    "hakukohde": "Sosionomi (AMK), päivätoteutus",
+    "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
+    "kuntaHakukohde": "Seinäjoki",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 34,
+    "kaikkiHakijatLkm": 322,
+    "ensisijaisetHakijatLkm": 70
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083540",
@@ -17232,18 +17232,6 @@
     "ensisijaisetHakijatLkm": 62
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081984",
-    "hakukohde": "Sosionomi (AMK), verkko-opinnot",
-    "korkeakoulu": "Turun ammattikorkeakoulu",
-    "kuntaHakukohde": "Turku",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 25,
-    "kaikkiHakijatLkm": 1310,
-    "ensisijaisetHakijatLkm": 221
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082950",
     "hakukohde": "Sosionomi (AMK), verkko-opinnot",
     "korkeakoulu": "LAB-ammattikorkeakoulu",
@@ -17254,6 +17242,18 @@
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 1732,
     "ensisijaisetHakijatLkm": 344
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081984",
+    "hakukohde": "Sosionomi (AMK), verkko-opinnot",
+    "korkeakoulu": "Turun ammattikorkeakoulu",
+    "kuntaHakukohde": "Turku",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 25,
+    "kaikkiHakijatLkm": 1310,
+    "ensisijaisetHakijatLkm": 221
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083620",
@@ -17520,18 +17520,6 @@
     "ensisijaisetHakijatLkm": 96
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073219",
-    "hakukohde": "Suuhygienisti (AMK), päivätoteutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 21,
-    "kaikkiHakijatLkm": 307,
-    "ensisijaisetHakijatLkm": 61
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082199",
     "hakukohde": "Suuhygienisti (AMK), päivätoteutus",
     "korkeakoulu": "Savonia-ammattikorkeakoulu",
@@ -17542,6 +17530,18 @@
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 266,
     "ensisijaisetHakijatLkm": 51
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073219",
+    "hakukohde": "Suuhygienisti (AMK), päivätoteutus",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 21,
+    "kaikkiHakijatLkm": 307,
+    "ensisijaisetHakijatLkm": 61
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082938",
@@ -17724,18 +17724,6 @@
     "ensisijaisetHakijatLkm": 151
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073191",
-    "hakukohde": "Tanssinopettaja (AMK), päivätoteutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Kasvatusalat",
-    "aloituspaikatLkm": 17,
-    "kaikkiHakijatLkm": 25,
-    "ensisijaisetHakijatLkm": 14
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081988",
     "hakukohde": "Tanssinopettaja (AMK), päivätoteutus",
     "korkeakoulu": "Savonia-ammattikorkeakoulu",
@@ -17758,6 +17746,18 @@
     "aloituspaikatLkm": 14,
     "kaikkiHakijatLkm": 58,
     "ensisijaisetHakijatLkm": 17
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073191",
+    "hakukohde": "Tanssinopettaja (AMK), päivätoteutus",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Kasvatusalat",
+    "aloituspaikatLkm": 17,
+    "kaikkiHakijatLkm": 25,
+    "ensisijaisetHakijatLkm": 14
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000079755",
@@ -17988,18 +17988,6 @@
     "ensisijaisetHakijatLkm": 176
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000074495",
-    "hakukohde": "Terveydenhoitaja (AMK), päivätoteutus",
-    "korkeakoulu": "Vaasan ammattikorkeakoulu",
-    "kuntaHakukohde": "Vaasa",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 146,
-    "ensisijaisetHakijatLkm": 18
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082940",
     "hakukohde": "Terveydenhoitaja (AMK), päivätoteutus",
     "korkeakoulu": "Tampereen ammattikorkeakoulu",
@@ -18010,6 +17998,18 @@
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 635,
     "ensisijaisetHakijatLkm": 123
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000074495",
+    "hakukohde": "Terveydenhoitaja (AMK), päivätoteutus",
+    "korkeakoulu": "Vaasan ammattikorkeakoulu",
+    "kuntaHakukohde": "Vaasa",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Terveys- ja hyvinvointialat",
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 146,
+    "ensisijaisetHakijatLkm": 18
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081014",
@@ -18276,18 +18276,6 @@
     "ensisijaisetHakijatLkm": 70
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073117",
-    "hakukohde": "Tietotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
-    "korkeakoulu": "Aalto-yliopisto",
-    "kuntaHakukohde": "Espoo",
-    "koulutuksenKieli": "suomi ja ruotsi",
-    "sektori": "Yliopistokoulutus",
-    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
-    "aloituspaikatLkm": 130,
-    "kaikkiHakijatLkm": 902,
-    "ensisijaisetHakijatLkm": 275
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000077732",
     "hakukohde": "Tietotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
     "korkeakoulu": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
@@ -18298,6 +18286,18 @@
     "aloituspaikatLkm": 70,
     "kaikkiHakijatLkm": 222,
     "ensisijaisetHakijatLkm": 27
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073117",
+    "hakukohde": "Tietotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+    "korkeakoulu": "Aalto-yliopisto",
+    "kuntaHakukohde": "Espoo",
+    "koulutuksenKieli": "suomi ja ruotsi",
+    "sektori": "Yliopistokoulutus",
+    "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
+    "aloituspaikatLkm": 130,
+    "kaikkiHakijatLkm": 902,
+    "ensisijaisetHakijatLkm": 275
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000075675",
@@ -18612,18 +18612,6 @@
     "ensisijaisetHakijatLkm": 37
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082966",
-    "hakukohde": "Tradenomi (AMK), Liiketalous, päivätoteutus",
-    "korkeakoulu": "Tampereen ammattikorkeakoulu",
-    "kuntaHakukohde": "Tampere",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 140,
-    "kaikkiHakijatLkm": 2152,
-    "ensisijaisetHakijatLkm": 499
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083425",
     "hakukohde": "Tradenomi (AMK), Liiketalous, päivätoteutus",
     "korkeakoulu": "Seinäjoen ammattikorkeakoulu",
@@ -18634,6 +18622,18 @@
     "aloituspaikatLkm": 100,
     "kaikkiHakijatLkm": 270,
     "ensisijaisetHakijatLkm": 50
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082966",
+    "hakukohde": "Tradenomi (AMK), Liiketalous, päivätoteutus",
+    "korkeakoulu": "Tampereen ammattikorkeakoulu",
+    "kuntaHakukohde": "Tampere",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
+    "aloituspaikatLkm": 140,
+    "kaikkiHakijatLkm": 2152,
+    "ensisijaisetHakijatLkm": 499
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082843",
@@ -19008,18 +19008,6 @@
     "ensisijaisetHakijatLkm": 102
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082174",
-    "hakukohde": "Tradenomi (AMK), liiketalous, päivätoteutus",
-    "korkeakoulu": "Savonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Kuopio",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 100,
-    "kaikkiHakijatLkm": 470,
-    "ensisijaisetHakijatLkm": 104
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073958",
     "hakukohde": "Tradenomi (AMK), liiketalous, päivätoteutus",
     "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
@@ -19032,16 +19020,16 @@
     "ensisijaisetHakijatLkm": 174
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073198",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082174",
     "hakukohde": "Tradenomi (AMK), liiketalous, päivätoteutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
+    "korkeakoulu": "Savonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Kuopio",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 160,
-    "kaikkiHakijatLkm": 731,
-    "ensisijaisetHakijatLkm": 161
+    "aloituspaikatLkm": 100,
+    "kaikkiHakijatLkm": 470,
+    "ensisijaisetHakijatLkm": 104
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082095",
@@ -19054,6 +19042,18 @@
     "aloituspaikatLkm": 100,
     "kaikkiHakijatLkm": 1466,
     "ensisijaisetHakijatLkm": 285
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073198",
+    "hakukohde": "Tradenomi (AMK), liiketalous, päivätoteutus",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
+    "aloituspaikatLkm": 160,
+    "kaikkiHakijatLkm": 731,
+    "ensisijaisetHakijatLkm": 161
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000083545",
@@ -19212,40 +19212,16 @@
     "ensisijaisetHakijatLkm": 86
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081524",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000083273",
     "hakukohde": "Tradenomi (AMK), liiketalous, verkkototeutus",
-    "korkeakoulu": "Kaakkois-Suomen ammattikorkeakoulu",
-    "kuntaHakukohde": "Mikkeli",
+    "korkeakoulu": "Savonia-ammattikorkeakoulu",
+    "kuntaHakukohde": "Kuopio",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 80,
-    "kaikkiHakijatLkm": 1471,
-    "ensisijaisetHakijatLkm": 299
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073200",
-    "hakukohde": "Tradenomi (AMK), liiketalous, verkkototeutus",
-    "korkeakoulu": "Oulun ammattikorkeakoulu",
-    "kuntaHakukohde": "Oulu",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 70,
-    "kaikkiHakijatLkm": 1292,
-    "ensisijaisetHakijatLkm": 309
-  },
-  {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000081275",
-    "hakukohde": "Tradenomi (AMK), liiketalous, verkkototeutus",
-    "korkeakoulu": "Haaga-Helia ammattikorkeakoulu",
-    "kuntaHakukohde": "Helsinki",
-    "koulutuksenKieli": "vain suomi",
-    "sektori": "Ammattikorkeakoulukoulutus",
-    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 120,
-    "kaikkiHakijatLkm": 1507,
-    "ensisijaisetHakijatLkm": 296
+    "aloituspaikatLkm": 75,
+    "kaikkiHakijatLkm": 1315,
+    "ensisijaisetHakijatLkm": 297
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073977",
@@ -19260,16 +19236,40 @@
     "ensisijaisetHakijatLkm": 317
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000083273",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073200",
     "hakukohde": "Tradenomi (AMK), liiketalous, verkkototeutus",
-    "korkeakoulu": "Savonia-ammattikorkeakoulu",
-    "kuntaHakukohde": "Kuopio",
+    "korkeakoulu": "Oulun ammattikorkeakoulu",
+    "kuntaHakukohde": "Oulu",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
-    "aloituspaikatLkm": 75,
-    "kaikkiHakijatLkm": 1315,
-    "ensisijaisetHakijatLkm": 297
+    "aloituspaikatLkm": 70,
+    "kaikkiHakijatLkm": 1292,
+    "ensisijaisetHakijatLkm": 309
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081524",
+    "hakukohde": "Tradenomi (AMK), liiketalous, verkkototeutus",
+    "korkeakoulu": "Kaakkois-Suomen ammattikorkeakoulu",
+    "kuntaHakukohde": "Mikkeli",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
+    "aloituspaikatLkm": 80,
+    "kaikkiHakijatLkm": 1471,
+    "ensisijaisetHakijatLkm": 299
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000081275",
+    "hakukohde": "Tradenomi (AMK), liiketalous, verkkototeutus",
+    "korkeakoulu": "Haaga-Helia ammattikorkeakoulu",
+    "kuntaHakukohde": "Helsinki",
+    "koulutuksenKieli": "vain suomi",
+    "sektori": "Ammattikorkeakoulukoulutus",
+    "koulutusalaTaso1": "Kauppa, hallinto ja oikeustieteet",
+    "aloituspaikatLkm": 120,
+    "kaikkiHakijatLkm": 1507,
+    "ensisijaisetHakijatLkm": 296
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082093",
@@ -19404,16 +19404,16 @@
     "ensisijaisetHakijatLkm": 24
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000082154",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073960",
     "hakukohde": "Tradenomi (AMK), tietojenkäsittely, päivätoteutus",
-    "korkeakoulu": "Turun ammattikorkeakoulu",
-    "kuntaHakukohde": "Turku",
+    "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
+    "kuntaHakukohde": "Jyväskylä",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
-    "aloituspaikatLkm": 60,
-    "kaikkiHakijatLkm": 290,
-    "ensisijaisetHakijatLkm": 35
+    "aloituspaikatLkm": 30,
+    "kaikkiHakijatLkm": 235,
+    "ensisijaisetHakijatLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000073189",
@@ -19428,16 +19428,16 @@
     "ensisijaisetHakijatLkm": 28
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073960",
+    "kooditHakukohde": "1.2.246.562.20.00000000000000082154",
     "hakukohde": "Tradenomi (AMK), tietojenkäsittely, päivätoteutus",
-    "korkeakoulu": "Jyväskylän ammattikorkeakoulu",
-    "kuntaHakukohde": "Jyväskylä",
+    "korkeakoulu": "Turun ammattikorkeakoulu",
+    "kuntaHakukohde": "Turku",
     "koulutuksenKieli": "vain suomi",
     "sektori": "Ammattikorkeakoulukoulutus",
     "koulutusalaTaso1": "Tietojenkäsittely ja tietoliikenne (ICT) ",
-    "aloituspaikatLkm": 30,
-    "kaikkiHakijatLkm": 235,
-    "ensisijaisetHakijatLkm": 27
+    "aloituspaikatLkm": 60,
+    "kaikkiHakijatLkm": 290,
+    "ensisijaisetHakijatLkm": 35
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000082354",
@@ -20064,18 +20064,6 @@
     "ensisijaisetHakijatLkm": 52
   },
   {
-    "kooditHakukohde": "1.2.246.562.20.00000000000000073118",
-    "hakukohde": "Tuotantotalous, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
-    "korkeakoulu": "Aalto-yliopisto",
-    "kuntaHakukohde": "Espoo",
-    "koulutuksenKieli": "suomi ja ruotsi",
-    "sektori": "Yliopistokoulutus",
-    "koulutusalaTaso1": "Tekniikan alat",
-    "aloituspaikatLkm": 60,
-    "kaikkiHakijatLkm": 1400,
-    "ensisijaisetHakijatLkm": 741
-  },
-  {
     "kooditHakukohde": "1.2.246.562.20.00000000000000081878",
     "hakukohde": "Tuotantotalous, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
     "korkeakoulu": "Vaasan yliopisto",
@@ -20098,6 +20086,18 @@
     "aloituspaikatLkm": 78,
     "kaikkiHakijatLkm": 593,
     "ensisijaisetHakijatLkm": 92
+  },
+  {
+    "kooditHakukohde": "1.2.246.562.20.00000000000000073118",
+    "hakukohde": "Tuotantotalous, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+    "korkeakoulu": "Aalto-yliopisto",
+    "kuntaHakukohde": "Espoo",
+    "koulutuksenKieli": "suomi ja ruotsi",
+    "sektori": "Yliopistokoulutus",
+    "koulutusalaTaso1": "Tekniikan alat",
+    "aloituspaikatLkm": 60,
+    "kaikkiHakijatLkm": 1400,
+    "ensisijaisetHakijatLkm": 741
   },
   {
     "kooditHakukohde": "1.2.246.562.20.00000000000000075676",
