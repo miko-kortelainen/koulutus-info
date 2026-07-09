@@ -165,7 +165,7 @@ export default function StatsListPage() {
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
           {sidebar}
 
-          <Stack flex={1} gap={4}>
+          <Stack flex={1} gap={4} width="100%">
             {sortYearControls}
             {cardList}
             <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
