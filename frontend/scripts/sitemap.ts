@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { writeFileSync } from "node:fs";
 import { schoolNames } from "../src/api/loadData";
 import { slugifySchoolName } from "../src/components/slug";
 
@@ -21,7 +21,7 @@ ${paths
     <lastmod>${date}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${i === 0 ? "1.0" : "0.8"}</priority>
-  </url>`
+  </url>`,
   )
   .join("\n")}
 </urlset>

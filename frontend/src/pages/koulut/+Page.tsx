@@ -1,10 +1,10 @@
 import { Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
-import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
-import type { SchoolListItem } from "./+data";
-import { COLORS } from "@/theme";
-import SchoolListCard from "./components/SchoolListCard";
+import PageContainer from "@/layout/PageContainer";
 import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
+import { COLORS } from "@/theme";
+import type { SchoolListItem } from "./+data";
+import SchoolListCard from "./components/SchoolListCard";
 
 const SECTIONS = [
   { sektori: "Yliopistokoulutus", heading: "Yliopistot" },
@@ -30,12 +30,12 @@ export default function SchoolIndexPage() {
     <Tabs.List>
       {SECTIONS.map(({ heading }) => (
         <Tabs.Trigger
-          key={heading}
-          value={heading}
           flex={1}
-          justifyContent="center"
           fontWeight="semibold"
+          justifyContent="center"
+          key={heading}
           letterSpacing="wide"
+          value={heading}
         >
           {heading}
         </Tabs.Trigger>

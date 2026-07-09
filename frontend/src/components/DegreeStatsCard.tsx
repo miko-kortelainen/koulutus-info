@@ -1,10 +1,10 @@
+import { Badge, Button, Card, HStack, Separator, Stack, Stat, Text } from "@chakra-ui/react";
 import { memo } from "react";
-import { Card, Stack, Badge, Text, Stat, HStack, Separator, Button } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
-import { type StatisticsEntry } from "@/types.gen";
-import { COLORS } from "@/theme";
 import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
 import { slugifySchoolName } from "@/components/slug";
+import { COLORS } from "@/theme";
+import type { StatisticsEntry } from "@/types.gen";
 
 interface DegreeStatsCardProps {
   degree: StatisticsEntry;
@@ -37,21 +37,21 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
 
   const stats = (
     <HStack alignItems="flex-start" gap={2}>
-      <Stat.Root size={{ base: "sm", md: "md" }} flex={{ base: 3, md: 1 }}>
+      <Stat.Root flex={{ base: 3, md: 1 }} size={{ base: "sm", md: "md" }}>
         <Stat.Label fontSize={{ base: "xs", md: "md" }} mb={-2}>
           Aloituspaikat
         </Stat.Label>
         <Stat.ValueText fontSize="md">{formatCount(degree.aloituspaikatLkm)}</Stat.ValueText>
       </Stat.Root>
 
-      <Stat.Root size={{ base: "sm", md: "md" }} flex={{ base: 4, md: 1 }}>
+      <Stat.Root flex={{ base: 4, md: 1 }} size={{ base: "sm", md: "md" }}>
         <Stat.Label fontSize={{ base: "xs", md: "md" }} mb={-2}>
           Ensisijaiset hakijat
         </Stat.Label>
         <Stat.ValueText fontSize="md">{formatCount(degree.ensisijaisetHakijatLkm)}</Stat.ValueText>
       </Stat.Root>
 
-      <Stat.Root size={{ base: "sm", md: "md" }} flex={{ base: 4, md: 1 }}>
+      <Stat.Root flex={{ base: 4, md: 1 }} size={{ base: "sm", md: "md" }}>
         <Stat.Label fontSize={{ base: "xs", md: "md" }} mb={-2}>
           Kaikki hakijat
         </Stat.Label>
@@ -61,31 +61,35 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
   );
 
   const header = (
-    <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" textWrap="pretty" mb={-2}>
+    <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" mb={-2} textWrap="pretty">
       {degree.hakukohde}
     </Text>
   );
 
   const footer = (
-    <HStack justify="space-between" alignItems="center">
-      {tier ? (
-        <HStack alignItems="center" gap={1}>
-          <Badge size={{ base: "sm", md: "lg" }} bg={tier.bg} color={tier.color} fontWeight="semibold">
+    <HStack alignItems="center" justify="space-between">
+      <HStack alignItems="center" gap={1}>
+        {tier ? (
+          <Badge bg={tier.bg} color={tier.color} fontWeight="semibold" size={{ base: "sm", md: "lg" }}>
             {tier.label}
           </Badge>
+        ) : (
+          <Badge colorPalette="gray" fontWeight="semibold" size={{ base: "sm", md: "lg" }} variant="surface">
+            Määrittämätön
+          </Badge>
+        )}
 
-          <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
-            hakijapaine
-          </Text>
-        </HStack>
-      ) : null}
+        <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
+          hakijapaine
+        </Text>
+      </HStack>
       {onToggleCompare ? (
         <Button
-          size={{ base: "2xs", md: "sm" }}
-          variant={isSelected ? "solid" : "surface"}
           bg={COLORS.accent}
           disabled={!isSelected && selectionFull}
           onClick={() => onToggleCompare(degree)}
+          size={{ base: "2xs", md: "sm" }}
+          variant={isSelected ? "solid" : "surface"}
         >
           {isSelected ? "Valittu ✓" : "Vertaile"}
         </Button>

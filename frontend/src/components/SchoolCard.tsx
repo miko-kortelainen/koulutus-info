@@ -1,9 +1,9 @@
 import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { HiHeart, HiLocationMarker, HiOutlineHeart } from "react-icons/hi";
-import { type ToteutusEntry } from "@/types.gen";
-import { COLORS } from "@/theme";
 import { slugifySchoolName } from "@/components/slug";
 import useFavorites from "@/hooks/useFavorites";
+import { COLORS } from "@/theme";
+import type { ToteutusEntry } from "@/types.gen";
 
 type Props = {
   toteutus: ToteutusEntry;
@@ -35,27 +35,27 @@ export default function SchoolCard({ toteutus }: Props) {
   );
 
   const footer = (
-    <HStack justify="space-between" alignItems="center">
+    <HStack alignItems="center" justify="space-between">
       {toteutus.toteutusOid ? (
         <Link
-          href={toteutusURL}
-          target="_blank"
-          rel="noopener noreferrer"
           fontSize="sm"
+          href={toteutusURL}
           letterSpacing="wide"
+          rel="noopener noreferrer"
+          target="_blank"
           textDecoration="underline"
-          textDecorationStyle="dotted"
           textDecorationColor={COLORS.accent}
+          textDecorationStyle="dotted"
         >
           Katso opintopolussa
         </Link>
       ) : null}
       <IconButton
-        height="fit"
         aria-label={favorited ? "Poista tallennetuista" : "Tallenna"}
-        variant="ghost"
-        size="xl"
+        height="fit"
         onClick={() => toggleFavorite(toteutus)}
+        size="xl"
+        variant="ghost"
       >
         {favorited ? <HiHeart color={COLORS.accent} /> : <HiOutlineHeart />}
       </IconButton>
@@ -63,9 +63,9 @@ export default function SchoolCard({ toteutus }: Props) {
   );
 
   return (
-    <Card.Root size="md" borderColor={favorited ? COLORS.accent : undefined}>
+    <Card.Root borderColor={favorited ? COLORS.accent : undefined} size="md">
       <Card.Header>
-        <Text fontSize="sm" fontWeight="semibold" textWrap="pretty" mb={-2}>
+        <Text fontSize="sm" fontWeight="semibold" mb={-2} textWrap="pretty">
           {degreeName}
         </Text>
       </Card.Header>

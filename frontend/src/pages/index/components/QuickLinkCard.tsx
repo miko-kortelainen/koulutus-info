@@ -11,21 +11,21 @@ interface QuickLinkCardProps {
 
 export default function QuickLinkCard({ href, label, description, icon: Icon }: QuickLinkCardProps) {
   return (
-    <Card.Root size="sm" asChild alignItems="start" borderColor={COLORS.accent}>
-      <Link href={href} _hover={{ textDecoration: "none" }}>
+    <Card.Root alignItems="start" asChild borderColor={COLORS.accent} size="sm">
+      <Link _hover={{ textDecoration: "none" }} href={href}>
         <Card.Body width="100%">
           <HStack gap={2}>
-            <Icon size="1rem" color={COLORS.accent} />
+            <Icon color={COLORS.accent} size="1rem" />
             <Text fontWeight="semibold" letterSpacing="wide">
               {label}
             </Text>
           </HStack>
           <Text
-            fontSize="sm"
             color="fg.muted"
+            fontSize="sm"
             textDecor="underline"
-            textDecorationStyle="dotted"
             textDecorationColor={COLORS.accent}
+            textDecorationStyle="dotted"
           >
             {description}
           </Text>

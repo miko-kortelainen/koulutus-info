@@ -1,5 +1,5 @@
-import { Badge, Box, Flex, Skeleton, Stack, Text } from "@chakra-ui/react";
 import type { BarListData } from "@chakra-ui/charts";
+import { Badge, Box, Flex, Skeleton, Stack, Text } from "@chakra-ui/react";
 
 interface TopBarListProps {
   data: BarListData[];
@@ -29,7 +29,7 @@ export default function TopBarList({
     return (
       <Stack gap={2}>
         {Array.from({ length: skeletonCount }).map((_, i) => (
-          <Skeleton key={i} height="40px" borderRadius="md" />
+          <Skeleton borderRadius="md" height="40px" key={i} />
         ))}
       </Stack>
     );
@@ -47,25 +47,25 @@ export default function TopBarList({
 
   return (
     <Stack gap={0}>
-      <Flex align="center" gap={2} pb={2} mb={1} borderBottomWidth="1px" borderColor="border.subtle">
-        <Box w="6" flexShrink={0} />
+      <Flex align="center" borderBottomWidth="1px" borderColor="border.subtle" gap={2} mb={1} pb={2}>
+        <Box flexShrink={0} w="6" />
         <Box flex="1" />
-        <Text fontSize="xs" color="fg.muted" w="16" textAlign="right" flexShrink={0} fontWeight="medium">
+        <Text color="fg.muted" flexShrink={0} fontSize="xs" fontWeight="medium" textAlign="right" w="16">
           {compareValueMap ? (selectedYear ?? "Nyt") : "Hakijaa"}
         </Text>
         {compareValueMap ? (
           <>
-            <Text fontSize="xs" color="fg.muted" w="16" textAlign="right" flexShrink={0} fontWeight="medium">
+            <Text color="fg.muted" flexShrink={0} fontSize="xs" fontWeight="medium" textAlign="right" w="16">
               {compareYear ?? "Vertailu"}
             </Text>
             <Text
-              fontSize="xs"
               color="fg.muted"
-              w="20"
-              textAlign="right"
-              flexShrink={0}
-              fontWeight="medium"
               display={{ base: "none", md: "block" }}
+              flexShrink={0}
+              fontSize="xs"
+              fontWeight="medium"
+              textAlign="right"
+              w="20"
             >
               Muutos
             </Text>
@@ -73,13 +73,13 @@ export default function TopBarList({
         ) : (
           showPercent && (
             <Text
-              fontSize="xs"
               color="fg.muted"
-              w="16"
-              textAlign="right"
-              flexShrink={0}
-              fontWeight="medium"
               display={{ base: "none", md: "block" }}
+              flexShrink={0}
+              fontSize="xs"
+              fontWeight="medium"
+              textAlign="right"
+              w="16"
             >
               %
             </Text>
@@ -93,35 +93,35 @@ export default function TopBarList({
         const valueDiff = compareValue != null ? item.value - compareValue : null;
 
         return (
-          <Flex key={name} align="center" gap={2} minH="10" py={1}>
-            <Text w="6" textAlign="right" fontSize="xs" color="fg.muted" flexShrink={0}>
+          <Flex align="center" gap={2} key={name} minH="10" py={1}>
+            <Text color="fg.muted" flexShrink={0} fontSize="xs" textAlign="right" w="6">
               {i + 1}.
             </Text>
             <Box flex="1" minW={0}>
               <Text fontSize="sm" lineClamp={1} mb={1}>
                 {name}
               </Text>
-              <Box bg={color} h={BAR_H} borderRadius="sm" width={`${(item.value / maxValue) * 100}%`} />
+              <Box bg={color} borderRadius="sm" h={BAR_H} width={`${(item.value / maxValue) * 100}%`} />
             </Box>
-            <Text fontSize="sm" textAlign="right" w="16" flexShrink={0}>
+            <Text flexShrink={0} fontSize="sm" textAlign="right" w="16">
               {fmt.format(item.value)}
             </Text>
             {compareValueMap ? (
               <>
-                <Text fontSize="sm" textAlign="right" w="16" flexShrink={0} color="fg.muted">
+                <Text color="fg.muted" flexShrink={0} fontSize="sm" textAlign="right" w="16">
                   {compareValue != null ? fmt.format(compareValue) : "–"}
                 </Text>
-                <Box w="20" flexShrink={0} textAlign="right" display={{ base: "none", md: "block" }}>
+                <Box display={{ base: "none", md: "block" }} flexShrink={0} textAlign="right" w="20">
                   {valueDiff != null ? (
                     <Badge
-                      size="sm"
                       colorPalette={valueDiff > 0 ? "green" : valueDiff < 0 ? "red" : "gray"}
+                      size="sm"
                       variant="subtle"
                     >
                       {valueDiff > 0 ? `+${fmt.format(valueDiff)}` : valueDiff < 0 ? fmt.format(valueDiff) : "–"}
                     </Badge>
                   ) : (
-                    <Badge size="sm" colorPalette="blue" variant="subtle">
+                    <Badge colorPalette="blue" size="sm" variant="subtle">
                       uusi
                     </Badge>
                   )}
@@ -130,12 +130,12 @@ export default function TopBarList({
             ) : (
               showPercent && (
                 <Text
+                  color="fg.muted"
+                  display={{ base: "none", md: "block" }}
+                  flexShrink={0}
                   fontSize="sm"
                   textAlign="right"
                   w="16"
-                  flexShrink={0}
-                  color="fg.muted"
-                  display={{ base: "none", md: "block" }}
                 >
                   {((item.value / total) * 100).toFixed(1)} %
                 </Text>

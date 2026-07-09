@@ -1,7 +1,7 @@
 import { Badge, Card, Group, HStack, Text, VStack } from "@chakra-ui/react";
 import { HiOutlineAcademicCap } from "react-icons/hi";
-import { COLORS } from "@/theme";
 import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
+import { COLORS } from "@/theme";
 import type { SchoolListItem } from "../+data";
 
 interface SchoolListCardProps {
@@ -21,8 +21,8 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
       <Badge
         bg={COLORS.accent}
         color={COLORS.text}
-        size={{ base: "xs", md: "md" }}
         fontWeight="semibold"
+        size={{ base: "xs", md: "md" }}
         width="fit-content"
       >
         Mukana syksyn yhteishaussa!
@@ -30,10 +30,10 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
     ) : null;
 
   const nameRow = (
-    <HStack gap={2} flex={1} width="100%">
+    <HStack flex={1} gap={2} width="100%">
       <Group flex={1}>
         <HiOutlineAcademicCap color={COLORS.accent} />
-        <Text fontWeight="semibold" fontSize={{ base: "xs", md: "md" }} letterSpacing="wide">
+        <Text fontSize={{ base: "xs", md: "md" }} fontWeight="semibold" letterSpacing="wide">
           {school.name}
         </Text>
       </Group>
@@ -49,7 +49,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
 
   const tierBadge = tier ? (
     <HStack alignItems="center" gap={1} mt={1}>
-      <Badge size={{ base: "xs", md: "md" }} bg={tier.bg} color={tier.color} fontWeight="semibold">
+      <Badge bg={tier.bg} color={tier.color} fontWeight="semibold" size={{ base: "xs", md: "md" }}>
         {tier.label}
       </Badge>
       <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }}>
@@ -59,7 +59,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
   ) : null;
 
   return (
-    <Card.Root size="sm" asChild>
+    <Card.Root asChild size="sm">
       <a href={`/koulut/${school.slug}/`}>
         <Card.Body>
           <VStack alignItems="flex-start">

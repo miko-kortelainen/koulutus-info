@@ -2,15 +2,15 @@ export default function Head() {
   return (
     <>
       <meta
+        content="Suosituimmat koulutusalat, korkeakoulut ja sektorit yhteishaun hakijamäärien mukaan."
         name="description"
-        content="Suosituimmat koulutusalat, korkeakoulut ja sektorit yhteishaun hakijamäärien mukaan."
       />
-      <meta property="og:title" content="Trendit – hakijatilastot koulutusaloittain ja korkeakouluittain" />
-      <link rel="canonical" href="https://yhteishaku.app/trendit/" />
-      <meta property="og:url" content="https://yhteishaku.app/trendit/" />
+      <meta content="Trendit – hakijatilastot koulutusaloittain ja korkeakouluittain" property="og:title" />
+      <link href="https://yhteishaku.app/trendit/" rel="canonical" />
+      <meta content="https://yhteishaku.app/trendit/" property="og:url" />
       <meta
-        property="og:description"
         content="Suosituimmat koulutusalat, korkeakoulut ja sektorit yhteishaun hakijamäärien mukaan."
+        property="og:description"
       />
     </>
   );

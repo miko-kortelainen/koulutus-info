@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import type { StatisticsEntry } from "@/types.gen";
-import { sumByKey, type SumKey } from "../components/sumByKey";
+import { type SumKey, sumByKey } from "../components/sumByKey";
 
 export interface TrendsData {
   topKoulutusalat: { name: string; value: number }[];

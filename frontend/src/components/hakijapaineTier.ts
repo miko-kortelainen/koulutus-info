@@ -7,7 +7,7 @@ const TIERS = [
   { maxExclusive: Infinity, label: "Korkea", bg: "oklch(0.376 0.113 13.636)", color: "oklch(1 0 0)" },
 ] as const;
 
-export const getTier = (ratio: number) => TIERS.find((t) => ratio < t.maxExclusive)!;
+export const getTier = (ratio: number) => TIERS.find((t) => ratio < t.maxExclusive) ?? TIERS[TIERS.length - 1];
 
 export const getHakijapaine = (entry: Pick<StatisticsEntry, "aloituspaikatLkm" | "ensisijaisetHakijatLkm">) =>
   entry.aloituspaikatLkm ? entry.ensisijaisetHakijatLkm / entry.aloituspaikatLkm : null;

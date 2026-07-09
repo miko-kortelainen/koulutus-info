@@ -9,11 +9,11 @@ export function Head() {
 
   return (
     <>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={`${schoolName} – yhteishaun hakijamäärät ja koulutukset`} />
-      <link rel="canonical" href={url} />
-      <meta property="og:url" content={url} />
-      <meta property="og:description" content={description} />
+      <meta content={description} name="description" />
+      <meta content={`${schoolName} – yhteishaun hakijamäärät ja koulutukset`} property="og:title" />
+      <link href={url} rel="canonical" />
+      <meta content={url} property="og:url" />
+      <meta content={description} property="og:description" />
     </>
   );
 }
