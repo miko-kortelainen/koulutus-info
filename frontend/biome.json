@@ -6,7 +6,7 @@
     "useIgnoreFile": false
   },
   "files": {
-    "includes": ["**", "!!**/dist"],
+    "includes": ["**", "!!**/dist", "!!*.svg"],
     "ignoreUnknown": true
   },
   "formatter": {
@@ -17,6 +17,7 @@
   "linter": {
     "rules": {
       "preset": "recommended",
+      "a11y": "off",
       "suspicious": {
         "noArrayIndexKey": "off"
       }
