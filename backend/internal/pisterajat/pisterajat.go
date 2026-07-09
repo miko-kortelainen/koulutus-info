@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-var expectedHeader = []string{"Koulu", "Ohjelma", "Valintatapa", "Tarkenne", "Pisteraja"}
+var expectedHeader = []string{"Koulu", "Ohjelma", "Valintatapa", "Pisteraja"}
 
 // School contains every programme offered by one school.
 type School struct {
@@ -19,22 +19,16 @@ type School struct {
 	Programmes []Programme `json:"programmes"`
 }
 
-// Programme contains the cutoff scores grouped by selection method.
+// Programme contains the cutoff scores for one programme.
 type Programme struct {
-	Name             string            `json:"name"`
-	SelectionMethods []SelectionMethod `json:"selectionMethods"`
-}
-
-// SelectionMethod contains the cutoff scores for one selection method.
-type SelectionMethod struct {
 	Name    string   `json:"name"`
 	Cutoffs []Cutoff `json:"cutoffs"`
 }
 
-// Cutoff is one admission cutoff score and its qualifier.
+// Cutoff is one selection method and its admission cutoff score.
 type Cutoff struct {
-	Detail string  `json:"detail"`
-	Score  float64 `json:"score"`
+	SelectionMethod string  `json:"selectionMethod"`
+	Score           float64 `json:"score"`
 }
 
 type programmeKey struct {
@@ -42,14 +36,8 @@ type programmeKey struct {
 	programme string
 }
 
-type selectionMethodKey struct {
-	school          string
-	programme       string
-	selectionMethod string
-}
-
 // Convert reads pisterajat.csv data. It preserves the source ordering while
-// grouping records as school, programme, selection method, and cutoff detail.
+// grouping records by school and programme.
 func Convert(input io.Reader) ([]School, error) {
 	reader := csv.NewReader(input)
 	reader.Comma = ';'
@@ -73,8 +61,6 @@ func Convert(input io.Reader) ([]School, error) {
 	schools := make([]School, 0)
 	schoolIndexes := make(map[string]int)
 	programmeIndexes := make(map[programmeKey]int)
-	selectionMethodIndexes := make(map[selectionMethodKey]int)
-
 	for rowNumber := 2; ; rowNumber++ {
 		record, err := reader.Read()
 		if err == io.EOF {
@@ -90,9 +76,9 @@ func Convert(input io.Reader) ([]School, error) {
 		if err := validateRecord(record, rowNumber); err != nil {
 			return nil, err
 		}
-		score, err := parseScore(record[4])
+		score, err := parseScore(record[3])
 		if err != nil {
-			return nil, fmt.Errorf("row %d: parse Pisteraja %q: %w", rowNumber, record[4], err)
+			return nil, fmt.Errorf("row %d: parse Pisteraja %q: %w", rowNumber, record[3], err)
 		}
 
 		schoolIndex, exists := schoolIndexes[record[0]]
@@ -110,25 +96,10 @@ func Convert(input io.Reader) ([]School, error) {
 			programmeIndexes[programmeKey] = programmeIndex
 		}
 
-		selectionMethodKey := selectionMethodKey{
-			school:          record[0],
-			programme:       record[1],
-			selectionMethod: record[2],
-		}
-		selectionMethodIndex, exists := selectionMethodIndexes[selectionMethodKey]
-		if !exists {
-			selectionMethodIndex = len(schools[schoolIndex].Programmes[programmeIndex].SelectionMethods)
-			schools[schoolIndex].Programmes[programmeIndex].SelectionMethods = append(
-				schools[schoolIndex].Programmes[programmeIndex].SelectionMethods,
-				SelectionMethod{Name: record[2]},
-			)
-			selectionMethodIndexes[selectionMethodKey] = selectionMethodIndex
-		}
-
-		selectionMethod := &schools[schoolIndex].Programmes[programmeIndex].SelectionMethods[selectionMethodIndex]
-		selectionMethod.Cutoffs = append(selectionMethod.Cutoffs, Cutoff{
-			Detail: record[3],
-			Score:  score,
+		programme := &schools[schoolIndex].Programmes[programmeIndex]
+		programme.Cutoffs = append(programme.Cutoffs, Cutoff{
+			SelectionMethod: record[2],
+			Score:           score,
 		})
 	}
 

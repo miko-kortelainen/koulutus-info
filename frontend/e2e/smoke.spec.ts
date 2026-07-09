@@ -211,12 +211,12 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
   await page.getByRole("link", { name: "Katso pisterajat" }).click();
 
   await expect(page).toHaveURL("/koulut/aalto-yliopisto/pisterajat/");
-  await expect(page.getByRole("heading", { name: "Pisterajat: Aalto-yliopisto" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Aalto-yliopiston pisterajat 2026" })).toBeVisible();
   await expect(
     page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
   ).toBeVisible();
-  await expect(page.getByText("Todistusvalinta").first()).toBeVisible();
-  await expect(page.getByText("145,60")).toBeVisible();
+  await expect(page.getByText("Todistusvalinta ensikertalaisille hakijoille").first()).toBeVisible();
+  await expect(page.getByText("145,20")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
@@ -227,37 +227,13 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
   }).toPass();
 });
 
-test("/koulut/:slug/pisterajat: groups programmes into selection-method tabs", async ({ page }) => {
-  await page.goto("/koulut/seinajoen-ammattikorkeakoulu/pisterajat/");
+test("/koulut/:slug/pisterajat: shows every selection method for a programme", async ({ page }) => {
+  await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
 
-  const tabs = page.getByRole("tablist");
-  const certificatePanel = page.getByRole("tabpanel", { name: "Todistusvalinta" });
-  const examPanel = page.getByRole("tabpanel", { name: "Koepisteet" });
-  await expect(tabs).toBeVisible();
-  await expect(tabs.getByRole("tab", { name: "Todistusvalinta" })).toBeVisible();
-  await expect(tabs.getByRole("tab", { name: "Koepisteet" })).toBeVisible();
-  await expect(certificatePanel.getByText("Agrologi (AMK), päivätoteutus")).toBeVisible();
-
-  // Certificate selection has more than one page; retain it after switching tabs.
-  await expect(async () => {
-    await certificatePanel.getByRole("button", { name: "2" }).click();
-    await expect(certificatePanel.getByText("Insinööri (AMK), konetekniikka, monimuotototeutus")).toBeVisible({
-      timeout: 1000,
-    });
-  }).toPass();
-
-  // click can land before hydration, so retry until the tab actually switches
-  await expect(async () => {
-    await tabs.getByRole("tab", { name: "Koepisteet" }).click();
-    await expect(
-      examPanel.getByText("Master of Business Administration, International Business Management"),
-    ).toBeVisible({
-      timeout: 1000,
-    });
-  }).toPass();
-
-  await tabs.getByRole("tab", { name: "Todistusvalinta" }).click();
-  await expect(certificatePanel.getByText("Insinööri (AMK), konetekniikka, monimuotototeutus")).toBeVisible();
+  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible();
+  await expect(page.getByText("AMK-valintakoe", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {

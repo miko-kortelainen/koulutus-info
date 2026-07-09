@@ -16,8 +16,21 @@ export default function SchoolPage() {
   const [programPage, setProgramPage] = useState(1);
   const [statsPage, setStatsPage] = useState(1);
 
+  const linkBack = (
+    <Link
+      fontSize="sm"
+      href="/koulut/"
+      textDecoration="underline"
+      textDecorationColor={COLORS.accent}
+      textDecorationStyle="dotted"
+    >
+      ← Takaisin
+    </Link>
+  );
+
   const header = (
     <Stack gap={1}>
+      {linkBack}
       <Heading as="h1" size="md">
         {schoolName}
       </Heading>
@@ -45,8 +58,8 @@ export default function SchoolPage() {
   const paginatedProgramList = toteutukset.slice((programPage - 1) * pageSize, programPage * pageSize);
   const programList = (
     <Stack gap={4}>
-      {paginatedProgramList.map((t, index) => (
-        <SchoolCard key={`${t.toteutusOid} ${index}`} toteutus={t} />
+      {paginatedProgramList.map((t) => (
+        <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi}`} toteutus={t} />
       ))}
       <Pagination count={toteutukset.length} onPageChange={setProgramPage} page={programPage} pageSize={pageSize} />
     </Stack>
@@ -55,8 +68,8 @@ export default function SchoolPage() {
   const paginatedStatsList = statistics.slice((statsPage - 1) * pageSize, statsPage * pageSize);
   const statsList = (
     <Stack gap={4}>
-      {paginatedStatsList.map((d, index) => (
-        <DegreeStatCard degree={d} key={`${d.kooditHakukohde} ${index}`} />
+      {paginatedStatsList.map((d) => (
+        <DegreeStatCard degree={d} key={`${d.kooditHakukohde}-${d.hakukohde}`} />
       ))}
       <Pagination count={statistics.length} onPageChange={setStatsPage} page={statsPage} pageSize={pageSize} />
     </Stack>
@@ -73,7 +86,7 @@ export default function SchoolPage() {
   ].filter((t) => t.visible);
 
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
       {tabs.length > 0 ? (
         <Tabs.Root defaultValue={tabs[0].value} size="sm">

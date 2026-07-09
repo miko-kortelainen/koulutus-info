@@ -4,7 +4,12 @@ import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
 import { slugifySchoolName } from "../components/slug";
 import { CURRENT_YEAR } from "../pages/hakijamaarat/components/yearOptions";
 
-const cache = new Map<string, unknown>();
+interface CacheEntry {
+  modifiedAt: number;
+  data: unknown;
+}
+
+const cache = new Map<string, CacheEntry>();
 
 const assertNoSlugCollisions = (names: string[], dataset: string) => {
   const slugToName = new Map<string, string>();
@@ -19,9 +24,13 @@ const assertNoSlugCollisions = (names: string[], dataset: string) => {
 };
 
 export const readPublicData = (file: string) => {
-  if (cache.has(file)) return cache.get(file);
-  const data = JSON.parse(fs.readFileSync(`${process.cwd()}/public/data/${file}`, "utf-8"));
-  cache.set(file, data);
+  const path = `${process.cwd()}/public/data/${file}`;
+  const modifiedAt = fs.statSync(path).mtimeMs;
+  const cached = cache.get(file);
+  if (cached?.modifiedAt === modifiedAt) return cached.data;
+
+  const data = JSON.parse(fs.readFileSync(path, "utf-8"));
+  cache.set(file, { modifiedAt, data });
   return data;
 };
 
