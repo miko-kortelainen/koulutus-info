@@ -16,6 +16,10 @@ export const COLORS = {
 const config = defineConfig({
   theme: {
     tokens: {
+      fonts: {
+        heading: { value: "'Google Sans Flex', sans-serif" },
+        body: { value: "'Google Sans Flex', sans-serif" },
+      },
       colors: {
         bg: { value: COLORS.bg },
         text: { value: COLORS.text },
