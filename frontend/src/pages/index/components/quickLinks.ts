@@ -4,25 +4,25 @@ export const quickLinks = [
   {
     href: "/hakijamaarat/",
     label: "hakijamäärät",
-    description: "Katso hakijamäärät koulutuksittain",
+    description: "Edellisvuosien hakijamääriä koulutuksittain",
     icon: HiOutlineChartBar,
   },
   {
     href: "/koulutukset/",
     label: "koulutukset",
-    description: "Selaa yhteishaussa olevia koulutuksia",
+    description: "Syksyn 2026 yhteishaussa olevat koulutukset",
     icon: HiOutlineAcademicCap,
   },
   {
     href: "/koulut/",
     label: "koulut",
-    description: "Selaa korkeakouluja ja niiden tilastoja",
+    description: "Korkeakoulujen hakijamäärät ja koulutukset",
     icon: HiOutlineLibrary,
   },
   {
     href: "/trendit/",
     label: "trendit",
-    description: "Vertaa alojen ja koulujen hakijamääriä",
+    description: "Suositumpien alojen ja koulujen vertailu",
     icon: HiOutlineTrendingUp,
   },
 ];

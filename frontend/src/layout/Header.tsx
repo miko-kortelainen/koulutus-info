@@ -101,7 +101,15 @@ export default function Header() {
             </Drawer.Positioner>
           </Portal>
         </Drawer.Root>
-        <Link _hover={{ textDecoration: "none" }} fontWeight="bold" href="/" letterSpacing="widest">
+
+        <Link
+          _hover={{ textDecoration: "none" }}
+          display="flex"
+          fontWeight="bold"
+          gap={2}
+          href="/"
+          letterSpacing="widest"
+        >
           yhteishaku.app
         </Link>
       </HStack>
