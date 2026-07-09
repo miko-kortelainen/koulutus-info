@@ -3,11 +3,11 @@ import favicon from "../../public/favicon.png";
 export function Head() {
   return (
     <>
-      <link rel="icon" href={favicon} type="image/png" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://yhteishaku.app/images/og-img.jpg" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <link rel="api-catalog" href="/.well-known/api-catalog" />
+      <link href={favicon} rel="icon" type="image/png" />
+      <meta content="website" property="og:type" />
+      <meta content="https://yhteishaku.app/images/og-img.jpg" property="og:image" />
+      <meta content="summary_large_image" name="twitter:card" />
+      <link href="/.well-known/api-catalog" rel="api-catalog" />
     </>
   );
 }

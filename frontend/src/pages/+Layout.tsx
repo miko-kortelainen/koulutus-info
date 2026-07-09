@@ -1,12 +1,12 @@
-import { Flex, Box } from "@chakra-ui/react";
-import Header from "../layout/Header";
+import { Box, Flex } from "@chakra-ui/react";
 import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Flex minHeight="100svh" direction="column">
+    <Flex direction="column" minHeight="100svh">
       <Header />
-      <Box as="main" flex={1} display="flex" flexDirection="column">
+      <Box as="main" display="flex" flex="1" flexDirection="column">
         {children}
       </Box>
       <Footer />

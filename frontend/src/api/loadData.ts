@@ -1,7 +1,7 @@
 import fs from "node:fs";
+import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
 import { slugifySchoolName } from "../components/slug";
 import { CURRENT_YEAR } from "../pages/hakijamaarat/components/yearOptions";
-import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
 
 const cache = new Map<string, unknown>();
 

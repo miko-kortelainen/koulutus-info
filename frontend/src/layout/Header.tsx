@@ -1,15 +1,15 @@
-import { COLORS } from "@/theme";
 import { Box, CloseButton, Drawer, HStack, IconButton, Link, Portal, Separator, Stack, Text } from "@chakra-ui/react";
 import {
+  HiMenu,
   HiOutlineAcademicCap,
   HiOutlineChartBar,
   HiOutlineChatAlt2,
+  HiOutlineHeart,
+  HiOutlineLibrary,
   HiOutlineQuestionMarkCircle,
   HiOutlineTrendingUp,
-  HiMenu,
-  HiOutlineLibrary,
-  HiOutlineHeart,
 } from "react-icons/hi";
+import { COLORS } from "@/theme";
 
 const links = [
   {
@@ -52,7 +52,7 @@ export default function Header() {
       <HStack gap={2} px={2}>
         <Drawer.Root placement="start" size={{ base: "full", md: "xs" }}>
           <Drawer.Trigger asChild>
-            <IconButton aria-label="avaa navigointi" variant="ghost" size="xl">
+            <IconButton aria-label="avaa navigointi" size="xl" variant="ghost">
               <HiMenu />
             </IconButton>
           </Drawer.Trigger>
@@ -66,20 +66,20 @@ export default function Header() {
                   </Drawer.Title>
                 </Drawer.Header>
                 <Drawer.Body>
-                  <Box as="nav" aria-label="navigointi">
-                    <Stack as="ul" gap={{ base: 8, md: 10 }} fontSize="xl" listStyleType="none">
+                  <Box aria-label="navigointi" as="nav">
+                    <Stack as="ul" fontSize="xl" gap={{ base: 8, md: 10 }} listStyleType="none">
                       {links.map(({ href, label, description, icon: Icon }) => (
                         <Box as="li" key={href}>
                           {/* ActionTrigger closes the drawer on click; vike client routing keeps the layout mounted */}
                           <Drawer.ActionTrigger asChild>
-                            <Link href={href} display="block">
+                            <Link display="block" href={href}>
                               <HStack gap={2}>
-                                <Icon size="1rem" color={COLORS.accent} />
+                                <Icon color={COLORS.accent} size="1rem" />
                                 <Text as="span">{label}</Text>
                               </HStack>
                               <Text
-                                fontSize="sm"
                                 color="fg.muted"
+                                fontSize="sm"
                                 textDecor="underline"
                                 textDecorationColor={COLORS.accent}
                                 textDecorationStyle="dotted"
@@ -95,13 +95,13 @@ export default function Header() {
                   </Box>
                 </Drawer.Body>
                 <Drawer.CloseTrigger asChild>
-                  <CloseButton size="xl" aria-label="sulje navigointi" />
+                  <CloseButton aria-label="sulje navigointi" size="xl" />
                 </Drawer.CloseTrigger>
               </Drawer.Content>
             </Drawer.Positioner>
           </Portal>
         </Drawer.Root>
-        <Link href="/" fontWeight="bold" letterSpacing="widest" _hover={{ textDecoration: "none" }}>
+        <Link _hover={{ textDecoration: "none" }} fontWeight="bold" href="/" letterSpacing="widest">
           yhteishaku.app
         </Link>
       </HStack>

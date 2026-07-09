@@ -2,12 +2,12 @@ export function Head() {
   return (
     <>
       <meta
-        name="description"
         content="Tutki korkeakoulujen yhteishaun hakijamääriä, trendejä sekä koulutustarjontaa."
+        name="description"
       />
-      <meta property="og:title" content="Yhteishaku.app – hakijamäärät ja koulutukset" />
-      <link rel="canonical" href="https://yhteishaku.app/" />
-      <meta property="og:url" content="https://yhteishaku.app/" />
+      <meta content="Yhteishaku.app – hakijamäärät ja koulutukset" property="og:title" />
+      <link href="https://yhteishaku.app/" rel="canonical" />
+      <meta content="https://yhteishaku.app/" property="og:url" />
     </>
   );
 }

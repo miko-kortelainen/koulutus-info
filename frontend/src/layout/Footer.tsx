@@ -6,12 +6,12 @@ export default function Footer() {
 
   return (
     <Box as="footer" p={2} textAlign="center">
-      <Stack gap={1} alignItems="center">
-        <Link href="/tietosuojaseloste/" fontSize={{ base: "2xs", md: "xs" }} color="gray">
+      <Stack alignItems="center" gap={1}>
+        <Link color="gray" fontSize={{ base: "2xs", md: "xs" }} href="/tietosuojaseloste/">
           Tietosuojaseloste
         </Link>
         {data && (
-          <Text fontSize={{ base: "2xs", md: "xs" }} color="gray">
+          <Text color="gray" fontSize={{ base: "2xs", md: "xs" }}>
             Tiedot päivitetty {new Date(data.generatedAt).toLocaleDateString("fi-FI")}
           </Text>
         )}

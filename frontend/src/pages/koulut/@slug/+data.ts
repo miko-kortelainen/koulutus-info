@@ -1,6 +1,6 @@
+import type { PageContextServer } from "vike/types";
 import { readCurrentYearStatistics, readPublicData, schoolNames } from "@/api/loadData";
 import { slugifySchoolName } from "@/components/slug";
-import type { PageContextServer } from "vike/types";
 import type { SchoolsResponse, StatisticsEntry, ToteutusEntry } from "@/types.gen";
 
 export interface SchoolPageData {

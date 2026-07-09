@@ -3,11 +3,11 @@ const description = "Selaa yhteishaussa mukana olevia yliopistoja ja ammattikork
 export function Head() {
   return (
     <>
-      <meta name="description" content={description} />
-      <meta property="og:title" content="Koulut – korkeakoulut yhteishaussa" />
-      <link rel="canonical" href="https://yhteishaku.app/koulut/" />
-      <meta property="og:url" content="https://yhteishaku.app/koulut/" />
-      <meta property="og:description" content={description} />
+      <meta content={description} name="description" />
+      <meta content="Koulut – korkeakoulut yhteishaussa" property="og:title" />
+      <link href="https://yhteishaku.app/koulut/" rel="canonical" />
+      <meta content="https://yhteishaku.app/koulut/" property="og:url" />
+      <meta content={description} property="og:description" />
     </>
   );
 }

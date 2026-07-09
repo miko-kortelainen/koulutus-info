@@ -1,8 +1,8 @@
-import { useSyncExternalStore, type ReactNode } from "react";
 import { Alert, Heading, Link, Separator, Skeleton, Stack, Text } from "@chakra-ui/react";
+import { type ReactNode, useSyncExternalStore } from "react";
 import { usePageContext } from "vike-react/usePageContext";
-import PageContainer from "@/layout/PageContainer";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
+import PageContainer from "@/layout/PageContainer";
 import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/pages/hakijamaarat/components/yearOptions";
 import ComparisonTable from "./components/ComparisonTable";
 

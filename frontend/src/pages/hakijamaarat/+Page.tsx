@@ -1,20 +1,20 @@
+import { Accordion, Alert, Box, Group, Heading, Stack, Text } from "@chakra-ui/react";
 import { useCallback, useMemo, useState } from "react";
-import { Accordion, Stack, Text, Group, Alert, Heading, Box } from "@chakra-ui/react";
-import PageContainer from "@/layout/PageContainer";
-import Pagination from "@/components/Pagination";
 import { useData } from "vike-react/useData";
-import SortControl, { type SortOption } from "./components/SortControl";
+import CompareBar from "@/components/CompareBar";
 import DegreeStatCard from "@/components/DegreeStatsCard";
+import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
+import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
-import useStatisticsQuery from "@/hooks/useStatisticsQuery";
-import useFilteredStatistics from "./hooks/useFilteredStatistics";
 import useDebounce from "@/hooks/useDebounce";
+import useStatisticsQuery from "@/hooks/useStatisticsQuery";
+import PageContainer from "@/layout/PageContainer";
+import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
+import SortControl, { type SortOption } from "./components/SortControl";
 import YearControl from "./components/YearControl";
 import { CURRENT_YEAR, type YearOption } from "./components/yearOptions";
-import CompareBar from "@/components/CompareBar";
-import { toCollection, FilterItem, selectFilter } from "@/components/FilterAccordion";
-import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
+import useFilteredStatistics from "./hooks/useFilteredStatistics";
 
 const PAGE_SIZE = 10;
 
@@ -87,34 +87,34 @@ export default function StatsListPage() {
   const sidebar = (
     <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
       <SearchInput
-        value={searchTerm}
         onChange={(value) => {
           setSearchTerm(value);
           setPage(1);
         }}
         placeholder="Hae koulua tai linjaa"
+        value={searchTerm}
       />
       <Accordion.Root multiple>
         <FilterItem
-          value="sektori"
-          label="Sektori"
           collection={sektoriCollection}
-          selected={selectedSektorit}
+          label="Sektori"
           onChange={selectFilter(setSelectedSektorit, () => setPage(1))}
+          selected={selectedSektorit}
+          value="sektori"
         />
         <FilterItem
-          value="kunta"
-          label="Kunta"
           collection={kuntaCollection}
-          selected={selectedKunnat}
+          label="Kunta"
           onChange={selectFilter(setSelectedKunnat, () => setPage(1))}
+          selected={selectedKunnat}
+          value="kunta"
         />
         <FilterItem
-          value="koulu"
-          label="Koulu"
           collection={schoolCollection}
-          selected={selectedSchools}
+          label="Koulu"
           onChange={selectFilter(setSelectedSchools, () => setPage(1))}
+          selected={selectedSchools}
+          value="koulu"
         />
       </Accordion.Root>
     </Stack>
@@ -123,19 +123,19 @@ export default function StatsListPage() {
   const sortYearControls = (
     <Group flex={1} zIndex={10}>
       <SortControl
-        value={sortOrder}
         onChange={(value) => {
           setSortOrder(value);
           setPage(1);
         }}
+        value={sortOrder}
       />
       <YearControl
-        value={selectedYear}
         onChange={(value) => {
           setSelectedYear(value);
           setPage(1);
           setCompareSelection([]);
         }}
+        value={selectedYear}
       />
     </Group>
   );
@@ -148,10 +148,10 @@ export default function StatsListPage() {
       {paginated.map((d, index) => (
         <DegreeStatCard
           degree={d}
-          key={`${d.hakukohde}, ${index}`}
           isSelected={compareSelection.some((s) => s.kooditHakukohde === d.kooditHakukohde)}
-          selectionFull={compareSelection.length === 2}
+          key={`${d.hakukohde}, ${index}`}
           onToggleCompare={toggleCompare}
+          selectionFull={compareSelection.length === 2}
         />
       ))}
     </Stack>
@@ -162,19 +162,19 @@ export default function StatsListPage() {
       <PageContainer>
         {header}
 
-        <Stack direction={{ base: "column", md: "row" }} align="start" gap={4}>
+        <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
           {sidebar}
 
           <Stack flex={1} gap={4}>
             {sortYearControls}
             {cardList}
-            <Pagination count={filteredData.length} page={page} pageSize={PAGE_SIZE} onPageChange={setPage} />
+            <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
           </Stack>
         </Stack>
 
         {compareSelection.length > 0 ? <Box h="72px" /> : null}
       </PageContainer>
-      <CompareBar selected={compareSelection} year={selectedYear} onRemove={toggleCompare} />
+      <CompareBar onRemove={toggleCompare} selected={compareSelection} year={selectedYear} />
     </>
   );
 }
