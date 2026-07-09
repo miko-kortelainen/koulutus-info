@@ -68,17 +68,21 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
 
   const footer = (
     <HStack alignItems="center" justify="space-between">
-      {tier ? (
-        <HStack alignItems="center" gap={1}>
+      <HStack alignItems="center" gap={1}>
+        {tier ? (
           <Badge bg={tier.bg} color={tier.color} fontWeight="semibold" size={{ base: "sm", md: "lg" }}>
             {tier.label}
           </Badge>
+        ) : (
+          <Badge colorPalette="gray" fontWeight="semibold" size={{ base: "sm", md: "lg" }} variant="surface">
+            Määrittämätön
+          </Badge>
+        )}
 
-          <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
-            hakijapaine
-          </Text>
-        </HStack>
-      ) : null}
+        <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
+          hakijapaine
+        </Text>
+      </HStack>
       {onToggleCompare ? (
         <Button
           bg={COLORS.accent}
