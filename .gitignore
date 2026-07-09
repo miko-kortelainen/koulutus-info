@@ -152,3 +152,4 @@ vite.config.ts.timestamp-*
 CLAUDE.md
 ideat.txt
 backend/pisterajat.csv
+backend/excel_prompt.txt
