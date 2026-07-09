@@ -28,7 +28,7 @@ export default function LandingPage() {
           </Group>
 
           <Text color="fg.muted" fontSize={{ base: "sm", md: "md" }} fontWeight="semibold" textWrap="pretty">
-            Opiskelemaan pyrkivän paras työkalu!
+            Korkeakouluun pyrkivän paras työkalu!
           </Text>
         </VStack>
       </Stack>

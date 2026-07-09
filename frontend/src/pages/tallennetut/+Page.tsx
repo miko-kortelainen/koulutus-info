@@ -18,7 +18,7 @@ export default function SavedListPage() {
   );
 
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
 
       <Stack direction="column" gap={4}>
