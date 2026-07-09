@@ -19,7 +19,7 @@ ${paths
     (path, i) => `  <url>
     <loc>https://yhteishaku.app${path}</loc>
     <lastmod>${date}</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>${i === 0 ? "1.0" : "0.8"}</priority>
   </url>`,
   )
