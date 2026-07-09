@@ -1,4 +1,4 @@
-import { Card, Stack, Group, Skeleton } from "@chakra-ui/react";
+import { Card, Group, Skeleton, Stack } from "@chakra-ui/react";
 
 export default function DegreeStatsCardSkeleton() {
   return (

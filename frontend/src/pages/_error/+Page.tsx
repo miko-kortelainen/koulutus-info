@@ -1,4 +1,4 @@
-import { Center, Heading, Text, Stack } from "@chakra-ui/react";
+import { Center, Heading, Stack, Text } from "@chakra-ui/react";
 import { usePageContext } from "vike-react/usePageContext";
 
 export default function ErrorPage() {

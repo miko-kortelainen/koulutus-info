@@ -14,7 +14,7 @@ export default function TietosuojaselosteePage() {
           <Text>Yhteishaku.app on yksityishenkilön ylläpitämä verkkopalvelu.</Text>
           <Text>
             Yhteystiedot:{" "}
-            <Link href="mailto:miko.kortelainen@proton.me" color="blue.500">
+            <Link color="blue.500" href="mailto:miko.kortelainen@proton.me">
               miko.kortelainen@proton.me
             </Link>
           </Text>
@@ -30,10 +30,10 @@ export default function TietosuojaselosteePage() {
           <Text>
             Palvelu käyttää{" "}
             <Link
-              href="https://www.cloudflare.com/web-analytics/"
               color="blue.500"
-              target="_blank"
+              href="https://www.cloudflare.com/web-analytics/"
               rel="noopener noreferrer"
+              target="_blank"
             >
               Cloudflare Web Analyticsia
             </Link>{" "}
@@ -46,14 +46,14 @@ export default function TietosuojaselosteePage() {
         <Stack gap={2}>
           <Heading size="md">Tietolähteet</Heading>
           <Text>Palvelussa käytetyt lähteet ovat:</Text>
-          <Stack as="ul" gap={1} pl={4} listStyleType="disc">
+          <Stack as="ul" gap={1} listStyleType="disc" pl={4}>
             <li>
-              <Link href="https://vipunen.fi" color="blue.500" target="_blank" rel="noopener noreferrer">
+              <Link color="blue.500" href="https://vipunen.fi" rel="noopener noreferrer" target="_blank">
                 Opetushallituksen tilastopalvelu Vipunen
               </Link>
             </li>
             <li>
-              <Link href="https://opintopolku.fi" color="blue.500" target="_blank" rel="noopener noreferrer">
+              <Link color="blue.500" href="https://opintopolku.fi" rel="noopener noreferrer" target="_blank">
                 Opintopolku.fi
               </Link>
             </li>

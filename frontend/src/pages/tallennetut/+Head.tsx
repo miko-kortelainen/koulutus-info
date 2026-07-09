@@ -1,11 +1,11 @@
 export function Head() {
   return (
     <>
-      <meta name="description" content="Koulutukset, jotka olet tallentanut myöhempää tarkastelua varten." />
-      <meta property="og:title" content="Tallennetut – yhteishaun koulutukset" />
-      <link rel="canonical" href="https://yhteishaku.app/tallennetut/" />
-      <meta property="og:url" content="https://yhteishaku.app/tallennetut/" />
-      <meta property="og:description" content="Koulutukset, jotka olet tallentanut myöhempää tarkastelua varten." />
+      <meta content="Koulutukset, jotka olet tallentanut myöhempää tarkastelua varten." name="description" />
+      <meta content="Tallennetut – yhteishaun koulutukset" property="og:title" />
+      <link href="https://yhteishaku.app/tallennetut/" rel="canonical" />
+      <meta content="https://yhteishaku.app/tallennetut/" property="og:url" />
+      <meta content="Koulutukset, jotka olet tallentanut myöhempää tarkastelua varten." property="og:description" />
     </>
   );
 }

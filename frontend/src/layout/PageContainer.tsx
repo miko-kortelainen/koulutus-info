@@ -8,8 +8,8 @@ interface PageContainerProps {
 
 export default function PageContainer({ children, align = "center" }: PageContainerProps) {
   return (
-    <Flex flex={1} justify="center" align={align} px={{ base: 4, md: 6 }}>
-      <Stack height="100%" direction="column" gap={4} py={2} width={{ base: "100%", md: "60rem" }}>
+    <Flex align={align} flex={1} justify="center" px={{ base: 4, md: 6 }}>
+      <Stack direction="column" gap={4} height="100%" py={2} width={{ base: "100%", md: "60rem" }}>
         {children}
       </Stack>
     </Flex>

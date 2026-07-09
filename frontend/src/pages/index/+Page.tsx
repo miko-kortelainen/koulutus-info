@@ -1,9 +1,9 @@
 import { Group, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "../../theme";
-import useCountdown from "./hooks/useCountdown";
 import QuickLinkCard from "./components/QuickLinkCard";
 import { quickLinks } from "./components/quickLinks";
+import useCountdown from "./hooks/useCountdown";
 
 export default function LandingPage() {
   const timeLeft = useCountdown();
@@ -17,17 +17,17 @@ export default function LandingPage() {
     : [];
 
   const hero = (
-    <VStack gap={{ base: "14", md: "20" }} textAlign="center" alignItems="center">
+    <VStack alignItems="center" gap={{ base: "14", md: "20" }} textAlign="center">
       <Stack gap={{ base: "2", md: "7" }}>
         <VStack gap={0}>
           <Group flexDir="column">
-            <Image src="/images/logo.png" alt="yhteishaku.app" boxSize={{ base: "16", md: "28" }} />
-            <Heading as="h1" size={{ base: "3xl", md: "5xl" }} fontWeight="bold" letterSpacing="widest">
+            <Image alt="yhteishaku.app" boxSize={{ base: "16", md: "28" }} src="/images/logo.png" />
+            <Heading as="h1" fontWeight="bold" letterSpacing="widest" size={{ base: "3xl", md: "5xl" }}>
               yhteishaku.app
             </Heading>
           </Group>
 
-          <Text fontSize={{ base: "sm", md: "md" }} color="fg.muted" fontWeight="semibold" textWrap="pretty">
+          <Text color="fg.muted" fontSize={{ base: "sm", md: "md" }} fontWeight="semibold" textWrap="pretty">
             Opiskelemaan pyrkivän paras työkalu!
           </Text>
         </VStack>
@@ -37,16 +37,16 @@ export default function LandingPage() {
 
   const countdown = timeLeft && (
     <VStack>
-      <Text fontSize={{ base: "xs", md: "md" }} color="fg.muted" letterSpacing="wide">
+      <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }} letterSpacing="wide">
         {timeLeft.label} alkuun
       </Text>
       <SimpleGrid columns={3} gap={6} textAlign="center" width="100%">
         {countdownTiles.map(({ value, label }) => (
-          <VStack key={label} gap={0}>
-            <Heading size="2xl" color={COLORS.accent}>
+          <VStack gap={0} key={label}>
+            <Heading color={COLORS.accent} size="2xl">
               {value}
             </Heading>
-            <Text fontSize={{ base: "xs", md: "md" }} color="fg.muted">
+            <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }}>
               {label}
             </Text>
           </VStack>
@@ -65,7 +65,7 @@ export default function LandingPage() {
 
   return (
     <PageContainer>
-      <VStack gap={10} flex={1} justifyContent="center">
+      <VStack flex={1} gap={10} justifyContent="center">
         {hero}
         {countdown}
         {quickLinksSection}

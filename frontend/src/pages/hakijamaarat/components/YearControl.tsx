@@ -1,4 +1,4 @@
-import { Select, createListCollection } from "@chakra-ui/react";
+import { createListCollection, Select } from "@chakra-ui/react";
 import { YEAR_OPTIONS, type YearOption } from "./yearOptions";
 
 const collection = createListCollection({ items: YEAR_OPTIONS });
@@ -11,11 +11,11 @@ interface YearControlProps {
 export default function YearControl({ value, onChange }: YearControlProps) {
   return (
     <Select.Root
-      size="sm"
       collection={collection}
-      value={[value]}
-      onValueChange={(e) => onChange(e.value[0] as YearOption)}
       flex={1}
+      onValueChange={(e) => onChange(e.value[0] as YearOption)}
+      size="sm"
+      value={[value]}
     >
       <Select.HiddenSelect aria-label="Vuosi" />
       <Select.Control>
@@ -29,7 +29,7 @@ export default function YearControl({ value, onChange }: YearControlProps) {
       <Select.Positioner>
         <Select.Content>
           {YEAR_OPTIONS.map((option) => (
-            <Select.Item key={option.value} item={option}>
+            <Select.Item item={option} key={option.value}>
               {option.label}
             </Select.Item>
           ))}
