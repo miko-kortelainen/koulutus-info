@@ -44,3 +44,50 @@ Generate frontend TypeScript types after changing exported data models:
 ```sh
 tygo generate
 ```
+
+## Converting admission cutoffs
+
+`pisterajat.csv` is converted separately because it is a manually supplied CSV,
+not part of the Vipunen or Opintopolku refresh.
+
+```sh
+go run ./cmd/pisterajat
+```
+
+By default this reads `pisterajat.csv` and writes
+`frontend/public/data/pisterajat.json`. Set either path explicitly, or write
+JSON to standard output with `--output -`:
+
+```sh
+go run ./cmd/pisterajat --input path/to/pisterajat.csv --output path/to/pisterajat.json
+go run ./cmd/pisterajat --output -
+```
+
+The JSON preserves the CSV's order and groups each row as:
+
+```json
+[
+  {
+    "name": "Aalto-yliopisto",
+    "programmes": [
+      {
+        "name": "Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "selectionMethods": [
+          {
+            "name": "Todistusvalinta",
+            "cutoffs": [
+              {
+                "detail": "Todistusvalinta ensikertalaisille hakijoille",
+                "score": 145.6
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+The CSV header must be `Koulu;Ohjelma;Valintatapa;Tarkenne;Pisteraja`.
+`Pisteraja` is parsed as a JSON number, accepting the Finnish decimal comma.
