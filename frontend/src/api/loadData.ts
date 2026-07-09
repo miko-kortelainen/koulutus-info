@@ -1,9 +1,22 @@
 import fs from "node:fs";
+import type { School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
 import { slugifySchoolName } from "../components/slug";
 import { CURRENT_YEAR } from "../pages/hakijamaarat/components/yearOptions";
 
 const cache = new Map<string, unknown>();
+
+const assertNoSlugCollisions = (names: string[], dataset: string) => {
+  const slugToName = new Map<string, string>();
+  for (const name of names) {
+    const slug = slugifySchoolName(name);
+    const existing = slugToName.get(slug);
+    if (existing && existing !== name) {
+      throw new Error(`${dataset} slug collision: "${name}" and "${existing}" both slugify to "${slug}"`);
+    }
+    slugToName.set(slug, name);
+  }
+};
 
 export const readPublicData = (file: string) => {
   if (cache.has(file)) return cache.get(file);
@@ -14,6 +27,23 @@ export const readPublicData = (file: string) => {
 
 export const readCurrentYearStatistics = (): StatisticsResponse => readPublicData(`statistics-${CURRENT_YEAR}.json`);
 
+export type PisterajatResponse = CutoffSchool[];
+
+export const readCutoffSchools = (): PisterajatResponse => readPublicData("pisterajat.json");
+
+export const cutoffSchoolNames = (): string[] => {
+  const names = [...new Set(readCutoffSchools().map((school) => school.name))].sort();
+  assertNoSlugCollisions(names, "Cutoff school");
+
+  const schoolNameSet = new Set(schoolNames());
+  const unknownSchools = names.filter((name) => !schoolNameSet.has(name));
+  if (unknownSchools.length > 0) {
+    throw new Error(`Cutoff schools missing from schools or statistics data: ${unknownSchools.join(", ")}`);
+  }
+
+  return names;
+};
+
 export const schoolNames = (): string[] => {
   const schools: SchoolsResponse = readPublicData("schools.json");
   const statistics: StatisticsResponse = readCurrentYearStatistics();
@@ -23,17 +53,7 @@ export const schoolNames = (): string[] => {
   ].filter((n): n is string => Boolean(n));
   const uniqueNames = [...new Set(names)].sort();
 
-  // Build-time invariant check: two different school names must never collapse to the
-  // same slug, since the slug is the only thing that identifies a school's page/route.
-  const slugToName = new Map<string, string>();
-  for (const name of uniqueNames) {
-    const slug = slugifySchoolName(name);
-    const existing = slugToName.get(slug);
-    if (existing && existing !== name) {
-      throw new Error(`Slug collision: "${name}" and "${existing}" both slugify to "${slug}"`);
-    }
-    slugToName.set(slug, name);
-  }
+  assertNoSlugCollisions(uniqueNames, "School");
 
   return uniqueNames;
 };
