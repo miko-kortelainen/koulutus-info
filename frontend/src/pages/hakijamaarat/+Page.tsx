@@ -141,7 +141,12 @@ export default function StatsListPage() {
   );
 
   const cardList = (
-    <Stack direction="column" gap={4}>
+    <Stack
+      direction="column"
+      gap={4}
+      opacity={query.isPending ? 1 : query.isFetching ? 0.5 : 1}
+      transition="opacity 0.15s"
+    >
       {query.isPending ? degreeSkeletonList : null}
       {query.isError ? errorAlert : null}
       {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
