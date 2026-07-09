@@ -206,6 +206,60 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
   await expect(page.getByRole("heading").first()).toBeVisible();
 });
 
+test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
+  await page.goto("/koulut/aalto-yliopisto");
+  await page.getByRole("link", { name: "Katso pisterajat" }).click();
+
+  await expect(page).toHaveURL("/koulut/aalto-yliopisto/pisterajat/");
+  await expect(page.getByRole("heading", { name: "Pisterajat: Aalto-yliopisto" })).toBeVisible();
+  await expect(
+    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
+  ).toBeVisible();
+  await expect(page.getByText("Todistusvalinta").first()).toBeVisible();
+  await expect(page.getByText("145,60")).toBeVisible();
+
+  // click can land before hydration, so retry until page 2 actually renders
+  await expect(async () => {
+    await page.getByRole("button", { name: "2" }).click();
+    await expect(page.getByText("Kauppatieteet, kauppatieteiden kandidaatti ja maisteri").first()).toBeVisible({
+      timeout: 1000,
+    });
+  }).toPass();
+});
+
+test("/koulut/:slug/pisterajat: groups programmes into selection-method tabs", async ({ page }) => {
+  await page.goto("/koulut/seinajoen-ammattikorkeakoulu/pisterajat/");
+
+  const tabs = page.getByRole("tablist");
+  const certificatePanel = page.getByRole("tabpanel", { name: "Todistusvalinta" });
+  const examPanel = page.getByRole("tabpanel", { name: "Koepisteet" });
+  await expect(tabs).toBeVisible();
+  await expect(tabs.getByRole("tab", { name: "Todistusvalinta" })).toBeVisible();
+  await expect(tabs.getByRole("tab", { name: "Koepisteet" })).toBeVisible();
+  await expect(certificatePanel.getByText("Agrologi (AMK), päivätoteutus")).toBeVisible();
+
+  // Certificate selection has more than one page; retain it after switching tabs.
+  await expect(async () => {
+    await certificatePanel.getByRole("button", { name: "2" }).click();
+    await expect(certificatePanel.getByText("Insinööri (AMK), konetekniikka, monimuotototeutus")).toBeVisible({
+      timeout: 1000,
+    });
+  }).toPass();
+
+  // click can land before hydration, so retry until the tab actually switches
+  await expect(async () => {
+    await tabs.getByRole("tab", { name: "Koepisteet" }).click();
+    await expect(
+      examPanel.getByText("Master of Business Administration, International Business Management"),
+    ).toBeVisible({
+      timeout: 1000,
+    });
+  }).toPass();
+
+  await tabs.getByRole("tab", { name: "Todistusvalinta" }).click();
+  await expect(certificatePanel.getByText("Insinööri (AMK), konetekniikka, monimuotototeutus")).toBeVisible();
+});
+
 test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();

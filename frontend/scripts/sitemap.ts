@@ -1,5 +1,5 @@
 import { writeFileSync } from "node:fs";
-import { schoolNames } from "../src/api/loadData";
+import { cutoffSchoolNames, schoolNames } from "../src/api/loadData";
 import { slugifySchoolName } from "../src/components/slug";
 
 const date = new Date().toISOString().split("T")[0];
@@ -10,6 +10,7 @@ const paths = [
   "/koulut/",
   "/trendit/",
   ...schoolNames().map((name) => `/koulut/${slugifySchoolName(name)}/`),
+  ...cutoffSchoolNames().map((name) => `/koulut/${slugifySchoolName(name)}/pisterajat/`),
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

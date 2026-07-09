@@ -1,16 +1,17 @@
-import { Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Heading, Link, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
 import DegreeStatCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
+import { slugifySchoolName } from "@/components/slug";
 import PageContainer from "@/layout/PageContainer";
 import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 import { COLORS } from "@/theme";
 import type { SchoolPageData } from "./+data";
 
 export default function SchoolPage() {
-  const { schoolName, toteutukset, statistics } = useData<SchoolPageData>();
+  const { schoolName, hasCutoffs, toteutukset, statistics } = useData<SchoolPageData>();
   const pageSize = 5;
   const [programPage, setProgramPage] = useState(1);
   const [statsPage, setStatsPage] = useState(1);
@@ -25,6 +26,18 @@ export default function SchoolPage() {
           ? "Yhteishaussa olevat toteutukset ja edellisten hakijamäärät."
           : `${CURRENT_YEAR} menneiden yhteishakujen hakijamäärät.`}
       </Text>
+      {hasCutoffs ? (
+        <Link
+          alignSelf="flex-start"
+          fontSize="sm"
+          href={`/koulut/${slugifySchoolName(schoolName)}/pisterajat/`}
+          textDecoration="underline"
+          textDecorationColor={COLORS.accent}
+          textDecorationStyle="dotted"
+        >
+          Katso pisterajat
+        </Link>
+      ) : null}
       <Separator mt={2} />
     </Stack>
   );
