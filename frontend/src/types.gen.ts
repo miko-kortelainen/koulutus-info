@@ -19,6 +19,13 @@ export interface OpintopolkuConfig {
 }
 
 //////////
+// source: meta.go
+
+export interface Meta {
+  generatedAt: string /* RFC3339 */;
+}
+
+//////////
 // source: opintopolku.go
 
 export interface OpintopolkuData {
