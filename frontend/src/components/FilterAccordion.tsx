@@ -1,11 +1,11 @@
 import {
   Accordion,
   Checkmark,
-  Listbox,
-  Span,
   createListCollection,
-  useListboxItemContext,
+  Listbox,
   type ListCollection,
+  Span,
+  useListboxItemContext,
 } from "@chakra-ui/react";
 
 // eslint-disable-next-line react-refresh/only-export-components -- shared helper lives alongside FilterItem by design
@@ -24,7 +24,7 @@ export function selectFilter(setter: (values: Set<string>) => void, resetPage: (
 
 const ItemCheckmark = () => {
   const { selected, disabled } = useListboxItemContext();
-  return <Checkmark filled size="sm" checked={selected} disabled={disabled} />;
+  return <Checkmark checked={selected} disabled={disabled} filled size="sm" />;
 };
 
 export interface FilterItemProps {
@@ -48,14 +48,14 @@ export function FilterItem({ value, label, collection, selected, onChange }: Fil
       <Accordion.ItemContent>
         <Accordion.ItemBody>
           <Listbox.Root
-            selectionMode="multiple"
             collection={collection}
-            value={[...selected]}
             onValueChange={(details) => onChange(details.value)}
+            selectionMode="multiple"
+            value={[...selected]}
           >
-            <Listbox.Content maxH={{ base: "56", md: "96" }} gap={2}>
+            <Listbox.Content gap={2} maxH={{ base: "56", md: "96" }}>
               {collection.items.map((item) => (
-                <Listbox.Item key={item.value} item={item}>
+                <Listbox.Item item={item} key={item.value}>
                   <ItemCheckmark />
                   <Listbox.ItemText mb="2px">{item.label}</Listbox.ItemText>
                 </Listbox.Item>

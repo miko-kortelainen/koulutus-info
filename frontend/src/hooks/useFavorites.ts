@@ -34,7 +34,9 @@ function subscribe(onStoreChange: () => void) {
 function writeFavorites(next: ToteutusEntry[]) {
   cache = next;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-  listeners.forEach((listener) => listener());
+  listeners.forEach((listener) => {
+    listener();
+  });
 }
 
 export default function useFavorites() {

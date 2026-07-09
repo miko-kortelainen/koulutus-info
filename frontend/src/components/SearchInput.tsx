@@ -9,13 +9,13 @@ interface SearchInputProps {
 export default function SearchInput({ value, onChange, placeholder }: SearchInputProps) {
   return (
     <Input
-      minHeight="9"
-      size="sm"
-      flex={1}
-      placeholder={placeholder}
       aria-label={placeholder}
-      value={value}
+      flex={1}
+      minHeight="9"
       onChange={(event) => onChange(event.target.value)}
+      placeholder={placeholder}
+      size="sm"
+      value={value}
     />
   );
 }

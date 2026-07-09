@@ -26,10 +26,10 @@ const QUESTIONS = [
       <>
         Tiedot päivitetään sitä mukaa kun uutta dataa julkaistaan. Suuntaa antava aikataulu löytyy{" "}
         <Link
-          href="https://vipunen.fi/fi-fi/yhteiset/Sivut/Tietojen-p%C3%A4ivittymisen-aikataulu---haku-ja-valinta.aspx"
           color="blue.500"
-          target="_blank"
+          href="https://vipunen.fi/fi-fi/yhteiset/Sivut/Tietojen-p%C3%A4ivittymisen-aikataulu---haku-ja-valinta.aspx"
           rel="noopener noreferrer"
+          target="_blank"
         >
           Vipunen.fi
         </Link>{" "}
@@ -69,10 +69,10 @@ const QUESTIONS = [
         <br />
         Sivuston lähdekoodi löytyy avoimena{" "}
         <Link
-          href="https://github.com/miko-kortelainen/koulutus-info"
           color="blue.500"
-          target="_blank"
+          href="https://github.com/miko-kortelainen/koulutus-info"
           rel="noopener noreferrer"
+          target="_blank"
         >
           GitHubista
         </Link>
@@ -91,14 +91,14 @@ const header = (
 const questionAccordions = QUESTIONS.map(({ question, answer }) => (
   <Accordion.Item key={question} value={question}>
     <Accordion.ItemTrigger>
-      <Heading size="md" flex="1" textAlign="start">
+      <Heading flex="1" size="md" textAlign="start">
         {question}
       </Heading>
       <Accordion.ItemIndicator />
     </Accordion.ItemTrigger>
     <Accordion.ItemContent>
       <Accordion.ItemBody>
-        <Text textWrap="pretty" color="fg.muted" fontSize={{ base: "sm", md: "md" }}>
+        <Text color="fg.muted" fontSize={{ base: "sm", md: "md" }} textWrap="pretty">
           {answer}
         </Text>
       </Accordion.ItemBody>

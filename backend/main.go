@@ -8,12 +8,14 @@ import (
 	"path/filepath"
 	"school-api/models"
 	"school-api/services"
+	"time"
 )
 
 const (
 	configPath        = "config.json"
 	dataOutputDir     = "../frontend/public/data"
 	schoolsOutputPath = dataOutputDir + "/schools.json"
+	metaOutputPath    = dataOutputDir + "/meta.json"
 )
 
 func main() {
@@ -33,19 +35,26 @@ func run(args []string) error {
 		return err
 	}
 
+	var genErr error
 	switch args[0] {
 	case "vipunen":
-		return generateVipunen(cfg.Vipunen)
+		genErr = generateVipunen(cfg.Vipunen)
 	case "opintopolku":
-		return generateOpintopolku(cfg.Opintopolku)
+		genErr = generateOpintopolku(cfg.Opintopolku)
 	case "all":
 		if err := generateVipunen(cfg.Vipunen); err != nil {
 			return err
 		}
-		return generateOpintopolku(cfg.Opintopolku)
+		genErr = generateOpintopolku(cfg.Opintopolku)
 	default:
 		return fmt.Errorf("unknown source %q; use vipunen, opintopolku, or all", args[0])
 	}
+
+	if genErr != nil {
+		return genErr
+	}
+
+	return writeJSON(metaOutputPath, models.Meta{GeneratedAt: time.Now().UTC()})
 }
 
 func readConfig(path string) (models.Config, error) {

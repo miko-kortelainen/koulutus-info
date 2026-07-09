@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import { Card, Heading } from "@chakra-ui/react";
+import type { ReactNode } from "react";
 
 interface TrendCardProps {
   title: string;
@@ -9,7 +9,7 @@ interface TrendCardProps {
 
 export default function TrendCard({ title, color, children }: TrendCardProps) {
   return (
-    <Card.Root variant="outline" borderLeftWidth="4px" borderLeftColor={color}>
+    <Card.Root borderLeftColor={color} borderLeftWidth="4px" variant="outline">
       <Card.Body gap={4}>
         <Heading as="h2" size="sm">
           {title}

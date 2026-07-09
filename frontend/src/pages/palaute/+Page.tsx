@@ -1,7 +1,7 @@
-import { useState, type SubmitEvent } from "react";
 import { Button, Heading, Stack, Text, Textarea } from "@chakra-ui/react";
-import { COLORS } from "@/theme";
+import { type SubmitEvent, useState } from "react";
 import PageContainer from "@/layout/PageContainer";
+import { COLORS } from "@/theme";
 
 const FORMSUBMIT_URL = "https://formsubmit.co/834cceb5eea9f272c02b5e0b16c11f18";
 
@@ -35,7 +35,7 @@ export default function PalautePage() {
       <Heading as="h1" size="lg">
         Palaute
       </Heading>
-      <Text color="fg.muted" textWrapMode="wrap" textWrap="pretty">
+      <Text color="fg.muted" textWrap="pretty" textWrapMode="wrap">
         Huomasitko bugin tai keksitkö kehitysidean? Kerro siitä alla.
       </Text>
     </Stack>
@@ -47,21 +47,21 @@ export default function PalautePage() {
     ) : (
       <Stack as="form" gap={2} onSubmit={handleSubmit}>
         <Textarea
-          name="message"
-          required
           minH="10rem"
-          value={message}
+          name="message"
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Kirjoita palautteesi tähän..."
+          required
+          value={message}
         />
 
         <Button
+          alignSelf="flex-end"
           bg={COLORS.accent}
           color={COLORS.text}
-          type="submit"
-          size="sm"
-          alignSelf="flex-end"
           loading={status === "sending"}
+          size="sm"
+          type="submit"
         >
           Lähetä
         </Button>

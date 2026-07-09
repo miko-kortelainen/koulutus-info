@@ -1,4 +1,4 @@
-import { Select, createListCollection } from "@chakra-ui/react";
+import { createListCollection, Select } from "@chakra-ui/react";
 
 export type SortOption = "asc" | "desc" | "most_popular" | "least_popular" | "most_spots" | "least_spots";
 
@@ -21,11 +21,11 @@ interface SortControlProps {
 export default function SortControl({ value, onChange }: SortControlProps) {
   return (
     <Select.Root
-      size="sm"
       collection={collection}
-      value={[value]}
-      onValueChange={(e) => onChange(e.value[0] as SortOption)}
       flex={1}
+      onValueChange={(e) => onChange(e.value[0] as SortOption)}
+      size="sm"
+      value={[value]}
     >
       <Select.HiddenSelect aria-label="Järjestys" />
       <Select.Control>
@@ -39,7 +39,7 @@ export default function SortControl({ value, onChange }: SortControlProps) {
       <Select.Positioner>
         <Select.Content>
           {SORT_OPTIONS.map((option) => (
-            <Select.Item key={option.value} item={option}>
+            <Select.Item item={option} key={option.value}>
               {option.label}
             </Select.Item>
           ))}

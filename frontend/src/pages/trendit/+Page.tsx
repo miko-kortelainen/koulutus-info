@@ -1,17 +1,17 @@
+import { Alert, Box, createListCollection, Heading, Select, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
-import { Alert, Box, Heading, Select, Stack, Text, createListCollection } from "@chakra-ui/react";
-import PageContainer from "@/layout/PageContainer";
 import { useData } from "vike-react/useData";
-import YearControl from "@/pages/hakijamaarat/components/YearControl";
-import { type YearOption, YEAR_OPTIONS, CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
-import useTrendsData from "./hooks/useTrendsData";
-import { useKoulutusalaTrends } from "./hooks/useKoulutusalaTrends";
-import TopBarList from "./components/TopBarList";
-import KoulutusalaTrendChart from "./components/KoulutusalaTrendChart";
-import TrendCard from "./components/TrendCard";
+import PageContainer from "@/layout/PageContainer";
+import YearControl from "@/pages/hakijamaarat/components/YearControl";
+import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/pages/hakijamaarat/components/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
+import KoulutusalaTrendChart from "./components/KoulutusalaTrendChart";
+import TopBarList from "./components/TopBarList";
+import TrendCard from "./components/TrendCard";
+import { useKoulutusalaTrends } from "./hooks/useKoulutusalaTrends";
+import useTrendsData from "./hooks/useTrendsData";
 
 export default function TrendsPage() {
   const ssrData = useData<StatisticsResponse>();
@@ -43,7 +43,7 @@ export default function TrendsPage() {
   );
 
   const loadingAndError = (
-    <div aria-live="polite" aria-atomic="true">
+    <div aria-atomic="true" aria-live="polite">
       {query.isPending && <span className="sr-only">Ladataan tilastoja...</span>}
       {query.isError && (
         <Alert.Root status="error">
@@ -56,29 +56,29 @@ export default function TrendsPage() {
 
   const comparator = (
     <Box flex={1}>
-      <Text fontSize="xs" color="fg.muted" mb={1}>
+      <Text color="fg.muted" fontSize="xs" mb={1}>
         Vuosi
       </Text>
       <YearControl
-        value={selectedYear}
         onChange={(y) => {
           setSelectedYear(y);
           if (compareYear === y) setCompareYear("");
         }}
+        value={selectedYear}
       />
     </Box>
   );
 
   const comparand = (
     <Box flex={1}>
-      <Text fontSize="xs" color="fg.muted" mb={1}>
+      <Text color="fg.muted" fontSize="xs" mb={1}>
         Vertailukohde
       </Text>
       <Select.Root
-        size="sm"
         collection={compareCollection}
-        value={[compareYear]}
         onValueChange={(e) => setCompareYear(e.value[0] as YearOption | "")}
+        size="sm"
+        value={[compareYear]}
       >
         <Select.HiddenSelect aria-label="Vertailuvuosi" />
         <Select.Control>
@@ -92,7 +92,7 @@ export default function TrendsPage() {
         <Select.Positioner>
           <Select.Content>
             {compareCollection.items.map((option) => (
-              <Select.Item key={option.value} item={option}>
+              <Select.Item item={option} key={option.value}>
                 {option.label}
               </Select.Item>
             ))}
@@ -103,60 +103,60 @@ export default function TrendsPage() {
   );
 
   const applicantsByField = (
-    <TrendCard title="Suosituimmat koulutusalat" color={FIELD_COLOR}>
+    <TrendCard color={FIELD_COLOR} title="Suosituimmat koulutusalat">
       <TopBarList
+        color={FIELD_COLOR}
+        compareData={compareYear ? compareTrends.topKoulutusalat : undefined}
+        compareYear={compareYear || undefined}
         data={trends.topKoulutusalat}
         isLoading={query.isPending}
-        color={FIELD_COLOR}
-        skeletonCount={10}
-        compareData={compareYear ? compareTrends.topKoulutusalat : undefined}
         selectedYear={selectedYear}
-        compareYear={compareYear || undefined}
+        skeletonCount={10}
       />
     </TrendCard>
   );
 
   const applicantsBySchool = (
-    <TrendCard title="Suosituimmat korkeakoulut" color={SCHOOL_COLOR}>
+    <TrendCard color={SCHOOL_COLOR} title="Suosituimmat korkeakoulut">
       <TopBarList
+        color={SCHOOL_COLOR}
+        compareData={compareYear ? compareTrends.topKorkeakoulut : undefined}
+        compareYear={compareYear || undefined}
         data={trends.topKorkeakoulut}
         isLoading={query.isPending}
-        color={SCHOOL_COLOR}
-        skeletonCount={10}
-        compareData={compareYear ? compareTrends.topKorkeakoulut : undefined}
         selectedYear={selectedYear}
-        compareYear={compareYear || undefined}
+        skeletonCount={10}
       />
     </TrendCard>
   );
 
   const applicantsBySector = (
-    <TrendCard title="Hakijat sektoreittain" color={SECTOR_COLOR}>
+    <TrendCard color={SECTOR_COLOR} title="Hakijat sektoreittain">
       <TopBarList
+        color={SECTOR_COLOR}
+        compareData={compareYear ? compareTrends.sektoriData : undefined}
+        compareYear={compareYear || undefined}
         data={trends.sektoriData}
         isLoading={query.isPending}
-        color={SECTOR_COLOR}
-        showPercent={false}
-        compareData={compareYear ? compareTrends.sektoriData : undefined}
         selectedYear={selectedYear}
-        compareYear={compareYear || undefined}
+        showPercent={false}
       />
     </TrendCard>
   );
 
   const applicantsByYear = (
-    <TrendCard title="Hakijamäärien trendi" color={TREND_COLOR}>
+    <TrendCard color={TREND_COLOR} title="Hakijamäärien trendi">
       <KoulutusalaTrendChart
         chartData={koulutusalaTrends.chartData}
-        isLoading={koulutusalaTrends.isLoading}
         color={TREND_COLOR}
+        isLoading={koulutusalaTrends.isLoading}
       />
     </TrendCard>
   );
 
   const yearSelectors = (
     <Stack gap={4}>
-      <Stack direction="row" justifyContent="flex-end" gap={2} align="flex-end">
+      <Stack align="flex-end" direction="row" gap={2} justifyContent="flex-end">
         {comparator}
         {comparand}
       </Stack>

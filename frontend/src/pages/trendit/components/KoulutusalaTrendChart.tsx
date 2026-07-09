@@ -1,6 +1,6 @@
 import { ChartRoot, ChartTooltip, useChart } from "@chakra-ui/charts";
 import { Skeleton } from "@chakra-ui/react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts";
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import type { TrendPoint } from "../hooks/useKoulutusalaTrends";
 
 const fmt = new Intl.NumberFormat("fi-FI");
@@ -17,23 +17,23 @@ export default function KoulutusalaTrendChart({ chartData, isLoading, color }: K
     series: [{ name: "total", color }],
   });
 
-  if (isLoading) return <Skeleton height="150px" borderRadius="md" />;
+  if (isLoading) return <Skeleton borderRadius="md" height="150px" />;
 
   return (
     <ChartRoot chart={chart} h="150px">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer height="100%" width="100%">
         <LineChart data={chart.data} margin={{ top: 10, right: 8, left: 16 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="var(--chakra-colors-border-subtle)" />
+          <CartesianGrid stroke="var(--chakra-colors-border-subtle)" strokeDasharray="3 3" />
           <XAxis dataKey="year" tick={{ fontSize: 12 }} />
-          <YAxis tickFormatter={(v) => fmt.format(v)} tick={{ fontSize: 11 }} width={32} />
+          <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => fmt.format(v)} width={32} />
           <Tooltip content={<ChartTooltip />} />
           <Line
-            type="linear"
+            activeDot={{ r: 6 }}
             dataKey="total"
+            dot={{ r: 2, fill: chart.color(color) }}
             stroke={chart.color(color)}
             strokeWidth={2}
-            dot={{ r: 2, fill: chart.color(color) }}
-            activeDot={{ r: 6 }}
+            type="linear"
           />
         </LineChart>
       </ResponsiveContainer>

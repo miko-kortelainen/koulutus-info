@@ -5,11 +5,11 @@ export function Head() {
 
   return (
     <>
-      <meta name="description" content={description} />
-      <meta property="og:title" content="Hakijamäärät – korkeakoulujen yhteishaun tilastot" />
-      <link rel="canonical" href="https://yhteishaku.app/hakijamaarat/" />
-      <meta property="og:url" content="https://yhteishaku.app/hakijamaarat/" />
-      <meta property="og:description" content={description} />
+      <meta content={description} name="description" />
+      <meta content="Hakijamäärät – korkeakoulujen yhteishaun tilastot" property="og:title" />
+      <link href="https://yhteishaku.app/hakijamaarat/" rel="canonical" />
+      <meta content="https://yhteishaku.app/hakijamaarat/" property="og:url" />
+      <meta content={description} property="og:description" />
     </>
   );
 }

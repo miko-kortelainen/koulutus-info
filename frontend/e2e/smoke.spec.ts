@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 
 test.describe.configure({ mode: "parallel" });
 
@@ -199,9 +199,10 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 
   const firstSchool = page.getByRole("tabpanel").getByRole("link").first();
   const href = await firstSchool.getAttribute("href");
+  expect(href).toBeTruthy();
   await firstSchool.click();
 
-  await expect(page).toHaveURL(href!);
+  await expect(page).toHaveURL(href as string);
   await expect(page.getByRole("heading").first()).toBeVisible();
 });
 

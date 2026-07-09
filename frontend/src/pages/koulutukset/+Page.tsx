@@ -1,15 +1,15 @@
 import { Accordion, Heading, Separator, Stack, Text } from "@chakra-ui/react";
-import PageContainer from "@/layout/PageContainer";
-import Pagination from "@/components/Pagination";
-import { useData } from "vike-react/useData";
-import useSchoolsQuery from "./hooks/useSchoolsQuery";
-import SchoolCard from "@/components/SchoolCard";
 import { useMemo, useState } from "react";
+import { useData } from "vike-react/useData";
+import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
+import Pagination from "@/components/Pagination";
+import SchoolCard from "@/components/SchoolCard";
 import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
-import useFilteredDegrees from "./hooks/useFilteredDegrees";
-import { toCollection, FilterItem, selectFilter } from "@/components/FilterAccordion";
+import PageContainer from "@/layout/PageContainer";
 import type { SchoolsResponse } from "@/types.gen";
+import useFilteredDegrees from "./hooks/useFilteredDegrees";
+import useSchoolsQuery from "./hooks/useSchoolsQuery";
 
 const PAGE_SIZE = 10;
 
@@ -64,34 +64,34 @@ export default function SchoolsListPage() {
   const sortControls = (
     <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
       <SearchInput
-        value={searchTerm}
         onChange={(value) => {
           setSearchTerm(value);
           setPage(1);
         }}
         placeholder="Etsi koulutuksia"
+        value={searchTerm}
       />
       <Accordion.Root multiple>
         <FilterItem
-          value="sektori"
-          label="Sektori"
           collection={sektoriCollection}
-          selected={selectedSektorit}
+          label="Sektori"
           onChange={selectFilter(setSelectedSektorit, () => setPage(1))}
+          selected={selectedSektorit}
+          value="sektori"
         />
         <FilterItem
-          value="kunta"
-          label="Kunta"
           collection={kuntaCollection}
-          selected={selectedKunnat}
+          label="Kunta"
           onChange={selectFilter(setSelectedKunnat, () => setPage(1))}
+          selected={selectedKunnat}
+          value="kunta"
         />
         <FilterItem
-          value="koulu"
-          label="Koulu"
           collection={schoolCollection}
-          selected={selectedSchools}
+          label="Koulu"
           onChange={selectFilter(setSelectedSchools, () => setPage(1))}
+          selected={selectedSchools}
+          value="koulu"
         />
       </Accordion.Root>
     </Stack>
@@ -109,7 +109,7 @@ export default function SchoolsListPage() {
     <PageContainer>
       {header}
 
-      <Stack direction={{ base: "column", md: "row" }} align="start" gap={4}>
+      <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
         {sortControls}
 
         <Stack flex={1} gap={4}>
@@ -117,7 +117,7 @@ export default function SchoolsListPage() {
           {query.isError ? <Text>Virhe</Text> : null}
           {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {cardList}
-          <Pagination count={filteredData.length} page={page} pageSize={PAGE_SIZE} onPageChange={setPage} />
+          <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
         </Stack>
       </Stack>
     </PageContainer>
