@@ -242,7 +242,7 @@ test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => 
     page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
   ).toBeVisible({ timeout: 10000 });
 
-  const search = page.getByPlaceholder("Hae ohjelmaa");
+  const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
 
