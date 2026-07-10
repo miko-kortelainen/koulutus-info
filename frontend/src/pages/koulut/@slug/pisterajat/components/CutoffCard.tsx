@@ -22,11 +22,11 @@ function CutoffRow({ cutoff }: CutoffRowProps) {
       justify="space-between"
       py={{ base: 3, md: 4 }}
     >
-      <Text fontSize={{ base: "xs", md: "sm" }} fontWeight="medium" letterSpacing="wide" textWrap="pretty" flex={7}>
+      <Text flex={7} fontSize={{ base: "xs", md: "sm" }} fontWeight="medium" letterSpacing="wide" textWrap="pretty">
         {cutoff.selectionMethod}
       </Text>
 
-      <HStack align="center" justify={{ base: "space-between", md: "flex-end" }} flex={3}>
+      <HStack align="center" flex={3} justify={{ base: "space-between", md: "flex-end" }}>
         <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }} letterSpacing="wide" mr="auto">
           Alin hyväksytty pistemäärä
         </Text>
@@ -49,9 +49,10 @@ export default function CutoffCard({ programme }: CutoffCardProps) {
   return (
     <Card.Root as="article" size="md">
       <Card.Header pb={3}>
-        <Text as="h2" fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" textWrap="pretty">
+        <Text as="h2" fontSize={{ base: "xs", md: "lg" }} fontWeight="semibold" textWrap="pretty">
           {programme.name}
         </Text>
+        <Separator />
       </Card.Header>
       <Card.Body pt={0}>
         <Stack gap={3}>{cutoffList}</Stack>
