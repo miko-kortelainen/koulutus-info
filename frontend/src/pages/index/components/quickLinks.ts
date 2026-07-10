@@ -16,7 +16,7 @@ export const quickLinks = [
   {
     href: "/koulut/",
     label: "koulut",
-    description: "Korkeakoulujen hakijamäärät ja koulutukset",
+    description: "Koulujen pisterajat, hakijamäärät ja koulutukset",
     icon: HiOutlineLibrary,
   },
   {
