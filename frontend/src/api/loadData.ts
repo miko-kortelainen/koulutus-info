@@ -2,7 +2,7 @@ import fs from "node:fs";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
 import { slugifySchoolName } from "../components/slug";
-import { CURRENT_YEAR } from "../pages/hakijamaarat/components/yearOptions";
+import { CURRENT_YEAR } from "../config/yearOptions";
 
 interface CacheEntry {
   modifiedAt: number;

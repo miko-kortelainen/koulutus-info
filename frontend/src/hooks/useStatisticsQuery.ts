@@ -1,6 +1,6 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { getStatistics } from "@/api/api";
-import type { YearOption } from "@/pages/hakijamaarat/components/yearOptions";
+import type { YearOption } from "@/config/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 
 export const statisticsQueryOptions = (year: YearOption, initialData?: StatisticsResponse) => ({

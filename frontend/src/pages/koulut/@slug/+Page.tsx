@@ -5,8 +5,8 @@ import DegreeStatCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
 import { slugifySchoolName } from "@/components/slug";
+import { CURRENT_YEAR } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
-import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 import { COLORS } from "@/theme";
 import type { SchoolPageData } from "./+data";
 
@@ -76,7 +76,12 @@ export default function SchoolPage() {
   );
 
   const tabs = [
-    { value: "koulutukset", label: "Yhteishaku", content: programList, visible: toteutukset.length > 0 },
+    {
+      value: "koulutukset",
+      label: "Yhteishaku",
+      content: programList,
+      visible: toteutukset.length > 0,
+    },
     {
       value: "hakijamaarat",
       label: `Hakijamäärät ${CURRENT_YEAR}`,

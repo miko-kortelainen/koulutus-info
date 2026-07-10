@@ -1,7 +1,7 @@
 import { Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
+import { CURRENT_YEAR } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
-import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 import { COLORS } from "@/theme";
 import type { SchoolListItem } from "./+data";
 import SchoolListCard from "./components/SchoolListCard";

@@ -1,5 +1,5 @@
 import { createListCollection, Select } from "@chakra-ui/react";
-import { YEAR_OPTIONS, type YearOption } from "./yearOptions";
+import { YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 
 const collection = createListCollection({ items: YEAR_OPTIONS });
 

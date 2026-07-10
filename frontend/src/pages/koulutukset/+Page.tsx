@@ -1,4 +1,4 @@
-import { Accordion, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
@@ -8,6 +8,7 @@ import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import type { SchoolsResponse } from "@/types.gen";
+import SchoolCardSkeleton from "./components/SchoolCardSkeleton";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
 import useSchoolsQuery from "./hooks/useSchoolsQuery";
 
@@ -50,6 +51,14 @@ export default function SchoolsListPage() {
   );
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const schoolSkeletonList = Array.from({ length: 10 }).map((_, i) => <SchoolCardSkeleton key={i} />);
+
+  const errorAlert = (
+    <Alert.Root status="error">
+      <Alert.Indicator />
+      <Alert.Title>Jotain meni vikaan, yritä uudelleen.</Alert.Title>
+    </Alert.Root>
+  );
 
   const header = (
     <Stack gap={1}>
@@ -98,7 +107,15 @@ export default function SchoolsListPage() {
   );
 
   const cardList = (
-    <Stack direction="column" gap={4}>
+    <Stack
+      direction="column"
+      gap={4}
+      opacity={query.isPending ? 1 : query.isFetching ? 0.5 : 1}
+      transition="opacity 0.15s"
+    >
+      {query.isPending ? schoolSkeletonList : null}
+      {query.isError ? errorAlert : null}
+      {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
       {paginated.map((t, index) => (
         <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi} ${index}`} toteutus={t} />
       ))}
@@ -113,9 +130,6 @@ export default function SchoolsListPage() {
         {sortControls}
 
         <Stack flex={1} gap={4}>
-          {query.isPending ? <Text>Haetaan</Text> : null}
-          {query.isError ? <Text>Virhe</Text> : null}
-          {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
           {cardList}
           <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
         </Stack>
