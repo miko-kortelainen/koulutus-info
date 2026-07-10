@@ -177,7 +177,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2);
 
   await page.getByRole("link", { name: "Vertaile" }).click();
-  // vuosi=2026 mirrors CURRENT_YEAR in pages/hakijamaarat/components/yearOptions.ts — update together
+  // vuosi=2026 mirrors CURRENT_YEAR in config/yearOptions.ts — update together
   await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026/);
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });

@@ -1,6 +1,6 @@
 import { useQueries } from "@tanstack/react-query";
+import { CURRENT_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
 import { statisticsQueryOptions } from "@/hooks/useStatisticsQuery";
-import { CURRENT_YEAR, YEAR_OPTIONS } from "@/pages/hakijamaarat/components/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 
 const years = YEAR_OPTIONS.map((y) => y.value); // newest first
@@ -22,7 +22,10 @@ export function useKoulutusalaTrends(ssrDataCurrentYear?: StatisticsResponse) {
     ]),
   );
 
-  const chartData: TrendPoint[] = chronological.map((year) => ({ year, total: totalByYear.get(year) ?? 0 }));
+  const chartData: TrendPoint[] = chronological.map((year) => ({
+    year,
+    total: totalByYear.get(year) ?? 0,
+  }));
 
   return { chartData, isLoading };
 }
