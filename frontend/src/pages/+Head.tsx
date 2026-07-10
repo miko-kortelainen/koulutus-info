@@ -12,6 +12,7 @@ export function Head() {
       <meta content="https://yhteishaku.app/images/og-img.png" property="og:image" />
       <meta content="summary_large_image" name="twitter:card" />
       <link href="/.well-known/api-catalog" rel="api-catalog" />
+      <script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
     </>
   );
 }
