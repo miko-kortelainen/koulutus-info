@@ -208,7 +208,7 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
   await page.goto("/koulut/aalto-yliopisto");
-  await page.getByRole("link", { name: "Katso pisterajat" }).click();
+  await page.getByRole("link", { name: "2026 pisterajat" }).click();
 
   await expect(page).toHaveURL("/koulut/aalto-yliopisto/pisterajat/");
   await expect(page.getByRole("heading", { name: "Aalto-yliopiston pisterajat 2026" })).toBeVisible();
@@ -234,6 +234,20 @@ test("/koulut/:slug/pisterajat: shows every selection method for a programme", a
   await expect(page.getByText("AMK-valintakoe", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
+});
+
+test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
+  await page.goto("/koulut/aalto-yliopisto/pisterajat/");
+  await expect(
+    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
+  ).toBeVisible({ timeout: 10000 });
+
+  const search = page.getByPlaceholder("Hae ohjelmaa");
+  await search.fill("xxxnotexist");
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+
+  await search.clear();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {

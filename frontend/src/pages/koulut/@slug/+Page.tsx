@@ -1,5 +1,6 @@
 import { Heading, Link, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import { HiOutlineSparkles } from "react-icons/hi";
 import { useData } from "vike-react/useData";
 import DegreeStatCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
@@ -42,13 +43,17 @@ export default function SchoolPage() {
       {hasCutoffs ? (
         <Link
           alignSelf="flex-start"
+          display="flex"
           fontSize="sm"
+          fontWeight="semibold"
+          gap={1}
           href={`/koulut/${slugifySchoolName(schoolName)}/pisterajat/`}
           textDecoration="underline"
           textDecorationColor={COLORS.accent}
           textDecorationStyle="dotted"
         >
-          Katso pisterajat
+          <HiOutlineSparkles color={COLORS.accent} />
+          2026 pisterajat
         </Link>
       ) : null}
       <Separator mt={2} />
