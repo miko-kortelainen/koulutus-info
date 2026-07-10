@@ -1,7 +1,7 @@
 export function Head() {
   return (
     <>
-      <link href="/favicon.png" rel="icon" type="image/png" />
+      <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       <link href="https://fonts.googleapis.com" rel="preconnect" />
       <link crossOrigin="" href="https://fonts.gstatic.com" rel="preconnect" />
       <link
