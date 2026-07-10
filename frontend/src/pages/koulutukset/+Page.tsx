@@ -1,4 +1,4 @@
-import { Accordion, Alert, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Checkbox, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
@@ -26,9 +26,17 @@ export default function SchoolsListPage() {
   const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
+  const [showYlempiAmk, setShowYlempiAmk] = useState(false);
   const query = useSchoolsQuery(ssrData);
   const toteutukset = useMemo(
-    () => query.data?.flatMap((k) => k.toteutukset.map((t) => ({ ...t, koulutustyyppi: k.koulutustyyppi }))),
+    () =>
+      query.data?.flatMap((k) =>
+        k.toteutukset.map((t) => ({
+          ...t,
+          koulutustyyppi: k.koulutustyyppi,
+          ylempiAmk: k.koulutustyyppi === "amk" && (k.nimi.fi?.toLowerCase().includes("ylempi") ?? false),
+        })),
+      ),
     [query.data],
   );
   const sektoriCollection = useMemo(
@@ -48,6 +56,7 @@ export default function SchoolsListPage() {
     selectedSektorit,
     selectedKunnat,
     selectedSchools,
+    showYlempiAmk,
   );
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -80,6 +89,7 @@ export default function SchoolsListPage() {
         placeholder="Etsi koulutuksia"
         value={searchTerm}
       />
+
       <Accordion.Root multiple>
         <FilterItem
           collection={sektoriCollection}
@@ -87,7 +97,23 @@ export default function SchoolsListPage() {
           onChange={selectFilter(setSelectedSektorit, () => setPage(1))}
           selected={selectedSektorit}
           value="sektori"
-        />
+        >
+          <Checkbox.Root
+            checked={showYlempiAmk}
+            mt={4}
+            onCheckedChange={(details) => {
+              setShowYlempiAmk(!!details.checked);
+              setPage(1);
+            }}
+            size="sm"
+          >
+            <Checkbox.HiddenInput />
+            <Checkbox.Control>
+              <Checkbox.Indicator />
+            </Checkbox.Control>
+            <Checkbox.Label color="fg.muted">Näytä myös ylemmät AMK -tutkinnot</Checkbox.Label>
+          </Checkbox.Root>
+        </FilterItem>
         <FilterItem
           collection={kuntaCollection}
           label="Kunta"
