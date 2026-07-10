@@ -41,6 +41,14 @@ export default function TietosuojaselosteePage() {
             Cloudflare kerää tietoa kuten sivulatausmäärät ja selaintyypit ilman evästeitä tai yksilöivien tunnisteiden
             tallentamista.
           </Text>
+          <Text>
+            Palvelu käyttää myös{" "}
+            <Link color="blue.500" href="https://www.simpleanalytics.com" rel="noopener noreferrer" target="_blank">
+              Simple Analyticsia
+            </Link>{" "}
+            kävijätilastojen seurantaan. <br />
+            Simple Analytics ei käytä evästeitä eikä kerää henkilötietoja tai yksilöiviä tunnisteita.
+          </Text>
         </Stack>
 
         <Stack gap={2}>
