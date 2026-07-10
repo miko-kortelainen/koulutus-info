@@ -3,6 +3,7 @@ import useMetaQuery from "@/hooks/useMetaQuery";
 
 export default function Footer() {
   const { data } = useMetaQuery();
+  const formatDate = (date: string) => new Date(date).toLocaleDateString("fi-FI");
 
   return (
     <Box as="footer" p={2} textAlign="center">
@@ -12,7 +13,9 @@ export default function Footer() {
         </Link>
         {data && (
           <Text color="gray" fontSize={{ base: "2xs", md: "xs" }}>
-            Tiedot päivitetty {new Date(data.generatedAt).toLocaleDateString("fi-FI")}
+            {data.statisticsUpdatedAt && `Tilastot päivitetty ${formatDate(data.statisticsUpdatedAt)}`}
+            {data.statisticsUpdatedAt && data.programmesUpdatedAt && " · "}
+            {data.programmesUpdatedAt && `Koulutustarjonta päivitetty ${formatDate(data.programmesUpdatedAt)}`}
           </Text>
         )}
       </Stack>

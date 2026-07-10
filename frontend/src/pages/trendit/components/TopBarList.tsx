@@ -1,5 +1,6 @@
 import type { BarListData } from "@chakra-ui/charts";
 import { Badge, Box, Flex, Skeleton, Stack, Text } from "@chakra-ui/react";
+import { numberFormat } from "@/components/hakijapaineTier";
 
 interface TopBarListProps {
   data: BarListData[];
@@ -12,7 +13,6 @@ interface TopBarListProps {
   compareYear?: string;
 }
 
-const fmt = new Intl.NumberFormat("fi-FI");
 const BAR_H = "2";
 
 export default function TopBarList({
@@ -104,12 +104,12 @@ export default function TopBarList({
               <Box bg={color} borderRadius="sm" h={BAR_H} width={`${(item.value / maxValue) * 100}%`} />
             </Box>
             <Text flexShrink={0} fontSize="sm" textAlign="right" w="16">
-              {fmt.format(item.value)}
+              {numberFormat.format(item.value)}
             </Text>
             {compareValueMap ? (
               <>
                 <Text color="fg.muted" flexShrink={0} fontSize="sm" textAlign="right" w="16">
-                  {compareValue != null ? fmt.format(compareValue) : "–"}
+                  {compareValue != null ? numberFormat.format(compareValue) : "–"}
                 </Text>
                 <Box display={{ base: "none", md: "block" }} flexShrink={0} textAlign="right" w="20">
                   {valueDiff != null ? (
@@ -118,7 +118,11 @@ export default function TopBarList({
                       size="sm"
                       variant="subtle"
                     >
-                      {valueDiff > 0 ? `+${fmt.format(valueDiff)}` : valueDiff < 0 ? fmt.format(valueDiff) : "–"}
+                      {valueDiff > 0
+                        ? `+${numberFormat.format(valueDiff)}`
+                        : valueDiff < 0
+                          ? numberFormat.format(valueDiff)
+                          : "–"}
                     </Badge>
                   ) : (
                     <Badge colorPalette="blue" size="sm" variant="subtle">

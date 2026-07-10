@@ -5,11 +5,11 @@ import useFavorites from "@/hooks/useFavorites";
 import { COLORS } from "@/theme";
 import type { ToteutusEntry } from "@/types.gen";
 
-type Props = {
+interface SchoolCardProps {
   toteutus: ToteutusEntry;
-};
+}
 
-export default function SchoolCard({ toteutus }: Props) {
+export default function SchoolCard({ toteutus }: SchoolCardProps) {
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorited = isFavorite(toteutus.toteutusOid);
   const toteutusURL = `https://opintopolku.fi/konfo/fi/toteutus/${toteutus.toteutusOid}`;

@@ -1,22 +1,37 @@
-import { Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Heading, Link, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import { HiOutlineSparkles } from "react-icons/hi";
 import { useData } from "vike-react/useData";
 import DegreeStatCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
+import { slugifySchoolName } from "@/components/slug";
+import { CURRENT_YEAR } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
-import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
 import { COLORS } from "@/theme";
 import type { SchoolPageData } from "./+data";
 
 export default function SchoolPage() {
-  const { schoolName, toteutukset, statistics } = useData<SchoolPageData>();
+  const { schoolName, hasCutoffs, toteutukset, statistics } = useData<SchoolPageData>();
   const pageSize = 5;
   const [programPage, setProgramPage] = useState(1);
   const [statsPage, setStatsPage] = useState(1);
 
+  const linkBack = (
+    <Link
+      fontSize="sm"
+      href="/koulut/"
+      textDecoration="underline"
+      textDecorationColor={COLORS.accent}
+      textDecorationStyle="dotted"
+    >
+      ← Takaisin
+    </Link>
+  );
+
   const header = (
     <Stack gap={1}>
+      {linkBack}
       <Heading as="h1" size="md">
         {schoolName}
       </Heading>
@@ -25,6 +40,22 @@ export default function SchoolPage() {
           ? "Yhteishaussa olevat toteutukset ja edellisten hakijamäärät."
           : `${CURRENT_YEAR} menneiden yhteishakujen hakijamäärät.`}
       </Text>
+      {hasCutoffs ? (
+        <Link
+          alignSelf="flex-start"
+          display="flex"
+          fontSize="sm"
+          fontWeight="semibold"
+          gap={1}
+          href={`/koulut/${slugifySchoolName(schoolName)}/pisterajat/`}
+          textDecoration="underline"
+          textDecorationColor={COLORS.accent}
+          textDecorationStyle="dotted"
+        >
+          <HiOutlineSparkles color={COLORS.accent} />
+          2026 pisterajat
+        </Link>
+      ) : null}
       <Separator mt={2} />
     </Stack>
   );
@@ -32,8 +63,8 @@ export default function SchoolPage() {
   const paginatedProgramList = toteutukset.slice((programPage - 1) * pageSize, programPage * pageSize);
   const programList = (
     <Stack gap={4}>
-      {paginatedProgramList.map((t, index) => (
-        <SchoolCard key={`${t.toteutusOid} ${index}`} toteutus={t} />
+      {paginatedProgramList.map((t) => (
+        <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi}`} toteutus={t} />
       ))}
       <Pagination count={toteutukset.length} onPageChange={setProgramPage} page={programPage} pageSize={pageSize} />
     </Stack>
@@ -42,15 +73,20 @@ export default function SchoolPage() {
   const paginatedStatsList = statistics.slice((statsPage - 1) * pageSize, statsPage * pageSize);
   const statsList = (
     <Stack gap={4}>
-      {paginatedStatsList.map((d, index) => (
-        <DegreeStatCard degree={d} key={`${d.kooditHakukohde} ${index}`} />
+      {paginatedStatsList.map((d) => (
+        <DegreeStatCard degree={d} key={`${d.kooditHakukohde}-${d.hakukohde}`} />
       ))}
       <Pagination count={statistics.length} onPageChange={setStatsPage} page={statsPage} pageSize={pageSize} />
     </Stack>
   );
 
   const tabs = [
-    { value: "koulutukset", label: "Yhteishaku", content: programList, visible: toteutukset.length > 0 },
+    {
+      value: "koulutukset",
+      label: "Yhteishaku",
+      content: programList,
+      visible: toteutukset.length > 0,
+    },
     {
       value: "hakijamaarat",
       label: `Hakijamäärät ${CURRENT_YEAR}`,
@@ -60,7 +96,7 @@ export default function SchoolPage() {
   ].filter((t) => t.visible);
 
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
       {tabs.length > 0 ? (
         <Tabs.Root defaultValue={tabs[0].value} size="sm">
