@@ -2,7 +2,7 @@ import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { ToteutusEntry } from "@/types.gen";
 
-export type ToteutusWithSektori = ToteutusEntry & { koulutustyyppi: string };
+export type ToteutusWithSektori = ToteutusEntry & { koulutustyyppi: string; ylempiAmk: boolean };
 
 const FUSE_OPTIONS = {
   keys: [
@@ -24,6 +24,7 @@ export default function useFilteredDegrees(
   selectedSektorit: Set<string>,
   selectedKunnat: Set<string>,
   selectedSchools: Set<string>,
+  showYlempiAmk: boolean,
 ) {
   const byFilters = useMemo(() => {
     const items = data ?? [];
@@ -31,9 +32,10 @@ export default function useFilteredDegrees(
       (t) =>
         (!selectedSektorit.size || selectedSektorit.has(t.koulutustyyppi)) &&
         (!selectedKunnat.size || t.kunnat.some((k) => selectedKunnat.has(k))) &&
-        (!selectedSchools.size || selectedSchools.has(t.oppilaitosNimi.fi ?? "")),
+        (!selectedSchools.size || selectedSchools.has(t.oppilaitosNimi.fi ?? "")) &&
+        (showYlempiAmk || !t.ylempiAmk),
     );
-  }, [data, selectedSektorit, selectedKunnat, selectedSchools]);
+  }, [data, selectedSektorit, selectedKunnat, selectedSchools, showYlempiAmk]);
 
   const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
 

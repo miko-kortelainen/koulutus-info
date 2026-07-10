@@ -33,9 +33,10 @@ export interface FilterItemProps {
   collection: ListCollection<{ label: string; value: string }>;
   selected: Set<string>;
   onChange: (values: string[]) => void;
+  children?: React.ReactNode;
 }
 
-export function FilterItem({ value, label, collection, selected, onChange }: FilterItemProps) {
+export function FilterItem({ value, label, collection, selected, onChange, children }: FilterItemProps) {
   return (
     <Accordion.Item value={value}>
       <Accordion.ItemTrigger>
@@ -62,6 +63,7 @@ export function FilterItem({ value, label, collection, selected, onChange }: Fil
               ))}
             </Listbox.Content>
           </Listbox.Root>
+          {children}
         </Accordion.ItemBody>
       </Accordion.ItemContent>
     </Accordion.Item>
