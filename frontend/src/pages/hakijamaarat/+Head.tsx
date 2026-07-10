@@ -1,4 +1,4 @@
-import { CURRENT_YEAR } from "@/pages/hakijamaarat/components/yearOptions";
+import { CURRENT_YEAR } from "@/config/yearOptions";
 
 export function Head() {
   const description = `Selaa korkeakoulujen yhteishaun hakijamääriä vuodelta ${CURRENT_YEAR} sekä aiemmilta vuosilta.`;

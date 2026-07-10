@@ -23,6 +23,11 @@ export interface OpintopolkuConfig {
 
 export interface Meta {
   generatedAt: string /* RFC3339 */;
+  statisticsYears: number /* int */[];
+  currentStatisticsYear: number /* int */;
+  statisticsUpdatedAt?: string /* RFC3339 */;
+  programmesUpdatedAt?: string /* RFC3339 */;
+  programmesYhteishakuOid?: string;
 }
 
 //////////

@@ -151,3 +151,5 @@ vite.config.ts.timestamp-*
 .vscode/launch.json
 CLAUDE.md
 ideat.txt
+backend/pisterajat.csv
+backend/excel_prompt.txt

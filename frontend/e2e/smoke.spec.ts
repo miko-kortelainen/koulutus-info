@@ -177,7 +177,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2);
 
   await page.getByRole("link", { name: "Vertaile" }).click();
-  // vuosi=2026 mirrors CURRENT_YEAR in pages/hakijamaarat/components/yearOptions.ts — update together
+  // vuosi=2026 mirrors CURRENT_YEAR in config/yearOptions.ts — update together
   await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026/);
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
@@ -204,6 +204,50 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 
   await expect(page).toHaveURL(href as string);
   await expect(page.getByRole("heading").first()).toBeVisible();
+});
+
+test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
+  await page.goto("/koulut/aalto-yliopisto");
+  await page.getByRole("link", { name: "2026 pisterajat" }).click();
+
+  await expect(page).toHaveURL("/koulut/aalto-yliopisto/pisterajat/");
+  await expect(page.getByRole("heading", { name: "Aalto-yliopiston pisterajat 2026" })).toBeVisible();
+  await expect(
+    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
+  ).toBeVisible();
+  await expect(page.getByText("Todistusvalinta ensikertalaisille hakijoille").first()).toBeVisible();
+  await expect(page.getByText("145,20")).toBeVisible();
+
+  // click can land before hydration, so retry until page 2 actually renders
+  await expect(async () => {
+    await page.getByRole("button", { name: "2" }).click();
+    await expect(page.getByText("Kauppatieteet, kauppatieteiden kandidaatti ja maisteri").first()).toBeVisible({
+      timeout: 1000,
+    });
+  }).toPass();
+});
+
+test("/koulut/:slug/pisterajat: shows every selection method for a programme", async ({ page }) => {
+  await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
+
+  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible();
+  await expect(page.getByText("AMK-valintakoe", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
+});
+
+test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
+  await page.goto("/koulut/aalto-yliopisto/pisterajat/");
+  await expect(
+    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
+  ).toBeVisible({ timeout: 10000 });
+
+  const search = page.getByPlaceholder("Hae toteutusta");
+  await search.fill("xxxnotexist");
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+
+  await search.clear();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {

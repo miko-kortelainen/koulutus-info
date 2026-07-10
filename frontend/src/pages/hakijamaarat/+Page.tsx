@@ -6,6 +6,7 @@ import DegreeStatCard from "@/components/DegreeStatsCard";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
+import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import useDebounce from "@/hooks/useDebounce";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
@@ -13,7 +14,6 @@ import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import SortControl, { type SortOption } from "./components/SortControl";
 import YearControl from "./components/YearControl";
-import { CURRENT_YEAR, type YearOption } from "./components/yearOptions";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
 
 const PAGE_SIZE = 10;

@@ -7,3 +7,5 @@ packages:
       null.Bool: "null | boolean"
       uuid.UUID: "string /* uuid */"
       uuid.NullUUID: "null | string /* uuid */"
+  - path: "school-api/internal/pisterajat"
+    output_path: "../frontend/src/types/pisterajat.gen.ts"

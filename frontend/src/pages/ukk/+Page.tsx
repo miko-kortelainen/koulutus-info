@@ -24,7 +24,8 @@ const QUESTIONS = [
     question: "Kuinka usein tiedot päivittyvät?",
     answer: (
       <>
-        Tiedot päivitetään sitä mukaa kun uutta dataa julkaistaan. Suuntaa antava aikataulu löytyy{" "}
+        Koulutuksia ja hakijamäärien tilastoja päivitetään sitä mukaa kun uutta dataa julkaistaan. Suuntaa antava
+        aikataulu löytyy{" "}
         <Link
           color="blue.500"
           href="https://vipunen.fi/fi-fi/yhteiset/Sivut/Tietojen-p%C3%A4ivittymisen-aikataulu---haku-ja-valinta.aspx"
@@ -33,7 +34,8 @@ const QUESTIONS = [
         >
           Vipunen.fi
         </Link>{" "}
-        -sivun aikataulusta.
+        -sivun aikataulusta. <br /> <br />
+        Sivun alaosasta näät milloin sivua on viimeksi päivitetty.
       </>
     ),
   },
@@ -45,7 +47,7 @@ const QUESTIONS = [
         <Text as="span" fontStyle="italic">
           hakijapaine
         </Text>{" "}
-        perustuu kaavaan: <br />
+        perustuu suhdelukuun: <br />
         <Text as="span" fontWeight="semibold">
           ensisijaiset hakijat / aloituspaikat
         </Text>
