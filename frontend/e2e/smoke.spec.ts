@@ -194,6 +194,19 @@ test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
 });
 
+test("/koulut: sort control reorders the school list", async ({ page }) => {
+  await page.goto("/koulut");
+  const firstLink = page.getByRole("tabpanel").getByRole("link").first();
+  await expect(firstLink).toBeVisible();
+  const azFirstHref = await firstLink.getAttribute("href");
+
+  await page.getByRole("combobox", { name: "Järjestys" }).click();
+  await page.getByRole("option", { name: "Eniten hakijoita" }).click();
+
+  await expect(firstLink).toBeVisible();
+  await expect(firstLink).not.toHaveAttribute("href", azFirstHref ?? "");
+});
+
 test("/koulut/:slug: selecting a school opens its detail page", async ({ page }) => {
   await page.goto("/koulut");
 
