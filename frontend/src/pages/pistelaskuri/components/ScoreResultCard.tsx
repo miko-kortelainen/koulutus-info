@@ -1,16 +1,16 @@
-import { Card, Heading, Stack, Text } from "@chakra-ui/react";
+import { Badge, Card, Heading, Stack, Text } from "@chakra-ui/react";
 import type { ScoreResult } from "../+data";
 
 interface ScoreResultCardProps {
   result: ScoreResult;
+  userScore: number;
 }
 
 const scoreFormatter = new Intl.NumberFormat("fi-FI", {
-  minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
 
-export default function ScoreResultCard({ result }: ScoreResultCardProps) {
+export default function ScoreResultCard({ result, userScore }: ScoreResultCardProps) {
   return (
     <Card.Root as="article" size="md">
       <Card.Body>
@@ -22,12 +22,17 @@ export default function ScoreResultCard({ result }: ScoreResultCardProps) {
             <Text color="fg.muted" fontSize="sm">
               {result.schoolName}
             </Text>
+            <Badge alignSelf="flex-start" variant="surface">
+              {result.selectionMethod}
+            </Badge>
           </Stack>
           <Stack direction={{ base: "column", md: "row" }} gap={1} justify="space-between">
             <Text color="fg.muted" fontSize="sm">
-              Alin hyväksytty pistemäärä
+              Pisteesi / alin hyväksytty pistemäärä
             </Text>
-            <Text fontWeight="bold">{scoreFormatter.format(result.score)}</Text>
+            <Text color={result.score <= userScore ? "green.fg" : undefined} fontWeight="bold">
+              {scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
+            </Text>
           </Stack>
         </Stack>
       </Card.Body>

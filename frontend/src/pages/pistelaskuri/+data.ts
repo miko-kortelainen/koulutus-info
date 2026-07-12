@@ -4,6 +4,7 @@ import { isScoreType, type ScoreType } from "./scoreTypes";
 export interface ScoreResult {
   programmeName: string;
   schoolName: string;
+  koulutusala: string;
   score: number;
   selectionMethod: ScoreType;
 }
@@ -18,6 +19,7 @@ export const data = (): ScoreResult[] =>
           {
             programmeName: programme.name,
             schoolName: school.name,
+            koulutusala: programme.koulutusala,
             score: cutoff.score,
             selectionMethod: cutoff.selectionMethod,
           },
