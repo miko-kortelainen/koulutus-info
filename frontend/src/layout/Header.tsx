@@ -2,6 +2,7 @@ import { Box, CloseButton, Drawer, HStack, IconButton, Link, Portal, Separator, 
 import {
   HiMenu,
   HiOutlineAcademicCap,
+  HiOutlineCalculator,
   HiOutlineChartBar,
   HiOutlineChatAlt2,
   HiOutlineHeart,
@@ -23,6 +24,12 @@ const links = [
     label: "koulutukset",
     description: "Selaa yhteishaussa olevia koulutuksia",
     icon: HiOutlineAcademicCap,
+  },
+  {
+    href: "/pistelaskuri/",
+    label: "pistelaskuri",
+    description: "Arvioi yhteishaun pistemääräsi",
+    icon: HiOutlineCalculator,
   },
   {
     href: "/koulut/",
