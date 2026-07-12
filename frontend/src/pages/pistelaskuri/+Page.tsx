@@ -6,9 +6,16 @@ import PageContainer from "@/layout/PageContainer";
 import type { ScoreResult } from "./+data";
 import ScoreForm from "./components/ScoreForm";
 import ScoreResultCard from "./components/ScoreResultCard";
+import { AMM_MAX_SCORE } from "./lib/ammScoring";
+import { YO_MAX_SCORE } from "./lib/yoScoring";
 import { SCORE_TYPES, type ScoreType } from "./scoreTypes";
 
 const pageSize = 20;
+
+const MAX_SCORE_BY_TYPE: Partial<Record<ScoreType, number>> = {
+  "Todistusvalinta (AMM)": AMM_MAX_SCORE,
+  "Todistusvalinta (YO)": YO_MAX_SCORE,
+};
 
 interface Search {
   score: number;
@@ -23,6 +30,7 @@ export default function ScoreCalculatorPage() {
   const results = useData<ScoreResult[]>();
   const [search, setSearch] = useState<Search | null>(null);
   const [page, setPage] = useState(1);
+  const maxScore = search ? MAX_SCORE_BY_TYPE[search.selectionMethod] : undefined;
   const filteredResults = useMemo(() => {
     if (!search) return [];
 
@@ -38,7 +46,8 @@ export default function ScoreCalculatorPage() {
         Pistelaskuri
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Katso suuntaa-antavasti, mihin koulutuksiin pisteesi olisivat riittäneet vuoden 2026 pisterajoilla.
+        Laske ylioppilastutkinnon tai ammatillisen perustutkinnon todistuspisteet vuoden 2026 virallisella mallilla ja
+        vertaa tulosta saman vuoden pisterajoihin.
       </Text>
       <Separator mt={2} />
     </Stack>
@@ -51,8 +60,10 @@ export default function ScoreCalculatorPage() {
           {filteredResults.length} {filteredResults.length === 1 ? "koulutus" : "koulutusta"}
         </Heading>
         <Text color="fg.muted" fontSize="sm">
-          {SCORE_TYPES.find(({ value }) => value === search.selectionMethod)?.label}, enintään{" "}
-          {scoreFormatter.format(search.score)} pistettä
+          {SCORE_TYPES.find(({ value }) => value === search.selectionMethod)?.label},{" "}
+          {maxScore
+            ? `${scoreFormatter.format(search.score)} / ${maxScore}`
+            : `enintään ${scoreFormatter.format(search.score)} pistettä`}
         </Text>
       </Stack>
       {filteredResults.length === 0 ? <Text>Näillä pisteillä ei löytynyt koulutuksia.</Text> : null}
@@ -72,13 +83,15 @@ export default function ScoreCalculatorPage() {
     <PageContainer align="flex-start">
       {header}
       <ScoreForm
+        onModeChange={() => setSearch(null)}
         onSubmit={(selectionMethod, score) => {
           setSearch({ score, selectionMethod });
           setPage(1);
         }}
       />
       <Text color="fg.muted" fontSize="xs" textWrap="pretty">
-        Pisterajat ovat suuntaa-antavia eivätkä takaa opiskelupaikkaa.
+        Pisterajat ovat suuntaa-antavia. Vertailu ei huomioi hakukohdekohtaisia vähimmäispisteitä tai kynnysehtoja eikä
+        takaa opiskelupaikkaa.
       </Text>
       {resultList}
     </PageContainer>

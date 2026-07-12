@@ -67,17 +67,36 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
   await expect(page.getByText("Hakijat").first()).toBeVisible();
 });
 
-test("/pistelaskuri: shows programmes below the selected cutoff score", async ({ page }) => {
+test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/pistelaskuri/");
   await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
 
-  await page.getByRole("combobox", { name: "Pistetyyppi" }).selectOption("Todistusvalinta (AMM)");
-  await page.getByRole("textbox", { name: "Pistemäärä" }).fill("30");
+  async function selectOption(label: string, option: string) {
+    await page.getByRole("combobox", { name: label }).click();
+    await page.getByRole("option", { name: option, exact: true }).click();
+  }
+
+  await selectOption("Pistetyyppi", "Todistuspisteet (YO)");
+  await selectOption("Äidinkieli", "M");
+  await selectOption("Matematiikan oppimäärä", "Lyhyt");
+  await selectOption("Matematiikan arvosana", "M");
+
+  await page.getByRole("button", { name: "+ Lisää kieli" }).click();
+  await page.getByRole("textbox", { name: "Kieli 1" }).fill("ruotsi");
+  await selectOption("Kielen 1 tyyppi", "Toinen kotimainen kieli");
+  await selectOption("Kielen 1 oppimäärä", "Keskipitkä");
+  await selectOption("Kielen 1 arvosana", "C");
+
+  await page.getByRole("button", { name: "+ Lisää reaaliaine" }).click();
+  await selectOption("Reaaliaine 1", "Filosofia");
+  await selectOption("Reaaliaineen 1 arvosana", "E");
+
   await page.getByRole("button", { name: "Näytä koulutukset" }).click();
 
-  await expect(page.getByRole("heading", { name: "1 koulutus" })).toBeVisible();
-  await expect(page.getByText("Tradenomi (AMK) Tietojenkäsittely, päiväopinnot, Tornio")).toBeVisible();
-  await expect(page.getByText("30,00")).toBeVisible();
+  await expect(page.getByText("106 / 198")).toBeVisible();
+  await expect(page.getByRole("heading", { name: /koulutusta/ })).toBeVisible();
+  await expect(page.getByText(/ei huomioi hakukohdekohtaisia vähimmäispisteitä tai kynnysehtoja/)).toBeVisible();
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
