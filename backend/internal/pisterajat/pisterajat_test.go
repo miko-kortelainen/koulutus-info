@@ -7,12 +7,12 @@ import (
 )
 
 func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
-	input := strings.NewReader("\ufeffKoulu;Ohjelma;Valintatapa;Pisteraja\n" +
-		"School A;Programme 1;Certificate, first-time applicants;145,60\n" +
-		"School A;Programme 1;Certificate, all applicants;142,10\n" +
-		"School A;Programme 1;Entrance exam;88,00\n" +
-		"School A;Programme 2;Certificate, all applicants;120,00\n" +
-		"School B;Programme 3;Certificate, all applicants;99,50\n")
+	input := strings.NewReader("\ufeffKoulu;Ohjelma;Valintatapa;Pisteraja;Koulutusala\n" +
+		"School A;Programme 1;Certificate, first-time applicants;145,60;Field A\n" +
+		"School A;Programme 1;Certificate, all applicants;142,10;Field A\n" +
+		"School A;Programme 1;Entrance exam;88,00;Field A\n" +
+		"School A;Programme 2;Certificate, all applicants;120,00;Field A\n" +
+		"School B;Programme 3;Certificate, all applicants;99,50;Field B\n")
 
 	got, err := Convert(input)
 	if err != nil {
@@ -24,7 +24,8 @@ func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
 			Name: "School A",
 			Programmes: []Programme{
 				{
-					Name: "Programme 1",
+					Name:        "Programme 1",
+					Koulutusala: "Field A",
 					Cutoffs: []Cutoff{
 						{SelectionMethod: "Certificate, first-time applicants", Score: 145.6},
 						{SelectionMethod: "Certificate, all applicants", Score: 142.1},
@@ -32,8 +33,9 @@ func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
 					},
 				},
 				{
-					Name:    "Programme 2",
-					Cutoffs: []Cutoff{{SelectionMethod: "Certificate, all applicants", Score: 120}},
+					Name:        "Programme 2",
+					Koulutusala: "Field A",
+					Cutoffs:     []Cutoff{{SelectionMethod: "Certificate, all applicants", Score: 120}},
 				},
 			},
 		},
@@ -41,8 +43,9 @@ func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
 			Name: "School B",
 			Programmes: []Programme{
 				{
-					Name:    "Programme 3",
-					Cutoffs: []Cutoff{{SelectionMethod: "Certificate, all applicants", Score: 99.5}},
+					Name:        "Programme 3",
+					Koulutusala: "Field B",
+					Cutoffs:     []Cutoff{{SelectionMethod: "Certificate, all applicants", Score: 99.5}},
 				},
 			},
 		},
@@ -54,8 +57,8 @@ func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
 }
 
 func TestConvertRejectsInvalidScore(t *testing.T) {
-	input := strings.NewReader("Koulu;Ohjelma;Valintatapa;Pisteraja\n" +
-		"School A;Programme 1;Certificate;not-a-number\n")
+	input := strings.NewReader("Koulu;Ohjelma;Valintatapa;Pisteraja;Koulutusala\n" +
+		"School A;Programme 1;Certificate;not-a-number;Field A\n")
 
 	_, err := Convert(input)
 	if err == nil || !strings.Contains(err.Error(), "row 2: parse Pisteraja") {
