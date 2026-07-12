@@ -39,6 +39,7 @@ test("nav links navigate to all pages", async ({ page }) => {
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
+    ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
     ["tallennetut", "/tallennetut/"],
     ["trendit", "/trendit/"],
@@ -64,6 +65,19 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
   await search.clear();
   await expect(page.getByText("Hakijat").first()).toBeVisible();
+});
+
+test("/pistelaskuri: shows programmes below the selected cutoff score", async ({ page }) => {
+  await page.goto("/pistelaskuri/");
+  await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
+
+  await page.getByRole("combobox", { name: "Pistetyyppi" }).selectOption("Todistusvalinta (AMM)");
+  await page.getByRole("textbox", { name: "Pistemäärä" }).fill("30");
+  await page.getByRole("button", { name: "Näytä koulutukset" }).click();
+
+  await expect(page.getByRole("heading", { name: "1 koulutus" })).toBeVisible();
+  await expect(page.getByText("Tradenomi (AMK) Tietojenkäsittely, päiväopinnot, Tornio")).toBeVisible();
+  await expect(page.getByText("30,00")).toBeVisible();
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
