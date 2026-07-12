@@ -95,8 +95,11 @@ test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ p
   await page.getByRole("button", { name: "Näytä koulutukset" }).click();
 
   await expect(page.getByText("106 / 198")).toBeVisible();
-  await expect(page.getByRole("heading", { name: /koulutusta/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /koulutukseen/ })).toBeVisible();
   await expect(page.getByText(/ei huomioi hakukohdekohtaisia vähimmäispisteitä tai kynnysehtoja/)).toBeVisible();
+
+  await page.getByRole("button", { name: /Tekniikan alat/ }).click();
+  await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
@@ -253,21 +256,19 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 });
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
-  await page.goto("/koulut/aalto-yliopisto");
+  await page.goto("/koulut/helsingin-yliopisto");
   await page.getByRole("link", { name: "2026 pisterajat" }).click();
 
-  await expect(page).toHaveURL("/koulut/aalto-yliopisto/pisterajat/");
-  await expect(page.getByRole("heading", { name: "Aalto-yliopiston pisterajat 2026" })).toBeVisible();
-  await expect(
-    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
-  ).toBeVisible();
-  await expect(page.getByText("Todistusvalinta ensikertalaisille hakijoille").first()).toBeVisible();
-  await expect(page.getByText("145,20")).toBeVisible();
+  await expect(page).toHaveURL("/koulut/helsingin-yliopisto/pisterajat/");
+  await expect(page.getByRole("heading", { name: "Helsingin yliopiston pisterajat 2026" })).toBeVisible();
+  await expect(page.getByText("Logopedian kandiohjelma").first()).toBeVisible();
+  await expect(page.getByText("Todistusvalinta kaikille hakijoille").first()).toBeVisible();
+  await expect(page.getByText("142,70")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
     await page.getByRole("button", { name: "2" }).click();
-    await expect(page.getByText("Kauppatieteet, kauppatieteiden kandidaatti ja maisteri").first()).toBeVisible({
+    await expect(page.getByText("Kulttuurien tutkimuksen kandiohjelma").first()).toBeVisible({
       timeout: 1000,
     });
   }).toPass();
@@ -283,10 +284,8 @@ test("/koulut/:slug/pisterajat: shows every selection method for a programme", a
 });
 
 test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
-  await page.goto("/koulut/aalto-yliopisto/pisterajat/");
-  await expect(
-    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
-  ).toBeVisible({ timeout: 10000 });
+  await page.goto("/koulut/helsingin-yliopisto/pisterajat/");
+  await expect(page.getByText("Logopedian kandiohjelma").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");

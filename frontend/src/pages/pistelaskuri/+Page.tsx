@@ -1,7 +1,6 @@
-import { Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Badge, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
-import Pagination from "@/components/Pagination";
 import PageContainer from "@/layout/PageContainer";
 import type { ScoreResult } from "./+data";
 import ScoreForm from "./components/ScoreForm";
@@ -9,8 +8,6 @@ import ScoreResultCard from "./components/ScoreResultCard";
 import { AMM_MAX_SCORE } from "./lib/ammScoring";
 import { YO_MAX_SCORE } from "./lib/yoScoring";
 import { SCORE_TYPES, type ScoreType } from "./scoreTypes";
-
-const pageSize = 20;
 
 const MAX_SCORE_BY_TYPE: Partial<Record<ScoreType, number>> = {
   "Todistusvalinta (AMM)": AMM_MAX_SCORE,
@@ -29,16 +26,28 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
 export default function ScoreCalculatorPage() {
   const results = useData<ScoreResult[]>();
   const [search, setSearch] = useState<Search | null>(null);
-  const [page, setPage] = useState(1);
   const maxScore = search ? MAX_SCORE_BY_TYPE[search.selectionMethod] : undefined;
-  const filteredResults = useMemo(() => {
+  const groups = useMemo(() => {
     if (!search) return [];
 
-    return results
-      .filter((result) => result.selectionMethod === search.selectionMethod && result.score <= search.score)
-      .sort((a, b) => b.score - a.score || a.programmeName.localeCompare(b.programmeName, "fi"));
+    const byAla = new Map<string, ScoreResult[]>();
+    for (const result of results) {
+      if (result.selectionMethod !== search.selectionMethod) continue;
+      const group = byAla.get(result.koulutusala) ?? [];
+      group.push(result);
+      byAla.set(result.koulutusala, group);
+    }
+
+    return [...byAla.entries()]
+      .sort(([a], [b]) => a.localeCompare(b, "fi"))
+      .map(([koulutusala, alaResults]) => ({
+        koulutusala,
+        results: alaResults.sort((a, b) => a.score - b.score || a.programmeName.localeCompare(b.programmeName, "fi")),
+        qualifiedCount: alaResults.filter((result) => result.score <= search.score).length,
+      }));
   }, [results, search]);
-  const visibleResults = filteredResults.slice((page - 1) * pageSize, page * pageSize);
+  const totalCount = groups.reduce((sum, group) => sum + group.results.length, 0);
+  const qualifiedCount = groups.reduce((sum, group) => sum + group.qualifiedCount, 0);
 
   const header = (
     <Stack gap={1}>
@@ -57,7 +66,7 @@ export default function ScoreCalculatorPage() {
     <Stack gap={4}>
       <Stack aria-live="polite" gap={1}>
         <Heading as="h2" size="md">
-          {filteredResults.length} {filteredResults.length === 1 ? "koulutus" : "koulutusta"}
+          Pisteesi riittävät {qualifiedCount} / {totalCount} koulutukseen
         </Heading>
         <Text color="fg.muted" fontSize="sm">
           {SCORE_TYPES.find(({ value }) => value === search.selectionMethod)?.label},{" "}
@@ -66,16 +75,37 @@ export default function ScoreCalculatorPage() {
             : `enintään ${scoreFormatter.format(search.score)} pistettä`}
         </Text>
       </Stack>
-      {filteredResults.length === 0 ? <Text>Näillä pisteillä ei löytynyt koulutuksia.</Text> : null}
-      {visibleResults.map((result) => (
-        <ScoreResultCard
-          key={`${result.schoolName}::${result.programmeName}::${result.selectionMethod}`}
-          result={result}
-        />
-      ))}
-      {filteredResults.length > pageSize ? (
-        <Pagination count={filteredResults.length} onPageChange={setPage} page={page} pageSize={pageSize} />
-      ) : null}
+      <Accordion.Root collapsible lazyMount multiple>
+        {groups.map((group) => (
+          <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
+            <Accordion.ItemTrigger>
+              <Heading as="h3" flex="1" size="sm" textAlign="start">
+                {group.koulutusala}
+              </Heading>
+              <Badge borderRadius="full" colorPalette={group.qualifiedCount > 0 ? "green" : "gray"}>
+                {group.qualifiedCount}
+              </Badge>
+              <Text color="fg.muted" fontSize="sm">
+                / {group.results.length}
+              </Text>
+              <Accordion.ItemIndicator />
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              <Accordion.ItemBody maxH="60vh" overflowY="auto">
+                <Stack gap={4}>
+                  {group.results.map((result) => (
+                    <ScoreResultCard
+                      key={`${result.schoolName}::${result.programmeName}::${result.selectionMethod}`}
+                      result={result}
+                      userScore={search.score}
+                    />
+                  ))}
+                </Stack>
+              </Accordion.ItemBody>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
     </Stack>
   ) : null;
 
@@ -86,7 +116,6 @@ export default function ScoreCalculatorPage() {
         onModeChange={() => setSearch(null)}
         onSubmit={(selectionMethod, score) => {
           setSearch({ score, selectionMethod });
-          setPage(1);
         }}
       />
       <Text color="fg.muted" fontSize="xs" textWrap="pretty">
