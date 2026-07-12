@@ -19,6 +19,7 @@ export interface School {
  */
 export interface Programme {
   name: string;
+  koulutusala: string;
   cutoffs: Cutoff[];
 }
 /**
