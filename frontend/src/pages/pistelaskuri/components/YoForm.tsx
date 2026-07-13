@@ -1,6 +1,7 @@
-import { Button, Field, IconButton, Input, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, IconButton, Separator, Stack, Text } from "@chakra-ui/react";
 import { useRef } from "react";
 import { HiOutlineTrash } from "react-icons/hi";
+import { COLORS } from "@/theme";
 import {
   type KieliLevel,
   type KieliType,
@@ -14,9 +15,7 @@ import FormSelect from "./FormSelect";
 
 export interface YoKieliRow {
   id: number;
-  name: string;
-  type: KieliType | "";
-  level: KieliLevel | "";
+  language: YoLanguageValue | "";
   grade: YoGrade | "";
 }
 
@@ -50,12 +49,17 @@ export const emptyYoFormState = (): YoFormState => ({
 
 export const parseYoForm = (state: YoFormState): { input: YoInput; errors?: undefined } | { errors: YoFormErrors } => {
   const errors: YoFormErrors = {};
+  const parsedLanguages = state.kielet.flatMap((kieli) => {
+    const option = getLanguageOption(kieli.language);
+    if (!option || !kieli.grade) return [];
+
+    return [{ grade: kieli.grade, languageKey: option.languageKey, level: option.level, type: option.type }];
+  });
+
   if (!state.aidinkieli) errors.aidinkieli = "Valitse äidinkielen arvosana.";
-  if (state.kielet.some((kieli) => !kieli.name.trim() || !kieli.type || !kieli.level || !kieli.grade))
+  if (parsedLanguages.length !== state.kielet.length)
     errors.kielet = "Täytä kaikki lisätyt kielet tai poista keskeneräinen rivi.";
-  else if (
-    new Set(state.kielet.map((kieli) => kieli.name.trim().toLocaleLowerCase("fi-FI"))).size !== state.kielet.length
-  )
+  else if (new Set(parsedLanguages.map((kieli) => kieli.languageKey)).size !== parsedLanguages.length)
     errors.kielet = "Saman kielen voi lisätä vain kerran.";
   if (state.reaaliaineet.some((reaaliaine) => !reaaliaine.subject || !reaaliaine.grade)) {
     errors.reaaliaineet = "Täytä kaikki lisätyt reaaliaineet tai poista keskeneräinen rivi.";
@@ -71,11 +75,7 @@ export const parseYoForm = (state: YoFormState): { input: YoInput; errors?: unde
       matematiikka: state.matematiikkaGrade
         ? { level: state.matematiikkaLevel, grade: state.matematiikkaGrade }
         : undefined,
-      kielet: state.kielet.map((kieli) => ({
-        type: kieli.type as KieliType,
-        level: kieli.level as KieliLevel,
-        grade: kieli.grade as YoGrade,
-      })),
+      kielet: parsedLanguages.map(({ grade, level, type }) => ({ grade, level, type })),
       reaaliaineet: state.reaaliaineet.map((reaaliaine) => ({
         subject: reaaliaine.subject,
         grade: reaaliaine.grade as YoGrade,
@@ -90,16 +90,50 @@ interface YoFormProps {
   value: YoFormState;
 }
 
+interface LanguageOption {
+  label: string;
+  languageKey: string;
+  level: KieliLevel;
+  type: KieliType;
+  value: string;
+}
+
+const LANGUAGE_OPTIONS = [
+  { label: "Englanti, pitkä", languageKey: "englanti", level: "pitkä", type: "vieras", value: "englanti-pitka" },
+  { label: "Englanti, lyhyt", languageKey: "englanti", level: "lyhyt", type: "vieras", value: "englanti-lyhyt" },
+  {
+    label: "Toinen kotimainen kieli, pitkä",
+    languageKey: "toinen-kotimainen",
+    level: "pitkä",
+    type: "kotimainen",
+    value: "toinen-kotimainen-pitka",
+  },
+  {
+    label: "Toinen kotimainen kieli, keskipitkä",
+    languageKey: "toinen-kotimainen",
+    level: "keskipitkä",
+    type: "kotimainen",
+    value: "toinen-kotimainen-keskipitka",
+  },
+  { label: "Venäjä, pitkä", languageKey: "venaja", level: "pitkä", type: "vieras", value: "venaja-pitka" },
+  { label: "Venäjä, lyhyt", languageKey: "venaja", level: "lyhyt", type: "vieras", value: "venaja-lyhyt" },
+  { label: "Ranska, pitkä", languageKey: "ranska", level: "pitkä", type: "vieras", value: "ranska-pitka" },
+  { label: "Ranska, lyhyt", languageKey: "ranska", level: "lyhyt", type: "vieras", value: "ranska-lyhyt" },
+  { label: "Espanja, pitkä", languageKey: "espanja", level: "pitkä", type: "vieras", value: "espanja-pitka" },
+  { label: "Espanja, lyhyt", languageKey: "espanja", level: "lyhyt", type: "vieras", value: "espanja-lyhyt" },
+  { label: "Saksa, pitkä", languageKey: "saksa", level: "pitkä", type: "vieras", value: "saksa-pitka" },
+  { label: "Saksa, lyhyt", languageKey: "saksa", level: "lyhyt", type: "vieras", value: "saksa-lyhyt" },
+  { label: "Saame, lyhyt", languageKey: "saame", level: "lyhyt", type: "vieras", value: "saame-lyhyt" },
+  { label: "Italia, lyhyt", languageKey: "italia", level: "lyhyt", type: "vieras", value: "italia-lyhyt" },
+  { label: "Portugali, lyhyt", languageKey: "portugali", level: "lyhyt", type: "vieras", value: "portugali-lyhyt" },
+  { label: "Latina, lyhyt", languageKey: "latina", level: "lyhyt", type: "vieras", value: "latina-lyhyt" },
+] as const satisfies readonly LanguageOption[];
+
+export type YoLanguageValue = (typeof LANGUAGE_OPTIONS)[number]["value"];
+
+const getLanguageOption = (value: YoLanguageValue | "") => LANGUAGE_OPTIONS.find((option) => option.value === value);
+
 const GRADE_OPTIONS = YO_GRADES.map((grade) => ({ label: grade, value: grade }));
-const KIELI_TYPE_OPTIONS: { label: string; value: KieliType }[] = [
-  { label: "Vieras kieli", value: "vieras" },
-  { label: "Toinen kotimainen kieli", value: "kotimainen" },
-];
-const KIELI_LEVEL_OPTIONS: { label: string; value: KieliLevel }[] = [
-  { label: "Pitkä", value: "pitkä" },
-  { label: "Keskipitkä", value: "keskipitkä" },
-  { label: "Lyhyt", value: "lyhyt" },
-];
 const MATH_LEVEL_OPTIONS: { label: string; value: MathLevel }[] = [
   { label: "Pitkä", value: "pitkä" },
   { label: "Lyhyt", value: "lyhyt" },
@@ -121,44 +155,37 @@ function KieliRow({ index, kieli, onRemove, onUpdate }: KieliRowProps) {
   const rowNumber = index + 1;
 
   return (
-    <Stack align={{ md: "flex-end" }} direction={{ base: "column", md: "row" }} gap={2}>
-      <Input
-        aria-label={`Kieli ${rowNumber}`}
-        onChange={(event) => onUpdate({ name: event.target.value })}
-        placeholder="Esimerkiksi englanti"
-        value={kieli.name}
-      />
-      <FormSelect
-        ariaLabel={`Kielen ${rowNumber} tyyppi`}
-        items={KIELI_TYPE_OPTIONS}
-        onChange={(type) => onUpdate({ type })}
-        placeholder="Kielen tyyppi"
-        value={kieli.type}
-      />
-      <FormSelect
-        ariaLabel={`Kielen ${rowNumber} oppimäärä`}
-        items={KIELI_LEVEL_OPTIONS}
-        onChange={(level) => onUpdate({ level })}
-        placeholder="Oppimäärä"
-        value={kieli.level}
-      />
-      <FormSelect
-        ariaLabel={`Kielen ${rowNumber} arvosana`}
-        items={GRADE_OPTIONS}
-        onChange={(grade) => onUpdate({ grade })}
-        placeholder="Arvosana"
-        value={kieli.grade}
-      />
-      <IconButton
-        alignSelf={{ base: "flex-end", md: "auto" }}
-        aria-label={`Poista kieli ${rowNumber}`}
-        onClick={onRemove}
-        type="button"
-        variant="ghost"
-      >
-        <HiOutlineTrash />
-      </IconButton>
-    </Stack>
+    <Flex>
+      <Flex alignItems="center" flex="1" gap={2} minW={0}>
+        <Box flex="4">
+          <FormSelect
+            ariaLabel={`Kieli ${rowNumber}`}
+            items={LANGUAGE_OPTIONS}
+            onChange={(language) => onUpdate({ language })}
+            placeholder="Valitse kieli"
+            value={kieli.language}
+          />
+        </Box>
+        <Box flex="3">
+          <FormSelect
+            ariaLabel={`Kielen ${rowNumber} arvosana`}
+            items={GRADE_OPTIONS}
+            onChange={(grade) => onUpdate({ grade })}
+            placeholder="Arvosana"
+            value={kieli.grade}
+          />
+        </Box>
+        <IconButton
+          aria-label={`Poista kieli ${rowNumber}`}
+          marginInlineStart="auto"
+          onClick={onRemove}
+          type="button"
+          variant="ghost"
+        >
+          <HiOutlineTrash />
+        </IconButton>
+      </Flex>
+    </Flex>
   );
 }
 
@@ -173,31 +200,37 @@ function ReaaliaineRow({ index, onRemove, onUpdate, reaaliaine }: ReaaliaineRowP
   const rowNumber = index + 1;
 
   return (
-    <Stack align={{ md: "flex-end" }} direction={{ base: "column", md: "row" }} gap={2}>
-      <FormSelect
-        ariaLabel={`Reaaliaine ${rowNumber}`}
-        items={REAALIAINE_OPTIONS}
-        onChange={(subject) => onUpdate({ subject })}
-        placeholder="Valitse reaaliaine"
-        value={reaaliaine.subject}
-      />
-      <FormSelect
-        ariaLabel={`Reaaliaineen ${rowNumber} arvosana`}
-        items={GRADE_OPTIONS}
-        onChange={(grade) => onUpdate({ grade })}
-        placeholder="Arvosana"
-        value={reaaliaine.grade}
-      />
-      <IconButton
-        alignSelf={{ base: "flex-end", md: "auto" }}
-        aria-label={`Poista reaaliaine ${rowNumber}`}
-        onClick={onRemove}
-        type="button"
-        variant="ghost"
-      >
-        <HiOutlineTrash />
-      </IconButton>
-    </Stack>
+    <Flex alignItems="center">
+      <Flex flex="1" gap={2} minW={0}>
+        <Box flex="4">
+          <FormSelect
+            ariaLabel={`Reaaliaine ${rowNumber}`}
+            items={REAALIAINE_OPTIONS}
+            onChange={(subject) => onUpdate({ subject })}
+            placeholder="Valitse reaaliaine"
+            value={reaaliaine.subject}
+          />
+        </Box>
+        <Box flex="3">
+          <FormSelect
+            ariaLabel={`Reaaliaineen ${rowNumber} arvosana`}
+            items={GRADE_OPTIONS}
+            onChange={(grade) => onUpdate({ grade })}
+            placeholder="Arvosana"
+            value={reaaliaine.grade}
+          />
+        </Box>
+        <IconButton
+          aria-label={`Poista reaaliaine ${rowNumber}`}
+          marginInlineStart="auto"
+          onClick={onRemove}
+          type="button"
+          variant="ghost"
+        >
+          <HiOutlineTrash />
+        </IconButton>
+      </Flex>
+    </Flex>
   );
 }
 
@@ -207,7 +240,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
   const addKieli = () =>
     onChange({
       ...value,
-      kielet: [...value.kielet, { id: nextId.current++, name: "", type: "", level: "", grade: "" }],
+      kielet: [...value.kielet, { id: nextId.current++, language: "", grade: "" }],
     });
   const removeKieli = (id: number) => onChange({ ...value, kielet: value.kielet.filter((kieli) => kieli.id !== id) });
   const updateKieli = (id: number, patch: Partial<YoKieliRow>) =>
@@ -232,40 +265,58 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
     });
 
   const aidinkieliField = (
-    <Field.Root invalid={Boolean(errors.aidinkieli)} required>
-      <Field.Label>Äidinkieli</Field.Label>
-      <FormSelect
-        ariaLabel="Äidinkieli"
-        items={GRADE_OPTIONS}
-        onChange={(aidinkieli) => onChange({ ...value, aidinkieli })}
-        placeholder="Valitse arvosana"
-        value={value.aidinkieli}
-      />
-      <Field.ErrorText>{errors.aidinkieli}</Field.ErrorText>
-    </Field.Root>
+    <Stack
+      aria-describedby={errors.aidinkieli ? "yo-mother-tongue-error" : undefined}
+      aria-invalid={Boolean(errors.aidinkieli)}
+      aria-required="true"
+      as="fieldset"
+      width="full"
+    >
+      <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
+        Äidinkieli
+      </Text>
+      <Stack width="full">
+        <FormSelect
+          ariaLabel="Äidinkieli"
+          items={GRADE_OPTIONS}
+          onChange={(aidinkieli) => onChange({ ...value, aidinkieli })}
+          placeholder="Valitse arvosana"
+          value={value.aidinkieli}
+        />
+      </Stack>
+      {errors.aidinkieli ? (
+        <Text color="fg.error" fontSize="sm" id="yo-mother-tongue-error">
+          {errors.aidinkieli}
+        </Text>
+      ) : null}
+    </Stack>
   );
 
   const matematiikkaField = (
-    <Stack as="fieldset" border="0" gap={2} minW={0} p={0} width="full">
-      <Text as="legend" fontSize="sm" fontWeight="medium">
+    <Stack as="fieldset" width="full">
+      <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
         Matematiikka
       </Text>
-      <Stack direction={{ base: "column", md: "row" }} gap={2} width="full">
-        <FormSelect
-          ariaLabel="Matematiikan oppimäärä"
-          items={MATH_LEVEL_OPTIONS}
-          onChange={(matematiikkaLevel) => onChange({ ...value, matematiikkaLevel })}
-          placeholder="Valitse oppimäärä"
-          value={value.matematiikkaLevel}
-        />
-        <FormSelect
-          ariaLabel="Matematiikan arvosana"
-          items={MATH_GRADE_OPTIONS}
-          onChange={(grade) => onChange({ ...value, matematiikkaGrade: grade === "ei-kirjoitettu" ? "" : grade })}
-          placeholder="Valitse arvosana"
-          value={value.matematiikkaGrade || "ei-kirjoitettu"}
-        />
-      </Stack>
+      <HStack gap={2} width="full">
+        <Box flex={16}>
+          <FormSelect
+            ariaLabel="Matematiikan oppimäärä"
+            items={MATH_LEVEL_OPTIONS}
+            onChange={(matematiikkaLevel) => onChange({ ...value, matematiikkaLevel })}
+            placeholder="Valitse oppimäärä"
+            value={value.matematiikkaLevel}
+          />
+        </Box>
+        <Box flex={17}>
+          <FormSelect
+            ariaLabel="Matematiikan arvosana"
+            items={MATH_GRADE_OPTIONS}
+            onChange={(grade) => onChange({ ...value, matematiikkaGrade: grade === "ei-kirjoitettu" ? "" : grade })}
+            placeholder="Valitse arvosana"
+            value={value.matematiikkaGrade || "ei-kirjoitettu"}
+          />
+        </Box>
+      </HStack>
     </Stack>
   );
 
@@ -274,16 +325,12 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       aria-describedby={errors.kielet ? "yo-languages-error" : undefined}
       aria-invalid={Boolean(errors.kielet)}
       as="fieldset"
-      border="0"
-      gap={2}
-      minW={0}
-      p={0}
       width="full"
     >
-      <Text as="legend" fontSize="sm" fontWeight="medium">
+      <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
         Kielet
       </Text>
-      <Stack gap={2} width="full">
+      <Stack width="full">
         {value.kielet.map((kieli, index) => (
           <KieliRow
             index={index}
@@ -299,9 +346,11 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
           {errors.kielet}
         </Text>
       ) : null}
-      <Button alignSelf="flex-start" mt={1} onClick={addKieli} size="sm" type="button" variant="ghost">
-        + Lisää kieli
-      </Button>
+      <Box>
+        <Button borderColor={COLORS.accent} onClick={addKieli} size="xs" type="button" variant="outline" w="7rem">
+          + Lisää kieli
+        </Button>
+      </Box>
     </Stack>
   );
 
@@ -310,16 +359,12 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       aria-describedby={errors.reaaliaineet ? "yo-real-subjects-error" : undefined}
       aria-invalid={Boolean(errors.reaaliaineet)}
       as="fieldset"
-      border="0"
-      gap={2}
-      minW={0}
-      p={0}
       width="full"
     >
-      <Text as="legend" fontSize="sm" fontWeight="medium">
+      <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
         Reaaliaineet
       </Text>
-      <Stack gap={2} width="full">
+      <Stack width="full">
         {value.reaaliaineet.map((reaaliaine, index) => (
           <ReaaliaineRow
             index={index}
@@ -331,21 +376,26 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
         ))}
       </Stack>
       {errors.reaaliaineet ? (
-        <Text color="fg.error" fontSize="sm" id="yo-real-subjects-error">
+        <Text color="fg.error" fontSize="sm" id="yo-real-subjects-error" px={4}>
           {errors.reaaliaineet}
         </Text>
       ) : null}
-      <Button alignSelf="flex-start" mt={1} onClick={addReaaliaine} size="sm" type="button" variant="ghost">
-        + Lisää reaaliaine
-      </Button>
+      <Box>
+        <Button borderColor={COLORS.accent} onClick={addReaaliaine} size="xs" type="button" variant="outline" w="7rem">
+          + Lisää aine
+        </Button>
+      </Box>
     </Stack>
   );
 
   return (
     <Stack gap={4}>
       {aidinkieliField}
+      <Separator bg={COLORS.accent} />
       {matematiikkaField}
+      <Separator bg={COLORS.accent} />
       {kieletField}
+      <Separator bg={COLORS.accent} />
       {reaaliaineetField}
     </Stack>
   );
