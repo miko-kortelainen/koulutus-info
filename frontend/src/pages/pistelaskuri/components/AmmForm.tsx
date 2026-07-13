@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Separator, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Input, Separator, Stack, Text, VStack } from "@chakra-ui/react";
 import { COLORS } from "@/theme";
 import { AMM_GRADES, type AmmGrade, type AmmInput, type AmmScale } from "../lib/ammScoring";
 import FormSelect from "./FormSelect";
