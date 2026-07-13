@@ -7,6 +7,7 @@ const paths = [
   "/",
   "/hakijamaarat/",
   "/koulutukset/",
+  "/pistelaskuri/",
   "/koulut/",
   "/trendit/",
   ...schoolNames().map((name) => `/koulut/${slugifySchoolName(name)}/`),

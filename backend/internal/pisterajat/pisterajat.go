@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-var expectedHeader = []string{"Koulu", "Ohjelma", "Valintatapa", "Pisteraja"}
+var expectedHeader = []string{"Koulu", "Ohjelma", "Valintatapa", "Pisteraja", "Koulutusala"}
 
 // School contains every programme offered by one school.
 type School struct {
@@ -21,8 +21,9 @@ type School struct {
 
 // Programme contains the cutoff scores for one programme.
 type Programme struct {
-	Name    string   `json:"name"`
-	Cutoffs []Cutoff `json:"cutoffs"`
+	Name        string   `json:"name"`
+	Koulutusala string   `json:"koulutusala"`
+	Cutoffs     []Cutoff `json:"cutoffs"`
 }
 
 // Cutoff is one selection method and its admission cutoff score.
@@ -92,7 +93,7 @@ func Convert(input io.Reader) ([]School, error) {
 		programmeIndex, exists := programmeIndexes[programmeKey]
 		if !exists {
 			programmeIndex = len(schools[schoolIndex].Programmes)
-			schools[schoolIndex].Programmes = append(schools[schoolIndex].Programmes, Programme{Name: record[1]})
+			schools[schoolIndex].Programmes = append(schools[schoolIndex].Programmes, Programme{Name: record[1], Koulutusala: record[4]})
 			programmeIndexes[programmeKey] = programmeIndex
 		}
 
