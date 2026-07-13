@@ -94,9 +94,11 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Tabs.Root onValueChange={({ value }) => handleModeChange(value)} value={mode}>
-        <Stack gap={2}>
-          <Text fontWeight="medium">Valintatapa</Text>
+      <Tabs.Root onValueChange={({ value }) => handleModeChange(value)} size="sm" value={mode}>
+        <Stack>
+          <Text fontSize="sm" fontWeight="medium">
+            Valintatapa
+          </Text>
           <Tabs.List aria-label="Valintatapa" borderRadius="md" borderWidth="1px" width="full">
             {(
               [
@@ -105,14 +107,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
                 ["AMK-valintakoe", "AMK-valintakoe"],
               ] as const
             ).map(([value, label]) => (
-              <Tabs.Trigger
-                flex="1"
-                fontSize="sm"
-                justifyContent="center"
-                key={value}
-                px={{ base: 1, md: 3 }}
-                value={value}
-              >
+              <Tabs.Trigger flex="1" fontSize="xs" justifyContent="center" key={value} value={value}>
                 {label}
               </Tabs.Trigger>
             ))}

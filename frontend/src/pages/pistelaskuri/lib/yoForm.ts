@@ -92,7 +92,7 @@ export const parseYoForm = (state: YoFormState): { input: YoInput; errors?: unde
   else if (new Set(parsedLanguages.map((kieli) => kieli.languageKey)).size !== parsedLanguages.length)
     errors.kielet = "Saman kielen voi lisätä vain kerran.";
   if (state.reaaliaineet.some((reaaliaine) => !reaaliaine.subject || !reaaliaine.grade)) {
-    errors.reaaliaineet = "Täytä kaikki lisätyt reaaliaineet tai poista keskeneräinen rivi.";
+    errors.reaaliaineet = "Täytä kaikki lisätyt aineet tai poista keskeneräinen rivi.";
   } else if (new Set(state.reaaliaineet.map((reaaliaine) => reaaliaine.subject)).size !== state.reaaliaineet.length) {
     errors.reaaliaineet = "Saman reaaliaineen voi lisätä vain kerran.";
   }

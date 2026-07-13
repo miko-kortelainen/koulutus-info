@@ -24,6 +24,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
+    ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
     ["trendit", "/trendit/"],
   ] as const) {
@@ -93,7 +94,7 @@ test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ p
 
   await expect(page.getByText("106 / 198")).toBeVisible();
   await expect(page.getByRole("heading", { name: /koulutukseen/ })).toBeVisible();
-  await expect(page.getByText(/ei huomioi hakukohdekohtaisia vähimmäispisteitä tai kynnysehtoja/)).toBeVisible();
+  await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
 
   await page.getByRole("button", { name: /Tekniikan alat/ }).click();
   await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
