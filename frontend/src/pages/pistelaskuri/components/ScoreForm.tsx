@@ -84,6 +84,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
           setAmkScoreError(undefined);
         }}
         placeholder="Esimerkiksi 120,5"
+        size="xs"
         value={amkScoreInput}
       />
       <Field.ErrorText>{amkScoreError}</Field.ErrorText>
@@ -142,17 +143,19 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
             {amkScoreField}
           </Tabs.Content>
 
-          <Button
-            bg={COLORS.accent}
-            mt={4}
-            size="sm"
-            type="submit"
-            variant="solid"
-            width={{ base: "full", md: "auto" }}
-          >
-            <HiOutlineCalculator aria-hidden="true" />
-            Laske pisteet
-          </Button>
+          <Box display="flex" justifyContent="flex-end">
+            <Button
+              bg={COLORS.accent}
+              mt={4}
+              size="xs"
+              type="submit"
+              variant="solid"
+              width={{ base: "full", md: "auto" }}
+            >
+              <HiOutlineCalculator aria-hidden="true" />
+              Laske pisteet / näytä koulutukset
+            </Button>
+          </Box>
         </Box>
       </Tabs.Root>
     </form>
