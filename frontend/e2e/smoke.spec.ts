@@ -24,6 +24,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
+    ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
     ["trendit", "/trendit/"],
   ] as const) {
@@ -39,6 +40,7 @@ test("nav links navigate to all pages", async ({ page }) => {
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
+    ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
     ["tallennetut", "/tallennetut/"],
     ["trendit", "/trendit/"],
@@ -64,6 +66,38 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
   await search.clear();
   await expect(page.getByText("Hakijat").first()).toBeVisible();
+});
+
+test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/pistelaskuri/");
+  await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
+
+  async function selectOption(label: string, option: string) {
+    await page.getByRole("combobox", { name: label }).click();
+    await page.getByRole("option", { name: option, exact: true }).click();
+  }
+
+  await selectOption("Äidinkieli", "M");
+  await selectOption("Matematiikan oppimäärä", "Lyhyt");
+  await selectOption("Matematiikan arvosana", "M");
+
+  await page.getByRole("button", { name: "+ Lisää kieli" }).click();
+  await selectOption("Kieli 1", "Toinen kotimainen kieli, keskipitkä");
+  await selectOption("Kielen 1 arvosana", "C");
+
+  await page.getByRole("button", { name: "+ Lisää aine" }).click();
+  await selectOption("Reaaliaine 1", "Filosofia");
+  await selectOption("Reaaliaineen 1 arvosana", "E");
+
+  await page.getByRole("button", { name: "Laske pisteet" }).click();
+
+  await expect(page.getByText("106 / 198")).toBeVisible();
+  await expect(page.getByRole("heading", { name: /koulutukseen/ })).toBeVisible();
+  await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
+
+  await page.getByRole("button", { name: /Tekniikan alat/ }).click();
+  await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
@@ -194,6 +228,19 @@ test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
 });
 
+test("/koulut: sort control reorders the school list", async ({ page }) => {
+  await page.goto("/koulut");
+  const firstLink = page.getByRole("tabpanel").getByRole("link").first();
+  await expect(firstLink).toBeVisible();
+  const azFirstHref = await firstLink.getAttribute("href");
+
+  await page.getByRole("combobox", { name: "Järjestys" }).click();
+  await page.getByRole("option", { name: "Eniten hakijoita" }).click();
+
+  await expect(firstLink).toBeVisible();
+  await expect(firstLink).not.toHaveAttribute("href", azFirstHref ?? "");
+});
+
 test("/koulut/:slug: selecting a school opens its detail page", async ({ page }) => {
   await page.goto("/koulut");
 
@@ -207,21 +254,19 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 });
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
-  await page.goto("/koulut/aalto-yliopisto");
+  await page.goto("/koulut/helsingin-yliopisto");
   await page.getByRole("link", { name: "2026 pisterajat" }).click();
 
-  await expect(page).toHaveURL("/koulut/aalto-yliopisto/pisterajat/");
-  await expect(page.getByRole("heading", { name: "Aalto-yliopiston pisterajat 2026" })).toBeVisible();
-  await expect(
-    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
-  ).toBeVisible();
-  await expect(page.getByText("Todistusvalinta ensikertalaisille hakijoille").first()).toBeVisible();
-  await expect(page.getByText("145,20")).toBeVisible();
+  await expect(page).toHaveURL("/koulut/helsingin-yliopisto/pisterajat/");
+  await expect(page.getByRole("heading", { name: "Helsingin yliopiston pisterajat 2026" })).toBeVisible();
+  await expect(page.getByText("Logopedian kandiohjelma").first()).toBeVisible();
+  await expect(page.getByText("Todistusvalinta kaikille hakijoille").first()).toBeVisible();
+  await expect(page.getByText("142,70")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
     await page.getByRole("button", { name: "2" }).click();
-    await expect(page.getByText("Kauppatieteet, kauppatieteiden kandidaatti ja maisteri").first()).toBeVisible({
+    await expect(page.getByText("Kulttuurien tutkimuksen kandiohjelma").first()).toBeVisible({
       timeout: 1000,
     });
   }).toPass();
@@ -237,10 +282,8 @@ test("/koulut/:slug/pisterajat: shows every selection method for a programme", a
 });
 
 test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
-  await page.goto("/koulut/aalto-yliopisto/pisterajat/");
-  await expect(
-    page.getByText("Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri").first(),
-  ).toBeVisible({ timeout: 10000 });
+  await page.goto("/koulut/helsingin-yliopisto/pisterajat/");
+  await expect(page.getByText("Logopedian kandiohjelma").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");

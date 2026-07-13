@@ -7,8 +7,9 @@
   "scripts": {
     "dev": "vike dev",
     "build": "tsx scripts/sitemap.ts && vike build",
-    "lint": "tsc -b --noEmit && biome lint .",
+    "lint": "tsx src/pages/pistelaskuri/lib/scoring.test.ts && tsc -b --noEmit && biome lint .",
     "preview": "vike preview",
+    "test:unit": "tsx src/pages/pistelaskuri/lib/scoring.test.ts",
     "test:e2e": "playwright test",
     "format": "biome format --write src"
   },
