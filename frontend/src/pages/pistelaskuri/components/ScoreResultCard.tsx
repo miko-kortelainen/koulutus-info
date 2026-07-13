@@ -1,4 +1,5 @@
-import { Badge, Card, Heading, Stack, Text } from "@chakra-ui/react";
+import { Badge, Card, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { COLORS } from "@/theme";
 import type { ScoreResult } from "../+data";
 
 interface ScoreResultCardProps {
@@ -12,25 +13,26 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
 
 export default function ScoreResultCard({ result, userScore }: ScoreResultCardProps) {
   return (
-    <Card.Root as="article" size="md">
+    <Card.Root as="article" size="sm">
       <Card.Body>
         <Stack gap={3}>
-          <Stack gap={1}>
-            <Heading as="h3" fontSize={{ base: "sm", md: "md" }} textWrap="pretty">
+          <Stack>
+            <Heading as="h3" fontSize={{ base: "xs", md: "md" }} textWrap="pretty">
               {result.programmeName}
             </Heading>
-            <Text color="fg.muted" fontSize="sm">
+            <Text color="fg.muted" fontSize="xs">
               {result.schoolName}
             </Text>
-            <Badge alignSelf="flex-start" variant="surface">
+            <Badge alignSelf="flex-start" border="1px solid" borderColor={COLORS.accent} size="sm" variant="surface">
               {result.selectionMethod}
             </Badge>
           </Stack>
-          <Stack direction={{ base: "column", md: "row" }} gap={1} justify="space-between">
-            <Text color="fg.muted" fontSize="sm">
-              Pisteesi / alin hyväksytty pistemäärä
+          <Separator />
+          <Stack direction={{ base: "column", md: "row" }} justify="space-between">
+            <Text color="fg.muted" fontSize="xs">
+              Pisteesi / alin hyväksytty pistemäärä (2026)
             </Text>
-            <Text color={result.score <= userScore ? "green.fg" : undefined} fontWeight="bold">
+            <Text color={result.score <= userScore ? COLORS.accent : undefined} fontSize="sm" fontWeight="bold">
               {scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
             </Text>
           </Stack>

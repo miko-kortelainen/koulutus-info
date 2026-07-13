@@ -3,7 +3,7 @@ import PageContainer from "../../layout/PageContainer";
 
 export default function TietosuojaselosteePage() {
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       <Stack gap={6} py={8}>
         <Heading as="h1" size="2xl">
           Tietosuojaseloste

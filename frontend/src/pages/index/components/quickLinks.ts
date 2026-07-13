@@ -1,6 +1,18 @@
-import { HiOutlineAcademicCap, HiOutlineChartBar, HiOutlineLibrary, HiOutlineTrendingUp } from "react-icons/hi";
+import {
+  HiOutlineAcademicCap,
+  HiOutlineCalculator,
+  HiOutlineChartBar,
+  HiOutlineLibrary,
+  HiOutlineTrendingUp,
+} from "react-icons/hi";
 
 export const quickLinks = [
+  {
+    href: "/pistelaskuri/",
+    label: "pistelaskuri",
+    description: "Yhteishaun todistusvalintapistelaskuri",
+    icon: HiOutlineCalculator,
+  },
   {
     href: "/hakijamaarat/",
     label: "hakijamäärät",
@@ -13,6 +25,7 @@ export const quickLinks = [
     description: "Syksyn 2026 yhteishaussa olevat koulutukset",
     icon: HiOutlineAcademicCap,
   },
+
   {
     href: "/koulut/",
     label: "koulut",

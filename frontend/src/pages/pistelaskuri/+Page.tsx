@@ -1,7 +1,8 @@
-import { Accordion, Badge, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import PageContainer from "@/layout/PageContainer";
+import { COLORS } from "@/theme";
 import type { ScoreResult } from "./+data";
 import ScoreForm from "./components/ScoreForm";
 import ScoreResultCard from "./components/ScoreResultCard";
@@ -55,8 +56,7 @@ export default function ScoreCalculatorPage() {
         Pistelaskuri
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Laske ylioppilastutkinnon tai ammatillisen perustutkinnon todistuspisteet vuoden 2026 virallisella mallilla ja
-        vertaa tulosta saman vuoden pisterajoihin.
+        Laske todistusvalintapisteesi ylioppilastutkinnon tai ammattillisen perustutkinnon todistuksen perusteella.
       </Text>
       <Separator mt={2} />
     </Stack>
@@ -69,25 +69,34 @@ export default function ScoreCalculatorPage() {
           Pisteesi riittävät {qualifiedCount} / {totalCount} koulutukseen
         </Heading>
         <Text color="fg.muted" fontSize="sm">
-          {SCORE_TYPES.find(({ value }) => value === search.selectionMethod)?.label},{" "}
+          {SCORE_TYPES.find(({ value }) => value === search.selectionMethod)?.label}:{" "}
           {maxScore
             ? `${scoreFormatter.format(search.score)} / ${maxScore}`
-            : `enintään ${scoreFormatter.format(search.score)} pistettä`}
+            : `enintään ${scoreFormatter.format(search.score)} pistettä`}{" "}
         </Text>
       </Stack>
       <Accordion.Root collapsible lazyMount multiple>
         {groups.map((group) => (
           <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
             <Accordion.ItemTrigger>
-              <Heading as="h3" flex="1" size="sm" textAlign="start">
-                {group.koulutusala}
-              </Heading>
-              <Badge borderRadius="full" colorPalette={group.qualifiedCount > 0 ? "green" : "gray"}>
-                {group.qualifiedCount}
-              </Badge>
-              <Text color="fg.muted" fontSize="sm">
-                / {group.results.length}
-              </Text>
+              <HStack gap={0} width="100%">
+                <Heading as="h3" flex={{ base: 4.5, md: 10 }} size="xs" textAlign="start">
+                  {group.koulutusala}
+                </Heading>
+
+                <HStack flex={1} justifyContent="space-between">
+                  <Text
+                    color={group.qualifiedCount > 0 ? COLORS.accent : COLORS.text}
+                    fontSize="xs"
+                    textDecor={group.qualifiedCount > 0 ? "underline" : ""}
+                  >
+                    {group.qualifiedCount}
+                  </Text>
+                  <Text color="fg.muted" fontSize="xs" textWrap="nowrap">
+                    / {group.results.length}
+                  </Text>
+                </HStack>
+              </HStack>
               <Accordion.ItemIndicator />
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>
@@ -118,11 +127,13 @@ export default function ScoreCalculatorPage() {
           setSearch({ score, selectionMethod });
         }}
       />
-      <Text color="fg.muted" fontSize="xs" textWrap="pretty">
-        Pisterajat ovat suuntaa-antavia. Vertailu ei huomioi hakukohdekohtaisia vähimmäispisteitä tai kynnysehtoja eikä
-        takaa opiskelupaikkaa.
-      </Text>
+
       {resultList}
+      <Text color="fg.muted" fontSize="xs" textWrap="pretty">
+        Huom. Pisterajat ovat suuntaa-antavia. Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. <br />
+        <br />
+        Pisterajojen tiedot ovat peräisin virallisen opetushallituksen Vipunen.fi- palvelusta.
+      </Text>
     </PageContainer>
   );
 }

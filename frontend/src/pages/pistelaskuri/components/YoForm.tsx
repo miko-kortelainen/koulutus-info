@@ -64,6 +64,7 @@ function KieliRow({ index, kieli, onRemove, onUpdate }: KieliRowProps) {
           aria-label={`Poista kieli ${rowNumber}`}
           marginInlineStart="auto"
           onClick={onRemove}
+          size="xs"
           type="button"
           variant="ghost"
         >
@@ -109,6 +110,7 @@ function ReaaliaineRow({ index, onRemove, onUpdate, reaaliaine }: ReaaliaineRowP
           aria-label={`Poista reaaliaine ${rowNumber}`}
           marginInlineStart="auto"
           onClick={onRemove}
+          size="xs"
           type="button"
           variant="ghost"
         >
@@ -170,7 +172,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
         />
       </Stack>
       {errors.aidinkieli ? (
-        <Text color="fg.error" fontSize="sm" id="yo-mother-tongue-error">
+        <Text color="fg.error" fontSize="xs" id="yo-mother-tongue-error">
           {errors.aidinkieli}
         </Text>
       ) : null}
@@ -227,12 +229,19 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
         ))}
       </Stack>
       {errors.kielet ? (
-        <Text color="fg.error" fontSize="sm" id="yo-languages-error">
+        <Text color="fg.error" fontSize="xs" id="yo-languages-error">
           {errors.kielet}
         </Text>
       ) : null}
       <Box>
-        <Button borderColor={COLORS.accent} onClick={addKieli} size="xs" type="button" variant="outline" w="7rem">
+        <Button
+          borderColor={COLORS.accent}
+          onClick={addKieli}
+          size="2xs"
+          type="button"
+          variant="outline"
+          w={{ base: "100%", md: "7rem" }}
+        >
           + Lisää kieli
         </Button>
       </Box>
@@ -261,12 +270,19 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
         ))}
       </Stack>
       {errors.reaaliaineet ? (
-        <Text color="fg.error" fontSize="sm" id="yo-real-subjects-error" px={4}>
+        <Text color="fg.error" fontSize="xs" id="yo-real-subjects-error">
           {errors.reaaliaineet}
         </Text>
       ) : null}
       <Box>
-        <Button borderColor={COLORS.accent} onClick={addReaaliaine} size="xs" type="button" variant="outline" w="7rem">
+        <Button
+          borderColor={COLORS.accent}
+          onClick={addReaaliaine}
+          size="2xs"
+          type="button"
+          variant="outline"
+          w={{ base: "100%", md: "7rem" }}
+        >
           + Lisää aine
         </Button>
       </Box>
