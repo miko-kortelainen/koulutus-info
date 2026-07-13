@@ -77,22 +77,19 @@ test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ p
     await page.getByRole("option", { name: option, exact: true }).click();
   }
 
-  await selectOption("Pistetyyppi", "Todistuspisteet (YO)");
   await selectOption("Äidinkieli", "M");
   await selectOption("Matematiikan oppimäärä", "Lyhyt");
   await selectOption("Matematiikan arvosana", "M");
 
   await page.getByRole("button", { name: "+ Lisää kieli" }).click();
-  await page.getByRole("textbox", { name: "Kieli 1" }).fill("ruotsi");
-  await selectOption("Kielen 1 tyyppi", "Toinen kotimainen kieli");
-  await selectOption("Kielen 1 oppimäärä", "Keskipitkä");
+  await selectOption("Kieli 1", "Toinen kotimainen kieli, keskipitkä");
   await selectOption("Kielen 1 arvosana", "C");
 
-  await page.getByRole("button", { name: "+ Lisää reaaliaine" }).click();
+  await page.getByRole("button", { name: "+ Lisää aine" }).click();
   await selectOption("Reaaliaine 1", "Filosofia");
   await selectOption("Reaaliaineen 1 arvosana", "E");
 
-  await page.getByRole("button", { name: "Näytä koulutukset" }).click();
+  await page.getByRole("button", { name: "Laske pisteet" }).click();
 
   await expect(page.getByText("106 / 198")).toBeVisible();
   await expect(page.getByRole("heading", { name: /koulutukseen/ })).toBeVisible();

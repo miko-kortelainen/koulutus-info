@@ -154,3 +154,9 @@ ideat.txt
 backend/pisterajat.csv
 backend/excel_prompt.txt
 frontend/src/pages/pistelaskuri/SCORE_CALCULATION.md
+/graphify-out
+*/.codex
+*/.agents
+*/.claude
+.claude
+AGENTS.md

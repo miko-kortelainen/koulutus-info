@@ -1,10 +1,11 @@
-import { Button, Field, Input, Stack } from "@chakra-ui/react";
-import { type FormEvent, useState } from "react";
+import { Box, Button, Field, Input, Stack, Tabs, Text } from "@chakra-ui/react";
+import { type SubmitEvent, useState } from "react";
+import { HiOutlineCalculator } from "react-icons/hi";
+import { COLORS } from "@/theme";
 import { calculateAmmScore } from "../lib/ammScoring";
 import { calculateYoScore } from "../lib/yoScoring";
-import { isScoreType, SCORE_TYPES, type ScoreType } from "../scoreTypes";
+import { isScoreType, type ScoreType } from "../scoreTypes";
 import AmmForm, { type AmmFormErrors, emptyAmmFormState, parseAmmForm } from "./AmmForm";
-import FormSelect from "./FormSelect";
 import YoForm, { emptyYoFormState, parseYoForm, type YoFormErrors } from "./YoForm";
 
 interface ScoreFormProps {
@@ -21,28 +22,25 @@ const parseAmkScore = (value: string): number | null => {
 };
 
 export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
-  const [mode, setMode] = useState<ScoreType | "">("");
+  const [mode, setMode] = useState<ScoreType>("Todistusvalinta (YO)");
   const [yoState, setYoState] = useState(emptyYoFormState());
   const [yoErrors, setYoErrors] = useState<YoFormErrors>({});
   const [ammState, setAmmState] = useState(emptyAmmFormState());
   const [ammErrors, setAmmErrors] = useState<AmmFormErrors>({});
   const [amkScoreInput, setAmkScoreInput] = useState("");
   const [amkScoreError, setAmkScoreError] = useState<string>();
-  const [modeError, setModeError] = useState<string>();
 
   const handleModeChange = (value: string) => {
-    setMode(isScoreType(value) ? value : "");
-    setYoState(emptyYoFormState());
+    if (!isScoreType(value)) return;
+
+    setMode(value);
     setYoErrors({});
-    setAmmState(emptyAmmFormState());
     setAmmErrors({});
-    setAmkScoreInput("");
     setAmkScoreError(undefined);
-    setModeError(undefined);
     onModeChange();
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (mode === "Todistusvalinta (YO)") {
@@ -74,26 +72,10 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
       onSubmit(mode, score);
       return;
     }
-
-    setModeError("Valitse pistetyyppi.");
   };
 
-  const modeField = (
-    <Field.Root invalid={Boolean(modeError)} required>
-      <Field.Label>Pistetyyppi</Field.Label>
-      <FormSelect
-        ariaLabel="Pistetyyppi"
-        items={SCORE_TYPES}
-        onChange={handleModeChange}
-        placeholder="Valitse pistetyyppi"
-        value={mode}
-      />
-      <Field.ErrorText>{modeError}</Field.ErrorText>
-    </Field.Root>
-  );
-
   const amkScoreField = (
-    <Field.Root invalid={Boolean(amkScoreError)} required>
+    <Field.Root invalid={Boolean(amkScoreError)} required={mode === "AMK-valintakoe"}>
       <Field.Label>Pistemäärä</Field.Label>
       <Input
         inputMode="decimal"
@@ -110,35 +92,69 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Stack gap={4}>
-        {modeField}
+      <Tabs.Root onValueChange={({ value }) => handleModeChange(value)} value={mode}>
+        <Stack gap={2}>
+          <Text fontWeight="medium">Valintatapa</Text>
+          <Tabs.List aria-label="Valintatapa" borderRadius="md" borderWidth="1px" width="full">
+            {(
+              [
+                ["Todistusvalinta (YO)", "YO"],
+                ["Todistusvalinta (AMM)", "AMM"],
+                ["AMK-valintakoe", "AMK-valintakoe"],
+              ] as const
+            ).map(([value, label]) => (
+              <Tabs.Trigger
+                flex="1"
+                fontSize="sm"
+                justifyContent="center"
+                key={value}
+                px={{ base: 1, md: 3 }}
+                value={value}
+              >
+                {label}
+              </Tabs.Trigger>
+            ))}
+          </Tabs.List>
+        </Stack>
 
-        {mode === "Todistusvalinta (YO)" ? (
-          <YoForm
-            errors={yoErrors}
-            onChange={(state) => {
-              setYoState(state);
-              setYoErrors({});
-            }}
-            value={yoState}
-          />
-        ) : null}
-        {mode === "Todistusvalinta (AMM)" ? (
-          <AmmForm
-            errors={ammErrors}
-            onChange={(state) => {
-              setAmmState(state);
-              setAmmErrors({});
-            }}
-            value={ammState}
-          />
-        ) : null}
-        {mode === "AMK-valintakoe" ? amkScoreField : null}
+        <Box borderColor="border" borderRadius="lg" borderWidth="1px" mt={4} p={{ base: 3, md: 5 }}>
+          <Tabs.Content p={0} value="Todistusvalinta (YO)">
+            <YoForm
+              errors={yoErrors}
+              onChange={(state) => {
+                setYoState(state);
+                setYoErrors({});
+              }}
+              value={yoState}
+            />
+          </Tabs.Content>
+          <Tabs.Content p={0} value="Todistusvalinta (AMM)">
+            <AmmForm
+              errors={ammErrors}
+              onChange={(state) => {
+                setAmmState(state);
+                setAmmErrors({});
+              }}
+              value={ammState}
+            />
+          </Tabs.Content>
+          <Tabs.Content p={0} value="AMK-valintakoe">
+            {amkScoreField}
+          </Tabs.Content>
 
-        <Button alignSelf={{ base: "stretch", md: "flex-start" }} type="submit">
-          Näytä koulutukset
-        </Button>
-      </Stack>
+          <Button
+            bg={COLORS.accent}
+            mt={4}
+            size="sm"
+            type="submit"
+            variant="solid"
+            width={{ base: "full", md: "auto" }}
+          >
+            <HiOutlineCalculator aria-hidden="true" />
+            Laske pisteet
+          </Button>
+        </Box>
+      </Tabs.Root>
     </form>
   );
 }

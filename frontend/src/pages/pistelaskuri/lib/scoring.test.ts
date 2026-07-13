@@ -1,7 +1,7 @@
 // Run with: pnpm exec tsx src/pages/pistelaskuri/lib/scoring.test.ts
 import assert from "node:assert/strict";
 import { emptyAmmFormState, parseAmmForm } from "../components/AmmForm";
-import { emptyYoFormState, parseYoForm } from "../components/YoForm";
+import { emptyYoFormState, parseYoForm, type YoLanguageValue } from "../components/YoForm";
 import { calculateAmmScore } from "./ammScoring";
 import { calculateYoScore } from "./yoScoring";
 
@@ -111,7 +111,7 @@ const completeYoForm = {
   ...emptyYoFormState(),
   aidinkieli: "L" as const,
   matematiikkaGrade: "L" as const,
-  kielet: [{ id: 0, name: "englanti", type: "vieras" as const, level: "pitkä" as const, grade: "L" as const }],
+  kielet: [{ id: 0, language: "englanti-pitka" as const, grade: "L" as const }],
   reaaliaineet: [
     { id: 1, subject: "Fysiikka", grade: "L" as const },
     { id: 2, subject: "Kemia", grade: "L" as const },
@@ -123,10 +123,36 @@ assert.equal(calculateYoScore(parsedYoForm.input), 198);
 
 const duplicateLanguageResult = parseYoForm({
   ...completeYoForm,
-  kielet: [...completeYoForm.kielet, { id: 3, name: " ENGLANTI ", type: "vieras", level: "lyhyt", grade: "E" }],
+  kielet: [...completeYoForm.kielet, { id: 3, language: "englanti-lyhyt", grade: "E" }],
 });
 if ("input" in duplicateLanguageResult) assert.fail("Duplicate language should fail validation.");
 assert.equal(duplicateLanguageResult.errors.kielet, "Saman kielen voi lisätä vain kerran.");
+
+const incompleteLanguageResult = parseYoForm({
+  ...completeYoForm,
+  kielet: [{ id: 0, language: "", grade: "L" }],
+});
+if ("input" in incompleteLanguageResult) assert.fail("Incomplete language should fail validation.");
+assert.equal(incompleteLanguageResult.errors.kielet, "Täytä kaikki lisätyt kielet tai poista keskeneräinen rivi.");
+
+const parseLanguage = (language: YoLanguageValue) => {
+  const result = parseYoForm({
+    ...emptyYoFormState(),
+    aidinkieli: "L",
+    kielet: [{ id: 0, language, grade: "L" }],
+  });
+  assert.ok("input" in result);
+  return result.input.kielet[0];
+};
+
+assert.deepEqual(parseLanguage("englanti-pitka"), { grade: "L", level: "pitkä", type: "vieras" });
+assert.deepEqual(parseLanguage("ranska-lyhyt"), { grade: "L", level: "lyhyt", type: "vieras" });
+assert.deepEqual(parseLanguage("toinen-kotimainen-pitka"), { grade: "L", level: "pitkä", type: "kotimainen" });
+assert.deepEqual(parseLanguage("toinen-kotimainen-keskipitka"), {
+  grade: "L",
+  level: "keskipitkä",
+  type: "kotimainen",
+});
 
 const duplicateSubjectResult = parseYoForm({
   ...completeYoForm,
