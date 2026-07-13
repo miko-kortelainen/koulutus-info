@@ -3,10 +3,11 @@ import { type SubmitEvent, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import { COLORS } from "@/theme";
 import { calculateAmmScore } from "../lib/ammScoring";
+import { emptyYoFormState, parseYoForm, type YoFormErrors } from "../lib/yoForm";
 import { calculateYoScore } from "../lib/yoScoring";
 import { isScoreType, type ScoreType } from "../scoreTypes";
 import AmmForm, { type AmmFormErrors, emptyAmmFormState, parseAmmForm } from "./AmmForm";
-import YoForm, { emptyYoFormState, parseYoForm, type YoFormErrors } from "./YoForm";
+import YoForm from "./YoForm";
 
 interface ScoreFormProps {
   onModeChange: () => void;

@@ -1,8 +1,8 @@
 // Run with: pnpm exec tsx src/pages/pistelaskuri/lib/scoring.test.ts
 import assert from "node:assert/strict";
 import { emptyAmmFormState, parseAmmForm } from "../components/AmmForm";
-import { emptyYoFormState, parseYoForm, type YoLanguageValue } from "../components/YoForm";
 import { calculateAmmScore } from "./ammScoring";
+import { emptyYoFormState, parseYoForm, type YoLanguageValue } from "./yoForm";
 import { calculateYoScore } from "./yoScoring";
 
 // AMM: kolme yhteistä tutkinnon osaa 3+3+3 (asteikko 1-5) tuottavat 30 pistettä,
