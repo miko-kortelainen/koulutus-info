@@ -1,18 +1,74 @@
 import { Box, Button, Field, Input, Stack, Tabs, Text } from "@chakra-ui/react";
-import { type SubmitEvent, useState } from "react";
+import { type SubmitEvent, useEffect, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import { COLORS } from "@/theme";
 import { calculateAmmScore } from "../lib/ammScoring";
-import { emptyYoFormState, parseYoForm, type YoFormErrors } from "../lib/yoForm";
+import { emptyYoFormState, parseYoForm, type YoFormErrors, type YoFormState } from "../lib/yoForm";
 import { calculateYoScore } from "../lib/yoScoring";
 import { isScoreType, type ScoreType } from "../scoreTypes";
-import AmmForm, { type AmmFormErrors, emptyAmmFormState, parseAmmForm } from "./AmmForm";
+import AmmForm, { type AmmFormErrors, type AmmFormState, emptyAmmFormState, parseAmmForm } from "./AmmForm";
 import YoForm from "./YoForm";
 
 interface ScoreFormProps {
   onModeChange: () => void;
   onSubmit: (selectionMethod: ScoreType, score: number) => void;
 }
+
+interface StoredForms {
+  amm?: AmmFormState;
+  version: 1;
+  yo?: YoFormState;
+}
+
+const STORAGE_KEY = "yhteishaku:pistelaskuri";
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+const isStoredYoForm = (value: unknown): value is YoFormState => {
+  try {
+    return isRecord(value) && "input" in parseYoForm(value as unknown as YoFormState);
+  } catch {
+    return false;
+  }
+};
+
+const isStoredAmmForm = (value: unknown): value is AmmFormState => {
+  try {
+    return isRecord(value) && "input" in parseAmmForm(value as unknown as AmmFormState);
+  } catch {
+    return false;
+  }
+};
+
+const readStoredForms = (): Omit<StoredForms, "version"> => {
+  if (typeof localStorage === "undefined") return {};
+
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return {};
+
+    const parsed: unknown = JSON.parse(raw);
+    if (!isRecord(parsed) || parsed.version !== 1) return {};
+
+    return {
+      amm: isStoredAmmForm(parsed.amm) ? parsed.amm : undefined,
+      yo: isStoredYoForm(parsed.yo) ? parsed.yo : undefined,
+    };
+  } catch {
+    return {};
+  }
+};
+
+const writeStoredForms = (next: Omit<StoredForms, "version">) => {
+  if (typeof localStorage === "undefined") return;
+
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, ...readStoredForms(), ...next }));
+  } catch {
+    // Storage is an optional enhancement; calculation should still succeed if it is unavailable.
+  }
+};
 
 const parseAmkScore = (value: string): number | null => {
   const normalizedValue = value.trim().replace(",", ".");
@@ -30,6 +86,12 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
   const [ammErrors, setAmmErrors] = useState<AmmFormErrors>({});
   const [amkScoreInput, setAmkScoreInput] = useState("");
   const [amkScoreError, setAmkScoreError] = useState<string>();
+
+  useEffect(() => {
+    const storedForms = readStoredForms();
+    if (storedForms.yo) setYoState(storedForms.yo);
+    if (storedForms.amm) setAmmState(storedForms.amm);
+  }, []);
 
   const handleModeChange = (value: string) => {
     if (!isScoreType(value)) return;
@@ -51,6 +113,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setYoErrors({});
+      writeStoredForms({ yo: yoState });
       onSubmit(mode, calculateYoScore(result.input));
       return;
     }
@@ -62,6 +125,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setAmmErrors({});
+      writeStoredForms({ amm: ammState });
       onSubmit(mode, calculateAmmScore(result.input));
       return;
     }

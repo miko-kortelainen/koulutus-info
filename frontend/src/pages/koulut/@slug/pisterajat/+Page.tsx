@@ -37,7 +37,7 @@ export default function CutoffPage() {
     <Stack gap={1}>
       {linkBack}
       <Heading as="h1" size="md">
-        {schoolName}n pisterajat 2026
+        {schoolName} pisterajat 2026
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         Tilastovuoden 2026 pisterajat valintatavoittain.

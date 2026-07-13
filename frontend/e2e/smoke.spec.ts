@@ -12,6 +12,15 @@ async function openNavDrawer(page: Page) {
   }).toPass();
 }
 
+async function selectOption(page: Page, label: string, option: string) {
+  await page.getByRole("combobox", { name: label }).click();
+  await page.getByRole("option", { name: option, exact: true }).click();
+}
+
+async function expectSelectedOption(page: Page, label: string, option: string) {
+  await expect(page.getByRole("combobox", { name: label })).toContainText(option);
+}
+
 test("homepage loads and nav drawer opens", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "yhteishaku.app" })).toBeVisible();
@@ -73,22 +82,17 @@ test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ p
   await page.goto("/pistelaskuri/");
   await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
 
-  async function selectOption(label: string, option: string) {
-    await page.getByRole("combobox", { name: label }).click();
-    await page.getByRole("option", { name: option, exact: true }).click();
-  }
-
-  await selectOption("Äidinkieli", "M");
-  await selectOption("Matematiikan oppimäärä", "Lyhyt");
-  await selectOption("Matematiikan arvosana", "M");
+  await selectOption(page, "Äidinkieli", "M");
+  await selectOption(page, "Matematiikan oppimäärä", "Lyhyt");
+  await selectOption(page, "Matematiikan arvosana", "M");
 
   await page.getByRole("button", { name: "+ Lisää kieli" }).click();
-  await selectOption("Kieli 1", "Toinen kotimainen kieli, keskipitkä");
-  await selectOption("Kielen 1 arvosana", "C");
+  await selectOption(page, "Kieli 1", "Toinen kotimainen kieli, keskipitkä");
+  await selectOption(page, "Kielen 1 arvosana", "C");
 
   await page.getByRole("button", { name: "+ Lisää aine" }).click();
-  await selectOption("Reaaliaine 1", "Filosofia");
-  await selectOption("Reaaliaineen 1 arvosana", "E");
+  await selectOption(page, "Reaaliaine 1", "Filosofia");
+  await selectOption(page, "Reaaliaineen 1 arvosana", "E");
 
   await page.getByRole("button", { name: "Laske pisteet" }).click();
 
@@ -98,6 +102,43 @@ test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ p
 
   await page.getByRole("button", { name: /Tekniikan alat/ }).click();
   await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
+});
+
+test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
+  await page.goto("/pistelaskuri/");
+
+  await selectOption(page, "Äidinkieli", "M");
+  await page.getByRole("button", { name: "+ Lisää kieli" }).click();
+  await selectOption(page, "Kieli 1", "Englanti, pitkä");
+  await selectOption(page, "Kielen 1 arvosana", "E");
+  await page.getByRole("button", { name: "Laske pisteet" }).click();
+
+  await page.getByRole("tab", { name: "AMM" }).click();
+  await selectOption(page, "Viestintä- ja vuorovaikutusosaaminen", "3");
+  await selectOption(page, "Matemaattis-luonnontieteellinen osaaminen", "3");
+  await selectOption(page, "Yhteiskunta- ja työelämäosaaminen", "3");
+  await page.getByRole("textbox", { name: "Tutkinnon painotettu keskiarvo" }).fill("3,96");
+  await page.getByRole("button", { name: "Laske pisteet" }).click();
+
+  await page.reload();
+
+  await expect(page.getByRole("tab", { name: "YO" })).toHaveAttribute("aria-selected", "true");
+  await expectSelectedOption(page, "Äidinkieli", "M");
+  await expectSelectedOption(page, "Kieli 1", "Englanti, pitkä");
+  await expectSelectedOption(page, "Kielen 1 arvosana", "E");
+
+  await page.getByRole("button", { name: "+ Lisää kieli" }).click();
+  await expect(page.getByRole("combobox", { name: "Kieli 2" })).toBeVisible();
+  await selectOption(page, "Äidinkieli", "L");
+  await page.reload();
+  await expectSelectedOption(page, "Äidinkieli", "M");
+  await expect(page.getByRole("combobox", { name: "Kieli 2" })).toHaveCount(0);
+
+  await page.getByRole("tab", { name: "AMM" }).click();
+  await expectSelectedOption(page, "Viestintä- ja vuorovaikutusosaaminen", "3");
+  await expectSelectedOption(page, "Matemaattis-luonnontieteellinen osaaminen", "3");
+  await expectSelectedOption(page, "Yhteiskunta- ja työelämäosaaminen", "3");
+  await expect(page.getByRole("textbox", { name: "Tutkinnon painotettu keskiarvo" })).toHaveValue("3,96");
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
