@@ -1,6 +1,6 @@
 # Data generator
 
-The Go application fetches and prepares static frontend datasets from Vipunen and Opintopolku. It is an offline update tool, not a deployed server.
+The Go application fetches and prepares static frontend datasets from Vipunen and Opintopolku. It is an offline update tool.
 
 ## Configuration
 
@@ -72,6 +72,7 @@ The JSON preserves the CSV's order and groups each row as:
     "programmes": [
       {
         "name": "Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta ensikertalaisille hakijoille",
@@ -84,5 +85,5 @@ The JSON preserves the CSV's order and groups each row as:
 ]
 ```
 
-The CSV header must be `Koulu;Ohjelma;Valintatapa;Pisteraja`.
+The CSV header must be `Koulu;Ohjelma;Valintatapa;Pisteraja;Koulutusala`.
 `Pisteraja` is parsed as a JSON number, accepting the Finnish decimal comma.

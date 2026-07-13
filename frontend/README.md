@@ -1,26 +1,33 @@
 # Frontend
 
-A React SPA built with Vite that displays the committed datasets in `public/data/`.
+The frontend contains the website's pages, components and hooks. It uses React 19, TypeScript, Vike and Chakra UI. Vike prerenders the routes into a static site, which fetches the committed JSON files from `public/data/`.
 
-## Quick start
+### Requirements
+
+- Node.js
+- pnpm 11
+
+### Quick start
 
 ```sh
 pnpm install
-pnpm dev
+pnpm run dev
 ```
 
-## Production
+Open `http://localhost:3000`.
 
-The multi-stage Docker image builds the Vite application and serves it with nginx. Build it from the repository root with:
+### Commands
 
 ```sh
-docker compose up --build
+pnpm run dev        # Start the development server
+pnpm run lint       # Run the score calculation tests, TypeScript and Biome
+pnpm run build      # Generate the sitemap and build the static site
+pnpm run preview    # Preview the production build
+pnpm run test:unit  # Run the score calculation tests
+pnpm run test:e2e   # Run the Playwright smoke tests
+pnpm run format     # Format the src directory with Biome
 ```
 
-## Tech stack
+The backend tools write the frontend datasets into `public/data/`. Tygo generates `src/types.gen.ts` and `src/types/pisterajat.gen.ts`, while the data generator updates `src/generated/dataManifest.ts`. Do not edit these files by hand.
 
-- React 19 and Vite
-- Chakra UI
-- React Router
-- Native `fetch` and TanStack Query
-- Types generated from the Go output models in `src/types.gen.ts`
+See [`../backend/README.md`](../backend/README.md) for the data update commands.
