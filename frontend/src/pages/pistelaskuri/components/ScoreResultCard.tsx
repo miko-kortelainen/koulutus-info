@@ -35,7 +35,7 @@ export default function ScoreResultCard({ result, roundLabel, userScore }: Score
             <Text color="fg.muted" fontSize="xs">
               Pisteesi / alin hyväksytty pistemäärä ({roundLabel})
             </Text>
-            <Text color={isQualified ? COLORS.accent : undefined} fontSize="sm" fontWeight="bold">
+            <Text color={isQualified ? COLORS.accent : "fg.muted"} fontSize="lg" fontWeight="bold" letterSpacing="wide">
               {userScore === undefined ? "–" : scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
             </Text>
           </Stack>
