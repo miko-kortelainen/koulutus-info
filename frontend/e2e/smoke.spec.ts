@@ -319,7 +319,7 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
   await expect(page).toHaveURL("/koulut/helsingin-yliopisto/pisterajat/");
   await expect(page.getByRole("heading", { name: "Helsingin yliopisto pisterajat 2026" })).toBeVisible();
   await expect(page.getByText("Biologian kandiohjelma").first()).toBeVisible();
-  await expect(page.getByText("Todistusvalinta kaikille hakijoille").first()).toBeVisible();
+  await expect(page.getByText("Todistusvalinta (YO)").first()).toBeVisible();
   await expect(page.getByText("158,00")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders

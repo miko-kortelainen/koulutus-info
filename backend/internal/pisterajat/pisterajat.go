@@ -11,11 +11,22 @@ import (
 	"strings"
 )
 
-var expectedHeader = []string{"Koulu", "Ohjelma", "Valintatapa", "Pisteraja", "Koulutusala"}
+var expectedHeader = []string{
+	"Sektori",
+	"Koulu",
+	"Koulutusala",
+	"Ohjelma",
+	"Valintatapa",
+	"Pisteraja",
+	"Alkamisvuosi",
+	"Alkamiskausi",
+	"Yhteishaku",
+}
 
 // School contains every programme offered by one school.
 type School struct {
 	Name       string      `json:"name"`
+	Sector     string      `json:"sector"`
 	Programmes []Programme `json:"programmes"`
 }
 
@@ -30,16 +41,24 @@ type Programme struct {
 type Cutoff struct {
 	SelectionMethod string  `json:"selectionMethod"`
 	Score           float64 `json:"score"`
+	StartYear       int     `json:"startYear"`
+	StartSeason     string  `json:"startSeason"`
+}
+
+type schoolKey struct {
+	jointApplication string
+	school           string
 }
 
 type programmeKey struct {
-	school    string
-	programme string
+	jointApplication string
+	school           string
+	programme        string
 }
 
 // Convert reads pisterajat.csv data. It preserves the source ordering while
-// grouping records by school and programme.
-func Convert(input io.Reader) ([]School, error) {
+// grouping records by joint application, school, and programme.
+func Convert(input io.Reader) (map[string][]School, error) {
 	reader := csv.NewReader(input)
 	reader.Comma = ';'
 	reader.TrimLeadingSpace = true
@@ -59,8 +78,8 @@ func Convert(input io.Reader) ([]School, error) {
 	}
 	reader.FieldsPerRecord = len(expectedHeader)
 
-	schools := make([]School, 0)
-	schoolIndexes := make(map[string]int)
+	datasets := make(map[string][]School)
+	schoolIndexes := make(map[schoolKey]int)
 	programmeIndexes := make(map[programmeKey]int)
 	for rowNumber := 2; ; rowNumber++ {
 		record, err := reader.Read()
@@ -77,37 +96,47 @@ func Convert(input io.Reader) ([]School, error) {
 		if err := validateRecord(record, rowNumber); err != nil {
 			return nil, err
 		}
-		score, err := parseScore(record[3])
+		score, err := parseScore(record[5])
 		if err != nil {
-			return nil, fmt.Errorf("row %d: parse Pisteraja %q: %w", rowNumber, record[3], err)
+			return nil, fmt.Errorf("row %d: parse Pisteraja %q: %w", rowNumber, record[5], err)
+		}
+		startYear, err := strconv.Atoi(record[6])
+		if err != nil {
+			return nil, fmt.Errorf("row %d: parse Alkamisvuosi %q: %w", rowNumber, record[6], err)
 		}
 
-		schoolIndex, exists := schoolIndexes[record[0]]
+		jointApplication := record[8]
+		schools := datasets[jointApplication]
+		sKey := schoolKey{jointApplication: jointApplication, school: record[1]}
+		schoolIndex, exists := schoolIndexes[sKey]
 		if !exists {
 			schoolIndex = len(schools)
-			schools = append(schools, School{Name: record[0]})
-			schoolIndexes[record[0]] = schoolIndex
+			schools = append(schools, School{Name: record[1], Sector: record[0]})
+			datasets[jointApplication] = schools
+			schoolIndexes[sKey] = schoolIndex
 		}
 
-		programmeKey := programmeKey{school: record[0], programme: record[1]}
-		programmeIndex, exists := programmeIndexes[programmeKey]
+		pKey := programmeKey{jointApplication: jointApplication, school: record[1], programme: record[3]}
+		programmeIndex, exists := programmeIndexes[pKey]
 		if !exists {
 			programmeIndex = len(schools[schoolIndex].Programmes)
-			schools[schoolIndex].Programmes = append(schools[schoolIndex].Programmes, Programme{Name: record[1], Koulutusala: record[4]})
-			programmeIndexes[programmeKey] = programmeIndex
+			schools[schoolIndex].Programmes = append(schools[schoolIndex].Programmes, Programme{Name: record[3], Koulutusala: record[2]})
+			programmeIndexes[pKey] = programmeIndex
 		}
 
 		programme := &schools[schoolIndex].Programmes[programmeIndex]
 		programme.Cutoffs = append(programme.Cutoffs, Cutoff{
-			SelectionMethod: record[2],
+			SelectionMethod: record[4],
 			Score:           score,
+			StartYear:       startYear,
+			StartSeason:     record[7],
 		})
 	}
 
-	if len(schools) == 0 {
+	if len(datasets) == 0 {
 		return nil, fmt.Errorf("CSV contains no data rows")
 	}
-	return schools, nil
+	return datasets, nil
 }
 
 func matchesExpectedHeader(header []string) bool {
