@@ -40,8 +40,11 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 	for _, v := range grouped {
 		result = append(result, *v)
 	}
-	slices.SortStableFunc(result, func(a, b models.StatisticsEntry) int {
-		return cmp.Compare(a.Hakukohde, b.Hakukohde)
+	slices.SortFunc(result, func(a, b models.StatisticsEntry) int {
+		if c := cmp.Compare(a.Hakukohde, b.Hakukohde); c != 0 {
+			return c
+		}
+		return cmp.Compare(a.KooditHakukohde, b.KooditHakukohde)
 	})
 	return result
 }
