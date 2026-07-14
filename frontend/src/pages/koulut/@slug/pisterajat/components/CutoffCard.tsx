@@ -1,4 +1,5 @@
 import { Card, HStack, Separator, Stack, Text } from "@chakra-ui/react";
+import { COLORS } from "@/theme";
 import type { Programme as CutoffProgramme } from "@/types/pisterajat.gen";
 
 interface CutoffCardProps {
@@ -17,20 +18,22 @@ interface CutoffRowProps {
 function CutoffRow({ cutoff }: CutoffRowProps) {
   return (
     <Stack
+      alignItems={{ base: "flex-start", md: "center" }}
+      borderBottom={`1px solid ${COLORS.accent}`}
       direction={{ base: "column", md: "row" }}
-      gap={{ base: 2, md: 6 }}
+      gap={{ base: 1, md: 6 }}
       justify="space-between"
-      py={{ base: 3, md: 4 }}
+      py={1}
     >
       <Text flex={7} fontSize={{ base: "xs", md: "sm" }} fontWeight="medium" letterSpacing="wide" textWrap="pretty">
         {cutoff.selectionMethod}
       </Text>
 
-      <HStack align="center" flex={3} justify={{ base: "space-between", md: "flex-end" }}>
+      <HStack flex={3} justify={{ base: "space-between", md: "flex-end" }} width="100%">
         <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }} letterSpacing="wide" mr="auto">
           Alin hyväksytty pistemäärä
         </Text>
-        <Text fontSize={{ base: "md", md: "lg" }} fontWeight="bold" letterSpacing="wide">
+        <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="bold" letterSpacing="wide">
           {scoreFormatter.format(cutoff.score)}
         </Text>
       </HStack>
@@ -40,22 +43,19 @@ function CutoffRow({ cutoff }: CutoffRowProps) {
 
 export default function CutoffCard({ programme }: CutoffCardProps) {
   const cutoffList = programme.cutoffs.map((cutoff) => (
-    <>
-      <CutoffRow cutoff={cutoff} key={`${cutoff.selectionMethod}-${cutoff.score}`} />
-      <Separator mt={-7} />
-    </>
+    <CutoffRow cutoff={cutoff} key={`${cutoff.selectionMethod}-${cutoff.score}`} />
   ));
 
   return (
     <Card.Root as="article" size="md">
       <Card.Header pb={3}>
-        <Text as="h2" fontSize={{ base: "xs", md: "lg" }} fontWeight="semibold" textWrap="pretty">
+        <Text as="h2" fontSize={{ base: "xs", md: "md" }} fontWeight="semibold" textWrap="pretty">
           {programme.name}
         </Text>
         <Separator />
       </Card.Header>
       <Card.Body pt={0}>
-        <Stack gap={3}>{cutoffList}</Stack>
+        <Stack gap={{ base: 6, md: 8 }}>{cutoffList}</Stack>
       </Card.Body>
     </Card.Root>
   );

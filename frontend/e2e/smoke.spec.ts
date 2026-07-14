@@ -299,15 +299,15 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
   await page.getByRole("link", { name: "2026 pisterajat" }).click();
 
   await expect(page).toHaveURL("/koulut/helsingin-yliopisto/pisterajat/");
-  await expect(page.getByRole("heading", { name: "Helsingin yliopiston pisterajat 2026" })).toBeVisible();
-  await expect(page.getByText("Logopedian kandiohjelma").first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Helsingin yliopisto pisterajat 2026" })).toBeVisible();
+  await expect(page.getByText("Biologian kandiohjelma").first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta kaikille hakijoille").first()).toBeVisible();
-  await expect(page.getByText("142,70")).toBeVisible();
+  await expect(page.getByText("158,00")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
     await page.getByRole("button", { name: "2" }).click();
-    await expect(page.getByText("Kulttuurien tutkimuksen kandiohjelma").first()).toBeVisible({
+    await expect(page.getByText("Espanja, kielten kandiohjelma").first()).toBeVisible({
       timeout: 1000,
     });
   }).toPass();
@@ -324,7 +324,7 @@ test("/koulut/:slug/pisterajat: shows every selection method for a programme", a
 
 test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
   await page.goto("/koulut/helsingin-yliopisto/pisterajat/");
-  await expect(page.getByText("Logopedian kandiohjelma").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Biologian kandiohjelma").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");
