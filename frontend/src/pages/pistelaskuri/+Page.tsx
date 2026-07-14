@@ -6,6 +6,7 @@ import { COLORS } from "@/theme";
 import type { ScoreResult } from "./+data";
 import ScoreForm from "./components/ScoreForm";
 import ScoreResultCard from "./components/ScoreResultCard";
+import SortControl, { type SortOption } from "./components/SortControl";
 import { AMM_MAX_SCORE } from "./lib/ammScoring";
 import { YO_MAX_SCORE } from "./lib/yoScoring";
 import { SCORE_TYPES, type ScoreType } from "./scoreTypes";
@@ -24,10 +25,28 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
   maximumFractionDigits: 2,
 });
 
+function compareNames(a: ScoreResult, b: ScoreResult) {
+  return a.programmeName.localeCompare(b.programmeName, "fi") || a.schoolName.localeCompare(b.schoolName, "fi");
+}
+
+function compareResults(a: ScoreResult, b: ScoreResult, sortOrder: SortOption) {
+  switch (sortOrder) {
+    case "highest_cutoff":
+      return b.score - a.score || compareNames(a, b);
+    case "name_asc":
+      return compareNames(a, b) || a.score - b.score;
+    case "name_desc":
+      return compareNames(b, a) || a.score - b.score;
+    case "lowest_cutoff":
+      return a.score - b.score || compareNames(a, b);
+  }
+}
+
 export default function ScoreCalculatorPage() {
   const results = useData<ScoreResult[]>();
   const [selectionMethod, setSelectionMethod] = useState<ScoreType>("Todistusvalinta (YO)");
   const [search, setSearch] = useState<Search | null>(null);
+  const [sortOrder, setSortOrder] = useState<SortOption>("lowest_cutoff");
   const maxScore = search ? MAX_SCORE_BY_TYPE[search.selectionMethod] : undefined;
   const groups = useMemo(() => {
     const byAla = new Map<string, ScoreResult[]>();
@@ -42,10 +61,10 @@ export default function ScoreCalculatorPage() {
       .sort(([a], [b]) => a.localeCompare(b, "fi"))
       .map(([koulutusala, alaResults]) => ({
         koulutusala,
-        results: alaResults.sort((a, b) => a.score - b.score || a.programmeName.localeCompare(b.programmeName, "fi")),
+        results: alaResults.sort((a, b) => compareResults(a, b, sortOrder)),
         qualifiedCount: search ? alaResults.filter((result) => result.score <= search.score).length : undefined,
       }));
-  }, [results, search, selectionMethod]);
+  }, [results, search, selectionMethod, sortOrder]);
   const totalCount = groups.reduce((sum, group) => sum + group.results.length, 0);
   const qualifiedCount = groups.reduce((sum, group) => sum + (group.qualifiedCount ?? 0), 0);
   const selectedScoreType = SCORE_TYPES.find(({ value }) => value === selectionMethod);
@@ -77,6 +96,7 @@ export default function ScoreCalculatorPage() {
             : "pisteitä ei ole vielä laskettu"}{" "}
         </Text>
       </Stack>
+      <SortControl onChange={setSortOrder} value={sortOrder} />
       <Accordion.Root collapsible lazyMount multiple>
         {groups.map((group) => (
           <Accordion.Item key={group.koulutusala} value={group.koulutusala}>

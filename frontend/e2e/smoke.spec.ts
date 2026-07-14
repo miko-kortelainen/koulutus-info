@@ -21,6 +21,30 @@ async function expectSelectedOption(page: Page, label: string, option: string) {
   await expect(page.getByRole("combobox", { name: label })).toContainText(option);
 }
 
+// tab selection is idempotent, so it can safely gate interactions until hydration finishes
+async function waitForCalculatorHydration(page: Page) {
+  const ammTab = page.getByRole("tab", { name: "AMM" });
+  await expect(async () => {
+    await ammTab.click();
+    await expect(ammTab).toHaveAttribute("aria-selected", "true", { timeout: 1000 });
+  }).toPass();
+
+  const yoTab = page.getByRole("tab", { name: "YO" });
+  await yoTab.click();
+  await expect(yoTab).toHaveAttribute("aria-selected", "true");
+}
+
+async function openResultsAccordion(page: Page, name: RegExp) {
+  const trigger = page.getByRole("button", { name });
+  const item = trigger.locator("..");
+
+  await trigger.click();
+  await expect(trigger).toHaveAttribute("aria-expanded", "true");
+  await expect(item.getByRole("article").first()).toBeVisible({ timeout: 10000 });
+
+  return item;
+}
+
 test("homepage loads and nav drawer opens", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "yhteishaku.app" })).toBeVisible();
@@ -82,12 +106,26 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await page.goto("/pistelaskuri/");
   await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
   await expect(page.getByRole("heading", { name: /Pisteesi riittävät – \/ \d+ koulutukseen/ })).toBeVisible();
+  await waitForCalculatorHydration(page);
 
-  await page.getByRole("button", { name: /Tekniikan alat/ }).click();
+  const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
   await expect(page.getByRole("article").getByText(/^– \/ /).first()).toBeVisible();
 
+  await selectOption(page, "Järjestys", "Korkein pisteraja");
+  const cutoffScores = (await tekniikkaAccordion.getByRole("article").getByText(/^– \/ /).allTextContents()).map((text) =>
+    Number(text.split("/")[1].trim().replace(",", ".")),
+  );
+  expect(cutoffScores.length).toBeGreaterThan(1);
+  expect(cutoffScores).toEqual([...cutoffScores].sort((a, b) => b - a));
+
+  await selectOption(page, "Järjestys", "A-Z");
+  const programmeNames = await tekniikkaAccordion.getByRole("article").getByRole("heading", { level: 3 }).allTextContents();
+  expect(programmeNames.length).toBeGreaterThan(1);
+  expect(programmeNames).toEqual([...programmeNames].sort((a, b) => a.localeCompare(b, "fi")));
+
   await page.getByRole("tab", { name: "AMM" }).click();
+  await expectSelectedOption(page, "Järjestys", "A-Z");
   await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true })).toHaveCount(0);
 
@@ -124,6 +162,7 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
 
 test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
   await page.goto("/pistelaskuri/");
+  await waitForCalculatorHydration(page);
 
   await selectOption(page, "Äidinkieli", "M");
   await page.getByRole("button", { name: "+ Lisää kieli" }).click();
