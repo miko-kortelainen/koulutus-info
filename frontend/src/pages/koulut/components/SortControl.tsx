@@ -24,6 +24,7 @@ export default function SortControl({ value, onChange }: SortControlProps) {
       collection={collection}
       flex={1}
       onValueChange={(e) => onChange(e.value[0] as SortOption)}
+      pt={3}
       size="sm"
       value={[value]}
     >
