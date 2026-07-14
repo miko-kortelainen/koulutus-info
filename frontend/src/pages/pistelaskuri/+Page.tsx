@@ -26,14 +26,13 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
 
 export default function ScoreCalculatorPage() {
   const results = useData<ScoreResult[]>();
+  const [selectionMethod, setSelectionMethod] = useState<ScoreType>("Todistusvalinta (YO)");
   const [search, setSearch] = useState<Search | null>(null);
   const maxScore = search ? MAX_SCORE_BY_TYPE[search.selectionMethod] : undefined;
   const groups = useMemo(() => {
-    if (!search) return [];
-
     const byAla = new Map<string, ScoreResult[]>();
     for (const result of results) {
-      if (result.selectionMethod !== search.selectionMethod) continue;
+      if (result.selectionMethod !== selectionMethod) continue;
       const group = byAla.get(result.koulutusala) ?? [];
       group.push(result);
       byAla.set(result.koulutusala, group);
@@ -44,11 +43,12 @@ export default function ScoreCalculatorPage() {
       .map(([koulutusala, alaResults]) => ({
         koulutusala,
         results: alaResults.sort((a, b) => a.score - b.score || a.programmeName.localeCompare(b.programmeName, "fi")),
-        qualifiedCount: alaResults.filter((result) => result.score <= search.score).length,
+        qualifiedCount: search ? alaResults.filter((result) => result.score <= search.score).length : undefined,
       }));
-  }, [results, search]);
+  }, [results, search, selectionMethod]);
   const totalCount = groups.reduce((sum, group) => sum + group.results.length, 0);
-  const qualifiedCount = groups.reduce((sum, group) => sum + group.qualifiedCount, 0);
+  const qualifiedCount = groups.reduce((sum, group) => sum + (group.qualifiedCount ?? 0), 0);
+  const selectedScoreType = SCORE_TYPES.find(({ value }) => value === selectionMethod);
 
   const header = (
     <Stack gap={1}>
@@ -62,17 +62,19 @@ export default function ScoreCalculatorPage() {
     </Stack>
   );
 
-  const resultList = search ? (
+  const resultList = (
     <Stack gap={4}>
       <Stack aria-live="polite" gap={1}>
         <Heading as="h2" size="md">
-          Pisteesi riittävät {qualifiedCount} / {totalCount} koulutukseen
+          Pisteesi riittävät {search ? qualifiedCount : "–"} / {totalCount} koulutukseen
         </Heading>
         <Text color="fg.muted" fontSize="sm">
-          {SCORE_TYPES.find(({ value }) => value === search.selectionMethod)?.label}:{" "}
-          {maxScore
-            ? `${scoreFormatter.format(search.score)} / ${maxScore}`
-            : `enintään ${scoreFormatter.format(search.score)} pistettä`}{" "}
+          {selectedScoreType?.label}:{" "}
+          {search
+            ? maxScore
+              ? `${scoreFormatter.format(search.score)} / ${maxScore}`
+              : `enintään ${scoreFormatter.format(search.score)} pistettä`
+            : "pisteitä ei ole vielä laskettu"}{" "}
         </Text>
       </Stack>
       <Accordion.Root collapsible lazyMount multiple>
@@ -86,11 +88,11 @@ export default function ScoreCalculatorPage() {
 
                 <HStack flex={1} justifyContent="space-between">
                   <Text
-                    color={group.qualifiedCount > 0 ? COLORS.accent : COLORS.text}
+                    color={(group.qualifiedCount ?? 0) > 0 ? COLORS.accent : COLORS.text}
                     fontSize="xs"
-                    textDecor={group.qualifiedCount > 0 ? "underline" : ""}
+                    textDecor={(group.qualifiedCount ?? 0) > 0 ? "underline" : ""}
                   >
-                    {group.qualifiedCount}
+                    {group.qualifiedCount ?? "–"}
                   </Text>
                   <Text color="fg.muted" fontSize="xs" textWrap="nowrap">
                     / {group.results.length}
@@ -106,7 +108,7 @@ export default function ScoreCalculatorPage() {
                     <ScoreResultCard
                       key={`${result.schoolName}::${result.programmeName}::${result.selectionMethod}`}
                       result={result}
-                      userScore={search.score}
+                      userScore={search?.score}
                     />
                   ))}
                 </Stack>
@@ -116,13 +118,16 @@ export default function ScoreCalculatorPage() {
         ))}
       </Accordion.Root>
     </Stack>
-  ) : null;
+  );
 
   return (
     <PageContainer align="flex-start">
       {header}
       <ScoreForm
-        onModeChange={() => setSearch(null)}
+        onModeChange={(nextSelectionMethod) => {
+          setSelectionMethod(nextSelectionMethod);
+          setSearch(null);
+        }}
         onSubmit={(selectionMethod, score) => {
           setSearch({ score, selectionMethod });
         }}

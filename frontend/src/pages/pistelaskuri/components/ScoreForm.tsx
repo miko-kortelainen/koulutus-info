@@ -10,7 +10,7 @@ import AmmForm, { type AmmFormErrors, type AmmFormState, emptyAmmFormState, pars
 import YoForm from "./YoForm";
 
 interface ScoreFormProps {
-  onModeChange: () => void;
+  onModeChange: (selectionMethod: ScoreType) => void;
   onSubmit: (selectionMethod: ScoreType, score: number) => void;
 }
 
@@ -100,7 +100,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
     setYoErrors({});
     setAmmErrors({});
     setAmkScoreError(undefined);
-    onModeChange();
+    onModeChange(value);
   };
 
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
