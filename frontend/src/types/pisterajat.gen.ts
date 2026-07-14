@@ -12,6 +12,7 @@ JSON-friendly representation.
  */
 export interface School {
   name: string;
+  sector: string;
   programmes: Programme[];
 }
 /**
@@ -28,4 +29,6 @@ export interface Programme {
 export interface Cutoff {
   selectionMethod: string;
   score: number /* float64 */;
+  startYear: number /* int */;
+  startSeason: string;
 }

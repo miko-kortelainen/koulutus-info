@@ -38,7 +38,7 @@ export const readCurrentYearStatistics = (): StatisticsResponse => readPublicDat
 
 export type PisterajatResponse = CutoffSchool[];
 
-export const readCutoffSchools = (): PisterajatResponse => readPublicData("pisterajat.json");
+export const readCutoffSchools = (): PisterajatResponse => readPublicData("pisterajat-2026-kevat.json");
 
 export const cutoffSchoolNames = (): string[] => {
   const names = [...new Set(readCutoffSchools().map((school) => school.name))].sort();

@@ -33,7 +33,7 @@ Backend hakee Opintopolun ja Vipusen rajapinnoista uusimmat tiedot, siistii ne j
 Generointi päivittää tiedostot `schools.json`, `statistics-<vuosi>.json` ja `meta.json` sekä frontendin `src/generated/dataManifest.ts`-tiedoston.
 
 Yhteishaun pisterajat ladataan manuaalisesti Vipusen julkisesta pisteraja raportista ja muokataan excelillä backendille sopivaan CSV-muotoon.  
-Tämän jälkeen ajetaan tarvittava Go CLI komento, joka generoi `frontend/public/data/`-polkuun tiedoston `pisterajat.json`.
+Tämän jälkeen ajetaan tarvittava Go CLI komento, joka generoi `frontend/public/data/`-polkuun tiedostot yhteishakukierroksittain, esimerkiksi `pisterajat-2026-kevat.json`.
 
 Tarkemmat tiedot voit katsoa: [/backend/README.md](./backend/README.md)
 
