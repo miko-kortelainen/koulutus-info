@@ -253,12 +253,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/koulut/aalto-yliopisto/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://yhteishaku.app/koulut/centria-ammattikorkeakoulu/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -277,12 +271,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/koulut/helsingin-yliopisto/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://yhteishaku.app/koulut/humanistinen-ammattikorkeakoulu/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -295,19 +283,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/koulut/ita-suomen-yliopisto/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://yhteishaku.app/koulut/jyvaskylan-ammattikorkeakoulu/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yhteishaku.app/koulut/jyvaskylan-yliopisto/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -343,25 +319,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/koulut/lapin-yliopisto/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yhteishaku.app/koulut/lappeenrannan-lahden-teknillinen-yliopisto-lut/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://yhteishaku.app/koulut/laurea-ammattikorkeakoulu/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yhteishaku.app/koulut/maanpuolustuskorkeakoulu/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -374,12 +332,6 @@
   </url>
   <url>
     <loc>https://yhteishaku.app/koulut/oulun-ammattikorkeakoulu/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yhteishaku.app/koulut/oulun-yliopisto/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -403,19 +355,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/koulut/svenska-handelshogskolan/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://yhteishaku.app/koulut/tampereen-ammattikorkeakoulu/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yhteishaku.app/koulut/tampereen-yliopisto/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -427,19 +367,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/koulut/turun-yliopisto/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://yhteishaku.app/koulut/vaasan-ammattikorkeakoulu/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yhteishaku.app/koulut/vaasan-yliopisto/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -452,12 +380,6 @@
   </url>
   <url>
     <loc>https://yhteishaku.app/koulut/yrkeshogskolan-novia/pisterajat/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yhteishaku.app/koulut/abo-akademi/pisterajat/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

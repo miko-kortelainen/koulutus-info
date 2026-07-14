@@ -1,4 +1,10 @@
 import fs from "node:fs";
+import {
+  type CutoffRound,
+  compareCutoffRounds,
+  cutoffRoundFromFilename,
+  DEFAULT_CUTOFF_ROUND,
+} from "@/config/cutoffRounds";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
 import { slugifySchoolName } from "../components/slug";
@@ -38,7 +44,14 @@ export const readCurrentYearStatistics = (): StatisticsResponse => readPublicDat
 
 export type PisterajatResponse = CutoffSchool[];
 
-export const readCutoffSchools = (): PisterajatResponse => readPublicData("pisterajat-2026-kevat.json");
+export const availableCutoffRounds = (): CutoffRound[] =>
+  fs
+    .readdirSync(`${process.cwd()}/public/data`)
+    .flatMap((filename) => cutoffRoundFromFilename(filename) ?? [])
+    .sort(compareCutoffRounds);
+
+export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): PisterajatResponse =>
+  readPublicData(`pisterajat-${round}.json`);
 
 export const cutoffSchoolNames = (): string[] => {
   const names = [...new Set(readCutoffSchools().map((school) => school.name))].sort();
