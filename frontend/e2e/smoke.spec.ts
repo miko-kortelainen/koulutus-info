@@ -107,8 +107,24 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
   await expect(page.getByRole("heading", { name: /Pisteesi riittävät – \/ \d+ koulutukseen/ })).toBeVisible();
   await waitForCalculatorHydration(page);
+  await expectSelectedOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
+  await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
 
+  await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
+  await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
+  await expect(page.getByText("Ei koulutuksia valituilla rajauksilla.")).toBeVisible();
+  await page.getByRole("tab", { name: "YO" }).click();
+  await selectOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
+
+  const roundResponse = page.waitForResponse((response) => response.url().includes("pisterajat-2025-syksy.json"));
+  await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
+  expect((await roundResponse).status()).toBe(200);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
+  await expect(tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (syksy 2025)").first()).toBeVisible();
+
+  await selectOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
+  await expect(tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (kevät 2026)").first()).toBeVisible();
+
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
   await expect(page.getByRole("article").getByText(/^– \/ /).first()).toBeVisible();
 
@@ -352,19 +368,19 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 });
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
-  await page.goto("/koulut/helsingin-yliopisto");
+  await page.goto("/koulut/centria-ammattikorkeakoulu");
   await page.getByRole("link", { name: "2026 pisterajat" }).click();
 
-  await expect(page).toHaveURL("/koulut/helsingin-yliopisto/pisterajat/");
-  await expect(page.getByRole("heading", { name: "Helsingin yliopisto pisterajat 2026" })).toBeVisible();
-  await expect(page.getByText("Biologian kandiohjelma").first()).toBeVisible();
+  await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/pisterajat/");
+  await expect(page.getByRole("heading", { name: "Centria-ammattikorkeakoulu pisterajat 2026" })).toBeVisible();
+  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible();
   await expect(page.getByText("Todistusvalinta (YO)").first()).toBeVisible();
-  await expect(page.getByText("158,00")).toBeVisible();
+  await expect(page.getByText("91,00")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
     await page.getByRole("button", { name: "2" }).click();
-    await expect(page.getByText("Espanja, kielten kandiohjelma").first()).toBeVisible({
+    await expect(page.getByText("Insinööri (AMK), tekniikan yhteinen päivätoteutus / Kokkola")).toBeVisible({
       timeout: 1000,
     });
   }).toPass();
@@ -380,8 +396,10 @@ test("/koulut/:slug/pisterajat: shows every selection method for a programme", a
 });
 
 test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
-  await page.goto("/koulut/helsingin-yliopisto/pisterajat/");
-  await expect(page.getByText("Biologian kandiohjelma").first()).toBeVisible({ timeout: 10000 });
+  await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
+  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
+    timeout: 10000,
+  });
 
   const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");

@@ -4,13 +4,25 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
+        "name": "Insinööri (AMK), logistiikka, monimuotototeutus",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Valintaopintojakso",
+            "score": 69,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
         "name": "Insinööri (AMK), Sähkö- ja automaatiotekniikka, monimuotototeutus",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Valintaopintojakso",
-            "score": 31,
-            "startYear": 2024,
+            "score": 32.02,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -21,68 +33,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 150,
-            "startYear": 2024,
+            "score": 91,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 131,
-            "startYear": 2024,
+            "score": 136,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 209.71,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Insinööri (AMK), logistiikka, monimuotototeutus",
-        "koulutusala": "Tekniikan alat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 112,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 126,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 254.63,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Agrologi (AMK), maaseutuelinkeinot, monimuotototeutus",
-        "koulutusala": "Maa- ja metsätalousalat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 32,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 50,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 87.94,
-            "startYear": 2024,
+            "score": 187.193,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -93,20 +57,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 112,
-            "startYear": 2024,
+            "score": 107,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 118,
-            "startYear": 2024,
+            "score": 120,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 351.86,
-            "startYear": 2024,
+            "score": 299.128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -117,20 +81,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 121,
-            "startYear": 2024,
+            "score": 101,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 112,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 346.69,
-            "startYear": 2024,
+            "score": 290.898,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -141,20 +105,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 67,
-            "startYear": 2024,
+            "score": 66,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
+            "score": 132,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 314.59,
-            "startYear": 2024,
+            "score": 239.608,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -165,20 +129,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 74,
-            "startYear": 2024,
+            "score": 64,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 115,
-            "startYear": 2024,
+            "score": 114,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 293.52,
-            "startYear": 2024,
+            "score": 207.261,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -189,20 +153,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 94,
-            "startYear": 2024,
+            "score": 109,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 125,
-            "startYear": 2024,
+            "score": 128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 340.41,
-            "startYear": 2024,
+            "score": 321.719,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -213,32 +177,422 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 34,
-            "startYear": 2024,
+            "score": 32,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 64,
-            "startYear": 2024,
+            "score": 52,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 95.92,
-            "startYear": 2024,
+            "score": 106.483,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kaakkois-Suomen ammattikorkeakoulu",
+    "sector": "Ammattikorkeakoulukoulutus",
+    "programmes": [
+      {
+        "name": "Tradenomi (AMK), Tietojenkäsittely, verkkototeutus",
+        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
+        "cutoffs": [
+          {
+            "selectionMethod": "Valintakurssi ja haastattelu",
+            "score": 110.2,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Rakennusmestari (AMK), monimuotototeutus",
+        "name": "Bachelor of Culture and Arts, Game Design, monimuotototeutus",
+        "koulutusala": "Humanistiset ja taidealat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Valintakoe",
+            "score": 78,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Muotoilija (AMK), esiintymisasu ja digitaalinen puvustus, päivätoteutus",
+        "koulutusala": "Humanistiset ja taidealat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Valintakoe",
+            "score": 67,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Muotoilija (AMK), palvelumuotoilu, monimuotototeutus",
+        "koulutusala": "Humanistiset ja taidealat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Valintakoe",
+            "score": 65,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), liiketalous, monimuotototeutus, Kouvola",
+        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 64,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 97,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 139.375,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), liiketalous, verkkototeutus",
+        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 99,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 127,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 184.844,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Ensihoitaja (AMK), monimuotototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 97,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 125,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 288.75,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Fysioterapeutti (AMK), päivätoteutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 63,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 84,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 220.974,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Kotka",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 70,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 80,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 190.737,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Mikkeli",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 61,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 87,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 159.608,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Savonlinna",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 86,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 97,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 214.343,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), monimuotototeutus, Mikkeli",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 74,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 119,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 278.75,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), verkkototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 88,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 132,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 303.988,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Terveydenhoitaja (AMK), monimuotototeutus, Mikkeli",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 63,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 92,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 178.474,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Yhteisöpedagogi (AMK), nuorisokasvatus ja nuorisotyö, verkkototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 63,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 109,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 227.768,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Liikunnanohjaaja (AMK), monimuotototeutus, Savonlinna",
+        "koulutusala": "Palvelualat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 76,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 86,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 214.529,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Restonomi (AMK), matkailu- ja ravitsemisala, verkkototeutus",
+        "koulutusala": "Palvelualat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 65,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 90,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 97.733,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), biotuotetekniikka, monimuotototeutus",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 205.71,
-            "startYear": 2024,
+            "score": 127.5,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), logistiikka, monimuotototeutus",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 201.568,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), talotekniikka (LVI), monimuotototeutus",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 127.849,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -255,8 +609,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 43.71,
-            "startYear": 2024,
+            "score": 44.67,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -267,8 +621,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 56.33,
-            "startYear": 2024,
+            "score": 66.33,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -279,8 +633,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 49,
-            "startYear": 2024,
+            "score": 64,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -291,32 +645,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 90,
-            "startYear": 2024,
+            "score": 75,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
+            "score": 108,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 312.42,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Terveydenhoitaja (AMK), muuntokoulutus 60 op, monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Valintakoe",
-            "score": 78,
-            "startYear": 2024,
+            "score": 269.566,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -333,8 +675,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 55.23,
-            "startYear": 2024,
+            "score": 62.75,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -345,20 +687,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 90,
-            "startYear": 2024,
+            "score": 85,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 103,
-            "startYear": 2024,
+            "score": 80,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 204.5,
-            "startYear": 2024,
+            "score": 174.39,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -369,20 +711,68 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 87,
-            "startYear": 2024,
+            "score": 80,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 258.46,
-            "startYear": 2024,
+            "score": 219.11,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), LVI-talotekniikka, monimuotototeutus",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 85,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 110,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 208.509,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), Rakennustekniikka, Infrarakentaminen, monimuotototeutus",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 85,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 118,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 206.634,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -393,44 +783,140 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 92,
-            "startYear": 2024,
+            "score": 84,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
+            "score": 128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 244.85,
-            "startYear": 2024,
+            "score": 225.731,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Rakennusmestari (AMK), Rakennusalan työnjohdon tutkinto-ohjelma, monimuotototeutus",
+        "name": "Insinööri (AMK), Sähköinen talotekniikka, monimuotototeutus",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 126,
-            "startYear": 2024,
+            "score": 79,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 155,
-            "startYear": 2024,
+            "score": 99,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 249.27,
-            "startYear": 2024,
+            "score": 178.678,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Bioanalyytikko (AMK), monimuotototeutus, Jyväskylä",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 99,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 102,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 230.233,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Bioanalyytikko (AMK), monimuotototeutus, Seinäjoki",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 99,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 101,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 221.658,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Röntgenhoitaja (AMK), monimuoto, Jyväskylä",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 102,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 105,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 262.5,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Röntgenhoitaja (AMK), monimuoto, Seinäjoki",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 90,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 100,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 223.983,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -441,20 +927,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 86,
-            "startYear": 2024,
+            "score": 81,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 104,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 286.95,
-            "startYear": 2024,
+            "score": 171.217,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -465,20 +951,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 81,
-            "startYear": 2024,
+            "score": 80,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 104,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 291.51,
-            "startYear": 2024,
+            "score": 177.224,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -489,32 +975,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 100,
-            "startYear": 2024,
+            "score": 101,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 109,
-            "startYear": 2024,
+            "score": 107,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 304.92,
-            "startYear": 2024,
+            "score": 269.468,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Terveydenhoitaja (AMK), muuntokoulutus sairaanhoitajasta terveydenhoitajaksi, verkkopainotteinen monimuotototeutus",
+        "name": "Sosionomi (AMK), varhaiskasvatus, monimuotototeutus (rajattu pohjakoulutus)",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
-            "selectionMethod": "Valintakurssi",
-            "score": 56.5,
-            "startYear": 2024,
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 103,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 101,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 244.233,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -526,25 +1024,37 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Insinööri (AMK), Sähkö- ja automaatiotekniikka, monimuotototeutus",
-        "koulutusala": "Tekniikan alat",
+        "name": "Insinööri (AMK), tietotekniikka, verkkototeutus",
+        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 66.61,
-            "startYear": 2024,
+            "score": 71.95,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Rakennusmestari (AMK), infrarakentaminen, monimuotototeutus",
+        "name": "Insinööri (AMK), konetekniikka, monimuotototeutus, Iisalmi",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 60.74,
-            "startYear": 2024,
+            "score": 90.56,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), konetekniikka, monimuotototeutus, Kuopio",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Valintakurssi",
+            "score": 94.92,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -555,8 +1065,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 65.61,
-            "startYear": 2024,
+            "score": 41.56,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -567,8 +1077,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 76.44,
-            "startYear": 2024,
+            "score": 80.028,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -579,8 +1089,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 53.67,
-            "startYear": 2024,
+            "score": 56.194,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -591,8 +1101,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 74.64,
-            "startYear": 2024,
+            "score": 80.306,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -603,8 +1113,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 86.36,
-            "startYear": 2024,
+            "score": 91.694,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -615,8 +1125,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 84.89,
-            "startYear": 2024,
+            "score": 89.278,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -627,20 +1137,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 107,
-            "startYear": 2024,
+            "score": 104,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 104,
-            "startYear": 2024,
+            "score": 102,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 292.26,
-            "startYear": 2024,
+            "score": 273.125,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -651,20 +1161,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 85,
-            "startYear": 2024,
+            "score": 67,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 100,
-            "startYear": 2024,
+            "score": 101,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 240.57,
-            "startYear": 2024,
+            "score": 200.349,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -676,31 +1186,25 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Restonomi (AMK), ruokatuotannon johtaminen, monimuotototeutus, Helsinki",
+        "name": "Restonomi (AMK), majoitus- ja ravintolaliiketoiminta, monimuotototeutus, Helsinki",
         "koulutusala": "Palvelualat",
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 76,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 64,
-            "startYear": 2024,
+            "score": 55,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Bachelor of Business Administration, International Business, full-time studies, Helsinki, Finland",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "name": "Restonomi (AMK), ruokatuotannon johtaminen, monimuotototeutus, Helsinki",
+        "koulutusala": "Palvelualat",
         "cutoffs": [
           {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 101,
-            "startYear": 2024,
+            "selectionMethod": "Valintakurssi",
+            "score": 65,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -711,20 +1215,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 118,
-            "startYear": 2024,
+            "score": 107,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 134,
-            "startYear": 2024,
+            "score": 128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 213.31,
-            "startYear": 2024,
+            "score": 189.587,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -736,31 +1240,19 @@
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 91,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 131,
-            "startYear": 2024,
+            "score": 128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 195.19,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Bachelor of Business Administration, Business Information Technology, full-time studies, Helsinki, Finland",
-        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 68,
-            "startYear": 2024,
+            "score": 176.07,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -771,20 +1263,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 83,
-            "startYear": 2024,
+            "score": 73,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 145,
-            "startYear": 2024,
+            "score": 138,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 206.14,
-            "startYear": 2024,
+            "score": 163.231,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -795,44 +1287,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 81,
-            "startYear": 2024,
+            "score": 70,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 127,
-            "startYear": 2024,
+            "score": 116,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 187.28,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Restonomi (AMK), majoitus- ja ravintolaliiketoiminta, monimuotototeutus, Helsinki",
-        "koulutusala": "Palvelualat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 112,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 134.78,
-            "startYear": 2024,
+            "score": 163.231,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -843,20 +1311,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 93,
-            "startYear": 2024,
+            "score": 66,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 89,
-            "startYear": 2024,
+            "score": 65,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 115.82,
-            "startYear": 2024,
+            "score": 90.731,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -873,20 +1341,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 84.33,
-            "startYear": 2024,
+            "score": 83.51,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Insinööri (AMK), konetekniikka, monimuotototeutus, Pori",
+        "name": "Insinööri (AMK), Energia- ja ympäristötekniikka, monimuotototeutus, Pori",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 94,
-            "startYear": 2024,
+            "score": 96.71,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -897,8 +1365,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakurssi",
-            "score": 80.85,
-            "startYear": 2024,
+            "score": 85.5,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -909,8 +1377,8 @@
         "cutoffs": [
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 245.54,
-            "startYear": 2024,
+            "score": 189.238,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -922,439 +1390,25 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Yhteisöpedagogi (AMK), järjestö- ja nuorisotyö, verkkototeutus (MOVE), syksy 2023",
+        "name": "Yhteisöpedagogi (AMK), järjestö- ja nuorisotyö, verkkototeutus (MOVE), syksy 2024",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Valintakoe",
-            "score": 75.65,
-            "startYear": 2024,
+            "score": 63.7,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Yhteisöpedagogi (AMK), työyhteisön kehittäjä, verkkototeutus (TYKE), syksy 2023",
+        "name": "Yhteisöpedagogi (AMK), työyhteisön kehittäjä, verkkototeutus (TYKE), syksy 2024",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Valintakoe",
-            "score": 103,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Kaakkois-Suomen ammattikorkeakoulu",
-    "sector": "Ammattikorkeakoulukoulutus",
-    "programmes": [
-      {
-        "name": "Bachelor of Culture and Arts, Game Design, monimuotototeutus",
-        "koulutusala": "Humanistiset ja taidealat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Valintakoe",
-            "score": 81,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), Liiketalous, monimuotototeutus",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 79,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 109,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 169.38,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Insinööri (AMK), peliteknologiat, päivätoteutus",
-        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 75,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 119,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 209.58,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Insinööri (AMK), ympäristöteknologia, päivätoteutus",
-        "koulutusala": "Tekniikan alat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 89,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 86,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 116.7,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Ensihoitaja (AMK), monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 82,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 126,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 311.72,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Fysioterapeutti (AMK), päivätoteutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 61,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 82,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 265.34,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Jalkaterapeutti (AMK), monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 74,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 80,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 303.68,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Kotka",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 61,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 83,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 187.83,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Mikkeli",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 80,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 81,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 213.61,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Savonlinna",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 61,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 80,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 248.7,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sosionomi (AMK), monimuotototeutus, Kotka",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 78,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 317.58,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sosionomi (AMK), monimuotototeutus, Mikkeli",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 86,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 308,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Terveydenhoitaja (AMK), monimuotototeutus, Mikkeli",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 60,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 84,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 212.6,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Yhteisöpedagogi (AMK), ympäristökasvatus ja yhteisöjen kehittäjä, päivätoteutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 60,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 87,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 201.7,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Liikunnanohjaaja (AMK), päivätoteutus",
-        "koulutusala": "Palvelualat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 75,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 82,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 186.95,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Restonomi (AMK), matkailu- ja palveluliiketoiminta, verkkototeutus",
-        "koulutusala": "Palvelualat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 99,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 102,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 137.42,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), Tietojenkäsittely, verkkototeutus",
-        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
-        "cutoffs": [
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 226.92,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Insinööri (AMK), talotekniikka (LVI), monimuotototeutus",
-        "koulutusala": "Tekniikan alat",
-        "cutoffs": [
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 193.65,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Yhteisöpedagogi (AMK), nuorisokasvatus ja nuorisotyö, monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 183.55,
-            "startYear": 2024,
+            "score": 104,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1366,13 +1420,13 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Kuvataiteilija (AMK), valokuva, monimuotototeutus",
+        "name": "Kuvataiteilija (AMK), valokuvataide, monimuotototeutus",
         "koulutusala": "Humanistiset ja taidealat",
         "cutoffs": [
           {
             "selectionMethod": "Valintakoe",
-            "score": 63,
-            "startYear": 2024,
+            "score": 77,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1383,8 +1437,8 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakoe",
-            "score": 57.6,
-            "startYear": 2024,
+            "score": 65,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1395,44 +1449,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 87,
-            "startYear": 2024,
+            "score": 82,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 113,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 189.01,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Insinööri (AMK), kemiantekniikka, monimuotototeutus",
-        "koulutusala": "Tekniikan alat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 65,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 106,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 195.03,
-            "startYear": 2024,
+            "score": 177.455,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1443,20 +1473,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 63,
-            "startYear": 2024,
+            "score": 59,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 100,
-            "startYear": 2024,
+            "score": 92,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 195.03,
-            "startYear": 2024,
+            "score": 185.937,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Bioanalyytikko (AMK), monimuotototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 77,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 107,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 270,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1467,20 +1521,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 109,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 132,
-            "startYear": 2024,
+            "score": 128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 357.43,
-            "startYear": 2024,
+            "score": 347.5,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1491,20 +1545,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 147,
-            "startYear": 2024,
+            "score": 95,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 129,
-            "startYear": 2024,
+            "score": 122,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 372.46,
-            "startYear": 2024,
+            "score": 355.718,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1516,19 +1570,19 @@
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 60,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 112,
-            "startYear": 2024,
+            "score": 113,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 304.56,
-            "startYear": 2024,
+            "score": 258.123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1539,20 +1593,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 58,
-            "startYear": 2024,
+            "score": 46,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 94,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 266.43,
-            "startYear": 2024,
+            "score": 194.099,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1563,20 +1617,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 45,
-            "startYear": 2024,
+            "score": 56,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 95,
-            "startYear": 2024,
+            "score": 51,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 213.66,
-            "startYear": 2024,
+            "score": 226.89,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1587,20 +1641,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 107,
-            "startYear": 2024,
+            "score": 97,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 124,
-            "startYear": 2024,
+            "score": 112,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 338.3,
-            "startYear": 2024,
+            "score": 312.38,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1611,20 +1665,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 99,
-            "startYear": 2024,
+            "score": 87,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
+            "score": 114,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 308.72,
-            "startYear": 2024,
+            "score": 287.693,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1635,38 +1689,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 149,
-            "startYear": 2024,
+            "score": 115,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 136,
-            "startYear": 2024,
+            "score": 123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 385.28,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Jyväskylän yliopisto",
-    "sector": "Yliopistokoulutus",
-    "programmes": [
-      {
-        "name": "Luokanopettajan aikuiskoulutuksen kandidaatti- ja maisteriohjelma (Kokkolan yliopistokeskus Chydenius), kasvatustieteiden kandidaatti ja maisteri (3 v + 2 v)",
-        "koulutusala": "Kasvatusalat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Valintakoe",
-            "score": 34,
-            "startYear": 2024,
+            "score": 345.062,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1683,8 +1719,26 @@
         "cutoffs": [
           {
             "selectionMethod": "Valintakoe",
-            "score": 74,
-            "startYear": 2024,
+            "score": 68,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Bachelor of Business Administration, International Business, full-time studies, Lahti",
+        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 57,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 120,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1695,20 +1749,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 111,
-            "startYear": 2024,
+            "score": 88,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 132,
-            "startYear": 2024,
+            "score": 138,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 210.11,
-            "startYear": 2024,
+            "score": 181.25,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1719,92 +1773,98 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 84,
-            "startYear": 2024,
+            "score": 75,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 125,
-            "startYear": 2024,
+            "score": 112,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 184.64,
-            "startYear": 2024,
+            "score": 146.37,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Insinööri (AMK), konetekniikka, verkko-opinnot",
-        "koulutusala": "Tekniikan alat",
+        "name": "Bachelor of Business Administration, Business Information Technology, full-time studies, Lahti",
+        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 42,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 124,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 245.47,
-            "startYear": 2024,
+            "score": 75,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Insinööri (AMK), puutekniikka, verkko-opinnot",
+        "name": "Insinööri (AMK), kestävä kaupunkisuunnittelu, monimuotototeutus, Lahti",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 47,
-            "startYear": 2024,
+            "score": 116,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 110,
-            "startYear": 2024,
+            "score": 95,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 211.85,
-            "startYear": 2024,
+            "score": 184.219,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Insinööri (AMK), ympäristöteknologia, monimuotototeutus, Lahti",
+        "name": "Insinööri (AMK), ympäristöteknologia ja kiertotalouden ratkaisut, verkko-opinnot",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 62,
-            "startYear": 2024,
+            "score": 55,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 124,
-            "startYear": 2024,
+            "score": 130,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 214.68,
-            "startYear": 2024,
+            "score": 194.483,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Bachelor of Health Care, Public Health Nurse",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 86,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 67,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1815,20 +1875,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 100,
-            "startYear": 2024,
+            "score": 95,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 118,
-            "startYear": 2024,
+            "score": 121,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 310.38,
-            "startYear": 2024,
+            "score": 300.943,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1840,19 +1900,19 @@
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 93,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 125,
-            "startYear": 2024,
+            "score": 124,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 323.78,
-            "startYear": 2024,
+            "score": 319.322,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1863,20 +1923,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 109,
-            "startYear": 2024,
+            "score": 94,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 108,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 304.22,
-            "startYear": 2024,
+            "score": 267.087,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1887,20 +1947,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 131,
-            "startYear": 2024,
+            "score": 124,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 74,
-            "startYear": 2024,
+            "score": 58,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 194.47,
-            "startYear": 2024,
+            "score": 210.177,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1911,20 +1971,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 96,
-            "startYear": 2024,
+            "score": 99,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 116,
-            "startYear": 2024,
+            "score": 110,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 251.92,
-            "startYear": 2024,
+            "score": 243.123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1935,20 +1995,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 96,
-            "startYear": 2024,
+            "score": 93,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 136,
-            "startYear": 2024,
+            "score": 142,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 348.26,
-            "startYear": 2024,
+            "score": 310.748,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1959,20 +2019,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 94,
-            "startYear": 2024,
+            "score": 97,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 127,
-            "startYear": 2024,
+            "score": 143,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 328.56,
-            "startYear": 2024,
+            "score": 315.366,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -1983,44 +2043,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 94,
-            "startYear": 2024,
+            "score": 95,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 118,
-            "startYear": 2024,
+            "score": 123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 312.28,
-            "startYear": 2024,
+            "score": 283.671,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Terveydenhoitaja (AMK), päivätoteutus, Lappeenranta",
-        "koulutusala": "Terveys- ja hyvinvointialat",
+        "name": "Insinööri (AMK), puutekniikka, monimuotototeutus, Lahti",
+        "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 118,
-            "startYear": 2024,
+            "selectionMethod": "AMK-valintakoe",
+            "score": 113.125,
+            "startYear": 2025,
             "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 63,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), sähkö- ja automaatiotekniikka, monimuotototeutus, Lahti",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 207.66,
-            "startYear": 2024,
+            "score": 210.529,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2032,151 +2092,157 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Tradenomi (AMK), hevosalan liiketoiminta, monimuotototeutus",
+        "name": "Tradenomi (AMK), hevosalan liiketoiminta, monimuotototeutus, syksyn yhteishaku",
         "koulutusala": "Kauppa, hallinto ja oikeustieteet",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 28,
-            "startYear": 2024,
+            "score": 68,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 78,
-            "startYear": 2024,
+            "score": 100,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 149.38,
-            "startYear": 2024,
+            "score": 87.108,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Insinööri (AMK), tieto- ja viestintätekniikka, päivätoteutus",
+        "name": "Insinööri (AMK), tieto- ja viestintätekniikka, päivätoteutus, syksyn yhteishaku",
         "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 79,
-            "startYear": 2024,
+            "score": 77,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 103,
-            "startYear": 2024,
+            "score": 104,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 283.13,
-            "startYear": 2024,
+            "score": 268.339,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Insinööri (AMK), Konetekniikka, päivätoteutus",
+        "name": "Insinööri (AMK), konetekniikka, monimuotototeutus, syksyn yhteishaku",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 58,
-            "startYear": 2024,
+            "score": 124,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 84,
-            "startYear": 2024,
+            "score": 126,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 221.74,
-            "startYear": 2024,
+            "score": 212.127,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Insinööri (AMK), rakennus- ja yhdyskuntatekniikka, monimuotototeutus",
-        "koulutusala": "Tekniikan alat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 105,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 127,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 244.93,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Insinööri (AMK), Sähkö- ja automaatiotekniikka, monimuotototeutus",
+        "name": "Insinööri (AMK), rakennus- ja yhdyskuntatekniikka, monimuotototeutus, syksyn yhteishaku",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 87,
-            "startYear": 2024,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 122,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 223.04,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Insinööri (AMK), sähkö- ja automaatiotekniikka, monimuotototeutus, syksyn yhteishaku",
+        "koulutusala": "Tekniikan alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 82,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
             "score": 120,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 228.89,
-            "startYear": 2024,
+            "score": 208.665,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Forssa",
+        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Valkeakoski, syksyn yhteishaku",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 34,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 48,
-            "startYear": 2024,
+            "score": 91,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 188.8,
-            "startYear": 2024,
+            "score": 210,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Rakennusmestari (AMK), rakennus- ja yhdyskuntatekniikka, monimuotototeutus",
+        "name": "Rakennusmestari (AMK), rakennus- ja yhdyskuntatekniikka, monimuotototeutus, syksyn yhteishaku",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 251.32,
-            "startYear": 2024,
+            "score": 192.884,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2188,265 +2254,217 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Tradenomi (AMK) liiketalous, monimuoto-opinnot, Tornio, syksyn 2023 yhteishaku",
+        "name": "Tradenomi (AMK) liiketalous, verkko-opinnot, Tornio, syksyn 2024 yhteishaku",
         "koulutusala": "Kauppa, hallinto ja oikeustieteet",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 97,
-            "startYear": 2024,
+            "score": 87,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 109,
-            "startYear": 2024,
+            "score": 110,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 186.39,
-            "startYear": 2024,
+            "score": 164.068,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Tradenomi (AMK) liiketalous, päiväopinnot, Tornio, syksyn 2023 yhteishaku",
+        "name": "Tradenomi (AMK), liiketalous, verkko-opinnot, Rovaniemi, suuntautumisena Liiketoiminnan riskienhallinta ja yritysjuridiikka , syksyn 2024 yhteishaku",
         "koulutusala": "Kauppa, hallinto ja oikeustieteet",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 43,
-            "startYear": 2024,
+            "score": 87,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 17,
-            "startYear": 2024,
+            "score": 112,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 132.54,
-            "startYear": 2024,
+            "score": 175.937,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Tradenomi (AMK), liiketalous, verkko-opinnot,  Rovaniemi, syksyn 2023 yhteishaku",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 100,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 193.75,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK) tietojenkäsittely, monimuoto-opinnot, Tornio, syksyn 2023 yhteishaku",
+        "name": "Tradenomi (AMK) tietojenkäsittely, verkko-opinnot, Tornio, syksyn 2024 yhteishaku",
         "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 86,
-            "startYear": 2024,
+            "score": 70,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 108,
-            "startYear": 2024,
+            "score": 104,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 184.64,
-            "startYear": 2024,
+            "score": 161.399,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Tradenomi (AMK) Tietojenkäsittely, päiväopinnot, Tornio, syksyn 2023 yhteishaku",
-        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 40,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 47,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 223.83,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Rakennusmestari (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2023 yhteishaku",
+        "name": "Rakennusmestari (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2024 yhteishaku",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 132,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 115,
-            "startYear": 2024,
+            "score": 137,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 240.86,
-            "startYear": 2024,
+            "score": 235.033,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Metsätalousinsinööri (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2023 yhteishaku",
+        "name": "Metsätalousinsinööri (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2024 yhteishaku",
         "koulutusala": "Maa- ja metsätalousalat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 102,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 114,
-            "startYear": 2024,
+            "score": 108,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 180.45,
-            "startYear": 2024,
+            "score": 157.029,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Sairaanhoitaja (AMK), monimuoto-opinnot, Kemi, syksyn 2023 yhteishaku",
+        "name": "Fysioterapeutti (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2024 yhteishaku",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 29,
-            "startYear": 2024,
+            "score": 85,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 58,
-            "startYear": 2024,
+            "score": 103,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 228.91,
-            "startYear": 2024,
+            "score": 267.5,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Sairaanhoitaja (AMK), monimuoto-opinnot, Rovaniemi, syksyn 2023 yhteishaku",
+        "name": "Sairaanhoitaja (AMK), monimuoto-opinnot, Kemi, syksyn 2024 yhteishaku",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 31,
-            "startYear": 2024,
+            "score": 33,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 49,
-            "startYear": 2024,
+            "score": 72,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 189.39,
-            "startYear": 2024,
+            "score": 204.724,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Sosionomi (AMK), verkko-opinnot, Kemi, syksyn 2023 yhteishaku",
+        "name": "Sosionomi (AMK), verkko-opinnot, Kemi, syksyn 2024 yhteishaku",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 81,
-            "startYear": 2024,
+            "score": 73,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
+            "score": 110,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 315.47,
-            "startYear": 2024,
+            "score": 267.733,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Restonomi (AMK), matkailu- ja palveluliiketoiminta, verkko-opinnot, Rovaniemi, syksyn 2023 yhteishaku",
+        "name": "Restonomi (AMK), matkailu- ja palveluliiketoiminta, verkko-opinnot, Rovaniemi, syksyn 2024 yhteishaku",
         "koulutusala": "Palvelualat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 54,
-            "startYear": 2024,
+            "score": 34,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 64,
-            "startYear": 2024,
+            "score": 65,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 90.44,
-            "startYear": 2024,
+            "score": 85.937,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2458,217 +2476,217 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Tradenomi (AMK), liiketalouden koulutus, digitaalinen markkinointi, monimuotototeutus, Laurea Leppävaara",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 95,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 126,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 179.78,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), liiketalouden koulutus, henkilöstöjohtaminen, monimuotototeutus, Laurea Leppävaara",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 109,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 138,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 192.28,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), liiketalouden koulutus, oikeudellinen osaaminen, monimuotototeutus, Laurea Hyvinkää",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 113,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 123,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 196.25,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), liiketalouden koulutus, projektijohtaminen, monimuotototeutus, Laurea Hyvinkää",
+        "name": "Tradenomi (AMK), liiketalous, digitaalinen markkinointi, monimuotototeutus, Laurea Leppävaara",
         "koulutusala": "Kauppa, hallinto ja oikeustieteet",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 93,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 125,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 176.74,
-            "startYear": 2024,
+            "score": 166.25,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Tradenomi (AMK), liiketalouden koulutus, projektijohtaminen, päivätoteutus, Laurea Tikkurila",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 82,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 114,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 183.46,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), liiketalouden koulutus, päivätoteutus, Laurea Leppävaara",
+        "name": "Tradenomi (AMK), liiketalous, henkilöstöjohtaminen, monimuotototeutus, Laurea Leppävaara",
         "koulutusala": "Kauppa, hallinto ja oikeustieteet",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 87,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 126,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 187.5,
-            "startYear": 2024,
+            "score": 168.125,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Tradenomi (AMK), liiketalouden koulutus, verkko-opinnot, Laurea Verkkokampus",
+        "name": "Tradenomi (AMK), liiketalous, projektijohtaminen, monimuotototeutus, Laurea Hyvinkää",
         "koulutusala": "Kauppa, hallinto ja oikeustieteet",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 110,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 130,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 199.85,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), tietojenkäsittely, digitaalisten palveluiden kehittäminen, monimuotototeutus,  Laurea Tikkurila",
-        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 90,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 189.93,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Tradenomi (AMK), tietojenkäsittely, digitaalisten palveluiden kehittäminen, monimuotototeutus, Laurea Leppävaara",
-        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 78,
-            "startYear": 2024,
+            "score": 88,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
             "score": 119,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 189.78,
-            "startYear": 2024,
+            "score": 145.193,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), liiketalous, päivätoteutus, Laurea Leppävaara",
+        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 89,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 114,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 159.627,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), liiketalous, päivätoteutus, Laurea Tikkurila",
+        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 87,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 116,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 162.139,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), liiketalous, verkko-opinnot, Laurea Verkkokampus",
+        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 115,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 136,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 176.37,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), oikeudellinen osaaminen, monimuotototeutus, Laurea Hyvinkää",
+        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 113,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 128,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 173.443,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), tietojenkäsittely, digitaalisten palvelujen kehittäminen, monimuotototeutus, Laurea Leppävaara",
+        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 74,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 111,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 154.844,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tradenomi (AMK), tietojenkäsittely, digitaalisten palvelujen kehittäminen, monimuotototeutus, Laurea Tikkurila",
+        "koulutusala": "Tietojenkäsittely ja tietoliikenne (ICT)",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 84,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 115,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 158.111,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2679,20 +2697,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 93,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
+            "score": 114,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 209.38,
-            "startYear": 2024,
+            "score": 173.619,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2704,19 +2722,19 @@
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 96,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 122,
-            "startYear": 2024,
+            "score": 112,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 321.98,
-            "startYear": 2024,
+            "score": 290.623,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2728,43 +2746,19 @@
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 73,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 119,
-            "startYear": 2024,
+            "score": 113,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 238.17,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Laurea Lohja",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 52,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 105,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 173.19,
-            "startYear": 2024,
+            "score": 202.107,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2775,20 +2769,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 64,
-            "startYear": 2024,
+            "score": 62,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 129,
-            "startYear": 2024,
+            "score": 113,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 252.49,
-            "startYear": 2024,
+            "score": 185.625,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2799,20 +2793,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 41,
-            "startYear": 2024,
+            "score": 36,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 106,
-            "startYear": 2024,
+            "score": 108,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 152.73,
-            "startYear": 2024,
+            "score": 173.064,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2823,44 +2817,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 54,
-            "startYear": 2024,
+            "score": 56,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 121,
-            "startYear": 2024,
+            "score": 113,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 242.11,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sosionomi (AMK), monimuotototeutus, Laurea Hyvinkää",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 90,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 123,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 322.25,
-            "startYear": 2024,
+            "score": 187.145,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2871,20 +2841,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 99,
-            "startYear": 2024,
+            "score": 79,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 125,
-            "startYear": 2024,
+            "score": 123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 319.93,
-            "startYear": 2024,
+            "score": 277.516,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2895,20 +2865,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 87,
-            "startYear": 2024,
+            "score": 70,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 120,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 308.32,
-            "startYear": 2024,
+            "score": 249.627,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2919,20 +2889,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 86,
-            "startYear": 2024,
+            "score": 79,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 129,
-            "startYear": 2024,
+            "score": 125,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 326.4,
-            "startYear": 2024,
+            "score": 291.719,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), päivätoteutus, Laurea Hyvinkää",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 75,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 109,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 255.793,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2943,20 +2937,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 123,
-            "startYear": 2024,
+            "score": 107,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 131,
-            "startYear": 2024,
+            "score": 137,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 351.51,
-            "startYear": 2024,
+            "score": 331.094,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -2967,44 +2961,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 96,
-            "startYear": 2024,
+            "score": 94,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 135,
-            "startYear": 2024,
+            "score": 132,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 337.38,
-            "startYear": 2024,
+            "score": 300.469,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Terveydenhoitaja (AMK), päivätoteutus, Laurea Tikkurila",
+        "name": "Terveydenhoitaja (AMK), monimuotototeutus, Laurea Otaniemi",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 67,
-            "startYear": 2024,
+            "score": 68,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 115,
-            "startYear": 2024,
+            "score": 120,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 254.07,
-            "startYear": 2024,
+            "score": 214.616,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3015,20 +3009,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 60,
-            "startYear": 2024,
+            "score": 62,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 83,
-            "startYear": 2024,
+            "score": 92,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 77.8,
-            "startYear": 2024,
+            "score": 83.957,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3039,20 +3033,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 112,
-            "startYear": 2024,
+            "score": 116,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 136,
-            "startYear": 2024,
+            "score": 132,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 202.32,
-            "startYear": 2024,
+            "score": 188.443,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3064,49 +3058,25 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Tradenomi (AMK), Liiketalous, monimuotototeutus",
-        "koulutusala": "Kauppa, hallinto ja oikeustieteet",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 101,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 114,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 183.46,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
         "name": "Tradenomi (AMK), liiketalous, päivätoteutus",
         "koulutusala": "Kauppa, hallinto ja oikeustieteet",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
             "score": 101,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 109,
-            "startYear": 2024,
+            "score": 102,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 178.32,
-            "startYear": 2024,
+            "score": 155.469,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3117,20 +3087,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 69,
-            "startYear": 2024,
+            "score": 66,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 103,
-            "startYear": 2024,
+            "score": 96,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 207.35,
-            "startYear": 2024,
+            "score": 193.611,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3141,20 +3111,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 82,
-            "startYear": 2024,
+            "score": 59,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 111,
-            "startYear": 2024,
+            "score": 91,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 186.26,
-            "startYear": 2024,
+            "score": 135.625,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3165,92 +3135,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 44,
-            "startYear": 2024,
+            "score": 42,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 63,
-            "startYear": 2024,
+            "score": 62,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 143.12,
-            "startYear": 2024,
+            "score": 149.844,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Agrologi (AMK), maaseutuelinkeinot, monimuotototeutus",
-        "koulutusala": "Maa- ja metsätalousalat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 54,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 95,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 116.72,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Oulu",
+        "name": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus, Oulu",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 168,
-            "startYear": 2024,
+            "score": 123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
             "score": 100,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 185.17,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus, Oulainen",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 117,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 83,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 255.39,
-            "startYear": 2024,
+            "score": 224.158,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3261,20 +3183,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 100,
-            "startYear": 2024,
+            "score": 101,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 128,
-            "startYear": 2024,
+            "score": 124,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 322.06,
-            "startYear": 2024,
+            "score": 297.21,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3285,20 +3207,38 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 132,
-            "startYear": 2024,
+            "score": 122,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 143,
-            "startYear": 2024,
+            "score": 103,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 307.35,
-            "startYear": 2024,
+            "score": 217.849,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sairaanhoitaja (AMK), verkkopainotteinen monimuotototeutus, Oulainen",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 77,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 150.564,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3315,68 +3255,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 93,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 110,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 162.42,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Insinööri (AMK), Bio- ja elintarviketekniikka, monimuotototeutus",
-        "koulutusala": "Tekniikan alat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 61,
-            "startYear": 2024,
+            "score": 72,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
             "score": 105,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 175.22,
-            "startYear": 2024,
+            "score": 132.969,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Rakennusmestari (AMK), Rakennustekniikka, monimuotototeutus",
+        "name": "Insinööri (AMK), Bio- ja elintarviketekniikka, verkkopainotteinen monimuotototeutus",
         "koulutusala": "Tekniikan alat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 53,
-            "startYear": 2024,
+            "score": 73,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 98,
-            "startYear": 2024,
+            "score": 105,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 146.47,
-            "startYear": 2024,
+            "score": 158.231,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3387,20 +3303,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 36,
-            "startYear": 2024,
+            "score": 52,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 57,
-            "startYear": 2024,
+            "score": 48,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 88.84,
-            "startYear": 2024,
+            "score": 82.029,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3411,20 +3327,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 64,
-            "startYear": 2024,
+            "score": 34,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 89,
-            "startYear": 2024,
+            "score": 52,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 203.25,
-            "startYear": 2024,
+            "score": 229.375,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3435,44 +3351,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 58,
-            "startYear": 2024,
+            "score": 40,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 101,
-            "startYear": 2024,
+            "score": 95,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 179.64,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sosionomi (AMK), monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 92,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 124,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 307.57,
-            "startYear": 2024,
+            "score": 171.799,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3483,20 +3375,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 75,
-            "startYear": 2024,
+            "score": 67,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 102,
-            "startYear": 2024,
+            "score": 98,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 305.81,
-            "startYear": 2024,
+            "score": 245.482,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), verkkopainotteinen monimuotototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 100,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 116,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 281.094,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3507,20 +3423,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 55,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 111,
-            "startYear": 2024,
+            "score": 107,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 276.66,
-            "startYear": 2024,
+            "score": 167.004,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3531,20 +3447,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 50,
-            "startYear": 2024,
+            "score": 33,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 65,
-            "startYear": 2024,
+            "score": 67,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 208.13,
-            "startYear": 2024,
+            "score": 94.791,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3561,20 +3477,26 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 85,
-            "startYear": 2024,
+            "score": 87,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
+            "score": 118,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 253.32,
-            "startYear": 2024,
+            "score": 223.665,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 241.161,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3585,20 +3507,26 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 88,
-            "startYear": 2024,
+            "score": 89,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 116,
-            "startYear": 2024,
+            "score": 120,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 257.43,
-            "startYear": 2024,
+            "score": 225.8,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 139.375,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3609,50 +3537,44 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 72,
-            "startYear": 2024,
+            "score": 66,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 132,
-            "startYear": 2024,
+            "score": 123,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 308.14,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 191.07,
-            "startYear": 2024,
+            "score": 217.323,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Ensihoitaja, (AMK), ensihoito, monimuotototetus",
+        "name": "Ensihoitaja, (AMK), ensihoito, päivätotetus",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 115,
-            "startYear": 2024,
+            "score": 117,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 143,
-            "startYear": 2024,
+            "score": 136,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 353.75,
-            "startYear": 2024,
+            "score": 339.782,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3663,20 +3585,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 89,
-            "startYear": 2024,
+            "score": 95,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 144,
-            "startYear": 2024,
+            "score": 142,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 322.21,
-            "startYear": 2024,
+            "score": 299.375,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3687,20 +3609,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 101,
-            "startYear": 2024,
+            "score": 110,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 125,
-            "startYear": 2024,
+            "score": 128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 338.84,
-            "startYear": 2024,
+            "score": 286.928,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3711,20 +3633,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 44,
-            "startYear": 2024,
+            "score": 45,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 119,
-            "startYear": 2024,
+            "score": 112,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 257.21,
-            "startYear": 2024,
+            "score": 176.272,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3735,26 +3657,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 95,
-            "startYear": 2024,
+            "score": 93,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 148,
-            "startYear": 2024,
+            "score": 140,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 333.35,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 345.17,
-            "startYear": 2024,
+            "score": 308.943,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3765,20 +3681,26 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 91,
-            "startYear": 2024,
+            "score": 98,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 139,
-            "startYear": 2024,
+            "score": 143,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 341.37,
-            "startYear": 2024,
+            "score": 311.125,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 219.331,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3789,50 +3711,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 87,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 144,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 313.52,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), sairaanhoitotyö, monimuotototeutus (verkko-opetuspainotteinen)",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 42,
-            "startYear": 2024,
+            "score": 70,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
             "score": 132,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 232.38,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 250.01,
-            "startYear": 2024,
+            "score": 277.029,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3843,56 +3735,92 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 45,
-            "startYear": 2024,
+            "score": 48,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 128,
-            "startYear": 2024,
+            "score": 122,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 211.36,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 301,
-            "startYear": 2024,
+            "score": 175.847,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Sosionomi (AMK), sosiaaliala, päivätoteutus",
+        "name": "Sairaanhoitaja (AMK), sairaanhoitotyö, verkko-opinnot",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 87,
-            "startYear": 2024,
+            "score": 32,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 131,
-            "startYear": 2024,
+            "score": 103,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 322.95,
-            "startYear": 2024,
+            "score": 180.534,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), sosiaaliala, sosiaaliohjaus, monimuotototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 74,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 135,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 257.76,
-            "startYear": 2024,
+            "score": 271.355,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), sosiaaliala, sosiaaliohjaus, verkkototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 69,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 129,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 281.176,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3903,20 +3831,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 69,
-            "startYear": 2024,
+            "score": 67,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 135,
-            "startYear": 2024,
+            "score": 129,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 304.87,
-            "startYear": 2024,
+            "score": 251.405,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3927,26 +3855,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 81,
-            "startYear": 2024,
+            "score": 83,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 149,
-            "startYear": 2024,
+            "score": 142,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 325.3,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 277.78,
-            "startYear": 2024,
+            "score": 301.37,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3957,26 +3879,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 63,
-            "startYear": 2024,
+            "score": 66,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 136,
-            "startYear": 2024,
+            "score": 137,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 304.4,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 256.4,
-            "startYear": 2024,
+            "score": 248.398,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -3987,26 +3903,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 86,
-            "startYear": 2024,
+            "score": 94,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 144,
-            "startYear": 2024,
+            "score": 138,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 328.45,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 238.7,
-            "startYear": 2024,
+            "score": 300.996,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4017,14 +3927,8 @@
         "cutoffs": [
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 190.63,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 143.46,
-            "startYear": 2024,
+            "score": 159.468,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4035,20 +3939,20 @@
         "cutoffs": [
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 362.25,
-            "startYear": 2024,
+            "score": 327.193,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Terveydenhoitaja, (AMK), terveydenhoitotyö, monimuotototeutus (täydentävä)",
+        "name": "Terveydenhoitaja (AMK), terveydenhoitotyö, monimuotototeutus (täydentävä)",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 232.11,
-            "startYear": 2024,
+            "score": 210.349,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4065,20 +3969,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 29,
-            "startYear": 2024,
+            "score": 45,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 117,
-            "startYear": 2024,
+            "score": 109,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 190.83,
-            "startYear": 2024,
+            "score": 171.658,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4089,20 +3993,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 44,
-            "startYear": 2024,
+            "score": 42,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 120,
-            "startYear": 2024,
+            "score": 112,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 216.72,
-            "startYear": 2024,
+            "score": 145.858,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4113,68 +4017,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 34,
-            "startYear": 2024,
+            "score": 36,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 105,
-            "startYear": 2024,
+            "score": 101,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 190.17,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sosionomi (AMK), kirkon nuorisotyö, monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 70,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 113,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 287.28,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sosionomi (AMK), kirkon varhaiskasvatus, monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 52,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 112,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 216.88,
-            "startYear": 2024,
+            "score": 189.529,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4185,20 +4041,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 66,
-            "startYear": 2024,
+            "score": 42,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 123,
-            "startYear": 2024,
+            "score": 116,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 280.96,
-            "startYear": 2024,
+            "score": 245,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4209,20 +4065,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 82,
-            "startYear": 2024,
+            "score": 78,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 132,
-            "startYear": 2024,
+            "score": 128,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 322.28,
-            "startYear": 2024,
+            "score": 283.125,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4233,20 +4089,20 @@
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 59,
-            "startYear": 2024,
+            "score": 66,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 124,
-            "startYear": 2024,
+            "score": 122,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 264.01,
-            "startYear": 2024,
+            "score": 221.678,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4258,73 +4114,73 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Kajaani, opinnot alkavat tammikuussa 2024 (Taught in Finnish)",
+        "name": "KAMK, Sairaanhoitaja (AMK), monimuotototeutus, Kajaani, KAMK",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 42,
-            "startYear": 2024,
+            "score": 36,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 79,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 258.65,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Liikunnanohjaaja (AMK), Liikunnan ja vapaa-ajan koulutus, monimuotototeutus, opinnot alkavat tammikuussa 2024 (Taught in Finnish)",
-        "koulutusala": "Palvelualat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
             "score": 88,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 93,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 330.43,
-            "startYear": 2024,
+            "score": 180.233,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Restonomi (AMK), Matkailu, monimuotototeutus, Kajaani,  opinnot alkavat tammikuussa 2024 (Taught in Finnish)",
+        "name": "KAMK, Liikunnanohjaaja (AMK), Liikunnan ja vapaa-ajan koulutus, monimuotototeutus, Kajaani, KAMK",
         "koulutusala": "Palvelualat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 73,
-            "startYear": 2024,
+            "score": 66,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 48,
-            "startYear": 2024,
+            "score": 81,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 143.25,
-            "startYear": 2024,
+            "score": 224.452,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "KAMK, Restonomi (AMK), Matkailu, monimuotototeutus, Kajaani, KAMK",
+        "koulutusala": "Palvelualat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 29,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 31,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 105.233,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4336,145 +4192,133 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Fysioterapeutti (AMK), monimuotototeutus",
+        "name": "Fysioterapeutti (AMK), monimuotototeutus, Syksyn yhteishaku 2024",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 76,
-            "startYear": 2024,
+            "score": 65,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 99,
-            "startYear": 2024,
+            "score": 88,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 232.58,
-            "startYear": 2024,
+            "score": 202.849,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
       },
       {
-        "name": "Geronomi (AMK), monimuotototeutus",
+        "name": "Geronomi (AMK), monimuotototeutus, Syksyn yhteishaku 2024",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 53,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 48,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 208.8,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 50,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 61,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 188.57,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sairaanhoitaja (AMK), päivätoteutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 34,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 74,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 238.65,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Sosionomi (AMK), päivätoteutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 95,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 112,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 296.31,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
-        "name": "Terveydenhoitaja (AMK), päivätoteutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 32,
-            "startYear": 2024,
+            "score": 25,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
             "score": 67,
-            "startYear": 2024,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 209.84,
-            "startYear": 2024,
+            "score": 246.599,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sairaanhoitaja (AMK), monimuotototeutus, Syksyn yhteishaku 2024",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 44,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 56,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 182.108,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), päivätoteutus, Syksyn yhteishaku 2024",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 68,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 117,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 251.992,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Terveydenhoitaja (AMK), päivätoteutus, Syksyn yhteishaku 2024",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 29,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 54,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 234.815,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), monimuotototeutus, Syksyn yhteishaku 2024",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 242.733,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]
@@ -4486,49 +4330,49 @@
     "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Sairaanhoitaja (AMK), monimuotototeutus",
-        "koulutusala": "Terveys- ja hyvinvointialat",
-        "cutoffs": [
-          {
-            "selectionMethod": "Todistusvalinta (YO)",
-            "score": 29,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 92,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          },
-          {
-            "selectionMethod": "AMK-valintakoe",
-            "score": 195.42,
-            "startYear": 2024,
-            "startSeason": "Kevät"
-          }
-        ]
-      },
-      {
         "name": "Sairaanhoitaja (AMK), päivätoteutus",
         "koulutusala": "Terveys- ja hyvinvointialat",
         "cutoffs": [
           {
             "selectionMethod": "Todistusvalinta (YO)",
-            "score": 28,
-            "startYear": 2024,
+            "score": 26,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "Todistusvalinta (AMM)",
-            "score": 52,
-            "startYear": 2024,
+            "score": 41,
+            "startYear": 2025,
             "startSeason": "Kevät"
           },
           {
             "selectionMethod": "AMK-valintakoe",
-            "score": 168.57,
-            "startYear": 2024,
+            "score": 156.576,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Sosionomi (AMK), verkkototeutus",
+        "koulutusala": "Terveys- ja hyvinvointialat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta (YO)",
+            "score": 75,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Todistusvalinta (AMM)",
+            "score": 120,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "AMK-valintakoe",
+            "score": 265.937,
+            "startYear": 2025,
             "startSeason": "Kevät"
           }
         ]

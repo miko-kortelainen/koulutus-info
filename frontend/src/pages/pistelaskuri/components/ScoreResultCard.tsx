@@ -1,8 +1,9 @@
 import { Badge, Card, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { COLORS } from "@/theme";
-import type { ScoreResult } from "../+data";
+import type { ScoreResult } from "../lib/scoreResults";
 
 interface ScoreResultCardProps {
+  roundLabel: string;
   result: ScoreResult;
   userScore?: number;
 }
@@ -11,7 +12,7 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
   maximumFractionDigits: 2,
 });
 
-export default function ScoreResultCard({ result, userScore }: ScoreResultCardProps) {
+export default function ScoreResultCard({ result, roundLabel, userScore }: ScoreResultCardProps) {
   const isQualified = userScore !== undefined && result.score <= userScore;
 
   return (
@@ -32,7 +33,7 @@ export default function ScoreResultCard({ result, userScore }: ScoreResultCardPr
           <Separator />
           <Stack direction={{ base: "column", md: "row" }} justify="space-between">
             <Text color="fg.muted" fontSize="xs">
-              Pisteesi / alin hyväksytty pistemäärä (2026)
+              Pisteesi / alin hyväksytty pistemäärä ({roundLabel})
             </Text>
             <Text color={isQualified ? COLORS.accent : undefined} fontSize="sm" fontWeight="bold">
               {userScore === undefined ? "–" : scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
