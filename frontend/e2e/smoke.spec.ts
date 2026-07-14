@@ -77,10 +77,24 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
   await expect(page.getByText("Hakijat").first()).toBeVisible();
 });
 
-test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ page }) => {
+test("/pistelaskuri: shows active cutoffs and compares calculated points", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/pistelaskuri/");
   await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Pisteesi riittävät – \/ \d+ koulutukseen/ })).toBeVisible();
+
+  await page.getByRole("button", { name: /Tekniikan alat/ }).click();
+  await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
+  await expect(page.getByRole("article").getByText(/^– \/ /).first()).toBeVisible();
+
+  await page.getByRole("tab", { name: "AMM" }).click();
+  await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
+  await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true })).toHaveCount(0);
+
+  await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
+  await expect(page.getByRole("article").getByText("AMK-valintakoe", { exact: true }).first()).toBeVisible();
+
+  await page.getByRole("tab", { name: "YO" }).click();
 
   await selectOption(page, "Äidinkieli", "M");
   await selectOption(page, "Matematiikan oppimäärä", "Lyhyt");
@@ -100,8 +114,12 @@ test("/pistelaskuri: calculates todistuspisteet and filters cutoffs", async ({ p
   await expect(page.getByRole("heading", { name: /koulutukseen/ })).toBeVisible();
   await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
 
-  await page.getByRole("button", { name: /Tekniikan alat/ }).click();
   await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
+  await expect(page.getByRole("article").getByText(/^106 \/ /).first()).toBeVisible();
+
+  await page.getByRole("tab", { name: "AMM" }).click();
+  await expect(page.getByRole("heading", { name: /Pisteesi riittävät – \/ \d+ koulutukseen/ })).toBeVisible();
+  await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
 });
 
 test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {

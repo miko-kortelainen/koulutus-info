@@ -4,7 +4,7 @@ import type { ScoreResult } from "../+data";
 
 interface ScoreResultCardProps {
   result: ScoreResult;
-  userScore: number;
+  userScore?: number;
 }
 
 const scoreFormatter = new Intl.NumberFormat("fi-FI", {
@@ -12,6 +12,8 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
 });
 
 export default function ScoreResultCard({ result, userScore }: ScoreResultCardProps) {
+  const isQualified = userScore !== undefined && result.score <= userScore;
+
   return (
     <Card.Root as="article" size="sm">
       <Card.Body>
@@ -32,8 +34,8 @@ export default function ScoreResultCard({ result, userScore }: ScoreResultCardPr
             <Text color="fg.muted" fontSize="xs">
               Pisteesi / alin hyväksytty pistemäärä (2026)
             </Text>
-            <Text color={result.score <= userScore ? COLORS.accent : undefined} fontSize="sm" fontWeight="bold">
-              {scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
+            <Text color={isQualified ? COLORS.accent : undefined} fontSize="sm" fontWeight="bold">
+              {userScore === undefined ? "–" : scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
             </Text>
           </Stack>
         </Stack>
