@@ -1,4 +1,4 @@
-import { Accordion, Alert, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Box, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
@@ -13,7 +13,7 @@ import ScoreResultCard from "./components/ScoreResultCard";
 import { AMM_MAX_SCORE } from "./lib/ammScoring";
 import { flattenScoreResults, type ScoreResult } from "./lib/scoreResults";
 import { YO_MAX_SCORE } from "./lib/yoScoring";
-import { SCORE_TYPES, type ScoreType } from "./scoreTypes";
+import type { ScoreType } from "./scoreTypes";
 
 const MAX_SCORE_BY_TYPE: Partial<Record<ScoreType, number>> = {
   "Todistusvalinta (AMM)": AMM_MAX_SCORE,
@@ -104,7 +104,6 @@ export default function ScoreCalculatorPage() {
   }, [results, search, sectorFilter, selectionMethod, sortOrder]);
   const totalCount = groups.reduce((sum, group) => sum + group.results.length, 0);
   const qualifiedCount = groups.reduce((sum, group) => sum + (group.qualifiedCount ?? 0), 0);
-  const selectedScoreType = SCORE_TYPES.find(({ value }) => value === selectionMethod);
   const roundLabel = cutoffRoundShortLabel(round);
   const displayedQualifiedCount = cutoffQuery.isSuccess && search ? qualifiedCount : "–";
   const displayedTotalCount = cutoffQuery.isSuccess ? totalCount : "–";
@@ -127,6 +126,7 @@ export default function ScoreCalculatorPage() {
       lazyMount
       multiple
       onValueChange={(details) => setOpenGroups(details.value)}
+      size="md"
       value={openGroups}
     >
       {groups.map((group) => (
@@ -187,33 +187,62 @@ export default function ScoreCalculatorPage() {
   const resultList = (
     <Stack aria-busy={cutoffQuery.isPending} gap={4}>
       <Stack aria-live="polite" gap={1}>
-        <Heading as="h2" size="md">
-          Pisteesi riittävät {displayedQualifiedCount} / {displayedTotalCount} koulutukseen
-        </Heading>
-        <Text color="fg.muted" fontSize="sm">
-          {selectedScoreType?.label}:{" "}
-          {search
-            ? maxScore
-              ? `${scoreFormatter.format(search.score)} / ${maxScore}`
-              : `enintään ${scoreFormatter.format(search.score)} pistettä`
-            : "pisteitä ei ole vielä laskettu"}{" "}
-        </Text>
+        <Box border={`1px solid ${COLORS.accent}`} borderRadius={8} p={4}>
+          <Heading as="h2" size="lg" textAlign="center">
+            {search ? (
+              maxScore ? (
+                <>
+                  <Text as="span" color={COLORS.accent}>
+                    {scoreFormatter.format(search.score)}
+                  </Text>{" "}
+                  /{" "}
+                  <Text as="span" color="fg.muted">
+                    {maxScore}
+                  </Text>{" "}
+                  pistettä
+                </>
+              ) : (
+                <>
+                  <Text as="span" color={COLORS.accent}>
+                    {scoreFormatter.format(search.score)}
+                  </Text>{" "}
+                  pistettä
+                </>
+              )
+            ) : (
+              "Ei vielä laskettu"
+            )}{" "}
+          </Heading>
+          <Text color="fg.muted" fontSize="xs" textAlign="center">
+            Pisteesi riittävät {displayedQualifiedCount} / {displayedTotalCount} koulutukseen
+          </Text>
+        </Box>
       </Stack>
       <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
-        <ResultSelect
-          items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
-          label="Yhteishaku"
-          onChange={setRound}
-          value={round}
-        />
-        <ResultSelect items={SECTOR_OPTIONS} label="Korkeakoulutyyppi" onChange={setSectorFilter} value={sectorFilter} />
-        <ResultSelect
-          ariaLabel="Järjestys"
-          items={SORT_OPTIONS}
-          label="Järjestysperuste"
-          onChange={setSortOrder}
-          value={sortOrder}
-        />
+        <HStack flex={1} gap={4}>
+          <ResultSelect
+            items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
+            label="Yhteishaku"
+            onChange={setRound}
+            value={round}
+          />
+
+          <ResultSelect
+            items={SECTOR_OPTIONS}
+            label="Korkeakoulutyyppi"
+            onChange={setSectorFilter}
+            value={sectorFilter}
+          />
+        </HStack>
+        <Box flex={1}>
+          <ResultSelect
+            ariaLabel="Järjestys"
+            items={SORT_OPTIONS}
+            label="Järjestysperuste"
+            onChange={setSortOrder}
+            value={sortOrder}
+          />
+        </Box>
       </Stack>
       {resultContent}
     </Stack>
