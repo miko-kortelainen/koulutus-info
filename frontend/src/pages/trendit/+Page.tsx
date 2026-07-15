@@ -5,16 +5,15 @@ import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/config/yearOption
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import YearControl from "@/pages/hakijamaarat/components/YearControl";
-import type { StatisticsResponse } from "@/types.gen";
+import type { TrendsPageData } from "./+data";
 import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
 import KoulutusalaTrendChart from "./components/KoulutusalaTrendChart";
 import TopBarList from "./components/TopBarList";
 import TrendCard from "./components/TrendCard";
-import { useKoulutusalaTrends } from "./hooks/useKoulutusalaTrends";
 import useTrendsData from "./hooks/useTrendsData";
 
 export default function TrendsPage() {
-  const ssrData = useData<StatisticsResponse>();
+  const { currentStatistics, yearlyTotals } = useData<TrendsPageData>();
   const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
   const [compareYear, setCompareYear] = useState<YearOption | "">("");
 
@@ -26,12 +25,17 @@ export default function TrendsPage() {
     [selectedYear],
   );
 
-  const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? ssrData : undefined);
+  const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? currentStatistics : undefined);
   const compareQuery = useStatisticsQuery(compareYear as YearOption, undefined, !!compareYear);
 
-  const koulutusalaTrends = useKoulutusalaTrends(ssrData);
-  const trends = useTrendsData(query.data);
-  const compareTrends = useTrendsData(compareYear ? compareQuery.data : undefined, 0);
+  const primaryReady = query.isSuccess && !query.isPlaceholderData;
+  const comparisonReady = Boolean(compareYear && compareQuery.isSuccess && !compareQuery.isPlaceholderData);
+  const trends = useTrendsData(primaryReady ? query.data : undefined);
+  const compareTrends = useTrendsData(comparisonReady ? compareQuery.data : undefined, 0);
+  const listsAreLoading =
+    query.isPending ||
+    query.isPlaceholderData ||
+    Boolean(compareYear && (compareQuery.isPending || compareQuery.isPlaceholderData));
 
   const header = (
     <Stack gap={1}>
@@ -49,6 +53,12 @@ export default function TrendsPage() {
         <Alert.Root status="error">
           <Alert.Indicator />
           <Alert.Title>Jotain meni vikaan, yritä uudelleen.</Alert.Title>
+        </Alert.Root>
+      )}
+      {compareYear && compareQuery.isError && (
+        <Alert.Root status="error">
+          <Alert.Indicator />
+          <Alert.Title>Vertailutietojen lataaminen epäonnistui.</Alert.Title>
         </Alert.Root>
       )}
     </div>
@@ -106,10 +116,10 @@ export default function TrendsPage() {
     <TrendCard color={FIELD_COLOR} title="Suosituimmat koulutusalat">
       <TopBarList
         color={FIELD_COLOR}
-        compareData={compareYear ? compareTrends.topKoulutusalat : undefined}
-        compareYear={compareYear || undefined}
+        compareData={comparisonReady ? compareTrends.topKoulutusalat : undefined}
+        compareYear={comparisonReady ? compareYear : undefined}
         data={trends.topKoulutusalat}
-        isLoading={query.isPending}
+        isLoading={listsAreLoading}
         selectedYear={selectedYear}
         skeletonCount={10}
       />
@@ -120,10 +130,10 @@ export default function TrendsPage() {
     <TrendCard color={SCHOOL_COLOR} title="Suosituimmat korkeakoulut">
       <TopBarList
         color={SCHOOL_COLOR}
-        compareData={compareYear ? compareTrends.topKorkeakoulut : undefined}
-        compareYear={compareYear || undefined}
+        compareData={comparisonReady ? compareTrends.topKorkeakoulut : undefined}
+        compareYear={comparisonReady ? compareYear : undefined}
         data={trends.topKorkeakoulut}
-        isLoading={query.isPending}
+        isLoading={listsAreLoading}
         selectedYear={selectedYear}
         skeletonCount={10}
       />
@@ -134,10 +144,10 @@ export default function TrendsPage() {
     <TrendCard color={SECTOR_COLOR} title="Hakijat sektoreittain">
       <TopBarList
         color={SECTOR_COLOR}
-        compareData={compareYear ? compareTrends.sektoriData : undefined}
-        compareYear={compareYear || undefined}
+        compareData={comparisonReady ? compareTrends.sektoriData : undefined}
+        compareYear={comparisonReady ? compareYear : undefined}
         data={trends.sektoriData}
-        isLoading={query.isPending}
+        isLoading={listsAreLoading}
         selectedYear={selectedYear}
         showPercent={false}
       />
@@ -146,11 +156,7 @@ export default function TrendsPage() {
 
   const applicantsByYear = (
     <TrendCard color={TREND_COLOR} title="Hakijamäärien trendi">
-      <KoulutusalaTrendChart
-        chartData={koulutusalaTrends.chartData}
-        color={TREND_COLOR}
-        isLoading={koulutusalaTrends.isLoading}
-      />
+      <KoulutusalaTrendChart chartData={yearlyTotals} color={TREND_COLOR} />
     </TrendCard>
   );
 

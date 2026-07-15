@@ -1,22 +1,18 @@
 import { ChartRoot, ChartTooltip, useChart } from "@chakra-ui/charts";
-import { Skeleton } from "@chakra-ui/react";
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { numberFormat } from "@/components/hakijapaineTier";
-import type { TrendPoint } from "../hooks/useKoulutusalaTrends";
+import type { TrendPoint } from "../+data";
 
 interface KoulutusalaTrendChartProps {
   chartData: TrendPoint[];
-  isLoading: boolean;
   color: string;
 }
 
-export default function KoulutusalaTrendChart({ chartData, isLoading, color }: KoulutusalaTrendChartProps) {
+export default function KoulutusalaTrendChart({ chartData, color }: KoulutusalaTrendChartProps) {
   const chart = useChart({
     data: chartData,
     series: [{ name: "total", color }],
   });
-
-  if (isLoading) return <Skeleton borderRadius="md" height="150px" />;
 
   return (
     <ChartRoot chart={chart} h="150px">
