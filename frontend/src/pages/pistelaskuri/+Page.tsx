@@ -29,7 +29,7 @@ type SortOption = "lowest_cutoff" | "highest_cutoff" | "name_asc" | "name_desc";
 const SECTOR_OPTIONS: { label: string; value: SectorFilter }[] = [
   { label: "Kaikki korkeakoulut", value: "all" },
   { label: "Vain yliopistot", value: "university" },
-  { label: "Vain ammattikorkeakoulut", value: "amk" },
+  { label: "Vain AMK", value: "amk" },
 ];
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
@@ -196,10 +196,12 @@ export default function ScoreCalculatorPage() {
 
   const searchResultContent =
     searchResults.length === 0 ? (
-      <Text>Ei tuloksia hakusanalla “{normalizedSearchTerm}”.</Text>
+      <Text color="fg.muted" fontSize="sm" textAlign="center">
+        Ei tuloksia hakusanalla "{normalizedSearchTerm}".
+      </Text>
     ) : (
-      <Stack gap={3}>
-        <Text aria-live="polite" color="fg.muted" fontSize="sm">
+      <Stack gap={2}>
+        <Text aria-live="polite" color="fg.muted" fontSize="xs" mt={-3} textAlign="right">
           {searchResults.length} {searchResults.length === 1 ? "hakutulos" : "hakutulosta"}
         </Text>
         <ScoreResultList
@@ -220,7 +222,9 @@ export default function ScoreCalculatorPage() {
       <Alert.Title>Pisterajojen lataaminen epäonnistui.</Alert.Title>
     </Alert.Root>
   ) : filteredResults.length === 0 ? (
-    <Text>Ei koulutuksia valituilla rajauksilla.</Text>
+    <Text color="fg.muted" fontSize="sm" textAlign="center">
+      Ei toteutuksia valituilla rajauksilla :(
+    </Text>
   ) : normalizedSearchTerm ? (
     searchResultContent
   ) : (
@@ -228,9 +232,9 @@ export default function ScoreCalculatorPage() {
   );
 
   const resultList = (
-    <Stack aria-busy={cutoffQuery.isPending} gap={4}>
+    <Stack aria-busy={cutoffQuery.isPending} gap={4} mt={{ base: 6, md: 10 }}>
       <Stack aria-live="polite" gap={1}>
-        <Box border={`1px solid ${COLORS.accent}`} borderRadius={8} p={4}>
+        <Box border={`1px solid ${COLORS.accent}`} borderRadius={8} mb={{ base: 6, md: 10 }} p={4}>
           <Heading as="h2" size="lg" textAlign="center">
             {calculation ? (
               maxScore ? (
@@ -257,25 +261,38 @@ export default function ScoreCalculatorPage() {
             )}{" "}
           </Heading>
           <Text color="fg.muted" fontSize="xs" textAlign="center">
-            Pisteesi riittävät {displayedQualifiedCount} / {displayedTotalCount} koulutukseen
+            Pisteesi riittävät {displayedQualifiedCount} / {displayedTotalCount} toteutukseen
           </Text>
         </Box>
       </Stack>
-      <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
-        <HStack flex={1} gap={4}>
-          <ResultSelect
-            items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
-            label="Yhteishaku"
-            onChange={setRound}
-            value={round}
-          />
 
-          <ResultSelect
-            items={SECTOR_OPTIONS}
-            label="Korkeakoulutyyppi"
-            onChange={setSectorFilter}
-            value={sectorFilter}
-          />
+      <HStack>
+        <Separator bg={COLORS.accent} flex={1} size="md" />
+        <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" textAlign="center">
+          Vertaa pisterajoihin
+        </Text>
+        <Separator bg={COLORS.accent} flex={1} size="md" />
+      </HStack>
+
+      <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
+        <HStack flex={1} gap={2}>
+          <Box flex={6}>
+            <ResultSelect
+              items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
+              label="Yhteishaku"
+              onChange={setRound}
+              value={round}
+            />
+          </Box>
+
+          <Box flex={4}>
+            <ResultSelect
+              items={SECTOR_OPTIONS}
+              label="Korkeakoulutyyppi"
+              onChange={setSectorFilter}
+              value={sectorFilter}
+            />
+          </Box>
         </HStack>
         <Box flex={1}>
           <ResultSelect
@@ -287,7 +304,7 @@ export default function ScoreCalculatorPage() {
           />
         </Box>
       </Stack>
-      <SearchInput onChange={setSearchTerm} placeholder="Hae koulutusta tai korkeakoulua" value={searchTerm} />
+      <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta tai korkeakoulua" value={searchTerm} />
       {resultContent}
     </Stack>
   );
@@ -295,6 +312,7 @@ export default function ScoreCalculatorPage() {
   return (
     <PageContainer align="flex-start">
       {header}
+
       <ScoreForm
         isFirstTimeApplicant={isFirstTimeApplicant}
         onFirstTimeApplicantChange={setIsFirstTimeApplicant}
@@ -308,9 +326,9 @@ export default function ScoreCalculatorPage() {
       />
 
       {resultList}
-      <Text color="fg.muted" fontSize="xs" textWrap="pretty">
-        Huom. Pisterajat ovat suuntaa-antavia. Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. <br />
-        <br />
+
+      <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={8} textWrap="pretty">
+        Huom. Pisterajat ovat suuntaa-antavia. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. <br />
         Pisterajojen tiedot ovat peräisin virallisen opetushallituksen Vipunen.fi- palvelusta.
       </Text>
     </PageContainer>
