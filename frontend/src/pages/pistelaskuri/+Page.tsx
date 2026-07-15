@@ -1,4 +1,4 @@
-import { Accordion, Alert, Box, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Box, Checkbox, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
@@ -305,6 +305,17 @@ export default function ScoreCalculatorPage() {
         </Box>
       </Stack>
       <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta tai korkeakoulua" value={searchTerm} />
+      <Checkbox.Root
+        checked={isFirstTimeApplicant}
+        onCheckedChange={({ checked }) => setIsFirstTimeApplicant(checked === true)}
+        size="sm"
+      >
+        <Checkbox.HiddenInput />
+        <Checkbox.Control bg={COLORS.border} borderColor={COLORS.border}>
+          <Checkbox.Indicator bg={COLORS.accent} />
+        </Checkbox.Control>
+        <Checkbox.Label>Näytä myös ensikertalaisten pisterajat</Checkbox.Label>
+      </Checkbox.Root>
       {resultContent}
     </Stack>
   );
@@ -314,8 +325,6 @@ export default function ScoreCalculatorPage() {
       {header}
 
       <ScoreForm
-        isFirstTimeApplicant={isFirstTimeApplicant}
-        onFirstTimeApplicantChange={setIsFirstTimeApplicant}
         onModeChange={(nextSelectionMethod) => {
           setSelectionMethod(nextSelectionMethod);
           setCalculation(null);
