@@ -1,6 +1,7 @@
 import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { Programme } from "@/types/pisterajat.gen";
+import type { SortOption } from "../components/SortControl";
 
 const FUSE_OPTIONS = {
   keys: ["name"],
@@ -10,11 +11,15 @@ const FUSE_OPTIONS = {
   useExtendedSearch: true,
 };
 
-export default function useFilteredProgrammes(programmes: Programme[], searchTerm: string) {
+export default function useFilteredProgrammes(programmes: Programme[], searchTerm: string, sortOrder: SortOption) {
   const fuse = useMemo(() => new Fuse(programmes, FUSE_OPTIONS), [programmes]);
 
   return useMemo(() => {
     const normalizedSearch = searchTerm.trim();
-    return normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : programmes;
-  }, [fuse, programmes, searchTerm]);
+    const filtered = normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : programmes;
+
+    return [...filtered].sort((a, b) =>
+      sortOrder === "asc" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name),
+    );
+  }, [fuse, programmes, searchTerm, sortOrder]);
 }

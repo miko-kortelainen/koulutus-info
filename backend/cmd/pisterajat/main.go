@@ -10,15 +10,18 @@ import (
 	"os"
 	"path/filepath"
 	"school-api/internal/pisterajat"
+	"sort"
+	"strconv"
+	"strings"
 )
 
 const (
-	defaultInputPath  = "pisterajat.csv"
-	defaultOutputPath = "../frontend/public/data/pisterajat.json"
+	defaultInputPath = "pisterajat.csv"
+	defaultOutputDir = "../frontend/public/data"
 )
 
 func main() {
-	if err := run(os.Args[1:], os.Stdout, os.Stderr); err != nil {
+	if err := run(os.Args[1:], os.Stderr); err != nil {
 		if errors.Is(err, flag.ErrHelp) {
 			return
 		}
@@ -27,11 +30,11 @@ func main() {
 	}
 }
 
-func run(args []string, stdout, stderr io.Writer) error {
+func run(args []string, stderr io.Writer) error {
 	flags := flag.NewFlagSet("pisterajat", flag.ContinueOnError)
 	flags.SetOutput(stderr)
 	inputPath := flags.String("input", defaultInputPath, "path to pisterajat.csv")
-	outputPath := flags.String("output", defaultOutputPath, "path for JSON output; use - for stdout")
+	outputDir := flags.String("output-dir", defaultOutputDir, "directory for generated JSON files")
 	if err := flags.Parse(args); err != nil {
 		return err
 	}
@@ -45,20 +48,59 @@ func run(args []string, stdout, stderr io.Writer) error {
 	}
 	defer input.Close()
 
-	schools, err := pisterajat.Convert(input)
+	datasets, err := pisterajat.Convert(input)
 	if err != nil {
 		return fmt.Errorf("convert %s: %w", *inputPath, err)
 	}
-	if *outputPath == "-" {
-		if err := writeJSON(stdout, schools); err != nil {
-			return fmt.Errorf("write JSON to stdout: %w", err)
+
+	jointApplications := make([]string, 0, len(datasets))
+	for jointApplication := range datasets {
+		jointApplications = append(jointApplications, jointApplication)
+	}
+	sort.Strings(jointApplications)
+	for _, jointApplication := range jointApplications {
+		filename, err := outputFilename(jointApplication)
+		if err != nil {
+			return err
 		}
-	} else if err := writeJSONFile(*outputPath, schools); err != nil {
-		return err
+		outputPath := filepath.Join(*outputDir, filename)
+		schools := datasets[jointApplication]
+		if err := writeJSONFile(outputPath, schools); err != nil {
+			return err
+		}
+		fmt.Fprintf(
+			stderr,
+			"Converted %d schools and %d programmes for %s to %s\n",
+			len(schools),
+			countProgrammes(schools),
+			jointApplication,
+			outputPath,
+		)
+	}
+	return nil
+}
+
+func outputFilename(jointApplication string) (string, error) {
+	parts := strings.Fields(jointApplication)
+	if len(parts) != 2 {
+		return "", fmt.Errorf("unexpected Yhteishaku %q; want '<year> <season>'", jointApplication)
+	}
+	if len(parts[0]) != 4 {
+		return "", fmt.Errorf("unexpected Yhteishaku year %q", parts[0])
+	}
+	if _, err := strconv.Atoi(parts[0]); err != nil {
+		return "", fmt.Errorf("unexpected Yhteishaku year %q: %w", parts[0], err)
 	}
 
-	fmt.Fprintf(stderr, "Converted %d schools and %d programmes to %s\n", len(schools), countProgrammes(schools), *outputPath)
-	return nil
+	season := parts[1]
+	switch season {
+	case "kevät":
+		season = "kevat"
+	case "syksy":
+	default:
+		return "", fmt.Errorf("unexpected Yhteishaku season %q", parts[1])
+	}
+	return fmt.Sprintf("pisterajat-%s-%s.json", parts[0], season), nil
 }
 
 func countProgrammes(schools []pisterajat.School) int {
@@ -85,6 +127,10 @@ func writeJSONFile(path string, value any) error {
 	if err := writeJSON(temporary, value); err != nil {
 		temporary.Close()
 		return fmt.Errorf("encode %s: %w", path, err)
+	}
+	if err := temporary.Chmod(0644); err != nil {
+		temporary.Close()
+		return fmt.Errorf("set permissions for %s: %w", path, err)
 	}
 	if err := temporary.Close(); err != nil {
 		return fmt.Errorf("close temporary output for %s: %w", path, err)

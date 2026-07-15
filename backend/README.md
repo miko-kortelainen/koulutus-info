@@ -54,13 +54,12 @@ not part of the Vipunen or Opintopolku refresh.
 go run ./cmd/pisterajat
 ```
 
-By default this reads `pisterajat.csv` and writes
-`frontend/public/data/pisterajat.json`. Set either path explicitly, or write
-JSON to standard output with `--output -`:
+By default this reads `pisterajat.csv` and writes one JSON file per `Yhteishaku`
+under `frontend/public/data/`, for example `pisterajat-2026-kevat.json` and
+`pisterajat-2026-syksy.json`. Set the input path or output directory explicitly:
 
 ```sh
-go run ./cmd/pisterajat --input path/to/pisterajat.csv --output path/to/pisterajat.json
-go run ./cmd/pisterajat --output -
+go run ./cmd/pisterajat --input path/to/pisterajat.csv --output-dir path/to/data
 ```
 
 The JSON preserves the CSV's order and groups each row as:
@@ -68,15 +67,18 @@ The JSON preserves the CSV's order and groups each row as:
 ```json
 [
   {
-    "name": "Aalto-yliopisto",
+    "name": "Hämeen ammattikorkeakoulu",
+    "sector": "Ammattikorkeakoulukoulutus",
     "programmes": [
       {
-        "name": "Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
-        "koulutusala": "Tekniikan alat",
+        "name": "Artenomi (AMK), älykäs ja kestävä muotoilu, päivätoteutus, kevään yhteishaku",
+        "koulutusala": "Humanistiset ja taidealat",
         "cutoffs": [
           {
-            "selectionMethod": "Todistusvalinta ensikertalaisille hakijoille",
-            "score": 145.2
+            "selectionMethod": "Älykkään ja kestävän muotoilun koe",
+            "score": 51,
+            "startYear": 2026,
+            "startSeason": "Syksy"
           }
         ]
       }
@@ -85,5 +87,7 @@ The JSON preserves the CSV's order and groups each row as:
 ]
 ```
 
-The CSV header must be `Koulu;Ohjelma;Valintatapa;Pisteraja;Koulutusala`.
-`Pisteraja` is parsed as a JSON number, accepting the Finnish decimal comma.
+The CSV header must be
+`yhteishaku;alkamisvuosi;alkamisaika;sektori;ylempi/alempi;ala;ala2;koulu;valintatapa;ohjelma;pisteet_alin;pisteet_ylin`.
+`yhteishaku` uses the format `2026, kevät`. `pisteet_alin` is parsed as the JSON cutoff score, accepting the
+Finnish decimal comma. The current JSON contract does not include `ylempi/alempi`, `ala2`, or `pisteet_ylin`.
