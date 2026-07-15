@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import { emptyAmmFormState, parseAmmForm } from "../components/AmmForm";
 import { calculateAmmScore } from "./ammScoring";
-import { flattenScoreResults, matchesScoreType } from "./scoreResults";
+import { flattenScoreResults, matchesScoreType, type ScoreResult, selectApplicantResults } from "./scoreResults";
 import { emptyYoFormState, parseYoForm, type YoLanguageValue } from "./yoForm";
 import { calculateYoScore } from "./yoScoring";
 
@@ -178,22 +178,91 @@ const universityResult = (selectionMethod: string) => ({ sector: "Yliopistokoulu
 const amkResult = (selectionMethod: string) => ({ sector: "Ammattikorkeakoulukoulutus", selectionMethod });
 
 assert.equal(matchesScoreType(universityResult("Todistusvalinta"), "Todistusvalinta (YO)"), true);
+assert.equal(matchesScoreType(universityResult("Todistusvalinta, ensikertalaiset"), "Todistusvalinta (YO)"), true);
 assert.equal(
   matchesScoreType(
-    universityResult("01 Antiikin ja muinaisen Lähi-idän kielet, Todistusvalinta, ensikertalaiset"),
+    universityResult("01 Antiikin ja muinaisen Lähi-idän kielet, Todistusvalinta"),
     "Todistusvalinta (YO)",
   ),
-  true,
+  false,
 );
-assert.equal(matchesScoreType(universityResult("todistusvalinta"), "Todistusvalinta (YO)"), true);
+assert.equal(matchesScoreType(universityResult("todistusvalinta"), "Todistusvalinta (YO)"), false);
 assert.equal(matchesScoreType(universityResult("Valintakoe"), "Todistusvalinta (YO)"), false);
 assert.equal(matchesScoreType(universityResult("Todistusvalinta"), "Todistusvalinta (AMM)"), false);
 assert.equal(matchesScoreType(universityResult("Todistusvalinta"), "AMK-valintakoe"), false);
 
 assert.equal(matchesScoreType(amkResult("Todistusvalinta (YO)"), "Todistusvalinta (YO)"), true);
+assert.equal(matchesScoreType(amkResult("Todistusvalinta (YO), ensikertalaiset"), "Todistusvalinta (YO)"), true);
 assert.equal(matchesScoreType(amkResult("Todistusvalinta"), "Todistusvalinta (YO)"), false);
 assert.equal(matchesScoreType(amkResult("Todistusvalinta (AMM)"), "Todistusvalinta (AMM)"), true);
+assert.equal(matchesScoreType(amkResult("Todistusvalinta (AMM), ensikertalaiset"), "Todistusvalinta (AMM)"), true);
 assert.equal(matchesScoreType(amkResult("AMK-valintakoe"), "AMK-valintakoe"), true);
+assert.equal(matchesScoreType(amkResult("AMK-valintakoe, ensikertalaiset"), "AMK-valintakoe"), true);
+assert.equal(matchesScoreType(amkResult("Todistusvalinta (YO)"), "Todistusvalinta (AMM)"), false);
+
+const scoreResult = (
+  schoolName: string,
+  programmeName: string,
+  sector: string,
+  selectionMethod: string,
+  score: number,
+): ScoreResult => ({
+  id: [schoolName, programmeName, selectionMethod, score].join("\0"),
+  koulutusala: "Testiala",
+  programmeName,
+  schoolName,
+  score,
+  sector,
+  selectionMethod,
+});
+
+const universityApplicantResults = [
+  scoreResult("Yliopisto A", "Molemmat jonot", "Yliopistokoulutus", "Todistusvalinta", 120),
+  scoreResult("Yliopisto A", "Molemmat jonot", "Yliopistokoulutus", "Todistusvalinta", 115),
+  scoreResult("Yliopisto A", "Molemmat jonot", "Yliopistokoulutus", "Todistusvalinta, ensikertalaiset", 100),
+  scoreResult("Yliopisto A", "Vain yleinen", "Yliopistokoulutus", "Todistusvalinta", 90),
+  scoreResult("Yliopisto A", "Vain ensikertalaiset", "Yliopistokoulutus", "Todistusvalinta, ensikertalaiset", 80),
+  scoreResult("Yliopisto B", "Molemmat jonot", "Yliopistokoulutus", "Todistusvalinta", 70),
+];
+
+const universityNormalResults = selectApplicantResults(universityApplicantResults, "Todistusvalinta (YO)", false);
+assert.equal(universityNormalResults.length, 3);
+assert.equal(
+  universityNormalResults.find(
+    (result) => result.schoolName === "Yliopisto A" && result.programmeName === "Molemmat jonot",
+  )?.score,
+  115,
+);
+assert.equal(
+  universityNormalResults.some((result) => result.programmeName === "Vain ensikertalaiset"),
+  false,
+);
+
+const universityFirstTimeResults = selectApplicantResults(universityApplicantResults, "Todistusvalinta (YO)", true);
+assert.equal(universityFirstTimeResults.length, 4);
+assert.equal(
+  universityFirstTimeResults.find((result) => result.programmeName === "Molemmat jonot")?.selectionMethod,
+  "Todistusvalinta, ensikertalaiset",
+);
+assert.equal(
+  universityFirstTimeResults.find((result) => result.programmeName === "Vain yleinen")?.selectionMethod,
+  "Todistusvalinta",
+);
+
+// ponytail: AMK score types share one code path, so one type covers all three
+const amkApplicantResults = [
+  scoreResult("AMK A", "Molemmat jonot", "Ammattikorkeakoulukoulutus", "AMK-valintakoe", 100),
+  scoreResult("AMK A", "Molemmat jonot", "Ammattikorkeakoulukoulutus", "AMK-valintakoe, ensikertalaiset", 90),
+  scoreResult("AMK A", "Vain yleinen", "Ammattikorkeakoulukoulutus", "AMK-valintakoe", 80),
+];
+assert.deepEqual(
+  selectApplicantResults(amkApplicantResults, "AMK-valintakoe", false).map((result) => result.selectionMethod),
+  ["AMK-valintakoe", "AMK-valintakoe"],
+);
+assert.deepEqual(
+  selectApplicantResults(amkApplicantResults, "AMK-valintakoe", true).map((result) => result.selectionMethod),
+  ["AMK-valintakoe, ensikertalaiset", "AMK-valintakoe"],
+);
 
 const duplicateUniversityResults = flattenScoreResults([
   {

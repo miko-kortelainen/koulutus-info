@@ -7,20 +7,24 @@ import (
 	"fmt"
 	"io"
 	"math"
+	"regexp"
 	"strconv"
 	"strings"
 )
 
 var expectedHeader = []string{
-	"Sektori",
-	"Koulu",
-	"Koulutusala",
-	"Ohjelma",
-	"Valintatapa",
-	"Pisteraja",
-	"Alkamisvuosi",
-	"Alkamiskausi",
-	"Yhteishaku",
+	"yhteishaku",
+	"alkamisvuosi",
+	"alkamisaika",
+	"sektori",
+	"ylempi/alempi",
+	"ala",
+	"ala2",
+	"koulu",
+	"valintatapa",
+	"ohjelma",
+	"pisteet_alin",
+	"pisteet_ylin",
 }
 
 // School contains every programme offered by one school.
@@ -96,40 +100,43 @@ func Convert(input io.Reader) (map[string][]School, error) {
 		if err := validateRecord(record, rowNumber); err != nil {
 			return nil, err
 		}
-		score, err := parseScore(record[5])
+		jointApplication, err := parseJointApplication(record[0])
 		if err != nil {
-			return nil, fmt.Errorf("row %d: parse Pisteraja %q: %w", rowNumber, record[5], err)
+			return nil, fmt.Errorf("row %d: parse yhteishaku %q: %w", rowNumber, record[0], err)
 		}
-		startYear, err := strconv.Atoi(record[6])
+		startYear, err := strconv.Atoi(record[1])
 		if err != nil {
-			return nil, fmt.Errorf("row %d: parse Alkamisvuosi %q: %w", rowNumber, record[6], err)
+			return nil, fmt.Errorf("row %d: parse alkamisvuosi %q: %w", rowNumber, record[1], err)
+		}
+		score, err := parseScore(record[10])
+		if err != nil {
+			return nil, fmt.Errorf("row %d: parse pisteet_alin %q: %w", rowNumber, record[10], err)
 		}
 
-		jointApplication := record[8]
 		schools := datasets[jointApplication]
-		sKey := schoolKey{jointApplication: jointApplication, school: record[1]}
+		sKey := schoolKey{jointApplication: jointApplication, school: record[7]}
 		schoolIndex, exists := schoolIndexes[sKey]
 		if !exists {
 			schoolIndex = len(schools)
-			schools = append(schools, School{Name: record[1], Sector: record[0]})
+			schools = append(schools, School{Name: record[7], Sector: record[3]})
 			datasets[jointApplication] = schools
 			schoolIndexes[sKey] = schoolIndex
 		}
 
-		pKey := programmeKey{jointApplication: jointApplication, school: record[1], programme: record[3]}
+		pKey := programmeKey{jointApplication: jointApplication, school: record[7], programme: record[9]}
 		programmeIndex, exists := programmeIndexes[pKey]
 		if !exists {
 			programmeIndex = len(schools[schoolIndex].Programmes)
-			schools[schoolIndex].Programmes = append(schools[schoolIndex].Programmes, Programme{Name: record[3], Koulutusala: record[2]})
+			schools[schoolIndex].Programmes = append(schools[schoolIndex].Programmes, Programme{Name: record[9], Koulutusala: record[5]})
 			programmeIndexes[pKey] = programmeIndex
 		}
 
 		programme := &schools[schoolIndex].Programmes[programmeIndex]
 		programme.Cutoffs = append(programme.Cutoffs, Cutoff{
-			SelectionMethod: record[4],
+			SelectionMethod: record[8],
 			Score:           score,
 			StartYear:       startYear,
-			StartSeason:     record[7],
+			StartSeason:     record[2],
 		})
 	}
 
@@ -158,6 +165,16 @@ func validateRecord(record []string, rowNumber int) error {
 		}
 	}
 	return nil
+}
+
+var jointApplicationPattern = regexp.MustCompile(`^(\d{4}),\s*(kevät|syksy)$`)
+
+func parseJointApplication(value string) (string, error) {
+	match := jointApplicationPattern.FindStringSubmatch(value)
+	if match == nil {
+		return "", fmt.Errorf("want '<year>, kevät|syksy'")
+	}
+	return match[1] + " " + match[2], nil
 }
 
 func parseScore(value string) (float64, error) {

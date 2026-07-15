@@ -109,17 +109,28 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await waitForCalculatorHydration(page);
   await expectSelectedOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
+  const firstTimeApplicantCheckbox = page.getByRole("checkbox", { name: "Olen ensikertalainen" });
+  await expect(firstTimeApplicantCheckbox).not.toBeChecked();
 
   const resultSearch = page.getByRole("textbox", { name: "Hae koulutusta tai korkeakoulua" });
-  await resultSearch.fill("Aalto-yliopisto");
+  await resultSearch.fill("Turun yliopisto");
   await expect(page.getByText(/\d+ hakutulosta/)).toBeVisible();
   await expect(page.getByText("Kauppa, hallinto ja oikeustieteet").first()).toBeVisible();
-  await expect(page.getByText("Tietojenkäsittely ja tietoliikenne (ICT)").first()).toBeVisible();
-  await expect(page.getByRole("button", { name: /Humanistiset ja taidealat/ })).toHaveCount(0);
+  await expect(page.getByText("Tietojenkäsittely ja tietoliikenne").first()).toBeVisible();
+  await expect(page.getByRole("button", { name: /Humanistiset alat/ })).toHaveCount(0);
+  await resultSearch.clear();
+
+  await resultSearch.fill("Pedagogik (undervisning på svenska)");
+  await expect(page.getByRole("article")).toHaveCount(1);
+  await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
+  await page.getByText("Olen ensikertalainen", { exact: true }).click();
+  await expect(firstTimeApplicantCheckbox).toBeChecked();
+  await expect(page.getByRole("article")).toHaveCount(1);
+  await expect(page.getByRole("article").getByText("Todistusvalinta, ensikertalaiset", { exact: true })).toBeVisible();
   await resultSearch.clear();
 
   await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
-  const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset ja taidealat/);
+  const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset alat/);
   await expect(humanistisetAccordion.getByRole("article")).toHaveCount(20);
   await expect(humanistisetAccordion.getByText(/Näytetään 20 \/ \d+/)).toBeVisible();
   await humanistisetAccordion.getByRole("button", { name: "Näytä lisää" }).click();

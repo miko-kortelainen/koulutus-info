@@ -1,4 +1,4 @@
-import { Box, Button, Field, Input, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Field, Input, Stack, Tabs, Text } from "@chakra-ui/react";
 import { type SubmitEvent, useEffect, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import { COLORS } from "@/theme";
@@ -10,6 +10,8 @@ import AmmForm, { type AmmFormErrors, type AmmFormState, emptyAmmFormState, pars
 import YoForm from "./YoForm";
 
 interface ScoreFormProps {
+  isFirstTimeApplicant: boolean;
+  onFirstTimeApplicantChange: (isFirstTimeApplicant: boolean) => void;
   onModeChange: (selectionMethod: ScoreType) => void;
   onSubmit: (selectionMethod: ScoreType, score: number) => void;
 }
@@ -78,7 +80,12 @@ const parseAmkScore = (value: string): number | null => {
   return Number.isFinite(score) && score >= 0 ? score : null;
 };
 
-export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
+export default function ScoreForm({
+  isFirstTimeApplicant,
+  onFirstTimeApplicantChange,
+  onModeChange,
+  onSubmit,
+}: ScoreFormProps) {
   const [mode, setMode] = useState<ScoreType>("Todistusvalinta (YO)");
   const [yoState, setYoState] = useState(emptyYoFormState());
   const [yoErrors, setYoErrors] = useState<YoFormErrors>({});
@@ -202,6 +209,23 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
           <Tabs.Content p={0} value="AMK-valintakoe">
             {amkScoreField}
           </Tabs.Content>
+
+          <Stack gap={1} mt={4}>
+            <Checkbox.Root
+              checked={isFirstTimeApplicant}
+              onCheckedChange={({ checked }) => onFirstTimeApplicantChange(checked === true)}
+              size="sm"
+            >
+              <Checkbox.HiddenInput aria-describedby="first-time-applicant-help" />
+              <Checkbox.Control>
+                <Checkbox.Indicator />
+              </Checkbox.Control>
+              <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
+            </Checkbox.Root>
+            <Text color="fg.muted" fontSize="xs" id="first-time-applicant-help">
+              Käytämme ensikertalaisten pisterajaa, jos se on saatavilla.
+            </Text>
+          </Stack>
 
           <Box display="flex" justifyContent="flex-end">
             <Button

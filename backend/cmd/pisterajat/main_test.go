@@ -11,9 +11,9 @@ import (
 func TestRunWritesOneJSONFilePerJointApplication(t *testing.T) {
 	inputPath := filepath.Join(t.TempDir(), "pisterajat.csv")
 	outputDir := filepath.Join(t.TempDir(), "data")
-	csv := "Sektori;Koulu;Koulutusala;Ohjelma;Valintatapa;Pisteraja;Alkamisvuosi;Alkamiskausi;Yhteishaku\n" +
-		"University;School A;Field A;Programme 1;Certificate, all applicants;100,50;2026;Autumn;2026 kevät\n" +
-		"University;School A;Field A;Programme 1;Entrance exam;80;2025;Autumn;2025 syksy\n"
+	csv := "yhteishaku;alkamisvuosi;alkamisaika;sektori;ylempi/alempi;ala;ala2;koulu;valintatapa;ohjelma;pisteet_alin;pisteet_ylin\n" +
+		"2026, kevät;2026;Autumn;University;Bachelor;Field A;Detailed field A;School A;Certificate, all applicants;Programme 1;100,50;120\n" +
+		"2025, syksy;2025;Autumn;University;Bachelor;Field A;Detailed field A;School A;Entrance exam;Programme 1;80;100\n"
 	if err := os.WriteFile(inputPath, []byte(csv), 0644); err != nil {
 		t.Fatal(err)
 	}

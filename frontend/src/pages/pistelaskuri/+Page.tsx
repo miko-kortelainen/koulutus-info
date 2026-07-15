@@ -14,7 +14,7 @@ import ResultSelect from "./components/ResultSelect";
 import ScoreForm from "./components/ScoreForm";
 import ScoreResultList from "./components/ScoreResultList";
 import { AMM_MAX_SCORE } from "./lib/ammScoring";
-import { flattenScoreResults, matchesScoreType, type ScoreResult } from "./lib/scoreResults";
+import { flattenScoreResults, type ScoreResult, selectApplicantResults } from "./lib/scoreResults";
 import { YO_MAX_SCORE } from "./lib/yoScoring";
 import type { ScoreType } from "./scoreTypes";
 
@@ -86,6 +86,7 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
 export default function ScoreCalculatorPage() {
   const { initialResults, initialRound, rounds } = useData<ScoreCalculatorPageData>();
   const [selectionMethod, setSelectionMethod] = useState<ScoreType>("Todistusvalinta (YO)");
+  const [isFirstTimeApplicant, setIsFirstTimeApplicant] = useState(false);
   const [calculation, setCalculation] = useState<Calculation | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [round, setRound] = useState(initialRound);
@@ -102,10 +103,10 @@ export default function ScoreCalculatorPage() {
   const maxScore = calculation ? MAX_SCORE_BY_TYPE[calculation.selectionMethod] : undefined;
   const filteredResults = useMemo(
     () =>
-      results
-        .filter((result) => matchesScoreType(result, selectionMethod) && matchesSector(result, sectorFilter))
+      selectApplicantResults(results, selectionMethod, isFirstTimeApplicant)
+        .filter((result) => matchesSector(result, sectorFilter))
         .sort((a, b) => compareResults(a, b, sortOrder)),
-    [results, sectorFilter, selectionMethod, sortOrder],
+    [isFirstTimeApplicant, results, sectorFilter, selectionMethod, sortOrder],
   );
   const groups = useMemo(() => {
     const byAla = new Map<string, ScoreResult[]>();
@@ -137,7 +138,7 @@ export default function ScoreCalculatorPage() {
   const totalCount = filteredResults.length;
   const qualifiedCount = calculation ? filteredResults.filter((result) => result.score <= calculation.score).length : 0;
   const roundLabel = cutoffRoundShortLabel(round);
-  const resultListKey = [round, selectionMethod, sectorFilter, sortOrder].join(":");
+  const resultListKey = [round, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
   const displayedQualifiedCount = cutoffQuery.isSuccess && calculation ? qualifiedCount : "–";
   const displayedTotalCount = cutoffQuery.isSuccess ? totalCount : "–";
 
@@ -295,6 +296,8 @@ export default function ScoreCalculatorPage() {
     <PageContainer align="flex-start">
       {header}
       <ScoreForm
+        isFirstTimeApplicant={isFirstTimeApplicant}
+        onFirstTimeApplicantChange={setIsFirstTimeApplicant}
         onModeChange={(nextSelectionMethod) => {
           setSelectionMethod(nextSelectionMethod);
           setCalculation(null);
