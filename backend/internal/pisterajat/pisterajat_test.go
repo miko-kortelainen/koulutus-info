@@ -7,12 +7,12 @@ import (
 )
 
 func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
-	input := strings.NewReader("\ufeffSektori;Koulu;Koulutusala;Ohjelma;Valintatapa;Pisteraja;Alkamisvuosi;Alkamiskausi;Yhteishaku\n" +
-		"University;School A;Field A;Programme 1;Certificate, first-time applicants;145,60;2026;Autumn;2026 spring\n" +
-		"University;School A;Field A;Programme 1;Certificate, all applicants;142,10;2026;Autumn;2026 spring\n" +
-		"University;School A;Field A;Programme 1;Entrance exam;88,00;2026;Autumn;2026 spring\n" +
-		"University;School A;Field A;Programme 2;Certificate, all applicants;120,00;2026;Autumn;2026 spring\n" +
-		"University of applied sciences;School B;Field B;Programme 3;Certificate, all applicants;99,50;2025;Spring;2025 autumn\n")
+	input := strings.NewReader("\ufeffyhteishaku;alkamisvuosi;alkamisaika;sektori;ylempi/alempi;ala;ala2;koulu;valintatapa;ohjelma;pisteet_alin;pisteet_ylin\n" +
+		"2026, kevät;2026;Autumn;University;Bachelor;Field A;Detailed field A;School A;Certificate, first-time applicants;Programme 1;145,60;160\n" +
+		"2026, kevät;2026;Autumn;University;Bachelor;Field A;Detailed field A;School A;Certificate, all applicants;Programme 1;142,10;160\n" +
+		"2026, kevät;2026;Autumn;University;Bachelor;Field A;Detailed field A;School A;Entrance exam;Programme 1;88,00;100\n" +
+		"2026, kevät;2026;Autumn;University;Bachelor;Field A;Detailed field A;School A;Certificate, all applicants;Programme 2;120,00;150\n" +
+		"2025, syksy;2025;Spring;University of applied sciences;Bachelor;Field B;Detailed field B;School B;Certificate, all applicants;Programme 3;99,50;120\n")
 
 	got, err := Convert(input)
 	if err != nil {
@@ -20,7 +20,7 @@ func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
 	}
 
 	want := map[string][]School{
-		"2026 spring": {
+		"2026 kevät": {
 			{
 				Name:   "School A",
 				Sector: "University",
@@ -42,7 +42,7 @@ func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
 				},
 			},
 		},
-		"2025 autumn": {
+		"2025 syksy": {
 			{
 				Name:   "School B",
 				Sector: "University of applied sciences",
@@ -63,22 +63,32 @@ func TestConvertGroupsRecordsAndHandlesBOM(t *testing.T) {
 }
 
 func TestConvertRejectsInvalidScore(t *testing.T) {
-	input := strings.NewReader("Sektori;Koulu;Koulutusala;Ohjelma;Valintatapa;Pisteraja;Alkamisvuosi;Alkamiskausi;Yhteishaku\n" +
-		"University;School A;Field A;Programme 1;Certificate;not-a-number;2026;Autumn;2026 spring\n")
+	input := strings.NewReader("yhteishaku;alkamisvuosi;alkamisaika;sektori;ylempi/alempi;ala;ala2;koulu;valintatapa;ohjelma;pisteet_alin;pisteet_ylin\n" +
+		"2026, kevät;2026;Autumn;University;Bachelor;Field A;Detailed field A;School A;Certificate;Programme 1;not-a-number;120\n")
 
 	_, err := Convert(input)
-	if err == nil || !strings.Contains(err.Error(), "row 2: parse Pisteraja") {
+	if err == nil || !strings.Contains(err.Error(), "row 2: parse pisteet_alin") {
 		t.Fatalf("Convert() error = %v, want a row-specific score error", err)
 	}
 }
 
 func TestConvertRejectsInvalidStartYear(t *testing.T) {
-	input := strings.NewReader("Sektori;Koulu;Koulutusala;Ohjelma;Valintatapa;Pisteraja;Alkamisvuosi;Alkamiskausi;Yhteishaku\n" +
-		"University;School A;Field A;Programme 1;Certificate;100;next year;Autumn;2026 spring\n")
+	input := strings.NewReader("yhteishaku;alkamisvuosi;alkamisaika;sektori;ylempi/alempi;ala;ala2;koulu;valintatapa;ohjelma;pisteet_alin;pisteet_ylin\n" +
+		"2026, kevät;next year;Autumn;University;Bachelor;Field A;Detailed field A;School A;Certificate;Programme 1;100;120\n")
 
 	_, err := Convert(input)
-	if err == nil || !strings.Contains(err.Error(), "row 2: parse Alkamisvuosi") {
+	if err == nil || !strings.Contains(err.Error(), "row 2: parse alkamisvuosi") {
 		t.Fatalf("Convert() error = %v, want a row-specific start year error", err)
+	}
+}
+
+func TestConvertRejectsInvalidJointApplication(t *testing.T) {
+	input := strings.NewReader("yhteishaku;alkamisvuosi;alkamisaika;sektori;ylempi/alempi;ala;ala2;koulu;valintatapa;ohjelma;pisteet_alin;pisteet_ylin\n" +
+		"2026 winter;2026;Autumn;University;Bachelor;Field A;Detailed field A;School A;Certificate;Programme 1;100;120\n")
+
+	_, err := Convert(input)
+	if err == nil || !strings.Contains(err.Error(), "row 2: parse yhteishaku") {
+		t.Fatalf("Convert() error = %v, want a row-specific joint application error", err)
 	}
 }
 

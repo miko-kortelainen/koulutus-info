@@ -88,5 +88,6 @@ The JSON preserves the CSV's order and groups each row as:
 ```
 
 The CSV header must be
-`Sektori;Koulu;Koulutusala;Ohjelma;Valintatapa;Pisteraja;Alkamisvuosi;Alkamiskausi;Yhteishaku`.
-`Pisteraja` is parsed as a JSON number, accepting the Finnish decimal comma.
+`yhteishaku;alkamisvuosi;alkamisaika;sektori;ylempi/alempi;ala;ala2;koulu;valintatapa;ohjelma;pisteet_alin;pisteet_ylin`.
+`yhteishaku` uses the format `2026, kevät`. `pisteet_alin` is parsed as the JSON cutoff score, accepting the
+Finnish decimal comma. The current JSON contract does not include `ylempi/alempi`, `ala2`, or `pisteet_ylin`.
