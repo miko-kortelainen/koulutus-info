@@ -2,6 +2,7 @@
 import assert from "node:assert/strict";
 import { emptyAmmFormState, parseAmmForm } from "../components/AmmForm";
 import { calculateAmmScore } from "./ammScoring";
+import { flattenScoreResults, matchesScoreType } from "./scoreResults";
 import { emptyYoFormState, parseYoForm, type YoLanguageValue } from "./yoForm";
 import { calculateYoScore } from "./yoScoring";
 
@@ -172,5 +173,45 @@ assert.equal(calculateAmmScore(validAmmForm.input), 150);
 const invalidAmmForm = parseAmmForm({ ...emptyAmmFormState(), keskiarvoInput: "5,01" });
 if ("input" in invalidAmmForm) assert.fail("Out-of-range average should fail validation.");
 assert.equal(invalidAmmForm.errors.keskiarvo, "Anna painotettu keskiarvo väliltä 1,00–5,00.");
+
+const universityResult = (selectionMethod: string) => ({ sector: "Yliopistokoulutus", selectionMethod });
+const amkResult = (selectionMethod: string) => ({ sector: "Ammattikorkeakoulukoulutus", selectionMethod });
+
+assert.equal(matchesScoreType(universityResult("Todistusvalinta"), "Todistusvalinta (YO)"), true);
+assert.equal(
+  matchesScoreType(
+    universityResult("01 Antiikin ja muinaisen Lähi-idän kielet, Todistusvalinta, ensikertalaiset"),
+    "Todistusvalinta (YO)",
+  ),
+  true,
+);
+assert.equal(matchesScoreType(universityResult("todistusvalinta"), "Todistusvalinta (YO)"), true);
+assert.equal(matchesScoreType(universityResult("Valintakoe"), "Todistusvalinta (YO)"), false);
+assert.equal(matchesScoreType(universityResult("Todistusvalinta"), "Todistusvalinta (AMM)"), false);
+assert.equal(matchesScoreType(universityResult("Todistusvalinta"), "AMK-valintakoe"), false);
+
+assert.equal(matchesScoreType(amkResult("Todistusvalinta (YO)"), "Todistusvalinta (YO)"), true);
+assert.equal(matchesScoreType(amkResult("Todistusvalinta"), "Todistusvalinta (YO)"), false);
+assert.equal(matchesScoreType(amkResult("Todistusvalinta (AMM)"), "Todistusvalinta (AMM)"), true);
+assert.equal(matchesScoreType(amkResult("AMK-valintakoe"), "AMK-valintakoe"), true);
+
+const duplicateUniversityResults = flattenScoreResults([
+  {
+    name: "Oulun yliopisto",
+    sector: "Yliopistokoulutus",
+    programmes: [
+      {
+        name: "Saksan kieli ja kulttuuri",
+        koulutusala: "Humanistiset ja taidealat",
+        cutoffs: [
+          { selectionMethod: "Todistusvalinta", score: 108.8, startYear: 2026, startSeason: "Syksy" },
+          { selectionMethod: "Todistusvalinta", score: 102.2, startYear: 2026, startSeason: "Syksy" },
+        ],
+      },
+    ],
+  },
+]);
+assert.equal(duplicateUniversityResults.length, 2);
+assert.notEqual(duplicateUniversityResults[0].id, duplicateUniversityResults[1].id);
 
 console.log("scoring.test.ts: OK");
