@@ -11,7 +11,7 @@ import ResultSelect from "./components/ResultSelect";
 import ScoreForm from "./components/ScoreForm";
 import ScoreResultCard from "./components/ScoreResultCard";
 import { AMM_MAX_SCORE } from "./lib/ammScoring";
-import { flattenScoreResults, type ScoreResult } from "./lib/scoreResults";
+import { flattenScoreResults, matchesScoreType, type ScoreResult } from "./lib/scoreResults";
 import { YO_MAX_SCORE } from "./lib/yoScoring";
 import type { ScoreType } from "./scoreTypes";
 
@@ -88,7 +88,7 @@ export default function ScoreCalculatorPage() {
   const groups = useMemo(() => {
     const byAla = new Map<string, ScoreResult[]>();
     for (const result of results) {
-      if (result.selectionMethod !== selectionMethod || !matchesSector(result, sectorFilter)) continue;
+      if (!matchesScoreType(result, selectionMethod) || !matchesSector(result, sectorFilter)) continue;
       const group = byAla.get(result.koulutusala) ?? [];
       group.push(result);
       byAla.set(result.koulutusala, group);
@@ -157,7 +157,7 @@ export default function ScoreCalculatorPage() {
               <Stack gap={4}>
                 {group.results.map((result) => (
                   <ScoreResultCard
-                    key={`${result.schoolName}::${result.programmeName}::${result.selectionMethod}`}
+                    key={result.id}
                     result={result}
                     roundLabel={roundLabel}
                     userScore={search?.score}

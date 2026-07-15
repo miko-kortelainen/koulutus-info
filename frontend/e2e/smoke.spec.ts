@@ -105,12 +105,16 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/pistelaskuri/");
   await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: /Pisteesi riittävät – \/ \d+ koulutukseen/ })).toBeVisible();
+  await expect(page.getByText(/Pisteesi riittävät – \/ \d+ koulutukseen/)).toBeVisible();
   await waitForCalculatorHydration(page);
   await expectSelectedOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
 
   await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
+  const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset ja taidealat/);
+  await expect(humanistisetAccordion.getByRole("article").getByText(/Todistusvalinta/).first()).toBeVisible();
+  await expect(humanistisetAccordion.getByRole("article").getByText("AMK-valintakoe", { exact: true })).toHaveCount(0);
+
   await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
   await expect(page.getByText("Ei koulutuksia valituilla rajauksilla.")).toBeVisible();
   await page.getByRole("tab", { name: "YO" }).click();
@@ -129,16 +133,33 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await expect(page.getByRole("article").getByText(/^– \/ /).first()).toBeVisible();
 
   await selectOption(page, "Järjestys", "Korkein pisteraja");
-  const cutoffScores = (await tekniikkaAccordion.getByRole("article").getByText(/^– \/ /).allTextContents()).map((text) =>
-    Number(text.split("/")[1].trim().replace(",", ".")),
-  );
-  expect(cutoffScores.length).toBeGreaterThan(1);
-  expect(cutoffScores).toEqual([...cutoffScores].sort((a, b) => b - a));
+  await expectSelectedOption(page, "Järjestys", "Korkein pisteraja");
+  await expect
+    .poll(async () => {
+      const cutoffScores = (await tekniikkaAccordion.getByRole("article").getByText(/^– \/ /).allTextContents()).map(
+        (text) => Number(text.split("/")[1].trim().replace(",", ".")),
+      );
+      return (
+        cutoffScores.length > 1 &&
+        cutoffScores.every((score, index) => index === 0 || cutoffScores[index - 1] >= score)
+      );
+    })
+    .toBe(true);
 
   await selectOption(page, "Järjestys", "A-Z");
-  const programmeNames = await tekniikkaAccordion.getByRole("article").getByRole("heading", { level: 3 }).allTextContents();
-  expect(programmeNames.length).toBeGreaterThan(1);
-  expect(programmeNames).toEqual([...programmeNames].sort((a, b) => a.localeCompare(b, "fi")));
+  await expectSelectedOption(page, "Järjestys", "A-Z");
+  await expect
+    .poll(async () => {
+      const programmeNames = await tekniikkaAccordion
+        .getByRole("article")
+        .getByRole("heading", { level: 3 })
+        .allTextContents();
+      return (
+        programmeNames.length > 1 &&
+        programmeNames.every((name, index) => index === 0 || programmeNames[index - 1].localeCompare(name, "fi") <= 0)
+      );
+    })
+    .toBe(true);
 
   await page.getByRole("tab", { name: "AMM" }).click();
   await expectSelectedOption(page, "Järjestys", "A-Z");
@@ -165,14 +186,14 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await page.getByRole("button", { name: "Laske pisteet" }).click();
 
   await expect(page.getByText("106 / 198")).toBeVisible();
-  await expect(page.getByRole("heading", { name: /koulutukseen/ })).toBeVisible();
+  await expect(page.getByText(/Pisteesi riittävät \d+ \/ \d+ koulutukseen/)).toBeVisible();
   await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
 
   await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
   await expect(page.getByRole("article").getByText(/^106 \/ /).first()).toBeVisible();
 
   await page.getByRole("tab", { name: "AMM" }).click();
-  await expect(page.getByRole("heading", { name: /Pisteesi riittävät – \/ \d+ koulutukseen/ })).toBeVisible();
+  await expect(page.getByText(/Pisteesi riittävät – \/ \d+ koulutukseen/)).toBeVisible();
   await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
 });
 
