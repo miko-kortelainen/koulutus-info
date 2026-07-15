@@ -217,14 +217,11 @@ export default function ScoreForm({
               size="sm"
             >
               <Checkbox.HiddenInput aria-describedby="first-time-applicant-help" />
-              <Checkbox.Control>
-                <Checkbox.Indicator />
+              <Checkbox.Control bg={COLORS.border} borderColor={COLORS.border}>
+                <Checkbox.Indicator bg={COLORS.accent} />
               </Checkbox.Control>
               <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
             </Checkbox.Root>
-            <Text color="fg.muted" fontSize="xs" id="first-time-applicant-help">
-              Käytämme ensikertalaisten pisterajaa, jos se on saatavilla.
-            </Text>
           </Stack>
 
           <Box display="flex" justifyContent="flex-end">
