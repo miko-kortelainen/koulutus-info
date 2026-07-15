@@ -81,9 +81,9 @@ export default function SchoolIndexPage() {
   return (
     <PageContainer>
       {header}
-      <SortControl onChange={setSortOrder} value={sortOrder} />
       <Tabs.Root defaultValue={SECTIONS[0].heading} size="sm">
         {tabList}
+        <SortControl onChange={setSortOrder} value={sortOrder} />
         {tabContent}
       </Tabs.Root>
     </PageContainer>

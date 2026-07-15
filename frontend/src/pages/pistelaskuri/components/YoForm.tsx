@@ -124,10 +124,17 @@ function ReaaliaineRow({ index, onRemove, onUpdate, reaaliaine }: ReaaliaineRowP
 export default function YoForm({ errors, onChange, value }: YoFormProps) {
   const nextId = useRef(0);
 
+  const getNextId = () => {
+    const highestId = [...value.kielet, ...value.reaaliaineet].reduce((highest, row) => Math.max(highest, row.id), -1);
+    const id = Math.max(nextId.current, highestId + 1);
+    nextId.current = id + 1;
+    return id;
+  };
+
   const addKieli = () =>
     onChange({
       ...value,
-      kielet: [...value.kielet, { id: nextId.current++, language: "", grade: "" }],
+      kielet: [...value.kielet, { id: getNextId(), language: "", grade: "" }],
     });
   const removeKieli = (id: number) => onChange({ ...value, kielet: value.kielet.filter((kieli) => kieli.id !== id) });
   const updateKieli = (id: number, patch: Partial<YoKieliRow>) =>
@@ -139,7 +146,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
   const addReaaliaine = () =>
     onChange({
       ...value,
-      reaaliaineet: [...value.reaaliaineet, { id: nextId.current++, subject: "", grade: "" }],
+      reaaliaineet: [...value.reaaliaineet, { id: getNextId(), subject: "", grade: "" }],
     });
   const removeReaaliaine = (id: number) =>
     onChange({ ...value, reaaliaineet: value.reaaliaineet.filter((reaaliaine) => reaaliaine.id !== id) });

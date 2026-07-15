@@ -1,29 +1,22 @@
-import { readCutoffSchools } from "@/api/loadData";
-import { isScoreType, type ScoreType } from "./scoreTypes";
+import { availableCutoffRounds, readCutoffSchools } from "@/api/loadData";
+import { type CutoffRound, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
+import { flattenScoreResults, type ScoreResult } from "./lib/scoreResults";
 
-export interface ScoreResult {
-  programmeName: string;
-  schoolName: string;
-  koulutusala: string;
-  score: number;
-  selectionMethod: ScoreType;
+export interface ScoreCalculatorPageData {
+  initialResults: ScoreResult[];
+  initialRound: CutoffRound;
+  rounds: CutoffRound[];
 }
 
-export const data = (): ScoreResult[] =>
-  readCutoffSchools().flatMap((school) =>
-    school.programmes.flatMap((programme) =>
-      programme.cutoffs.flatMap((cutoff) => {
-        if (!isScoreType(cutoff.selectionMethod)) return [];
+export const data = (): ScoreCalculatorPageData => {
+  const rounds = availableCutoffRounds();
+  if (!rounds.includes(DEFAULT_CUTOFF_ROUND)) {
+    throw new Error(`Default cutoff round ${DEFAULT_CUTOFF_ROUND} is not available`);
+  }
 
-        return [
-          {
-            programmeName: programme.name,
-            schoolName: school.name,
-            koulutusala: programme.koulutusala,
-            score: cutoff.score,
-            selectionMethod: cutoff.selectionMethod,
-          },
-        ];
-      }),
-    ),
-  );
+  return {
+    initialResults: flattenScoreResults(readCutoffSchools(DEFAULT_CUTOFF_ROUND)),
+    initialRound: DEFAULT_CUTOFF_ROUND,
+    rounds,
+  };
+};
