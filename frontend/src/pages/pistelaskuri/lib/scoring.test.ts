@@ -1,9 +1,9 @@
 // Run with: pnpm exec tsx src/pages/pistelaskuri/lib/scoring.test.ts
 import assert from "node:assert/strict";
-import { emptyAmmFormState, parseAmmForm } from "../components/AmmForm";
+import { type AmmFormState, emptyAmmFormState, isAmmFormState, parseAmmForm } from "../components/AmmForm";
 import { calculateAmmScore } from "./ammScoring";
 import { flattenScoreResults, matchesScoreType, type ScoreResult, selectApplicantResults } from "./scoreResults";
-import { emptyYoFormState, parseYoForm, type YoLanguageValue } from "./yoForm";
+import { emptyYoFormState, isYoFormState, parseYoForm, type YoLanguageValue } from "./yoForm";
 import { calculateYoScore } from "./yoScoring";
 
 // AMM: kolme yhteistä tutkinnon osaa 3+3+3 (asteikko 1-5) tuottavat 30 pistettä,
@@ -121,6 +121,8 @@ const completeYoForm = {
 const parsedYoForm = parseYoForm(completeYoForm);
 assert.ok("input" in parsedYoForm);
 assert.equal(calculateYoScore(parsedYoForm.input), 198);
+assert.equal(isYoFormState(completeYoForm), true);
+assert.equal(isYoFormState({ ...completeYoForm, aidinkieli: "H" }), false);
 
 const duplicateLanguageResult = parseYoForm({
   ...completeYoForm,
@@ -162,13 +164,16 @@ const duplicateSubjectResult = parseYoForm({
 if ("input" in duplicateSubjectResult) assert.fail("Duplicate real subject should fail validation.");
 assert.equal(duplicateSubjectResult.errors.reaaliaineet, "Saman reaaliaineen voi lisätä vain kerran.");
 
-const validAmmForm = parseAmmForm({
+const completeAmmForm: AmmFormState = {
   ...emptyAmmFormState(),
   grades: [5, 5, 5],
   keskiarvoInput: "5,00",
-});
+};
+const validAmmForm = parseAmmForm(completeAmmForm);
 assert.ok("input" in validAmmForm);
 assert.equal(calculateAmmScore(validAmmForm.input), 150);
+assert.equal(isAmmFormState(completeAmmForm), true);
+assert.equal(isAmmFormState({ ...completeAmmForm, scale: "bogus" }), false);
 
 const invalidAmmForm = parseAmmForm({ ...emptyAmmFormState(), keskiarvoInput: "5,01" });
 if ("input" in invalidAmmForm) assert.fail("Out-of-range average should fail validation.");

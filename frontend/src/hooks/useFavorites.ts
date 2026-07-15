@@ -6,10 +6,28 @@ const EMPTY: ToteutusEntry[] = [];
 const listeners = new Set<() => void>();
 let cache: ToteutusEntry[] | null = null;
 
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+const isLanguageStrings = (value: unknown) =>
+  isRecord(value) &&
+  [value.fi, value.sv, value.en].every((translation) => translation === undefined || typeof translation === "string");
+
+const isFavorite = (value: unknown): value is ToteutusEntry =>
+  isRecord(value) &&
+  typeof value.toteutusOid === "string" &&
+  isLanguageStrings(value.toteutusNimi) &&
+  isLanguageStrings(value.oppilaitosNimi) &&
+  Array.isArray(value.kunnat) &&
+  value.kunnat.every((kunta) => typeof kunta === "string");
+
 function readFromStorage(): ToteutusEntry[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : EMPTY;
+    if (!raw) return EMPTY;
+
+    const parsed: unknown = JSON.parse(raw);
+    return Array.isArray(parsed) && parsed.every(isFavorite) ? parsed : EMPTY;
   } catch {
     return EMPTY;
   }
@@ -33,7 +51,11 @@ function subscribe(onStoreChange: () => void) {
 
 function writeFavorites(next: ToteutusEntry[]) {
   cache = next;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+  } catch {
+    // Storage is optional; keep favorites usable for the current session if persistence is unavailable.
+  }
   listeners.forEach((listener) => {
     listener();
   });
