@@ -5,6 +5,7 @@ import type { ScoreResult } from "../lib/scoreResults";
 interface ScoreResultCardProps {
   roundLabel: string;
   result: ScoreResult;
+  showKoulutusala?: boolean;
   userScore?: number;
 }
 
@@ -12,7 +13,7 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
   maximumFractionDigits: 2,
 });
 
-export default function ScoreResultCard({ result, roundLabel, userScore }: ScoreResultCardProps) {
+export default function ScoreResultCard({ result, roundLabel, showKoulutusala, userScore }: ScoreResultCardProps) {
   const isQualified = userScore !== undefined && result.score <= userScore;
 
   return (
@@ -26,6 +27,11 @@ export default function ScoreResultCard({ result, roundLabel, userScore }: Score
             <Text color="fg.muted" fontSize="xs">
               {result.schoolName}
             </Text>
+            {showKoulutusala ? (
+              <Text color="fg.muted" fontSize="xs">
+                {result.koulutusala}
+              </Text>
+            ) : null}
             <Badge alignSelf="flex-start" border="1px solid" borderColor={COLORS.accent} size="sm" variant="surface">
               {result.selectionMethod}
             </Badge>

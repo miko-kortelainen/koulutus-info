@@ -1,15 +1,18 @@
 import { Accordion, Alert, Box, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
+import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { getCutoffSchools } from "@/api/api";
+import SearchInput from "@/components/SearchInput";
 import { cutoffRoundLabel, cutoffRoundShortLabel } from "@/config/cutoffRounds";
+import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
 import type { ScoreCalculatorPageData } from "./+data";
 import ResultSelect from "./components/ResultSelect";
 import ScoreForm from "./components/ScoreForm";
-import ScoreResultCard from "./components/ScoreResultCard";
+import ScoreResultList from "./components/ScoreResultList";
 import { AMM_MAX_SCORE } from "./lib/ammScoring";
 import { flattenScoreResults, matchesScoreType, type ScoreResult } from "./lib/scoreResults";
 import { YO_MAX_SCORE } from "./lib/yoScoring";
@@ -36,10 +39,22 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Z-A", value: "name_desc" },
 ];
 
-interface Search {
+interface Calculation {
   score: number;
   selectionMethod: ScoreType;
 }
+
+const FUSE_OPTIONS = {
+  keys: [
+    { name: "programmeName", weight: 2 },
+    { name: "schoolName", weight: 1 },
+    { name: "koulutusala", weight: 1 },
+  ],
+  threshold: 0.2,
+  ignoreLocation: true,
+  minMatchCharLength: 2,
+  useExtendedSearch: true,
+};
 
 const scoreFormatter = new Intl.NumberFormat("fi-FI", {
   maximumFractionDigits: 2,
@@ -71,11 +86,11 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
 export default function ScoreCalculatorPage() {
   const { initialResults, initialRound, rounds } = useData<ScoreCalculatorPageData>();
   const [selectionMethod, setSelectionMethod] = useState<ScoreType>("Todistusvalinta (YO)");
-  const [search, setSearch] = useState<Search | null>(null);
+  const [calculation, setCalculation] = useState<Calculation | null>(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const [round, setRound] = useState(initialRound);
   const [sectorFilter, setSectorFilter] = useState<SectorFilter>("all");
   const [sortOrder, setSortOrder] = useState<SortOption>("lowest_cutoff");
-  const [openGroups, setOpenGroups] = useState<string[]>([]);
   const cutoffQuery = useQuery({
     queryKey: ["cutoff-results", round],
     queryFn: async () => flattenScoreResults(await getCutoffSchools(round)),
@@ -84,11 +99,17 @@ export default function ScoreCalculatorPage() {
     gcTime: 10 * 60 * 1000,
   });
   const results = cutoffQuery.data ?? [];
-  const maxScore = search ? MAX_SCORE_BY_TYPE[search.selectionMethod] : undefined;
+  const maxScore = calculation ? MAX_SCORE_BY_TYPE[calculation.selectionMethod] : undefined;
+  const filteredResults = useMemo(
+    () =>
+      results
+        .filter((result) => matchesScoreType(result, selectionMethod) && matchesSector(result, sectorFilter))
+        .sort((a, b) => compareResults(a, b, sortOrder)),
+    [results, sectorFilter, selectionMethod, sortOrder],
+  );
   const groups = useMemo(() => {
     const byAla = new Map<string, ScoreResult[]>();
-    for (const result of results) {
-      if (!matchesScoreType(result, selectionMethod) || !matchesSector(result, sectorFilter)) continue;
+    for (const result of filteredResults) {
       const group = byAla.get(result.koulutusala) ?? [];
       group.push(result);
       byAla.set(result.koulutusala, group);
@@ -98,14 +119,26 @@ export default function ScoreCalculatorPage() {
       .sort(([a], [b]) => a.localeCompare(b, "fi"))
       .map(([koulutusala, alaResults]) => ({
         koulutusala,
-        results: alaResults.sort((a, b) => compareResults(a, b, sortOrder)),
-        qualifiedCount: search ? alaResults.filter((result) => result.score <= search.score).length : undefined,
+        results: alaResults,
+        qualifiedCount: calculation
+          ? alaResults.filter((result) => result.score <= calculation.score).length
+          : undefined,
       }));
-  }, [results, search, sectorFilter, selectionMethod, sortOrder]);
-  const totalCount = groups.reduce((sum, group) => sum + group.results.length, 0);
-  const qualifiedCount = groups.reduce((sum, group) => sum + (group.qualifiedCount ?? 0), 0);
+  }, [calculation, filteredResults]);
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+  const normalizedSearchTerm = debouncedSearchTerm.trim();
+  const resultFuse = useMemo(() => new Fuse(filteredResults, FUSE_OPTIONS), [filteredResults]);
+  const searchResults = useMemo(() => {
+    if (!normalizedSearchTerm) return [];
+
+    const matchingIds = new Set(resultFuse.search(normalizedSearchTerm).map(({ item }) => item.id));
+    return filteredResults.filter((result) => matchingIds.has(result.id));
+  }, [filteredResults, normalizedSearchTerm, resultFuse]);
+  const totalCount = filteredResults.length;
+  const qualifiedCount = calculation ? filteredResults.filter((result) => result.score <= calculation.score).length : 0;
   const roundLabel = cutoffRoundShortLabel(round);
-  const displayedQualifiedCount = cutoffQuery.isSuccess && search ? qualifiedCount : "–";
+  const resultListKey = [round, selectionMethod, sectorFilter, sortOrder].join(":");
+  const displayedQualifiedCount = cutoffQuery.isSuccess && calculation ? qualifiedCount : "–";
   const displayedTotalCount = cutoffQuery.isSuccess ? totalCount : "–";
 
   const header = (
@@ -121,14 +154,7 @@ export default function ScoreCalculatorPage() {
   );
 
   const resultAccordion = (
-    <Accordion.Root
-      collapsible
-      lazyMount
-      multiple
-      onValueChange={(details) => setOpenGroups(details.value)}
-      size="md"
-      value={openGroups}
-    >
+    <Accordion.Root collapsible lazyMount multiple size="md">
       {groups.map((group) => (
         <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
           <Accordion.ItemTrigger>
@@ -154,22 +180,36 @@ export default function ScoreCalculatorPage() {
           </Accordion.ItemTrigger>
           <Accordion.ItemContent>
             <Accordion.ItemBody maxH="60vh" overflowY="auto">
-              <Stack gap={4}>
-                {group.results.map((result) => (
-                  <ScoreResultCard
-                    key={result.id}
-                    result={result}
-                    roundLabel={roundLabel}
-                    userScore={search?.score}
-                  />
-                ))}
-              </Stack>
+              <ScoreResultList
+                key={`${resultListKey}:${group.koulutusala}`}
+                results={group.results}
+                roundLabel={roundLabel}
+                userScore={calculation?.score}
+              />
             </Accordion.ItemBody>
           </Accordion.ItemContent>
         </Accordion.Item>
       ))}
     </Accordion.Root>
   );
+
+  const searchResultContent =
+    searchResults.length === 0 ? (
+      <Text>Ei tuloksia hakusanalla “{normalizedSearchTerm}”.</Text>
+    ) : (
+      <Stack gap={3}>
+        <Text aria-live="polite" color="fg.muted" fontSize="sm">
+          {searchResults.length} {searchResults.length === 1 ? "hakutulos" : "hakutulosta"}
+        </Text>
+        <ScoreResultList
+          key={`${resultListKey}:${normalizedSearchTerm}`}
+          results={searchResults}
+          roundLabel={roundLabel}
+          showKoulutusala
+          userScore={calculation?.score}
+        />
+      </Stack>
+    );
 
   const resultContent = cutoffQuery.isPending ? (
     <Text role="status">Pisterajoja ladataan…</Text>
@@ -178,8 +218,10 @@ export default function ScoreCalculatorPage() {
       <Alert.Indicator />
       <Alert.Title>Pisterajojen lataaminen epäonnistui.</Alert.Title>
     </Alert.Root>
-  ) : groups.length === 0 ? (
+  ) : filteredResults.length === 0 ? (
     <Text>Ei koulutuksia valituilla rajauksilla.</Text>
+  ) : normalizedSearchTerm ? (
+    searchResultContent
   ) : (
     resultAccordion
   );
@@ -189,11 +231,11 @@ export default function ScoreCalculatorPage() {
       <Stack aria-live="polite" gap={1}>
         <Box border={`1px solid ${COLORS.accent}`} borderRadius={8} p={4}>
           <Heading as="h2" size="lg" textAlign="center">
-            {search ? (
+            {calculation ? (
               maxScore ? (
                 <>
                   <Text as="span" color={COLORS.accent}>
-                    {scoreFormatter.format(search.score)}
+                    {scoreFormatter.format(calculation.score)}
                   </Text>{" "}
                   /{" "}
                   <Text as="span" color="fg.muted">
@@ -204,7 +246,7 @@ export default function ScoreCalculatorPage() {
               ) : (
                 <>
                   <Text as="span" color={COLORS.accent}>
-                    {scoreFormatter.format(search.score)}
+                    {scoreFormatter.format(calculation.score)}
                   </Text>{" "}
                   pistettä
                 </>
@@ -244,6 +286,7 @@ export default function ScoreCalculatorPage() {
           />
         </Box>
       </Stack>
+      <SearchInput onChange={setSearchTerm} placeholder="Hae koulutusta tai korkeakoulua" value={searchTerm} />
       {resultContent}
     </Stack>
   );
@@ -254,10 +297,10 @@ export default function ScoreCalculatorPage() {
       <ScoreForm
         onModeChange={(nextSelectionMethod) => {
           setSelectionMethod(nextSelectionMethod);
-          setSearch(null);
+          setCalculation(null);
         }}
         onSubmit={(selectionMethod, score) => {
-          setSearch({ score, selectionMethod });
+          setCalculation({ score, selectionMethod });
         }}
       />
 
