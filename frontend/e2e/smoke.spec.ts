@@ -110,9 +110,26 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await expectSelectedOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
 
+  const resultSearch = page.getByRole("textbox", { name: "Hae koulutusta tai korkeakoulua" });
+  await resultSearch.fill("Aalto-yliopisto");
+  await expect(page.getByText(/\d+ hakutulosta/)).toBeVisible();
+  await expect(page.getByText("Kauppa, hallinto ja oikeustieteet").first()).toBeVisible();
+  await expect(page.getByText("Tietojenkäsittely ja tietoliikenne (ICT)").first()).toBeVisible();
+  await expect(page.getByRole("button", { name: /Humanistiset ja taidealat/ })).toHaveCount(0);
+  await resultSearch.clear();
+
   await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
   const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset ja taidealat/);
-  await expect(humanistisetAccordion.getByRole("article").getByText(/Todistusvalinta/).first()).toBeVisible();
+  await expect(humanistisetAccordion.getByRole("article")).toHaveCount(20);
+  await expect(humanistisetAccordion.getByText(/Näytetään 20 \/ \d+/)).toBeVisible();
+  await humanistisetAccordion.getByRole("button", { name: "Näytä lisää" }).click();
+  await expect(humanistisetAccordion.getByRole("article")).toHaveCount(40);
+  await expect(
+    humanistisetAccordion
+      .getByRole("article")
+      .getByText(/Todistusvalinta/)
+      .first(),
+  ).toBeVisible();
   await expect(humanistisetAccordion.getByRole("article").getByText("AMK-valintakoe", { exact: true })).toHaveCount(0);
 
   await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
