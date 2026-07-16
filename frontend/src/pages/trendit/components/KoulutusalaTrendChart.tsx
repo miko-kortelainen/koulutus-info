@@ -1,5 +1,5 @@
 import { ChartRoot, ChartTooltip, useChart } from "@chakra-ui/charts";
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 import { numberFormat } from "@/components/hakijapaineTier";
 import type { TrendPoint } from "../+data";
 
@@ -16,22 +16,25 @@ export default function KoulutusalaTrendChart({ chartData, color }: KoulutusalaT
 
   return (
     <ChartRoot chart={chart} h="150px">
-      <ResponsiveContainer height="100%" width="100%">
-        <LineChart data={chart.data} margin={{ top: 10, right: 8, left: 16 }}>
-          <CartesianGrid stroke="var(--chakra-colors-border-subtle)" strokeDasharray="3 3" />
-          <XAxis dataKey="year" tick={{ fontSize: 12 }} />
-          <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => numberFormat.format(v)} width={32} />
-          <Tooltip content={<ChartTooltip />} />
-          <Line
-            activeDot={{ r: 6 }}
-            dataKey="total"
-            dot={{ r: 2, fill: chart.color(color) }}
-            stroke={chart.color(color)}
-            strokeWidth={2}
-            type="linear"
-          />
-        </LineChart>
-      </ResponsiveContainer>
+      <LineChart
+        data={chart.data}
+        margin={{ top: 10, right: 8, left: 16 }}
+        responsive
+        style={{ height: "100%", width: "100%" }}
+      >
+        <CartesianGrid stroke="var(--chakra-colors-border-subtle)" strokeDasharray="3 3" />
+        <XAxis dataKey="year" tick={{ fontSize: 12 }} />
+        <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => numberFormat.format(v)} width={32} />
+        <Tooltip content={<ChartTooltip />} />
+        <Line
+          activeDot={{ r: 6 }}
+          dataKey="total"
+          dot={{ r: 2, fill: chart.color(color) }}
+          stroke={chart.color(color)}
+          strokeWidth={2}
+          type="linear"
+        />
+      </LineChart>
     </ChartRoot>
   );
 }

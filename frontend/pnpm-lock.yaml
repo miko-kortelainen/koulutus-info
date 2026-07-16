@@ -41,9 +41,6 @@ importers:
       vike-react:
         specifier: ^0.6.24
         version: 0.6.24(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(vike@0.4.259(react-streaming@0.4.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(srvx@0.11.17)(vite@8.0.11(@types/node@24.12.3)(esbuild@0.28.1)(tsx@4.22.4)))
-      vike-react-chakra:
-        specifier: ^1.0.3
-        version: 1.0.3(@chakra-ui/react@3.35.0(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.6))(react@19.2.6)(vike-react@0.6.24(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(vike@0.4.259(react-streaming@0.4.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(srvx@0.11.17)(vite@8.0.11(@types/node@24.12.3)(esbuild@0.28.1)(tsx@4.22.4))))
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.3
@@ -1657,14 +1654,6 @@ packages:
 
   victory-vendor@37.3.6:
     resolution: {integrity: sha512-SbPDPdDBYp+5MJHhBCAyI7wKM3d5ivekigc2Dk2s7pgbZ9wIgIBYGVw4zGHBml/qTFbexrofXW6Gu4noGxrOwQ==}
-
-  vike-react-chakra@1.0.3:
-    resolution: {integrity: sha512-5Y9GuvA+S58gS+fJCkXa7Vyi0A3226qsBBuU48z/YKft50Rlc7a0u3pa2MQvvsLU56ZKhRMMKDOtxBWmG85wrg==}
-    peerDependencies:
-      '@chakra-ui/react': '>=3'
-      '@emotion/react': '>=11'
-      react: '>=18'
-      vike-react: '>=0.4.13'
 
   vike-react@0.6.24:
     resolution: {integrity: sha512-IoZ1Owlhc1muhHDdqOvqjchT8gcMmWvYWPdatU/aSY7qr/PPhp63+Bj0SPZgl5F3k3YWEZVmbGwsiPP8r3wy9A==}
@@ -3553,13 +3542,6 @@ snapshots:
       d3-shape: 3.2.0
       d3-time: 3.1.0
       d3-timer: 3.0.1
-
-  vike-react-chakra@1.0.3(@chakra-ui/react@3.35.0(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.6))(react@19.2.6)(vike-react@0.6.24(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(vike@0.4.259(react-streaming@0.4.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(srvx@0.11.17)(vite@8.0.11(@types/node@24.12.3)(esbuild@0.28.1)(tsx@4.22.4)))):
-    dependencies:
-      '@chakra-ui/react': 3.35.0(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@emotion/react': 11.14.0(@types/react@19.2.14)(react@19.2.6)
-      react: 19.2.6
-      vike-react: 0.6.24(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(vike@0.4.259(react-streaming@0.4.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(srvx@0.11.17)(vite@8.0.11(@types/node@24.12.3)(esbuild@0.28.1)(tsx@4.22.4)))
 
   vike-react@0.6.24(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(vike@0.4.259(react-streaming@0.4.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(srvx@0.11.17)(vite@8.0.11(@types/node@24.12.3)(esbuild@0.28.1)(tsx@4.22.4))):
     dependencies:

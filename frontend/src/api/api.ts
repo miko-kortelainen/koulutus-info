@@ -3,26 +3,18 @@ import type { YearOption } from "@/config/yearOptions";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { Meta, SchoolsResponse, StatisticsResponse } from "../types.gen";
 
-export async function getCutoffSchools(round: CutoffRound): Promise<CutoffSchool[]> {
-  const res = await fetch(`/data/pisterajat-${round}.json`);
-  if (!res.ok) throw new Error("failed to fetch cutoff data");
+async function fetchJson<T>(url: string, error: string): Promise<T> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(error);
   return res.json();
 }
 
-export async function getStatistics(year: YearOption): Promise<StatisticsResponse> {
-  const res = await fetch(`/data/statistics-${year}.json`);
-  if (!res.ok) throw new Error("failed to fetch statistics");
-  return res.json();
-}
+export const getCutoffSchools = (round: CutoffRound) =>
+  fetchJson<CutoffSchool[]>(`/data/pisterajat-${round}.json`, "failed to fetch cutoff data");
 
-export async function getSchools(): Promise<SchoolsResponse> {
-  const res = await fetch("/data/schools.json");
-  if (!res.ok) throw new Error("failed to fetch schools");
-  return res.json();
-}
+export const getStatistics = (year: YearOption) =>
+  fetchJson<StatisticsResponse>(`/data/statistics-${year}.json`, "failed to fetch statistics");
 
-export async function getMeta(): Promise<Meta> {
-  const res = await fetch("/data/meta.json");
-  if (!res.ok) throw new Error("failed to fetch meta");
-  return res.json();
-}
+export const getSchools = () => fetchJson<SchoolsResponse>("/data/schools.json", "failed to fetch schools");
+
+export const getMeta = () => fetchJson<Meta>("/data/meta.json", "failed to fetch meta");
