@@ -42,15 +42,13 @@ export const readPublicData = (file: string) => {
 
 export const readCurrentYearStatistics = (): StatisticsResponse => readPublicData(`statistics-${CURRENT_YEAR}.json`);
 
-export type PisterajatResponse = CutoffSchool[];
-
 export const availableCutoffRounds = (): CutoffRound[] =>
   fs
     .readdirSync(`${process.cwd()}/public/data`)
     .flatMap((filename) => cutoffRoundFromFilename(filename) ?? [])
     .sort(compareCutoffRounds);
 
-export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): PisterajatResponse =>
+export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): CutoffSchool[] =>
   readPublicData(`pisterajat-${round}.json`);
 
 export const cutoffSchoolNames = (): string[] => {

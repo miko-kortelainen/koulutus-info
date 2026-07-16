@@ -228,6 +228,15 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
 });
 
 test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
+  await page.addInitScript(() => {
+    if (sessionStorage.getItem("pistelaskuri-storage-initialized")) return;
+
+    sessionStorage.setItem("pistelaskuri-storage-initialized", "true");
+    localStorage.setItem(
+      "yhteishaku:pistelaskuri",
+      JSON.stringify({ version: 1, amm: { scale: "bogus", grades: [1, 1, 1], keskiarvoInput: "2" } }),
+    );
+  });
   await page.goto("/pistelaskuri/");
   await waitForCalculatorHydration(page);
 
@@ -281,6 +290,10 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
   await page.goto("/hakijamaarat");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
+  await page.getByRole("button", { name: "Kunta" }).click();
+  await page.getByRole("option", { name: "Sotkamo", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Kunta (1)" })).toBeVisible();
+
   // 2025 is a fixed past year in the static YEAR_OPTIONS list (yearOptions.ts), stable regardless of "current" year
   await page.getByRole("combobox", { name: "Vuosi" }).click();
   const [response] = await Promise.all([
@@ -289,6 +302,8 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
   ]);
   expect(response.status()).toBe(200);
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByRole("button", { name: "Kunta", exact: true })).toBeVisible();
+  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
 });
 
 test("/hakijamaarat: koulu filter narrows results", async ({ page }) => {
@@ -335,6 +350,12 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
 });
 
 test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears it", async ({ page }) => {
+  await page.addInitScript(() => {
+    if (sessionStorage.getItem("favorites-storage-initialized")) return;
+
+    sessionStorage.setItem("favorites-storage-initialized", "true");
+    localStorage.setItem("yhteishaku:tallennetut", "{}");
+  });
   await page.goto("/koulutukset");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
@@ -466,4 +487,11 @@ test("/trendit: loads trend cards", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Suosituimmat korkeakoulut" })).toBeVisible();
   // "Hakijaa" column header renders only after skeletons are replaced by data
   await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
+
+  await page.route("**/statistics-2025.json", (route) =>
+    route.fulfill({ status: 500, contentType: "application/json", body: "{}" }),
+  );
+  await selectOption(page, "Vertailuvuosi", "Tilastovuosi 2025");
+  await expect(page.getByText("Vertailutietojen lataaminen epäonnistui.")).toBeVisible({ timeout: 15000 });
+  await expect(page.getByText("uusi", { exact: true })).toHaveCount(0);
 });

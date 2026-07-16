@@ -27,7 +27,7 @@ const ItemCheckmark = () => {
   return <Checkmark checked={selected} disabled={disabled} filled size="sm" />;
 };
 
-export interface FilterItemProps {
+interface FilterItemProps {
   value: string;
   label: string;
   collection: ListCollection<{ label: string; value: string }>;
