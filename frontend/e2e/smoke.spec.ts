@@ -154,24 +154,35 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
   expect((await roundResponse).status()).toBe(200);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
-  await expect(tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (syksy 2025)").first()).toBeVisible();
+  await expect(
+    tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (syksy 2025)").first(),
+  ).toBeVisible();
 
   await selectOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
-  await expect(tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (kevät 2026)").first()).toBeVisible();
+  await expect(
+    tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (kevät 2026)").first(),
+  ).toBeVisible();
 
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
-  await expect(page.getByRole("article").getByText(/^– \/ /).first()).toBeVisible();
+  await expect(
+    page
+      .getByRole("article")
+      .getByText(/^– \/ /)
+      .first(),
+  ).toBeVisible();
 
   await selectOption(page, "Järjestys", "Korkein pisteraja");
   await expectSelectedOption(page, "Järjestys", "Korkein pisteraja");
   await expect
     .poll(async () => {
-      const cutoffScores = (await tekniikkaAccordion.getByRole("article").getByText(/^– \/ /).allTextContents()).map(
-        (text) => Number(text.split("/")[1].trim().replace(",", ".")),
-      );
+      const cutoffScores = (
+        await tekniikkaAccordion
+          .getByRole("article")
+          .getByText(/^– \/ /)
+          .allTextContents()
+      ).map((text) => Number(text.split("/")[1].trim().replace(",", ".")));
       return (
-        cutoffScores.length > 1 &&
-        cutoffScores.every((score, index) => index === 0 || cutoffScores[index - 1] >= score)
+        cutoffScores.length > 1 && cutoffScores.every((score, index) => index === 0 || cutoffScores[index - 1] >= score)
       );
     })
     .toBe(true);
@@ -220,7 +231,12 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
 
   await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
-  await expect(page.getByRole("article").getByText(/^106 \/ /).first()).toBeVisible();
+  await expect(
+    page
+      .getByRole("article")
+      .getByText(/^106 \/ /)
+      .first(),
+  ).toBeVisible();
 
   await page.getByRole("tab", { name: "AMM" }).click();
   await expect(page.getByText(/Pisteesi riittävät – \/ \d+ toteutukseen/)).toBeVisible();
