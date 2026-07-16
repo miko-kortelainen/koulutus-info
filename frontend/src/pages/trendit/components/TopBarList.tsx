@@ -101,7 +101,17 @@ export default function TopBarList({
               <Text fontSize="sm" lineClamp={1} mb={1}>
                 {name}
               </Text>
-              <Box bg={color} borderRadius="sm" h={BAR_H} width={`${(item.value / maxValue) * 100}%`} />
+              <Box
+                aria-label={name}
+                aria-valuemax={maxValue}
+                aria-valuemin={0}
+                aria-valuenow={item.value}
+                bg={color}
+                borderRadius="sm"
+                h={BAR_H}
+                role="meter"
+                width={`${(item.value / maxValue) * 100}%`}
+              />
             </Box>
             <Text flexShrink={0} fontSize="sm" textAlign="right" w="16">
               {numberFormat.format(item.value)}
