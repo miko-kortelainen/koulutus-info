@@ -26,10 +26,14 @@ const COUNT_ROWS = [
 
 function TrendIcon({ trend }: { trend: Trend }) {
   if (!trend) return null;
-  return trend === "up" ? (
-    <HiOutlineArrowCircleUp color="var(--chakra-colors-green-fg)" />
-  ) : (
-    <HiOutlineArrowCircleDown color="var(--chakra-colors-red-fg)" />
+  return (
+    <span aria-label={trend === "up" ? "Suurempi arvo" : "Pienempi arvo"} role="img">
+      {trend === "up" ? (
+        <HiOutlineArrowCircleUp color="var(--chakra-colors-green-fg)" />
+      ) : (
+        <HiOutlineArrowCircleDown color="var(--chakra-colors-red-fg)" />
+      )}
+    </span>
   );
 }
 

@@ -40,7 +40,7 @@ export default function TopBarList({
   }
 
   const sorted = [...data].sort((a, b) => b.value - a.value);
-  const maxValue = sorted[0]?.value ?? 1;
+  const maxValue = Math.max(sorted[0]?.value ?? 0, 1);
   const total = sorted.reduce((sum, d) => sum + d.value, 0);
 
   const compareValueMap = compareData ? new Map(compareData.map((item) => [item.name, item.value])) : null;
@@ -141,7 +141,7 @@ export default function TopBarList({
                   textAlign="right"
                   w="16"
                 >
-                  {((item.value / total) * 100).toFixed(1)} %
+                  {total > 0 ? `${((item.value / total) * 100).toFixed(1)} %` : "–"}
                 </Text>
               )
             )}
