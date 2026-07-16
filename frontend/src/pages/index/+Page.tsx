@@ -23,7 +23,10 @@ export default function LandingPage() {
           <Group flexDir="column">
             <Image alt="yhteishaku.app" boxSize={{ base: "16", md: "28" }} src="/images/logo.png" />
             <Heading as="h1" fontWeight="bold" letterSpacing="widest" size={{ base: "3xl", md: "5xl" }}>
-              yhteishaku.app
+              yhteishaku
+              <Text as="span" color="accent">
+                .app
+              </Text>
             </Heading>
           </Group>
 
