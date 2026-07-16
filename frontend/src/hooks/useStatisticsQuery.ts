@@ -3,18 +3,14 @@ import { getStatistics } from "@/api/api";
 import type { YearOption } from "@/config/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 
-export const statisticsQueryOptions = (year: YearOption, initialData?: StatisticsResponse) => ({
-  queryKey: ["statistics", year],
-  queryFn: () => getStatistics(year),
-  initialData,
-  placeholderData: keepPreviousData,
-  staleTime: Infinity,
-  gcTime: 10 * 60 * 1000,
-});
-
 export default function useStatisticsQuery(year: YearOption, initialData?: StatisticsResponse, enabled = true) {
   return useQuery<StatisticsResponse>({
-    ...statisticsQueryOptions(year, initialData),
+    queryKey: ["statistics", year],
+    queryFn: () => getStatistics(year),
+    initialData,
+    placeholderData: keepPreviousData,
+    staleTime: Infinity,
+    gcTime: 10 * 60 * 1000,
     enabled,
     refetchOnWindowFocus: false,
   });

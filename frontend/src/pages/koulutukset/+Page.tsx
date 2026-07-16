@@ -1,6 +1,8 @@
 import { Accordion, Alert, Checkbox, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
+import { getSchools } from "@/api/api";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
@@ -10,7 +12,6 @@ import PageContainer from "@/layout/PageContainer";
 import type { SchoolsResponse } from "@/types.gen";
 import SchoolCardSkeleton from "./components/SchoolCardSkeleton";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
-import useSchoolsQuery from "./hooks/useSchoolsQuery";
 
 const PAGE_SIZE = 10;
 
@@ -27,7 +28,15 @@ export default function SchoolsListPage() {
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
   const [showYlempiAmk, setShowYlempiAmk] = useState(false);
-  const query = useSchoolsQuery(ssrData);
+  const query = useQuery<SchoolsResponse>({
+    queryKey: ["schools"],
+    queryFn: () => getSchools(),
+    initialData: ssrData,
+    refetchOnWindowFocus: false,
+    staleTime: Infinity,
+    gcTime: 10 * 60 * 1000,
+    retry: false,
+  });
   const toteutukset = useMemo(
     () =>
       query.data?.flatMap((k) =>

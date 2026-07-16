@@ -1,8 +1,16 @@
 import { Box, Link, Stack, Text } from "@chakra-ui/react";
-import useMetaQuery from "@/hooks/useMetaQuery";
+import { useQuery } from "@tanstack/react-query";
+import { getMeta } from "@/api/api";
 
 export default function Footer() {
-  const { data } = useMetaQuery();
+  const { data } = useQuery({
+    queryKey: ["meta"],
+    queryFn: getMeta,
+    staleTime: Infinity,
+    gcTime: 10 * 60 * 1000,
+    retry: false,
+    refetchOnWindowFocus: false,
+  });
   const formatDate = (date: string) => new Date(date).toLocaleDateString("fi-FI");
 
   return (
