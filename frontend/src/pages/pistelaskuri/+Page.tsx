@@ -336,7 +336,7 @@ export default function ScoreCalculatorPage() {
 
       {resultList}
 
-      <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={8} textWrap="pretty">
+      <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
         Huom. Pisterajat ovat suuntaa-antavia. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. <br />
         Pisterajojen tiedot ovat peräisin virallisen opetushallituksen Vipunen.fi- palvelusta.
       </Text>

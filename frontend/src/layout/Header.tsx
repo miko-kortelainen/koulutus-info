@@ -1,4 +1,4 @@
-import { Box, CloseButton, Drawer, HStack, IconButton, Link, Portal, Separator, Stack, Text } from "@chakra-ui/react";
+import { Box, CloseButton, Drawer, HStack, IconButton, Image, Link, Portal, Stack, Text } from "@chakra-ui/react";
 import {
   HiMenu,
   HiOutlineAcademicCap,
@@ -56,8 +56,27 @@ const links = [
 export default function Header() {
   return (
     <Box as="header">
-      <HStack gap={2} px={2}>
-        <Drawer.Root placement="start" size={{ base: "full", md: "xs" }}>
+      <HStack gap={2} justifyContent="space-between" px={2} py={1}>
+        <Link
+          _hover={{ textDecoration: "none" }}
+          alignItems="center"
+          display="flex"
+          fontWeight="bold"
+          gap={2}
+          href="/"
+          letterSpacing="widest"
+          ml={3}
+        >
+          <Image alt="" boxSize={6} src="/images/logo.png" />
+          <Text as="span" fontSize="md">
+            yhteishaku
+            <Text as="span" color="accent">
+              .app
+            </Text>
+          </Text>
+        </Link>
+
+        <Drawer.Root placement="end" size={{ base: "full", md: "xs" }}>
           <Drawer.Trigger asChild>
             <IconButton aria-label="avaa navigointi" size="xl" variant="ghost">
               <HiMenu />
@@ -69,7 +88,10 @@ export default function Header() {
               <Drawer.Content>
                 <Drawer.Header>
                   <Drawer.Title fontWeight="bold" letterSpacing="widest">
-                    yhteishaku.app
+                    yhteishaku
+                    <Text as="span" color="accent">
+                      .app
+                    </Text>
                   </Drawer.Title>
                 </Drawer.Header>
                 <Drawer.Body>
@@ -108,19 +130,7 @@ export default function Header() {
             </Drawer.Positioner>
           </Portal>
         </Drawer.Root>
-
-        <Link
-          _hover={{ textDecoration: "none" }}
-          display="flex"
-          fontWeight="bold"
-          gap={2}
-          href="/"
-          letterSpacing="widest"
-        >
-          yhteishaku.app
-        </Link>
       </HStack>
-      <Separator />
     </Box>
   );
 }

@@ -4,7 +4,7 @@ import PageContainer from "../../layout/PageContainer";
 export default function TietosuojaselosteePage() {
   return (
     <PageContainer align="flex-start">
-      <Stack gap={6} py={8}>
+      <Stack fontSize="sm" gap={6} py={8}>
         <Heading as="h1" size="2xl">
           Tietosuojaseloste
         </Heading>
@@ -22,32 +22,45 @@ export default function TietosuojaselosteePage() {
 
         <Stack gap={2}>
           <Heading size="md">Henkilötietojen käsittely</Heading>
-          <Text>Yhteishaku.app ei kerää henkilötietoja eikä käytä markkinointipalveluita.</Text>
+          <Text>Yhteishaku.app ei pyydä käyttäjältä nimeä tai yhteystietoja eikä käytä markkinointipalveluita.</Text>
           <Text>
             Verkkopalvelun teknisestä toimittamisesta vastaavat GitHub Pages ja Cloudflare, jotka voivat käsitellä
             esimerkiksi IP-osoitteita ja muita teknisiä tietoja palvelun tarjoamiseksi ja tietoturvan varmistamiseksi.
           </Text>
+        </Stack>
+
+        <Stack gap={2}>
+          <Heading size="md">Analytiikka</Heading>
+          <Text>Yhteishaku.app käyttää kävijämäärien seurantaan:</Text>
+          <Stack as="ul" gap={1} listStyleType="disc" pl={4}>
+            <li>
+              <Link
+                color="blue.500"
+                href="https://www.cloudflare.com/web-analytics/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Cloudflare Web Analytics
+              </Link>
+            </li>
+            <li>
+              <Link color="blue.500" href="https://www.simpleanalytics.com" rel="noopener noreferrer" target="_blank">
+                Simple Analytics
+              </Link>
+            </li>
+          </Stack>
+          <Text>Tutustu palveluiden tietosuojakäytäntöihin niiden omilla sivuilla.</Text>
+        </Stack>
+
+        <Stack gap={2}>
+          <Heading size="md">Palaute</Heading>
           <Text>
-            Palvelu käyttää{" "}
-            <Link
-              color="blue.500"
-              href="https://www.cloudflare.com/web-analytics/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Cloudflare Web Analyticsia
-            </Link>{" "}
-            kävijätilastojen seurantaan. <br />
-            Cloudflare kerää tietoa kuten sivulatausmäärät ja selaintyypit ilman evästeitä tai yksilöivien tunnisteiden
-            tallentamista.
-          </Text>
-          <Text>
-            Palvelu käyttää myös{" "}
-            <Link color="blue.500" href="https://www.simpleanalytics.com" rel="noopener noreferrer" target="_blank">
-              Simple Analyticsia
-            </Link>{" "}
-            kävijätilastojen seurantaan. <br />
-            Simple Analytics ei käytä evästeitä eikä kerää henkilötietoja tai yksilöiviä tunnisteita.
+            Palautelomake käyttää{" "}
+            <Link color="blue.500" href="https://formsubmit.co" rel="noopener noreferrer" target="_blank">
+              FormSubmit-palvelua
+            </Link>
+            . Kun lähetät palautteen, lomakkeeseen kirjoittamasi sisältö välitetään FormSubmitin kautta palvelun
+            ylläpitäjän sähköpostiin. Älä kirjoita palautteeseen tarpeettomia henkilötietoja.
           </Text>
         </Stack>
 

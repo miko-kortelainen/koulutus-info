@@ -12,12 +12,7 @@ interface ScoreResultListProps {
   userScore?: number;
 }
 
-export default function ScoreResultList({
-  results,
-  roundLabel,
-  showKoulutusala,
-  userScore,
-}: ScoreResultListProps) {
+export default function ScoreResultList({ results, roundLabel, showKoulutusala, userScore }: ScoreResultListProps) {
   const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
   const visibleResults = results.slice(0, visibleCount);
   const hasMore = visibleResults.length < results.length;

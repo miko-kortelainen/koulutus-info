@@ -40,7 +40,7 @@ export default function TopBarList({
   }
 
   const sorted = [...data].sort((a, b) => b.value - a.value);
-  const maxValue = sorted[0]?.value ?? 1;
+  const maxValue = Math.max(sorted[0]?.value ?? 0, 1);
   const total = sorted.reduce((sum, d) => sum + d.value, 0);
 
   const compareValueMap = compareData ? new Map(compareData.map((item) => [item.name, item.value])) : null;
@@ -101,7 +101,17 @@ export default function TopBarList({
               <Text fontSize="sm" lineClamp={1} mb={1}>
                 {name}
               </Text>
-              <Box bg={color} borderRadius="sm" h={BAR_H} width={`${(item.value / maxValue) * 100}%`} />
+              <Box
+                aria-label={name}
+                aria-valuemax={maxValue}
+                aria-valuemin={0}
+                aria-valuenow={item.value}
+                bg={color}
+                borderRadius="sm"
+                h={BAR_H}
+                role="meter"
+                width={`${(item.value / maxValue) * 100}%`}
+              />
             </Box>
             <Text flexShrink={0} fontSize="sm" textAlign="right" w="16">
               {numberFormat.format(item.value)}
@@ -141,7 +151,7 @@ export default function TopBarList({
                   textAlign="right"
                   w="16"
                 >
-                  {((item.value / total) * 100).toFixed(1)} %
+                  {total > 0 ? `${((item.value / total) * 100).toFixed(1)} %` : "–"}
                 </Text>
               )
             )}

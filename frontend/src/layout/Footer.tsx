@@ -1,32 +1,40 @@
-import { Box, Link, Stack, Text } from "@chakra-ui/react";
-import { useQuery } from "@tanstack/react-query";
-import { getMeta } from "@/api/api";
+import { Box, Flex, HStack, Image, Link, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+
+const FOOTER_LINKS = [
+  ["Pistelaskuri", "/pistelaskuri/"],
+  ["Koulutukset", "/koulutukset/"],
+  ["UKK", "/ukk/"],
+  ["Tietosuojaseloste", "/tietosuojaseloste/"],
+  ["Koulut", "/koulut/"],
+  ["Anna palautetta", "/palaute/"],
+] as const;
 
 export default function Footer() {
-  const { data } = useQuery({
-    queryKey: ["meta"],
-    queryFn: getMeta,
-    staleTime: Infinity,
-    gcTime: 10 * 60 * 1000,
-    retry: false,
-    refetchOnWindowFocus: false,
-  });
-  const formatDate = (date: string) => new Date(date).toLocaleDateString("fi-FI");
-
   return (
-    <Box as="footer" p={2} textAlign="center">
-      <Stack alignItems="center" gap={1}>
-        <Link color="gray" fontSize={{ base: "2xs", md: "xs" }} href="/tietosuojaseloste/">
-          Tietosuojaseloste
-        </Link>
-        {data && (
-          <Text color="gray" fontSize={{ base: "2xs", md: "xs" }}>
-            {data.statisticsUpdatedAt && `Tilastot päivitetty ${formatDate(data.statisticsUpdatedAt)}`}
-            {data.statisticsUpdatedAt && data.programmesUpdatedAt && " · "}
-            {data.programmesUpdatedAt && `Koulutustarjonta päivitetty ${formatDate(data.programmesUpdatedAt)}`}
+    <Box as="footer" borderColor="border" borderTopWidth="1px" minH="8rem" mt={12} p={4}>
+      <Flex direction="column" gap={6} margin="0 auto" maxW="60rem">
+        <VStack align="flex-start" gap={0}>
+          <HStack gap={2}>
+            <Image alt="" boxSize={6} src="/images/logo.png" />
+            <Text fontSize="lg" fontWeight="bold" letterSpacing="widest">
+              yhteishaku
+              <Text as="span" color="accent">
+                .app
+              </Text>
+            </Text>
+          </HStack>
+          <Text color="fg.muted" fontSize="sm">
+            Korkeakouluun pyrkivän paras työkalu!
           </Text>
-        )}
-      </Stack>
+        </VStack>
+        <SimpleGrid as="nav" columnGap={4} columns={2} rowGap={2}>
+          {FOOTER_LINKS.map(([label, href]) => (
+            <Link color="fg.muted" fontSize="xs" href={href} key={href}>
+              {label}
+            </Link>
+          ))}
+        </SimpleGrid>
+      </Flex>
     </Box>
   );
 }
