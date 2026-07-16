@@ -1,4 +1,12 @@
-import type { KieliLevel, KieliType, MathLevel, YoGrade, YoInput } from "./yoScoring";
+import {
+  type KieliLevel,
+  type KieliType,
+  type MathLevel,
+  REAALIAINEET,
+  YO_GRADES,
+  type YoGrade,
+  type YoInput,
+} from "./yoScoring";
 
 interface LanguageOption {
   label: string;
@@ -74,6 +82,45 @@ export const emptyYoFormState = (): YoFormState => ({
   kielet: [],
   reaaliaineet: [],
 });
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+const isYoGrade = (value: unknown): value is YoGrade =>
+  typeof value === "string" && (YO_GRADES as string[]).includes(value);
+
+const isYoGradeOrEmpty = (value: unknown): value is YoGrade | "" => value === "" || isYoGrade(value);
+
+const isKieliRow = (value: unknown): value is YoKieliRow =>
+  isRecord(value) &&
+  Number.isInteger(value.id) &&
+  (value.language === "" || LANGUAGE_OPTIONS.some((option) => option.value === value.language)) &&
+  isYoGradeOrEmpty(value.grade);
+
+const isReaaliaineRow = (value: unknown): value is YoReaaliaineRow =>
+  isRecord(value) &&
+  Number.isInteger(value.id) &&
+  (value.subject === "" || REAALIAINEET.includes(value.subject as (typeof REAALIAINEET)[number])) &&
+  isYoGradeOrEmpty(value.grade);
+
+export const isYoFormState = (value: unknown): value is YoFormState => {
+  if (
+    !isRecord(value) ||
+    !isYoGradeOrEmpty(value.aidinkieli) ||
+    (value.matematiikkaLevel !== "pitkä" && value.matematiikkaLevel !== "lyhyt") ||
+    !isYoGradeOrEmpty(value.matematiikkaGrade) ||
+    !Array.isArray(value.kielet) ||
+    !value.kielet.every(isKieliRow) ||
+    !Array.isArray(value.reaaliaineet) ||
+    !value.reaaliaineet.every(isReaaliaineRow)
+  ) {
+    return false;
+  }
+
+  const state = value as unknown as YoFormState;
+  const rowIds = [...state.kielet, ...state.reaaliaineet].map((row) => row.id);
+  return new Set(rowIds).size === rowIds.length && "input" in parseYoForm(state);
+};
 
 const getLanguageOption = (value: YoLanguageValue | "") => LANGUAGE_OPTIONS.find((option) => option.value === value);
 

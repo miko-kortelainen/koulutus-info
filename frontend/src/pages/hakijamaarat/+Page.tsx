@@ -134,6 +134,9 @@ export default function StatsListPage() {
           setSelectedYear(value);
           setPage(1);
           setCompareSelection([]);
+          setSelectedSektorit(new Set());
+          setSelectedKunnat(new Set());
+          setSelectedSchools(new Set());
         }}
         value={selectedYear}
       />

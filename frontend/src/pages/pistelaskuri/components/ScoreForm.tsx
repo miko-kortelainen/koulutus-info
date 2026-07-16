@@ -3,10 +3,16 @@ import { type SubmitEvent, useEffect, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import { COLORS } from "@/theme";
 import { calculateAmmScore } from "../lib/ammScoring";
-import { emptyYoFormState, parseYoForm, type YoFormErrors, type YoFormState } from "../lib/yoForm";
+import { emptyYoFormState, isYoFormState, parseYoForm, type YoFormErrors, type YoFormState } from "../lib/yoForm";
 import { calculateYoScore } from "../lib/yoScoring";
 import { isScoreType, type ScoreType } from "../scoreTypes";
-import AmmForm, { type AmmFormErrors, type AmmFormState, emptyAmmFormState, parseAmmForm } from "./AmmForm";
+import AmmForm, {
+  type AmmFormErrors,
+  type AmmFormState,
+  emptyAmmFormState,
+  isAmmFormState,
+  parseAmmForm,
+} from "./AmmForm";
 import YoForm from "./YoForm";
 
 interface ScoreFormProps {
@@ -25,22 +31,6 @@ const STORAGE_KEY = "yhteishaku:pistelaskuri";
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
 
-const isStoredYoForm = (value: unknown): value is YoFormState => {
-  try {
-    return isRecord(value) && "input" in parseYoForm(value as unknown as YoFormState);
-  } catch {
-    return false;
-  }
-};
-
-const isStoredAmmForm = (value: unknown): value is AmmFormState => {
-  try {
-    return isRecord(value) && "input" in parseAmmForm(value as unknown as AmmFormState);
-  } catch {
-    return false;
-  }
-};
-
 const readStoredForms = (): Omit<StoredForms, "version"> => {
   if (typeof localStorage === "undefined") return {};
 
@@ -52,8 +42,8 @@ const readStoredForms = (): Omit<StoredForms, "version"> => {
     if (!isRecord(parsed) || parsed.version !== 1) return {};
 
     return {
-      amm: isStoredAmmForm(parsed.amm) ? parsed.amm : undefined,
-      yo: isStoredYoForm(parsed.yo) ? parsed.yo : undefined,
+      amm: isAmmFormState(parsed.amm) ? parsed.amm : undefined,
+      yo: isYoFormState(parsed.yo) ? parsed.yo : undefined,
     };
   } catch {
     return {};

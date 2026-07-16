@@ -22,6 +22,9 @@ export interface AmmFormErrors {
 
 export const emptyAmmFormState = (): AmmFormState => ({ scale: "1-5", grades: ["", "", ""], keskiarvoInput: "" });
 
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
 const parseKeskiarvo = (value: string): number | null => {
   const normalized = value.trim().replace(",", ".");
   if (normalized === "") return null;
@@ -51,6 +54,23 @@ export const parseAmmForm = (
       keskiarvo: keskiarvo!,
     },
   };
+};
+
+export const isAmmFormState = (value: unknown): value is AmmFormState => {
+  if (!isRecord(value)) return false;
+
+  const { grades, keskiarvoInput, scale } = value;
+  if (
+    (scale !== "1-5" && scale !== "1-3") ||
+    !Array.isArray(grades) ||
+    grades.length !== 3 ||
+    !grades.every((grade) => typeof grade === "number" && AMM_GRADES[scale].includes(grade as AmmGrade)) ||
+    typeof keskiarvoInput !== "string"
+  ) {
+    return false;
+  }
+
+  return "input" in parseAmmForm(value as unknown as AmmFormState);
 };
 
 interface AmmFormProps {
