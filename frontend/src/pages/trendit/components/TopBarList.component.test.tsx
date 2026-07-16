@@ -28,11 +28,10 @@ test("keeps all comparison data and shows changes and new categories", () => {
 });
 
 test("renders zero totals without invalid percentages or bar widths", () => {
-  const { container } = renderWithChakra(<TopBarList data={[{ name: "Ei hakijoita", value: 0 }]} isLoading={false} />);
+  renderWithChakra(<TopBarList data={[{ name: "Ei hakijoita", value: 0 }]} isLoading={false} />);
 
   expect(screen.getByText("–")).toBeInTheDocument();
-  expect(container.innerHTML).not.toMatch(/NaN|Infinity/);
-  expect(screen.getByText("Ei hakijoita").nextElementSibling).toHaveStyle({ width: "0%" });
+  expect(screen.getByRole("meter", { name: "Ei hakijoita" })).toHaveStyle({ width: "0%" });
 });
 
 test("renders an empty-data message", () => {

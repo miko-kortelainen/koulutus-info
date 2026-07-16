@@ -10,6 +10,7 @@
     "lint": "tsx src/pages/pistelaskuri/lib/scoring.test.ts && tsc -b --noEmit && biome lint .",
     "preview": "vike preview",
     "test:component": "vitest run",
+    "test:component:coverage": "vitest run --coverage",
     "test:unit": "tsx src/pages/pistelaskuri/lib/scoring.test.ts",
     "test:e2e": "playwright test",
     "format": "biome format --write src"
@@ -38,6 +39,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/coverage-v8": "4.1.10",
     "jsdom": "^29.1.1",
     "tsx": "^4.22.4",
     "typescript": "npm:@typescript/typescript6@^6.0.2",

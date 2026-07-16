@@ -35,7 +35,7 @@ test("masks small counts and omits trends for masked, equal, and unavailable val
     />,
   );
 
-  expect(screen.getAllByText("alle 5")).not.toHaveLength(0);
+  expect(screen.getAllByText("alle 5")).toHaveLength(3);
   expect(screen.getAllByText("n/a")).toHaveLength(2);
   expect(screen.getByText("-")).toBeInTheDocument();
   expect(screen.queryByRole("img", { name: "Suurempi arvo" })).not.toBeInTheDocument();
@@ -62,8 +62,8 @@ test("renders accessible trends, pressure values, and pressure tiers", () => {
     />,
   );
 
-  expect(screen.getAllByRole("img", { name: "Suurempi arvo" })).not.toHaveLength(0);
-  expect(screen.getAllByRole("img", { name: "Pienempi arvo" })).not.toHaveLength(0);
+  expect(screen.getAllByRole("img", { name: "Suurempi arvo" })).toHaveLength(4);
+  expect(screen.getAllByRole("img", { name: "Pienempi arvo" })).toHaveLength(4);
   expect(screen.getByText("3.00")).toBeInTheDocument();
   expect(screen.getByText("0.50")).toBeInTheDocument();
   expect(screen.getByText("Korkea")).toBeInTheDocument();
