@@ -43,10 +43,13 @@ export default function PalautePage() {
 
   const form =
     status === "sent" ? (
-      <Text color="fg.muted">Kiitos palautteesta!</Text>
+      <Text color="fg.muted" role="status">
+        Kiitos palautteesta!
+      </Text>
     ) : (
       <Stack as="form" gap={2} onSubmit={handleSubmit}>
         <Textarea
+          aria-label="Palaute"
           minH="10rem"
           name="message"
           onChange={(e) => setMessage(e.target.value)}
@@ -66,7 +69,11 @@ export default function PalautePage() {
           Lähetä
         </Button>
 
-        {status === "error" && <Text color="fg.muted">Lähetys epäonnistui, yritä uudelleen.</Text>}
+        {status === "error" && (
+          <Text color="fg.muted" role="alert">
+            Lähetys epäonnistui, yritä uudelleen.
+          </Text>
+        )}
       </Stack>
     );
 

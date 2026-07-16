@@ -6,7 +6,6 @@ export function Head() {
   return (
     <>
       <meta content={description} name="description" />
-      <meta content="Hakijamäärät – korkeakoulujen yhteishaun tilastot" property="og:title" />
       <link href="https://yhteishaku.app/hakijamaarat/" rel="canonical" />
       <meta content="https://yhteishaku.app/hakijamaarat/" property="og:url" />
       <meta content={description} property="og:description" />

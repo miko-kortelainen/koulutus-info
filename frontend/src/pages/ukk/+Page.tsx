@@ -93,9 +93,9 @@ const header = (
 const questionAccordions = QUESTIONS.map(({ question, answer }) => (
   <Accordion.Item key={question} value={question}>
     <Accordion.ItemTrigger>
-      <Heading flex="1" size="md" textAlign="start">
+      <Text flex="1" fontSize="md" textAlign="start">
         {question}
-      </Heading>
+      </Text>
       <Accordion.ItemIndicator />
     </Accordion.ItemTrigger>
     <Accordion.ItemContent>
