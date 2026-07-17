@@ -6,7 +6,7 @@ import DegreeStatCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
 import { slugifySchoolName } from "@/components/slug";
-import { CURRENT_YEAR } from "@/config/yearOptions";
+import { CURRENT_YEAR, statisticsRoundShortLabel } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
 import type { SchoolPageData } from "./+data";
@@ -38,7 +38,7 @@ export default function SchoolPage() {
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         {toteutukset.length > 0
           ? "Yhteishaussa olevat toteutukset ja edellisten hakijamäärät."
-          : `${CURRENT_YEAR} menneiden yhteishakujen hakijamäärät.`}
+          : `Yhteishaun ${statisticsRoundShortLabel(CURRENT_YEAR)} hakijamäärät.`}
       </Text>
       {hasCutoffs ? (
         <Link
@@ -89,7 +89,7 @@ export default function SchoolPage() {
     },
     {
       value: "hakijamaarat",
-      label: `Hakijamäärät ${CURRENT_YEAR}`,
+      label: `Hakijamäärät, ${statisticsRoundShortLabel(CURRENT_YEAR)}`,
       content: statsList,
       visible: statistics.length > 0,
     },

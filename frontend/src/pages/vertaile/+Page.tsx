@@ -1,7 +1,12 @@
 import { Alert, Heading, Link, Separator, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { type ReactNode, useSyncExternalStore } from "react";
 import { usePageContext } from "vike-react/usePageContext";
-import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
+import {
+  CURRENT_YEAR,
+  statisticsRoundShortLabel,
+  YEAR_OPTIONS,
+  type YearOption,
+} from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import ComparisonTable from "./components/ComparisonTable";
@@ -53,7 +58,7 @@ export default function ComparePage() {
   } else if (query.isSuccess && (!entryA || !entryB)) {
     body = (
       <Stack gap={2}>
-        <Text>Hakukohteita ei löytynyt valitulta tilastovuodelta.</Text>
+        <Text>Hakukohteita ei löytynyt valitusta yhteishausta.</Text>
         {backLink}
       </Stack>
     );
@@ -67,7 +72,7 @@ export default function ComparePage() {
         Vertailu
       </Heading>
       <Text color="fg.muted">
-        Vertaa kahta hakukohdetta rinnakkain. <br /> Tilastovuosi {year}.
+        Vertaa kahta hakukohdetta rinnakkain. <br /> Yhteishaku {statisticsRoundShortLabel(year)}.
       </Text>
       <Separator my={2} />
     </Stack>

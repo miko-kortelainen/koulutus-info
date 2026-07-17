@@ -2,7 +2,7 @@ import { Alert, Box, createListCollection, Heading, Select, Stack, Text } from "
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import YearControl from "@/components/YearControl";
-import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
+import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import type { TrendsPageData } from "./+data";
@@ -13,7 +13,7 @@ import TrendCard from "./components/TrendCard";
 import useTrendsData from "./hooks/useTrendsData";
 
 export default function TrendsPage() {
-  const { currentStatistics, yearlyTotals } = useData<TrendsPageData>();
+  const { autumnTotals, currentStatistics, springTotals } = useData<TrendsPageData>();
   const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
   const [compareYear, setCompareYear] = useState<YearOption | "">("");
 
@@ -67,7 +67,7 @@ export default function TrendsPage() {
   const comparator = (
     <Box flex={1}>
       <Text color="fg.muted" fontSize="xs" mb={1}>
-        Vuosi
+        Yhteishaku
       </Text>
       <YearControl
         onChange={(y) => {
@@ -90,10 +90,10 @@ export default function TrendsPage() {
         size="sm"
         value={[compareYear]}
       >
-        <Select.HiddenSelect aria-label="Vertailuvuosi" />
+        <Select.HiddenSelect aria-label="Vertailuyhteishaku" />
         <Select.Control>
-          <Select.Trigger aria-label="Vertailuvuosi">
-            <Select.ValueText placeholder="Vertaa vuoteen..." />
+          <Select.Trigger aria-label="Vertailuyhteishaku">
+            <Select.ValueText placeholder="Vertaa yhteishakuun..." />
           </Select.Trigger>
           <Select.IndicatorGroup>
             <Select.Indicator />
@@ -117,10 +117,10 @@ export default function TrendsPage() {
       <TopBarList
         color={FIELD_COLOR}
         compareData={comparisonReady ? compareTrends.topKoulutusalat : undefined}
-        compareYear={comparisonReady ? compareYear : undefined}
+        compareYear={comparisonReady ? statisticsRoundShortLabel(compareYear as YearOption) : undefined}
         data={trends.topKoulutusalat}
         isLoading={listsAreLoading}
-        selectedYear={selectedYear}
+        selectedYear={statisticsRoundShortLabel(selectedYear)}
         skeletonCount={10}
       />
     </TrendCard>
@@ -131,10 +131,10 @@ export default function TrendsPage() {
       <TopBarList
         color={SCHOOL_COLOR}
         compareData={comparisonReady ? compareTrends.topKorkeakoulut : undefined}
-        compareYear={comparisonReady ? compareYear : undefined}
+        compareYear={comparisonReady ? statisticsRoundShortLabel(compareYear as YearOption) : undefined}
         data={trends.topKorkeakoulut}
         isLoading={listsAreLoading}
-        selectedYear={selectedYear}
+        selectedYear={statisticsRoundShortLabel(selectedYear)}
         skeletonCount={10}
       />
     </TrendCard>
@@ -145,19 +145,24 @@ export default function TrendsPage() {
       <TopBarList
         color={SECTOR_COLOR}
         compareData={comparisonReady ? compareTrends.sektoriData : undefined}
-        compareYear={comparisonReady ? compareYear : undefined}
+        compareYear={comparisonReady ? statisticsRoundShortLabel(compareYear as YearOption) : undefined}
         data={trends.sektoriData}
         isLoading={listsAreLoading}
-        selectedYear={selectedYear}
+        selectedYear={statisticsRoundShortLabel(selectedYear)}
         showPercent={false}
       />
     </TrendCard>
   );
 
   const applicantsByYear = (
-    <TrendCard color={TREND_COLOR} title="Hakijamäärien trendi">
-      <KoulutusalaTrendChart chartData={yearlyTotals} color={TREND_COLOR} />
-    </TrendCard>
+    <>
+      <TrendCard color={TREND_COLOR} title="Kevään 1. ja 2. yhteishaun hakijamäärät">
+        <KoulutusalaTrendChart chartData={springTotals} color={TREND_COLOR} />
+      </TrendCard>
+      <TrendCard color={TREND_COLOR} title="Syksyn yhteishaun hakijamäärät">
+        <KoulutusalaTrendChart chartData={autumnTotals} color={TREND_COLOR} />
+      </TrendCard>
+    </>
   );
 
   const yearSelectors = (

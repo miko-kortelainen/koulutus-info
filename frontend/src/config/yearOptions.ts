@@ -1,10 +1,20 @@
-import { CURRENT_STATISTICS_YEAR, STATISTICS_YEARS } from "@/generated/dataManifest";
+import { CURRENT_STATISTICS_ROUND, STATISTICS_ROUNDS } from "@/generated/dataManifest";
 
-export const YEAR_OPTIONS = STATISTICS_YEARS.map((year) => ({
-  label: `Tilastovuosi ${year}`,
-  value: String(year),
+export type YearOption = (typeof STATISTICS_ROUNDS)[number];
+
+export function statisticsRoundLabel(round: YearOption) {
+  const [year, season] = round.split("_");
+  return `${season === "kevat" ? "Kevään" : "Syksyn"} yhteishaku ${year}`;
+}
+
+export function statisticsRoundShortLabel(round: YearOption) {
+  const [year, season] = round.split("_");
+  return `${season === "kevat" ? "kevät" : "syksy"} ${year}`;
+}
+
+export const YEAR_OPTIONS = STATISTICS_ROUNDS.map((round) => ({
+  label: statisticsRoundLabel(round),
+  value: round,
 }));
 
-export type YearOption = string;
-
-export const CURRENT_YEAR = CURRENT_STATISTICS_YEAR;
+export const CURRENT_YEAR = CURRENT_STATISTICS_ROUND;

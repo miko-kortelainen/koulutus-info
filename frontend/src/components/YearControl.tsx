@@ -9,10 +9,10 @@ interface YearControlProps {
 export default function YearControl({ value, onChange }: YearControlProps) {
   return (
     <OptionSelect
-      ariaLabel="Vuosi"
+      ariaLabel="Yhteishaku"
       items={YEAR_OPTIONS}
       onChange={onChange}
-      placeholder="Valitse vuosi"
+      placeholder="Valitse yhteishaku"
       size="sm"
       value={value}
     />
