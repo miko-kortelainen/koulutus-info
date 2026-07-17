@@ -1,8 +1,6 @@
-import { Accordion, Alert, Checkbox, Heading, Separator, Stack, Text } from "@chakra-ui/react";
-import { useQuery } from "@tanstack/react-query";
+import { Accordion, Checkbox, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
-import { getSchools } from "@/api/api";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
@@ -10,7 +8,6 @@ import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import type { SchoolsResponse } from "@/types.gen";
-import SchoolCardSkeleton from "./components/SchoolCardSkeleton";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
 
 const PAGE_SIZE = 10;
@@ -21,43 +18,34 @@ const SEKTORI_LABELS: Record<string, string> = {
 };
 
 export default function SchoolsListPage() {
-  const ssrData = useData<SchoolsResponse>();
+  const data = useData<SchoolsResponse>();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
   const [showYlempiAmk, setShowYlempiAmk] = useState(false);
-  const query = useQuery<SchoolsResponse>({
-    queryKey: ["schools"],
-    queryFn: () => getSchools(),
-    initialData: ssrData,
-    refetchOnWindowFocus: false,
-    staleTime: Infinity,
-    gcTime: 10 * 60 * 1000,
-    retry: false,
-  });
   const toteutukset = useMemo(
     () =>
-      query.data?.flatMap((k) =>
+      data.flatMap((k) =>
         k.toteutukset.map((t) => ({
           ...t,
           koulutustyyppi: k.koulutustyyppi,
           ylempiAmk: k.koulutustyyppi === "amk" && (k.nimi.fi?.toLowerCase().includes("ylempi") ?? false),
         })),
       ),
-    [query.data],
+    [data],
   );
   const sektoriCollection = useMemo(
     () =>
       toCollection(
-        query.data?.map((k) => k.koulutustyyppi),
+        data.map((k) => k.koulutustyyppi),
         (s) => SEKTORI_LABELS[s] ?? s,
       ),
-    [query.data],
+    [data],
   );
-  const kuntaCollection = useMemo(() => toCollection(toteutukset?.flatMap((t) => t.kunnat)), [toteutukset]);
-  const schoolCollection = useMemo(() => toCollection(toteutukset?.map((t) => t.oppilaitosNimi.fi)), [toteutukset]);
+  const kuntaCollection = useMemo(() => toCollection(toteutukset.flatMap((t) => t.kunnat)), [toteutukset]);
+  const schoolCollection = useMemo(() => toCollection(toteutukset.map((t) => t.oppilaitosNimi.fi)), [toteutukset]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredDegrees(
     toteutukset,
@@ -69,14 +57,6 @@ export default function SchoolsListPage() {
   );
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-  const schoolSkeletonList = Array.from({ length: 10 }).map((_, i) => <SchoolCardSkeleton key={i} />);
-
-  const errorAlert = (
-    <Alert.Root status="error">
-      <Alert.Indicator />
-      <Alert.Title>Jotain meni vikaan, yritä uudelleen.</Alert.Title>
-    </Alert.Root>
-  );
 
   const header = (
     <Stack gap={1}>
@@ -142,15 +122,8 @@ export default function SchoolsListPage() {
   );
 
   const cardList = (
-    <Stack
-      direction="column"
-      gap={4}
-      opacity={query.isPending ? 1 : query.isFetching ? 0.5 : 1}
-      transition="opacity 0.15s"
-    >
-      {query.isPending ? schoolSkeletonList : null}
-      {query.isError ? errorAlert : null}
-      {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
+    <Stack direction="column" gap={4}>
+      {paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
       {paginated.map((t, index) => (
         <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi} ${index}`} toteutus={t} />
       ))}
