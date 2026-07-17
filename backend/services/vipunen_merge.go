@@ -19,6 +19,8 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 		if !exists {
 			first := r
 			first.ValintatapajononTyyppi = nil
+			first.AlinHyvaksyttyPistemaara = nil
+			first.YlinHyvaksyttyPistemaara = nil
 			first.AloituspaikatLkm = 0
 			first.KaikkiHakijatLkm = 0
 			first.EnsisijaisetHakijatLkm = 0
@@ -28,12 +30,6 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 		m.AloituspaikatLkm += r.AloituspaikatLkm
 		m.KaikkiHakijatLkm = max(m.KaikkiHakijatLkm, r.KaikkiHakijatLkm)
 		m.EnsisijaisetHakijatLkm = max(m.EnsisijaisetHakijatLkm, r.EnsisijaisetHakijatLkm)
-		if m.AlinHyvaksyttyPistemaara == nil {
-			m.AlinHyvaksyttyPistemaara = r.AlinHyvaksyttyPistemaara
-		}
-		if m.YlinHyvaksyttyPistemaara == nil {
-			m.YlinHyvaksyttyPistemaara = r.YlinHyvaksyttyPistemaara
-		}
 	}
 
 	result := make([]models.StatisticsEntry, 0, len(grouped))

@@ -35,3 +35,20 @@ func TestMergeRecords(t *testing.T) {
 
 	t.Logf("wrote %d merged records", len(merged))
 }
+
+func TestMergeRecordsOmitsCutoffScores(t *testing.T) {
+	minimumScore := 73.0
+	maximumScore := 164.0
+	merged := MergeRecords([]models.StatisticsEntry{
+		{
+			KooditHakukohde:          "hakukohde-1",
+			Hakukohde:                "Testikoulutus",
+			AlinHyvaksyttyPistemaara: &minimumScore,
+			YlinHyvaksyttyPistemaara: &maximumScore,
+		},
+	})
+
+	if merged[0].AlinHyvaksyttyPistemaara != nil || merged[0].YlinHyvaksyttyPistemaara != nil {
+		t.Fatalf("expected cutoff scores to be omitted, got %#v", merged[0])
+	}
+}
