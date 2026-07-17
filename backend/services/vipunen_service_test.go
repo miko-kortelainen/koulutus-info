@@ -36,19 +36,69 @@ func TestMergeRecords(t *testing.T) {
 	t.Logf("wrote %d merged records", len(merged))
 }
 
-func TestMergeRecordsOmitsCutoffScores(t *testing.T) {
-	minimumScore := 73.0
-	maximumScore := 164.0
-	merged := MergeRecords([]models.StatisticsEntry{
+func TestMergeRecordsKeepsMetadataAndAggregatesCounts(t *testing.T) {
+	records := []models.StatisticsEntry{
 		{
-			KooditHakukohde:          "hakukohde-1",
-			Hakukohde:                "Testikoulutus",
-			AlinHyvaksyttyPistemaara: &minimumScore,
-			YlinHyvaksyttyPistemaara: &maximumScore,
+			KooditHakukohde:        "hakukohde-1",
+			Hakukohde:              "Testikoulutus",
+			KoulutuksenKieli:       "vain englanti",
+			KoulutusAste:           "Alempi korkeakouluaste",
+			OKMOhjauksenAla:        "Tekniikan alat",
+			Maakunta:               "Uusimaa",
+			AloituspaikatLkm:       20,
+			KaikkiHakijatLkm:       100,
+			EnsisijaisetHakijatLkm: 30,
+		},
+		{
+			KooditHakukohde:        "hakukohde-1",
+			Hakukohde:              "Testikoulutus",
+			KoulutuksenKieli:       "vain englanti",
+			KoulutusAste:           "Alempi korkeakouluaste",
+			OKMOhjauksenAla:        "Tekniikan alat",
+			Maakunta:               "Uusimaa",
+			KaikkiHakijatLkm:       80,
+			EnsisijaisetHakijatLkm: 40,
+		},
+	}
+
+	merged := MergeRecords(records)
+	if len(merged) != 1 {
+		t.Fatalf("len(MergeRecords()) = %d, want 1", len(merged))
+	}
+
+	got := merged[0]
+	if got.KoulutuksenKieli != "vain englanti" ||
+		got.KoulutusAste != "Alempi korkeakouluaste" ||
+		got.OKMOhjauksenAla != "Tekniikan alat" ||
+		got.Maakunta != "Uusimaa" {
+		t.Fatalf("merged metadata = %#v", got)
+	}
+	if got.AloituspaikatLkm != 20 || got.KaikkiHakijatLkm != 180 || got.EnsisijaisetHakijatLkm != 70 {
+		t.Fatalf("merged counts = %#v", got)
+	}
+}
+
+func TestGroupStatisticsByRound(t *testing.T) {
+	grouped, err := GroupStatisticsByRound([]VipunenRow{
+		{
+			StatisticsEntry:         models.StatisticsEntry{KooditHakukohde: "autumn-start"},
+			KoulutuksenAlkamisvuosi: 2026,
+			KoulutuksenAlkamiskausi: "Syksy",
+		},
+		{
+			StatisticsEntry:         models.StatisticsEntry{KooditHakukohde: "spring-start"},
+			KoulutuksenAlkamisvuosi: 2026,
+			KoulutuksenAlkamiskausi: "Kevät",
 		},
 	})
+	if err != nil {
+		t.Fatalf("GroupStatisticsByRound() error = %v", err)
+	}
 
-	if merged[0].AlinHyvaksyttyPistemaara != nil || merged[0].YlinHyvaksyttyPistemaara != nil {
-		t.Fatalf("expected cutoff scores to be omitted, got %#v", merged[0])
+	if grouped["2026_kevat"][0].KooditHakukohde != "autumn-start" {
+		t.Fatalf("spring joint application = %#v", grouped["2026_kevat"])
+	}
+	if grouped["2025_syksy"][0].KooditHakukohde != "spring-start" {
+		t.Fatalf("autumn joint application = %#v", grouped["2025_syksy"])
 	}
 }

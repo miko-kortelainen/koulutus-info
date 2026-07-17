@@ -2,15 +2,37 @@ package services
 
 import (
 	"cmp"
+	"fmt"
 	"school-api/models"
 	"slices"
 )
 
+type VipunenRow struct {
+	models.StatisticsEntry
+	KoulutuksenAlkamisvuosi int    `json:"koulutuksenAlkamisvuosi"`
+	KoulutuksenAlkamiskausi string `json:"koulutuksenAlkamiskausi"`
+}
+
+func GroupStatisticsByRound(records []VipunenRow) (map[string][]models.StatisticsEntry, error) {
+	grouped := make(map[string][]models.StatisticsEntry)
+	for _, record := range records {
+		var round string
+		switch record.KoulutuksenAlkamiskausi {
+		case "Syksy":
+			round = fmt.Sprintf("%d_kevat", record.KoulutuksenAlkamisvuosi)
+		case "Kevät":
+			round = fmt.Sprintf("%d_syksy", record.KoulutuksenAlkamisvuosi-1)
+		default:
+			return nil, fmt.Errorf("unsupported start season %q", record.KoulutuksenAlkamiskausi)
+		}
+		grouped[round] = append(grouped[round], record.StatisticsEntry)
+	}
+	return grouped, nil
+}
+
 // MergeRecords collapses per-valintatapajono Vipunen rows into one record per
-// hakukohde. Applicant counts are per selection queue and overlap (the same
-// applicant is evaluated in multiple queues at once), so we take the max
-// across queues rather than summing them. AloituspaikatLkm is always
-// reported on a single row per hakukohde, so summing it is safe.
+// hakukohde. Applicant counts are split across selection queue rows, while
+// aloituspaikat are reported on a separate row.
 func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 	grouped := make(map[string]*models.StatisticsEntry)
 
@@ -18,9 +40,6 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 		m, exists := grouped[r.KooditHakukohde]
 		if !exists {
 			first := r
-			first.ValintatapajononTyyppi = nil
-			first.AlinHyvaksyttyPistemaara = nil
-			first.YlinHyvaksyttyPistemaara = nil
 			first.AloituspaikatLkm = 0
 			first.KaikkiHakijatLkm = 0
 			first.EnsisijaisetHakijatLkm = 0
@@ -28,8 +47,8 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 			grouped[r.KooditHakukohde] = m
 		}
 		m.AloituspaikatLkm += r.AloituspaikatLkm
-		m.KaikkiHakijatLkm = max(m.KaikkiHakijatLkm, r.KaikkiHakijatLkm)
-		m.EnsisijaisetHakijatLkm = max(m.EnsisijaisetHakijatLkm, r.EnsisijaisetHakijatLkm)
+		m.KaikkiHakijatLkm += r.KaikkiHakijatLkm
+		m.EnsisijaisetHakijatLkm += r.EnsisijaisetHakijatLkm
 	}
 
 	result := make([]models.StatisticsEntry, 0, len(grouped))
