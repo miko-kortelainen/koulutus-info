@@ -16,6 +16,9 @@ export default function useFilteredStatistics(
   searchTerm: string,
   sortOrder: SortOption,
   selectedSektorit: Set<string>,
+  selectedKoulutusasteet: Set<string>,
+  selectedKoulutusalat: Set<string>,
+  selectedKielet: Set<string>,
   selectedKunnat: Set<string>,
   selectedSchools: Set<string>,
 ) {
@@ -25,10 +28,13 @@ export default function useFilteredStatistics(
     return items.filter(
       (d) =>
         (!selectedSektorit.size || selectedSektorit.has(d.sektori ?? "")) &&
+        (!selectedKoulutusasteet.size || selectedKoulutusasteet.has(d.koulutusasteTaso1 ?? "")) &&
+        (!selectedKoulutusalat.size || selectedKoulutusalat.has(d.okmOhjauksenAla ?? "")) &&
+        (!selectedKielet.size || selectedKielet.has(d.koulutuksenKieli ?? "")) &&
         (!selectedKunnat.size || selectedKunnat.has(d.kuntaHakukohde ?? "")) &&
         (!selectedSchools.size || selectedSchools.has(d.korkeakoulu ?? "")),
     );
-  }, [items, selectedSektorit, selectedKunnat, selectedSchools]);
+  }, [items, selectedSektorit, selectedKoulutusasteet, selectedKoulutusalat, selectedKielet, selectedKunnat, selectedSchools]);
 
   const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
 
