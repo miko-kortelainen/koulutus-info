@@ -167,7 +167,7 @@ export default function StatsListPage() {
 
   return (
     <>
-      <PageContainer>
+      <PageContainer align="flex-start">
         {header}
 
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
