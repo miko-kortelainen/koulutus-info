@@ -499,8 +499,8 @@ test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Suosituimmat korkeakoulut" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Kevään 1. ja 2. yhteishaun hakijamäärien trendi" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Syksyn yhteishakujen hakijamäärien trendi" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Kevään 1. ja 2. yhteishaun hakijamäärät" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Syksyn yhteishaun hakijamäärät" })).toBeVisible();
   // "Hakijaa" column header renders only after skeletons are replaced by data
   await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
 
