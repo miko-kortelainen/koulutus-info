@@ -170,7 +170,7 @@ export default function TrendsPage() {
   );
 
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
       {loadingAndError}
       {yearSelectors}
