@@ -302,7 +302,7 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
 });
 
-test("/hakijamaarat: year switcher fetches different data", async ({ page }) => {
+test("/hakijamaarat: joint application switcher fetches different data", async ({ page }) => {
   await page.goto("/hakijamaarat");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
@@ -310,11 +310,10 @@ test("/hakijamaarat: year switcher fetches different data", async ({ page }) => 
   await page.getByRole("option", { name: "Sotkamo", exact: true }).click();
   await expect(page.getByRole("button", { name: "Kunta (1)" })).toBeVisible();
 
-  // 2025 is a fixed past year in the static YEAR_OPTIONS list (yearOptions.ts), stable regardless of "current" year
-  await page.getByRole("combobox", { name: "Vuosi" }).click();
+  await page.getByRole("combobox", { name: "Yhteishaku" }).click();
   const [response] = await Promise.all([
-    page.waitForResponse((r) => r.url().includes("statistics-2025.json")),
-    page.getByRole("option", { name: "Tilastovuosi 2025" }).click(),
+    page.waitForResponse((r) => r.url().includes("hakijamaarat-2025-syksy.json")),
+    page.getByRole("option", { name: "Syksyn yhteishaku 2025" }).click(),
   ]);
   expect(response.status()).toBe(200);
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
@@ -413,8 +412,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2);
 
   await page.getByRole("link", { name: "Vertaile" }).click();
-  // vuosi=2026 mirrors CURRENT_YEAR in config/yearOptions.ts — update together
-  await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026/);
+  await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026_kevat/);
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
   await expect(page.getByText("Kaikki hakijat")).toHaveCount(2);
@@ -501,13 +499,15 @@ test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Suosituimmat korkeakoulut" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Kevään 1. ja 2. yhteishaun hakijamäärien trendi" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Syksyn yhteishakujen hakijamäärien trendi" })).toBeVisible();
   // "Hakijaa" column header renders only after skeletons are replaced by data
   await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
 
-  await page.route("**/statistics-2025.json", (route) =>
+  await page.route("**/hakijamaarat-2025-syksy.json", (route) =>
     route.fulfill({ status: 500, contentType: "application/json", body: "{}" }),
   );
-  await selectOption(page, "Vertailuvuosi", "Tilastovuosi 2025");
+  await selectOption(page, "Vertailuyhteishaku", "Syksyn yhteishaku 2025");
   await expect(page.getByText("Vertailutietojen lataaminen epäonnistui.")).toBeVisible({ timeout: 15000 });
   await expect(page.getByText("uusi", { exact: true })).toHaveCount(0);
 });

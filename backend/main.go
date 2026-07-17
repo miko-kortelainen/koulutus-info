@@ -26,7 +26,7 @@ const (
 	manifestModulePath = "../frontend/src/generated/dataManifest.ts"
 )
 
-var statisticsFilename = regexp.MustCompile(`^statistics-(\d{4})\.json$`)
+var statisticsFilename = regexp.MustCompile(`^hakijamaarat-(\d{4})-(kevat|syksy)\.json$`)
 
 type refreshOptions struct {
 	statistics    bool
@@ -83,16 +83,16 @@ func run(args []string) error {
 		}
 	}
 
-	statisticsYears, err := availableStatisticsYears(dataOutputDir)
+	statisticsRounds, err := availableStatisticsRounds(dataOutputDir)
 	if err != nil {
 		return err
 	}
-	if len(statisticsYears) == 0 {
+	if len(statisticsRounds) == 0 {
 		return errors.New("no statistics files were generated")
 	}
 
-	meta.StatisticsYears = statisticsYears
-	meta.CurrentStatisticsYear = statisticsYears[0]
+	meta.StatisticsRounds = statisticsRounds
+	meta.CurrentStatisticsRound = statisticsRounds[0]
 	if dataChanged {
 		meta.GeneratedAt = now
 	}
@@ -103,7 +103,11 @@ func run(args []string) error {
 		return err
 	}
 
-	fmt.Printf("Data manifest: currentStatisticsYear=%d statisticsYears=%v\n", meta.CurrentStatisticsYear, meta.StatisticsYears)
+	fmt.Printf(
+		"Data manifest: currentStatisticsRound=%s statisticsRounds=%v\n",
+		meta.CurrentStatisticsRound,
+		meta.StatisticsRounds,
+	)
 	return nil
 }
 
@@ -121,7 +125,7 @@ func parseRefreshOptions(args []string, cfg models.Config) (refreshOptions, erro
 
 	flags := flag.NewFlagSet("data generator", flag.ContinueOnError)
 	flags.SetOutput(io.Discard)
-	year := flags.Int("year", cfg.Vipunen.TilastoVuosi, "statistics year")
+	year := flags.Int("year", cfg.Vipunen.TilastoVuosi, "programme start year")
 	statistics := flags.Bool("statistics", false, "refresh Vipunen statistics")
 	programmes := flags.Bool("programmes", false, "refresh Opintopolku programmes")
 	yhteishakuOID := flags.String("yhteishaku-oid", "", "manually sourced Opintopolku joint-application OID")
@@ -181,9 +185,7 @@ func generateVipunen(cfg models.VipunenConfig) (bool, error) {
 	if err != nil {
 		return false, fmt.Errorf("invalid Vipunen configuration: %w", err)
 	}
-	outputPath := filepath.Join(dataOutputDir, fmt.Sprintf("statistics-%d.json", cfg.TilastoVuosi))
-
-	var fetched []models.StatisticsEntry
+	var fetched []services.VipunenRow
 	if err := services.FetchJSON("vipunen", apiURL, &fetched); err != nil {
 		return false, err
 	}
@@ -191,24 +193,48 @@ func generateVipunen(cfg models.VipunenConfig) (bool, error) {
 		return false, errors.New("Vipunen returned no records")
 	}
 
-	statistics := services.MergeRecords(fetched)
-	if len(statistics) == 0 {
-		return false, errors.New("Vipunen produced no statistics after cleanup")
-	}
-	if err := validateRecordCount(outputPath, len(statistics), "Vipunen statistics"); err != nil {
-		return false, err
-	}
-	changed, err := jsonChanged(outputPath, statistics)
+	recordsByRound, err := services.GroupStatisticsByRound(fetched)
 	if err != nil {
 		return false, err
 	}
 
-	if err := writeJSON(outputPath, statistics); err != nil {
-		return false, err
+	rounds := make([]string, 0, len(recordsByRound))
+	for round := range recordsByRound {
+		rounds = append(rounds, round)
+	}
+	sort.Sort(sort.Reverse(sort.StringSlice(rounds)))
+
+	changedAny := false
+	for _, round := range rounds {
+		statistics := services.MergeRecords(recordsByRound[round])
+		if len(statistics) == 0 {
+			return false, fmt.Errorf("Vipunen produced no statistics for %s after cleanup", round)
+		}
+
+		outputPath := filepath.Join(dataOutputDir, "hakijamaarat-"+strings.ReplaceAll(round, "_", "-")+".json")
+		if err := validateRecordCount(outputPath, len(statistics), "Vipunen statistics"); err != nil {
+			return false, err
+		}
+		changed, err := jsonChanged(outputPath, statistics)
+		if err != nil {
+			return false, err
+		}
+		if err := writeJSON(outputPath, statistics); err != nil {
+			return false, err
+		}
+		changedAny = changedAny || changed
+		fmt.Printf(
+			"Vipunen: startYear=%d round=%s fetched=%d generated=%d changed=%t output=%s\n",
+			cfg.TilastoVuosi,
+			round,
+			len(recordsByRound[round]),
+			len(statistics),
+			changed,
+			outputPath,
+		)
 	}
 
-	fmt.Printf("Vipunen: year=%d fetched=%d generated=%d changed=%t output=%s\n", cfg.TilastoVuosi, len(fetched), len(statistics), changed, outputPath)
-	return changed, nil
+	return changedAny, nil
 }
 
 func generateOpintopolku(cfg models.OpintopolkuConfig) (bool, error) {
@@ -303,34 +329,34 @@ func readMeta(path string) (models.Meta, error) {
 	return meta, nil
 }
 
-func availableStatisticsYears(directory string) ([]int, error) {
+func availableStatisticsRounds(directory string) ([]string, error) {
 	entries, err := os.ReadDir(directory)
 	if err != nil {
 		return nil, fmt.Errorf("read data directory %s: %w", directory, err)
 	}
 
-	years := make([]int, 0)
+	rounds := make([]string, 0)
 	for _, entry := range entries {
 		matches := statisticsFilename.FindStringSubmatch(entry.Name())
 		if entry.IsDir() || matches == nil {
 			continue
 		}
-		year, err := strconv.Atoi(matches[1])
-		if err != nil {
-			return nil, fmt.Errorf("parse statistics year from %s: %w", entry.Name(), err)
-		}
-		years = append(years, year)
+		rounds = append(rounds, matches[1]+"_"+matches[2])
 	}
-	sort.Sort(sort.Reverse(sort.IntSlice(years)))
-	return years, nil
+	sort.Sort(sort.Reverse(sort.StringSlice(rounds)))
+	return rounds, nil
 }
 
 func writeDataManifestModule(path string, meta models.Meta) error {
-	years := make([]string, len(meta.StatisticsYears))
-	for i, year := range meta.StatisticsYears {
-		years[i] = strconv.Itoa(year)
+	rounds := make([]string, len(meta.StatisticsRounds))
+	for i, round := range meta.StatisticsRounds {
+		rounds[i] = strconv.Quote(round)
 	}
-	content := fmt.Sprintf("// Generated by the data generator. Do not edit manually.\nexport const STATISTICS_YEARS = [%s] as const;\nexport const CURRENT_STATISTICS_YEAR = %q;\n", strings.Join(years, ", "), strconv.Itoa(meta.CurrentStatisticsYear))
+	content := fmt.Sprintf(
+		"// Generated by the data generator. Do not edit manually.\nexport const STATISTICS_ROUNDS = [%s] as const;\nexport const CURRENT_STATISTICS_ROUND = %q;\n",
+		strings.Join(rounds, ", "),
+		meta.CurrentStatisticsRound,
+	)
 
 	directory := filepath.Dir(path)
 	if err := os.MkdirAll(directory, 0755); err != nil {

@@ -6,10 +6,9 @@ type Config struct {
 }
 
 type VipunenConfig struct {
-	AineistoURL        string `json:"aineistoUrl"`
-	TilastoVuosi       int    `json:"tilastoVuosi"`
-	Hakutapa           string `json:"hakutapa"`
-	EiKoulutuksenKieli string `json:"eiKoulutuksenKieli"`
+	AineistoURL  string `json:"aineistoUrl"`
+	TilastoVuosi int    `json:"tilastoVuosi"`
+	Hakutapa     string `json:"hakutapa"`
 }
 
 type OpintopolkuConfig struct {
