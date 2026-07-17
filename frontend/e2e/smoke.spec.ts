@@ -321,12 +321,12 @@ test("/hakijamaarat: joint application switcher fetches different data", async (
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
 });
 
-test("/hakijamaarat: koulu filter narrows results", async ({ page }) => {
+test("/hakijamaarat: filters narrow results", async ({ page }) => {
   await page.goto("/hakijamaarat");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
-  await page.getByRole("button", { name: "Koulu" }).click();
+  await page.getByRole("button", { name: "Koulu", exact: true }).click();
   const options = page.getByRole("option");
   await expect(options.first()).toBeVisible({ timeout: 10000 });
 
@@ -336,6 +336,26 @@ test("/hakijamaarat: koulu filter narrows results", async ({ page }) => {
   // deselect → unfiltered results return
   await options.first().click();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+
+  // exercise one of the new filters through the UI: Koulutusala
+  // each result card renders one "Vertaile" button, so they double as a result counter
+  const compareButtons = page.getByRole("button", { name: "Vertaile", exact: true });
+  await expect(compareButtons).toHaveCount(10);
+  await expect(page.getByText("2130 hakutulosta")).toBeVisible();
+
+  await page.getByRole("button", { name: "Koulutusala" }).click();
+  const koulutusalaOption = page.getByRole("option", { name: "Tieto puuttuu", exact: true });
+  await koulutusalaOption.click();
+  await expect(page.getByRole("button", { name: "Koulutusala (1)" })).toBeVisible();
+  // 2026_kevat dataset has exactly 3 rows with okmOhjauksenAla "Tieto puuttuu"
+  await expect(compareButtons).toHaveCount(3);
+  await expect(page.getByText("3 hakutulosta")).toBeVisible();
+
+  // deselect → unfiltered results return
+  await koulutusalaOption.click();
+  await expect(page.getByRole("button", { name: "Koulutusala", exact: true })).toBeVisible();
+  await expect(compareButtons).toHaveCount(10);
+  await expect(page.getByText("2130 hakutulosta")).toBeVisible();
 });
 
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
