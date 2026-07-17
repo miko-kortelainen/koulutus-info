@@ -30,7 +30,7 @@ Yhteishaku.app on sivusto korkeakoulujen yhteishakujen tarkasteluun. Sivustolta 
 
 Hakijamäärien ja koulutusten päivitys tapahtuu manuaalisesti ajamalla /backend/-kansiossa tarvittavat komennot.  
 Backend hakee Opintopolun ja Vipusen rajapinnoista uusimmat tiedot, siistii ne ja siirtää ne JSON-muotoisina /frontend/public/data/-kansioon.  
-Generointi päivittää tiedostot `schools.json`, `statistics-<vuosi>.json` ja `meta.json` sekä frontendin `src/generated/dataManifest.ts`-tiedoston.
+Generointi päivittää tiedostot `schools.json`, yhteishakukohtaiset hakijamäärätiedostot (esimerkiksi `hakijamaarat-2026-kevat.json` ja `hakijamaarat-2025-syksy.json`) ja `meta.json` sekä frontendin `src/generated/dataManifest.ts`-tiedoston.
 
 Yhteishaun pisterajat ladataan manuaalisesti Vipusen julkisesta pisteraja raportista ja muokataan excelillä backendille sopivaan CSV-muotoon.  
 Tämän jälkeen ajetaan tarvittava Go CLI komento, joka generoi `frontend/public/data/`-polkuun tiedostot yhteishakukierroksittain, esimerkiksi `pisterajat-2026-kevat.json`.

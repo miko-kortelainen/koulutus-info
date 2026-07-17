@@ -11,7 +11,6 @@ export interface VipunenConfig {
   aineistoUrl: string;
   tilastoVuosi: number /* int */;
   hakutapa: string;
-  eiKoulutuksenKieli: string;
 }
 export interface OpintopolkuConfig {
   yhteishakuOid: string;
@@ -23,8 +22,8 @@ export interface OpintopolkuConfig {
 
 export interface Meta {
   generatedAt: string /* RFC3339 */;
-  statisticsYears: number /* int */[];
-  currentStatisticsYear: number /* int */;
+  statisticsRounds: string[];
+  currentStatisticsRound: string;
   statisticsUpdatedAt?: string /* RFC3339 */;
   programmesUpdatedAt?: string /* RFC3339 */;
   programmesYhteishakuOid?: string;
@@ -84,21 +83,20 @@ export interface ToteutusEntry {
  */
 export type StatisticsResponse = StatisticsEntry[];
 /**
- * StatisticsEntry is both the Vipunen API row shape and the statistics.json
- * output shape; MergeRecords collapses rows in between.
+ * StatisticsEntry is the merged statistics JSON shape.
  */
 export interface StatisticsEntry {
   kooditHakukohde: string;
   hakukohde: string;
   korkeakoulu?: string;
   kuntaHakukohde?: string;
+  maakuntaHakukohde?: string;
   koulutuksenKieli?: string;
   sektori?: string;
+  koulutusasteTaso1?: string;
   koulutusalaTaso1?: string;
-  valintatapajononTyyppi?: string;
+  okmOhjauksenAla?: string;
   aloituspaikatLkm: number /* int */;
   kaikkiHakijatLkm: number /* int */;
   ensisijaisetHakijatLkm: number /* int */;
-  alinHyvaksyttyPistemaara?: number /* float64 */;
-  ylinHyvaksyttyPistemaara?: number /* float64 */;
 }

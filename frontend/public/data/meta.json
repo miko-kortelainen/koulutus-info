@@ -1,18 +1,21 @@
 {
-  "generatedAt": "2026-07-14T11:04:34.778904999Z",
-  "statisticsYears": [
-    2026,
-    2025,
-    2024,
-    2023,
-    2022,
-    2021,
-    2020,
-    2019,
-    2018
+  "generatedAt": "2026-07-17T14:38:53.37257073Z",
+  "statisticsRounds": [
+    "2026_kevat",
+    "2025_syksy",
+    "2025_kevat",
+    "2024_syksy",
+    "2024_kevat",
+    "2023_syksy",
+    "2023_kevat",
+    "2022_syksy",
+    "2022_kevat",
+    "2021_syksy",
+    "2021_kevat",
+    "2020_syksy"
   ],
-  "currentStatisticsYear": 2026,
-  "statisticsUpdatedAt": "2026-07-14T11:04:34.778904999Z",
+  "currentStatisticsRound": "2026_kevat",
+  "statisticsUpdatedAt": "2026-07-17T14:38:53.37257073Z",
   "programmesUpdatedAt": "2026-07-09T11:45:13.726154691Z",
   "programmesYhteishakuOid": "1.2.246.562.29.00000000000000087775"
 }

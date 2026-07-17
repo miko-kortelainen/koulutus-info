@@ -18,7 +18,7 @@ test("disables comparison with one selection and removes the selected entry", as
   const onRemove = vi.fn();
   const user = userEvent.setup();
 
-  renderWithChakra(<CompareBar onRemove={onRemove} selected={[selected]} year="2026" />);
+  renderWithChakra(<CompareBar onRemove={onRemove} selected={[selected]} year="2026_kevat" />);
 
   expect(screen.getByRole("button", { name: "Vertaile" })).toBeDisabled();
   await user.click(screen.getByRole("button", { name: "Poista Kohde A" }));
@@ -27,11 +27,15 @@ test("disables comparison with one selection and removes the selected entry", as
 
 test("creates an encoded comparison URL with two selections", () => {
   renderWithChakra(
-    <CompareBar onRemove={vi.fn()} selected={[entry("a&1", "Kohde A"), entry("b/2", "Kohde B")]} year="2026" />,
+    <CompareBar
+      onRemove={vi.fn()}
+      selected={[entry("a&1", "Kohde A"), entry("b/2", "Kohde B")]}
+      year="2026_kevat"
+    />,
   );
 
   expect(screen.getByRole("link", { name: "Vertaile" })).toHaveAttribute(
     "href",
-    "/vertaile/?a=a%261&b=b%2F2&vuosi=2026",
+    "/vertaile/?a=a%261&b=b%2F2&vuosi=2026_kevat",
   );
 });

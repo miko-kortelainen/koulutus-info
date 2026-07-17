@@ -11,10 +11,10 @@ export default function SearchInput({ value, onChange, placeholder }: SearchInpu
     <Input
       aria-label={placeholder}
       flex={1}
-      minHeight="8"
+      minHeight={9}
       onChange={(event) => onChange(event.target.value)}
       placeholder={placeholder}
-      size="xs"
+      size="sm"
       value={value}
     />
   );
