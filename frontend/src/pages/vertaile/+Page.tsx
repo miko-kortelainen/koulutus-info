@@ -1,12 +1,7 @@
 import { Alert, Heading, Link, Separator, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { type ReactNode, useSyncExternalStore } from "react";
 import { usePageContext } from "vike-react/usePageContext";
-import {
-  CURRENT_YEAR,
-  statisticsRoundShortLabel,
-  YEAR_OPTIONS,
-  type YearOption,
-} from "@/config/yearOptions";
+import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import ComparisonTable from "./components/ComparisonTable";
@@ -79,7 +74,7 @@ export default function ComparePage() {
   );
 
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
       {body}
     </PageContainer>
