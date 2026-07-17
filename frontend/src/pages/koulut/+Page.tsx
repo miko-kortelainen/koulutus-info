@@ -62,7 +62,7 @@ export default function SchoolIndexPage() {
   ));
 
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
       <Tabs.Root defaultValue={SECTIONS[0].heading} size="sm">
         {tabList}
