@@ -40,7 +40,8 @@ export const readPublicData = (file: string) => {
   return data;
 };
 
-export const readCurrentYearStatistics = (): StatisticsResponse => readPublicData(`statistics-${CURRENT_YEAR}.json`);
+export const readCurrentYearStatistics = (): StatisticsResponse =>
+  readPublicData(`hakijamaarat-${CURRENT_YEAR.replace("_", "-")}.json`);
 
 export const availableCutoffRounds = (): CutoffRound[] =>
   fs

@@ -13,4 +13,4 @@ export const getCutoffSchools = (round: CutoffRound) =>
   fetchJson<CutoffSchool[]>(`/data/pisterajat-${round}.json`, "failed to fetch cutoff data");
 
 export const getStatistics = (year: YearOption) =>
-  fetchJson<StatisticsResponse>(`/data/statistics-${year}.json`, "failed to fetch statistics");
+  fetchJson<StatisticsResponse>(`/data/hakijamaarat-${year.replace("_", "-")}.json`, "failed to fetch statistics");

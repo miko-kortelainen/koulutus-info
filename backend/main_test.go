@@ -75,25 +75,31 @@ func TestParseRefreshOptions(t *testing.T) {
 	}
 }
 
-func TestAvailableStatisticsYears(t *testing.T) {
+func TestAvailableStatisticsRounds(t *testing.T) {
 	directory := t.TempDir()
-	for _, name := range []string{"statistics-2024.json", "statistics-2026.json", "statistics-2025.json", "schools.json"} {
+	for _, name := range []string{
+		"hakijamaarat-2025-syksy.json",
+		"hakijamaarat-2026-kevat.json",
+		"2026_kevat.json",
+		"statistics-2025.json",
+		"schools.json",
+	} {
 		if err := os.WriteFile(filepath.Join(directory, name), []byte("[]"), 0644); err != nil {
 			t.Fatal(err)
 		}
 	}
 
-	years, err := availableStatisticsYears(directory)
+	rounds, err := availableStatisticsRounds(directory)
 	if err != nil {
-		t.Fatalf("availableStatisticsYears() error = %v", err)
+		t.Fatalf("availableStatisticsRounds() error = %v", err)
 	}
-	want := []int{2026, 2025, 2024}
-	if len(years) != len(want) {
-		t.Fatalf("years = %v, want %v", years, want)
+	want := []string{"2026_kevat", "2025_syksy"}
+	if len(rounds) != len(want) {
+		t.Fatalf("rounds = %v, want %v", rounds, want)
 	}
 	for i := range want {
-		if years[i] != want[i] {
-			t.Fatalf("years = %v, want %v", years, want)
+		if rounds[i] != want[i] {
+			t.Fatalf("rounds = %v, want %v", rounds, want)
 		}
 	}
 }
