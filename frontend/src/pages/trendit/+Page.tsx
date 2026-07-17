@@ -1,10 +1,10 @@
 import { Alert, Box, createListCollection, Heading, Select, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
+import YearControl from "@/components/YearControl";
 import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
-import YearControl from "@/pages/hakijamaarat/components/YearControl";
 import type { TrendsPageData } from "./+data";
 import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
 import KoulutusalaTrendChart from "./components/KoulutusalaTrendChart";
@@ -170,7 +170,7 @@ export default function TrendsPage() {
   );
 
   return (
-    <PageContainer>
+    <PageContainer align="flex-start">
       {header}
       {loadingAndError}
       {yearSelectors}
