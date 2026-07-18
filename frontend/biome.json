@@ -17,13 +17,13 @@
   "linter": {
     "rules": {
       "preset": "recommended",
-      "a11y": "warn",
+      "a11y": "error",
       "suspicious": {
-        "noArrayIndexKey": "off"
+        "noArrayIndexKey": "error"
       },
       "style": {
         "useConsistentCurlyBraces": {
-          "level": "warn",
+          "level": "error",
           "fix": "safe"
         }
       }

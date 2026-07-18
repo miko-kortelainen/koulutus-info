@@ -21,9 +21,6 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-  build: {
-    chunkSizeWarningLimit: 600,
-  },
   test: {
     environment: "jsdom",
     include: ["src/**/*.component.test.{ts,tsx}"],
