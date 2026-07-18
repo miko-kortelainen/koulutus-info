@@ -1,6 +1,7 @@
 import { Alert, Heading, Link, Separator, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { type ReactNode, useSyncExternalStore } from "react";
 import { usePageContext } from "vike-react/usePageContext";
+import ShareButton from "@/components/ShareButton";
 import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
@@ -58,7 +59,13 @@ export default function ComparePage() {
       </Stack>
     );
   } else if (entryA && entryB) {
-    body = <ComparisonTable a={entryA} b={entryB} />;
+    body = (
+      <Stack align="flex-start" gap={4}>
+        <ComparisonTable a={entryA} b={entryB} />
+
+        <ShareButton label="Jaa tämä vertailu" />
+      </Stack>
+    );
   }
 
   const header = (

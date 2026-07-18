@@ -12,7 +12,7 @@ const FOOTER_LINKS = [
 
 export default function Footer() {
   return (
-    <Box as="footer" borderColor="border.subtle" borderTopWidth="1px" minH="8rem" mt={12} p={4}>
+    <Box as="footer" borderColor="border" borderTopWidth="1px" minH="8rem" mt={12} p={4}>
       <Flex direction="column" gap={6} margin="0 auto" maxW="60rem">
         <VStack align="flex-start" gap={0}>
           <HStack gap={2}>

@@ -436,16 +436,25 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
-  await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
-  await expect(page.getByRole("button", { name: "Valittu ✓" }).first()).toBeVisible({ timeout: 1000 });
-  await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
-  await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2);
+  // prerendered HTML ignores clicks until React hydrates, so early clicks can be lost; retry until both register
+  await expect(async () => {
+    if ((await page.getByRole("button", { name: "Valittu ✓" }).count()) < 2) {
+      await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+    }
+    await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(2, { timeout: 500 });
+  }).toPass({ timeout: 10000 });
 
   await page.getByRole("link", { name: "Vertaile" }).click();
   await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026_kevat/);
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
   await expect(page.getByText("Kaikki hakijat")).toHaveCount(2);
+
+  // share the comparison: headless chromium has no navigator.share, so the clipboard fallback runs
+  await page.context().grantPermissions(["clipboard-write"]);
+  await page.getByRole("button", { name: "Jaa tämä vertailu" }).click();
+  // the label flips only after clipboard writeText resolves, so this asserts the copy succeeded
+  await expect(page.getByRole("button", { name: "Linkki kopioitu" })).toBeVisible();
 });
 
 test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {

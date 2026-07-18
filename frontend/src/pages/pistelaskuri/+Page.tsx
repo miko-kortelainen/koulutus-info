@@ -314,8 +314,8 @@ export default function ScoreCalculatorPage() {
         size="sm"
       >
         <Checkbox.HiddenInput />
-        <Checkbox.Control bg={COLORS.border} borderColor={COLORS.border}>
-          <Checkbox.Indicator bg={COLORS.accent} />
+        <Checkbox.Control>
+          <Checkbox.Indicator />
         </Checkbox.Control>
         <Checkbox.Label>Näytä myös ensikertalaisten pisterajat</Checkbox.Label>
       </Checkbox.Root>

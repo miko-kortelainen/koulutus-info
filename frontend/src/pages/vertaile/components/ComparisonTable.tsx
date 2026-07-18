@@ -54,10 +54,10 @@ function PairRow({ left, right, header = false }: { left: ReactNode; right: Reac
 
   return (
     <Table.Row>
-      <Table.Cell borderColor="border" borderRightWidth="1px" p={0} pr={2} pt={4}>
+      <Table.Cell borderBottom={0} borderColor="border" borderRightWidth="1px" p={0} pr={2} pt={4}>
         {left}
       </Table.Cell>
-      <Table.Cell p={0} pl={2} pt={4}>
+      <Table.Cell borderBottom={0} p={0} pl={2} pt={4}>
         {right}
       </Table.Cell>
     </Table.Row>
