@@ -1,4 +1,5 @@
-import { screen } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import { getGuide } from "../guides";
@@ -16,17 +17,18 @@ test("renders the real MDX guide with registry metadata, navigation and sources"
   renderWithChakra(<GuideLayout Content={Content} slug={slug} source={source} />);
 
   expect(
-    screen.getByRole("heading", { level: 1, name: "Yliopistojen todistusvalinnan pisteytys" }),
+    screen.getByRole("heading", {
+      level: 1,
+      name: "Yliopistojen todistusvalintojen pisteytys ja kynnysehdot",
+    }),
   ).toBeInTheDocument();
   expect(
     screen.getByText(
-      "Todistusvalinnassa yliopisto laskee pisteet tutkintosi arvosanoista ja vertaa niitä muiden hakijoiden pisteisiin.",
+      "Yliopisto laskee todistusvalinnan pisteet ylioppilastutkintosi arvosanoista ja enimmäispisteet vaihtelee alasta riippuen.",
     ),
   ).toBeInTheDocument();
-  expect(screen.getByText(/Päivitetty 17\.7\.2026/)).toBeInTheDocument();
-  expect(screen.getByText(/Vuodesta 2026 käytössä on 11 pisteytystaulukkoa/)).toBeInTheDocument();
-  expect(screen.getByText("suomalainen ylioppilastutkinto")).toBeInTheDocument();
-  expect(screen.getByText("Huomio")).toBeInTheDocument();
+  expect(screen.getByText(/Päivitetty 18\.7\.2026/)).toBeInTheDocument();
+  expect(screen.getAllByText(/käytössä on 11 pisteytystaulukkoa/)).toHaveLength(2);
 
   for (const heading of getGuideHeadings(source)) {
     expect(screen.getByRole("link", { name: heading.label })).toHaveAttribute("href", `#${heading.id}`);
@@ -37,14 +39,46 @@ test("renders the real MDX guide with registry metadata, navigation and sources"
   expect(screen.getByRole("link", { name: /Koulutukset/ })).toHaveAttribute("href", "/koulutukset/");
   expect(screen.getByRole("link", { name: /Hakijamäärät/ })).toHaveAttribute("href", "/hakijamaarat/");
 
-  const articleSource = screen.getByRole("link", { name: "Yliopistovalinnat.fi-palvelun pisteytystaulukoista" });
-  expect(articleSource).toHaveAttribute("target", "_blank");
-  expect(articleSource).toHaveAttribute("rel", "noopener noreferrer");
+  for (const citation of screen.getAllByRole("link", { name: "[1]" })) {
+    expect(citation).toHaveAttribute("href", "#lahde-1");
+  }
 
   expect(screen.getByRole("heading", { name: "Lähteet" })).toBeInTheDocument();
-  expect(
-    screen.getByRole("link", { name: "Yliopistovalinnat.fi: Todistusvalinnan pisteytykset vuodesta 2026" }),
-  ).toHaveAttribute("target", "_blank");
+  const ophSource = screen.getByRole("link", {
+    name: "Opetushallitus: Suomalaisen lukion voi suorittaa englanniksi syksystä 2026 alkaen",
+  });
+  expect(ophSource).toHaveAttribute("target", "_blank");
+  expect(ophSource.closest("li")).toHaveAttribute("id", "lahde-3");
+  expect(ophSource.closest("ol")).toBeInTheDocument();
+});
+
+test("keeps the exception table visible and collapses the kynnysehto sections behind accordions", async () => {
+  const user = userEvent.setup();
+  renderWithChakra(<GuideLayout Content={Content} slug={slug} source={source} />);
+
+  // The exception table stays visible without interaction.
+  const poikkeukset = screen.getByRole("table");
+  expect(within(poikkeukset).getByRole("columnheader", { name: "Yliopisto" })).toBeInTheDocument();
+  expect(within(poikkeukset).getByRole("columnheader", { name: "Hakukohde" })).toBeInTheDocument();
+  expect(within(poikkeukset).getAllByRole("row")).toHaveLength(11);
+
+  // The kynnysehto table and the no-threshold list start collapsed behind their accordions.
+  expect(screen.getByRole("button", { name: "Alat, joissa on kynnysehto" })).toHaveAttribute("aria-expanded", "false");
+  expect(screen.getByRole("button", { name: "Alat ilman kynnysehtoa" })).toHaveAttribute("aria-expanded", "false");
+  expect(screen.queryByRole("cell", { name: "Farmasia" })).not.toBeInTheDocument();
+  expect(screen.getByText("Biokemia ja molekyylibiotieteet")).not.toBeVisible();
+
+  await user.click(screen.getByRole("button", { name: "Alat, joissa on kynnysehto" }));
+  const farmasia = await screen.findByRole("cell", { name: "Farmasia" });
+  const kynnysehdot = farmasia.closest("table") as HTMLTableElement;
+  expect(within(kynnysehdot).getByRole("columnheader", { name: "Hakukohde" })).toBeInTheDocument();
+  expect(within(kynnysehdot).getByRole("columnheader", { name: "Kynnysehto" })).toBeInTheDocument();
+  expect(within(kynnysehdot).getAllByRole("row")).toHaveLength(29);
+
+  await user.click(screen.getByRole("button", { name: "Alat ilman kynnysehtoa" }));
+  expect(screen.getByText("Biokemia ja molekyylibiotieteet")).toBeVisible();
+  expect(screen.getByText("Ravitsemustiede")).toBeVisible();
+  expect(screen.getAllByRole("table")).toHaveLength(2);
 });
 
 test("ignores fenced headings and generates Finnish and S2/R2 IDs", () => {

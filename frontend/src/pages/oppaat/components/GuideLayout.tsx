@@ -1,8 +1,9 @@
-import { Box, Heading, HStack, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, HStack, Link, Stack, Table, Text } from "@chakra-ui/react";
 import type { MDXComponents, MDXProps } from "mdx/types.js";
 import type { ComponentProps, ComponentType, ReactNode } from "react";
 import PageContainer from "@/layout/PageContainer";
 import { formatGuideDate, getGuide } from "../guides";
+import GuideAccordion from "./GuideAccordion";
 
 interface GuideLayoutProps {
   slug: string;
@@ -83,7 +84,7 @@ export function getGuideHeadings(source: string): GuideHeading[] {
   return headings;
 }
 
-export function Callout({ title = "Huomio", children }: { title?: string; children: ReactNode }) {
+export function Callout({ title = "Tiesitkö?", children }: { title?: string; children: ReactNode }) {
   return (
     <Box bg="bg.muted" borderColor="accent" borderLeftWidth="3px" borderRadius="md" px={4} py={3}>
       <Text color="accent" fontSize="xs" fontWeight="semibold" letterSpacing="wider" textTransform="uppercase">
@@ -143,7 +144,20 @@ const mdxComponents = {
   ),
   a: GuideLink,
   blockquote: ({ children }: ComponentProps<"blockquote">) => <Callout>{children}</Callout>,
+  table: ({ children }: ComponentProps<"table">) => (
+    <Table.ScrollArea borderColor="border" borderWidth="1px">
+      <Table.Root fontSize="sm" size="sm">
+        {children}
+      </Table.Root>
+    </Table.ScrollArea>
+  ),
+  thead: ({ children }: ComponentProps<"thead">) => <Table.Header>{children}</Table.Header>,
+  tbody: ({ children }: ComponentProps<"tbody">) => <Table.Body>{children}</Table.Body>,
+  tr: ({ children }: ComponentProps<"tr">) => <Table.Row>{children}</Table.Row>,
+  th: ({ children }: ComponentProps<"th">) => <Table.ColumnHeader whiteSpace="normal">{children}</Table.ColumnHeader>,
+  td: ({ children }: ComponentProps<"td">) => <Table.Cell whiteSpace="normal">{children}</Table.Cell>,
   Callout,
+  GuideAccordion,
 } satisfies MDXComponents;
 
 export default function GuideLayout({ slug, Content, source }: GuideLayoutProps) {
@@ -168,6 +182,16 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
             Päivitetty {formatGuideDate(meta.updated)}
           </Text>
         </Stack>
+
+        <Box maxW="42rem">
+          <Callout title="TL;DR">
+            <Stack as="ul" gap={2} listStyleType="disc" pl={5}>
+              {meta.tldr.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </Stack>
+          </Callout>
+        </Box>
 
         {headings.length > 1 && (
           <Stack
@@ -198,7 +222,7 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
           </Stack>
         )}
 
-        <Stack as="article" fontSize="md" gap={3} lineHeight="tall" maxW="42rem" textWrap="pretty">
+        <Stack as="article" fontSize="md" gap={3} lineHeight="tall" textWrap="pretty">
           <Content components={mdxComponents} />
         </Stack>
 
@@ -207,29 +231,38 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
             Jatka seuraavaksi
           </Heading>
           <Stack direction={{ base: "column", md: "row" }} gap={3}>
-            {defaultRelated.map((item) => (
-              <Link
-                _hover={{ borderColor: "accent", textDecoration: "none" }}
-                borderColor="border"
-                borderRadius="lg"
-                borderWidth="1px"
-                display="block"
-                flex={1}
-                href={item.href}
-                key={item.href}
-                p={4}
-              >
-                <Text fontWeight="semibold">
-                  {item.label}{" "}
-                  <Text as="span" color="accent">
-                    →
+            {defaultRelated.map((item, index) => {
+              const primary = index === 0;
+              return (
+                <Link
+                  _hover={
+                    primary
+                      ? { textDecoration: "none", transform: "translateY(-2px)" }
+                      : { borderColor: "accent", textDecoration: "none" }
+                  }
+                  bg={primary ? "accent" : undefined}
+                  borderColor={primary ? "accent" : "border"}
+                  borderRadius="lg"
+                  borderWidth="1px"
+                  display="block"
+                  flex={1}
+                  href={item.href}
+                  key={item.href}
+                  p={4}
+                  transition={primary ? "transform 0.15s ease" : undefined}
+                >
+                  <Text fontWeight="semibold">
+                    {item.label}{" "}
+                    <Text as="span" color={primary ? undefined : "accent"}>
+                      →
+                    </Text>
                   </Text>
-                </Text>
-                <Text color="fg.muted" fontSize="sm" mt={1}>
-                  {item.description}
-                </Text>
-              </Link>
-            ))}
+                  <Text color="fg.muted" fontSize="sm" mt={1}>
+                    {item.description}
+                  </Text>
+                </Link>
+              );
+            })}
           </Stack>
         </Stack>
 
@@ -238,9 +271,9 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
             <Heading as="h2" size="sm">
               Lähteet
             </Heading>
-            <Stack as="ul" color="fg.muted" fontSize="sm" gap={2} listStyleType="disc" pl={5}>
-              {meta.sources.map((source) => (
-                <li key={source.href}>
+            <Stack as="ol" color="fg.muted" fontSize="sm" gap={2} listStyleType="decimal" pl={5}>
+              {meta.sources.map((source, index) => (
+                <li id={`lahde-${index + 1}`} key={source.href}>
                   <GuideLink href={source.href}>{source.label}</GuideLink>
                 </li>
               ))}
