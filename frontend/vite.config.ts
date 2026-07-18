@@ -2,10 +2,11 @@
 
 import mdx from "@mdx-js/rollup";
 import react from "@vitejs/plugin-react";
+import remarkGfm from "remark-gfm";
 import vike from "vike/plugin";
 import { defineConfig } from "vite";
 
-const mdxPlugin = { enforce: "pre" as const, ...mdx({ include: /\.mdx$/ }) };
+const mdxPlugin = { enforce: "pre" as const, ...mdx({ include: /\.mdx$/, remarkPlugins: [remarkGfm] }) };
 const transformMdx = mdxPlugin.transform;
 
 // @mdx-js/rollup strips query strings before filtering, so let Vite handle explicit raw imports.

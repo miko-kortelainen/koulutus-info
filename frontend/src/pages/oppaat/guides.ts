@@ -5,6 +5,8 @@ export interface GuideMeta {
   description: string;
   /** Lead paragraph shown under the title */
   lede: string;
+  /** "Pähkinänkuoressa" bullets shown before the table of contents — keep to 2–3 short points */
+  tldr: string[];
   /** ISO date (e.g. "2026-07-17") — shown to readers and used in JSON-LD */
   updated: string;
   sources?: { label: string; href: string }[];
@@ -12,7 +14,7 @@ export interface GuideMeta {
 
 /**
  * Registry of all guides under /oppaat/. Adding a new guide:
- * 1. Add its metadata, lede and optional sources here.
+ * 1. Add its metadata, lede, tldr bullets and optional sources here.
  * 2. Add <slug>/content.mdx using plain `## Heading` lines for table-of-contents entries.
  * 3. Add a tiny <slug>/+Page.tsx importing content.mdx normally and with `?raw`, then pass both to GuideLayout.
  * 4. Add +config.ts (SEO title) and +Head.clear.tsx (<GuideHead slug="<slug>" />).
@@ -22,11 +24,17 @@ export interface GuideMeta {
 export const guides: GuideMeta[] = [
   {
     slug: "yliopistojen-todistusvalinta",
-    title: "Yliopistojen todistusvalinnan pisteytys",
+    title: "Yliopistojen todistusvalintojen pisteytys ja kynnysehdot",
     description:
-      "Yliopistojen todistusvalinnan pisteytys vuodesta 2026: hyväksytyt tutkinnot, pisteytystaulukot, kynnysehdot ja vähimmäispisteet.",
-    lede: "Todistusvalinnassa yliopisto laskee pisteet tutkintosi arvosanoista ja vertaa niitä muiden hakijoiden pisteisiin.",
-    updated: "2026-07-17",
+      "Suomalaisen ylioppilastutkinnon pisteytys yliopistojen todistusvalinnassa vuodesta 2026: pisteytystaulukot, kynnysehdot ja vähimmäispisteet.",
+    lede: "Yliopisto laskee todistusvalinnan pisteet ylioppilastutkintosi arvosanoista ja enimmäispisteet vaihtelee alasta riippuen.",
+    tldr: [
+      "Pisteesi lasketaan ylioppilastutkintosi arvosanoista.",
+      "Pisteytys, kynnysehdot ja enimmäispisteet riippuvat siitä mitä pisteytystaulukkoa käytetään.",
+      "Vuodesta 2026 alkaen käytössä on 11 pisteytystaulukkoa.",
+      "Kynnysehdot ovat usein alakohtaisia",
+    ],
+    updated: "2026-07-18",
     sources: [
       {
         label: "Yliopistovalinnat.fi: Todistusvalinnan pisteytykset vuodesta 2026",
@@ -35,6 +43,10 @@ export const guides: GuideMeta[] = [
       {
         label: "Opintopolku: hakukohteiden valintaperusteet",
         href: "https://opintopolku.fi/konfo/fi/sivu/valmistaudu-korkeakoulujen-yhteishakuun",
+      },
+      {
+        label: "Opetushallitus: Suomalaisen lukion voi suorittaa englanniksi syksystä 2026 alkaen",
+        href: "https://www.oph.fi/fi/uutiset/2025/suomalaisen-lukion-voi-suorittaa-englanniksi-syksysta-2026-alkaen",
       },
     ],
   },
