@@ -1,4 +1,4 @@
-import { Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Box, Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { CURRENT_YEAR, statisticsRoundLabel } from "@/config/yearOptions";
@@ -32,7 +32,7 @@ export default function SchoolIndexPage() {
   );
 
   const tabList = (
-    <Tabs.List>
+    <Tabs.List aria-label="Korkeakoulut sektoreittain">
       {SECTIONS.map(({ heading }) => (
         <Tabs.Trigger
           flex={1}
@@ -51,11 +51,13 @@ export default function SchoolIndexPage() {
 
   const tabContent = SECTIONS.map(({ sektori, heading }) => (
     <Tabs.Content key={heading} value={heading}>
-      <Stack gap={4}>
+      <Stack as="ul" gap={4} listStyleType="none">
         {sortedSchools
           .filter((s) => s.sektori === sektori)
           .map((school) => (
-            <SchoolListCard key={school.slug} school={school} />
+            <Box as="li" key={school.slug}>
+              <SchoolListCard school={school} />
+            </Box>
           ))}
       </Stack>
     </Tabs.Content>

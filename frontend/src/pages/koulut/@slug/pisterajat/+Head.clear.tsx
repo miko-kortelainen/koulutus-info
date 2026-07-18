@@ -1,12 +1,13 @@
 import { useData } from "vike-react/useData";
 import { slugifySchoolName } from "@/components/slug";
+import { cutoffRoundYear, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
 import { Head as GlobalHead } from "../../../+Head";
 import type { CutoffPageData } from "./+data";
 
 export function Head() {
   const { schoolName } = useData<CutoffPageData>();
   const url = `https://yhteishaku.app/koulut/${slugifySchoolName(schoolName)}/pisterajat/`;
-  const description = `${schoolName} – yhteishaun pisterajat 2026.`;
+  const description = `${schoolName} – yhteishaun pisterajat ${cutoffRoundYear(DEFAULT_CUTOFF_ROUND)}.`;
 
   return (
     <>

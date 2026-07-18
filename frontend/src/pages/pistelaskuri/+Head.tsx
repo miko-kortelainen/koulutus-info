@@ -1,5 +1,8 @@
-const description =
-  "Laske YO- tai AMM-todistuspisteet ja vertaa tulosta vuoden 2026 suuntaa-antaviin AMK-pisterajoihin.";
+import { cutoffRoundYear, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
+
+const description = `Laske YO- tai AMM-todistuspisteet ja vertaa tulosta vuoden ${cutoffRoundYear(
+  DEFAULT_CUTOFF_ROUND,
+)} suuntaa-antaviin AMK-pisterajoihin.`;
 
 export function Head() {
   return (

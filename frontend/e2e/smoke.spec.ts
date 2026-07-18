@@ -2,13 +2,13 @@ import { expect, type Page, test } from "@playwright/test";
 
 test.describe.configure({ mode: "parallel" });
 
-const NAV_LABEL = "navigointi";
+const NAV_LABEL = "Päänavigointi";
 
 // click can land before hydration, so retry until the drawer actually opens
 async function openNavDrawer(page: Page) {
   await expect(async () => {
     await page.getByRole("button", { name: "avaa navigointi" }).click();
-    await expect(page.getByRole("navigation", { name: NAV_LABEL })).toBeVisible({ timeout: 1000 });
+    await expect(page.getByRole("navigation", { exact: true, name: NAV_LABEL })).toBeVisible({ timeout: 1000 });
   }).toPass();
 }
 
@@ -34,12 +34,19 @@ async function waitForCalculatorHydration(page: Page) {
   await expect(yoTab).toHaveAttribute("aria-selected", "true");
 }
 
+async function openCalculator(page: Page) {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/pistelaskuri/");
+  await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
+  await waitForCalculatorHydration(page);
+}
+
 async function openResultsAccordion(page: Page, name: RegExp) {
   const trigger = page.getByRole("button", { name });
-  const item = trigger.locator("..");
 
   await trigger.click();
   await expect(trigger).toHaveAttribute("aria-expanded", "true");
+  const item = page.getByRole("region", { name });
   await expect(item.getByRole("article").first()).toBeVisible({ timeout: 10000 });
 
   return item;
@@ -67,7 +74,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
 
 test("nav links navigate to all pages", async ({ page }) => {
   await page.goto("/");
-  const nav = page.getByRole("navigation", { name: NAV_LABEL });
+  const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
 
   // drawer closes on link click, so reopen before each navigation
   for (const [label, url] of [
@@ -90,7 +97,7 @@ test("nav links navigate to all pages", async ({ page }) => {
 });
 
 test("/hakijamaarat: loads data and search filters results", async ({ page }) => {
-  await page.goto("/hakijamaarat");
+  await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
@@ -101,12 +108,9 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
   await expect(page.getByText("Hakijat").first()).toBeVisible();
 });
 
-test("/pistelaskuri: shows active cutoffs and compares calculated points", async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/pistelaskuri/");
-  await expect(page.getByRole("heading", { name: "Pistelaskuri" })).toBeVisible();
+test("/pistelaskuri: searches active cutoffs and switches applicant type", async ({ page }) => {
+  await openCalculator(page);
   await expect(page.getByText(/Pisteesi riittävät – \/ \d+ toteutukseen/)).toBeVisible();
-  await waitForCalculatorHydration(page);
   await expectSelectedOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
   const firstTimeApplicantCheckbox = page.getByRole("checkbox", {
@@ -129,8 +133,10 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await expect(firstTimeApplicantCheckbox).toBeChecked();
   await expect(page.getByRole("article")).toHaveCount(1);
   await expect(page.getByRole("article").getByText("Todistusvalinta, ensikertalaiset", { exact: true })).toBeVisible();
-  await resultSearch.clear();
+});
 
+test("/pistelaskuri: filters selection methods and paginates grouped results", async ({ page }) => {
+  await openCalculator(page);
   await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
   const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset alat/);
   await expect(humanistisetAccordion.getByRole("article")).toHaveCount(20);
@@ -148,8 +154,10 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
   await expect(page.getByText("Ei toteutuksia valituilla rajauksilla :(")).toBeVisible();
   await page.getByRole("tab", { name: "YO" }).click();
-  await selectOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
+});
 
+test("/pistelaskuri: switches cutoff rounds and sorting", async ({ page }) => {
+  await openCalculator(page);
   const roundResponse = page.waitForResponse((response) => response.url().includes("pisterajat-2025-syksy.json"));
   await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
   expect((await roundResponse).status()).toBe(200);
@@ -193,7 +201,7 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
     .poll(async () => {
       const programmeNames = await tekniikkaAccordion
         .getByRole("article")
-        .getByRole("heading", { level: 3 })
+        .getByRole("heading", { level: 4 })
         .allTextContents();
       return (
         programmeNames.length > 1 &&
@@ -209,9 +217,10 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
 
   await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
   await expect(page.getByRole("article").getByText("AMK-valintakoe", { exact: true }).first()).toBeVisible();
+});
 
-  await page.getByRole("tab", { name: "YO" }).click();
-
+test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
+  await openCalculator(page);
   await selectOption(page, "Äidinkieli", "M");
   await selectOption(page, "Matematiikan oppimäärä", "Lyhyt");
   await selectOption(page, "Matematiikan arvosana", "M");
@@ -230,9 +239,10 @@ test("/pistelaskuri: shows active cutoffs and compares calculated points", async
   await expect(page.getByText(/Pisteesi riittävät \d+ \/ \d+ toteutukseen/)).toBeVisible();
   await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
 
-  await expect(page.getByText("Pisteesi / alin hyväksytty pistemäärä").first()).toBeVisible();
+  const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
+  await expect(tekniikkaAccordion.getByText(/Pisteesi \/ alin hyväksytty pistemäärä/).first()).toBeVisible();
   await expect(
-    page
+    tekniikkaAccordion
       .getByRole("article")
       .getByText(/^106 \/ /)
       .first(),
@@ -291,7 +301,7 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
 });
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
-  await page.goto("/koulutukset");
+  await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
@@ -303,7 +313,7 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
 });
 
 test("/hakijamaarat: joint application switcher fetches different data", async ({ page }) => {
-  await page.goto("/hakijamaarat");
+  await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   await page.getByRole("button", { name: "Kunta" }).click();
@@ -322,7 +332,7 @@ test("/hakijamaarat: joint application switcher fetches different data", async (
 });
 
 test("/hakijamaarat: filters narrow results", async ({ page }) => {
-  await page.goto("/hakijamaarat");
+  await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
@@ -359,7 +369,7 @@ test("/hakijamaarat: filters narrow results", async ({ page }) => {
 });
 
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
-  await page.goto("/koulutukset");
+  await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
@@ -391,7 +401,7 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
     sessionStorage.setItem("favorites-storage-initialized", "true");
     localStorage.setItem("yhteishaku:tallennetut", "{}");
   });
-  await page.goto("/koulutukset");
+  await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   // click can land before hydration, so retry until the toggle actually takes effect
@@ -400,7 +410,7 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
     await expect(page.getByRole("button", { name: "Poista tallennetuista" }).first()).toBeVisible({ timeout: 1000 });
   }).toPass();
 
-  await page.goto("/tallennetut");
+  await page.goto("/tallennetut/");
   await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).not.toBeVisible();
   await expect(page.getByRole("button", { name: "Poista tallennetuista" })).toHaveCount(1);
 
@@ -414,7 +424,7 @@ test("/palaute: submits feedback and shows thank you message", async ({ page }) 
     route.fulfill({ status: 200, contentType: "application/json", body: "{}" }),
   );
 
-  await page.goto("/palaute");
+  await page.goto("/palaute/");
   await expect(page.getByRole("heading", { name: "Palaute" })).toBeVisible();
 
   await page.getByPlaceholder("Kirjoita palautteesi tähän...").fill("Testipalaute");
@@ -423,7 +433,7 @@ test("/palaute: submits feedback and shows thank you message", async ({ page }) 
 });
 
 test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side comparison", async ({ page }) => {
-  await page.goto("/hakijamaarat");
+  await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
@@ -439,7 +449,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
 });
 
 test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
-  await page.goto("/koulut");
+  await page.goto("/koulut/");
   await expect(page.getByRole("heading", { name: "Koulut" })).toBeVisible();
 
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
@@ -449,7 +459,7 @@ test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
 });
 
 test("/koulut: sort control reorders the school list", async ({ page }) => {
-  await page.goto("/koulut");
+  await page.goto("/koulut/");
   const firstLink = page.getByRole("tabpanel").getByRole("link").first();
   await expect(firstLink).toBeVisible();
   const azFirstHref = await firstLink.getAttribute("href");
@@ -462,7 +472,7 @@ test("/koulut: sort control reorders the school list", async ({ page }) => {
 });
 
 test("/koulut/:slug: selecting a school opens its detail page", async ({ page }) => {
-  await page.goto("/koulut");
+  await page.goto("/koulut/");
 
   const firstSchool = page.getByRole("tabpanel").getByRole("link").first();
   const href = await firstSchool.getAttribute("href");
@@ -474,7 +484,7 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 });
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
-  await page.goto("/koulut/centria-ammattikorkeakoulu");
+  await page.goto("/koulut/centria-ammattikorkeakoulu/");
   await page.getByRole("link", { name: "2026 pisterajat" }).click();
 
   await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/pisterajat/");
@@ -485,7 +495,7 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
-    await page.getByRole("button", { name: "2" }).click();
+    await page.getByRole("button", { name: /Sivu 2\// }).click();
     await expect(page.getByText("Insinööri (AMK), tekniikan yhteinen päivätoteutus / Kokkola")).toBeVisible({
       timeout: 1000,
     });
@@ -516,11 +526,13 @@ test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => 
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {
-  await page.goto("/trendit");
+  await page.goto("/trendit/");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Suosituimmat korkeakoulut" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Kevään 1. ja 2. yhteishaun hakijamäärät" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Syksyn yhteishaun hakijamäärät" })).toBeVisible();
+  await expect(page.getByRole("img", { name: "Kevään yhteishakujen ensisijaiset hakijat vuosittain" })).toBeVisible();
+  await expect(page.getByRole("img", { name: "Syksyn yhteishaun ensisijaiset hakijat vuosittain" })).toBeVisible();
   // "Hakijaa" column header renders only after skeletons are replaced by data
   await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
 

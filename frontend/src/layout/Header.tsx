@@ -70,7 +70,7 @@ export default function Header() {
           <Image alt="" boxSize={6} src="/images/logo.png" />
           <Text as="span" fontSize="md">
             yhteishaku
-            <Text as="span" color="accent">
+            <Text as="span" color="fg.accent">
               .app
             </Text>
           </Text>
@@ -89,13 +89,13 @@ export default function Header() {
                 <Drawer.Header>
                   <Drawer.Title fontWeight="bold" letterSpacing="widest">
                     yhteishaku
-                    <Text as="span" color="accent">
+                    <Text as="span" color="fg.accent">
                       .app
                     </Text>
                   </Drawer.Title>
                 </Drawer.Header>
                 <Drawer.Body>
-                  <Box aria-label="navigointi" as="nav">
+                  <Box aria-label="Päänavigointi" as="nav">
                     <Stack as="ul" fontSize="xl" gap={{ base: 8, md: 10 }} listStyleType="none">
                       {links.map(({ href, label, description, icon: Icon }) => (
                         <Box as="li" key={href}>
@@ -103,14 +103,14 @@ export default function Header() {
                           <Drawer.ActionTrigger asChild>
                             <Link display="block" href={href}>
                               <HStack gap={2}>
-                                <Icon color={COLORS.accent} size="1rem" />
+                                <Icon color={COLORS.accentFg} size="1rem" />
                                 <Text as="span">{label}</Text>
                               </HStack>
                               <Text
                                 color="fg.muted"
                                 fontSize="sm"
                                 textDecor="underline"
-                                textDecorationColor={COLORS.accent}
+                                textDecorationColor={COLORS.accentFg}
                                 textDecorationStyle="dotted"
                                 textDecorationThickness={2}
                               >

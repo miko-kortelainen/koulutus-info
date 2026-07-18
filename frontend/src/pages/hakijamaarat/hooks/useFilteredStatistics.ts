@@ -34,7 +34,15 @@ export default function useFilteredStatistics(
         (!selectedKunnat.size || selectedKunnat.has(d.kuntaHakukohde ?? "")) &&
         (!selectedSchools.size || selectedSchools.has(d.korkeakoulu ?? "")),
     );
-  }, [items, selectedSektorit, selectedKoulutusasteet, selectedKoulutusalat, selectedKielet, selectedKunnat, selectedSchools]);
+  }, [
+    items,
+    selectedSektorit,
+    selectedKoulutusasteet,
+    selectedKoulutusalat,
+    selectedKielet,
+    selectedKunnat,
+    selectedSchools,
+  ]);
 
   const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
 
@@ -45,7 +53,7 @@ export default function useFilteredStatistics(
     return [...filtered].sort((a, b) => {
       switch (sortOrder) {
         case "desc":
-          return b.hakukohde.localeCompare(a.hakukohde);
+          return b.hakukohde.localeCompare(a.hakukohde, "fi");
         case "most_popular":
           return b.kaikkiHakijatLkm - a.kaikkiHakijatLkm;
         case "least_popular":
@@ -55,7 +63,7 @@ export default function useFilteredStatistics(
         case "least_spots":
           return a.aloituspaikatLkm - b.aloituspaikatLkm;
         case "asc":
-          return a.hakukohde.localeCompare(b.hakukohde);
+          return a.hakukohde.localeCompare(b.hakukohde, "fi");
         default:
           return 0;
       }

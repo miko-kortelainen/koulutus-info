@@ -1,7 +1,7 @@
-import { Badge, Card, Heading, HStack, Separator, Stack, Stat } from "@chakra-ui/react";
+import { Badge, Card, Heading, HStack, Stat, Table } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 import { HiOutlineArrowCircleDown, HiOutlineArrowCircleUp } from "react-icons/hi";
-import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
+import { formatCount, getHakijapaine, getTier, ratioFormat } from "@/components/hakijapaineTier";
 import type { StatisticsEntry } from "@/types.gen";
 
 interface ComparisonTableProps {
@@ -38,13 +38,29 @@ function TrendIcon({ trend }: { trend: Trend }) {
 }
 
 // each pair renders in its own flex row, so align-items: stretch keeps the two cards equal height
-function PairRow({ left, right }: { left: ReactNode; right: ReactNode }) {
+function PairRow({ left, right, header = false }: { left: ReactNode; right: ReactNode; header?: boolean }) {
+  if (header) {
+    return (
+      <Table.Row>
+        <Table.ColumnHeader borderColor="border" borderRightWidth="1px" p={0} pr={2}>
+          {left}
+        </Table.ColumnHeader>
+        <Table.ColumnHeader p={0} pl={2}>
+          {right}
+        </Table.ColumnHeader>
+      </Table.Row>
+    );
+  }
+
   return (
-    <Stack direction="row" gap={3}>
-      {left}
-      <Separator orientation="vertical" />
-      {right}
-    </Stack>
+    <Table.Row>
+      <Table.Cell borderColor="border" borderRightWidth="1px" p={0} pr={2} pt={4}>
+        {left}
+      </Table.Cell>
+      <Table.Cell p={0} pl={2} pt={4}>
+        {right}
+      </Table.Cell>
+    </Table.Row>
   );
 }
 
@@ -98,48 +114,53 @@ export default function ComparisonTable({ a, b }: ComparisonTableProps) {
   const paineB = getHakijapaine(b);
 
   return (
-    <Stack gap={4}>
-      <PairRow
-        left={
-          <Heading as="h2" flex={1} minW={0} size="sm" textWrap="pretty">
-            {a.hakukohde}
-          </Heading>
-        }
-        right={
-          <Heading as="h2" flex={1} minW={0} size="sm" textWrap="pretty">
-            {b.hakukohde}
-          </Heading>
-        }
-      />
-      <PairRow
-        left={<StatCard label="Korkeakoulu" value={a.korkeakoulu ?? "-"} />}
-        right={<StatCard label="Korkeakoulu" value={b.korkeakoulu ?? "-"} />}
-      />
-      {COUNT_ROWS.map(([label, field]) => (
+    <Table.Root aria-label="Hakukohteiden vertailu" tableLayout="fixed" variant="line">
+      <Table.Header>
         <PairRow
-          key={field}
-          left={<StatCard label={label} trend={countTrend(a[field], b[field])} value={formatCount(a[field])} />}
-          right={<StatCard label={label} trend={countTrend(b[field], a[field])} value={formatCount(b[field])} />}
+          header
+          left={
+            <Heading as="h2" size="sm" textWrap="pretty">
+              {a.hakukohde}
+            </Heading>
+          }
+          right={
+            <Heading as="h2" size="sm" textWrap="pretty">
+              {b.hakukohde}
+            </Heading>
+          }
         />
-      ))}
-      <PairRow
-        left={
-          <StatCard
-            badge={paineBadge(paineA)}
-            label="Hakijapaine"
-            trend={paineTrend(paineA, paineB)}
-            value={paineA != null ? paineA.toFixed(2) : "n/a"}
+      </Table.Header>
+      <Table.Body>
+        <PairRow
+          left={<StatCard label="Korkeakoulu" value={a.korkeakoulu ?? "-"} />}
+          right={<StatCard label="Korkeakoulu" value={b.korkeakoulu ?? "-"} />}
+        />
+        {COUNT_ROWS.map(([label, field]) => (
+          <PairRow
+            key={field}
+            left={<StatCard label={label} trend={countTrend(a[field], b[field])} value={formatCount(a[field])} />}
+            right={<StatCard label={label} trend={countTrend(b[field], a[field])} value={formatCount(b[field])} />}
           />
-        }
-        right={
-          <StatCard
-            badge={paineBadge(paineB)}
-            label="Hakijapaine"
-            trend={paineTrend(paineB, paineA)}
-            value={paineB != null ? paineB.toFixed(2) : "n/a"}
-          />
-        }
-      />
-    </Stack>
+        ))}
+        <PairRow
+          left={
+            <StatCard
+              badge={paineBadge(paineA)}
+              label="Hakijapaine"
+              trend={paineTrend(paineA, paineB)}
+              value={paineA != null ? ratioFormat.format(paineA) : "–"}
+            />
+          }
+          right={
+            <StatCard
+              badge={paineBadge(paineB)}
+              label="Hakijapaine"
+              trend={paineTrend(paineB, paineA)}
+              value={paineB != null ? ratioFormat.format(paineB) : "–"}
+            />
+          }
+        />
+      </Table.Body>
+    </Table.Root>
   );
 }

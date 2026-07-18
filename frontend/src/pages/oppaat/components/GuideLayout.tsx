@@ -86,8 +86,8 @@ export function getGuideHeadings(source: string): GuideHeading[] {
 
 export function Callout({ title = "Tiesitkö?", children }: { title?: string; children: ReactNode }) {
   return (
-    <Box bg="bg.muted" borderColor="accent" borderLeftWidth="3px" borderRadius="md" px={4} py={3}>
-      <Text color="accent" fontSize="xs" fontWeight="semibold" letterSpacing="wider" textTransform="uppercase">
+    <Box bg="bg.muted" borderColor="fg.accent" borderLeftWidth="3px" borderRadius="md" px={4} py={3}>
+      <Text color="fg.accent" fontSize="xs" fontWeight="semibold" letterSpacing="wider" textTransform="uppercase">
         {title}
       </Text>
       <Box mt={1}>{children}</Box>
@@ -145,7 +145,7 @@ const mdxComponents = {
   a: GuideLink,
   blockquote: ({ children }: ComponentProps<"blockquote">) => <Callout>{children}</Callout>,
   table: ({ children }: ComponentProps<"table">) => (
-    <Table.ScrollArea borderColor="border" borderWidth="1px">
+    <Table.ScrollArea borderColor="border.subtle" borderWidth="1px">
       <Table.Root fontSize="sm" size="sm">
         {children}
       </Table.Root>
@@ -210,7 +210,13 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
             <Stack as="ol" gap={2} listStyleType="none">
               {headings.map((heading, index) => (
                 <HStack align="baseline" as="li" gap={3} key={heading.id}>
-                  <Text as="span" color="accent" fontSize="sm" fontVariantNumeric="tabular-nums" fontWeight="semibold">
+                  <Text
+                    as="span"
+                    color="fg.accent"
+                    fontSize="sm"
+                    fontVariantNumeric="tabular-nums"
+                    fontWeight="semibold"
+                  >
                     {String(index + 1).padStart(2, "0")}
                   </Text>
                   <Link href={`#${heading.id}`} textDecoration="underline">
@@ -238,7 +244,7 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
                   _hover={
                     primary
                       ? { textDecoration: "none", transform: "translateY(-2px)" }
-                      : { borderColor: "accent", textDecoration: "none" }
+                      : { borderColor: "fg.accent", textDecoration: "none" }
                   }
                   bg={primary ? "accent" : undefined}
                   borderColor={primary ? "accent" : "border"}
@@ -253,7 +259,7 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
                 >
                   <Text fontWeight="semibold">
                     {item.label}{" "}
-                    <Text as="span" color={primary ? undefined : "accent"}>
+                    <Text as="span" color={primary ? undefined : "fg.accent"}>
                       →
                     </Text>
                   </Text>
@@ -267,11 +273,11 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
         </Stack>
 
         {!!meta.sources?.length && (
-          <Stack as="section" borderColor="border" borderTopWidth="1px" gap={2} maxW="42rem" pt={4}>
+          <Stack as="section" borderColor="border.subtle" borderTopWidth="1px" gap={2} maxW="42rem" pt={4}>
             <Heading as="h2" size="sm">
               Lähteet
             </Heading>
-            <Stack as="ol" color="fg.muted" fontSize="sm" gap={2} listStyleType="decimal" pl={5}>
+            <Stack aria-label="Lähteet" as="ol" color="fg.muted" fontSize="sm" gap={2} listStyleType="decimal" pl={5}>
               {meta.sources.map((source, index) => (
                 <li id={`lahde-${index + 1}`} key={source.href}>
                   <GuideLink href={source.href}>{source.label}</GuideLink>

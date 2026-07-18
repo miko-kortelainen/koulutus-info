@@ -48,8 +48,8 @@ test("renders the real MDX guide with registry metadata, navigation and sources"
     name: "Opetushallitus: Suomalaisen lukion voi suorittaa englanniksi syksystä 2026 alkaen",
   });
   expect(ophSource).toHaveAttribute("target", "_blank");
-  expect(ophSource.closest("li")).toHaveAttribute("id", "lahde-3");
-  expect(ophSource.closest("ol")).toBeInTheDocument();
+  const sourceItems = within(screen.getByRole("list", { name: "Lähteet" })).getAllByRole("listitem");
+  expect(sourceItems[2]).toHaveAttribute("id", "lahde-3");
 });
 
 test("keeps the exception table visible and collapses the kynnysehto sections behind accordions", async () => {
@@ -69,8 +69,12 @@ test("keeps the exception table visible and collapses the kynnysehto sections be
   expect(screen.getByText("Biokemia ja molekyylibiotieteet")).not.toBeVisible();
 
   await user.click(screen.getByRole("button", { name: "Alat, joissa on kynnysehto" }));
-  const farmasia = await screen.findByRole("cell", { name: "Farmasia" });
-  const kynnysehdot = farmasia.closest("table") as HTMLTableElement;
+  await screen.findByRole("cell", { name: "Farmasia" });
+  const kynnysehdot = screen
+    .getAllByRole("table")
+    .find((table) => within(table).queryByRole("cell", { name: "Farmasia" }));
+  expect(kynnysehdot).toBeDefined();
+  if (!kynnysehdot) throw new Error("Kynnysehtotaulukko puuttuu");
   expect(within(kynnysehdot).getByRole("columnheader", { name: "Hakukohde" })).toBeInTheDocument();
   expect(within(kynnysehdot).getByRole("columnheader", { name: "Kynnysehto" })).toBeInTheDocument();
   expect(within(kynnysehdot).getAllByRole("row")).toHaveLength(29);
@@ -110,7 +114,7 @@ test("renders a custom callout title", () => {
   expect(screen.getByText("Mukautettu huomio")).toBeInTheDocument();
 });
 
-test.each([undefined, []])("does not render a sources footer for %s sources", (sources) => {
+test.each([[undefined], [[]]])("does not render a sources footer for %s sources", (sources) => {
   const meta = getGuide(slug);
   const originalSources = meta.sources;
   meta.sources = sources;

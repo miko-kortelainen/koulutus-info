@@ -100,7 +100,7 @@ export default function SchoolsListPage() {
             <Checkbox.Control>
               <Checkbox.Indicator />
             </Checkbox.Control>
-            <Checkbox.Label color="fg.muted">Näytä myös ylemmät AMK -tutkinnot</Checkbox.Label>
+            <Checkbox.Label color="fg.muted">Näytä myös ylemmät AMK-tutkinnot</Checkbox.Label>
           </Checkbox.Root>
         </FilterItem>
         <FilterItem
@@ -122,10 +122,10 @@ export default function SchoolsListPage() {
   );
 
   const cardList = (
-    <Stack direction="column" gap={4}>
-      {paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
-      {paginated.map((t, index) => (
-        <SchoolCard key={`${t.toteutusOid} ${t.toteutusNimi} ${index}`} toteutus={t} />
+    <Stack as="ul" direction="column" gap={4} listStyleType="none">
+      {paginated.length === 0 ? <Text as="li">Ei tuloksia hakusanoilla.</Text> : null}
+      {paginated.map((t) => (
+        <SchoolCard key={t.toteutusOid} toteutus={t} />
       ))}
     </Stack>
   );

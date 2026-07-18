@@ -46,3 +46,9 @@ test.each<[SortOption, string[]]>([
   expect(names(sortSchools(schools, sortOrder))).toEqual(expected);
   expect(names(schools)).toEqual(["Alpha", "Beta", "Gamma"]);
 });
+
+test("uses Finnish alphabetical order", () => {
+  const fixture = ["Örebro", "Åbo", "Äänekoski", "Zeta"].map((name) => ({ ...schools[0], name, slug: name }));
+
+  expect(names(sortSchools(fixture, "asc"))).toEqual(["Zeta", "Åbo", "Äänekoski", "Örebro"]);
+});

@@ -34,6 +34,20 @@ test("renders zero totals without invalid percentages or bar widths", () => {
   expect(screen.getByRole("meter", { name: "Ei hakijoita" })).toHaveStyle({ width: "0%" });
 });
 
+test("formats percentages with the Finnish decimal separator", () => {
+  renderWithChakra(
+    <TopBarList
+      data={[
+        { name: "Ensimmäinen", value: 1 },
+        { name: "Toinen", value: 2 },
+      ]}
+      isLoading={false}
+    />,
+  );
+
+  expect(screen.getByText("33,3 %")).toBeInTheDocument();
+});
+
 test("renders an empty-data message", () => {
   renderWithChakra(<TopBarList data={[]} isLoading={false} />);
 

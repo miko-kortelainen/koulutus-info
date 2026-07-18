@@ -19,7 +19,7 @@ export default function useFilteredProgrammes(programmes: Programme[], searchTer
     const filtered = normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : programmes;
 
     return [...filtered].sort((a, b) =>
-      sortOrder === "asc" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name),
+      sortOrder === "asc" ? a.name.localeCompare(b.name, "fi") : b.name.localeCompare(a.name, "fi"),
     );
   }, [fuse, programmes, searchTerm, sortOrder]);
 }

@@ -1,9 +1,10 @@
-import { Heading, Link, Separator, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Link, Separator, Stack, Text, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
 import { slugifySchoolName } from "@/components/slug";
+import { cutoffRoundYear, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
@@ -22,13 +23,14 @@ export default function CutoffPage() {
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredProgrammes = useFilteredProgrammes(programmes, debouncedSearchTerm, sortOrder);
   const visibleProgrammes = filteredProgrammes.slice((page - 1) * pageSize, page * pageSize);
+  const cutoffYear = cutoffRoundYear(DEFAULT_CUTOFF_ROUND);
 
   const linkBack = (
     <Link
       fontSize="sm"
       href={`/koulut/${slugifySchoolName(schoolName)}/`}
       textDecoration="underline"
-      textDecorationColor={COLORS.accent}
+      textDecorationColor={COLORS.accentFg}
       textDecorationStyle="dotted"
     >
       ← Takaisin
@@ -39,20 +41,22 @@ export default function CutoffPage() {
     <Stack gap={1}>
       {linkBack}
       <Heading as="h1" size="md">
-        {schoolName} pisterajat 2026
+        {schoolName} pisterajat {cutoffYear}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Tilastovuoden 2026 pisterajat valintatavoittain.
+        Tilastovuoden {cutoffYear} pisterajat valintatavoittain.
       </Text>
       <Separator mt={2} />
     </Stack>
   );
 
   const programList = (
-    <Stack gap={{ base: 4, md: 8 }}>
-      {filteredProgrammes.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
+    <Stack as="ul" gap={{ base: 4, md: 8 }} listStyleType="none">
+      {filteredProgrammes.length === 0 ? <Text as="li">Ei tuloksia hakusanoilla.</Text> : null}
       {visibleProgrammes.map((programme) => (
-        <CutoffCard key={programme.name} programme={programme} />
+        <Box as="li" key={programme.name}>
+          <CutoffCard programme={programme} />
+        </Box>
       ))}
     </Stack>
   );

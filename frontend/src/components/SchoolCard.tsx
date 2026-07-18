@@ -44,7 +44,7 @@ export default function SchoolCard({ toteutus }: SchoolCardProps) {
           rel="noopener noreferrer"
           target="_blank"
           textDecoration="underline"
-          textDecorationColor={COLORS.accent}
+          textDecorationColor={COLORS.accentFg}
           textDecorationStyle="dotted"
         >
           Katso opintopolussa
@@ -57,13 +57,13 @@ export default function SchoolCard({ toteutus }: SchoolCardProps) {
         size="xl"
         variant="ghost"
       >
-        {favorited ? <HiHeart color={COLORS.accent} /> : <HiOutlineHeart />}
+        {favorited ? <HiHeart color={COLORS.accentFg} /> : <HiOutlineHeart />}
       </IconButton>
     </HStack>
   );
 
   return (
-    <Card.Root borderColor={favorited ? COLORS.accent : undefined} size="md">
+    <Card.Root as="li" borderColor={favorited ? COLORS.accentFg : undefined} size="md">
       <Card.Header>
         <Text fontSize="sm" fontWeight="semibold" mb={-2} textWrap="pretty">
           {degreeName}
