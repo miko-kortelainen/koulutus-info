@@ -32,7 +32,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
   const nameRow = (
     <HStack flex={1} gap={2} width="100%">
       <Group flex={1}>
-        <HiOutlineAcademicCap color={COLORS.accent} />
+        <HiOutlineAcademicCap color={COLORS.accentFg} />
         <Text fontSize={{ base: "xs", md: "md" }} fontWeight="semibold" letterSpacing="wide">
           {school.name}
         </Text>

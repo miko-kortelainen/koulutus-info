@@ -3,6 +3,7 @@ import { COLORS } from "@/theme";
 import type { ScoreResult } from "../lib/scoreResults";
 
 interface ScoreResultCardProps {
+  headingLevel?: "h3" | "h4";
   roundLabel: string;
   result: ScoreResult;
   showKoulutusala?: boolean;
@@ -13,7 +14,13 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
   maximumFractionDigits: 2,
 });
 
-export default function ScoreResultCard({ result, roundLabel, showKoulutusala, userScore }: ScoreResultCardProps) {
+export default function ScoreResultCard({
+  headingLevel = "h3",
+  result,
+  roundLabel,
+  showKoulutusala,
+  userScore,
+}: ScoreResultCardProps) {
   const isQualified = userScore !== undefined && result.score <= userScore;
 
   return (
@@ -21,7 +28,7 @@ export default function ScoreResultCard({ result, roundLabel, showKoulutusala, u
       <Card.Body>
         <Stack gap={3}>
           <Stack>
-            <Heading as="h3" fontSize={{ base: "xs", md: "md" }} textWrap="pretty">
+            <Heading as={headingLevel} fontSize={{ base: "xs", md: "md" }} textWrap="pretty">
               {result.programmeName}
             </Heading>
             <Text color="fg.muted" fontSize="xs">
@@ -32,7 +39,7 @@ export default function ScoreResultCard({ result, roundLabel, showKoulutusala, u
                 {result.koulutusala}
               </Text>
             ) : null}
-            <Badge alignSelf="flex-start" border="1px solid" borderColor={COLORS.accent} size="sm" variant="surface">
+            <Badge alignSelf="flex-start" border="1px solid" borderColor={COLORS.accentFg} size="sm" variant="surface">
               {result.selectionMethod}
             </Badge>
           </Stack>
@@ -41,9 +48,14 @@ export default function ScoreResultCard({ result, roundLabel, showKoulutusala, u
             <Text color="fg.muted" fontSize="xs">
               Pisteesi / alin hyväksytty pistemäärä ({roundLabel})
             </Text>
-            <Text color={isQualified ? COLORS.accent : "fg.muted"} fontSize="lg" fontWeight="bold" letterSpacing="wide">
+            <Text color={isQualified ? "fg.accent" : "fg.muted"} fontSize="lg" fontWeight="bold" letterSpacing="wide">
               {userScore === undefined ? "–" : scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
             </Text>
+            {userScore !== undefined ? (
+              <Text fontSize="xs" fontWeight="semibold">
+                {isQualified ? "Pisteet riittävät" : "Pisteet eivät riitä"}
+              </Text>
+            ) : null}
           </Stack>
         </Stack>
       </Card.Body>

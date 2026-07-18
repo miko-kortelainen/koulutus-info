@@ -5,7 +5,7 @@ export default function sortSchools(schools: SchoolListItem[], order: SortOption
   return [...schools].sort((a, b) => {
     switch (order) {
       case "desc":
-        return b.name.localeCompare(a.name);
+        return b.name.localeCompare(a.name, "fi");
       case "most_popular":
         return b.kaikkiHakijat - a.kaikkiHakijat;
       case "least_popular":
@@ -15,7 +15,7 @@ export default function sortSchools(schools: SchoolListItem[], order: SortOption
       case "least_first_choice":
         return a.ensisijaisetHakijat - b.ensisijaisetHakijat;
       default:
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name, "fi");
     }
   });
 }

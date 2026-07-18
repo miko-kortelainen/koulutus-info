@@ -21,23 +21,24 @@ export default function SavedListPage() {
     <PageContainer align="flex-start">
       {header}
 
-      <Stack direction="column" gap={4}>
-        {favorites.length === 0 ? (
-          <Stack align="center" gap={1}>
-            <Text color="fg.muted" fontSize="xs" letterSpacing="wide" textAlign="center">
-              Ei vielä tallennettuja koulutuksia.
-            </Text>
-            <Text color="fg.muted" fontSize="xs" textAlign="center">
-              Voit tallentaa koulutuksia painamalla koulutuskortin{" "}
-              <HiOutlineHeart style={{ display: "inline", marginBottom: 3 }} />
-              -kuvaketta.
-            </Text>
-          </Stack>
-        ) : null}
-        {favorites.map((t, index) => (
-          <SchoolCard key={`${t.toteutusOid} ${index}`} toteutus={t} />
-        ))}
-      </Stack>
+      {favorites.length === 0 ? (
+        <Stack align="center" gap={1}>
+          <Text color="fg.muted" fontSize="xs" letterSpacing="wide" textAlign="center">
+            Ei vielä tallennettuja koulutuksia.
+          </Text>
+          <Text color="fg.muted" fontSize="xs" textAlign="center">
+            Voit tallentaa koulutuksia painamalla koulutuskortin{" "}
+            <HiOutlineHeart style={{ display: "inline", marginBottom: 3 }} />
+            -kuvaketta.
+          </Text>
+        </Stack>
+      ) : (
+        <Stack as="ul" direction="column" gap={4} listStyleType="none">
+          {favorites.map((t) => (
+            <SchoolCard key={t.toteutusOid} toteutus={t} />
+          ))}
+        </Stack>
+      )}
     </PageContainer>
   );
 }

@@ -13,7 +13,7 @@ interface DegreeStatsCardProps {
   onToggleCompare?: (degree: StatisticsEntry) => void;
 }
 
-function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: DegreeStatsCardProps) {
+function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }: DegreeStatsCardProps) {
   const hakijapaine = getHakijapaine(degree);
   const tier = hakijapaine != null ? getTier(hakijapaine) : null;
 
@@ -98,7 +98,7 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
   );
 
   return (
-    <Card.Root size="md" zIndex={1}>
+    <Card.Root as="li" size="md" zIndex={1}>
       <Card.Header>{header}</Card.Header>
       <Card.Body>
         <Stack>
@@ -112,4 +112,4 @@ function DegreeStatCard({ degree, isSelected, selectionFull, onToggleCompare }: 
   );
 }
 
-export default memo(DegreeStatCard);
+export default memo(DegreeStatsCard);

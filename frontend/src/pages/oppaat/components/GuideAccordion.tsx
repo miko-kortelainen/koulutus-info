@@ -14,7 +14,7 @@ export default function GuideAccordion({ title, children }: GuideAccordionProps)
         <Collapsible.Trigger
           alignItems="center"
           border="1px solid"
-          borderColor="accent"
+          borderColor="fg.accent"
           display="flex"
           px={4}
           py={2}

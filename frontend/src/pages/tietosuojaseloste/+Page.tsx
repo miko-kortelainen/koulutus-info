@@ -1,7 +1,7 @@
 import { Heading, Link, Stack, Text } from "@chakra-ui/react";
-import PageContainer from "../../layout/PageContainer";
+import PageContainer from "@/layout/PageContainer";
 
-export default function TietosuojaselosteePage() {
+export default function TietosuojaselostePage() {
   return (
     <PageContainer align="flex-start">
       <Stack fontSize="sm" gap={6} py={8}>
@@ -10,18 +10,22 @@ export default function TietosuojaselosteePage() {
         </Heading>
 
         <Stack gap={2}>
-          <Heading size="md">Rekisterinpitäjä</Heading>
+          <Heading as="h2" size="md">
+            Rekisterinpitäjä
+          </Heading>
           <Text>Yhteishaku.app on yksityishenkilön ylläpitämä verkkopalvelu.</Text>
           <Text>
             Yhteystiedot:{" "}
-            <Link color="blue.500" href="mailto:miko.kortelainen@proton.me">
+            <Link color="fg.accent" href="mailto:miko.kortelainen@proton.me">
               miko.kortelainen@proton.me
             </Link>
           </Text>
         </Stack>
 
         <Stack gap={2}>
-          <Heading size="md">Henkilötietojen käsittely</Heading>
+          <Heading as="h2" size="md">
+            Henkilötietojen käsittely
+          </Heading>
           <Text>Yhteishaku.app ei pyydä käyttäjältä nimeä tai yhteystietoja eikä käytä markkinointipalveluita.</Text>
           <Text>
             Verkkopalvelun teknisestä toimittamisesta vastaavat GitHub Pages ja Cloudflare, jotka voivat käsitellä
@@ -30,12 +34,14 @@ export default function TietosuojaselosteePage() {
         </Stack>
 
         <Stack gap={2}>
-          <Heading size="md">Analytiikka</Heading>
+          <Heading as="h2" size="md">
+            Analytiikka
+          </Heading>
           <Text>Yhteishaku.app käyttää kävijämäärien seurantaan:</Text>
           <Stack as="ul" gap={1} listStyleType="disc" pl={4}>
             <li>
               <Link
-                color="blue.500"
+                color="fg.accent"
                 href="https://www.cloudflare.com/web-analytics/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -44,7 +50,7 @@ export default function TietosuojaselosteePage() {
               </Link>
             </li>
             <li>
-              <Link color="blue.500" href="https://www.simpleanalytics.com" rel="noopener noreferrer" target="_blank">
+              <Link color="fg.accent" href="https://www.simpleanalytics.com" rel="noopener noreferrer" target="_blank">
                 Simple Analytics
               </Link>
             </li>
@@ -53,10 +59,12 @@ export default function TietosuojaselosteePage() {
         </Stack>
 
         <Stack gap={2}>
-          <Heading size="md">Palaute</Heading>
+          <Heading as="h2" size="md">
+            Palaute
+          </Heading>
           <Text>
             Palautelomake käyttää{" "}
-            <Link color="blue.500" href="https://formsubmit.co" rel="noopener noreferrer" target="_blank">
+            <Link color="fg.accent" href="https://formsubmit.co" rel="noopener noreferrer" target="_blank">
               FormSubmit-palvelua
             </Link>
             . Kun lähetät palautteen, lomakkeeseen kirjoittamasi sisältö välitetään FormSubmitin kautta palvelun
@@ -65,16 +73,18 @@ export default function TietosuojaselosteePage() {
         </Stack>
 
         <Stack gap={2}>
-          <Heading size="md">Tietolähteet</Heading>
+          <Heading as="h2" size="md">
+            Tietolähteet
+          </Heading>
           <Text>Palvelussa käytetyt lähteet ovat:</Text>
           <Stack as="ul" gap={1} listStyleType="disc" pl={4}>
             <li>
-              <Link color="blue.500" href="https://vipunen.fi" rel="noopener noreferrer" target="_blank">
+              <Link color="fg.accent" href="https://vipunen.fi" rel="noopener noreferrer" target="_blank">
                 Opetushallituksen tilastopalvelu Vipunen
               </Link>
             </li>
             <li>
-              <Link color="blue.500" href="https://opintopolku.fi" rel="noopener noreferrer" target="_blank">
+              <Link color="fg.accent" href="https://opintopolku.fi" rel="noopener noreferrer" target="_blank">
                 Opintopolku.fi
               </Link>
             </li>

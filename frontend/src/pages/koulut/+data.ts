@@ -1,6 +1,5 @@
-import { readCurrentYearStatistics, readPublicData, schoolNames } from "@/api/loadData";
+import { readCurrentYearStatistics, readSchools, schoolNames } from "@/api/loadData";
 import { slugifySchoolName } from "@/components/slug";
-import type { SchoolsResponse } from "@/types.gen";
 
 export interface SchoolListItem {
   name: string;
@@ -14,7 +13,7 @@ export interface SchoolListItem {
 
 export const data = (): SchoolListItem[] => {
   const statistics = readCurrentYearStatistics();
-  const schools: SchoolsResponse = readPublicData("schools.json");
+  const schools = readSchools();
   const toteutukset = schools.flatMap((k) => k.toteutukset);
   return schoolNames().map((name) => {
     const rows = statistics.filter((s) => s.korkeakoulu === name);

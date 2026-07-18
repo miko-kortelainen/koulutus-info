@@ -3,6 +3,11 @@ import { expect, test, vi } from "vitest";
 import { YHTEISHAKU_ROUNDS } from "@/config/season";
 import useCountdown from "./useCountdown";
 
+test("stores application starts as absolute Finland instants", () => {
+  expect(Date.parse(YHTEISHAKU_ROUNDS[0].start)).toBe(Date.UTC(2026, 0, 7, 6));
+  expect(Date.parse(YHTEISHAKU_ROUNDS[2].start)).toBe(Date.UTC(2026, 7, 31, 5));
+});
+
 test("counts down to the next configured application round", () => {
   vi.useFakeTimers();
   const nextRound = YHTEISHAKU_ROUNDS[0];

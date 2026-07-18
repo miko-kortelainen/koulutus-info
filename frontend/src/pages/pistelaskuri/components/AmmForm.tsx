@@ -173,9 +173,9 @@ export default function AmmForm({ errors, onChange, value }: AmmFormProps) {
   return (
     <Stack gap={4}>
       {scaleField}
-      <Separator bg={COLORS.accent} />
+      <Separator bg={COLORS.accentFg} />
       {gradesField}
-      <Separator bg={COLORS.accent} />
+      <Separator bg={COLORS.accentFg} />
       {keskiarvoField}
     </Stack>
   );

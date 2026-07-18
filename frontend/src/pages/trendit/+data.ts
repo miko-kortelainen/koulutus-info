@@ -1,4 +1,4 @@
-import { readCurrentYearStatistics, readPublicData } from "@/api/loadData";
+import { readCurrentYearStatistics, readStatistics } from "@/api/loadData";
 import { statisticsRoundShortLabel, YEAR_OPTIONS } from "@/config/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 
@@ -18,7 +18,7 @@ const totalsForSeason = (season: "kevat" | "syksy") =>
     .reverse()
     .filter(({ value }) => value.endsWith(`_${season}`))
     .map(({ value: year }) => {
-      const statistics: StatisticsResponse = readPublicData(`hakijamaarat-${year.replace("_", "-")}.json`);
+      const statistics = readStatistics(year);
       return {
         year: statisticsRoundShortLabel(year),
         total: statistics.reduce((sum, entry) => sum + entry.ensisijaisetHakijatLkm, 0),

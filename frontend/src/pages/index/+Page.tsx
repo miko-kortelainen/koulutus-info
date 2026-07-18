@@ -1,6 +1,5 @@
 import { Group, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
-import { COLORS } from "../../theme";
 import QuickLinkCard from "./components/QuickLinkCard";
 import { quickLinks } from "./components/quickLinks";
 import useCountdown from "./hooks/useCountdown";
@@ -24,7 +23,7 @@ export default function LandingPage() {
             <Image alt="yhteishaku.app" boxSize={{ base: "16", md: "28" }} src="/images/logo.png" />
             <Heading as="h1" fontWeight="bold" letterSpacing="widest" size={{ base: "3xl", md: "5xl" }}>
               yhteishaku
-              <Text as="span" color="accent">
+              <Text as="span" color="fg.accent">
                 .app
               </Text>
             </Heading>
@@ -46,9 +45,9 @@ export default function LandingPage() {
       <SimpleGrid columns={3} gap={6} textAlign="center" width="100%">
         {countdownTiles.map(({ value, label }) => (
           <VStack gap={0} key={label}>
-            <Heading color={COLORS.accent} size="2xl">
+            <Text color="fg.accent" fontSize="2xl" fontWeight="bold">
               {value}
-            </Heading>
+            </Text>
             <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }}>
               {label}
             </Text>
