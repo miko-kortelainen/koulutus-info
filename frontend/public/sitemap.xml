@@ -21,6 +21,71 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/pisterajat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/humanistiset-alat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/kasvatusalat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/kauppa-hallinto-ja-oikeustieteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/luonnontieteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/laaketieteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/maa-ja-metsatalousalat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/palvelualat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/taiteet-ja-kulttuurialat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/tekniikan-alat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/terveys-ja-hyvinvointialat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/tietojenkasittely-ja-tietoliikenne/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/pisterajat/yhteiskunnalliset-alat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/oppaat/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
