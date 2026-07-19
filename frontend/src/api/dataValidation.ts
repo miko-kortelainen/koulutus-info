@@ -8,6 +8,7 @@ const isString = (value: unknown) => typeof value === "string";
 const isNumber = (value: unknown): value is number => typeof value === "number" && Number.isFinite(value);
 const isNonNegativeInteger = (value: unknown) => isNumber(value) && Number.isSafeInteger(value) && value >= 0;
 const isOptionalString = (value: unknown) => value === undefined || isString(value);
+const isOptionalBoolean = (value: unknown) => value === undefined || typeof value === "boolean";
 const isStringArray = (value: unknown) => Array.isArray(value) && value.every(isString);
 
 const isLanguageStrings = (value: unknown) =>
@@ -36,12 +37,14 @@ const isToteutus = (value: unknown) =>
   isString(value.toteutusOid) &&
   isLanguageStrings(value.toteutusNimi) &&
   isLanguageStrings(value.oppilaitosNimi) &&
-  isStringArray(value.kunnat);
+  isStringArray(value.kunnat) &&
+  isOptionalBoolean(value.muuntokoulutus);
 
 const isSchool = (value: unknown) =>
   isRecord(value) &&
   isLanguageStrings(value.nimi) &&
-  isString(value.koulutustyyppi) &&
+  isString(value.sektori) &&
+  isString(value.tutkintotaso) &&
   Array.isArray(value.toteutukset) &&
   value.toteutukset.every(isToteutus);
 

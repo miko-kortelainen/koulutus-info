@@ -1,4 +1,4 @@
-import { Accordion, Checkbox, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
@@ -17,6 +17,11 @@ const SEKTORI_LABELS: Record<string, string> = {
   yo: "Yliopisto",
 };
 
+const TASO_LABELS: Record<string, string> = {
+  alempi: "Alempi",
+  ylempi: "Ylempi",
+};
+
 export default function SchoolsListPage() {
   const data = useData<SchoolsResponse>();
   const [page, setPage] = useState(1);
@@ -24,14 +29,14 @@ export default function SchoolsListPage() {
   const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
-  const [showYlempiAmk, setShowYlempiAmk] = useState(false);
+  const [selectedTasot, setSelectedTasot] = useState<Set<string>>(new Set());
   const toteutukset = useMemo(
     () =>
       data.flatMap((k) =>
         k.toteutukset.map((t) => ({
           ...t,
-          koulutustyyppi: k.koulutustyyppi,
-          ylempiAmk: k.koulutustyyppi === "amk" && (k.nimi.fi?.toLowerCase().includes("ylempi") ?? false),
+          sektori: k.sektori,
+          tutkintotaso: k.tutkintotaso,
         })),
       ),
     [data],
@@ -39,8 +44,16 @@ export default function SchoolsListPage() {
   const sektoriCollection = useMemo(
     () =>
       toCollection(
-        data.map((k) => k.koulutustyyppi),
+        data.map((k) => k.sektori),
         (s) => SEKTORI_LABELS[s] ?? s,
+      ),
+    [data],
+  );
+  const tasoCollection = useMemo(
+    () =>
+      toCollection(
+        data.map((k) => k.tutkintotaso),
+        (t) => TASO_LABELS[t] ?? t,
       ),
     [data],
   );
@@ -53,7 +66,7 @@ export default function SchoolsListPage() {
     selectedSektorit,
     selectedKunnat,
     selectedSchools,
-    showYlempiAmk,
+    selectedTasot,
   );
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -86,23 +99,14 @@ export default function SchoolsListPage() {
           onChange={selectFilter(setSelectedSektorit, () => setPage(1))}
           selected={selectedSektorit}
           value="sektori"
-        >
-          <Checkbox.Root
-            checked={showYlempiAmk}
-            mt={4}
-            onCheckedChange={(details) => {
-              setShowYlempiAmk(!!details.checked);
-              setPage(1);
-            }}
-            size="sm"
-          >
-            <Checkbox.HiddenInput />
-            <Checkbox.Control>
-              <Checkbox.Indicator />
-            </Checkbox.Control>
-            <Checkbox.Label color="fg.muted">Näytä myös ylemmät AMK-tutkinnot</Checkbox.Label>
-          </Checkbox.Root>
-        </FilterItem>
+        />
+        <FilterItem
+          collection={tasoCollection}
+          label="Koulutusaste"
+          onChange={selectFilter(setSelectedTasot, () => setPage(1))}
+          selected={selectedTasot}
+          value="koulutusaste"
+        />
         <FilterItem
           collection={kuntaCollection}
           label="Kunta"

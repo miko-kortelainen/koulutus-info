@@ -373,7 +373,7 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
-  await page.getByRole("button", { name: "Koulu" }).click();
+  await page.getByRole("button", { name: "Koulu", exact: true }).click();
   const options = page.getByRole("option");
   await expect(options.first()).toBeVisible({ timeout: 10000 });
 
