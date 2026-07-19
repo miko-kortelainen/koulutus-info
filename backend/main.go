@@ -251,7 +251,12 @@ func generateOpintopolku(cfg models.OpintopolkuConfig) (bool, error) {
 		return false, errors.New("Opintopolku returned no records")
 	}
 
-	schools := services.TransformOpintopolkuData(fetched)
+	koulutusalat, err := services.FetchKoulutusalat(fetched.Hits)
+	if err != nil {
+		return false, err
+	}
+
+	schools := services.TransformOpintopolkuData(fetched, koulutusalat)
 	if len(schools) == 0 {
 		return false, errors.New("Opintopolku produced no schools after cleanup")
 	}

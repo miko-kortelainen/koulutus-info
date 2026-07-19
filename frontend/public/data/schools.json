@@ -5,7 +5,8 @@
       "sv": "Agrolog (YH)",
       "en": "Bachelor of Natural Resources (UAS), Agronomist"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000611",
@@ -19,6 +20,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Maa- ja metsätalousalat"
         ]
       }
     ]
@@ -29,7 +33,8 @@
       "sv": "Artenom (YH)",
       "en": "Bachelor of Culture and Arts (UAS), Crafts and Design"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030637",
@@ -43,6 +48,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -53,7 +61,8 @@
       "sv": "Bioanalytiker (YH): laboratorieskötare (YH)",
       "en": "Bachelor of Health Care (UAS), Biomedical Laboratory Technologist (Polytechnic)"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000543",
@@ -67,6 +76,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -77,7 +89,8 @@
       "sv": "Geronom (högre YH)",
       "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031417",
@@ -91,6 +104,13 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Maa- ja metsätalousalat",
+          "Palvelualat",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -101,7 +121,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000728",
@@ -115,6 +136,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -125,7 +149,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002203",
@@ -139,6 +164,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -149,7 +177,8 @@
       "sv": "Geronom (högre YH)",
       "en": "Master of Social Services and Health Care (UAS), Geriatry Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008304",
@@ -163,6 +192,14 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Maa- ja metsätalousalat",
+          "Palvelualat",
+          "Taiteet ja kulttuurialat",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -173,7 +210,8 @@
       "sv": "Förstavårdare (YH)",
       "en": "Bachelor of Health Care (UAS), Emergency Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008417",
@@ -187,6 +225,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -202,7 +243,11 @@
         "kunnat": [
           "Tampere",
           "Seinäjoki"
-        ]
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002914",
@@ -216,6 +261,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -230,6 +278,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -244,6 +295,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -254,7 +308,8 @@
       "sv": "Estenom (högre YH)",
       "en": "Master of Beauty and Cosmetics (UAS)"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023821",
@@ -268,6 +323,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -278,7 +336,8 @@
       "sv": "Fysioterapeut (YH)",
       "en": "Bachelor of Health Care (UAS), Physiotherapist"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000036551",
@@ -292,6 +351,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -306,6 +368,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -320,6 +385,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -334,6 +402,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -348,6 +419,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -362,6 +436,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -376,6 +453,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -390,6 +470,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -404,6 +487,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -418,6 +504,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -428,7 +517,8 @@
       "sv": "Geronom (YH)",
       "en": "Bachelor of Social Services and Health Care (UAS), Geriatry Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000026073",
@@ -442,6 +532,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -452,7 +545,8 @@
       "sv": "Ingenjör (högre YH), miljöteknik",
       "en": "Master of Engineering (UAS), Environmental Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003758",
@@ -466,6 +560,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -476,7 +573,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000010158",
@@ -490,6 +588,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -500,7 +601,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000028385",
@@ -514,6 +616,13 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Palvelualat",
+          "Taiteet ja kulttuurialat",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -524,7 +633,8 @@
       "sv": "Ingenjör (YH), elektroteknik",
       "en": "Bachelor of Engineering (UAS), Electrical Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000005807",
@@ -538,7 +648,11 @@
         },
         "kunnat": [
           "Kokkola"
-        ]
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ],
+        "muuntokoulutus": true
       }
     ]
   },
@@ -548,7 +662,8 @@
       "sv": "Ingenjör (YH), bio- och livsmedelsteknik",
       "en": "Bachelor of Engineering (UAS), Biotechnology, Food Industry"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011426",
@@ -562,6 +677,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -572,7 +690,8 @@
       "sv": "Ingenjör (YH), kemi",
       "en": "Bachelor of Engineering (UAS), Chemistry"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038649",
@@ -586,6 +705,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -596,7 +718,8 @@
       "sv": "Ingenjör (YH), Energi- och Miljöteknik",
       "en": "Bachelor of Engineering (UAS), Energy and Enviromental Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035087",
@@ -610,6 +733,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -624,6 +750,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -638,6 +767,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -648,7 +780,8 @@
       "sv": "Ingenjör (YH), maskinteknik",
       "en": "Bachelor of Engineering (UAS), Mechanical Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002484",
@@ -662,6 +795,9 @@
         },
         "kunnat": [
           "Riihimäki"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -676,6 +812,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -690,6 +829,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -704,6 +846,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -718,6 +863,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -733,6 +881,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -747,6 +898,9 @@
         },
         "kunnat": [
           "Iisalmi"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -761,6 +915,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -775,6 +932,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -785,7 +945,8 @@
       "sv": "Ingenjör (YH), logistik",
       "en": "Bachelor of Engineering (UAS), Logistics"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035997",
@@ -799,6 +960,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -813,6 +977,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -823,7 +990,8 @@
       "sv": "Ingenjör (YH), sjöfart",
       "en": "Bachelor of Engineering (UAS), Navigation Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000793",
@@ -837,6 +1005,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -847,7 +1018,8 @@
       "sv": "Ingenjör (YH), kemi",
       "en": "Bachelor of Engineering (UAS), Chemistry"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000485",
@@ -861,6 +1033,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -875,6 +1050,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -889,6 +1067,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -903,6 +1084,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -917,6 +1101,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -927,7 +1114,8 @@
       "sv": "Ingenjör (YH), byggnadsteknik och samhällsteknik",
       "en": "Bachelor of Engineering (UAS), Building Construction, Community Development"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030829",
@@ -941,7 +1129,11 @@
         },
         "kunnat": [
           "Hämeenlinna"
-        ]
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002287",
@@ -955,6 +1147,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -969,6 +1164,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -983,6 +1181,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -997,6 +1198,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1007,7 +1211,8 @@
       "sv": "Ingenjör (YH), elektroteknik",
       "en": "Bachelor of Engineering (UAS), Electrical Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002590",
@@ -1021,6 +1226,9 @@
         },
         "kunnat": [
           "Valkeakoski"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1035,6 +1243,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1049,6 +1260,9 @@
         },
         "kunnat": [
           "Ylivieska"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1063,6 +1277,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1077,6 +1294,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1091,6 +1311,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1105,6 +1328,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1119,6 +1345,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1129,7 +1358,8 @@
       "sv": "Ingenjör (YH), VVS-teknik",
       "en": "Bachelor of Engineering (UAS), Heating and Ventilation Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008485",
@@ -1143,6 +1373,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1157,6 +1390,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1167,7 +1403,8 @@
       "sv": "Ingenjör (YH), datateknik",
       "en": "BEng (UAS), IT"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008617",
@@ -1181,6 +1418,9 @@
         },
         "kunnat": [
           "Riihimäki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1195,7 +1435,11 @@
         },
         "kunnat": [
           "Kokkola"
-        ]
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008328",
@@ -1209,6 +1453,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1223,6 +1470,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1237,6 +1487,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1251,6 +1504,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1265,6 +1521,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1279,6 +1538,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1293,6 +1555,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1307,6 +1572,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1321,6 +1589,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1331,7 +1602,8 @@
       "sv": "Ingenjör (YH), produktionsekonomi",
       "en": "Bachelor of Engineering (UAS), Industrial Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000014861",
@@ -1345,6 +1617,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1355,7 +1630,8 @@
       "sv": "Ingenjör (YH), miljöteknik",
       "en": "Bachelor of Engineering (UAS), Environmental Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011284",
@@ -1369,6 +1645,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1379,7 +1658,8 @@
       "sv": "Ingenjör (högre YH), datateknik",
       "en": "Master of Engineering (UAS), Information Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000456",
@@ -1393,6 +1673,10 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat",
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1403,7 +1687,8 @@
       "sv": "Ingenjör (högre YH), automationsteknik",
       "en": "Master of Engineering (UAS), Automation Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000036580",
@@ -1417,6 +1702,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1427,7 +1715,8 @@
       "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
       "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023221",
@@ -1441,6 +1730,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1455,6 +1747,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1469,6 +1764,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1479,7 +1777,8 @@
       "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
       "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039301",
@@ -1493,6 +1792,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1503,7 +1805,8 @@
       "sv": "Ingenjör (högre YH), energi- och miljöteknik",
       "en": "Master of Engineering (UAS), Energy and Enviromental Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000036579",
@@ -1517,6 +1820,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1527,7 +1833,8 @@
       "sv": "Ingenjör (högre YH), datateknik",
       "en": "Master of Engineering (UAS), Information Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008403",
@@ -1541,6 +1848,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1551,7 +1861,8 @@
       "sv": "Ingenjör (högre yh), projekt- och säljledning",
       "en": "Master of Engineering (UAS), project and sales management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000786",
@@ -1565,6 +1876,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1575,7 +1889,8 @@
       "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik",
       "en": "Master of Engineering (UAS), Building Construction, Community Development"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002601",
@@ -1589,6 +1904,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1599,7 +1917,8 @@
       "sv": "Ingenjör (högre YH), datateknik",
       "en": "Master of Engineering (UAS), Information Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039166",
@@ -1613,6 +1932,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1623,7 +1945,8 @@
       "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
       "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000376",
@@ -1637,6 +1960,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1647,7 +1973,8 @@
       "sv": "Ingenjör (högre YH), datateknik",
       "en": "Master of Engineering (UAS), Information Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002885",
@@ -1661,6 +1988,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1671,7 +2001,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038717",
@@ -1685,6 +2016,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -1695,7 +2029,8 @@
       "sv": "Fil. mag., datavetenskap",
       "en": "Master of Science, Computer Science"
     },
-    "koulutustyyppi": "yo",
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039336",
@@ -1709,6 +2044,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1719,7 +2057,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom socialbranschen",
       "en": "Other or Unknown Polytechnic Master's  Degree in Social Services"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000016915",
@@ -1733,6 +2072,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -1743,7 +2085,8 @@
       "sv": "Bildkonstnär (högre YH)",
       "en": "Master of Culture and Arts (UAS), Visual Artist"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000587",
@@ -1757,6 +2100,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat",
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -1767,7 +2114,8 @@
       "sv": "Formgivare (högre YH)",
       "en": "Master of Culture and Arts (UAS), Designer"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000406",
@@ -1781,6 +2129,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -1791,7 +2142,8 @@
       "sv": "Bildkonstnär (YH)",
       "en": "Bachelor of Culture and Arts (UAS), Visual Artist"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017155",
@@ -1805,6 +2157,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -1815,7 +2170,8 @@
       "sv": "Barnmorska (YH)",
       "en": "Bachelor of Health Care (UAS), Midwife"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000036576",
@@ -1829,6 +2185,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -1843,6 +2202,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -1857,6 +2219,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -1871,6 +2236,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -1881,7 +2249,8 @@
       "sv": "Hälsovårdare (YH)",
       "en": "Bachelor of Health Care (UAS), Public Health Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031364",
@@ -1895,7 +2264,11 @@
         },
         "kunnat": [
           "Rovaniemi"
-        ]
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
+        "muuntokoulutus": true
       }
     ]
   },
@@ -1905,7 +2278,8 @@
       "sv": "Idrottsinstruktör (YH)",
       "en": "Bachelor of Sports Studies, Sports Instructor (UAS)"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000022908",
@@ -1919,6 +2293,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -1933,6 +2310,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -1947,6 +2327,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -1957,7 +2340,8 @@
       "sv": "Ped. kand. (lägre), klasslärare (inte lärarbehörighet)",
       "en": "Bachelor of Arts (Education), Class Teacher (no Teacher Competence)"
     },
-    "koulutustyyppi": "yo",
+    "sektori": "yo",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039056",
@@ -1971,6 +2355,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat"
         ]
       }
     ]
@@ -1981,7 +2368,8 @@
       "sv": "Ingenjör (högre YH), datateknik",
       "en": "Master of Engineering (UAS), Information Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038386",
@@ -1996,6 +2384,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -2006,7 +2397,8 @@
       "sv": "Medianom (högre YH)",
       "en": "Master of Culture and Arts (UAS), Media"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000014884",
@@ -2020,6 +2412,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2030,7 +2425,8 @@
       "sv": "Medianom (högre YH)",
       "en": "Master of Culture and Arts (UAS), Media"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031211",
@@ -2044,6 +2440,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2054,7 +2453,8 @@
       "sv": "Sjökapten (YH)",
       "en": "Bachelor of Maritime Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000790",
@@ -2068,6 +2468,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2078,7 +2481,8 @@
       "sv": "Skogsbruksingenjör (YH)",
       "en": "Bachelor of Natural Resources (UAS), Forestry"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000544",
@@ -2092,6 +2496,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Maa- ja metsätalousalat"
         ]
       }
     ]
@@ -2102,7 +2509,8 @@
       "sv": "Formgivare (YH)",
       "en": "Bachelor of Culture and Arts (UAS), Designer"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000478",
@@ -2116,6 +2524,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2130,6 +2541,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2144,6 +2558,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2158,6 +2575,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2172,6 +2592,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2182,7 +2605,8 @@
       "sv": "Musikpedagog (högre YH)",
       "en": "Master of Culture and Arts (UAS), Music Educator"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000462",
@@ -2196,6 +2620,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat"
         ]
       }
     ]
@@ -2206,7 +2633,8 @@
       "sv": "Musiker (högre YH)",
       "en": "Master of Culture and Arts (UAS), Musician"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039420",
@@ -2220,6 +2648,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2230,7 +2661,8 @@
       "sv": "Optometriker (YH): optiker (YH)",
       "en": "Bachelor of Health Care (UAS), Optometrist"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000028487",
@@ -2244,6 +2676,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -2254,7 +2689,8 @@
       "sv": "Byggnadsarkitekt (högre YH)",
       "en": "Master of Construction Architecture (UAS)"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039414",
@@ -2268,6 +2704,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -2278,7 +2717,8 @@
       "sv": "Byggmästare (YH)",
       "en": "Bachelor of Engineering (UAS), Construction Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000016583",
@@ -2292,6 +2732,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2306,6 +2749,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2320,6 +2766,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2334,6 +2783,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2348,6 +2800,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2362,6 +2817,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2376,6 +2834,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2390,6 +2851,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -2400,7 +2864,8 @@
       "sv": "Restonom (YH), affärsledning",
       "en": "Bachelor of Hospitality Management (UAS), Business Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008490",
@@ -2414,6 +2879,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2424,7 +2892,8 @@
       "sv": "Restonom (YH), turism",
       "en": "Bachelor of Hospitality Management (UAS), Tourism"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023847",
@@ -2438,6 +2907,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2448,7 +2920,8 @@
       "sv": "Restonom (YH), inkvarterings- och kosthållsbranschen",
       "en": "Bachelor of Hospitality Management (UAS), Hotel and Restaurant"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038040",
@@ -2462,6 +2935,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2476,6 +2952,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2490,6 +2969,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2504,6 +2986,9 @@
         },
         "kunnat": [
           "Porvoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2518,6 +3003,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2532,6 +3020,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2546,6 +3037,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2560,6 +3054,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2574,6 +3071,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2584,7 +3084,8 @@
       "sv": "Socionom (högre YH), socialbranschen",
       "en": "Master of Social Services (UAS), Social Services"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017163",
@@ -2598,6 +3099,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -2608,7 +3112,8 @@
       "sv": "Röntgenskötare (YH)",
       "en": "Bachelor of Health Care (UAS), Radiographer"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000591",
@@ -2622,6 +3127,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -2632,7 +3140,8 @@
       "sv": "Sjukskötare (YH)",
       "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001111",
@@ -2649,6 +3158,9 @@
           "Espoo",
           "Porvoo",
           "Lohja"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2663,6 +3175,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2677,6 +3192,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2691,6 +3209,9 @@
         },
         "kunnat": [
           "Kemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2705,6 +3226,9 @@
         },
         "kunnat": [
           "Valkeakoski"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2719,6 +3243,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2733,6 +3260,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2747,6 +3277,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2761,6 +3294,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2775,6 +3311,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2789,6 +3328,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2803,6 +3345,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2817,6 +3362,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2831,6 +3379,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2845,6 +3396,9 @@
         },
         "kunnat": [
           "Salo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2859,6 +3413,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2873,6 +3430,9 @@
         },
         "kunnat": [
           "Salo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2887,6 +3447,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2901,6 +3464,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2915,6 +3481,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2929,6 +3498,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2945,6 +3517,9 @@
           "Oulu",
           "Helsinki",
           "Pieksämäki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2959,6 +3534,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2973,6 +3551,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2987,6 +3568,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3001,6 +3585,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3015,6 +3602,9 @@
         },
         "kunnat": [
           "Iisalmi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3029,6 +3619,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3043,6 +3636,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3057,6 +3653,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3071,6 +3670,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3085,6 +3687,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3099,6 +3704,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3113,6 +3721,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3123,7 +3734,8 @@
       "sv": "Sjukskötare (YH)",
       "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000524",
@@ -3139,6 +3751,9 @@
           "Pori",
           "Oulu",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3149,7 +3764,8 @@
       "sv": "Sjukskötare (YH)",
       "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023451",
@@ -3163,6 +3779,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3173,7 +3792,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000530",
@@ -3187,6 +3807,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3197,7 +3820,8 @@
       "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område",
       "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000007883",
@@ -3211,6 +3835,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3221,7 +3848,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000491",
@@ -3235,6 +3863,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3245,7 +3876,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000024236",
@@ -3259,6 +3891,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3269,7 +3904,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000828",
@@ -3283,6 +3919,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3293,7 +3932,8 @@
       "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område",
       "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039243",
@@ -3307,6 +3947,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3317,7 +3960,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039399",
@@ -3331,6 +3975,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3341,7 +3988,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008420",
@@ -3355,6 +4003,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3365,7 +4016,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035801",
@@ -3379,6 +4031,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3389,7 +4044,8 @@
       "sv": "Yrkeshögskoleexamen inom hälsovård och det sociala området, brottspåföljdsområdet",
       "en": "Polytechnic Bachelor's  Degree in Health Care, Correctional Services"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000476",
@@ -3403,6 +4059,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3413,7 +4072,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000415",
@@ -3427,6 +4087,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3437,7 +4100,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000005473",
@@ -3452,6 +4116,9 @@
         "kunnat": [
           "Savonlinna",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3462,7 +4129,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000492",
@@ -3476,6 +4144,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3486,7 +4158,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002802",
@@ -3500,6 +4173,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3510,7 +4186,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000017175",
@@ -3524,6 +4201,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3534,7 +4214,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000579",
@@ -3548,6 +4229,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3558,7 +4242,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037490",
@@ -3572,6 +4257,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3582,7 +4270,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000005705",
@@ -3596,6 +4285,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3606,7 +4299,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000036582",
@@ -3620,6 +4314,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3630,7 +4327,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000559",
@@ -3644,6 +4342,10 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3654,7 +4356,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038663",
@@ -3668,6 +4371,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3678,7 +4385,8 @@
       "sv": "Sjukskötare (högre YH)",
       "en": "Master of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000520",
@@ -3692,6 +4400,10 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3702,7 +4414,8 @@
       "sv": "Socionom (YH), socialbranschen",
       "en": "Bachelor of Social Services (UAS), Social Services"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000007245",
@@ -3719,6 +4432,9 @@
           "Pieksämäki",
           "Oulu",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3729,7 +4445,8 @@
       "sv": "Socionom (YH), socialbranschen",
       "en": "Bachelor of Social Services (UAS), Social Services"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001065",
@@ -3747,6 +4464,9 @@
           "Espoo",
           "Porvoo",
           "Lohja"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3761,6 +4481,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3776,6 +4499,9 @@
         "kunnat": [
           "Espoo",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3790,6 +4516,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3804,6 +4533,9 @@
         },
         "kunnat": [
           "Kemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3818,7 +4550,11 @@
         },
         "kunnat": [
           "Hämeenlinna"
-        ]
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000925",
@@ -3832,6 +4568,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3846,6 +4585,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3860,6 +4602,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3874,6 +4619,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3888,6 +4636,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3902,6 +4653,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3916,6 +4670,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3933,6 +4690,9 @@
           "Pieksämäki",
           "Oulu",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3947,6 +4707,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3961,6 +4724,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3975,6 +4741,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3989,6 +4758,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4003,6 +4775,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4017,6 +4792,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4031,6 +4809,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4045,6 +4826,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4059,6 +4843,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4073,6 +4860,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4087,6 +4877,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4101,6 +4894,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4115,6 +4911,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4125,7 +4924,8 @@
       "sv": "Socionom (högre YH), socialbranschen",
       "en": "Master of Social Services (UAS), Social Services"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000831",
@@ -4139,6 +4939,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4149,7 +4952,8 @@
       "sv": "Munhygienist (YH): tandhygienist (YH)",
       "en": "Bachelor of Health Care (UAS), Dental Hygienist"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000405",
@@ -4163,6 +4967,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Lääketieteet"
         ]
       }
     ]
@@ -4173,7 +4980,8 @@
       "sv": "Ingenjör (högre YH), byggnadsteknik och samhällsteknik",
       "en": "Master of Engineering (UAS), Building Construction, Community Development"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000036581",
@@ -4187,6 +4995,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -4197,7 +5008,8 @@
       "sv": "Hälsovårdare (YH)",
       "en": "Bachelor of Health Care (UAS), Public Health Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002263",
@@ -4212,6 +5024,9 @@
         "kunnat": [
           "Vantaa",
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4226,7 +5041,11 @@
         },
         "kunnat": [
           "Hämeenlinna"
-        ]
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000483",
@@ -4240,7 +5059,11 @@
         },
         "kunnat": [
           "Kokkola"
-        ]
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008330",
@@ -4254,6 +5077,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4268,6 +5094,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4282,6 +5111,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4296,7 +5128,11 @@
         },
         "kunnat": [
           "Tampere"
-        ]
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008377",
@@ -4311,6 +5147,9 @@
         "kunnat": [
           "Pori",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4325,6 +5164,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4339,6 +5181,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4353,6 +5198,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4367,6 +5215,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4377,7 +5228,8 @@
       "sv": "Fil. mag., datavetenskap",
       "en": "Master of Science, Computer Science"
     },
-    "koulutustyyppi": "yo",
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039341",
@@ -4391,6 +5243,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -4401,7 +5256,8 @@
       "sv": "Nat. kand., datavetenskap",
       "en": "Bachelor of Science, Computer Science"
     },
-    "koulutustyyppi": "yo",
+    "sektori": "yo",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039322",
@@ -4415,6 +5271,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -4425,7 +5284,8 @@
       "sv": "Fil. mag., datavetenskap",
       "en": "Master of Science, Computer Science"
     },
-    "koulutustyyppi": "yo",
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039340",
@@ -4439,6 +5299,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -4449,7 +5312,8 @@
       "sv": "Ergoterapeut (YH)",
       "en": "Bachelor of Health Care (UAS), Occupational Therapist"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035991",
@@ -4463,6 +5327,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4477,6 +5344,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4491,6 +5361,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4505,6 +5378,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4515,7 +5391,8 @@
       "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
       "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001156",
@@ -4530,6 +5407,9 @@
         "kunnat": [
           "Espoo",
           "Lohja"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4546,6 +5426,9 @@
           "Vantaa",
           "Espoo",
           "Hyvinkää"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4561,6 +5444,9 @@
         "kunnat": [
           "Espoo",
           "Hyvinkää"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4575,6 +5461,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4589,6 +5478,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4603,6 +5495,9 @@
         },
         "kunnat": [
           "Tornio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4617,6 +5512,9 @@
         },
         "kunnat": [
           "Forssa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4631,7 +5529,11 @@
         },
         "kunnat": [
           "Hämeenlinna"
-        ]
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000401",
@@ -4645,6 +5547,9 @@
         },
         "kunnat": [
           "Ylivieska"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4659,6 +5564,9 @@
         },
         "kunnat": [
           "Pietarsaari"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4674,6 +5582,9 @@
         "kunnat": [
           "Pori",
           "Huittinen"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4689,6 +5600,9 @@
         "kunnat": [
           "Pori",
           "Huittinen"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4703,6 +5617,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4717,6 +5634,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4731,6 +5651,9 @@
         },
         "kunnat": [
           "Salo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4745,6 +5668,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4759,6 +5685,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4773,6 +5702,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4788,6 +5720,9 @@
         "kunnat": [
           "Helsinki",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4803,6 +5738,9 @@
         "kunnat": [
           "Helsinki",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4817,6 +5755,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4831,6 +5772,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4845,6 +5789,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4859,6 +5806,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4873,6 +5823,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -4883,7 +5836,8 @@
       "sv": "Tradenom (YH), databehandling",
       "en": "Bachelor of Business Administration (UAS), Data Processing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030969",
@@ -4897,6 +5851,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -4911,6 +5868,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -4926,6 +5886,9 @@
         "kunnat": [
           "Vantaa",
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -4940,6 +5903,9 @@
         },
         "kunnat": [
           "Tornio"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -4954,6 +5920,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -4968,6 +5937,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -4982,6 +5954,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -4992,7 +5967,8 @@
       "sv": "Tradenom (YH), säkerhetsbranschen",
       "en": "Bachelor of Business Administration (UAS), Security Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000553",
@@ -5006,6 +5982,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -5016,7 +5995,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000899",
@@ -5030,6 +6010,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5040,7 +6023,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039389",
@@ -5054,6 +6038,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5064,7 +6051,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000635",
@@ -5078,6 +6066,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5088,7 +6079,8 @@
       "sv": "Tradenom (högre YH), databehandling",
       "en": "Master of Business Administration (UAS), Data Processing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000554",
@@ -5102,6 +6094,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -5112,7 +6107,8 @@
       "sv": "Tradenom (högre YH), annat eller okänt område",
       "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000572",
@@ -5126,6 +6122,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5136,7 +6135,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000574",
@@ -5150,6 +6150,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5160,7 +6163,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038661",
@@ -5174,6 +6178,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5184,7 +6191,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000023567",
@@ -5198,6 +6206,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5208,7 +6219,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000035681",
@@ -5222,6 +6234,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5232,7 +6247,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031234",
@@ -5246,6 +6262,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5256,7 +6275,8 @@
       "sv": "Tradenom (högre YH), annat eller okänt område",
       "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000008409",
@@ -5270,6 +6290,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5280,7 +6303,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000003002",
@@ -5295,6 +6319,9 @@
         "kunnat": [
           "Helsinki",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5305,7 +6332,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000431",
@@ -5319,6 +6347,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5329,7 +6360,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037491",
@@ -5343,6 +6375,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5357,6 +6392,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5371,6 +6409,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5381,7 +6422,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039694",
@@ -5395,6 +6437,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5409,6 +6454,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5419,7 +6467,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000039167",
@@ -5433,6 +6482,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5443,7 +6495,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000407",
@@ -5457,6 +6510,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5467,7 +6523,8 @@
       "sv": "Tradenom (högre YH), annat eller okänt område",
       "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000002612",
@@ -5481,6 +6538,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5491,7 +6551,8 @@
       "sv": "Tradenom (högre YH), säkerhetsbranschen",
       "en": "Master of Business Administration (UAS), Security Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000417",
@@ -5505,6 +6566,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -5515,7 +6579,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000024139",
@@ -5530,6 +6595,9 @@
         "kunnat": [
           "Espoo",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -5540,7 +6608,8 @@
       "sv": "Samhällspedagog (YH)",
       "en": "Bachelor of Humanities (UAS), Community Educator"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031268",
@@ -5554,7 +6623,11 @@
         },
         "kunnat": [
           "Kokkola"
-        ]
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
+        "muuntokoulutus": true
       },
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001018",
@@ -5568,6 +6641,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -5582,6 +6658,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -5596,6 +6675,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -5606,7 +6688,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030837",
@@ -5620,6 +6703,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5630,7 +6716,8 @@
       "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
       "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030845",
@@ -5644,6 +6731,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5654,7 +6744,8 @@
       "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
       "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000031224",
@@ -5668,6 +6759,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5682,6 +6776,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5696,6 +6793,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5710,6 +6810,9 @@
         },
         "kunnat": [
           "Porvoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5725,6 +6828,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5739,6 +6845,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5749,7 +6858,8 @@
       "sv": "Tradenom (YH), databehandling",
       "en": "Bachelor of Business Administration (UAS), Data Processing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000009206",
@@ -5763,6 +6873,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -5773,7 +6886,8 @@
       "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
       "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000005793",
@@ -5787,6 +6901,9 @@
         },
         "kunnat": [
           "Rauma"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5797,7 +6914,8 @@
       "sv": "Ingenjör (YH), produktionsekonomi",
       "en": "Bachelor of Engineering (UAS), Industrial Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037128",
@@ -5811,6 +6929,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -5821,7 +6942,8 @@
       "sv": "Ingenjör (YH), energiteknik",
       "en": "Bachelor of Engineering (UAS), Energy Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000007879",
@@ -5835,6 +6957,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -5845,7 +6970,8 @@
       "sv": "Ingenjör (YH), produktionsekonomi",
       "en": "Bachelor of Engineering (UAS), Industrial Management"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037112",
@@ -5859,6 +6985,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -5869,7 +6998,8 @@
       "sv": "Sjukskötare (YH)",
       "en": "Bachelor of Health Care (UAS), Registered Nurse"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038652",
@@ -5883,6 +7013,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -5893,7 +7026,8 @@
       "sv": "Ingenjör (högre YH), datateknik",
       "en": "Master of Engineering (UAS), Information Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030310",
@@ -5908,6 +7042,9 @@
         "kunnat": [
           "Kotka",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -5918,7 +7055,8 @@
       "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
       "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030610",
@@ -5932,6 +7070,11 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -5942,7 +7085,8 @@
       "sv": "Ingenjör (högre YH), elkraftsteknik",
       "en": "Master of Engineering (UAS), Electrical Power Engineering"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000037747",
@@ -5957,6 +7101,9 @@
         "kunnat": [
           "Savonlinna",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -5967,7 +7114,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000000582",
@@ -5981,6 +7129,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5991,7 +7142,8 @@
       "sv": "Tradenom (högre YH), databehandling",
       "en": "Master of Business Administration (UAS), Data Processing"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011597",
@@ -6005,6 +7157,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -6015,7 +7170,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000038522",
@@ -6029,6 +7185,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -6043,6 +7202,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6053,7 +7215,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011596",
@@ -6067,6 +7230,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6077,7 +7243,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000014835",
@@ -6091,6 +7258,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6101,7 +7271,8 @@
       "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
       "en": "MBA (UAS), Econ., Adm., Mark."
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000011598",
@@ -6115,6 +7286,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6125,7 +7299,8 @@
       "sv": "Ingenjör (högre YH), annat eller okänt tekniskt område",
       "en": "Master of Engineering (UAS), Other or Unknown Technology"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030656",
@@ -6139,6 +7314,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -6149,7 +7327,8 @@
       "sv": "Restonom (högre YH), turism",
       "en": "Master of Hospitality Management (UAS), Tourism"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000029801",
@@ -6163,6 +7342,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -6173,7 +7355,8 @@
       "sv": "Tradenom (högre YH), annat eller okänt område",
       "en": "Master of Business Administration (UAS), Other or Unknown Field"
     },
-    "koulutustyyppi": "amk",
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
     "toteutukset": [
       {
         "toteutusOid": "1.2.246.562.17.00000000000000030315",
@@ -6188,6 +7371,10 @@
         "kunnat": [
           "Kotka",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Tekniikan alat"
         ]
       }
     ]

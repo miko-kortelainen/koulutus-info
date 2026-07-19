@@ -195,8 +195,8 @@ test("/pistelaskuri: switches cutoff rounds and sorting", async ({ page }) => {
     })
     .toBe(true);
 
-  await selectOption(page, "Järjestys", "A-Z");
-  await expectSelectedOption(page, "Järjestys", "A-Z");
+  await selectOption(page, "Järjestys", "A-Ö");
+  await expectSelectedOption(page, "Järjestys", "A-Ö");
   await expect
     .poll(async () => {
       const programmeNames = await tekniikkaAccordion
@@ -211,7 +211,7 @@ test("/pistelaskuri: switches cutoff rounds and sorting", async ({ page }) => {
     .toBe(true);
 
   await page.getByRole("tab", { name: "AMM" }).click();
-  await expectSelectedOption(page, "Järjestys", "A-Z");
+  await expectSelectedOption(page, "Järjestys", "A-Ö");
   await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true })).toHaveCount(0);
 
@@ -373,7 +373,7 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
-  await page.getByRole("button", { name: "Koulu" }).click();
+  await page.getByRole("button", { name: "Koulu", exact: true }).click();
   const options = page.getByRole("option");
   await expect(options.first()).toBeVisible({ timeout: 10000 });
 
@@ -392,6 +392,31 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   // deselect first → unfiltered results return
   await options.first().click();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+});
+
+test("/koulutukset: card link opens ala-filtered pisterajat history", async ({ page }) => {
+  await page.goto("/koulutukset/");
+  const search = page.getByPlaceholder("Etsi koulutuksia");
+  // hevosalan liiketoiminta belongs to "Kauppa, hallinto ja oikeustieteet" — an ala whose
+  // name contains a comma, which the ?ala= param must survive
+  await search.fill("hevosalan liiketoiminta");
+  // every card shows the same link text, so wait for the filtered card before clicking
+  const card = page.getByRole("listitem").filter({ hasText: "hevosalan liiketoiminta" });
+  await expect(card.getByText("Katso alan pisterajat")).toBeVisible({ timeout: 10000 });
+
+  await card.getByText("Katso alan pisterajat").click();
+  await expect(page).toHaveURL(/\/koulut\/[^/]+\/pisterajat\/\?ala=kauppa-hallinto-ja-oikeustieteet/);
+
+  // ala filter badge is active and scoped results exist
+  const dismissBadge = page.getByRole("button", { name: "Poista alarajaus" });
+  await expect(dismissBadge).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Kauppa, hallinto ja oikeustieteet")).toBeVisible();
+  await expect(page.getByRole("article").first()).toBeVisible();
+
+  // dismissing the badge widens to the school's full list
+  await dismissBadge.click();
+  await expect(dismissBadge).not.toBeVisible();
+  await expect(page.getByRole("article").first()).toBeVisible();
 });
 
 test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears it", async ({ page }) => {
@@ -494,13 +519,13 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/");
-  await page.getByRole("link", { name: "2026 pisterajat" }).click();
+  await page.getByRole("link", { name: "Pisterajat", exact: true }).click();
 
   await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/pisterajat/");
-  await expect(page.getByRole("heading", { name: "Centria-ammattikorkeakoulu pisterajat 2026" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Centria-ammattikorkeakoulu – pisterajat" })).toBeVisible();
   await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible();
   await expect(page.getByText("Todistusvalinta (YO)").first()).toBeVisible();
-  await expect(page.getByText("91,00")).toBeVisible();
+  await expect(page.getByText("91")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
@@ -528,10 +553,43 @@ test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => 
 
   const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla rajauksilla.")).toBeVisible();
 
   await search.clear();
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla rajauksilla.")).not.toBeVisible();
+});
+
+test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ page }) => {
+  await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
+  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
+    timeout: 10000,
+  });
+  await expect(page.getByText("Tradenomi (AMK), liiketalous, monimuotototeutus / Pietarsaari")).not.toBeVisible();
+
+  await selectOption(page, "Hakukierros", "Syksyn yhteishaku 2024");
+
+  await expect(page.getByText("Tradenomi (AMK), liiketalous, monimuotototeutus / Pietarsaari")).toBeVisible();
+  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).not.toBeVisible();
+});
+
+test("/pisterajat: ala link opens per-ala cutoff listing", async ({ page }) => {
+  await page.goto("/pisterajat/");
+  await expect(page.getByRole("heading", { name: "Pisterajat" })).toBeVisible();
+
+  await page.getByRole("link", { name: "Lääketieteet" }).click();
+  await expect(page).toHaveURL("/pisterajat/laaketieteet/");
+  await expect(page.getByRole("heading", { name: "Lääketieteet – pisterajat" })).toBeVisible();
+  await expect(page.getByRole("article").first()).toBeVisible();
+  await expect(page.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
+});
+
+test("/pisterajat/:ala: school link opens ala-filtered cutoff history", async ({ page }) => {
+  await page.goto("/pisterajat/laaketieteet/");
+  await page.getByRole("heading", { level: 2 }).first().getByRole("link").click();
+
+  await expect(page).toHaveURL(/\/koulut\/[^/]+\/pisterajat\/\?ala=laaketieteet/);
+  await expect(page.getByRole("button", { name: "Poista alarajaus" })).toBeVisible();
+  await expect(page.getByRole("article").first()).toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {

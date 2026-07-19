@@ -6,7 +6,6 @@ import DegreeStatsCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
 import { slugifySchoolName } from "@/components/slug";
-import { cutoffRoundYear, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
 import { CURRENT_YEAR, statisticsRoundShortLabel } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
@@ -54,7 +53,7 @@ export default function SchoolPage() {
           textDecorationStyle="dotted"
         >
           <HiOutlineSparkles color={COLORS.accentFg} />
-          {cutoffRoundYear(DEFAULT_CUTOFF_ROUND)} pisterajat
+          Pisterajat
         </Link>
       ) : null}
       <Separator mt={2} />
