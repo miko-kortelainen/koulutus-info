@@ -1,15 +1,18 @@
-import { Box, Heading, Link, Separator, Stack, Text, VStack } from "@chakra-ui/react";
-import { useState } from "react";
+import { Box, Heading, Link, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
+import { usePageContext } from "vike-react/usePageContext";
+import { alaNamesForAlaParam, filterProgrammesByAlaParam } from "@/api/cutoffs";
+import CutoffCard from "@/components/CutoffCard";
+import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
 import { slugifySchoolName } from "@/components/slug";
-import { cutoffRoundYear, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
+import { compareCutoffRounds, cutoffRoundLabel } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
 import type { CutoffPageData } from "./+data";
-import CutoffCard from "./components/CutoffCard";
 import SortControl, { type SortOption } from "./components/SortControl";
 import useFilteredProgrammes from "./hooks/useFilteredProgrammes";
 
@@ -17,13 +20,37 @@ const pageSize = 5;
 
 export default function CutoffPage() {
   const { schoolName, programmes } = useData<CutoffPageData>();
+  const { urlParsed } = usePageContext();
+  // params are read only after hydration: the prerendered HTML has no query string, so
+  // rendering them during hydration would mismatch the static markup
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+  // only the rounds this school actually has cutoffs in
+  const rounds = useMemo(
+    () => [...new Set(programmes.flatMap((p) => p.cutoffs.map((c) => c.round)))].sort(compareCutoffRounds),
+    [programmes],
+  );
+  const roundItems = useMemo(() => rounds.map((round) => ({ label: cutoffRoundLabel(round), value: round })), [rounds]);
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
+  const [alaDismissed, setAlaDismissed] = useState(false);
+  const [selectedRound, setSelectedRound] = useState(rounds[0]);
+  const alaParam = mounted && !alaDismissed ? urlParsed.search.ala : undefined;
+  const selectedAlat = useMemo(() => (alaParam ? alaNamesForAlaParam(programmes, alaParam) : []), [programmes, alaParam]);
+  // memoized so the Fuse index in useFilteredProgrammes only rebuilds when the scope changes
+  const scopedProgrammes = useMemo(() => {
+    const byAla = alaParam ? filterProgrammesByAlaParam(programmes, alaParam) : programmes;
+    return byAla
+      .map((p) => ({ ...p, cutoffs: p.cutoffs.filter((c) => c.round === selectedRound) }))
+      .filter((p) => p.cutoffs.length > 0);
+  }, [programmes, alaParam, selectedRound]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
-  const filteredProgrammes = useFilteredProgrammes(programmes, debouncedSearchTerm, sortOrder);
+  const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, sortOrder);
   const visibleProgrammes = filteredProgrammes.slice((page - 1) * pageSize, page * pageSize);
-  const cutoffYear = cutoffRoundYear(DEFAULT_CUTOFF_ROUND);
 
   const linkBack = (
     <Link
@@ -41,21 +68,39 @@ export default function CutoffPage() {
     <Stack gap={1}>
       {linkBack}
       <Heading as="h1" size="md">
-        {schoolName} pisterajat {cutoffYear}
+        {schoolName} – pisterajat
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Tilastovuoden {cutoffYear} pisterajat valintatavoittain.
+        Pisterajat valintatavoittain eri hakukierroksilta.
       </Text>
       <Separator mt={2} />
     </Stack>
   );
 
+  const alaFilter =
+    selectedAlat.length > 0 ? (
+      <Tag.Root size={{ base: "md", md: "lg" }}>
+        <Tag.Label>{selectedAlat.join(", ")}</Tag.Label>
+        <Tag.EndElement>
+          <Tag.CloseTrigger
+            aria-label="Poista alarajaus"
+            onClick={() => {
+              setAlaDismissed(true);
+              setPage(1);
+              // drop ?ala from the address bar so a reload does not re-apply the filter
+              window.history.replaceState(null, "", window.location.pathname);
+            }}
+          />
+        </Tag.EndElement>
+      </Tag.Root>
+    ) : null;
+
   const programList = (
     <Stack as="ul" gap={{ base: 4, md: 8 }} listStyleType="none">
-      {filteredProgrammes.length === 0 ? <Text as="li">Ei tuloksia hakusanoilla.</Text> : null}
+      {filteredProgrammes.length === 0 ? <Text as="li">Ei tuloksia valituilla rajauksilla.</Text> : null}
       {visibleProgrammes.map((programme) => (
         <Box as="li" key={programme.name}>
-          <CutoffCard programme={programme} />
+          <CutoffCard programme={programme} showRound={rounds.length === 1} />
         </Box>
       ))}
     </Stack>
@@ -64,7 +109,7 @@ export default function CutoffPage() {
   return (
     <PageContainer align="flex-start">
       {header}
-      <VStack flex={1} width="full" zIndex={10}>
+      <VStack align="flex-start" flex={1} width="full" zIndex={10}>
         <SearchInput
           onChange={(value) => {
             setSearchTerm(value);
@@ -80,6 +125,20 @@ export default function CutoffPage() {
           }}
           value={sortOrder}
         />
+        {rounds.length > 1 ? (
+          <OptionSelect
+            ariaLabel="Hakukierros"
+            items={roundItems}
+            onChange={(value) => {
+              setSelectedRound(value);
+              setPage(1);
+            }}
+            placeholder="Valitse hakukierros"
+            size="xs"
+            value={selectedRound}
+          />
+        ) : null}
+        {alaFilter}
       </VStack>
       {programList}
       <Pagination count={filteredProgrammes.length} onPageChange={setPage} page={page} pageSize={pageSize} />

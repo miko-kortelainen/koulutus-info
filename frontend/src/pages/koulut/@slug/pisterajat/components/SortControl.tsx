@@ -3,8 +3,8 @@ import OptionSelect from "@/components/OptionSelect";
 export type SortOption = "asc" | "desc";
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
-  { label: "A-Z", value: "asc" },
-  { label: "Z-A", value: "desc" },
+  { label: "A-Ö", value: "asc" },
+  { label: "Ö-A", value: "desc" },
 ];
 
 interface SortControlProps {

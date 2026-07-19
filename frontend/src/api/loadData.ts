@@ -58,7 +58,9 @@ export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): Cu
   readPublicData(`pisterajat-${round}.json`, parseCutoffSchools);
 
 export const cutoffSchoolNames = (): string[] => {
-  const names = [...new Set(readCutoffSchools().map((school) => school.name))].sort((a, b) => a.localeCompare(b, "fi"));
+  const names = [
+    ...new Set(availableCutoffRounds().flatMap((round) => readCutoffSchools(round).map((school) => school.name))),
+  ].sort((a, b) => a.localeCompare(b, "fi"));
   assertNoSlugCollisions(names, "Cutoff school");
 
   const schoolNameSet = new Set(schoolNames());
@@ -68,6 +70,15 @@ export const cutoffSchoolNames = (): string[] => {
   }
 
   return names;
+};
+
+export const cutoffAlaNames = (): string[] => {
+  const names = availableCutoffRounds().flatMap((round) =>
+    readCutoffSchools(round).flatMap((school) => school.programmes.map((programme) => programme.koulutusala)),
+  );
+  const sorted = [...new Set(names)].filter(Boolean).sort((a, b) => a.localeCompare(b, "fi"));
+  assertNoSlugCollisions(sorted, "Koulutusala");
+  return sorted;
 };
 
 export const schoolNames = (): string[] => {

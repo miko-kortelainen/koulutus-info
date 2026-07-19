@@ -38,6 +38,7 @@ const isToteutus = (value: unknown) =>
   isLanguageStrings(value.toteutusNimi) &&
   isLanguageStrings(value.oppilaitosNimi) &&
   isStringArray(value.kunnat) &&
+  isStringArray(value.koulutusalat) &&
   isOptionalBoolean(value.muuntokoulutus);
 
 const isSchool = (value: unknown) =>
