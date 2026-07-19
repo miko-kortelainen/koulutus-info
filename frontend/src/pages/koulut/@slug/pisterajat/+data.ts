@@ -1,18 +1,29 @@
 import type { PageContextServer } from "vike/types";
-import { readCutoffSchools } from "@/api/loadData";
+import { type CutoffEntry, mergeCutoffProgrammes, type ProgrammeWithRounds } from "@/api/cutoffs";
+import { availableCutoffRounds, readCutoffSchools } from "@/api/loadData";
 import { slugifySchoolName } from "@/components/slug";
-import type { Programme as CutoffProgramme } from "@/types/pisterajat.gen";
 
 export interface CutoffPageData {
   schoolName: string;
-  programmes: CutoffProgramme[];
+  programmes: ProgrammeWithRounds[];
 }
 
 export const data = (pageContext: PageContextServer): CutoffPageData => {
-  const school = readCutoffSchools().find((s) => slugifySchoolName(s.name) === pageContext.routeParams.slug);
+  const { slug } = pageContext.routeParams;
+  let schoolName = "";
+  const entries: CutoffEntry[] = [];
+
+  for (const round of availableCutoffRounds()) {
+    const school = readCutoffSchools(round).find((s) => slugifySchoolName(s.name) === slug);
+    if (!school) continue;
+    schoolName = school.name;
+    for (const programme of school.programmes) {
+      entries.push({ programme, round });
+    }
+  }
 
   return {
-    schoolName: school?.name ?? "",
-    programmes: school?.programmes ?? [],
+    schoolName,
+    programmes: mergeCutoffProgrammes(entries),
   };
 };

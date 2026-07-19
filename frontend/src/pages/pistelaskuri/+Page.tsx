@@ -35,8 +35,8 @@ const SECTOR_OPTIONS: { label: string; value: SectorFilter }[] = [
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Alin pisteraja", value: "lowest_cutoff" },
   { label: "Korkein pisteraja", value: "highest_cutoff" },
-  { label: "A-Z", value: "name_asc" },
-  { label: "Z-A", value: "name_desc" },
+  { label: "A-Ö", value: "name_asc" },
+  { label: "Ö-A", value: "name_desc" },
 ];
 
 interface Calculation {

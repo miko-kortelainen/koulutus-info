@@ -1,4 +1,5 @@
 import { createListCollection, Select } from "@chakra-ui/react";
+import { useMemo } from "react";
 
 interface OptionSelectProps<T extends string> {
   ariaLabel: string;
@@ -19,7 +20,7 @@ export default function OptionSelect<T extends string>({
   size,
   value,
 }: OptionSelectProps<T>) {
-  const collection = createListCollection({ items });
+  const collection = useMemo(() => createListCollection({ items }), [items]);
 
   return (
     <Select.Root

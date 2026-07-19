@@ -11,7 +11,11 @@ const FUSE_OPTIONS = {
   useExtendedSearch: true,
 };
 
-export default function useFilteredProgrammes(programmes: Programme[], searchTerm: string, sortOrder: SortOption) {
+export default function useFilteredProgrammes<T extends Programme>(
+  programmes: T[],
+  searchTerm: string,
+  sortOrder: SortOption,
+): T[] {
   const fuse = useMemo(() => new Fuse(programmes, FUSE_OPTIONS), [programmes]);
 
   return useMemo(() => {
