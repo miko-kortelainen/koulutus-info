@@ -50,6 +50,7 @@ func TestClassifyTutkintotaso(t *testing.T) {
 func TestTransformOpintopolkuDataFlagsMuuntokoulutus(t *testing.T) {
 	data := &models.OpintopolkuData{
 		Hits: []models.School{{
+			Oid:                    "oid-1",
 			Koulutustyyppi:         "amk",
 			OpintojenLaajuusNumero: 210,
 			Koulutukset:            []models.Koulutus{{Nimi: models.LanguageStrings{Fi: "Sosionomi (AMK), sosiaaliala"}}},
@@ -60,7 +61,7 @@ func TestTransformOpintopolkuDataFlagsMuuntokoulutus(t *testing.T) {
 		}},
 	}
 
-	result := TransformOpintopolkuData(data)
+	result := TransformOpintopolkuData(data, map[string][]string{"oid-1": {"Terveys- ja hyvinvointialat"}})
 	if len(result) != 1 {
 		t.Fatalf("expected 1 entry, got %d", len(result))
 	}
@@ -70,5 +71,37 @@ func TestTransformOpintopolkuDataFlagsMuuntokoulutus(t *testing.T) {
 	}
 	if !entry.Toteutukset[0].Muuntokoulutus || entry.Toteutukset[1].Muuntokoulutus {
 		t.Errorf("muuntokoulutus flags wrong: %v, %v", entry.Toteutukset[0].Muuntokoulutus, entry.Toteutukset[1].Muuntokoulutus)
+	}
+	for i, tot := range entry.Toteutukset {
+		if len(tot.Koulutusalat) != 1 || tot.Koulutusalat[0] != "Terveys- ja hyvinvointialat" {
+			t.Errorf("toteutus %d koulutusalat = %v, want [Terveys- ja hyvinvointialat]", i, tot.Koulutusalat)
+		}
+	}
+}
+
+func TestAlaNamesFromKoodiUrit(t *testing.T) {
+	detail := &koulutusDetail{KoulutuskoodienAlatJaAsteet: []koulutusalaEntry{
+		{KoulutusalaKoodiUrit: []string{"kansallinenkoulutusluokitus2016koulutusalataso1_08", "okmohjauksenala_9#1"}},
+		{KoulutusalaKoodiUrit: []string{"okmohjauksenala_9", "okmohjauksenala_12#2"}},
+	}}
+	names, err := alaNamesFromKoodiUrit(detail)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	want := []string{"Maa- ja metsätalousalat", "Palvelualat"}
+	if len(names) != 2 || names[0] != want[0] || names[1] != want[1] {
+		t.Errorf("names = %v, want %v", names, want)
+	}
+
+	unknown := &koulutusDetail{
+		KoulutuskoodienAlatJaAsteet: []koulutusalaEntry{{KoulutusalaKoodiUrit: []string{"okmohjauksenala_13#1"}}},
+	}
+	if _, err := alaNamesFromKoodiUrit(unknown); err == nil {
+		t.Error("expected error for unmapped code")
+	}
+
+	empty := &koulutusDetail{}
+	if _, err := alaNamesFromKoodiUrit(empty); err == nil {
+		t.Error("expected error for missing codes")
 	}
 }

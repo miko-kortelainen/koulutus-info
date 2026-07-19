@@ -6,6 +6,7 @@ type OpintopolkuData struct {
 }
 
 type School struct {
+	Oid                    string          `json:"oid"`
 	Nimi                   LanguageStrings `json:"nimi"`
 	Koulutukset            []Koulutus      `json:"koulutukset"`
 	Toteutukset            []Toteutus      `json:"toteutukset"`
@@ -52,5 +53,8 @@ type ToteutusEntry struct {
 	ToteutusNimi   LanguageStrings `json:"toteutusNimi"`
 	OppilaitosNimi LanguageStrings `json:"oppilaitosNimi"`
 	Kunnat         []string        `json:"kunnat"`
+	// omitempty keeps the generated TS type optional: favorites saved to
+	// localStorage before this field existed have no koulutusalat.
+	Koulutusalat []string `json:"koulutusalat,omitempty"`
 	Muuntokoulutus bool            `json:"muuntokoulutus,omitempty"`
 }
