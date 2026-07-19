@@ -7,8 +7,11 @@ import (
 )
 
 // TransformOpintopolkuData converts raw Opintopolku data into the optimized
-// schools.json format: a flat array of koulutus entries.
-func TransformOpintopolkuData(data *models.OpintopolkuData) models.SchoolsResponse {
+// schools.json format: a flat array of koulutus entries. koulutusalat maps
+// koulutus oid -> OKM ohjauksen ala names (see FetchKoulutusalat); the names
+// are duplicated onto every toteutus for direct use in flat toteutus lists
+// and localStorage favorites.
+func TransformOpintopolkuData(data *models.OpintopolkuData, koulutusalat map[string][]string) models.SchoolsResponse {
 	if data == nil {
 		return models.SchoolsResponse{}
 	}
@@ -33,6 +36,7 @@ func TransformOpintopolkuData(data *models.OpintopolkuData) models.SchoolsRespon
 				ToteutusNimi:   t.ToteutusNimi,
 				OppilaitosNimi: t.OppilaitosNimi,
 				Kunnat:         kunnat,
+				Koulutusalat:   koulutusalat[school.Oid],
 				Muuntokoulutus: strings.Contains(toteutusNimi, "muunto"),
 			})
 		}

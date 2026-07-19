@@ -20,6 +20,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Maa- ja metsätalousalat"
         ]
       }
     ]
@@ -45,6 +48,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -70,6 +76,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -95,6 +104,13 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Maa- ja metsätalousalat",
+          "Palvelualat",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -120,6 +136,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -145,6 +164,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -170,6 +192,14 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Maa- ja metsätalousalat",
+          "Palvelualat",
+          "Taiteet ja kulttuurialat",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -195,6 +225,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -211,6 +244,9 @@
           "Tampere",
           "Seinäjoki"
         ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
         "muuntokoulutus": true
       },
       {
@@ -225,6 +261,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -239,6 +278,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -253,6 +295,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -278,6 +323,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -303,6 +351,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -317,6 +368,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -331,6 +385,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -345,6 +402,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -359,6 +419,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -373,6 +436,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -387,6 +453,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -401,6 +470,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -415,6 +487,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -429,6 +504,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -454,6 +532,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -479,6 +560,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -504,6 +588,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -529,6 +616,13 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Palvelualat",
+          "Taiteet ja kulttuurialat",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -555,6 +649,9 @@
         "kunnat": [
           "Kokkola"
         ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ],
         "muuntokoulutus": true
       }
     ]
@@ -580,6 +677,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -605,6 +705,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -630,6 +733,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -644,6 +750,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -658,6 +767,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -683,6 +795,9 @@
         },
         "kunnat": [
           "Riihimäki"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -697,6 +812,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -711,6 +829,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -725,6 +846,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -739,6 +863,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -754,6 +881,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -768,6 +898,9 @@
         },
         "kunnat": [
           "Iisalmi"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -782,6 +915,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -796,6 +932,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -821,6 +960,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -835,6 +977,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -860,6 +1005,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -885,6 +1033,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -899,6 +1050,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -913,6 +1067,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -927,6 +1084,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -941,6 +1101,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -967,6 +1130,9 @@
         "kunnat": [
           "Hämeenlinna"
         ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ],
         "muuntokoulutus": true
       },
       {
@@ -981,6 +1147,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -995,6 +1164,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1009,6 +1181,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1023,6 +1198,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1048,6 +1226,9 @@
         },
         "kunnat": [
           "Valkeakoski"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1062,6 +1243,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1076,6 +1260,9 @@
         },
         "kunnat": [
           "Ylivieska"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1090,6 +1277,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1104,6 +1294,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1118,6 +1311,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1132,6 +1328,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1146,6 +1345,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1171,6 +1373,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1185,6 +1390,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1210,6 +1418,9 @@
         },
         "kunnat": [
           "Riihimäki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1225,6 +1436,9 @@
         "kunnat": [
           "Kokkola"
         ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ],
         "muuntokoulutus": true
       },
       {
@@ -1239,6 +1453,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1253,6 +1470,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1267,6 +1487,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1281,6 +1504,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1295,6 +1521,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1309,6 +1538,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1323,6 +1555,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1337,6 +1572,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -1351,6 +1589,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1376,6 +1617,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1401,6 +1645,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1426,6 +1673,10 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat",
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1451,6 +1702,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1476,6 +1730,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1490,6 +1747,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -1504,6 +1764,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1529,6 +1792,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1554,6 +1820,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1579,6 +1848,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1604,6 +1876,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1629,6 +1904,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1654,6 +1932,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1679,6 +1960,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -1704,6 +1988,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1729,6 +2016,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -1754,6 +2044,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -1779,6 +2072,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -1804,6 +2100,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat",
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -1829,6 +2129,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -1854,6 +2157,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -1879,6 +2185,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -1893,6 +2202,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -1907,6 +2219,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -1921,6 +2236,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -1947,6 +2265,9 @@
         "kunnat": [
           "Rovaniemi"
         ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
         "muuntokoulutus": true
       }
     ]
@@ -1972,6 +2293,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -1986,6 +2310,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2000,6 +2327,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2025,6 +2355,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat"
         ]
       }
     ]
@@ -2051,6 +2384,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -2076,6 +2412,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2101,6 +2440,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2126,6 +2468,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2151,6 +2496,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Maa- ja metsätalousalat"
         ]
       }
     ]
@@ -2176,6 +2524,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2190,6 +2541,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2204,6 +2558,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2218,6 +2575,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       },
       {
@@ -2232,6 +2592,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2257,6 +2620,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat"
         ]
       }
     ]
@@ -2282,6 +2648,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
         ]
       }
     ]
@@ -2307,6 +2676,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -2332,6 +2704,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -2357,6 +2732,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2371,6 +2749,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2385,6 +2766,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2399,6 +2783,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2413,6 +2800,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2427,6 +2817,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2441,6 +2834,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       },
       {
@@ -2455,6 +2851,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -2480,6 +2879,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2505,6 +2907,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2530,6 +2935,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2544,6 +2952,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2558,6 +2969,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2572,6 +2986,9 @@
         },
         "kunnat": [
           "Porvoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2586,6 +3003,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2600,6 +3020,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2614,6 +3037,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2628,6 +3054,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       },
       {
@@ -2642,6 +3071,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -2667,6 +3099,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -2692,6 +3127,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -2720,6 +3158,9 @@
           "Espoo",
           "Porvoo",
           "Lohja"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2734,6 +3175,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2748,6 +3192,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2762,6 +3209,9 @@
         },
         "kunnat": [
           "Kemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2776,6 +3226,9 @@
         },
         "kunnat": [
           "Valkeakoski"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2790,6 +3243,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2804,6 +3260,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2818,6 +3277,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2832,6 +3294,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2846,6 +3311,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2860,6 +3328,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2874,6 +3345,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2888,6 +3362,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2902,6 +3379,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2916,6 +3396,9 @@
         },
         "kunnat": [
           "Salo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2930,6 +3413,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2944,6 +3430,9 @@
         },
         "kunnat": [
           "Salo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2958,6 +3447,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2972,6 +3464,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -2986,6 +3481,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3000,6 +3498,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3016,6 +3517,9 @@
           "Oulu",
           "Helsinki",
           "Pieksämäki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3030,6 +3534,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3044,6 +3551,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3058,6 +3568,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3072,6 +3585,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3086,6 +3602,9 @@
         },
         "kunnat": [
           "Iisalmi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3100,6 +3619,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3114,6 +3636,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3128,6 +3653,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3142,6 +3670,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3156,6 +3687,9 @@
         },
         "kunnat": [
           "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3170,6 +3704,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3184,6 +3721,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3211,6 +3751,9 @@
           "Pori",
           "Oulu",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3236,6 +3779,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3261,6 +3807,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3286,6 +3835,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3311,6 +3863,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3336,6 +3891,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3361,6 +3919,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3386,6 +3947,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3411,6 +3975,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3436,6 +4003,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3461,6 +4031,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3486,6 +4059,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3511,6 +4087,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3537,6 +4116,9 @@
         "kunnat": [
           "Savonlinna",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3562,6 +4144,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3587,6 +4173,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3612,6 +4201,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3637,6 +4229,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3662,6 +4257,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3687,6 +4285,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3712,6 +4314,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3737,6 +4342,10 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3762,6 +4371,10 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3787,6 +4400,10 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Lääketieteet",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3815,6 +4432,9 @@
           "Pieksämäki",
           "Oulu",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -3844,6 +4464,9 @@
           "Espoo",
           "Porvoo",
           "Lohja"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3858,6 +4481,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3873,6 +4499,9 @@
         "kunnat": [
           "Espoo",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3887,6 +4516,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3901,6 +4533,9 @@
         },
         "kunnat": [
           "Kemi"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3916,6 +4551,9 @@
         "kunnat": [
           "Hämeenlinna"
         ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
         "muuntokoulutus": true
       },
       {
@@ -3930,6 +4568,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3944,6 +4585,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3958,6 +4602,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3972,6 +4619,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -3986,6 +4636,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4000,6 +4653,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4014,6 +4670,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4031,6 +4690,9 @@
           "Pieksämäki",
           "Oulu",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4045,6 +4707,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4059,6 +4724,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4073,6 +4741,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4087,6 +4758,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4101,6 +4775,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4115,6 +4792,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4129,6 +4809,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4143,6 +4826,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4157,6 +4843,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4171,6 +4860,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4185,6 +4877,9 @@
         },
         "kunnat": [
           "Lappeenranta"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4199,6 +4894,9 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4213,6 +4911,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4238,6 +4939,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4263,6 +4967,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Lääketieteet"
         ]
       }
     ]
@@ -4288,6 +4995,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -4314,6 +5024,9 @@
         "kunnat": [
           "Vantaa",
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4328,6 +5041,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ],
         "muuntokoulutus": true
       },
@@ -4344,6 +5060,9 @@
         "kunnat": [
           "Kokkola"
         ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
         "muuntokoulutus": true
       },
       {
@@ -4358,6 +5077,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4372,6 +5094,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4386,6 +5111,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4400,6 +5128,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ],
         "muuntokoulutus": true
       },
@@ -4416,6 +5147,9 @@
         "kunnat": [
           "Pori",
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4430,6 +5164,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4444,6 +5181,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4458,6 +5198,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4472,6 +5215,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4497,6 +5243,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -4522,6 +5271,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -4547,6 +5299,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -4572,6 +5327,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4586,6 +5344,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4600,6 +5361,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -4614,6 +5378,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -4640,6 +5407,9 @@
         "kunnat": [
           "Espoo",
           "Lohja"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4656,6 +5426,9 @@
           "Vantaa",
           "Espoo",
           "Hyvinkää"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4671,6 +5444,9 @@
         "kunnat": [
           "Espoo",
           "Hyvinkää"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4685,6 +5461,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4699,6 +5478,9 @@
         },
         "kunnat": [
           "Rovaniemi"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4713,6 +5495,9 @@
         },
         "kunnat": [
           "Tornio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4727,6 +5512,9 @@
         },
         "kunnat": [
           "Forssa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4742,6 +5530,9 @@
         "kunnat": [
           "Hämeenlinna"
         ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ],
         "muuntokoulutus": true
       },
       {
@@ -4756,6 +5547,9 @@
         },
         "kunnat": [
           "Ylivieska"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4770,6 +5564,9 @@
         },
         "kunnat": [
           "Pietarsaari"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4785,6 +5582,9 @@
         "kunnat": [
           "Pori",
           "Huittinen"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4800,6 +5600,9 @@
         "kunnat": [
           "Pori",
           "Huittinen"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4814,6 +5617,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4828,6 +5634,9 @@
         },
         "kunnat": [
           "Seinäjoki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4842,6 +5651,9 @@
         },
         "kunnat": [
           "Salo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4856,6 +5668,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4870,6 +5685,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4884,6 +5702,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4899,6 +5720,9 @@
         "kunnat": [
           "Helsinki",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4914,6 +5738,9 @@
         "kunnat": [
           "Helsinki",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4928,6 +5755,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4942,6 +5772,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4956,6 +5789,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4970,6 +5806,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -4984,6 +5823,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5009,6 +5851,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -5023,6 +5868,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -5038,6 +5886,9 @@
         "kunnat": [
           "Vantaa",
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -5052,6 +5903,9 @@
         },
         "kunnat": [
           "Tornio"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -5066,6 +5920,9 @@
         },
         "kunnat": [
           "Oulu"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -5080,6 +5937,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       },
       {
@@ -5094,6 +5954,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -5119,6 +5982,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -5144,6 +6010,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5169,6 +6038,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5194,6 +6066,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5219,6 +6094,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -5244,6 +6122,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5269,6 +6150,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5294,6 +6178,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5319,6 +6206,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5344,6 +6234,9 @@
         },
         "kunnat": [
           "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5369,6 +6262,9 @@
         },
         "kunnat": [
           "Lahti"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5394,6 +6290,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5420,6 +6319,9 @@
         "kunnat": [
           "Helsinki",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5445,6 +6347,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5470,6 +6375,9 @@
         },
         "kunnat": [
           "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5484,6 +6392,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5498,6 +6409,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5523,6 +6437,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5537,6 +6454,9 @@
         },
         "kunnat": [
           "Kajaani"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5562,6 +6482,9 @@
         },
         "kunnat": [
           "Kokkola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5587,6 +6510,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5612,6 +6538,9 @@
         },
         "kunnat": [
           "Pori"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5637,6 +6566,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -5663,6 +6595,9 @@
         "kunnat": [
           "Espoo",
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -5689,6 +6624,9 @@
         "kunnat": [
           "Kokkola"
         ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ],
         "muuntokoulutus": true
       },
       {
@@ -5703,6 +6641,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -5717,6 +6658,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       },
       {
@@ -5731,6 +6675,9 @@
         },
         "kunnat": [
           "Mikkeli"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -5756,6 +6703,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5781,6 +6731,9 @@
         },
         "kunnat": [
           "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5806,6 +6759,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5820,6 +6776,9 @@
         },
         "kunnat": [
           "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5834,6 +6793,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5848,6 +6810,9 @@
         },
         "kunnat": [
           "Porvoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5863,6 +6828,9 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -5877,6 +6845,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5902,6 +6873,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -5927,6 +6901,9 @@
         },
         "kunnat": [
           "Rauma"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -5952,6 +6929,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -5977,6 +6957,9 @@
         },
         "kunnat": [
           "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -6002,6 +6985,9 @@
         },
         "kunnat": [
           "Espoo"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -6027,6 +7013,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -6053,6 +7042,9 @@
         "kunnat": [
           "Kotka",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -6078,6 +7070,11 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Tekniikan alat",
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -6104,6 +7101,9 @@
         "kunnat": [
           "Savonlinna",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -6129,6 +7129,9 @@
         },
         "kunnat": [
           "Turku"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6154,6 +7157,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
         ]
       }
     ]
@@ -6179,6 +7185,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       },
       {
@@ -6193,6 +7202,9 @@
         },
         "kunnat": [
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6218,6 +7230,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6243,6 +7258,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6268,6 +7286,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
         ]
       }
     ]
@@ -6293,6 +7314,9 @@
         },
         "kunnat": [
           "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
         ]
       }
     ]
@@ -6318,6 +7342,9 @@
         },
         "kunnat": [
           "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
         ]
       }
     ]
@@ -6344,6 +7371,10 @@
         "kunnat": [
           "Kotka",
           "Kouvola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet",
+          "Tekniikan alat"
         ]
       }
     ]
