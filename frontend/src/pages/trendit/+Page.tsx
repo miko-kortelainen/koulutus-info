@@ -1,4 +1,4 @@
-import { Alert, Box, createListCollection, Heading, Select, Stack, Text } from "@chakra-ui/react";
+import { Alert, Box, createListCollection, Heading, Select, Stack, Text, VisuallyHidden } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import YearControl from "@/components/YearControl";
@@ -7,7 +7,7 @@ import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import type { TrendsPageData } from "./+data";
 import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
-import KoulutusalaTrendChart from "./components/KoulutusalaTrendChart";
+import ApplicantTotalsChart from "./components/ApplicantTotalsChart";
 import TopBarList from "./components/TopBarList";
 import TrendCard from "./components/TrendCard";
 import useTrendsData from "./hooks/useTrendsData";
@@ -28,14 +28,11 @@ export default function TrendsPage() {
   const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? currentStatistics : undefined);
   const compareQuery = useStatisticsQuery(compareYear as YearOption, undefined, !!compareYear);
 
-  const primaryReady = query.isSuccess && !query.isPlaceholderData;
-  const comparisonReady = Boolean(compareYear && compareQuery.isSuccess && !compareQuery.isPlaceholderData);
+  const primaryReady = query.isSuccess;
+  const comparisonReady = Boolean(compareYear && compareQuery.isSuccess);
   const trends = useTrendsData(primaryReady ? query.data : undefined);
   const compareTrends = useTrendsData(comparisonReady ? compareQuery.data : undefined, 0);
-  const listsAreLoading =
-    query.isPending ||
-    query.isPlaceholderData ||
-    Boolean(compareYear && (compareQuery.isPending || compareQuery.isPlaceholderData));
+  const listsAreLoading = query.isPending || Boolean(compareYear && compareQuery.isPending);
 
   const header = (
     <Stack gap={1}>
@@ -48,7 +45,7 @@ export default function TrendsPage() {
 
   const loadingAndError = (
     <div aria-atomic="true" aria-live="polite">
-      {query.isPending && <span className="sr-only">Ladataan tilastoja...</span>}
+      {query.isPending && <VisuallyHidden>Ladataan tilastoja...</VisuallyHidden>}
       {query.isError && (
         <Alert.Root status="error">
           <Alert.Indicator />
@@ -157,10 +154,18 @@ export default function TrendsPage() {
   const applicantsByYear = (
     <>
       <TrendCard color={TREND_COLOR} title="Kevään 1. ja 2. yhteishaun hakijamäärät">
-        <KoulutusalaTrendChart chartData={springTotals} color={TREND_COLOR} />
+        <ApplicantTotalsChart
+          chartData={springTotals}
+          color={TREND_COLOR}
+          title="Kevään yhteishakujen ensisijaiset hakijat vuosittain"
+        />
       </TrendCard>
       <TrendCard color={TREND_COLOR} title="Syksyn yhteishaun hakijamäärät">
-        <KoulutusalaTrendChart chartData={autumnTotals} color={TREND_COLOR} />
+        <ApplicantTotalsChart
+          chartData={autumnTotals}
+          color={TREND_COLOR}
+          title="Syksyn yhteishaun ensisijaiset hakijat vuosittain"
+        />
       </TrendCard>
     </>
   );

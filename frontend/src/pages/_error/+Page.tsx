@@ -7,7 +7,9 @@ export default function ErrorPage() {
   return (
     <Center flex={1}>
       <Stack gap={4} textAlign="center">
-        <Heading size="5xl">{is404 ? "404" : "Virhe"}</Heading>
+        <Heading as="h1" size="5xl">
+          {is404 ? "404" : "Virhe"}
+        </Heading>
         <Text color="fg.muted">{is404 ? "Sivua ei löydy." : "Jotain meni vikaan. Yritä uudelleen."}</Text>
       </Stack>
     </Center>

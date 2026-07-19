@@ -2,7 +2,7 @@ import { Accordion, Alert, Box, Group, Heading, Stack, Text } from "@chakra-ui/r
 import { useCallback, useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import CompareBar from "@/components/CompareBar";
-import DegreeStatCard from "@/components/DegreeStatsCard";
+import DegreeStatsCard from "@/components/DegreeStatsCard";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
@@ -75,7 +75,10 @@ export default function StatsListPage() {
     selectedSchools,
   );
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-  const degreeSkeletonList = Array.from({ length: 10 }).map((_, i) => <DegreeStatsCardSkeleton key={i} />);
+  const degreeSkeletonList = Array.from({ length: 10 }).map((_, i) => (
+    // biome-ignore lint/suspicious/noArrayIndexKey: fixed loading placeholders have no identity or state
+    <DegreeStatsCardSkeleton key={i} />
+  ));
 
   const errorAlert = (
     <Alert.Root status="error">
@@ -178,19 +181,23 @@ export default function StatsListPage() {
 
   const cardList = (
     <Stack
+      as="ul"
       direction="column"
       gap={4}
+      listStyleType="none"
       opacity={query.isPending ? 1 : query.isFetching ? 0.5 : 1}
       transition="opacity 0.15s"
     >
       {query.isPending ? degreeSkeletonList : null}
-      {query.isError ? errorAlert : null}
-      {!query.isPending && !query.isError && paginated.length === 0 ? <Text>Ei tuloksia hakusanoilla.</Text> : null}
-      {paginated.map((d, index) => (
-        <DegreeStatCard
+      {query.isError ? <Box as="li">{errorAlert}</Box> : null}
+      {!query.isPending && !query.isError && paginated.length === 0 ? (
+        <Text as="li">Ei tuloksia hakusanoilla.</Text>
+      ) : null}
+      {paginated.map((d) => (
+        <DegreeStatsCard
           degree={d}
           isSelected={compareSelection.some((s) => s.kooditHakukohde === d.kooditHakukohde)}
-          key={`${d.hakukohde}, ${index}`}
+          key={d.kooditHakukohde}
           onToggleCompare={toggleCompare}
           selectionFull={compareSelection.length === 2}
         />

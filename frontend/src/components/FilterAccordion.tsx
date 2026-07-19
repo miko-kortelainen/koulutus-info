@@ -6,15 +6,14 @@ import {
   type ListCollection,
   Span,
   useListboxItemContext,
+  VisuallyHidden,
 } from "@chakra-ui/react";
 
-// eslint-disable-next-line react-refresh/only-export-components -- shared helper lives alongside FilterItem by design
 export function toCollection(values: (string | undefined)[] | undefined, label = (v: string) => v) {
-  const unique = [...new Set(values?.filter((v): v is string => Boolean(v)))].sort();
+  const unique = [...new Set(values?.filter((v): v is string => Boolean(v)))].sort((a, b) => a.localeCompare(b, "fi"));
   return createListCollection({ items: unique.map((v) => ({ label: label(v), value: v })) });
 }
 
-// eslint-disable-next-line react-refresh/only-export-components -- shared helper lives alongside FilterItem by design
 export function selectFilter(setter: (values: Set<string>) => void, resetPage: () => void) {
   return (values: string[]) => {
     setter(new Set(values));
@@ -54,6 +53,9 @@ export function FilterItem({ value, label, collection, selected, onChange, child
             selectionMode="multiple"
             value={[...selected]}
           >
+            <VisuallyHidden asChild>
+              <Listbox.Label>{label}</Listbox.Label>
+            </VisuallyHidden>
             <Listbox.Content gap={2} maxH={{ base: "56", md: "96" }}>
               {collection.items.map((item) => (
                 <Listbox.Item item={item} key={item.value}>

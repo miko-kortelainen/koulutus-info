@@ -20,9 +20,9 @@ test("masks small counts and omits trends for masked, equal, and unavailable val
         kooditHakukohde: "a",
         hakukohde: "Kohde A",
         korkeakoulu: undefined,
-        aloituspaikatLkm: 0,
+        aloituspaikatLkm: 10,
         kaikkiHakijatLkm: 4,
-        ensisijaisetHakijatLkm: 10,
+        ensisijaisetHakijatLkm: 4,
       })}
       b={entry({
         kooditHakukohde: "b",
@@ -36,8 +36,9 @@ test("masks small counts and omits trends for masked, equal, and unavailable val
   );
 
   expect(screen.getAllByText("alle 5")).toHaveLength(3);
-  expect(screen.getAllByText("n/a")).toHaveLength(2);
+  expect(screen.getAllByText("–")).toHaveLength(2);
   expect(screen.getByText("-")).toBeInTheDocument();
+  expect(screen.queryByText("0,40")).not.toBeInTheDocument();
   expect(screen.queryByRole("img", { name: "Suurempi arvo" })).not.toBeInTheDocument();
   expect(screen.queryByRole("img", { name: "Pienempi arvo" })).not.toBeInTheDocument();
 });
@@ -62,10 +63,12 @@ test("renders accessible trends, pressure values, and pressure tiers", () => {
     />,
   );
 
+  expect(screen.getByRole("table", { name: "Hakukohteiden vertailu" })).toBeInTheDocument();
+  expect(screen.getAllByRole("columnheader")).toHaveLength(2);
   expect(screen.getAllByRole("img", { name: "Suurempi arvo" })).toHaveLength(4);
   expect(screen.getAllByRole("img", { name: "Pienempi arvo" })).toHaveLength(4);
-  expect(screen.getByText("3.00")).toBeInTheDocument();
-  expect(screen.getByText("0.50")).toBeInTheDocument();
+  expect(screen.getByText("3,00")).toBeInTheDocument();
+  expect(screen.getByText("0,50")).toBeInTheDocument();
   expect(screen.getByText("Korkea")).toBeInTheDocument();
   expect(screen.getByText("Matala")).toBeInTheDocument();
 });
