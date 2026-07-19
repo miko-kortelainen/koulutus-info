@@ -583,6 +583,15 @@ test("/pisterajat: ala link opens per-ala cutoff listing", async ({ page }) => {
   await expect(page.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
 });
 
+test("/pisterajat/:ala: school link opens ala-filtered cutoff history", async ({ page }) => {
+  await page.goto("/pisterajat/laaketieteet/");
+  await page.getByRole("heading", { level: 2 }).first().getByRole("link").click();
+
+  await expect(page).toHaveURL(/\/koulut\/[^/]+\/pisterajat\/\?ala=laaketieteet/);
+  await expect(page.getByRole("button", { name: "Poista alarajaus" })).toBeVisible();
+  await expect(page.getByRole("article").first()).toBeVisible();
+});
+
 test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit/");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();

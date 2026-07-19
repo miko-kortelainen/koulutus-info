@@ -141,7 +141,7 @@ export default function SchoolsListPage() {
       <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
         {sortControls}
 
-        <Stack flex={1} gap={4}>
+        <Stack flex={1} gap={4} width="100%">
           {cardList}
           <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
         </Stack>

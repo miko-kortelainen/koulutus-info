@@ -1,4 +1,4 @@
-import { ButtonGroup, Pagination as ChakraPagination, HStack, IconButton } from "@chakra-ui/react";
+import { ButtonGroup, Pagination as ChakraPagination, IconButton } from "@chakra-ui/react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 interface PaginationProps {
@@ -27,23 +27,21 @@ export default function Pagination({ count, page, pageSize, onPageChange }: Pagi
         itemLabel: ({ page, totalPages }) => `Sivu ${page}/${totalPages}`,
       }}
     >
-      <HStack justify="center">
-        <ButtonGroup variant="ghost">
-          <ChakraPagination.PrevTrigger asChild>
-            <IconButton variant="ghost">
-              <HiChevronLeft />
-            </IconButton>
-          </ChakraPagination.PrevTrigger>
-          <ChakraPagination.Items
-            render={(page) => <IconButton variant={{ base: "ghost", _selected: "outline" }}>{page.value}</IconButton>}
-          />
-          <ChakraPagination.NextTrigger asChild>
-            <IconButton variant="ghost">
-              <HiChevronRight />
-            </IconButton>
-          </ChakraPagination.NextTrigger>
-        </ButtonGroup>
-      </HStack>
+      <ButtonGroup flexWrap="wrap" justifyContent="center" variant="ghost" width="100%">
+        <ChakraPagination.PrevTrigger asChild>
+          <IconButton variant="ghost">
+            <HiChevronLeft />
+          </IconButton>
+        </ChakraPagination.PrevTrigger>
+        <ChakraPagination.Items
+          render={(page) => <IconButton variant={{ base: "ghost", _selected: "outline" }}>{page.value}</IconButton>}
+        />
+        <ChakraPagination.NextTrigger asChild>
+          <IconButton variant="ghost">
+            <HiChevronRight />
+          </IconButton>
+        </ChakraPagination.NextTrigger>
+      </ButtonGroup>
     </ChakraPagination.Root>
   );
 }

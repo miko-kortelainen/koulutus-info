@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { filterUnavailableCutoffAlat } from "@/api/cutoffs";
 import { parseCutoffSchools, parseSchools, parseStatistics } from "@/api/dataValidation";
 import { slugifySchoolName } from "@/components/slug";
 import {
@@ -56,6 +57,12 @@ export const availableCutoffRounds = (): CutoffRound[] =>
 
 export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): CutoffSchool[] =>
   readPublicData(`pisterajat-${round}.json`, parseCutoffSchools);
+
+export const readSchoolsWithAvailableCutoffs = (): SchoolsResponse =>
+  filterUnavailableCutoffAlat(
+    readSchools(),
+    availableCutoffRounds().flatMap((round) => readCutoffSchools(round)),
+  );
 
 export const cutoffSchoolNames = (): string[] => {
   const names = [
