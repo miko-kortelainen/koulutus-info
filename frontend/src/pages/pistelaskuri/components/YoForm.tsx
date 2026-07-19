@@ -242,7 +242,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       ) : null}
       <Box>
         <Button
-          borderColor={COLORS.accent}
+          borderColor={COLORS.accentFg}
           onClick={addKieli}
           size="2xs"
           type="button"
@@ -283,7 +283,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       ) : null}
       <Box>
         <Button
-          borderColor={COLORS.accent}
+          borderColor={COLORS.accentFg}
           onClick={addReaaliaine}
           size="2xs"
           type="button"
@@ -299,11 +299,11 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
   return (
     <Stack gap={4}>
       {aidinkieliField}
-      <Separator bg={COLORS.accent} />
+      <Separator bg={COLORS.accentFg} />
       {matematiikkaField}
-      <Separator bg={COLORS.accent} />
+      <Separator bg={COLORS.accentFg} />
       {kieletField}
-      <Separator bg={COLORS.accent} />
+      <Separator bg={COLORS.accentFg} />
       {reaaliaineetField}
     </Stack>
   );

@@ -9,7 +9,11 @@ export function cutoffRoundFromFilename(filename: string): CutoffRound | null {
 
 export function compareCutoffRounds(a: CutoffRound, b: CutoffRound) {
   // descending string order: newest year first, syksy before kevat within a year
-  return b.localeCompare(a);
+  return b.localeCompare(a, "fi");
+}
+
+export function cutoffRoundYear(round: CutoffRound) {
+  return round.slice(0, 4);
 }
 
 export function cutoffRoundLabel(round: CutoffRound) {

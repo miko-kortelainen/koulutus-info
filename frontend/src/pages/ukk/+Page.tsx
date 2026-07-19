@@ -27,15 +27,14 @@ const QUESTIONS = [
         Koulutuksia ja hakijamäärien tilastoja päivitetään sitä mukaa kun uutta dataa julkaistaan. Suuntaa antava
         aikataulu löytyy{" "}
         <Link
-          color="blue.500"
+          color="fg.accent"
           href="https://vipunen.fi/fi-fi/yhteiset/Sivut/Tietojen-p%C3%A4ivittymisen-aikataulu---haku-ja-valinta.aspx"
           rel="noopener noreferrer"
           target="_blank"
         >
           Vipunen.fi
         </Link>{" "}
-        -sivun aikataulusta. <br /> <br />
-        Sivun alaosasta näät milloin sivua on viimeksi päivitetty.
+        -sivun aikataulusta.
       </>
     ),
   },
@@ -56,7 +55,7 @@ const QUESTIONS = [
     ),
   },
   {
-    question: "Kuka on tehnyt yhteishaku.app- sivun?",
+    question: "Kuka on tehnyt yhteishaku.app-sivun?",
     answer: (
       <>
         Sivua kehittää ja ylläpitää yksi henkilö harrastusprojektina.
@@ -71,7 +70,7 @@ const QUESTIONS = [
         <br />
         Sivuston lähdekoodi löytyy avoimena{" "}
         <Link
-          color="blue.500"
+          color="fg.accent"
           href="https://github.com/miko-kortelainen/koulutus-info"
           rel="noopener noreferrer"
           target="_blank"

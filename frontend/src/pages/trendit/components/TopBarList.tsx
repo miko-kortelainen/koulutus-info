@@ -14,6 +14,10 @@ interface TopBarListProps {
 }
 
 const BAR_H = "2";
+const percentFormat = new Intl.NumberFormat("fi-FI", {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+});
 
 export default function TopBarList({
   data,
@@ -29,6 +33,7 @@ export default function TopBarList({
     return (
       <Stack gap={2}>
         {Array.from({ length: skeletonCount }).map((_, i) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: fixed loading placeholders have no identity or state
           <Skeleton borderRadius="md" height="40px" key={i} />
         ))}
       </Stack>
@@ -151,7 +156,7 @@ export default function TopBarList({
                   textAlign="right"
                   w="16"
                 >
-                  {total > 0 ? `${((item.value / total) * 100).toFixed(1)} %` : "–"}
+                  {total > 0 ? `${percentFormat.format((item.value / total) * 100)} %` : "–"}
                 </Text>
               )
             )}

@@ -9,7 +9,18 @@ interface PaginationProps {
 
 export default function Pagination({ count, page, pageSize, onPageChange }: PaginationProps) {
   return (
-    <ChakraPagination.Root count={count} onPageChange={(e) => onPageChange(e.page)} page={page} pageSize={pageSize}>
+    <ChakraPagination.Root
+      count={count}
+      onPageChange={(e) => onPageChange(e.page)}
+      page={page}
+      pageSize={pageSize}
+      translations={{
+        rootLabel: "Sivutus",
+        prevTriggerLabel: "Edellinen sivu",
+        nextTriggerLabel: "Seuraava sivu",
+        itemLabel: ({ page, totalPages }) => `Sivu ${page}/${totalPages}`,
+      }}
+    >
       <HStack justify="center">
         <ButtonGroup variant="ghost">
           <ChakraPagination.Items

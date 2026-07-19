@@ -1,12 +1,15 @@
 import { writeFileSync } from "node:fs";
 import { cutoffSchoolNames, schoolNames } from "../src/api/loadData";
 import { slugifySchoolName } from "../src/components/slug";
+import { guides } from "../src/pages/oppaat/guides";
 
 const paths = [
   "/",
   "/hakijamaarat/",
   "/koulutukset/",
   "/pistelaskuri/",
+  "/oppaat/",
+  ...guides.map((guide) => `/oppaat/${guide.slug}/`),
   "/koulut/",
   "/trendit/",
   "/vertaile/",

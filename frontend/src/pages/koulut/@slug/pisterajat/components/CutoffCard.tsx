@@ -19,7 +19,7 @@ function CutoffRow({ cutoff }: CutoffRowProps) {
   return (
     <Stack
       alignItems={{ base: "flex-start", md: "center" }}
-      borderBottom={`1px solid ${COLORS.accent}`}
+      borderBottom={`1px solid ${COLORS.accentFg}`}
       direction={{ base: "column", md: "row" }}
       gap={{ base: 1, md: 6 }}
       justify="space-between"

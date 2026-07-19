@@ -148,7 +148,7 @@ export default function ScoreCalculatorPage() {
         Pistelaskuri
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Laske todistusvalintapisteesi ylioppilastutkinnon tai ammattillisen perustutkinnon todistuksen perusteella.
+        Laske todistusvalintapisteesi ylioppilastutkinnon tai ammatillisen perustutkinnon todistuksen perusteella.
       </Text>
       <Separator mt={2} />
     </Stack>
@@ -158,30 +158,33 @@ export default function ScoreCalculatorPage() {
     <Accordion.Root collapsible lazyMount multiple size="md">
       {groups.map((group) => (
         <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
-          <Accordion.ItemTrigger>
-            <HStack gap={0} width="100%">
-              <Heading as="h3" flex={{ base: 4.5, md: 10 }} size="xs" textAlign="start">
-                {group.koulutusala}
-              </Heading>
+          <Heading as="h3" size="xs">
+            <Accordion.ItemTrigger>
+              <HStack gap={0} width="100%">
+                <Text flex={{ base: 4.5, md: 10 }} fontWeight="semibold" textAlign="start">
+                  {group.koulutusala}
+                </Text>
 
-              <HStack flex={1} justifyContent="space-between">
-                <Text
-                  color={(group.qualifiedCount ?? 0) > 0 ? COLORS.accent : COLORS.text}
-                  fontSize="xs"
-                  textDecor={(group.qualifiedCount ?? 0) > 0 ? "underline" : ""}
-                >
-                  {group.qualifiedCount ?? "–"}
-                </Text>
-                <Text color="fg.muted" fontSize="xs" textWrap="nowrap">
-                  / {group.results.length}
-                </Text>
+                <HStack flex={1} justifyContent="space-between">
+                  <Text
+                    color={(group.qualifiedCount ?? 0) > 0 ? "fg.accent" : "fg"}
+                    fontSize="xs"
+                    textDecor={(group.qualifiedCount ?? 0) > 0 ? "underline" : ""}
+                  >
+                    {group.qualifiedCount ?? "–"}
+                  </Text>
+                  <Text color="fg.muted" fontSize="xs" textWrap="nowrap">
+                    / {group.results.length}
+                  </Text>
+                </HStack>
               </HStack>
-            </HStack>
-            <Accordion.ItemIndicator />
-          </Accordion.ItemTrigger>
+              <Accordion.ItemIndicator />
+            </Accordion.ItemTrigger>
+          </Heading>
           <Accordion.ItemContent>
-            <Accordion.ItemBody maxH="60vh" overflowY="auto">
+            <Accordion.ItemBody aria-label={group.koulutusala} maxH="60vh" overflowY="auto" role="region">
               <ScoreResultList
+                headingLevel="h4"
                 key={`${resultListKey}:${group.koulutusala}`}
                 results={group.results}
                 roundLabel={roundLabel}
@@ -234,12 +237,12 @@ export default function ScoreCalculatorPage() {
   const resultList = (
     <Stack aria-busy={cutoffQuery.isPending} gap={4} mt={{ base: 6, md: 10 }}>
       <Stack aria-live="polite" gap={1}>
-        <Box border={`1px solid ${COLORS.accent}`} borderRadius={8} mb={{ base: 6, md: 10 }} p={4}>
+        <Box border={`1px solid ${COLORS.accentFg}`} borderRadius={8} mb={{ base: 6, md: 10 }} p={4}>
           <Heading as="h2" size="lg" textAlign="center">
             {calculation ? (
               maxScore ? (
                 <>
-                  <Text as="span" color={COLORS.accent}>
+                  <Text as="span" color="fg.accent">
                     {scoreFormatter.format(calculation.score)}
                   </Text>{" "}
                   /{" "}
@@ -250,7 +253,7 @@ export default function ScoreCalculatorPage() {
                 </>
               ) : (
                 <>
-                  <Text as="span" color={COLORS.accent}>
+                  <Text as="span" color="fg.accent">
                     {scoreFormatter.format(calculation.score)}
                   </Text>{" "}
                   pistettä
@@ -267,17 +270,17 @@ export default function ScoreCalculatorPage() {
       </Stack>
 
       <HStack>
-        <Separator bg={COLORS.accent} flex={1} size="md" />
+        <Separator bg={COLORS.accentFg} flex={1} size="md" />
         <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" textAlign="center">
           Vertaa pisterajoihin
         </Text>
-        <Separator bg={COLORS.accent} flex={1} size="md" />
+        <Separator bg={COLORS.accentFg} flex={1} size="md" />
       </HStack>
 
       <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
         <HStack flex={1} gap={2}>
           <Box flex={6}>
-            <ResultSelect
+            <ResultSelect<typeof round>
               items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
               label="Yhteishaku"
               onChange={setRound}
@@ -286,7 +289,7 @@ export default function ScoreCalculatorPage() {
           </Box>
 
           <Box flex={4}>
-            <ResultSelect
+            <ResultSelect<SectorFilter>
               items={SECTOR_OPTIONS}
               label="Korkeakoulutyyppi"
               onChange={setSectorFilter}
@@ -295,7 +298,7 @@ export default function ScoreCalculatorPage() {
           </Box>
         </HStack>
         <Box flex={1}>
-          <ResultSelect
+          <ResultSelect<SortOption>
             ariaLabel="Järjestys"
             items={SORT_OPTIONS}
             label="Järjestysperuste"
@@ -311,8 +314,8 @@ export default function ScoreCalculatorPage() {
         size="sm"
       >
         <Checkbox.HiddenInput />
-        <Checkbox.Control bg={COLORS.border} borderColor={COLORS.border}>
-          <Checkbox.Indicator bg={COLORS.accent} />
+        <Checkbox.Control>
+          <Checkbox.Indicator />
         </Checkbox.Control>
         <Checkbox.Label>Näytä myös ensikertalaisten pisterajat</Checkbox.Label>
       </Checkbox.Root>
@@ -338,7 +341,7 @@ export default function ScoreCalculatorPage() {
 
       <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
         Huom. Pisterajat ovat suuntaa-antavia. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. <br />
-        Pisterajojen tiedot ovat peräisin virallisen opetushallituksen Vipunen.fi- palvelusta.
+        Pisterajojen tiedot ovat peräisin Opetushallituksen Vipunen-palvelusta.
       </Text>
     </PageContainer>
   );

@@ -3,6 +3,7 @@ import { Box, Flex, HStack, Image, Link, SimpleGrid, Text, VStack } from "@chakr
 const FOOTER_LINKS = [
   ["Pistelaskuri", "/pistelaskuri/"],
   ["Koulutukset", "/koulutukset/"],
+  ["Oppaat", "/oppaat/"],
   ["UKK", "/ukk/"],
   ["Tietosuojaseloste", "/tietosuojaseloste/"],
   ["Koulut", "/koulut/"],
@@ -18,7 +19,7 @@ export default function Footer() {
             <Image alt="" boxSize={6} src="/images/logo.png" />
             <Text fontSize="lg" fontWeight="bold" letterSpacing="widest">
               yhteishaku
-              <Text as="span" color="accent">
+              <Text as="span" color="fg.accent">
                 .app
               </Text>
             </Text>
@@ -27,7 +28,7 @@ export default function Footer() {
             Korkeakouluun pyrkivän paras työkalu!
           </Text>
         </VStack>
-        <SimpleGrid as="nav" columnGap={4} columns={2} rowGap={2}>
+        <SimpleGrid aria-label="Alatunnisteen navigointi" as="nav" columnGap={4} columns={2} rowGap={2}>
           {FOOTER_LINKS.map(([label, href]) => (
             <Link color="fg.muted" fontSize="xs" href={href} key={href}>
               {label}

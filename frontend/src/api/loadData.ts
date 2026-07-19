@@ -1,14 +1,15 @@
 import fs from "node:fs";
+import { parseCutoffSchools, parseSchools, parseStatistics } from "@/api/dataValidation";
+import { slugifySchoolName } from "@/components/slug";
 import {
   type CutoffRound,
   compareCutoffRounds,
   cutoffRoundFromFilename,
   DEFAULT_CUTOFF_ROUND,
 } from "@/config/cutoffRounds";
+import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
-import { slugifySchoolName } from "../components/slug";
-import { CURRENT_YEAR } from "../config/yearOptions";
 
 interface CacheEntry {
   modifiedAt: number;
@@ -29,19 +30,23 @@ const assertNoSlugCollisions = (names: string[], dataset: string) => {
   }
 };
 
-export const readPublicData = (file: string) => {
+const readPublicData = <T>(file: string, parse: (value: unknown, source: string) => T): T => {
   const path = `${process.cwd()}/public/data/${file}`;
   const modifiedAt = fs.statSync(path).mtimeMs;
   const cached = cache.get(file);
-  if (cached?.modifiedAt === modifiedAt) return cached.data;
+  if (cached?.modifiedAt === modifiedAt) return cached.data as T;
 
-  const data = JSON.parse(fs.readFileSync(path, "utf-8"));
+  const data = parse(JSON.parse(fs.readFileSync(path, "utf-8")), file);
   cache.set(file, { modifiedAt, data });
   return data;
 };
 
-export const readCurrentYearStatistics = (): StatisticsResponse =>
-  readPublicData(`hakijamaarat-${CURRENT_YEAR.replace("_", "-")}.json`);
+export const readStatistics = (round: YearOption): StatisticsResponse =>
+  readPublicData(`hakijamaarat-${round.replace("_", "-")}.json`, parseStatistics);
+
+export const readCurrentYearStatistics = (): StatisticsResponse => readStatistics(CURRENT_YEAR);
+
+export const readSchools = (): SchoolsResponse => readPublicData("schools.json", parseSchools);
 
 export const availableCutoffRounds = (): CutoffRound[] =>
   fs
@@ -50,10 +55,10 @@ export const availableCutoffRounds = (): CutoffRound[] =>
     .sort(compareCutoffRounds);
 
 export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): CutoffSchool[] =>
-  readPublicData(`pisterajat-${round}.json`);
+  readPublicData(`pisterajat-${round}.json`, parseCutoffSchools);
 
 export const cutoffSchoolNames = (): string[] => {
-  const names = [...new Set(readCutoffSchools().map((school) => school.name))].sort();
+  const names = [...new Set(readCutoffSchools().map((school) => school.name))].sort((a, b) => a.localeCompare(b, "fi"));
   assertNoSlugCollisions(names, "Cutoff school");
 
   const schoolNameSet = new Set(schoolNames());
@@ -66,13 +71,13 @@ export const cutoffSchoolNames = (): string[] => {
 };
 
 export const schoolNames = (): string[] => {
-  const schools: SchoolsResponse = readPublicData("schools.json");
-  const statistics: StatisticsResponse = readCurrentYearStatistics();
+  const schools = readSchools();
+  const statistics = readCurrentYearStatistics();
   const names = [
     ...schools.flatMap((k) => k.toteutukset.map((t) => t.oppilaitosNimi.fi)),
     ...statistics.map((s) => s.korkeakoulu),
   ].filter((n): n is string => Boolean(n));
-  const uniqueNames = [...new Set(names)].sort();
+  const uniqueNames = [...new Set(names)].sort((a, b) => a.localeCompare(b, "fi"));
 
   assertNoSlugCollisions(uniqueNames, "School");
 
