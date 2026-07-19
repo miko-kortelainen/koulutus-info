@@ -1,6 +1,7 @@
 import { Heading, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
+import { alaSlugParam } from "@/api/cutoffs";
 import CutoffCard from "@/components/CutoffCard";
 import Pagination from "@/components/Pagination";
 import PageContainer from "@/layout/PageContainer";
@@ -44,7 +45,7 @@ export default function AlaCutoffPage() {
         <Stack as="li" gap={{ base: 4, md: 6 }} key={school.slug}>
           <Heading as="h2" size="sm">
             <Link
-              href={`/koulut/${school.slug}/pisterajat/?ala=${encodeURIComponent(alaName)}`}
+              href={`/koulut/${school.slug}/pisterajat/?ala=${alaSlugParam([alaName])}`}
               textDecoration="underline"
               textDecorationColor={COLORS.accentFg}
               textDecorationStyle="dotted"

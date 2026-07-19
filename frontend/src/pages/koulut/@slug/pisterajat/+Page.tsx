@@ -2,13 +2,17 @@ import { Box, Heading, Link, Separator, Stack, Tag, Text, VStack } from "@chakra
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
-import { alaNamesForAlaParam, filterProgrammesByAlaParam } from "@/api/cutoffs";
+import {
+  alaNamesForAlaParam,
+  filterProgrammesByAlaParam,
+  newestCutoffRoundForAlaParam,
+} from "@/api/cutoffs";
 import CutoffCard from "@/components/CutoffCard";
 import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
 import { slugifySchoolName } from "@/components/slug";
-import { compareCutoffRounds, cutoffRoundLabel } from "@/config/cutoffRounds";
+import { compareCutoffRounds, type CutoffRound, cutoffRoundLabel } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
@@ -38,16 +42,22 @@ export default function CutoffPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [alaDismissed, setAlaDismissed] = useState(false);
-  const [selectedRound, setSelectedRound] = useState(rounds[0]);
+  const [selectedRound, setSelectedRound] = useState<CutoffRound>();
   const alaParam = mounted && !alaDismissed ? urlParsed.search.ala : undefined;
   const selectedAlat = useMemo(() => (alaParam ? alaNamesForAlaParam(programmes, alaParam) : []), [programmes, alaParam]);
+  const scopedAlaParam = selectedAlat.length > 0 ? alaParam : undefined;
+  const defaultRound = useMemo(
+    () => newestCutoffRoundForAlaParam(programmes, scopedAlaParam) ?? rounds[0],
+    [programmes, scopedAlaParam, rounds],
+  );
+  const activeRound = selectedRound ?? defaultRound;
   // memoized so the Fuse index in useFilteredProgrammes only rebuilds when the scope changes
   const scopedProgrammes = useMemo(() => {
-    const byAla = alaParam ? filterProgrammesByAlaParam(programmes, alaParam) : programmes;
+    const byAla = scopedAlaParam ? filterProgrammesByAlaParam(programmes, scopedAlaParam) : programmes;
     return byAla
-      .map((p) => ({ ...p, cutoffs: p.cutoffs.filter((c) => c.round === selectedRound) }))
+      .map((p) => ({ ...p, cutoffs: p.cutoffs.filter((c) => c.round === activeRound) }))
       .filter((p) => p.cutoffs.length > 0);
-  }, [programmes, alaParam, selectedRound]);
+  }, [programmes, scopedAlaParam, activeRound]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, sortOrder);
   const visibleProgrammes = filteredProgrammes.slice((page - 1) * pageSize, page * pageSize);
@@ -135,7 +145,7 @@ export default function CutoffPage() {
             }}
             placeholder="Valitse hakukierros"
             size="xs"
-            value={selectedRound}
+            value={activeRound}
           />
         ) : null}
         {alaFilter}

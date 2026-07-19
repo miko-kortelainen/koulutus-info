@@ -1,4 +1,4 @@
-import { readSchools } from "@/api/loadData";
+import { readSchoolsWithAvailableCutoffs } from "@/api/loadData";
 import type { SchoolsResponse } from "@/types.gen";
 
-export const data = (): SchoolsResponse => readSchools();
+export const data = (): SchoolsResponse => readSchoolsWithAvailableCutoffs();
