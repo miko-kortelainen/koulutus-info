@@ -1,12 +1,12 @@
 import { useData } from "vike-react/useData";
 import { slugifySchoolName } from "@/components/slug";
-import { Head as GlobalHead } from "../../../+Head";
-import type { CutoffPageData } from "./+data";
+import { Head as GlobalHead } from "../../+Head";
+import type { AlaPageData } from "./+data";
 
 export function Head() {
-  const { schoolName } = useData<CutoffPageData>();
-  const url = `https://yhteishaku.app/koulut/${slugifySchoolName(schoolName)}/pisterajat/`;
-  const description = `${schoolName} – yhteishaun pisterajat eri hakukierroksilta.`;
+  const { alaName } = useData<AlaPageData>();
+  const url = `https://yhteishaku.app/pisterajat/${slugifySchoolName(alaName)}/`;
+  const description = `${alaName} – yhteishaun pisterajat kouluittain eri hakukierroksilta.`;
 
   return (
     <>

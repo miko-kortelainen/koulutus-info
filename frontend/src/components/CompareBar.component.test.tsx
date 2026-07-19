@@ -27,11 +27,7 @@ test("disables comparison with one selection and removes the selected entry", as
 
 test("creates an encoded comparison URL with two selections", () => {
   renderWithChakra(
-    <CompareBar
-      onRemove={vi.fn()}
-      selected={[entry("a&1", "Kohde A"), entry("b/2", "Kohde B")]}
-      year="2026_kevat"
-    />,
+    <CompareBar onRemove={vi.fn()} selected={[entry("a&1", "Kohde A"), entry("b/2", "Kohde B")]} year="2026_kevat" />,
   );
 
   expect(screen.getByRole("link", { name: "Vertaile" })).toHaveAttribute(

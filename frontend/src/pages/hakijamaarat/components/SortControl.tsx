@@ -3,8 +3,8 @@ import OptionSelect from "@/components/OptionSelect";
 export type SortOption = "asc" | "desc" | "most_popular" | "least_popular" | "most_spots" | "least_spots";
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
-  { label: "A-Z", value: "asc" },
-  { label: "Z-A", value: "desc" },
+  { label: "A-Ö", value: "asc" },
+  { label: "Ö-A", value: "desc" },
   { label: "Eniten hakijoita", value: "most_popular" },
   { label: "Vähiten hakijoita", value: "least_popular" },
   { label: "Eniten paikkoja", value: "most_spots" },

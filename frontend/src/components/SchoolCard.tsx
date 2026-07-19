@@ -1,5 +1,6 @@
-import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text } from "@chakra-ui/react";
+import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiHeart, HiLocationMarker, HiOutlineHeart } from "react-icons/hi";
+import { alaSlugParam } from "@/api/cutoffs";
 import { slugifySchoolName } from "@/components/slug";
 import useFavorites from "@/hooks/useFavorites";
 import { COLORS } from "@/theme";
@@ -34,22 +35,41 @@ export default function SchoolCard({ toteutus }: SchoolCardProps) {
     </Badge>
   );
 
+  // koulutusalat is absent on favorites saved before the field existed
+  const pisterajatURL = toteutus.koulutusalat?.length
+    ? `/koulut/${slugifySchoolName(schoolName)}/pisterajat/?ala=${alaSlugParam(toteutus.koulutusalat)}`
+    : null;
+
   const footer = (
     <HStack alignItems="center" justify="space-between">
-      {toteutus.toteutusOid ? (
-        <Link
-          fontSize="sm"
-          href={toteutusURL}
-          letterSpacing="wide"
-          rel="noopener noreferrer"
-          target="_blank"
-          textDecoration="underline"
-          textDecorationColor={COLORS.accentFg}
-          textDecorationStyle="dotted"
-        >
-          Katso opintopolussa
-        </Link>
-      ) : null}
+      <VStack align="flex-start" gap={3}>
+        {toteutus.toteutusOid ? (
+          <Link
+            fontSize="sm"
+            href={toteutusURL}
+            letterSpacing="wide"
+            rel="noopener noreferrer"
+            target="_blank"
+            textDecoration="underline"
+            textDecorationColor={COLORS.accentFg}
+            textDecorationStyle="dotted"
+          >
+            Katso opintopolussa
+          </Link>
+        ) : null}
+        {pisterajatURL ? (
+          <Link
+            fontSize="sm"
+            href={pisterajatURL}
+            letterSpacing="wide"
+            textDecoration="underline"
+            textDecorationColor={COLORS.accentFg}
+            textDecorationStyle="dotted"
+          >
+            Katso alan pisterajat
+          </Link>
+        ) : null}
+      </VStack>
       <IconButton
         aria-label={favorited ? "Poista tallennetuista" : "Tallenna"}
         height="fit"

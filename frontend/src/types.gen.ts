@@ -37,9 +37,12 @@ export interface OpintopolkuData {
   hits: School[];
 }
 export interface School {
+  oid: string;
+  nimi: LanguageStrings;
   koulutukset: Koulutus[];
   toteutukset: Toteutus[];
   koulutustyyppi: string;
+  opintojenLaajuusNumero: number /* float64 */;
 }
 export interface Toteutus {
   toteutusOid: string;
@@ -65,7 +68,8 @@ export interface LanguageStrings {
 export type SchoolsResponse = KoulutusEntry[];
 export interface KoulutusEntry {
   nimi: LanguageStrings;
-  koulutustyyppi: string;
+  sektori: string;
+  tutkintotaso: string;
   toteutukset: ToteutusEntry[];
 }
 export interface ToteutusEntry {
@@ -73,6 +77,12 @@ export interface ToteutusEntry {
   toteutusNimi: LanguageStrings;
   oppilaitosNimi: LanguageStrings;
   kunnat: string[];
+  /**
+   * omitempty keeps the generated TS type optional: favorites saved to
+   * localStorage before this field existed have no koulutusalat.
+   */
+  koulutusalat?: string[];
+  muuntokoulutus?: boolean;
 }
 
 //////////

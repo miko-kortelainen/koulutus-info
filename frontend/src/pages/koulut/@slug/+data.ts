@@ -1,5 +1,10 @@
 import type { PageContextServer } from "vike/types";
-import { readCurrentYearStatistics, readCutoffSchools, readSchools, schoolNames } from "@/api/loadData";
+import {
+  cutoffSchoolNames,
+  readCurrentYearStatistics,
+  readSchoolsWithAvailableCutoffs,
+  schoolNames,
+} from "@/api/loadData";
 import { slugifySchoolName } from "@/components/slug";
 import type { StatisticsEntry, ToteutusEntry } from "@/types.gen";
 
@@ -12,9 +17,9 @@ export interface SchoolPageData {
 
 export const data = (pageContext: PageContextServer): SchoolPageData => {
   const schoolName = schoolNames().find((name) => slugifySchoolName(name) === pageContext.routeParams.slug) ?? "";
-  const schools = readSchools();
+  const schools = readSchoolsWithAvailableCutoffs();
   const statistics = readCurrentYearStatistics();
-  const hasCutoffs = readCutoffSchools().some((school) => school.name === schoolName);
+  const hasCutoffs = cutoffSchoolNames().includes(schoolName);
   return {
     schoolName,
     hasCutoffs,
