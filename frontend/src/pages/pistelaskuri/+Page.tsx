@@ -340,11 +340,13 @@ export default function ScoreCalculatorPage() {
       {resultList}
 
       <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
-        Huom. Pisterajat ovat suuntaa-antavia. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit
-        tutustua kynnysehtoihin{" "}
+        Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelee vuosi
+        vuodelta. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
+        todistusvalinnan kynnysehtoihin{" "}
         <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
           täältä
-        </Link>. <br />
+        </Link>
+        . <br /> <br />
         Pisterajojen tiedot ovat peräisin Opetushallituksen Vipunen-palvelusta.
       </Text>
     </PageContainer>

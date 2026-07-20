@@ -463,7 +463,7 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
     if (sessionStorage.getItem("favorites-storage-initialized")) return;
 
     sessionStorage.setItem("favorites-storage-initialized", "true");
-    localStorage.setItem("yhteishaku:tallennetut", "[]");
+    localStorage.setItem("yhteishaku:tallennetut", "{}");
   });
   await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
