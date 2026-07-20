@@ -145,17 +145,37 @@ const mdxComponents = {
   a: GuideLink,
   blockquote: ({ children }: ComponentProps<"blockquote">) => <Callout>{children}</Callout>,
   table: ({ children }: ComponentProps<"table">) => (
-    <Table.ScrollArea borderColor="border.subtle" borderWidth="1px">
-      <Table.Root fontSize="sm" size="sm">
+    <Table.ScrollArea borderRadius="md">
+      <Table.Root fontSize="sm" size="sm" tableLayout="fixed">
         {children}
       </Table.Root>
     </Table.ScrollArea>
   ),
-  thead: ({ children }: ComponentProps<"thead">) => <Table.Header>{children}</Table.Header>,
+  thead: ({ children }: ComponentProps<"thead">) => <Table.Header bg="bg.muted">{children}</Table.Header>,
   tbody: ({ children }: ComponentProps<"tbody">) => <Table.Body>{children}</Table.Body>,
   tr: ({ children }: ComponentProps<"tr">) => <Table.Row>{children}</Table.Row>,
-  th: ({ children }: ComponentProps<"th">) => <Table.ColumnHeader whiteSpace="normal">{children}</Table.ColumnHeader>,
-  td: ({ children }: ComponentProps<"td">) => <Table.Cell whiteSpace="normal">{children}</Table.Cell>,
+  th: ({ children }: ComponentProps<"th">) => (
+    <Table.ColumnHeader
+      _first={{ width: "35%" }}
+      borderColor="border.subtle"
+      p={3}
+      verticalAlign="top"
+      whiteSpace="normal"
+    >
+      {children}
+    </Table.ColumnHeader>
+  ),
+  td: ({ children }: ComponentProps<"td">) => (
+    <Table.Cell
+      _first={{ width: "35%" }}
+      borderColor="border.subtle"
+      p={3}
+      verticalAlign="top"
+      whiteSpace="normal"
+    >
+      {children}
+    </Table.Cell>
+  ),
   Callout,
   GuideAccordion,
 } satisfies MDXComponents;
