@@ -6,7 +6,7 @@ export const COLORS = {
   bg: "oklch(0.997 0.004 197.089)", // white page/card bg
   text: "oklch(0.266 0.008 17.636)", // dark grey/near-black — text, borders, icons
   accent: "oklch(0.713 0.156 126.033)", // the one accent — CTAs/badges/highlights only
-  accentFg: "oklch(0.713 0.13 126.033)", // contrast-safe accent for text, icons, and outlines
+  accentFg: "oklch(0.658 0.165 125.721)", // contrast-safe accent for text, icons, and outlines
 
   // Derived neutrals: shades of `text`, not new hues.
   border: "oklch(0.266 0.008 17.636 / 0.75)", // controls and other meaningful boundaries
