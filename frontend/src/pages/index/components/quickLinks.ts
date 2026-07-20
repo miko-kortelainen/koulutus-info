@@ -14,18 +14,17 @@ export const quickLinks = [
     icon: HiOutlineCalculator,
   },
   {
+    href: "/koulutukset/",
+    label: "koulutukset",
+    description: "Syksyn 2026 yhteishaun koulutustarjonta",
+    icon: HiOutlineAcademicCap,
+  },
+  {
     href: "/hakijamaarat/",
     label: "hakijamäärät",
     description: "Edellisvuosien hakijamääriä koulutuksittain",
     icon: HiOutlineChartBar,
   },
-  {
-    href: "/koulutukset/",
-    label: "koulutukset",
-    description: "Syksyn 2026 yhteishaussa olevat koulutukset",
-    icon: HiOutlineAcademicCap,
-  },
-
   {
     href: "/koulut/",
     label: "koulut",
