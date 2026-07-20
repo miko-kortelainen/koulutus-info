@@ -238,6 +238,10 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
   await expect(page.getByText("106 / 198")).toBeVisible();
   await expect(page.getByText(/Pisteesi riittävät \d+ \/ \d+ toteutukseen/)).toBeVisible();
   await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
+  await expect(page.getByRole("link", { name: "täältä" })).toHaveAttribute(
+    "href",
+    "/oppaat/yliopistojen-todistusvalinta/",
+  );
 
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await expect(tekniikkaAccordion.getByText(/Pisteesi \/ alin hyväksytty pistemäärä/).first()).toBeVisible();
