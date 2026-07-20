@@ -37,7 +37,7 @@ const config = defineConfig({
           muted: { value: "{colors.surfaceMuted}" },
         },
         border: {
-          subtle: { value: "{colors.borderSubtle}" },
+          subtle: { value: "oklch(0.266 0.008 17.636 / 0.16)" },
         },
         fg: {
           DEFAULT: { value: "{colors.text}" },
