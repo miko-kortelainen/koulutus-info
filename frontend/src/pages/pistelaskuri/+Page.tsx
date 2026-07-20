@@ -278,7 +278,7 @@ export default function ScoreCalculatorPage() {
       </HStack>
 
       <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
-        <HStack flex={1} gap={2}>
+        <HStack flex={1} gap={6}>
           <Box flex={6}>
             <ResultSelect<typeof round>
               items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
