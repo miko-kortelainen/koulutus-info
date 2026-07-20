@@ -1,4 +1,4 @@
-import { Accordion, Alert, Box, Checkbox, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
@@ -340,7 +340,11 @@ export default function ScoreCalculatorPage() {
       {resultList}
 
       <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
-        Huom. Pisterajat ovat suuntaa-antavia. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. <br />
+        Huom. Pisterajat ovat suuntaa-antavia. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit
+        tutustua kynnysehtoihin{" "}
+        <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
+          täältä
+        </Link>. <br />
         Pisterajojen tiedot ovat peräisin Opetushallituksen Vipunen-palvelusta.
       </Text>
     </PageContainer>
