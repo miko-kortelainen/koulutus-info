@@ -25,7 +25,7 @@ export default function SchoolIndexPage() {
         Koulut
       </Heading>
       <Text color="fg.muted" fontSize="sm">
-        {statisticsRoundLabel(CURRENT_YEAR)}.
+        Korkeakoulut ja niiden hakijamäärät.
       </Text>
       <Separator mt={2} />
     </Stack>

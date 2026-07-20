@@ -154,7 +154,7 @@ export default function StatsListPage() {
   );
 
   const sortYearControls = (
-    <Group flex={1} zIndex={10}>
+    <Group flex={1} gap={6} zIndex={10}>
       <SortControl
         onChange={(value) => {
           setSortOrder(value);
