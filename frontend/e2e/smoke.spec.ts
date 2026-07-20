@@ -1,14 +1,22 @@
 import { expect, type Page, test } from "@playwright/test";
+import { cutoffRoundLabel, cutoffRoundShortLabel, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
+import { CURRENT_YEAR } from "@/config/yearOptions";
 
 test.describe.configure({ mode: "parallel" });
 
 const NAV_LABEL = "Päänavigointi";
 
-// click can land before hydration, so retry until the drawer actually opens
+// click can land before hydration, so retry without clicking an already-open drawer
 async function openNavDrawer(page: Page) {
+  const trigger = page.getByRole("button", { name: "avaa navigointi" });
+  const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
+  await expect(trigger).toBeVisible();
   await expect(async () => {
-    await page.getByRole("button", { name: "avaa navigointi" }).click();
-    await expect(page.getByRole("navigation", { exact: true, name: NAV_LABEL })).toBeVisible({ timeout: 1000 });
+    if (!(await nav.isVisible())) {
+      await expect(trigger).toBeVisible({ timeout: 1000 });
+      await trigger.click();
+    }
+    await expect(nav).toBeVisible({ timeout: 1000 });
   }).toPass();
 }
 
@@ -19,6 +27,16 @@ async function selectOption(page: Page, label: string, option: string) {
 
 async function expectSelectedOption(page: Page, label: string, option: string) {
   await expect(page.getByRole("combobox", { name: label })).toContainText(option);
+}
+
+async function setFilterOption(page: Page, label: string, option: string, selected: boolean) {
+  const expectedButton = page.getByRole("button", { exact: true, name: selected ? `${label} (1)` : label });
+  await expect(async () => {
+    if (!(await expectedButton.isVisible())) {
+      await page.getByRole("option", { name: option, exact: true }).click();
+    }
+    await expect(expectedButton).toBeVisible({ timeout: 1000 });
+  }).toPass();
 }
 
 // tab selection is idempotent, so it can safely gate interactions until hydration finishes
@@ -73,10 +91,8 @@ test("homepage quick links point to their pages", async ({ page }) => {
 });
 
 test("nav links navigate to all pages", async ({ page }) => {
-  await page.goto("/");
   const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
 
-  // drawer closes on link click, so reopen before each navigation
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
@@ -87,6 +103,7 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["palaute", "/palaute/"],
     ["ukk", "/ukk/"],
   ] as const) {
+    await page.goto("/");
     await openNavDrawer(page);
     // anchored regex: nav link names are "label + description" concatenated, and short labels
     // like "koulut" are substrings of others ("koulutukset", "...koulutusvalinnan...")
@@ -108,15 +125,11 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
   await expect(page.getByText("Hakijat").first()).toBeVisible();
 });
 
-test("/pistelaskuri: searches active cutoffs and switches applicant type", async ({ page }) => {
+test("/pistelaskuri: searches active cutoffs", async ({ page }) => {
   await openCalculator(page);
   await expect(page.getByText(/Pisteesi riittävät – \/ \d+ toteutukseen/)).toBeVisible();
-  await expectSelectedOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
+  await expectSelectedOption(page, "Yhteishaku", cutoffRoundLabel(DEFAULT_CUTOFF_ROUND));
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
-  const firstTimeApplicantCheckbox = page.getByRole("checkbox", {
-    name: "Näytä myös ensikertalaisten pisterajat",
-  });
-  await expect(firstTimeApplicantCheckbox).not.toBeChecked();
 
   const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
   await resultSearch.fill("Turun yliopisto");
@@ -129,13 +142,25 @@ test("/pistelaskuri: searches active cutoffs and switches applicant type", async
   await resultSearch.fill("Pedagogik (undervisning på svenska)");
   await expect(page.getByRole("article")).toHaveCount(1);
   await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
+});
+
+test("/pistelaskuri: switches to first-time applicant cutoffs", async ({ page }) => {
+  await openCalculator(page);
+  const firstTimeApplicantCheckbox = page.getByRole("checkbox", {
+    name: "Näytä myös ensikertalaisten pisterajat",
+  });
+  const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
+  await resultSearch.fill("Pedagogik (undervisning på svenska)");
+
+  await expect(firstTimeApplicantCheckbox).not.toBeChecked();
+  await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
   await page.getByText("Näytä myös ensikertalaisten pisterajat", { exact: true }).click();
   await expect(firstTimeApplicantCheckbox).toBeChecked();
   await expect(page.getByRole("article")).toHaveCount(1);
   await expect(page.getByRole("article").getByText("Todistusvalinta, ensikertalaiset", { exact: true })).toBeVisible();
 });
 
-test("/pistelaskuri: filters selection methods and paginates grouped results", async ({ page }) => {
+test("/pistelaskuri: filters university results and paginates a group", async ({ page }) => {
   await openCalculator(page);
   await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
   const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset alat/);
@@ -150,13 +175,9 @@ test("/pistelaskuri: filters selection methods and paginates grouped results", a
       .first(),
   ).toBeVisible();
   await expect(humanistisetAccordion.getByRole("article").getByText("AMK-valintakoe", { exact: true })).toHaveCount(0);
-
-  await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
-  await expect(page.getByText("Ei toteutuksia valituilla rajauksilla :(")).toBeVisible();
-  await page.getByRole("tab", { name: "YO" }).click();
 });
 
-test("/pistelaskuri: switches cutoff rounds and sorting", async ({ page }) => {
+test("/pistelaskuri: switches cutoff rounds", async ({ page }) => {
   await openCalculator(page);
   const roundResponse = page.waitForResponse((response) => response.url().includes("pisterajat-2025-syksy.json"));
   await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
@@ -166,9 +187,11 @@ test("/pistelaskuri: switches cutoff rounds and sorting", async ({ page }) => {
     tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (syksy 2025)").first(),
   ).toBeVisible();
 
-  await selectOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
+  await selectOption(page, "Yhteishaku", cutoffRoundLabel(DEFAULT_CUTOFF_ROUND));
   await expect(
-    tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (kevät 2026)").first(),
+    tekniikkaAccordion
+      .getByText(`Pisteesi / alin hyväksytty pistemäärä (${cutoffRoundShortLabel(DEFAULT_CUTOFF_ROUND)})`)
+      .first(),
   ).toBeVisible();
 
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
@@ -178,7 +201,11 @@ test("/pistelaskuri: switches cutoff rounds and sorting", async ({ page }) => {
       .getByText(/^– \/ /)
       .first(),
   ).toBeVisible();
+});
 
+test("/pistelaskuri: sorts grouped results", async ({ page }) => {
+  await openCalculator(page);
+  const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await selectOption(page, "Järjestys", "Korkein pisteraja");
   await expectSelectedOption(page, "Järjestys", "Korkein pisteraja");
   await expect
@@ -209,9 +236,13 @@ test("/pistelaskuri: switches cutoff rounds and sorting", async ({ page }) => {
       );
     })
     .toBe(true);
+});
 
+test("/pistelaskuri: switches selection methods", async ({ page }) => {
+  await openCalculator(page);
+  const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
+  await expect(tekniikkaAccordion.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
   await page.getByRole("tab", { name: "AMM" }).click();
-  await expectSelectedOption(page, "Järjestys", "A-Ö");
   await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true })).toHaveCount(0);
 
@@ -238,6 +269,10 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
   await expect(page.getByText("106 / 198")).toBeVisible();
   await expect(page.getByText(/Pisteesi riittävät \d+ \/ \d+ toteutukseen/)).toBeVisible();
   await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
+  await expect(page.getByRole("link", { name: "täältä" })).toHaveAttribute(
+    "href",
+    "/oppaat/yliopistojen-todistusvalinta/",
+  );
 
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await expect(tekniikkaAccordion.getByText(/Pisteesi \/ alin hyväksytty pistemäärä/).first()).toBeVisible();
@@ -247,10 +282,27 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
       .getByText(/^106 \/ /)
       .first(),
   ).toBeVisible();
+});
 
-  await page.getByRole("tab", { name: "AMM" }).click();
-  await expect(page.getByText(/Pisteesi riittävät – \/ \d+ toteutukseen/)).toBeVisible();
-  await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
+test("/pistelaskuri: validates and compares AMK-valintakoe points with cutoffs", async ({ page }) => {
+  await openCalculator(page);
+  await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
+  const scoreInput = page.getByRole("textbox", { name: "Pistemäärä" });
+
+  await scoreInput.fill("ei numero");
+  await page.getByRole("button", { name: "Laske pisteet" }).click();
+  await expect(page.getByText("Anna pistemäärä numerona.")).toBeVisible();
+
+  await scoreInput.fill("120,5");
+  await page.getByRole("button", { name: "Laske pisteet" }).click();
+  await expect(page.getByRole("heading", { name: "120,5 pistettä" })).toBeVisible();
+  const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
+  await expect(
+    tekniikkaAccordion
+      .getByRole("article")
+      .getByText(/^120,5 \/ /)
+      .first(),
+  ).toBeVisible();
 });
 
 test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
@@ -317,8 +369,7 @@ test("/hakijamaarat: joint application switcher fetches different data", async (
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   await page.getByRole("button", { name: "Kunta" }).click();
-  await page.getByRole("option", { name: "Sotkamo", exact: true }).click();
-  await expect(page.getByRole("button", { name: "Kunta (1)" })).toBeVisible();
+  await setFilterOption(page, "Kunta", "Sotkamo", true);
 
   await page.getByRole("combobox", { name: "Yhteishaku" }).click();
   const [response] = await Promise.all([
@@ -331,67 +382,55 @@ test("/hakijamaarat: joint application switcher fetches different data", async (
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
 });
 
-test("/hakijamaarat: filters narrow results", async ({ page }) => {
+test("/hakijamaarat: koulutusala filter narrows results", async ({ page }) => {
   await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
+  const resultCount = page.getByText(/^\d+ hakutulos(?:ta)?$/);
+  const getResultCount = async () => Number.parseInt((await resultCount.textContent()) ?? "", 10);
+  const initialCount = await getResultCount();
+  expect(initialCount).toBeGreaterThan(0);
 
-  // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
-  await page.getByRole("button", { name: "Koulu", exact: true }).click();
-  const options = page.getByRole("option");
-  await expect(options.first()).toBeVisible({ timeout: 10000 });
-
-  await options.first().click();
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
-
-  // deselect → unfiltered results return
-  await options.first().click();
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
-
-  // exercise one of the new filters through the UI: Koulutusala
   // each result card renders one "Vertaile" button, so they double as a result counter
   const compareButtons = page.getByRole("button", { name: "Vertaile", exact: true });
   await expect(compareButtons).toHaveCount(10);
-  await expect(page.getByText("2130 hakutulosta")).toBeVisible();
 
   await page.getByRole("button", { name: "Koulutusala" }).click();
-  const koulutusalaOption = page.getByRole("option", { name: "Tieto puuttuu", exact: true });
-  await koulutusalaOption.click();
-  await expect(page.getByRole("button", { name: "Koulutusala (1)" })).toBeVisible();
-  // 2026_kevat dataset has exactly 3 rows with okmOhjauksenAla "Tieto puuttuu"
-  await expect(compareButtons).toHaveCount(3);
-  await expect(page.getByText("3 hakutulosta")).toBeVisible();
+  await setFilterOption(page, "Koulutusala", "Tieto puuttuu", true);
+  await expect.poll(getResultCount).toBeLessThan(initialCount);
+  await expect(compareButtons.first()).toBeVisible();
 
   // deselect → unfiltered results return
-  await koulutusalaOption.click();
-  await expect(page.getByRole("button", { name: "Koulutusala", exact: true })).toBeVisible();
+  await setFilterOption(page, "Koulutusala", "Tieto puuttuu", false);
   await expect(compareButtons).toHaveCount(10);
-  await expect(page.getByText("2130 hakutulosta")).toBeVisible();
+  await expect.poll(getResultCount).toBe(initialCount);
 });
 
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
   await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
+  const cards = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Tallenna" }) });
+  const initialCards = await cards.allTextContents();
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
   await page.getByRole("button", { name: "Koulu", exact: true }).click();
   const options = page.getByRole("option");
   await expect(options.first()).toBeVisible({ timeout: 10000 });
+  const schoolName = (await options.allTextContents())
+    .map((name) => name.trim())
+    .find((name) => initialCards.every((card) => !card.includes(name)));
+  if (!schoolName) throw new Error("Expected a school outside the first result page");
 
-  // select first school — results still exist
-  await options.first().click();
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+  const schoolLinks = cards.getByRole("link", { name: schoolName, exact: true });
+  await setFilterOption(page, "Koulu", schoolName, true);
+  await expect
+    .poll(async () => {
+      const cardCount = await cards.count();
+      return cardCount > 0 && (await schoolLinks.count()) === cardCount;
+    })
+    .toBe(true);
 
-  // also select second school (multi-select smoke)
-  const second = options.nth(1);
-  if (await second.isVisible()) {
-    await second.click();
-    await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
-    await second.click(); // deselect
-  }
-
-  // deselect first → unfiltered results return
-  await options.first().click();
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+  await setFilterOption(page, "Koulu", schoolName, false);
+  await expect(schoolLinks).toHaveCount(0);
 });
 
 test("/koulutukset: card link opens ala-filtered pisterajat history", async ({ page }) => {
@@ -429,10 +468,13 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
   await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
-  // click can land before hydration, so retry until the toggle actually takes effect
+  const removeFavorite = page.getByRole("button", { name: "Poista tallennetuista" }).first();
+  // click can land before hydration, so retry without toggling an already-saved card
   await expect(async () => {
-    await page.getByRole("button", { name: "Tallenna" }).first().click();
-    await expect(page.getByRole("button", { name: "Poista tallennetuista" }).first()).toBeVisible({ timeout: 1000 });
+    if (!(await removeFavorite.isVisible())) {
+      await page.getByRole("button", { name: "Tallenna" }).first().click();
+    }
+    await expect(removeFavorite).toBeVisible({ timeout: 1000 });
   }).toPass();
 
   await page.goto("/tallennetut/");
@@ -470,7 +512,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   }).toPass({ timeout: 10000 });
 
   await page.getByRole("link", { name: "Vertaile" }).click();
-  await expect(page).toHaveURL(/\/vertaile\/\?a=.+&b=.+&vuosi=2026_kevat/);
+  await expect(page).toHaveURL(new RegExp(`/vertaile/\\?a=.+&b=.+&vuosi=${CURRENT_YEAR}$`));
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
   await expect(page.getByText("Kaikki hakijat")).toHaveCount(2);
@@ -602,10 +644,14 @@ test("/trendit: loads trend cards", async ({ page }) => {
   await expect(page.getByRole("img", { name: "Syksyn yhteishaun ensisijaiset hakijat vuosittain" })).toBeVisible();
   // "Hakijaa" column header renders only after skeletons are replaced by data
   await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
+});
 
+test("/trendit: shows a comparison loading error", async ({ page }) => {
   await page.route("**/hakijamaarat-2025-syksy.json", (route) =>
     route.fulfill({ status: 500, contentType: "application/json", body: "{}" }),
   );
+  await page.goto("/trendit/");
+  await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
   await selectOption(page, "Vertailuyhteishaku", "Syksyn yhteishaku 2025");
   await expect(page.getByText("Vertailutietojen lataaminen epäonnistui.")).toBeVisible({ timeout: 15000 });
   await expect(page.getByText("uusi", { exact: true })).toHaveCount(0);

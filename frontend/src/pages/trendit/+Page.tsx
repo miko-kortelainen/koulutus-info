@@ -172,7 +172,7 @@ export default function TrendsPage() {
 
   const yearSelectors = (
     <Stack gap={4}>
-      <Stack align="flex-end" direction="row" gap={2} justifyContent="flex-end">
+      <Stack align="flex-end" direction="row" gap={6} justifyContent="flex-end">
         {comparator}
         {comparand}
       </Stack>

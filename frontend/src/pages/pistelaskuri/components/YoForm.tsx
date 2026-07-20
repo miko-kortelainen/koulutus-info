@@ -41,7 +41,7 @@ function KieliRow({ index, kieli, onRemove, onUpdate }: KieliRowProps) {
 
   return (
     <Flex>
-      <Flex alignItems="center" flex="1" gap={2} minW={0}>
+      <Flex alignItems="center" flex="1" gap={6} minW={0}>
         <Box flex="4">
           <FormSelect
             ariaLabel={`Kieli ${rowNumber}`}
@@ -87,7 +87,7 @@ function ReaaliaineRow({ index, onRemove, onUpdate, reaaliaine }: ReaaliaineRowP
 
   return (
     <Flex alignItems="center">
-      <Flex flex="1" gap={2} minW={0}>
+      <Flex flex="1" gap={6} minW={0}>
         <Box flex="4">
           <FormSelect
             ariaLabel={`Reaaliaine ${rowNumber}`}
@@ -191,7 +191,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
         Matematiikka
       </Text>
-      <HStack gap={2} width="full">
+      <HStack gap={6} width="full">
         <Box flex={16}>
           <FormSelect
             ariaLabel="Matematiikan oppimäärä"
@@ -219,12 +219,13 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       aria-describedby={errors.kielet ? "yo-languages-error" : undefined}
       aria-invalid={Boolean(errors.kielet)}
       as="fieldset"
+      gap={4}
       width="full"
     >
       <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
         Kielet
       </Text>
-      <Stack width="full">
+      <Stack gap={6} width="full">
         {value.kielet.map((kieli, index) => (
           <KieliRow
             index={index}
@@ -260,12 +261,13 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       aria-describedby={errors.reaaliaineet ? "yo-real-subjects-error" : undefined}
       aria-invalid={Boolean(errors.reaaliaineet)}
       as="fieldset"
+      gap={4}
       width="full"
     >
       <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
         Reaaliaineet
       </Text>
-      <Stack width="full">
+      <Stack gap={6} width="full">
         {value.reaaliaineet.map((reaaliaine, index) => (
           <ReaaliaineRow
             index={index}

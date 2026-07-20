@@ -28,7 +28,7 @@ export default function Footer() {
             Korkeakouluun pyrkivän paras työkalu!
           </Text>
         </VStack>
-        <SimpleGrid aria-label="Alatunnisteen navigointi" as="nav" columnGap={4} columns={2} rowGap={2}>
+        <SimpleGrid aria-label="Alatunnisteen navigointi" as="nav" columnGap={7} columns={2} rowGap={7}>
           {FOOTER_LINKS.map(([label, href]) => (
             <Link color="fg.muted" fontSize="xs" href={href} key={href}>
               {label}
