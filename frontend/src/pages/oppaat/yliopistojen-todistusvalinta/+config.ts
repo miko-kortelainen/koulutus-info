@@ -1,5 +1,5 @@
 import type { Config } from "vike/types";
 
 export default {
-  title: "Ylioppilastutkinnon pisteytys todistusvalinnassa 2026",
+  title: "Yliopistojen todistusvalinnan pisteytys 2026",
 } satisfies Config;

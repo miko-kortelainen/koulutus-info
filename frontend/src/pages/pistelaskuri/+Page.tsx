@@ -1,4 +1,4 @@
-import { Accordion, Alert, Box, Checkbox, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
@@ -278,7 +278,7 @@ export default function ScoreCalculatorPage() {
       </HStack>
 
       <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
-        <HStack flex={1} gap={2}>
+        <HStack flex={1} gap={6}>
           <Box flex={6}>
             <ResultSelect<typeof round>
               items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
@@ -340,7 +340,13 @@ export default function ScoreCalculatorPage() {
       {resultList}
 
       <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
-        Huom. Pisterajat ovat suuntaa-antavia. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. <br />
+        Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelee vuosi
+        vuodelta. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
+        todistusvalinnan kynnysehtoihin{" "}
+        <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
+          täältä
+        </Link>
+        . <br /> <br />
         Pisterajojen tiedot ovat peräisin Opetushallituksen Vipunen-palvelusta.
       </Text>
     </PageContainer>

@@ -1,7 +1,6 @@
 import { Box, Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
-import { CURRENT_YEAR, statisticsRoundLabel } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
 import type { SchoolListItem } from "./+data";
@@ -25,7 +24,7 @@ export default function SchoolIndexPage() {
         Koulut
       </Heading>
       <Text color="fg.muted" fontSize="sm">
-        {statisticsRoundLabel(CURRENT_YEAR)}.
+        Korkeakoulut ja niiden hakijamäärät.
       </Text>
       <Separator mt={2} />
     </Stack>
