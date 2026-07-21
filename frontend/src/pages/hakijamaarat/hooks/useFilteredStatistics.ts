@@ -1,5 +1,6 @@
 import Fuse from "fuse.js";
 import { useMemo } from "react";
+import { getSisaanpaasyprosentti } from "@/components/hakijapaineTier";
 import type { StatisticsResponse } from "@/types.gen";
 import type { SortOption } from "../components/SortControl";
 
@@ -62,6 +63,14 @@ export default function useFilteredStatistics(
           return b.aloituspaikatLkm - a.aloituspaikatLkm;
         case "least_spots":
           return a.aloituspaikatLkm - b.aloituspaikatLkm;
+        case "highest_acceptance_rate":
+        case "lowest_acceptance_rate": {
+          const aPercentage = getSisaanpaasyprosentti(a.valitutLkm, a.kaikkiHakijatLkm);
+          const bPercentage = getSisaanpaasyprosentti(b.valitutLkm, b.kaikkiHakijatLkm);
+          if (aPercentage == null) return bPercentage == null ? 0 : 1;
+          if (bPercentage == null) return -1;
+          return sortOrder === "highest_acceptance_rate" ? bPercentage - aPercentage : aPercentage - bPercentage;
+        }
         case "asc":
           return a.hakukohde.localeCompare(b.hakukohde, "fi");
         default:

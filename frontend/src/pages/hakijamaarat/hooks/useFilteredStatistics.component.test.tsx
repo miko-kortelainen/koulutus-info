@@ -149,6 +149,8 @@ test.each<[SortOption, string[]]>([
   ["least_popular", ["alpha", "gamma", "beta"]],
   ["most_spots", ["alpha", "gamma", "beta"]],
   ["least_spots", ["beta", "gamma", "alpha"]],
+  ["highest_acceptance_rate", ["alpha", "gamma", "beta"]],
+  ["lowest_acceptance_rate", ["beta", "gamma", "alpha"]],
 ])("sorts statistics with %s without mutating the source", (sortOrder, expected) => {
   const originalOrder = ids(statistics);
   const { result } = renderHook(() =>
@@ -157,4 +159,26 @@ test.each<[SortOption, string[]]>([
 
   expect(ids(result.current)).toEqual(expected);
   expect(ids(statistics)).toEqual(originalOrder);
+});
+
+test.each<SortOption>([
+  "highest_acceptance_rate",
+  "lowest_acceptance_rate",
+])("keeps masked acceptance rates last with %s", (sortOrder) => {
+  const masked = { ...statistics[0], kooditHakukohde: "masked", valitutLkm: 4 };
+  const { result } = renderHook(() =>
+    useFilteredStatistics(
+      [masked, ...statistics],
+      "",
+      sortOrder,
+      new Set(),
+      new Set(),
+      new Set(),
+      new Set(),
+      new Set(),
+      new Set(),
+    ),
+  );
+
+  expect(ids(result.current).at(-1)).toBe("masked");
 });

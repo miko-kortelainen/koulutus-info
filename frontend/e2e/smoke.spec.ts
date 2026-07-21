@@ -407,6 +407,18 @@ test("/hakijamaarat: koulutusala filter narrows results", async ({ page }) => {
   await expect.poll(getResultCount).toBe(initialCount);
 });
 
+test("/hakijamaarat: sorts results by acceptance rate", async ({ page }) => {
+  await page.goto("/hakijamaarat/");
+  const cards = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Vertaile", exact: true }) });
+  await expect(cards.first()).toBeVisible({ timeout: 10000 });
+
+  await selectOption(page, "Järjestys", "Korkein sisäänpääsyprosentti");
+  await expect(cards.first()).toContainText("Insinööri (ylempi AMK), ajoneuvotekniikka");
+
+  await selectOption(page, "Järjestys", "Matalin sisäänpääsyprosentti");
+  await expect(cards.first()).toContainText("Näyttelijäntaide, suomenkielinen");
+});
+
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
   await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
