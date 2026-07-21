@@ -1,7 +1,14 @@
 import { Badge, Card, Heading, HStack, Stat, Table } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 import { HiOutlineArrowCircleDown, HiOutlineArrowCircleUp } from "react-icons/hi";
-import { formatCount, getHakijapaine, getTier, ratioFormat } from "@/components/hakijapaineTier";
+import {
+  formatCount,
+  formatSisaanpaasyprosentti,
+  getHakijapaine,
+  getSisaanpaasyprosentti,
+  getTier,
+  ratioFormat,
+} from "@/components/hakijapaineTier";
 import type { StatisticsEntry } from "@/types.gen";
 
 interface ComparisonTableProps {
@@ -11,12 +18,12 @@ interface ComparisonTableProps {
 
 type Trend = "up" | "down" | undefined;
 
-const paineTrend = (value: number | null, other: number | null): Trend =>
+const valueTrend = (value: number | null, other: number | null): Trend =>
   value == null || other == null || value === other ? undefined : value > other ? "up" : "down";
 
 // masked values ("alle 5") are not comparable, so those get no trend arrow
 const countTrend = (value: number, other: number): Trend =>
-  value < 5 || other < 5 ? undefined : paineTrend(value, other);
+  value < 5 || other < 5 ? undefined : valueTrend(value, other);
 
 const COUNT_ROWS = [
   ["Kaikki hakijat", "kaikkiHakijatLkm"],
@@ -37,7 +44,6 @@ function TrendIcon({ trend }: { trend: Trend }) {
   );
 }
 
-// each pair renders in its own flex row, so align-items: stretch keeps the two cards equal height
 function PairRow({ left, right, header = false }: { left: ReactNode; right: ReactNode; header?: boolean }) {
   if (header) {
     return (
@@ -52,12 +58,13 @@ function PairRow({ left, right, header = false }: { left: ReactNode; right: Reac
     );
   }
 
+  // A definite cell height lets the cards stretch to the tallest card in the table row.
   return (
     <Table.Row>
-      <Table.Cell borderBottom={0} borderColor="border" borderRightWidth="1px" p={0} pr={2} pt={4}>
+      <Table.Cell borderBottom={0} borderColor="border" borderRightWidth="1px" height="1px" p={0} pr={2} pt={4}>
         {left}
       </Table.Cell>
-      <Table.Cell borderBottom={0} p={0} pl={2} pt={4}>
+      <Table.Cell borderBottom={0} height="1px" p={0} pl={2} pt={4}>
         {right}
       </Table.Cell>
     </Table.Row>
@@ -76,7 +83,7 @@ function StatCard({
   badge?: ReactNode;
 }) {
   return (
-    <Card.Root flex={1} minW={0} size="sm">
+    <Card.Root flex={1} height="full" minW={0} size="sm">
       <Card.Body>
         <Stat.Root size="sm">
           <Stat.Label color="fg.muted" fontSize="xs">
@@ -110,6 +117,8 @@ function paineBadge(paine: number | null) {
 }
 
 export default function ComparisonTable({ a, b }: ComparisonTableProps) {
+  const sisaanpaasyprosenttiA = getSisaanpaasyprosentti(a.valitutLkm, a.kaikkiHakijatLkm);
+  const sisaanpaasyprosenttiB = getSisaanpaasyprosentti(b.valitutLkm, b.kaikkiHakijatLkm);
   const paineA = getHakijapaine(a);
   const paineB = getHakijapaine(b);
 
@@ -135,6 +144,22 @@ export default function ComparisonTable({ a, b }: ComparisonTableProps) {
           left={<StatCard label="Korkeakoulu" value={a.korkeakoulu ?? "-"} />}
           right={<StatCard label="Korkeakoulu" value={b.korkeakoulu ?? "-"} />}
         />
+        <PairRow
+          left={
+            <StatCard
+              label="Sisäänpääsyprosentti"
+              trend={valueTrend(sisaanpaasyprosenttiA, sisaanpaasyprosenttiB)}
+              value={formatSisaanpaasyprosentti(a.valitutLkm, a.kaikkiHakijatLkm)}
+            />
+          }
+          right={
+            <StatCard
+              label="Sisäänpääsyprosentti"
+              trend={valueTrend(sisaanpaasyprosenttiB, sisaanpaasyprosenttiA)}
+              value={formatSisaanpaasyprosentti(b.valitutLkm, b.kaikkiHakijatLkm)}
+            />
+          }
+        />
         {COUNT_ROWS.map(([label, field]) => (
           <PairRow
             key={field}
@@ -147,7 +172,7 @@ export default function ComparisonTable({ a, b }: ComparisonTableProps) {
             <StatCard
               badge={paineBadge(paineA)}
               label="Hakijapaine"
-              trend={paineTrend(paineA, paineB)}
+              trend={valueTrend(paineA, paineB)}
               value={paineA != null ? ratioFormat.format(paineA) : "–"}
             />
           }
@@ -155,7 +180,7 @@ export default function ComparisonTable({ a, b }: ComparisonTableProps) {
             <StatCard
               badge={paineBadge(paineB)}
               label="Hakijapaine"
-              trend={paineTrend(paineB, paineA)}
+              trend={valueTrend(paineB, paineA)}
               value={paineB != null ? ratioFormat.format(paineB) : "–"}
             />
           }
