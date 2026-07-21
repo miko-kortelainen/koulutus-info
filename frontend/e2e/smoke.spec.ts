@@ -84,6 +84,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
     ["koulutukset", "/koulutukset/"],
     ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
+    ["oma hakulista", "/oma-hakulista/"],
     ["trendit", "/trendit/"],
   ] as const) {
     await expect(page.getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) })).toHaveAttribute("href", url);

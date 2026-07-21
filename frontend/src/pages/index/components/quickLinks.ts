@@ -1,5 +1,6 @@
 import {
   HiOutlineAcademicCap,
+  HiOutlineBookmark,
   HiOutlineCalculator,
   HiOutlineChartBar,
   HiOutlineLibrary,
@@ -18,6 +19,12 @@ export const quickLinks = [
     label: "koulutukset",
     description: "Syksyn 2026 yhteishaun koulutustarjonta",
     icon: HiOutlineAcademicCap,
+  },
+  {
+    href: "/oma-hakulista/",
+    label: "oma hakulista",
+    description: "Tallenna ja järjestä omat hakukohteesi",
+    icon: HiOutlineBookmark,
   },
   {
     href: "/hakijamaarat/",
