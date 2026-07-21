@@ -1,7 +1,7 @@
-import { Badge, Button, Card, HStack, Separator, Stack, Stat, Text } from "@chakra-ui/react";
+import { Badge, Button, Card, HStack, Link, Separator, SimpleGrid, Stack, Stat, Text } from "@chakra-ui/react";
 import { memo } from "react";
-import { HiLocationMarker } from "react-icons/hi";
-import { formatCount, getHakijapaine, getTier } from "@/components/hakijapaineTier";
+import { HiLocationMarker, HiPlus } from "react-icons/hi";
+import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/components/hakijapaineTier";
 import { slugifySchoolName } from "@/components/slug";
 import { COLORS } from "@/theme";
 import type { StatisticsEntry } from "@/types.gen";
@@ -17,94 +17,135 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
   const hakijapaine = getHakijapaine(degree);
   const tier = hakijapaine != null ? getTier(hakijapaine) : null;
 
-  const schoolBadge = (
-    <HStack alignItems="center">
-      <Badge
-        asChild
-        bg={COLORS.accent}
-        color={COLORS.text}
-        fontWeight="semibold"
-        letterSpacing="wide"
-        mr="auto"
-        size={{ base: "sm", md: "lg" }}
-      >
-        <a href={`/koulut/${slugifySchoolName(degree.korkeakoulu ?? "")}/`}>
-          <HiLocationMarker /> {degree.korkeakoulu}
-        </a>
-      </Badge>
-    </HStack>
-  );
-
   const stats = (
-    <HStack alignItems="flex-start" gap={2}>
-      <Stat.Root flex={{ base: 3, md: 1 }} size={{ base: "sm", md: "md" }}>
-        <Stat.Label fontSize={{ base: "xs", md: "md" }} mb={-2}>
-          Aloituspaikat
+    <SimpleGrid columns={{ base: 2, md: 4 }}>
+      <Stat.Root
+        borderBottomWidth={{ base: "1px", md: "0" }}
+        borderColor="border.subtle"
+        gap={1}
+        pb={{ base: 3, md: 0 }}
+        pe={3}
+        size={{ base: "sm", md: "md" }}
+      >
+        <Stat.Label color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
+          Sisäänpääsyprosentti
         </Stat.Label>
-        <Stat.ValueText fontSize="md">{formatCount(degree.aloituspaikatLkm)}</Stat.ValueText>
+        <Stat.ValueText color="fg.accent" fontSize={{ base: "md", md: "lg" }} fontWeight="semibold">
+          {formatSisaanpaasyprosentti(degree.valitutLkm, degree.kaikkiHakijatLkm)}
+        </Stat.ValueText>
       </Stat.Root>
 
-      <Stat.Root flex={{ base: 4, md: 1 }} size={{ base: "sm", md: "md" }}>
-        <Stat.Label fontSize={{ base: "xs", md: "md" }} mb={-2}>
-          Ensisijaiset hakijat
-        </Stat.Label>
-        <Stat.ValueText fontSize="md">{formatCount(degree.ensisijaisetHakijatLkm)}</Stat.ValueText>
-      </Stat.Root>
-
-      <Stat.Root flex={{ base: 4, md: 1 }} size={{ base: "sm", md: "md" }}>
-        <Stat.Label fontSize={{ base: "xs", md: "md" }} mb={-2}>
+      <Stat.Root
+        borderBottomWidth={{ base: "1px", md: "0" }}
+        borderColor="border.subtle"
+        borderInlineStartWidth="1px"
+        gap={1}
+        pb={{ base: 3, md: 0 }}
+        pe={{ base: 0, md: 3 }}
+        ps={3}
+        size={{ base: "sm", md: "md" }}
+      >
+        <Stat.Label color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
           Kaikki hakijat
         </Stat.Label>
-        <Stat.ValueText fontSize="md">{formatCount(degree.kaikkiHakijatLkm)}</Stat.ValueText>
+        <Stat.ValueText fontSize={{ base: "md", md: "lg" }} fontWeight="semibold">
+          {formatCount(degree.kaikkiHakijatLkm)}
+        </Stat.ValueText>
       </Stat.Root>
-    </HStack>
+
+      <Stat.Root
+        borderColor="border.subtle"
+        borderInlineStartWidth={{ base: "0", md: "1px" }}
+        gap={1}
+        pe={3}
+        ps={{ base: 0, md: 3 }}
+        pt={{ base: 3, md: 0 }}
+        size={{ base: "sm", md: "md" }}
+      >
+        <Stat.Label color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
+          Ensisijaiset hakijat
+        </Stat.Label>
+        <Stat.ValueText fontSize={{ base: "md", md: "lg" }} fontWeight="semibold">
+          {formatCount(degree.ensisijaisetHakijatLkm)}
+        </Stat.ValueText>
+      </Stat.Root>
+
+      <Stat.Root
+        borderColor="border.subtle"
+        borderInlineStartWidth="1px"
+        gap={1}
+        ps={3}
+        pt={{ base: 3, md: 0 }}
+        size={{ base: "sm", md: "md" }}
+      >
+        <Stat.Label color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
+          Aloituspaikat
+        </Stat.Label>
+        <Stat.ValueText fontSize={{ base: "md", md: "lg" }} fontWeight="semibold">
+          {formatCount(degree.aloituspaikatLkm)}
+        </Stat.ValueText>
+      </Stat.Root>
+    </SimpleGrid>
   );
 
   const header = (
-    <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" mb={-2} textWrap="pretty">
-      {degree.hakukohde}
-    </Text>
+    <Stack gap={2}>
+      <Link
+        alignSelf="flex-start"
+        fontSize={{ base: "xs", md: "sm" }}
+        fontWeight="semibold"
+        href={`/koulut/${slugifySchoolName(degree.korkeakoulu ?? "")}/`}
+        textDecor="none"
+      >
+        <Badge bg="accent" size="sm">
+          <HiLocationMarker aria-hidden="true" color={COLORS.text} /> {degree.korkeakoulu}
+        </Badge>
+      </Link>
+      <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" textWrap="pretty">
+        {degree.hakukohde}
+      </Text>
+    </Stack>
   );
 
   const footer = (
-    <HStack alignItems="center" justify="space-between">
-      <HStack alignItems="center" gap={1}>
-        {tier ? (
-          <Badge bg={tier.bg} color={tier.color} fontWeight="semibold" size={{ base: "sm", md: "lg" }}>
-            {tier.label}
-          </Badge>
-        ) : (
-          <Badge colorPalette="gray" fontWeight="semibold" size={{ base: "sm", md: "lg" }} variant="surface">
-            Määrittämätön
-          </Badge>
-        )}
-
-        <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
-          hakijapaine
-        </Text>
-      </HStack>
+    <HStack flexWrap="wrap" gap={2} justify="space-between">
+      <Badge
+        bg={tier ? `color-mix(in srgb, ${tier.bg} 14%, ${COLORS.bg})` : undefined}
+        color={tier?.bg}
+        fontWeight="semibold"
+        height={6}
+        rounded="sm"
+        size={{ base: "sm", md: "md" }}
+        variant="subtle"
+      >
+        {tier ? `${tier.label} hakijapaine` : "Määrittämätön hakijapaine"}
+      </Badge>
       {onToggleCompare ? (
         <Button
-          bg={COLORS.accent}
+          bg={isSelected ? COLORS.accent : undefined}
+          borderColor="accent"
+          color={isSelected ? COLORS.bg : "fg.accent"}
           disabled={!isSelected && selectionFull}
+          height={6}
           onClick={() => onToggleCompare(degree)}
+          rounded="sm"
           size={{ base: "2xs", md: "sm" }}
-          variant={isSelected ? "solid" : "surface"}
+          variant={isSelected ? "solid" : "outline"}
         >
-          {isSelected ? "Valittu ✓" : "Vertaile"}
+          {!isSelected ? <HiPlus aria-hidden="true" /> : null} {isSelected ? "Valittu ✓" : "Vertaile"}
         </Button>
       ) : null}
     </HStack>
   );
 
   return (
-    <Card.Root as="li" size="md" zIndex={1}>
-      <Card.Header>{header}</Card.Header>
-      <Card.Body>
+    <Card.Root as="li" borderColor="border.subtle" size="md" zIndex={1}>
+      <Card.Header pb={4}>{header}</Card.Header>
+      <Card.Body pt={0}>
         <Stack>
-          {schoolBadge}
           <Separator />
           {stats}
+          <Separator />
           {footer}
         </Stack>
       </Card.Body>

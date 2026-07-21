@@ -109,4 +109,5 @@ export interface StatisticsEntry {
   aloituspaikatLkm: number /* int */;
   kaikkiHakijatLkm: number /* int */;
   ensisijaisetHakijatLkm: number /* int */;
+  valitutLkm: number /* int */;
 }

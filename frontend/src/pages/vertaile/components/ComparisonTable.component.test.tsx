@@ -10,6 +10,7 @@ const entry = (overrides: Partial<StatisticsEntry>): StatisticsEntry => ({
   aloituspaikatLkm: 10,
   kaikkiHakijatLkm: 100,
   ensisijaisetHakijatLkm: 20,
+  valitutLkm: 10,
   ...overrides,
 });
 
