@@ -1,6 +1,10 @@
-import type { BarListData } from "@chakra-ui/charts";
 import { Badge, Box, Flex, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { numberFormat } from "@/components/hakijapaineTier";
+
+interface BarListData {
+  name: string;
+  value: number;
+}
 
 interface TopBarListProps {
   data: BarListData[];
@@ -93,7 +97,7 @@ export default function TopBarList({
       </Flex>
 
       {sorted.map((item, i) => {
-        const name = item.name as string;
+        const name = item.name;
         const compareValue = compareValueMap?.get(name);
         const valueDiff = compareValue != null ? item.value - compareValue : null;
 
