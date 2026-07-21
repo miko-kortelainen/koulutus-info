@@ -38,8 +38,8 @@ const links = [
     icon: HiOutlineLibrary,
   },
   {
-    href: "/tallennetut/",
-    label: "tallennetut",
+    href: "/oma-hakulista/",
+    label: "oma hakulista",
     description: "Katso tallentamasi koulutukset",
     icon: HiOutlineHeart,
   },
