@@ -12,7 +12,8 @@
     "okmOhjauksenAla": "Maa- ja metsätalousalat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 97,
-    "ensisijaisetHakijatLkm": 52
+    "ensisijaisetHakijatLkm": 52,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.85076696401",
@@ -27,7 +28,8 @@
     "okmOhjauksenAla": "Maa- ja metsätalousalat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 106,
-    "ensisijaisetHakijatLkm": 61
+    "ensisijaisetHakijatLkm": 61,
+    "valitutLkm": 58
   },
   {
     "kooditHakukohde": "1.2.246.562.20.32229286037",
@@ -42,7 +44,8 @@
     "okmOhjauksenAla": "Maa- ja metsätalousalat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 15,
-    "ensisijaisetHakijatLkm": 14
+    "ensisijaisetHakijatLkm": 14,
+    "valitutLkm": 13
   },
   {
     "kooditHakukohde": "1.2.246.562.20.31681383548",
@@ -57,7 +60,8 @@
     "okmOhjauksenAla": "Humanistiset alat",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 8,
-    "ensisijaisetHakijatLkm": 3
+    "ensisijaisetHakijatLkm": 3,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20509932784",
@@ -72,7 +76,8 @@
     "okmOhjauksenAla": "Humanistiset alat",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 6,
-    "ensisijaisetHakijatLkm": 2
+    "ensisijaisetHakijatLkm": 2,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.19330693664",
@@ -87,7 +92,8 @@
     "okmOhjauksenAla": "Humanistiset alat",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 12,
-    "ensisijaisetHakijatLkm": 7
+    "ensisijaisetHakijatLkm": 7,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.52827104028",
@@ -102,7 +108,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 18,
-    "ensisijaisetHakijatLkm": 9
+    "ensisijaisetHakijatLkm": 9,
+    "valitutLkm": 3
   },
   {
     "kooditHakukohde": "1.2.246.562.20.13615331926",
@@ -117,7 +124,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 5,
-    "ensisijaisetHakijatLkm": 4
+    "ensisijaisetHakijatLkm": 4,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.71691496286",
@@ -132,7 +140,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 7,
-    "ensisijaisetHakijatLkm": 1
+    "ensisijaisetHakijatLkm": 1,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.50009811238",
@@ -147,7 +156,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 4,
     "kaikkiHakijatLkm": 26,
-    "ensisijaisetHakijatLkm": 16
+    "ensisijaisetHakijatLkm": 16,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.91989337273",
@@ -162,7 +172,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 12,
-    "ensisijaisetHakijatLkm": 4
+    "ensisijaisetHakijatLkm": 4,
+    "valitutLkm": 4
   },
   {
     "kooditHakukohde": "1.2.246.562.20.306944951910",
@@ -177,7 +188,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 23,
-    "ensisijaisetHakijatLkm": 14
+    "ensisijaisetHakijatLkm": 14,
+    "valitutLkm": 10
   },
   {
     "kooditHakukohde": "1.2.246.562.20.66354202138",
@@ -192,7 +204,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 303,
-    "ensisijaisetHakijatLkm": 129
+    "ensisijaisetHakijatLkm": 129,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51236491257",
@@ -207,7 +220,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 36,
     "kaikkiHakijatLkm": 371,
-    "ensisijaisetHakijatLkm": 151
+    "ensisijaisetHakijatLkm": 151,
+    "valitutLkm": 42
   },
   {
     "kooditHakukohde": "1.2.246.562.20.84215469069",
@@ -222,7 +236,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 518,
-    "ensisijaisetHakijatLkm": 236
+    "ensisijaisetHakijatLkm": 236,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.83241169065",
@@ -237,7 +252,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 349,
-    "ensisijaisetHakijatLkm": 161
+    "ensisijaisetHakijatLkm": 161,
+    "valitutLkm": 48
   },
   {
     "kooditHakukohde": "1.2.246.562.20.56070072626",
@@ -252,7 +268,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 21,
     "kaikkiHakijatLkm": 295,
-    "ensisijaisetHakijatLkm": 174
+    "ensisijaisetHakijatLkm": 174,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.53119083177",
@@ -267,7 +284,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 346,
-    "ensisijaisetHakijatLkm": 240
+    "ensisijaisetHakijatLkm": 240,
+    "valitutLkm": 26
   },
   {
     "kooditHakukohde": "1.2.246.562.20.31349163043",
@@ -282,7 +300,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 41,
     "kaikkiHakijatLkm": 166,
-    "ensisijaisetHakijatLkm": 53
+    "ensisijaisetHakijatLkm": 53,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.639780946610",
@@ -297,7 +316,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 58,
     "kaikkiHakijatLkm": 666,
-    "ensisijaisetHakijatLkm": 302
+    "ensisijaisetHakijatLkm": 302,
+    "valitutLkm": 70
   },
   {
     "kooditHakukohde": "1.2.246.562.20.78082590734",
@@ -312,7 +332,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 2,
     "kaikkiHakijatLkm": 15,
-    "ensisijaisetHakijatLkm": 5
+    "ensisijaisetHakijatLkm": 5,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.96717154981",
@@ -327,7 +348,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 13,
-    "ensisijaisetHakijatLkm": 9
+    "ensisijaisetHakijatLkm": 9,
+    "valitutLkm": 10
   },
   {
     "kooditHakukohde": "1.2.246.562.20.60560014882",
@@ -342,7 +364,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 16,
     "kaikkiHakijatLkm": 1047,
-    "ensisijaisetHakijatLkm": 430
+    "ensisijaisetHakijatLkm": 430,
+    "valitutLkm": 18
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20803113297",
@@ -357,7 +380,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 607,
-    "ensisijaisetHakijatLkm": 150
+    "ensisijaisetHakijatLkm": 150,
+    "valitutLkm": 54
   },
   {
     "kooditHakukohde": "1.2.246.562.20.88957990588",
@@ -372,7 +396,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 645,
-    "ensisijaisetHakijatLkm": 173
+    "ensisijaisetHakijatLkm": 173,
+    "valitutLkm": 38
   },
   {
     "kooditHakukohde": "1.2.246.562.20.25321344464",
@@ -387,7 +412,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 28,
     "kaikkiHakijatLkm": 1177,
-    "ensisijaisetHakijatLkm": 567
+    "ensisijaisetHakijatLkm": 567,
+    "valitutLkm": 30
   },
   {
     "kooditHakukohde": "1.2.246.562.20.40408742415",
@@ -402,7 +428,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 22,
     "kaikkiHakijatLkm": 945,
-    "ensisijaisetHakijatLkm": 303
+    "ensisijaisetHakijatLkm": 303,
+    "valitutLkm": 26
   },
   {
     "kooditHakukohde": "1.2.246.562.20.80551873559",
@@ -417,7 +444,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 24,
     "kaikkiHakijatLkm": 973,
-    "ensisijaisetHakijatLkm": 380
+    "ensisijaisetHakijatLkm": 380,
+    "valitutLkm": 28
   },
   {
     "kooditHakukohde": "1.2.246.562.20.49793549731",
@@ -432,7 +460,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 765,
-    "ensisijaisetHakijatLkm": 209
+    "ensisijaisetHakijatLkm": 209,
+    "valitutLkm": 33
   },
   {
     "kooditHakukohde": "1.2.246.562.20.88911599921",
@@ -447,7 +476,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 3,
     "kaikkiHakijatLkm": 22,
-    "ensisijaisetHakijatLkm": 8
+    "ensisijaisetHakijatLkm": 8,
+    "valitutLkm": 1
   },
   {
     "kooditHakukohde": "1.2.246.562.20.979546591210",
@@ -462,7 +492,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 439,
-    "ensisijaisetHakijatLkm": 121
+    "ensisijaisetHakijatLkm": 121,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.80752273559",
@@ -477,7 +508,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 514,
-    "ensisijaisetHakijatLkm": 113
+    "ensisijaisetHakijatLkm": 113,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.16707510018",
@@ -492,7 +524,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 366,
-    "ensisijaisetHakijatLkm": 57
+    "ensisijaisetHakijatLkm": 57,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.87129528797",
@@ -507,7 +540,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 23,
     "kaikkiHakijatLkm": 181,
-    "ensisijaisetHakijatLkm": 72
+    "ensisijaisetHakijatLkm": 72,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.58805322854",
@@ -522,7 +556,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 27,
-    "ensisijaisetHakijatLkm": 6
+    "ensisijaisetHakijatLkm": 6,
+    "valitutLkm": 1
   },
   {
     "kooditHakukohde": "1.2.246.562.20.144540426410",
@@ -537,7 +572,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 27,
-    "ensisijaisetHakijatLkm": 13
+    "ensisijaisetHakijatLkm": 13,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.64490041072",
@@ -552,7 +588,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 19,
-    "ensisijaisetHakijatLkm": 6
+    "ensisijaisetHakijatLkm": 6,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.53548219699",
@@ -567,7 +604,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 31,
-    "ensisijaisetHakijatLkm": 15
+    "ensisijaisetHakijatLkm": 15,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.82272429679",
@@ -582,7 +620,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 14,
-    "ensisijaisetHakijatLkm": 6
+    "ensisijaisetHakijatLkm": 6,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.59427099425",
@@ -597,7 +636,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 23,
-    "ensisijaisetHakijatLkm": 9
+    "ensisijaisetHakijatLkm": 9,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51666288868",
@@ -612,7 +652,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 9,
-    "ensisijaisetHakijatLkm": 4
+    "ensisijaisetHakijatLkm": 4,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.15468042849",
@@ -627,7 +668,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 38,
-    "ensisijaisetHakijatLkm": 20
+    "ensisijaisetHakijatLkm": 20,
+    "valitutLkm": 2
   },
   {
     "kooditHakukohde": "1.2.246.562.20.26107121209",
@@ -642,7 +684,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 161,
-    "ensisijaisetHakijatLkm": 85
+    "ensisijaisetHakijatLkm": 85,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.89771190629",
@@ -657,7 +700,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 282,
-    "ensisijaisetHakijatLkm": 99
+    "ensisijaisetHakijatLkm": 99,
+    "valitutLkm": 38
   },
   {
     "kooditHakukohde": "1.2.246.562.20.33509227444",
@@ -672,7 +716,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 164,
-    "ensisijaisetHakijatLkm": 42
+    "ensisijaisetHakijatLkm": 42,
+    "valitutLkm": 51
   },
   {
     "kooditHakukohde": "1.2.246.562.20.66084098954",
@@ -687,7 +732,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 37,
     "kaikkiHakijatLkm": 430,
-    "ensisijaisetHakijatLkm": 162
+    "ensisijaisetHakijatLkm": 162,
+    "valitutLkm": 52
   },
   {
     "kooditHakukohde": "1.2.246.562.20.52683240296",
@@ -702,7 +748,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 399,
-    "ensisijaisetHakijatLkm": 128
+    "ensisijaisetHakijatLkm": 128,
+    "valitutLkm": 34
   },
   {
     "kooditHakukohde": "1.2.246.562.20.71302946513",
@@ -717,7 +764,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 314,
-    "ensisijaisetHakijatLkm": 165
+    "ensisijaisetHakijatLkm": 165,
+    "valitutLkm": 70
   },
   {
     "kooditHakukohde": "1.2.246.562.20.18193420348",
@@ -732,7 +780,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 20,
-    "ensisijaisetHakijatLkm": 14
+    "ensisijaisetHakijatLkm": 14,
+    "valitutLkm": 14
   },
   {
     "kooditHakukohde": "1.2.246.562.20.29079374608",
@@ -747,7 +796,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 22,
     "kaikkiHakijatLkm": 470,
-    "ensisijaisetHakijatLkm": 199
+    "ensisijaisetHakijatLkm": 199,
+    "valitutLkm": 35
   },
   {
     "kooditHakukohde": "1.2.246.562.20.73985384335",
@@ -762,7 +812,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 363,
-    "ensisijaisetHakijatLkm": 104
+    "ensisijaisetHakijatLkm": 104,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20431200631",
@@ -777,7 +828,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 99,
-    "ensisijaisetHakijatLkm": 48
+    "ensisijaisetHakijatLkm": 48,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.670189567710",
@@ -792,7 +844,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 236,
-    "ensisijaisetHakijatLkm": 109
+    "ensisijaisetHakijatLkm": 109,
+    "valitutLkm": 48
   },
   {
     "kooditHakukohde": "1.2.246.562.20.40265493102",
@@ -807,7 +860,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 168,
-    "ensisijaisetHakijatLkm": 78
+    "ensisijaisetHakijatLkm": 78,
+    "valitutLkm": 60
   },
   {
     "kooditHakukohde": "1.2.246.562.20.43760531673",
@@ -822,7 +876,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 57,
-    "ensisijaisetHakijatLkm": 32
+    "ensisijaisetHakijatLkm": 32,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.40776137529",
@@ -837,7 +892,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 32,
-    "ensisijaisetHakijatLkm": 16
+    "ensisijaisetHakijatLkm": 16,
+    "valitutLkm": 15
   },
   {
     "kooditHakukohde": "1.2.246.562.20.41662824881",
@@ -852,7 +908,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 198,
-    "ensisijaisetHakijatLkm": 74
+    "ensisijaisetHakijatLkm": 74,
+    "valitutLkm": 28
   },
   {
     "kooditHakukohde": "1.2.246.562.20.91552556309",
@@ -867,7 +924,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 107,
-    "ensisijaisetHakijatLkm": 47
+    "ensisijaisetHakijatLkm": 47,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.88830632621",
@@ -882,7 +940,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 337,
-    "ensisijaisetHakijatLkm": 160
+    "ensisijaisetHakijatLkm": 160,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.98436093326",
@@ -897,7 +956,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 90,
     "kaikkiHakijatLkm": 407,
-    "ensisijaisetHakijatLkm": 185
+    "ensisijaisetHakijatLkm": 185,
+    "valitutLkm": 138
   },
   {
     "kooditHakukohde": "1.2.246.562.20.59792843605",
@@ -912,7 +972,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 434,
-    "ensisijaisetHakijatLkm": 279
+    "ensisijaisetHakijatLkm": 279,
+    "valitutLkm": 60
   },
   {
     "kooditHakukohde": "1.2.246.562.20.67388595562",
@@ -927,7 +988,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 27,
-    "ensisijaisetHakijatLkm": 11
+    "ensisijaisetHakijatLkm": 11,
+    "valitutLkm": 8
   },
   {
     "kooditHakukohde": "1.2.246.562.20.11242971387",
@@ -942,7 +1004,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 460,
-    "ensisijaisetHakijatLkm": 295
+    "ensisijaisetHakijatLkm": 295,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.344907757310",
@@ -957,7 +1020,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 44,
-    "ensisijaisetHakijatLkm": 39
+    "ensisijaisetHakijatLkm": 39,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.42880713518",
@@ -972,7 +1036,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 132,
-    "ensisijaisetHakijatLkm": 60
+    "ensisijaisetHakijatLkm": 60,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.319302032410",
@@ -987,7 +1052,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 297,
-    "ensisijaisetHakijatLkm": 123
+    "ensisijaisetHakijatLkm": 123,
+    "valitutLkm": 33
   },
   {
     "kooditHakukohde": "1.2.246.562.20.81715600631",
@@ -1002,7 +1068,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 13,
     "kaikkiHakijatLkm": 91,
-    "ensisijaisetHakijatLkm": 42
+    "ensisijaisetHakijatLkm": 42,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.60538008479",
@@ -1017,7 +1084,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 487,
-    "ensisijaisetHakijatLkm": 264
+    "ensisijaisetHakijatLkm": 264,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.77704907979",
@@ -1032,7 +1100,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 60,
     "kaikkiHakijatLkm": 406,
-    "ensisijaisetHakijatLkm": 182
+    "ensisijaisetHakijatLkm": 182,
+    "valitutLkm": 76
   },
   {
     "kooditHakukohde": "1.2.246.562.20.48070545164",
@@ -1047,7 +1116,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 60,
     "kaikkiHakijatLkm": 771,
-    "ensisijaisetHakijatLkm": 376
+    "ensisijaisetHakijatLkm": 376,
+    "valitutLkm": 57
   },
   {
     "kooditHakukohde": "1.2.246.562.20.70847999649",
@@ -1062,7 +1132,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 469,
-    "ensisijaisetHakijatLkm": 167
+    "ensisijaisetHakijatLkm": 167,
+    "valitutLkm": 57
   },
   {
     "kooditHakukohde": "1.2.246.562.20.40627939834",
@@ -1077,7 +1148,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 52,
     "kaikkiHakijatLkm": 385,
-    "ensisijaisetHakijatLkm": 214
+    "ensisijaisetHakijatLkm": 214,
+    "valitutLkm": 54
   },
   {
     "kooditHakukohde": "1.2.246.562.20.12929720808",
@@ -1092,7 +1164,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 126,
-    "ensisijaisetHakijatLkm": 51
+    "ensisijaisetHakijatLkm": 51,
+    "valitutLkm": 48
   },
   {
     "kooditHakukohde": "1.2.246.562.20.36724389402",
@@ -1107,7 +1180,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 40,
-    "ensisijaisetHakijatLkm": 31
+    "ensisijaisetHakijatLkm": 31,
+    "valitutLkm": 11
   },
   {
     "kooditHakukohde": "1.2.246.562.20.71825265029",
@@ -1122,7 +1196,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 5,
     "kaikkiHakijatLkm": 7,
-    "ensisijaisetHakijatLkm": 6
+    "ensisijaisetHakijatLkm": 6,
+    "valitutLkm": 4
   },
   {
     "kooditHakukohde": "1.2.246.562.20.14059118936",
@@ -1137,7 +1212,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 8,
     "kaikkiHakijatLkm": 13,
-    "ensisijaisetHakijatLkm": 7
+    "ensisijaisetHakijatLkm": 7,
+    "valitutLkm": 5
   },
   {
     "kooditHakukohde": "1.2.246.562.20.76291842029",
@@ -1152,7 +1228,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 26,
-    "ensisijaisetHakijatLkm": 21
+    "ensisijaisetHakijatLkm": 21,
+    "valitutLkm": 16
   },
   {
     "kooditHakukohde": "1.2.246.562.20.59074464179",
@@ -1167,7 +1244,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 96,
-    "ensisijaisetHakijatLkm": 77
+    "ensisijaisetHakijatLkm": 77,
+    "valitutLkm": 60
   },
   {
     "kooditHakukohde": "1.2.246.562.20.237335957410",
@@ -1182,7 +1260,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 58,
-    "ensisijaisetHakijatLkm": 49
+    "ensisijaisetHakijatLkm": 49,
+    "valitutLkm": 18
   },
   {
     "kooditHakukohde": "1.2.246.562.20.87288945824",
@@ -1197,7 +1276,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 29,
-    "ensisijaisetHakijatLkm": 27
+    "ensisijaisetHakijatLkm": 27,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.38604555706",
@@ -1212,7 +1292,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 12,
-    "ensisijaisetHakijatLkm": 12
+    "ensisijaisetHakijatLkm": 12,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.89426607365",
@@ -1227,7 +1308,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 29,
-    "ensisijaisetHakijatLkm": 21
+    "ensisijaisetHakijatLkm": 21,
+    "valitutLkm": 19
   },
   {
     "kooditHakukohde": "1.2.246.562.20.11236602006",
@@ -1242,7 +1324,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 12,
     "kaikkiHakijatLkm": 19,
-    "ensisijaisetHakijatLkm": 12
+    "ensisijaisetHakijatLkm": 12,
+    "valitutLkm": 10
   },
   {
     "kooditHakukohde": "1.2.246.562.20.31278373431",
@@ -1257,7 +1340,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 56,
-    "ensisijaisetHakijatLkm": 43
+    "ensisijaisetHakijatLkm": 43,
+    "valitutLkm": 32
   },
   {
     "kooditHakukohde": "1.2.246.562.20.58301308993",
@@ -1272,7 +1356,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 24,
-    "ensisijaisetHakijatLkm": 20
+    "ensisijaisetHakijatLkm": 20,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.39849958929",
@@ -1287,7 +1372,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 23,
-    "ensisijaisetHakijatLkm": 22
+    "ensisijaisetHakijatLkm": 22,
+    "valitutLkm": 16
   },
   {
     "kooditHakukohde": "1.2.246.562.20.63548439031",
@@ -1302,7 +1388,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 30,
-    "ensisijaisetHakijatLkm": 21
+    "ensisijaisetHakijatLkm": 21,
+    "valitutLkm": 19
   },
   {
     "kooditHakukohde": "1.2.246.562.20.90170762588",
@@ -1317,7 +1404,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 24,
-    "ensisijaisetHakijatLkm": 18
+    "ensisijaisetHakijatLkm": 18,
+    "valitutLkm": 11
   },
   {
     "kooditHakukohde": "1.2.246.562.20.160990624210",
@@ -1332,7 +1420,8 @@
     "okmOhjauksenAla": "Yhteiskunnalliset alat",
     "aloituspaikatLkm": 60,
     "kaikkiHakijatLkm": 76,
-    "ensisijaisetHakijatLkm": 64
+    "ensisijaisetHakijatLkm": 64,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.770032697910",
@@ -1347,7 +1436,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 51,
-    "ensisijaisetHakijatLkm": 46
+    "ensisijaisetHakijatLkm": 46,
+    "valitutLkm": 10
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20937635389",
@@ -1362,7 +1452,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 66,
-    "ensisijaisetHakijatLkm": 40
+    "ensisijaisetHakijatLkm": 40,
+    "valitutLkm": 16
   },
   {
     "kooditHakukohde": "1.2.246.562.20.71459388535",
@@ -1377,7 +1468,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 70,
-    "ensisijaisetHakijatLkm": 58
+    "ensisijaisetHakijatLkm": 58,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.33874300594",
@@ -1392,7 +1484,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 2,
     "kaikkiHakijatLkm": 18,
-    "ensisijaisetHakijatLkm": 3
+    "ensisijaisetHakijatLkm": 3,
+    "valitutLkm": 2
   },
   {
     "kooditHakukohde": "1.2.246.562.20.40471609897",
@@ -1407,7 +1500,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 438,
-    "ensisijaisetHakijatLkm": 163
+    "ensisijaisetHakijatLkm": 163,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.44224623957",
@@ -1422,7 +1516,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 26,
     "kaikkiHakijatLkm": 298,
-    "ensisijaisetHakijatLkm": 81
+    "ensisijaisetHakijatLkm": 81,
+    "valitutLkm": 32
   },
   {
     "kooditHakukohde": "1.2.246.562.20.58543265399",
@@ -1437,7 +1532,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 28,
     "kaikkiHakijatLkm": 674,
-    "ensisijaisetHakijatLkm": 294
+    "ensisijaisetHakijatLkm": 294,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.24190412726",
@@ -1452,7 +1548,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 222,
-    "ensisijaisetHakijatLkm": 95
+    "ensisijaisetHakijatLkm": 95,
+    "valitutLkm": 72
   },
   {
     "kooditHakukohde": "1.2.246.562.20.39258408127",
@@ -1467,7 +1564,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 238,
-    "ensisijaisetHakijatLkm": 88
+    "ensisijaisetHakijatLkm": 88,
+    "valitutLkm": 45
   },
   {
     "kooditHakukohde": "1.2.246.562.20.57408131381",
@@ -1482,7 +1580,8 @@
     "okmOhjauksenAla": "Kasvatusalat",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 159,
-    "ensisijaisetHakijatLkm": 145
+    "ensisijaisetHakijatLkm": 145,
+    "valitutLkm": 50
   },
   {
     "kooditHakukohde": "1.2.246.562.20.84568670164",
@@ -1497,7 +1596,8 @@
     "okmOhjauksenAla": "Yhteiskunnalliset alat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 264,
-    "ensisijaisetHakijatLkm": 252
+    "ensisijaisetHakijatLkm": 252,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.54036599949",
@@ -1512,7 +1612,8 @@
     "okmOhjauksenAla": "Kasvatusalat",
     "aloituspaikatLkm": 6,
     "kaikkiHakijatLkm": 38,
-    "ensisijaisetHakijatLkm": 31
+    "ensisijaisetHakijatLkm": 31,
+    "valitutLkm": 7
   },
   {
     "kooditHakukohde": "1.2.246.562.20.49837143483",
@@ -1527,7 +1628,8 @@
     "okmOhjauksenAla": "Luonnontieteet",
     "aloituspaikatLkm": 5,
     "kaikkiHakijatLkm": 2,
-    "ensisijaisetHakijatLkm": 2
+    "ensisijaisetHakijatLkm": 2,
+    "valitutLkm": 1
   },
   {
     "kooditHakukohde": "1.2.246.562.20.16928201363",
@@ -1542,7 +1644,8 @@
     "okmOhjauksenAla": "Luonnontieteet",
     "aloituspaikatLkm": 5,
     "kaikkiHakijatLkm": 0,
-    "ensisijaisetHakijatLkm": 0
+    "ensisijaisetHakijatLkm": 0,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.839026474910",
@@ -1557,7 +1660,8 @@
     "okmOhjauksenAla": "Luonnontieteet",
     "aloituspaikatLkm": 5,
     "kaikkiHakijatLkm": 2,
-    "ensisijaisetHakijatLkm": 1
+    "ensisijaisetHakijatLkm": 1,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.17271985164",
@@ -1572,7 +1676,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 36,
-    "ensisijaisetHakijatLkm": 26
+    "ensisijaisetHakijatLkm": 26,
+    "valitutLkm": 12
   },
   {
     "kooditHakukohde": "1.2.246.562.20.29270420523",
@@ -1587,7 +1692,8 @@
     "okmOhjauksenAla": "Luonnontieteet",
     "aloituspaikatLkm": 5,
     "kaikkiHakijatLkm": 2,
-    "ensisijaisetHakijatLkm": 0
+    "ensisijaisetHakijatLkm": 0,
+    "valitutLkm": 0
   },
   {
     "kooditHakukohde": "1.2.246.562.20.75600612768",
@@ -1602,7 +1708,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 247,
-    "ensisijaisetHakijatLkm": 123
+    "ensisijaisetHakijatLkm": 123,
+    "valitutLkm": 26
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51152100486",
@@ -1617,7 +1724,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 201,
-    "ensisijaisetHakijatLkm": 113
+    "ensisijaisetHakijatLkm": 113,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.42109156234",
@@ -1632,7 +1740,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 464,
-    "ensisijaisetHakijatLkm": 330
+    "ensisijaisetHakijatLkm": 330,
+    "valitutLkm": 45
   },
   {
     "kooditHakukohde": "1.2.246.562.20.43847165206",
@@ -1647,7 +1756,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 218,
-    "ensisijaisetHakijatLkm": 111
+    "ensisijaisetHakijatLkm": 111,
+    "valitutLkm": 33
   },
   {
     "kooditHakukohde": "1.2.246.562.20.73846419833",
@@ -1662,7 +1772,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 126,
-    "ensisijaisetHakijatLkm": 22
+    "ensisijaisetHakijatLkm": 22,
+    "valitutLkm": 28
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20804704698",
@@ -1677,7 +1788,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 66,
-    "ensisijaisetHakijatLkm": 58
+    "ensisijaisetHakijatLkm": 58,
+    "valitutLkm": 35
   },
   {
     "kooditHakukohde": "1.2.246.562.20.74125561873",
@@ -1692,7 +1804,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 54,
-    "ensisijaisetHakijatLkm": 44
+    "ensisijaisetHakijatLkm": 44,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.29999316804",
@@ -1707,7 +1820,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 35,
-    "ensisijaisetHakijatLkm": 28
+    "ensisijaisetHakijatLkm": 28,
+    "valitutLkm": 12
   },
   {
     "kooditHakukohde": "1.2.246.562.20.579601559510",
@@ -1722,7 +1836,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 155,
-    "ensisijaisetHakijatLkm": 88
+    "ensisijaisetHakijatLkm": 88,
+    "valitutLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.41375983149",
@@ -1737,7 +1852,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 71,
-    "ensisijaisetHakijatLkm": 67
+    "ensisijaisetHakijatLkm": 67,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.64331782058",
@@ -1752,7 +1868,8 @@
     "okmOhjauksenAla": "Maa- ja metsätalousalat",
     "aloituspaikatLkm": 22,
     "kaikkiHakijatLkm": 232,
-    "ensisijaisetHakijatLkm": 143
+    "ensisijaisetHakijatLkm": 143,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.90887234673",
@@ -1767,7 +1884,8 @@
     "okmOhjauksenAla": "Maa- ja metsätalousalat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 285,
-    "ensisijaisetHakijatLkm": 129
+    "ensisijaisetHakijatLkm": 129,
+    "valitutLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.12817172435",
@@ -1782,7 +1900,8 @@
     "okmOhjauksenAla": "Maa- ja metsätalousalat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 69,
-    "ensisijaisetHakijatLkm": 42
+    "ensisijaisetHakijatLkm": 42,
+    "valitutLkm": 23
   },
   {
     "kooditHakukohde": "1.2.246.562.20.29213419897",
@@ -1797,7 +1916,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 21,
     "kaikkiHakijatLkm": 69,
-    "ensisijaisetHakijatLkm": 46
+    "ensisijaisetHakijatLkm": 46,
+    "valitutLkm": 22
   },
   {
     "kooditHakukohde": "1.2.246.562.20.41757928894",
@@ -1812,7 +1932,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 186,
-    "ensisijaisetHakijatLkm": 108
+    "ensisijaisetHakijatLkm": 108,
+    "valitutLkm": 26
   },
   {
     "kooditHakukohde": "1.2.246.562.20.18901390437",
@@ -1827,7 +1948,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 75,
-    "ensisijaisetHakijatLkm": 44
+    "ensisijaisetHakijatLkm": 44,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.11540628374",
@@ -1842,7 +1964,8 @@
     "okmOhjauksenAla": "Taiteet ja kulttuurialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 144,
-    "ensisijaisetHakijatLkm": 109
+    "ensisijaisetHakijatLkm": 109,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.38864519285",
@@ -1857,7 +1980,8 @@
     "okmOhjauksenAla": "Kasvatusalat",
     "aloituspaikatLkm": 8,
     "kaikkiHakijatLkm": 29,
-    "ensisijaisetHakijatLkm": 27
+    "ensisijaisetHakijatLkm": 27,
+    "valitutLkm": 10
   },
   {
     "kooditHakukohde": "1.2.246.562.20.76478995756",
@@ -1872,7 +1996,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 24,
     "kaikkiHakijatLkm": 394,
-    "ensisijaisetHakijatLkm": 152
+    "ensisijaisetHakijatLkm": 152,
+    "valitutLkm": 33
   },
   {
     "kooditHakukohde": "1.2.246.562.20.661390056410",
@@ -1887,7 +2012,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 193,
-    "ensisijaisetHakijatLkm": 136
+    "ensisijaisetHakijatLkm": 136,
+    "valitutLkm": 30
   },
   {
     "kooditHakukohde": "1.2.246.562.20.69444544105",
@@ -1902,7 +2028,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 247,
-    "ensisijaisetHakijatLkm": 114
+    "ensisijaisetHakijatLkm": 114,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.30552638907",
@@ -1917,7 +2044,8 @@
     "okmOhjauksenAla": "Tekniikan alat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 74,
-    "ensisijaisetHakijatLkm": 53
+    "ensisijaisetHakijatLkm": 53,
+    "valitutLkm": 18
   },
   {
     "kooditHakukohde": "1.2.246.562.20.84002148074",
@@ -1932,7 +2060,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 89,
-    "ensisijaisetHakijatLkm": 20
+    "ensisijaisetHakijatLkm": 20,
+    "valitutLkm": 45
   },
   {
     "kooditHakukohde": "1.2.246.562.20.96875173914",
@@ -1947,7 +2076,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 104,
-    "ensisijaisetHakijatLkm": 47
+    "ensisijaisetHakijatLkm": 47,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.99575150042",
@@ -1962,7 +2092,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 190,
-    "ensisijaisetHakijatLkm": 67
+    "ensisijaisetHakijatLkm": 67,
+    "valitutLkm": 65
   },
   {
     "kooditHakukohde": "1.2.246.562.20.81845408301",
@@ -1977,7 +2108,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 146,
-    "ensisijaisetHakijatLkm": 61
+    "ensisijaisetHakijatLkm": 61,
+    "valitutLkm": 60
   },
   {
     "kooditHakukohde": "1.2.246.562.20.34115622168",
@@ -1992,7 +2124,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 245,
-    "ensisijaisetHakijatLkm": 117
+    "ensisijaisetHakijatLkm": 117,
+    "valitutLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.37181999923",
@@ -2007,7 +2140,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 212,
-    "ensisijaisetHakijatLkm": 67
+    "ensisijaisetHakijatLkm": 67,
+    "valitutLkm": 38
   },
   {
     "kooditHakukohde": "1.2.246.562.20.48441913216",
@@ -2022,7 +2156,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 270,
-    "ensisijaisetHakijatLkm": 90
+    "ensisijaisetHakijatLkm": 90,
+    "valitutLkm": 32
   },
   {
     "kooditHakukohde": "1.2.246.562.20.44992609907",
@@ -2037,7 +2172,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 83,
-    "ensisijaisetHakijatLkm": 51
+    "ensisijaisetHakijatLkm": 51,
+    "valitutLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.34656187225",
@@ -2052,7 +2188,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 260,
-    "ensisijaisetHakijatLkm": 152
+    "ensisijaisetHakijatLkm": 152,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.23375988534",
@@ -2067,7 +2204,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 2,
     "kaikkiHakijatLkm": 16,
-    "ensisijaisetHakijatLkm": 7
+    "ensisijaisetHakijatLkm": 7,
+    "valitutLkm": 2
   },
   {
     "kooditHakukohde": "1.2.246.562.20.77652535954",
@@ -2082,7 +2220,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 29,
     "kaikkiHakijatLkm": 728,
-    "ensisijaisetHakijatLkm": 257
+    "ensisijaisetHakijatLkm": 257,
+    "valitutLkm": 39
   },
   {
     "kooditHakukohde": "1.2.246.562.20.57099384844",
@@ -2097,7 +2236,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 200,
-    "ensisijaisetHakijatLkm": 46
+    "ensisijaisetHakijatLkm": 46,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.71284266013",
@@ -2112,7 +2252,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 379,
-    "ensisijaisetHakijatLkm": 41
+    "ensisijaisetHakijatLkm": 41,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.19418002812",
@@ -2127,7 +2268,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 264,
-    "ensisijaisetHakijatLkm": 65
+    "ensisijaisetHakijatLkm": 65,
+    "valitutLkm": 44
   },
   {
     "kooditHakukohde": "1.2.246.562.20.22630487977",
@@ -2142,7 +2284,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 50,
     "kaikkiHakijatLkm": 276,
-    "ensisijaisetHakijatLkm": 80
+    "ensisijaisetHakijatLkm": 80,
+    "valitutLkm": 62
   },
   {
     "kooditHakukohde": "1.2.246.562.20.65421024822",
@@ -2157,7 +2300,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 251,
-    "ensisijaisetHakijatLkm": 94
+    "ensisijaisetHakijatLkm": 94,
+    "valitutLkm": 56
   },
   {
     "kooditHakukohde": "1.2.246.562.20.14451925326",
@@ -2172,7 +2316,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 370,
-    "ensisijaisetHakijatLkm": 88
+    "ensisijaisetHakijatLkm": 88,
+    "valitutLkm": 45
   },
   {
     "kooditHakukohde": "1.2.246.562.20.18622071621",
@@ -2187,7 +2332,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 157,
-    "ensisijaisetHakijatLkm": 46
+    "ensisijaisetHakijatLkm": 46,
+    "valitutLkm": 32
   },
   {
     "kooditHakukohde": "1.2.246.562.20.21648216378",
@@ -2202,7 +2348,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 420,
-    "ensisijaisetHakijatLkm": 145
+    "ensisijaisetHakijatLkm": 145,
+    "valitutLkm": 49
   },
   {
     "kooditHakukohde": "1.2.246.562.20.24311461628",
@@ -2217,7 +2364,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 602,
-    "ensisijaisetHakijatLkm": 166
+    "ensisijaisetHakijatLkm": 166,
+    "valitutLkm": 48
   },
   {
     "kooditHakukohde": "1.2.246.562.20.25724629446",
@@ -2232,7 +2380,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 28,
     "kaikkiHakijatLkm": 364,
-    "ensisijaisetHakijatLkm": 140
+    "ensisijaisetHakijatLkm": 140,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.30060712855",
@@ -2247,7 +2396,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 349,
-    "ensisijaisetHakijatLkm": 159
+    "ensisijaisetHakijatLkm": 159,
+    "valitutLkm": 40
   },
   {
     "kooditHakukohde": "1.2.246.562.20.41218469173",
@@ -2262,7 +2412,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 674,
-    "ensisijaisetHakijatLkm": 129
+    "ensisijaisetHakijatLkm": 129,
+    "valitutLkm": 40
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51037738351",
@@ -2277,7 +2428,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 126,
-    "ensisijaisetHakijatLkm": 51
+    "ensisijaisetHakijatLkm": 51,
+    "valitutLkm": 38
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51612019011",
@@ -2292,7 +2444,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 514,
-    "ensisijaisetHakijatLkm": 148
+    "ensisijaisetHakijatLkm": 148,
+    "valitutLkm": 42
   },
   {
     "kooditHakukohde": "1.2.246.562.20.70049512786",
@@ -2307,7 +2460,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 347,
-    "ensisijaisetHakijatLkm": 110
+    "ensisijaisetHakijatLkm": 110,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.76917730772",
@@ -2322,7 +2476,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 628,
-    "ensisijaisetHakijatLkm": 116
+    "ensisijaisetHakijatLkm": 116,
+    "valitutLkm": 45
   },
   {
     "kooditHakukohde": "1.2.246.562.20.87904855217",
@@ -2337,7 +2492,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 393,
-    "ensisijaisetHakijatLkm": 106
+    "ensisijaisetHakijatLkm": 106,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.39733006843",
@@ -2352,7 +2508,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 268,
-    "ensisijaisetHakijatLkm": 132
+    "ensisijaisetHakijatLkm": 132,
+    "valitutLkm": 35
   },
   {
     "kooditHakukohde": "1.2.246.562.20.84841247996",
@@ -2367,7 +2524,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 591,
-    "ensisijaisetHakijatLkm": 169
+    "ensisijaisetHakijatLkm": 169,
+    "valitutLkm": 38
   },
   {
     "kooditHakukohde": "1.2.246.562.20.74719087079",
@@ -2382,7 +2540,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 130,
-    "ensisijaisetHakijatLkm": 53
+    "ensisijaisetHakijatLkm": 53,
+    "valitutLkm": 59
   },
   {
     "kooditHakukohde": "1.2.246.562.20.37055192381",
@@ -2397,7 +2556,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 513,
-    "ensisijaisetHakijatLkm": 157
+    "ensisijaisetHakijatLkm": 157,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.84140688338",
@@ -2412,7 +2572,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 201,
-    "ensisijaisetHakijatLkm": 58
+    "ensisijaisetHakijatLkm": 58,
+    "valitutLkm": 44
   },
   {
     "kooditHakukohde": "1.2.246.562.20.60282741911",
@@ -2427,7 +2588,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 7,
     "kaikkiHakijatLkm": 35,
-    "ensisijaisetHakijatLkm": 25
+    "ensisijaisetHakijatLkm": 25,
+    "valitutLkm": 9
   },
   {
     "kooditHakukohde": "1.2.246.562.20.10556085396",
@@ -2442,7 +2604,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 219,
-    "ensisijaisetHakijatLkm": 34
+    "ensisijaisetHakijatLkm": 34,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.222429243010",
@@ -2457,7 +2620,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 401,
-    "ensisijaisetHakijatLkm": 102
+    "ensisijaisetHakijatLkm": 102,
+    "valitutLkm": 28
   },
   {
     "kooditHakukohde": "1.2.246.562.20.440962536110",
@@ -2472,7 +2636,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 216,
-    "ensisijaisetHakijatLkm": 74
+    "ensisijaisetHakijatLkm": 74,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.44487384263",
@@ -2487,7 +2652,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 50,
     "kaikkiHakijatLkm": 615,
-    "ensisijaisetHakijatLkm": 136
+    "ensisijaisetHakijatLkm": 136,
+    "valitutLkm": 66
   },
   {
     "kooditHakukohde": "1.2.246.562.20.69162731777",
@@ -2502,7 +2668,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 124,
-    "ensisijaisetHakijatLkm": 34
+    "ensisijaisetHakijatLkm": 34,
+    "valitutLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.71081634314",
@@ -2517,7 +2684,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 300,
-    "ensisijaisetHakijatLkm": 56
+    "ensisijaisetHakijatLkm": 56,
+    "valitutLkm": 41
   },
   {
     "kooditHakukohde": "1.2.246.562.20.770138096510",
@@ -2532,7 +2700,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 693,
-    "ensisijaisetHakijatLkm": 92
+    "ensisijaisetHakijatLkm": 92,
+    "valitutLkm": 55
   },
   {
     "kooditHakukohde": "1.2.246.562.20.901609928810",
@@ -2547,7 +2716,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 90,
     "kaikkiHakijatLkm": 751,
-    "ensisijaisetHakijatLkm": 284
+    "ensisijaisetHakijatLkm": 284,
+    "valitutLkm": 121
   },
   {
     "kooditHakukohde": "1.2.246.562.20.90740166278",
@@ -2562,7 +2732,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 28,
     "kaikkiHakijatLkm": 222,
-    "ensisijaisetHakijatLkm": 51
+    "ensisijaisetHakijatLkm": 51,
+    "valitutLkm": 34
   },
   {
     "kooditHakukohde": "1.2.246.562.20.99600478939",
@@ -2577,7 +2748,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 186,
-    "ensisijaisetHakijatLkm": 56
+    "ensisijaisetHakijatLkm": 56,
+    "valitutLkm": 52
   },
   {
     "kooditHakukohde": "1.2.246.562.20.34676332819",
@@ -2592,7 +2764,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 171,
-    "ensisijaisetHakijatLkm": 34
+    "ensisijaisetHakijatLkm": 34,
+    "valitutLkm": 49
   },
   {
     "kooditHakukohde": "1.2.246.562.20.37785722523",
@@ -2607,7 +2780,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 285,
-    "ensisijaisetHakijatLkm": 61
+    "ensisijaisetHakijatLkm": 61,
+    "valitutLkm": 33
   },
   {
     "kooditHakukohde": "1.2.246.562.20.18754057596",
@@ -2622,7 +2796,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 184,
-    "ensisijaisetHakijatLkm": 33
+    "ensisijaisetHakijatLkm": 33,
+    "valitutLkm": 38
   },
   {
     "kooditHakukohde": "1.2.246.562.20.90923907464",
@@ -2637,7 +2812,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 98,
-    "ensisijaisetHakijatLkm": 15
+    "ensisijaisetHakijatLkm": 15,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.86246701436",
@@ -2652,7 +2828,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 830,
-    "ensisijaisetHakijatLkm": 181
+    "ensisijaisetHakijatLkm": 181,
+    "valitutLkm": 53
   },
   {
     "kooditHakukohde": "1.2.246.562.20.21051185375",
@@ -2667,7 +2844,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 90,
     "kaikkiHakijatLkm": 843,
-    "ensisijaisetHakijatLkm": 182
+    "ensisijaisetHakijatLkm": 182,
+    "valitutLkm": 107
   },
   {
     "kooditHakukohde": "1.2.246.562.20.96227881891",
@@ -2682,7 +2860,8 @@
     "okmOhjauksenAla": "Humanistiset alat",
     "aloituspaikatLkm": 0,
     "kaikkiHakijatLkm": 58,
-    "ensisijaisetHakijatLkm": 38
+    "ensisijaisetHakijatLkm": 38,
+    "valitutLkm": 5
   },
   {
     "kooditHakukohde": "1.2.246.562.20.45438759073",
@@ -2697,7 +2876,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 208,
-    "ensisijaisetHakijatLkm": 140
+    "ensisijaisetHakijatLkm": 140,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.146106923210",
@@ -2712,7 +2892,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 709,
-    "ensisijaisetHakijatLkm": 478
+    "ensisijaisetHakijatLkm": 478,
+    "valitutLkm": 40
   },
   {
     "kooditHakukohde": "1.2.246.562.20.52120792362",
@@ -2727,7 +2908,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 148,
-    "ensisijaisetHakijatLkm": 61
+    "ensisijaisetHakijatLkm": 61,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.58368752877",
@@ -2742,7 +2924,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 178,
-    "ensisijaisetHakijatLkm": 109
+    "ensisijaisetHakijatLkm": 109,
+    "valitutLkm": 17
   },
   {
     "kooditHakukohde": "1.2.246.562.20.42125643991",
@@ -2757,7 +2940,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 577,
-    "ensisijaisetHakijatLkm": 268
+    "ensisijaisetHakijatLkm": 268,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.22809035672",
@@ -2772,7 +2956,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 109,
-    "ensisijaisetHakijatLkm": 64
+    "ensisijaisetHakijatLkm": 64,
+    "valitutLkm": 11
   },
   {
     "kooditHakukohde": "1.2.246.562.20.55442782896",
@@ -2787,7 +2972,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 14,
     "kaikkiHakijatLkm": 159,
-    "ensisijaisetHakijatLkm": 96
+    "ensisijaisetHakijatLkm": 96,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.68341740261",
@@ -2802,7 +2988,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 36,
     "kaikkiHakijatLkm": 131,
-    "ensisijaisetHakijatLkm": 63
+    "ensisijaisetHakijatLkm": 63,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.25652228419",
@@ -2817,7 +3004,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 44,
-    "ensisijaisetHakijatLkm": 35
+    "ensisijaisetHakijatLkm": 35,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.45723457334",
@@ -2832,7 +3020,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 94,
-    "ensisijaisetHakijatLkm": 53
+    "ensisijaisetHakijatLkm": 53,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.21363306529",
@@ -2847,7 +3036,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 78,
-    "ensisijaisetHakijatLkm": 19
+    "ensisijaisetHakijatLkm": 19,
+    "valitutLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.593588248910",
@@ -2862,7 +3052,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 80,
-    "ensisijaisetHakijatLkm": 38
+    "ensisijaisetHakijatLkm": 38,
+    "valitutLkm": 10
   },
   {
     "kooditHakukohde": "1.2.246.562.20.74667032861",
@@ -2877,7 +3068,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 93,
-    "ensisijaisetHakijatLkm": 57
+    "ensisijaisetHakijatLkm": 57,
+    "valitutLkm": 17
   },
   {
     "kooditHakukohde": "1.2.246.562.20.23106293501",
@@ -2892,7 +3084,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 346,
-    "ensisijaisetHakijatLkm": 172
+    "ensisijaisetHakijatLkm": 172,
+    "valitutLkm": 32
   },
   {
     "kooditHakukohde": "1.2.246.562.20.70425046581",
@@ -2907,7 +3100,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 164,
-    "ensisijaisetHakijatLkm": 68
+    "ensisijaisetHakijatLkm": 68,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20648395752",
@@ -2922,7 +3116,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 321,
-    "ensisijaisetHakijatLkm": 102
+    "ensisijaisetHakijatLkm": 102,
+    "valitutLkm": 34
   },
   {
     "kooditHakukohde": "1.2.246.562.20.56039042942",
@@ -2937,7 +3132,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 240,
-    "ensisijaisetHakijatLkm": 66
+    "ensisijaisetHakijatLkm": 66,
+    "valitutLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.91904710455",
@@ -2952,7 +3148,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 461,
-    "ensisijaisetHakijatLkm": 98
+    "ensisijaisetHakijatLkm": 98,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.15356537314",
@@ -2967,7 +3164,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 214,
-    "ensisijaisetHakijatLkm": 65
+    "ensisijaisetHakijatLkm": 65,
+    "valitutLkm": 21
   },
   {
     "kooditHakukohde": "1.2.246.562.20.11792733922",
@@ -2982,7 +3180,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 329,
-    "ensisijaisetHakijatLkm": 112
+    "ensisijaisetHakijatLkm": 112,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.13715904259",
@@ -2997,7 +3196,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 1486,
-    "ensisijaisetHakijatLkm": 261
+    "ensisijaisetHakijatLkm": 261,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.17218095069",
@@ -3012,7 +3212,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 990,
-    "ensisijaisetHakijatLkm": 178
+    "ensisijaisetHakijatLkm": 178,
+    "valitutLkm": 39
   },
   {
     "kooditHakukohde": "1.2.246.562.20.41379369659",
@@ -3027,7 +3228,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 55,
     "kaikkiHakijatLkm": 968,
-    "ensisijaisetHakijatLkm": 212
+    "ensisijaisetHakijatLkm": 212,
+    "valitutLkm": 58
   },
   {
     "kooditHakukohde": "1.2.246.562.20.53771509923",
@@ -3042,7 +3244,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 540,
-    "ensisijaisetHakijatLkm": 97
+    "ensisijaisetHakijatLkm": 97,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.64380897955",
@@ -3057,7 +3260,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 50,
     "kaikkiHakijatLkm": 372,
-    "ensisijaisetHakijatLkm": 165
+    "ensisijaisetHakijatLkm": 165,
+    "valitutLkm": 54
   },
   {
     "kooditHakukohde": "1.2.246.562.20.66613143321",
@@ -3072,7 +3276,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 561,
-    "ensisijaisetHakijatLkm": 213
+    "ensisijaisetHakijatLkm": 213,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.84286013861",
@@ -3087,7 +3292,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 709,
-    "ensisijaisetHakijatLkm": 338
+    "ensisijaisetHakijatLkm": 338,
+    "valitutLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.89811705006",
@@ -3102,7 +3308,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 593,
-    "ensisijaisetHakijatLkm": 422
+    "ensisijaisetHakijatLkm": 422,
+    "valitutLkm": 30
   },
   {
     "kooditHakukohde": "1.2.246.562.20.90170315783",
@@ -3117,7 +3324,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 520,
-    "ensisijaisetHakijatLkm": 229
+    "ensisijaisetHakijatLkm": 229,
+    "valitutLkm": 42
   },
   {
     "kooditHakukohde": "1.2.246.562.20.32407218455",
@@ -3132,7 +3340,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 32,
     "kaikkiHakijatLkm": 322,
-    "ensisijaisetHakijatLkm": 187
+    "ensisijaisetHakijatLkm": 187,
+    "valitutLkm": 33
   },
   {
     "kooditHakukohde": "1.2.246.562.20.97021309105",
@@ -3147,7 +3356,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 508,
-    "ensisijaisetHakijatLkm": 195
+    "ensisijaisetHakijatLkm": 195,
+    "valitutLkm": 41
   },
   {
     "kooditHakukohde": "1.2.246.562.20.25877789567",
@@ -3162,7 +3372,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 411,
-    "ensisijaisetHakijatLkm": 140
+    "ensisijaisetHakijatLkm": 140,
+    "valitutLkm": 26
   },
   {
     "kooditHakukohde": "1.2.246.562.20.48480925394",
@@ -3177,7 +3388,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 531,
-    "ensisijaisetHakijatLkm": 210
+    "ensisijaisetHakijatLkm": 210,
+    "valitutLkm": 42
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51688424624",
@@ -3192,7 +3404,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 7,
     "kaikkiHakijatLkm": 45,
-    "ensisijaisetHakijatLkm": 27
+    "ensisijaisetHakijatLkm": 27,
+    "valitutLkm": 9
   },
   {
     "kooditHakukohde": "1.2.246.562.20.77462945005",
@@ -3207,7 +3420,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 144,
-    "ensisijaisetHakijatLkm": 105
+    "ensisijaisetHakijatLkm": 105,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20835761105",
@@ -3222,7 +3436,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 368,
-    "ensisijaisetHakijatLkm": 122
+    "ensisijaisetHakijatLkm": 122,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.78326270069",
@@ -3237,7 +3452,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 37,
     "kaikkiHakijatLkm": 963,
-    "ensisijaisetHakijatLkm": 410
+    "ensisijaisetHakijatLkm": 410,
+    "valitutLkm": 42
   },
   {
     "kooditHakukohde": "1.2.246.562.20.78750402881",
@@ -3252,7 +3468,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 559,
-    "ensisijaisetHakijatLkm": 131
+    "ensisijaisetHakijatLkm": 131,
+    "valitutLkm": 32
   },
   {
     "kooditHakukohde": "1.2.246.562.20.30603671527",
@@ -3267,7 +3484,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 554,
-    "ensisijaisetHakijatLkm": 134
+    "ensisijaisetHakijatLkm": 134,
+    "valitutLkm": 40
   },
   {
     "kooditHakukohde": "1.2.246.562.20.41609584713",
@@ -3282,7 +3500,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 1261,
-    "ensisijaisetHakijatLkm": 514
+    "ensisijaisetHakijatLkm": 514,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.741473446710",
@@ -3297,7 +3516,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 24,
     "kaikkiHakijatLkm": 1071,
-    "ensisijaisetHakijatLkm": 157
+    "ensisijaisetHakijatLkm": 157,
+    "valitutLkm": 28
   },
   {
     "kooditHakukohde": "1.2.246.562.20.96601232448",
@@ -3312,7 +3532,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 55,
     "kaikkiHakijatLkm": 1034,
-    "ensisijaisetHakijatLkm": 397
+    "ensisijaisetHakijatLkm": 397,
+    "valitutLkm": 62
   },
   {
     "kooditHakukohde": "1.2.246.562.20.10518238653",
@@ -3327,7 +3548,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 705,
-    "ensisijaisetHakijatLkm": 259
+    "ensisijaisetHakijatLkm": 259,
+    "valitutLkm": 30
   },
   {
     "kooditHakukohde": "1.2.246.562.20.27060639294",
@@ -3342,7 +3564,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 17,
     "kaikkiHakijatLkm": 980,
-    "ensisijaisetHakijatLkm": 244
+    "ensisijaisetHakijatLkm": 244,
+    "valitutLkm": 18
   },
   {
     "kooditHakukohde": "1.2.246.562.20.76570074179",
@@ -3357,7 +3580,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 1512,
-    "ensisijaisetHakijatLkm": 537
+    "ensisijaisetHakijatLkm": 537,
+    "valitutLkm": 41
   },
   {
     "kooditHakukohde": "1.2.246.562.20.84222511598",
@@ -3372,7 +3596,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 1558,
-    "ensisijaisetHakijatLkm": 429
+    "ensisijaisetHakijatLkm": 429,
+    "valitutLkm": 49
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20900561844",
@@ -3387,7 +3612,8 @@
     "okmOhjauksenAla": "Lääketieteet",
     "aloituspaikatLkm": 24,
     "kaikkiHakijatLkm": 634,
-    "ensisijaisetHakijatLkm": 300
+    "ensisijaisetHakijatLkm": 300,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.24363049966",
@@ -3402,7 +3628,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 414,
-    "ensisijaisetHakijatLkm": 194
+    "ensisijaisetHakijatLkm": 194,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.10000936848",
@@ -3417,7 +3644,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 96,
-    "ensisijaisetHakijatLkm": 37
+    "ensisijaisetHakijatLkm": 37,
+    "valitutLkm": 30
   },
   {
     "kooditHakukohde": "1.2.246.562.20.16327515843",
@@ -3432,7 +3660,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 2,
     "kaikkiHakijatLkm": 13,
-    "ensisijaisetHakijatLkm": 4
+    "ensisijaisetHakijatLkm": 4,
+    "valitutLkm": 2
   },
   {
     "kooditHakukohde": "1.2.246.562.20.43464871367",
@@ -3447,7 +3676,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 97,
-    "ensisijaisetHakijatLkm": 81
+    "ensisijaisetHakijatLkm": 81,
+    "valitutLkm": 23
   },
   {
     "kooditHakukohde": "1.2.246.562.20.40917007649",
@@ -3462,7 +3692,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 153,
-    "ensisijaisetHakijatLkm": 65
+    "ensisijaisetHakijatLkm": 65,
+    "valitutLkm": 40
   },
   {
     "kooditHakukohde": "1.2.246.562.20.56476265048",
@@ -3477,7 +3708,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 504,
-    "ensisijaisetHakijatLkm": 74
+    "ensisijaisetHakijatLkm": 74,
+    "valitutLkm": 35
   },
   {
     "kooditHakukohde": "1.2.246.562.20.89599758714",
@@ -3492,7 +3724,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 689,
-    "ensisijaisetHakijatLkm": 157
+    "ensisijaisetHakijatLkm": 157,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.90891844442",
@@ -3507,7 +3740,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 281,
-    "ensisijaisetHakijatLkm": 113
+    "ensisijaisetHakijatLkm": 113,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.94164648902",
@@ -3522,7 +3756,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 259,
-    "ensisijaisetHakijatLkm": 104
+    "ensisijaisetHakijatLkm": 104,
+    "valitutLkm": 26
   },
   {
     "kooditHakukohde": "1.2.246.562.20.98156344446",
@@ -3537,7 +3772,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 16,
     "kaikkiHakijatLkm": 519,
-    "ensisijaisetHakijatLkm": 155
+    "ensisijaisetHakijatLkm": 155,
+    "valitutLkm": 16
   },
   {
     "kooditHakukohde": "1.2.246.562.20.58064108119",
@@ -3552,7 +3788,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 176,
-    "ensisijaisetHakijatLkm": 32
+    "ensisijaisetHakijatLkm": 32,
+    "valitutLkm": 33
   },
   {
     "kooditHakukohde": "1.2.246.562.20.85573850253",
@@ -3567,7 +3804,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 140,
-    "ensisijaisetHakijatLkm": 33
+    "ensisijaisetHakijatLkm": 33,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.573773683610",
@@ -3582,7 +3820,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 28,
     "kaikkiHakijatLkm": 218,
-    "ensisijaisetHakijatLkm": 162
+    "ensisijaisetHakijatLkm": 162,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.42257132557",
@@ -3597,7 +3836,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 28,
     "kaikkiHakijatLkm": 689,
-    "ensisijaisetHakijatLkm": 130
+    "ensisijaisetHakijatLkm": 130,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.54855185275",
@@ -3612,7 +3852,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 80,
     "kaikkiHakijatLkm": 396,
-    "ensisijaisetHakijatLkm": 289
+    "ensisijaisetHakijatLkm": 289,
+    "valitutLkm": 102
   },
   {
     "kooditHakukohde": "1.2.246.562.20.89726477287",
@@ -3627,7 +3868,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 258,
-    "ensisijaisetHakijatLkm": 124
+    "ensisijaisetHakijatLkm": 124,
+    "valitutLkm": 35
   },
   {
     "kooditHakukohde": "1.2.246.562.20.77304279126",
@@ -3642,7 +3884,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 7,
     "kaikkiHakijatLkm": 47,
-    "ensisijaisetHakijatLkm": 35
+    "ensisijaisetHakijatLkm": 35,
+    "valitutLkm": 12
   },
   {
     "kooditHakukohde": "1.2.246.562.20.31206008349",
@@ -3657,7 +3900,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 12,
     "kaikkiHakijatLkm": 775,
-    "ensisijaisetHakijatLkm": 282
+    "ensisijaisetHakijatLkm": 282,
+    "valitutLkm": 16
   },
   {
     "kooditHakukohde": "1.2.246.562.20.34049541286",
@@ -3672,7 +3916,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 785,
-    "ensisijaisetHakijatLkm": 334
+    "ensisijaisetHakijatLkm": 334,
+    "valitutLkm": 42
   },
   {
     "kooditHakukohde": "1.2.246.562.20.28445139596",
@@ -3687,7 +3932,8 @@
     "okmOhjauksenAla": "Tieto puuttuu",
     "aloituspaikatLkm": 50,
     "kaikkiHakijatLkm": 102,
-    "ensisijaisetHakijatLkm": 72
+    "ensisijaisetHakijatLkm": 72,
+    "valitutLkm": 51
   },
   {
     "kooditHakukohde": "1.2.246.562.20.508815882510",
@@ -3702,7 +3948,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 234,
-    "ensisijaisetHakijatLkm": 46
+    "ensisijaisetHakijatLkm": 46,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51559503324",
@@ -3717,7 +3964,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 371,
-    "ensisijaisetHakijatLkm": 118
+    "ensisijaisetHakijatLkm": 118,
+    "valitutLkm": 39
   },
   {
     "kooditHakukohde": "1.2.246.562.20.93190824644",
@@ -3732,7 +3980,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 207,
-    "ensisijaisetHakijatLkm": 48
+    "ensisijaisetHakijatLkm": 48,
+    "valitutLkm": 57
   },
   {
     "kooditHakukohde": "1.2.246.562.20.13896423103",
@@ -3747,7 +3996,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 140,
-    "ensisijaisetHakijatLkm": 98
+    "ensisijaisetHakijatLkm": 98,
+    "valitutLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.63486293986",
@@ -3762,7 +4012,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 507,
-    "ensisijaisetHakijatLkm": 205
+    "ensisijaisetHakijatLkm": 205,
+    "valitutLkm": 41
   },
   {
     "kooditHakukohde": "1.2.246.562.20.51898125508",
@@ -3777,7 +4028,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 40,
     "kaikkiHakijatLkm": 551,
-    "ensisijaisetHakijatLkm": 236
+    "ensisijaisetHakijatLkm": 236,
+    "valitutLkm": 55
   },
   {
     "kooditHakukohde": "1.2.246.562.20.72996170105",
@@ -3792,7 +4044,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 60,
     "kaikkiHakijatLkm": 2137,
-    "ensisijaisetHakijatLkm": 718
+    "ensisijaisetHakijatLkm": 718,
+    "valitutLkm": 64
   },
   {
     "kooditHakukohde": "1.2.246.562.20.24606883056",
@@ -3807,7 +4060,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 1453,
-    "ensisijaisetHakijatLkm": 878
+    "ensisijaisetHakijatLkm": 878,
+    "valitutLkm": 46
   },
   {
     "kooditHakukohde": "1.2.246.562.20.47100556456",
@@ -3822,7 +4076,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 204,
-    "ensisijaisetHakijatLkm": 96
+    "ensisijaisetHakijatLkm": 96,
+    "valitutLkm": 44
   },
   {
     "kooditHakukohde": "1.2.246.562.20.26290177224",
@@ -3837,7 +4092,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 60,
     "kaikkiHakijatLkm": 394,
-    "ensisijaisetHakijatLkm": 138
+    "ensisijaisetHakijatLkm": 138,
+    "valitutLkm": 83
   },
   {
     "kooditHakukohde": "1.2.246.562.20.21987711237",
@@ -3852,7 +4108,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 45,
     "kaikkiHakijatLkm": 1445,
-    "ensisijaisetHakijatLkm": 558
+    "ensisijaisetHakijatLkm": 558,
+    "valitutLkm": 50
   },
   {
     "kooditHakukohde": "1.2.246.562.20.21194100257",
@@ -3867,7 +4124,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 1111,
-    "ensisijaisetHakijatLkm": 124
+    "ensisijaisetHakijatLkm": 124,
+    "valitutLkm": 38
   },
   {
     "kooditHakukohde": "1.2.246.562.20.36758094282",
@@ -3882,7 +4140,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 70,
     "kaikkiHakijatLkm": 1943,
-    "ensisijaisetHakijatLkm": 538
+    "ensisijaisetHakijatLkm": 538,
+    "valitutLkm": 86
   },
   {
     "kooditHakukohde": "1.2.246.562.20.49214699057",
@@ -3897,7 +4156,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 383,
-    "ensisijaisetHakijatLkm": 117
+    "ensisijaisetHakijatLkm": 117,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.90189139786",
@@ -3912,7 +4172,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 1301,
-    "ensisijaisetHakijatLkm": 215
+    "ensisijaisetHakijatLkm": 215,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.98288709995",
@@ -3927,7 +4188,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 1355,
-    "ensisijaisetHakijatLkm": 136
+    "ensisijaisetHakijatLkm": 136,
+    "valitutLkm": 30
   },
   {
     "kooditHakukohde": "1.2.246.562.20.98314432505",
@@ -3942,7 +4204,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 545,
-    "ensisijaisetHakijatLkm": 83
+    "ensisijaisetHakijatLkm": 83,
+    "valitutLkm": 34
   },
   {
     "kooditHakukohde": "1.2.246.562.20.10347993502",
@@ -3957,7 +4220,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 15,
     "kaikkiHakijatLkm": 105,
-    "ensisijaisetHakijatLkm": 39
+    "ensisijaisetHakijatLkm": 39,
+    "valitutLkm": 40
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20751229251",
@@ -3972,7 +4236,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 274,
-    "ensisijaisetHakijatLkm": 135
+    "ensisijaisetHakijatLkm": 135,
+    "valitutLkm": 72
   },
   {
     "kooditHakukohde": "1.2.246.562.20.48272084863",
@@ -3987,7 +4252,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 80,
     "kaikkiHakijatLkm": 484,
-    "ensisijaisetHakijatLkm": 161
+    "ensisijaisetHakijatLkm": 161,
+    "valitutLkm": 86
   },
   {
     "kooditHakukohde": "1.2.246.562.20.33628502271",
@@ -4002,7 +4268,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 775,
-    "ensisijaisetHakijatLkm": 278
+    "ensisijaisetHakijatLkm": 278,
+    "valitutLkm": 36
   },
   {
     "kooditHakukohde": "1.2.246.562.20.16755076169",
@@ -4017,7 +4284,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 1115,
-    "ensisijaisetHakijatLkm": 148
+    "ensisijaisetHakijatLkm": 148,
+    "valitutLkm": 46
   },
   {
     "kooditHakukohde": "1.2.246.562.20.398726019910",
@@ -4032,7 +4300,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 78,
     "kaikkiHakijatLkm": 1995,
-    "ensisijaisetHakijatLkm": 822
+    "ensisijaisetHakijatLkm": 822,
+    "valitutLkm": 107
   },
   {
     "kooditHakukohde": "1.2.246.562.20.74905407842",
@@ -4047,7 +4316,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 501,
-    "ensisijaisetHakijatLkm": 84
+    "ensisijaisetHakijatLkm": 84,
+    "valitutLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.78548929112",
@@ -4062,7 +4332,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 1365,
-    "ensisijaisetHakijatLkm": 236
+    "ensisijaisetHakijatLkm": 236,
+    "valitutLkm": 44
   },
   {
     "kooditHakukohde": "1.2.246.562.20.605508510210",
@@ -4077,7 +4348,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 35,
     "kaikkiHakijatLkm": 632,
-    "ensisijaisetHakijatLkm": 157
+    "ensisijaisetHakijatLkm": 157,
+    "valitutLkm": 43
   },
   {
     "kooditHakukohde": "1.2.246.562.20.67738937258",
@@ -4092,7 +4364,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 80,
     "kaikkiHakijatLkm": 729,
-    "ensisijaisetHakijatLkm": 282
+    "ensisijaisetHakijatLkm": 282,
+    "valitutLkm": 94
   },
   {
     "kooditHakukohde": "1.2.246.562.20.68530147252",
@@ -4107,7 +4380,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 469,
-    "ensisijaisetHakijatLkm": 193
+    "ensisijaisetHakijatLkm": 193,
+    "valitutLkm": 20
   },
   {
     "kooditHakukohde": "1.2.246.562.20.13396701933",
@@ -4122,7 +4396,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 37,
     "kaikkiHakijatLkm": 663,
-    "ensisijaisetHakijatLkm": 155
+    "ensisijaisetHakijatLkm": 155,
+    "valitutLkm": 47
   },
   {
     "kooditHakukohde": "1.2.246.562.20.13848712629",
@@ -4137,7 +4412,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 75,
     "kaikkiHakijatLkm": 1188,
-    "ensisijaisetHakijatLkm": 369
+    "ensisijaisetHakijatLkm": 369,
+    "valitutLkm": 85
   },
   {
     "kooditHakukohde": "1.2.246.562.20.39424685004",
@@ -4152,7 +4428,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 1027,
-    "ensisijaisetHakijatLkm": 230
+    "ensisijaisetHakijatLkm": 230,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.14952457001",
@@ -4167,7 +4444,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 754,
-    "ensisijaisetHakijatLkm": 118
+    "ensisijaisetHakijatLkm": 118,
+    "valitutLkm": 41
   },
   {
     "kooditHakukohde": "1.2.246.562.20.35356947669",
@@ -4182,7 +4460,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 95,
     "kaikkiHakijatLkm": 1107,
-    "ensisijaisetHakijatLkm": 386
+    "ensisijaisetHakijatLkm": 386,
+    "valitutLkm": 116
   },
   {
     "kooditHakukohde": "1.2.246.562.20.66934070427",
@@ -4197,7 +4476,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 30,
     "kaikkiHakijatLkm": 874,
-    "ensisijaisetHakijatLkm": 531
+    "ensisijaisetHakijatLkm": 531,
+    "valitutLkm": 37
   },
   {
     "kooditHakukohde": "1.2.246.562.20.92440857263",
@@ -4212,7 +4492,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 10,
     "kaikkiHakijatLkm": 95,
-    "ensisijaisetHakijatLkm": 62
+    "ensisijaisetHakijatLkm": 62,
+    "valitutLkm": 12
   },
   {
     "kooditHakukohde": "1.2.246.562.20.72083524628",
@@ -4227,7 +4508,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 5,
     "kaikkiHakijatLkm": 39,
-    "ensisijaisetHakijatLkm": 27
+    "ensisijaisetHakijatLkm": 27,
+    "valitutLkm": 5
   },
   {
     "kooditHakukohde": "1.2.246.562.20.20971857055",
@@ -4242,7 +4524,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 8,
     "kaikkiHakijatLkm": 38,
-    "ensisijaisetHakijatLkm": 20
+    "ensisijaisetHakijatLkm": 20,
+    "valitutLkm": 14
   },
   {
     "kooditHakukohde": "1.2.246.562.20.14858303721",
@@ -4257,7 +4540,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 52,
-    "ensisijaisetHakijatLkm": 35
+    "ensisijaisetHakijatLkm": 35,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.97417287212",
@@ -4272,7 +4556,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 23,
     "kaikkiHakijatLkm": 118,
-    "ensisijaisetHakijatLkm": 79
+    "ensisijaisetHakijatLkm": 79,
+    "valitutLkm": 25
   },
   {
     "kooditHakukohde": "1.2.246.562.20.66996981859",
@@ -4287,7 +4572,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 395,
-    "ensisijaisetHakijatLkm": 190
+    "ensisijaisetHakijatLkm": 190,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.73195347049",
@@ -4302,7 +4588,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 577,
-    "ensisijaisetHakijatLkm": 347
+    "ensisijaisetHakijatLkm": 347,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.23365618455",
@@ -4317,7 +4604,8 @@
     "okmOhjauksenAla": "Palvelualat",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 188,
-    "ensisijaisetHakijatLkm": 141
+    "ensisijaisetHakijatLkm": 141,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.87721314398",
@@ -4332,7 +4620,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 12,
     "kaikkiHakijatLkm": 32,
-    "ensisijaisetHakijatLkm": 21
+    "ensisijaisetHakijatLkm": 21,
+    "valitutLkm": 13
   },
   {
     "kooditHakukohde": "1.2.246.562.20.27445595906",
@@ -4347,7 +4636,8 @@
     "okmOhjauksenAla": "Kauppa, hallinto ja oikeustieteet",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 274,
-    "ensisijaisetHakijatLkm": 172
+    "ensisijaisetHakijatLkm": 172,
+    "valitutLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.19506747211",
@@ -4362,7 +4652,8 @@
     "okmOhjauksenAla": "Tietojenkäsittely ja tietoliikenne",
     "aloituspaikatLkm": 20,
     "kaikkiHakijatLkm": 94,
-    "ensisijaisetHakijatLkm": 74
+    "ensisijaisetHakijatLkm": 74,
+    "valitutLkm": 27
   },
   {
     "kooditHakukohde": "1.2.246.562.20.646022780010",
@@ -4377,7 +4668,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 27,
     "kaikkiHakijatLkm": 319,
-    "ensisijaisetHakijatLkm": 163
+    "ensisijaisetHakijatLkm": 163,
+    "valitutLkm": 29
   },
   {
     "kooditHakukohde": "1.2.246.562.20.67848467832",
@@ -4392,7 +4684,8 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 157,
-    "ensisijaisetHakijatLkm": 80
+    "ensisijaisetHakijatLkm": 80,
+    "valitutLkm": 31
   },
   {
     "kooditHakukohde": "1.2.246.562.20.43703681742",
@@ -4407,6 +4700,7 @@
     "okmOhjauksenAla": "Terveys- ja hyvinvointialat",
     "aloituspaikatLkm": 25,
     "kaikkiHakijatLkm": 108,
-    "ensisijaisetHakijatLkm": 35
+    "ensisijaisetHakijatLkm": 35,
+    "valitutLkm": 34
   }
 ]

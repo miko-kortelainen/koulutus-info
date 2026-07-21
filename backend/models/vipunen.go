@@ -18,4 +18,5 @@ type StatisticsEntry struct {
 	AloituspaikatLkm       int    `json:"aloituspaikatLkm"`
 	KaikkiHakijatLkm       int    `json:"kaikkiHakijatLkm"`
 	EnsisijaisetHakijatLkm int    `json:"ensisijaisetHakijatLkm"`
+	ValitutLkm             int    `json:"valitutLkm"`
 }
