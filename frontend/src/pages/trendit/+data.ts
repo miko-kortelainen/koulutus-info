@@ -1,4 +1,4 @@
-import { readCurrentYearStatistics, readStatistics } from "@/api/loadData";
+import { readCurrentYearStatistics, readStatistics } from "@/api/serverData";
 import { statisticsRoundShortLabel, YEAR_OPTIONS } from "@/config/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 

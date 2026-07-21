@@ -4,8 +4,8 @@ import {
   readCurrentYearStatistics,
   readSchoolsWithAvailableCutoffs,
   schoolNames,
-} from "@/api/loadData";
-import { slugify } from "@/components/slug";
+} from "@/api/serverData";
+import { slugify } from "@/lib/slug";
 import type { StatisticsEntry, ToteutusEntry } from "@/types.gen";
 
 export interface SchoolPageData {

@@ -1,6 +1,6 @@
 import { Box, VisuallyHidden } from "@chakra-ui/react";
 import { CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
-import { numberFormat } from "@/components/hakijapaineTier";
+import { numberFormat } from "@/lib/statistics";
 import type { TrendPoint } from "../+data";
 
 interface ApplicantTotalsChartProps {

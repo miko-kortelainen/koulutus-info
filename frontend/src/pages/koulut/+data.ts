@@ -1,5 +1,5 @@
-import { readCurrentYearStatistics, readSchools, schoolNames } from "@/api/loadData";
-import { slugify } from "@/components/slug";
+import { readCurrentYearStatistics, readSchools, schoolNames } from "@/api/serverData";
+import { slugify } from "@/lib/slug";
 
 export interface SchoolListItem {
   name: string;

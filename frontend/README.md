@@ -46,7 +46,7 @@ flowchart LR
   end
 
   subgraph prerender["Vike prerender"]
-    json --> serverData["loadData.ts<br/>+ dataValidation.ts"]
+    json --> serverData["serverData.ts<br/>+ dataValidation.ts"]
     serverData --> dataFunctions["Route +data.ts"]
     dataFunctions --> routePage["Route +Page.tsx"]
   end
@@ -59,7 +59,7 @@ flowchart LR
   end
 
   subgraph runtime["Browser runtime"]
-    json --> clientApi["api.ts fetch<br/>+ dataValidation.ts"]
+    json --> clientApi["browserData.ts fetch<br/>+ dataValidation.ts"]
     clientApi --> queries["TanStack Query<br/>Hakijamäärät · Trendit · Vertailu<br/>Pistelaskuri"]
     manifest --> yearOptions["yearOptions.ts<br/>current statistics round"]
     localStorage["localStorage"] --> persisted["Favorites · ScoreForm"]

@@ -1,11 +1,11 @@
 import { expect, test } from "vitest";
-import type { Programme, School as CutoffSchool } from "@/types/pisterajat.gen";
+import type { School as CutoffSchool, Programme } from "@/types/pisterajat.gen";
 import type { SchoolsResponse } from "@/types.gen";
 import {
   alaNamesForAlaParam,
   alaSlugParam,
-  filterUnavailableCutoffAlat,
   filterProgrammesByAlaParam,
+  filterUnavailableCutoffAlat,
   mergeCutoffProgrammes,
   newestCutoffRoundForAlaParam,
 } from "./cutoffs";

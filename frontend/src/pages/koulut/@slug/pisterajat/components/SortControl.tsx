@@ -1,6 +1,5 @@
 import OptionSelect from "@/components/OptionSelect";
-
-export type SortOption = "asc" | "desc";
+import type { SortOption } from "../hooks/useFilteredProgrammes";
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "A-Ö", value: "asc" },

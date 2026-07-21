@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import { expect, test } from "vitest";
-import type { ProgrammeWithRounds } from "@/api/cutoffs";
+import type { ProgrammeWithRounds } from "@/lib/cutoffs";
 import { renderWithChakra } from "@/test/render";
 import CutoffCard from "./CutoffCard";
 

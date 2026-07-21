@@ -5,9 +5,9 @@ import { useData } from "vike-react/useData";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
-import { slugify } from "@/components/slug";
 import { CURRENT_YEAR, statisticsRoundShortLabel } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
+import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 import type { SchoolPageData } from "./+data";
 

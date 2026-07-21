@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
-import { getCutoffSchools } from "@/api/api";
+import { getCutoffSchools } from "@/api/browserData";
 import SearchInput from "@/components/SearchInput";
 import { cutoffRoundLabel, cutoffRoundShortLabel } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
