@@ -5,7 +5,7 @@ import { useData } from "vike-react/useData";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 import { CURRENT_YEAR, statisticsRoundShortLabel } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
@@ -47,7 +47,7 @@ export default function SchoolPage() {
           fontSize="sm"
           fontWeight="semibold"
           gap={1}
-          href={`/koulut/${slugifySchoolName(schoolName)}/pisterajat/`}
+          href={`/koulut/${slugify(schoolName)}/pisterajat/`}
           textDecoration="underline"
           textDecorationColor={COLORS.accentFg}
           textDecorationStyle="dotted"

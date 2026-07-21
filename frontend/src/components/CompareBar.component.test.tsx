@@ -11,6 +11,7 @@ const entry = (id: string, name: string): StatisticsEntry => ({
   aloituspaikatLkm: 10,
   kaikkiHakijatLkm: 100,
   ensisijaisetHakijatLkm: 20,
+  valitutLkm: 10,
 });
 
 test("disables comparison with one selection and removes the selected entry", async () => {

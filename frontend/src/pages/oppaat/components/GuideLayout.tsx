@@ -1,6 +1,7 @@
 import { Box, Heading, HStack, Link, Stack, Table, Text } from "@chakra-ui/react";
 import type { MDXComponents, MDXProps } from "mdx/types.js";
 import type { ComponentProps, ComponentType, ReactNode } from "react";
+import { slugify } from "@/components/slug";
 import PageContainer from "@/layout/PageContainer";
 import { formatGuideDate, getGuide } from "../guides";
 import GuideAccordion from "./GuideAccordion";
@@ -34,15 +35,6 @@ const defaultRelated = [
   },
 ];
 
-export function guideHeadingId(label: string): string {
-  return label
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
 export function getGuideHeadings(source: string): GuideHeading[] {
   const headings: GuideHeading[] = [];
   const ids = new Set<string>();
@@ -73,7 +65,7 @@ export function getGuideHeadings(source: string): GuideHeading[] {
       throw new Error(`Invalid guide heading on line ${index + 1}: Markdown and JSX are not supported`);
     }
 
-    const id = guideHeadingId(label);
+    const id = slugify(label);
     if (!id) throw new Error(`Invalid guide heading on line ${index + 1}: normalized ID is empty`);
     if (ids.has(id)) throw new Error(`Guide heading ID collision "${id}" on line ${index + 1}`);
 
@@ -116,7 +108,7 @@ const mdxComponents = {
       <Heading
         _first={{ mt: 0 }}
         as="h2"
-        id={guideHeadingId(children)}
+        id={slugify(children)}
         mt={{ base: 5, md: 7 }}
         scrollMarginTop={6}
         size="lg"

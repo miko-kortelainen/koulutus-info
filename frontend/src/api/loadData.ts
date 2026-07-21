@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import { filterUnavailableCutoffAlat } from "@/api/cutoffs";
 import { parseCutoffSchools, parseSchools, parseStatistics } from "@/api/dataValidation";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 import {
   type CutoffRound,
   compareCutoffRounds,
@@ -22,7 +22,7 @@ const cache = new Map<string, CacheEntry>();
 const assertNoSlugCollisions = (names: string[], dataset: string) => {
   const slugToName = new Map<string, string>();
   for (const name of names) {
-    const slug = slugifySchoolName(name);
+    const slug = slugify(name);
     const existing = slugToName.get(slug);
     if (existing && existing !== name) {
       throw new Error(`${dataset} slug collision: "${name}" and "${existing}" both slugify to "${slug}"`);

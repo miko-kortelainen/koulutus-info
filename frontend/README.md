@@ -39,9 +39,10 @@ See [`../backend/README.md`](../backend/README.md) for the data update commands.
 ```mermaid
 flowchart LR
   subgraph generation["Offline generation"]
-    sources["Vipunen · Opintopolku<br/>cutoff CSV"] --> generators["Go generators"]
-    generators --> json["public/data/*.json"]
-    generators --> manifest["generated/dataManifest.ts"]
+    sources["Vipunen · Opintopolku"] --> generator["Go data generator"]
+    generator --> json["public/data/*.json"]
+    generator --> manifest["generated/dataManifest.ts"]
+    cutoffCsv["cutoff CSV"] --> cutoffConverter["Go cutoff converter"] --> json
   end
 
   subgraph prerender["Vike prerender"]

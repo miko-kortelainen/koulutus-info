@@ -114,8 +114,10 @@ test("nav links navigate to all pages", async ({ page }) => {
 });
 
 test("/hakijamaarat: loads data and search filters results", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
+  expect(await page.evaluate<number>("document.documentElement.scrollWidth")).toBeLessThanOrEqual(390);
 
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
   await search.fill("xxxnotexist");
@@ -405,6 +407,18 @@ test("/hakijamaarat: koulutusala filter narrows results", async ({ page }) => {
   await expect.poll(getResultCount).toBe(initialCount);
 });
 
+test("/hakijamaarat: sorts results by acceptance rate", async ({ page }) => {
+  await page.goto("/hakijamaarat/");
+  const cards = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Vertaile", exact: true }) });
+  await expect(cards.first()).toBeVisible({ timeout: 10000 });
+
+  await selectOption(page, "Järjestys", "Korkein sisäänpääsyprosentti");
+  await expect(cards.first()).toContainText("Insinööri (ylempi AMK), ajoneuvotekniikka");
+
+  await selectOption(page, "Järjestys", "Matalin sisäänpääsyprosentti");
+  await expect(cards.first()).toContainText("Näyttelijäntaide, suomenkielinen");
+});
+
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
   await page.goto("/koulutukset/");
   await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
@@ -529,6 +543,7 @@ test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Koulut" })).toBeVisible();
 
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
+  await expect(page.getByText(/Sisäänpääsyprosentti \d/).first()).toBeVisible();
 
   await page.getByRole("tab", { name: "Ammattikorkeakoulut" }).click();
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
