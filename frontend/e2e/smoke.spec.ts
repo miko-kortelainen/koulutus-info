@@ -98,7 +98,7 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["koulutukset", "/koulutukset/"],
     ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
-    ["tallennetut", "/tallennetut/"],
+    ["oma hakulista", "/oma-hakulista/"],
     ["trendit", "/trendit/"],
     ["palaute", "/palaute/"],
     ["ukk", "/ukk/"],
@@ -356,7 +356,7 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
 
 test("/koulutukset: loads data and search filters results", async ({ page }) => {
   await page.goto("/koulutukset/");
-  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Hae opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
@@ -421,7 +421,7 @@ test("/hakijamaarat: sorts results by acceptance rate", async ({ page }) => {
 
 test("/koulutukset: school listbox filter narrows results", async ({ page }) => {
   await page.goto("/koulutukset/");
-  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Hae opintopolussa").first()).toBeVisible({ timeout: 10000 });
   const cards = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Tallenna" }) });
   const initialCards = await cards.allTextContents();
 
@@ -472,7 +472,7 @@ test("/koulutukset: card link opens ala-filtered pisterajat history", async ({ p
   await expect(page.getByRole("article").first()).toBeVisible();
 });
 
-test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears it", async ({ page }) => {
+test("/koulutukset: saving a card lists it on /oma-hakulista and unsaving clears it", async ({ page }) => {
   await page.addInitScript(() => {
     if (sessionStorage.getItem("favorites-storage-initialized")) return;
 
@@ -480,7 +480,7 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
     localStorage.setItem("yhteishaku:tallennetut", "{}");
   });
   await page.goto("/koulutukset/");
-  await expect(page.getByText("Katso opintopolussa").first()).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Hae opintopolussa").first()).toBeVisible({ timeout: 10000 });
 
   const removeFavorite = page.getByRole("button", { name: "Poista tallennetuista" }).first();
   // click can land before hydration, so retry without toggling an already-saved card
@@ -491,12 +491,51 @@ test("/koulutukset: saving a card lists it on /tallennetut and unsaving clears i
     await expect(removeFavorite).toBeVisible({ timeout: 1000 });
   }).toPass();
 
-  await page.goto("/tallennetut/");
+  await page.goto("/oma-hakulista/");
   await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).not.toBeVisible();
   await expect(page.getByRole("button", { name: "Poista tallennetuista" })).toHaveCount(1);
 
   await page.getByRole("button", { name: "Poista tallennetuista" }).click();
   await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).toBeVisible();
+});
+
+test("/oma-hakulista: reordering moves a card and persists after reload", async ({ page }) => {
+  await page.addInitScript(() => {
+    if (sessionStorage.getItem("favorites-storage-initialized")) return;
+
+    sessionStorage.setItem("favorites-storage-initialized", "true");
+    localStorage.setItem(
+      "yhteishaku:tallennetut",
+      JSON.stringify([
+        {
+          toteutusOid: "1.2.246.562.20.00000000000000001",
+          oppilaitosNimi: { fi: "Esimerkkikoulu" },
+          toteutusNimi: { fi: "Tietojenkäsittelytiede" },
+          kunnat: ["Helsinki"],
+          koulutusalat: [],
+        },
+        {
+          toteutusOid: "1.2.246.562.20.00000000000000002",
+          oppilaitosNimi: { fi: "Toinen koulu" },
+          toteutusNimi: { fi: "Kauppatieteet" },
+          kunnat: ["Tampere"],
+          koulutusalat: [],
+        },
+      ]),
+    );
+  });
+  await page.goto("/oma-hakulista/");
+
+  const cards = page.locator("li");
+  await expect(cards.first()).toContainText("Tietojenkäsittelytiede");
+  await expect(page.getByRole("button", { name: "Siirrä ylöspäin" }).first()).toBeDisabled();
+  await expect(page.getByRole("button", { name: "Siirrä alaspäin" }).last()).toBeDisabled();
+
+  await page.getByRole("button", { name: "Siirrä alaspäin" }).first().click();
+  await expect(cards.first()).toContainText("Kauppatieteet");
+
+  await page.reload();
+  await expect(cards.first()).toContainText("Kauppatieteet");
 });
 
 test("/palaute: submits feedback and shows thank you message", async ({ page }) => {
