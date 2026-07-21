@@ -2,7 +2,7 @@ import { Badge, Button, Card, HStack, Link, Separator, SimpleGrid, Stack, Stat, 
 import { memo } from "react";
 import { HiLocationMarker, HiPlus } from "react-icons/hi";
 import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/components/hakijapaineTier";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 import { COLORS } from "@/theme";
 import type { StatisticsEntry } from "@/types.gen";
 
@@ -94,7 +94,7 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
         alignSelf="flex-start"
         fontSize={{ base: "xs", md: "sm" }}
         fontWeight="semibold"
-        href={`/koulut/${slugifySchoolName(degree.korkeakoulu ?? "")}/`}
+        href={`/koulut/${slugify(degree.korkeakoulu ?? "")}/`}
         textDecor="none"
       >
         <Badge bg="accent" size="sm">

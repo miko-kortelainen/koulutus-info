@@ -1,4 +1,4 @@
-export const slugifySchoolName = (name: string): string =>
+export const slugify = (name: string): string =>
   name
     .toLowerCase()
     .normalize("NFD")

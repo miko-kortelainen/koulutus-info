@@ -1,5 +1,5 @@
 import { readCurrentYearStatistics, readSchools, schoolNames } from "@/api/loadData";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 
 export interface SchoolListItem {
   name: string;
@@ -20,7 +20,7 @@ export const data = (): SchoolListItem[] => {
     const rows = statistics.filter((s) => s.korkeakoulu === name);
     return {
       name,
-      slug: slugifySchoolName(name),
+      slug: slugify(name),
       sektori: rows[0]?.sektori ?? "",
       koulutuksia: toteutukset.filter((t) => t.oppilaitosNimi.fi === name).length,
       kaikkiHakijat: rows.reduce((sum, r) => sum + r.kaikkiHakijatLkm, 0),

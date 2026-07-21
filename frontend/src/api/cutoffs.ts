@@ -1,5 +1,5 @@
-import { slugifySchoolName } from "@/components/slug";
-import { compareCutoffRounds, type CutoffRound } from "@/config/cutoffRounds";
+import { slugify } from "@/components/slug";
+import { type CutoffRound, compareCutoffRounds } from "@/config/cutoffRounds";
 import type { Cutoff, Programme as CutoffProgramme, School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { SchoolsResponse } from "@/types.gen";
 
@@ -13,16 +13,16 @@ export interface ProgrammeWithRounds extends Omit<CutoffProgramme, "cutoffs"> {
 
 // Ala names can contain commas ("Kauppa, hallinto ja oikeustieteet"), so the ?ala= query
 // param carries comma-separated slugs instead of display names.
-export const alaSlugParam = (alat: string[]): string => alat.map(slugifySchoolName).join(",");
+export const alaSlugParam = (alat: string[]): string => alat.map(slugify).join(",");
 
 export const filterProgrammesByAlaParam = <T extends CutoffProgramme>(programmes: T[], alaParam: string): T[] => {
   const slugs = alaParam.split(",");
-  return programmes.filter((programme) => slugs.includes(slugifySchoolName(programme.koulutusala)));
+  return programmes.filter((programme) => slugs.includes(slugify(programme.koulutusala)));
 };
 
 export const alaNamesForAlaParam = (programmes: CutoffProgramme[], alaParam: string): string[] => {
   const slugs = new Set(alaParam.split(","));
-  const names = programmes.map((programme) => programme.koulutusala).filter((ala) => slugs.has(slugifySchoolName(ala)));
+  const names = programmes.map((programme) => programme.koulutusala).filter((ala) => slugs.has(slugify(ala)));
   return [...new Set(names)].sort((a, b) => a.localeCompare(b, "fi"));
 };
 
