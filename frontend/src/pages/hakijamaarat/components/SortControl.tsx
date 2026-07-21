@@ -1,6 +1,14 @@
 import OptionSelect from "@/components/OptionSelect";
 
-export type SortOption = "asc" | "desc" | "most_popular" | "least_popular" | "most_spots" | "least_spots";
+export type SortOption =
+  | "asc"
+  | "desc"
+  | "most_popular"
+  | "least_popular"
+  | "most_spots"
+  | "least_spots"
+  | "highest_acceptance_rate"
+  | "lowest_acceptance_rate";
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "A-Ö", value: "asc" },
@@ -9,6 +17,8 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Vähiten hakijoita", value: "least_popular" },
   { label: "Eniten paikkoja", value: "most_spots" },
   { label: "Vähiten paikkoja", value: "least_spots" },
+  { label: "Korkein sisäänpääsyprosentti", value: "highest_acceptance_rate" },
+  { label: "Matalin sisäänpääsyprosentti", value: "lowest_acceptance_rate" },
 ];
 
 interface SortControlProps {
