@@ -51,11 +51,6 @@ export default function ScoreResultCard({
             <Text color={isQualified ? "fg.accent" : "fg.muted"} fontSize="lg" fontWeight="bold" letterSpacing="wide">
               {userScore === undefined ? "–" : scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
             </Text>
-            {userScore !== undefined ? (
-              <Text fontSize="xs" fontWeight="semibold">
-                {isQualified ? "Pisteet riittävät" : "Pisteet eivät riitä"}
-              </Text>
-            ) : null}
           </Stack>
         </Stack>
       </Card.Body>

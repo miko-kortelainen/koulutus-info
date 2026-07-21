@@ -97,7 +97,7 @@ export default function StatsListPage() {
   );
 
   const sidebar = (
-    <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
+    <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
       <SearchInput
         onChange={(value) => {
           setSearchTerm(value);

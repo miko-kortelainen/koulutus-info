@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T14:27:57.832855414Z",
+  "generatedAt": "2026-07-21T14:01:12.961780065Z",
   "statisticsRounds": [
     "2026_kevat",
     "2025_syksy",
@@ -15,7 +15,7 @@
     "2020_syksy"
   ],
   "currentStatisticsRound": "2026_kevat",
-  "statisticsUpdatedAt": "2026-07-17T14:38:53.37257073Z",
+  "statisticsUpdatedAt": "2026-07-21T14:01:12.961780065Z",
   "programmesUpdatedAt": "2026-07-19T14:27:57.832855414Z",
   "programmesYhteishakuOid": "1.2.246.562.29.00000000000000087775"
 }

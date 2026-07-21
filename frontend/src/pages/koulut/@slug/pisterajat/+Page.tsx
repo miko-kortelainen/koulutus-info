@@ -2,17 +2,13 @@ import { Box, Heading, Link, Separator, Stack, Tag, Text, VStack } from "@chakra
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
-import {
-  alaNamesForAlaParam,
-  filterProgrammesByAlaParam,
-  newestCutoffRoundForAlaParam,
-} from "@/api/cutoffs";
+import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/api/cutoffs";
 import CutoffCard from "@/components/CutoffCard";
 import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
-import { slugifySchoolName } from "@/components/slug";
-import { compareCutoffRounds, type CutoffRound, cutoffRoundLabel } from "@/config/cutoffRounds";
+import { slugify } from "@/components/slug";
+import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
@@ -44,7 +40,10 @@ export default function CutoffPage() {
   const [alaDismissed, setAlaDismissed] = useState(false);
   const [selectedRound, setSelectedRound] = useState<CutoffRound>();
   const alaParam = mounted && !alaDismissed ? urlParsed.search.ala : undefined;
-  const selectedAlat = useMemo(() => (alaParam ? alaNamesForAlaParam(programmes, alaParam) : []), [programmes, alaParam]);
+  const selectedAlat = useMemo(
+    () => (alaParam ? alaNamesForAlaParam(programmes, alaParam) : []),
+    [programmes, alaParam],
+  );
   const scopedAlaParam = selectedAlat.length > 0 ? alaParam : undefined;
   const defaultRound = useMemo(
     () => newestCutoffRoundForAlaParam(programmes, scopedAlaParam) ?? rounds[0],
@@ -65,7 +64,7 @@ export default function CutoffPage() {
   const linkBack = (
     <Link
       fontSize="sm"
-      href={`/koulut/${slugifySchoolName(schoolName)}/`}
+      href={`/koulut/${slugify(schoolName)}/`}
       textDecoration="underline"
       textDecorationColor={COLORS.accentFg}
       textDecorationStyle="dotted"

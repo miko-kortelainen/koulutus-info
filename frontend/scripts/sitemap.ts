@@ -1,6 +1,6 @@
 import { writeFileSync } from "node:fs";
 import { cutoffAlaNames, cutoffSchoolNames, schoolNames } from "../src/api/loadData";
-import { slugifySchoolName } from "../src/components/slug";
+import { slugify } from "../src/components/slug";
 import { guides } from "../src/pages/oppaat/guides";
 
 const paths = [
@@ -9,7 +9,7 @@ const paths = [
   "/koulutukset/",
   "/pistelaskuri/",
   "/pisterajat/",
-  ...cutoffAlaNames().map((name) => `/pisterajat/${slugifySchoolName(name)}/`),
+  ...cutoffAlaNames().map((name) => `/pisterajat/${slugify(name)}/`),
   "/oppaat/",
   ...guides.map((guide) => `/oppaat/${guide.slug}/`),
   "/koulut/",
@@ -18,8 +18,8 @@ const paths = [
   "/ukk/",
   "/palaute/",
   "/tietosuojaseloste/",
-  ...schoolNames().map((name) => `/koulut/${slugifySchoolName(name)}/`),
-  ...cutoffSchoolNames().map((name) => `/koulut/${slugifySchoolName(name)}/pisterajat/`),
+  ...schoolNames().map((name) => `/koulut/${slugify(name)}/`),
+  ...cutoffSchoolNames().map((name) => `/koulut/${slugify(name)}/pisterajat/`),
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

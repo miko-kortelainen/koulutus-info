@@ -15,6 +15,15 @@ export const getHakijapaine = (entry: Pick<StatisticsEntry, "aloituspaikatLkm" |
 
 export const numberFormat = new Intl.NumberFormat("fi-FI");
 export const ratioFormat = new Intl.NumberFormat("fi-FI", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const percentFormat = new Intl.NumberFormat("fi-FI", { style: "percent", maximumFractionDigits: 1 });
+
+export const getSisaanpaasyprosentti = (valitutLkm: number, kaikkiHakijatLkm: number) =>
+  valitutLkm >= 5 && kaikkiHakijatLkm >= 5 ? valitutLkm / kaikkiHakijatLkm : null;
+
+export const formatSisaanpaasyprosentti = (valitutLkm: number, kaikkiHakijatLkm: number) => {
+  const percentage = getSisaanpaasyprosentti(valitutLkm, kaikkiHakijatLkm);
+  return percentage != null ? percentFormat.format(percentage) : "–";
+};
 
 // Vipunen masks counts under 5
 export const formatCount = (n: number) => (n < 5 ? "alle 5" : numberFormat.format(n));

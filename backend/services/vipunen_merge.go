@@ -43,12 +43,14 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 			first.AloituspaikatLkm = 0
 			first.KaikkiHakijatLkm = 0
 			first.EnsisijaisetHakijatLkm = 0
+			first.ValitutLkm = 0
 			m = &first
 			grouped[r.KooditHakukohde] = m
 		}
 		m.AloituspaikatLkm += r.AloituspaikatLkm
 		m.KaikkiHakijatLkm += r.KaikkiHakijatLkm
 		m.EnsisijaisetHakijatLkm += r.EnsisijaisetHakijatLkm
+		m.ValitutLkm += r.ValitutLkm
 	}
 
 	result := make([]models.StatisticsEntry, 0, len(grouped))

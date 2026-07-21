@@ -4,6 +4,7 @@ aputyökalut/
 testdata
 ominaisuudet.txt
 frontend/test-results/
+/frontend/public/sitemap.xml
 
 # Logs
 logs

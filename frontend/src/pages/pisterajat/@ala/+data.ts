@@ -1,7 +1,7 @@
 import type { PageContextServer } from "vike/types";
 import { type CutoffEntry, mergeCutoffProgrammes, type ProgrammeWithRounds } from "@/api/cutoffs";
 import { availableCutoffRounds, cutoffAlaNames, readCutoffSchools } from "@/api/loadData";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 
 interface AlaSchool {
   name: string;
@@ -16,7 +16,7 @@ export interface AlaPageData {
 
 export const data = (pageContext: PageContextServer): AlaPageData => {
   const { ala } = pageContext.routeParams;
-  const alaName = cutoffAlaNames().find((name) => slugifySchoolName(name) === ala) ?? "";
+  const alaName = cutoffAlaNames().find((name) => slugify(name) === ala) ?? "";
   const bySchool = new Map<string, { name: string; slug: string; entries: CutoffEntry[] }>();
 
   for (const round of availableCutoffRounds()) {
@@ -25,7 +25,7 @@ export const data = (pageContext: PageContextServer): AlaPageData => {
         if (programme.koulutusala !== alaName) continue;
         let entry = bySchool.get(school.name);
         if (!entry) {
-          entry = { name: school.name, slug: slugifySchoolName(school.name), entries: [] };
+          entry = { name: school.name, slug: slugify(school.name), entries: [] };
           bySchool.set(school.name, entry);
         }
         entry.entries.push({ programme, round });
