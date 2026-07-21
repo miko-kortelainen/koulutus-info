@@ -1,11 +1,11 @@
 import { useData } from "vike-react/useData";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 import { Head as GlobalHead } from "../../+Head";
 import type { SchoolPageData } from "./+data";
 
 export function Head() {
   const { schoolName } = useData<SchoolPageData>();
-  const url = `https://yhteishaku.app/koulut/${slugifySchoolName(schoolName)}/`;
+  const url = `https://yhteishaku.app/koulut/${slugify(schoolName)}/`;
   const description = `${schoolName} – yhteishaun koulutukset, hakijamäärät ja aloituspaikat.`;
 
   return (

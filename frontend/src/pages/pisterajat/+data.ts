@@ -1,5 +1,5 @@
 import { cutoffAlaNames, cutoffSchoolNames } from "@/api/loadData";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 
 export interface CutoffIndexData {
   alat: { name: string; slug: string }[];
@@ -7,6 +7,6 @@ export interface CutoffIndexData {
 }
 
 export const data = (): CutoffIndexData => ({
-  alat: cutoffAlaNames().map((name) => ({ name, slug: slugifySchoolName(name) })),
-  schools: cutoffSchoolNames().map((name) => ({ name, slug: slugifySchoolName(name) })),
+  alat: cutoffAlaNames().map((name) => ({ name, slug: slugify(name) })),
+  schools: cutoffSchoolNames().map((name) => ({ name, slug: slugify(name) })),
 });

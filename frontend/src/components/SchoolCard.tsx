@@ -1,7 +1,7 @@
 import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiHeart, HiLocationMarker, HiOutlineHeart } from "react-icons/hi";
 import { alaSlugParam } from "@/api/cutoffs";
-import { slugifySchoolName } from "@/components/slug";
+import { slugify } from "@/components/slug";
 import useFavorites from "@/hooks/useFavorites";
 import { COLORS } from "@/theme";
 import type { ToteutusEntry } from "@/types.gen";
@@ -29,7 +29,7 @@ export default function SchoolCard({ toteutus }: SchoolCardProps) {
       size={{ base: "sm", md: "lg" }}
       width="fit"
     >
-      <a href={`/koulut/${slugifySchoolName(schoolName)}/`}>
+      <a href={`/koulut/${slugify(schoolName)}/`}>
         <HiLocationMarker /> {schoolName}
       </a>
     </Badge>
@@ -37,7 +37,7 @@ export default function SchoolCard({ toteutus }: SchoolCardProps) {
 
   // koulutusalat is absent on favorites saved before the field existed
   const pisterajatURL = toteutus.koulutusalat?.length
-    ? `/koulut/${slugifySchoolName(schoolName)}/pisterajat/?ala=${alaSlugParam(toteutus.koulutusalat)}`
+    ? `/koulut/${slugify(schoolName)}/pisterajat/?ala=${alaSlugParam(toteutus.koulutusalat)}`
     : null;
 
   const footer = (
