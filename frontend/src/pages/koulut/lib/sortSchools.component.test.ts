@@ -1,7 +1,6 @@
 import { expect, test } from "vitest";
-import type { SchoolListItem } from "./+data";
-import type { SortOption } from "./components/SortControl";
-import sortSchools from "./sortSchools";
+import type { SchoolListItem } from "../+data";
+import sortSchools, { type SortOption } from "./sortSchools";
 
 const schools: SchoolListItem[] = [
   {

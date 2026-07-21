@@ -5,8 +5,8 @@ import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
 import type { SchoolListItem } from "./+data";
 import SchoolListCard from "./components/SchoolListCard";
-import SortControl, { type SortOption } from "./components/SortControl";
-import sortSchools from "./sortSchools";
+import SortControl from "./components/SortControl";
+import sortSchools, { type SortOption } from "./lib/sortSchools";
 
 const SECTIONS = [
   { sektori: "Yliopistokoulutus", heading: "Yliopistot" },

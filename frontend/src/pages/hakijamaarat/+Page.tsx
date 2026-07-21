@@ -13,8 +13,9 @@ import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
-import SortControl, { type SortOption } from "./components/SortControl";
+import SortControl from "./components/SortControl";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
+import type { SortOption } from "./lib/sortStatistics";
 
 const PAGE_SIZE = 10;
 

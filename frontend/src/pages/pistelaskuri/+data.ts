@@ -1,4 +1,4 @@
-import { availableCutoffRounds, readCutoffSchools } from "@/api/loadData";
+import { availableCutoffRounds, readCutoffSchools } from "@/api/serverData";
 import { type CutoffRound, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
 import { flattenScoreResults, type ScoreResult } from "./lib/scoreResults";
 

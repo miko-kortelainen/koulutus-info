@@ -9,6 +9,148 @@
     "includes": ["src/**", "e2e/**"],
     "ignoreUnknown": true
   },
+  "overrides": [
+    {
+      "includes": ["src/api/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/components/**", "@/hooks/**", "@/layout/**", "@/pages/**"],
+                    "message": "Data modules may depend only on lib, config, generated data, and types."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/components/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/api/**", "@/layout/**", "@/pages/**"],
+                    "message": "Shared UI may not depend on data access, layout, or route modules."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/hooks/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/components/**", "@/layout/**", "@/pages/**"],
+                    "message": "Shared hooks may not depend on UI, layout, or route modules."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/lib/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/api/**", "@/components/**", "@/hooks/**", "@/layout/**", "@/pages/**"],
+                    "message": "Shared pure logic may depend only on config, generated data, and types."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/layout/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/api/**", "@/pages/**"],
+                    "message": "Layout modules may not depend on data access or route modules."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/config/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/api/**", "@/components/**", "@/hooks/**", "@/layout/**", "@/pages/**"],
+                    "message": "Config modules may depend only on lib, generated data, and types."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/pages/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/pages/**"],
+                    "message": "Route features may not import other routes; use relative imports within the current route."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "formatter": {
     "enabled": true,
     "indentStyle": "space",

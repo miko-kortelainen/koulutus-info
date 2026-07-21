@@ -1,7 +1,7 @@
 import type { PageContextServer } from "vike/types";
-import { type CutoffEntry, mergeCutoffProgrammes, type ProgrammeWithRounds } from "@/api/cutoffs";
-import { availableCutoffRounds, cutoffAlaNames, readCutoffSchools } from "@/api/loadData";
-import { slugify } from "@/components/slug";
+import { availableCutoffRounds, cutoffAlaNames, readCutoffSchools } from "@/api/serverData";
+import { type CutoffEntry, mergeCutoffProgrammes, type ProgrammeWithRounds } from "@/lib/cutoffs";
+import { slugify } from "@/lib/slug";
 
 interface AlaSchool {
   name: string;

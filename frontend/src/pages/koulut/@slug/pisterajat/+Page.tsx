@@ -2,19 +2,19 @@ import { Box, Heading, Link, Separator, Stack, Tag, Text, VStack } from "@chakra
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
-import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/api/cutoffs";
 import CutoffCard from "@/components/CutoffCard";
 import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
-import { slugify } from "@/components/slug";
 import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
+import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/lib/cutoffs";
+import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 import type { CutoffPageData } from "./+data";
-import SortControl, { type SortOption } from "./components/SortControl";
-import useFilteredProgrammes from "./hooks/useFilteredProgrammes";
+import SortControl from "./components/SortControl";
+import useFilteredProgrammes, { type SortOption } from "./hooks/useFilteredProgrammes";
 
 const pageSize = 5;
 

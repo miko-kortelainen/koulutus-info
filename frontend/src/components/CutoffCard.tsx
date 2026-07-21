@@ -1,6 +1,6 @@
 import { Card, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
-import type { ProgrammeWithRounds } from "@/api/cutoffs";
 import { cutoffRoundShortLabel } from "@/config/cutoffRounds";
+import type { ProgrammeWithRounds } from "@/lib/cutoffs";
 import { COLORS } from "@/theme";
 
 interface CutoffCardProps {

@@ -1,8 +1,8 @@
 import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiHeart, HiLocationMarker, HiOutlineHeart } from "react-icons/hi";
-import { alaSlugParam } from "@/api/cutoffs";
-import { slugify } from "@/components/slug";
 import useFavorites from "@/hooks/useFavorites";
+import { alaSlugParam } from "@/lib/cutoffs";
+import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 import type { ToteutusEntry } from "@/types.gen";
 
