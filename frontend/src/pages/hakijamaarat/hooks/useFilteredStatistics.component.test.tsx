@@ -18,6 +18,7 @@ const statistics: StatisticsResponse = [
     aloituspaikatLkm: 30,
     kaikkiHakijatLkm: 100,
     ensisijaisetHakijatLkm: 50,
+    valitutLkm: 20,
   },
   {
     kooditHakukohde: "beta",
@@ -32,6 +33,7 @@ const statistics: StatisticsResponse = [
     aloituspaikatLkm: 10,
     kaikkiHakijatLkm: 300,
     ensisijaisetHakijatLkm: 100,
+    valitutLkm: 30,
   },
   {
     kooditHakukohde: "gamma",
@@ -46,6 +48,7 @@ const statistics: StatisticsResponse = [
     aloituspaikatLkm: 20,
     kaikkiHakijatLkm: 200,
     ensisijaisetHakijatLkm: 75,
+    valitutLkm: 25,
   },
 ];
 

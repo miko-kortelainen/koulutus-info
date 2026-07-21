@@ -18,6 +18,7 @@ const statistics: StatisticsEntry[] = fields.map(([field, applicants], index) =>
   aloituspaikatLkm: 1,
   kaikkiHakijatLkm: applicants,
   ensisijaisetHakijatLkm: applicants,
+  valitutLkm: applicants,
 }));
 
 test("aggregates, sorts, and limits trend data", () => {

@@ -7,6 +7,7 @@ export interface SchoolListItem {
   sektori: string;
   koulutuksia: number;
   kaikkiHakijat: number;
+  valitut: number;
   ensisijaisetHakijat: number;
   aloituspaikat: number;
 }
@@ -23,6 +24,7 @@ export const data = (): SchoolListItem[] => {
       sektori: rows[0]?.sektori ?? "",
       koulutuksia: toteutukset.filter((t) => t.oppilaitosNimi.fi === name).length,
       kaikkiHakijat: rows.reduce((sum, r) => sum + r.kaikkiHakijatLkm, 0),
+      valitut: rows.reduce((sum, r) => sum + r.valitutLkm, 0),
       ensisijaisetHakijat: rows.reduce((sum, r) => sum + r.ensisijaisetHakijatLkm, 0),
       aloituspaikat: rows.reduce((sum, r) => sum + r.aloituspaikatLkm, 0),
     };

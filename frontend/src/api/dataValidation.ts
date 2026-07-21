@@ -30,7 +30,8 @@ const isStatisticsEntry = (value: unknown) =>
   ].every(isOptionalString) &&
   isNonNegativeInteger(value.aloituspaikatLkm) &&
   isNonNegativeInteger(value.kaikkiHakijatLkm) &&
-  isNonNegativeInteger(value.ensisijaisetHakijatLkm);
+  isNonNegativeInteger(value.ensisijaisetHakijatLkm) &&
+  isNonNegativeInteger(value.valitutLkm);
 
 const isToteutus = (value: unknown) =>
   isRecord(value) &&
