@@ -1,10 +1,10 @@
 import { Heading, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
-import { alaSlugParam } from "@/api/cutoffs";
 import CutoffCard from "@/components/CutoffCard";
 import Pagination from "@/components/Pagination";
 import PageContainer from "@/layout/PageContainer";
+import { alaSlugParam } from "@/lib/cutoffs";
 import { COLORS } from "@/theme";
 import type { AlaPageData } from "./+data";
 

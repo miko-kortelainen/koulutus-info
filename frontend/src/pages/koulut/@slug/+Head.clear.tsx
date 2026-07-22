@@ -1,5 +1,5 @@
 import { useData } from "vike-react/useData";
-import { slugify } from "@/components/slug";
+import { slugify } from "@/lib/slug";
 import { Head as GlobalHead } from "../../+Head";
 import type { SchoolPageData } from "./+data";
 

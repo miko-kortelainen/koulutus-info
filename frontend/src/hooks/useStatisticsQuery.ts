@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getStatistics } from "@/api/api";
+import { getStatistics } from "@/api/browserData";
 import type { YearOption } from "@/config/yearOptions";
 import type { StatisticsResponse } from "@/types.gen";
 

@@ -1,7 +1,8 @@
 import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { Programme } from "@/types/pisterajat.gen";
-import type { SortOption } from "../components/SortControl";
+
+export type SortOption = "asc" | "desc";
 
 const FUSE_OPTIONS = {
   keys: ["name"],

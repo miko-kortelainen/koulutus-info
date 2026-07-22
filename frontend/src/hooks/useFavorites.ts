@@ -74,5 +74,16 @@ export default function useFavorites() {
     writeFavorites(next);
   }, []);
 
-  return { favorites, isFavorite, toggleFavorite };
+  const moveFavorite = useCallback((oid: string, direction: -1 | 1) => {
+    const current = getSnapshot();
+    const index = current.findIndex((f) => f.toteutusOid === oid);
+    const target = index + direction;
+    if (index === -1 || target < 0 || target >= current.length) return;
+
+    const next = [...current];
+    [next[index], next[target]] = [next[target], next[index]];
+    writeFavorites(next);
+  }, []);
+
+  return { favorites, isFavorite, toggleFavorite, moveFavorite };
 }

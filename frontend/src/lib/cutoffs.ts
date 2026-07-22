@@ -1,5 +1,5 @@
-import { slugify } from "@/components/slug";
 import { type CutoffRound, compareCutoffRounds } from "@/config/cutoffRounds";
+import { slugify } from "@/lib/slug";
 import type { Cutoff, Programme as CutoffProgramme, School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { SchoolsResponse } from "@/types.gen";
 

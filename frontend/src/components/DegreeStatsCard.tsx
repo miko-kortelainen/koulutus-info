@@ -1,8 +1,8 @@
 import { Badge, Button, Card, HStack, Link, Separator, SimpleGrid, Stack, Stat, Text } from "@chakra-ui/react";
 import { memo } from "react";
 import { HiLocationMarker, HiPlus } from "react-icons/hi";
-import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/components/hakijapaineTier";
-import { slugify } from "@/components/slug";
+import { slugify } from "@/lib/slug";
+import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/lib/statistics";
 import { COLORS } from "@/theme";
 import type { StatisticsEntry } from "@/types.gen";
 

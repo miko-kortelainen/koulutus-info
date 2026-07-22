@@ -1,8 +1,8 @@
 import { Box, Heading, HStack, Link, Stack, Table, Text } from "@chakra-ui/react";
 import type { MDXComponents, MDXProps } from "mdx/types.js";
 import type { ComponentProps, ComponentType, ReactNode } from "react";
-import { slugify } from "@/components/slug";
 import PageContainer from "@/layout/PageContainer";
+import { slugify } from "@/lib/slug";
 import { formatGuideDate, getGuide } from "../guides";
 import GuideAccordion from "./GuideAccordion";
 

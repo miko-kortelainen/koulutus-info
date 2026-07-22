@@ -8,7 +8,7 @@ import {
   getSisaanpaasyprosentti,
   getTier,
   ratioFormat,
-} from "@/components/hakijapaineTier";
+} from "@/lib/statistics";
 import type { StatisticsEntry } from "@/types.gen";
 
 interface ComparisonTableProps {

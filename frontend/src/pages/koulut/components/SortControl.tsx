@@ -1,6 +1,5 @@
 import OptionSelect from "@/components/OptionSelect";
-
-export type SortOption = "asc" | "desc" | "most_popular" | "least_popular" | "most_first_choice" | "least_first_choice";
+import type { SortOption } from "../lib/sortSchools";
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "A-Ö", value: "asc" },

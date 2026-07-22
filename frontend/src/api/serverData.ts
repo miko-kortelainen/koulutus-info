@@ -1,7 +1,5 @@
 import fs from "node:fs";
-import { filterUnavailableCutoffAlat } from "@/api/cutoffs";
 import { parseCutoffSchools, parseSchools, parseStatistics } from "@/api/dataValidation";
-import { slugify } from "@/components/slug";
 import {
   type CutoffRound,
   compareCutoffRounds,
@@ -9,6 +7,8 @@ import {
   DEFAULT_CUTOFF_ROUND,
 } from "@/config/cutoffRounds";
 import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
+import { filterUnavailableCutoffAlat } from "@/lib/cutoffs";
+import { slugify } from "@/lib/slug";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
 
