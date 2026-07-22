@@ -58,13 +58,12 @@ function PairRow({ left, right, header = false }: { left: ReactNode; right: Reac
     );
   }
 
-  // A definite cell height lets the cards stretch to the tallest card in the table row.
   return (
     <Table.Row>
-      <Table.Cell borderBottom={0} borderColor="border" borderRightWidth="1px" height="1px" p={0} pr={2} pt={4}>
+      <Table.Cell borderBottom={0} borderColor="border" borderRightWidth="1px" p={0} pr={2} pt={4} verticalAlign="top">
         {left}
       </Table.Cell>
-      <Table.Cell borderBottom={0} height="1px" p={0} pl={2} pt={4}>
+      <Table.Cell borderBottom={0} p={0} pl={2} pt={4} verticalAlign="top">
         {right}
       </Table.Cell>
     </Table.Row>
@@ -83,7 +82,7 @@ function StatCard({
   badge?: ReactNode;
 }) {
   return (
-    <Card.Root flex={1} height="full" minW={0} size="sm">
+    <Card.Root minW={0} size="sm">
       <Card.Body>
         <Stat.Root size="sm">
           <Stat.Label color="fg.muted" fontSize="xs">
