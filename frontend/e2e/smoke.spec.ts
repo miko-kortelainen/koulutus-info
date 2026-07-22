@@ -83,6 +83,8 @@ test("homepage loads and nav drawer opens", async ({ page }) => {
 test("homepage quick links point to their pages", async ({ page }) => {
   await page.goto("/");
 
+  await expect(page.getByRole("complementary", { name: "Yhteishaku kotinäytöllä" })).toHaveCount(0);
+
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
@@ -93,6 +95,56 @@ test("homepage quick links point to their pages", async ({ page }) => {
   ] as const) {
     await expect(page.getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) })).toHaveAttribute("href", url);
   }
+});
+
+test("iPhone Safari users can dismiss the install tip and still find the guide in UKK", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperties(navigator, {
+      maxTouchPoints: { value: 5 },
+      platform: { value: "iPhone" },
+      userAgent: {
+        value:
+          "Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+      },
+    });
+  });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+
+  const installTip = page.getByRole("complementary", { name: "Yhteishaku kotinäytöllä" });
+  await expect(installTip).toBeVisible();
+  await installTip.getByRole("button", { name: "Sulje kotinäyttövinkki" }).click();
+  await expect(installTip).toHaveCount(0);
+
+  await page.reload();
+  await expect(page.getByRole("complementary", { name: "Yhteishaku kotinäytöllä" })).toHaveCount(0);
+
+  await page.goto("/ukk/");
+  await page.getByRole("button", { name: "Miten lisään yhteishaku.app-palvelun iPhonen Koti-valikkoon?" }).click();
+  await page.getByRole("link", { name: "kuvallinen asennusohje" }).click();
+
+  await expect(page).toHaveURL("/asenna/");
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Lisää yhteishaku.app iPhonesi kotinäytölle." }),
+  ).toBeVisible();
+  await expect(page.getByRole("img", { name: /korostettu/ })).toHaveCount(4);
+});
+
+test("homepage hides the install guide in the iPhone standalone app", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperties(navigator, {
+      maxTouchPoints: { value: 5 },
+      platform: { value: "iPhone" },
+      standalone: { value: true },
+      userAgent: {
+        value:
+          "Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+      },
+    });
+  });
+  await page.goto("/");
+
+  await expect(page.getByRole("complementary", { name: "Yhteishaku kotinäytöllä" })).toHaveCount(0);
 });
 
 test("/oppaat: opens the AMK certificate-admission guide", async ({ page }) => {
