@@ -55,6 +55,20 @@ const QUESTIONS = [
     ),
   },
   {
+    question: "Mitä sisäänpääsyprosentti tarkoittaa?",
+    answer: (
+      <>
+        Sisäänpääsyprosentti on valittujen osuus kaikista hakukohteen hakijoista. Se lasketaan kaavalla: <br />
+        <Text as="span" fontWeight="semibold">
+          valitut / kaikki hakijat × 100
+        </Text>
+        .<br />
+        Esimerkiksi 10 % tarkoittaa, että hakukohteeseen valittiin noin yksi opiskelija kymmentä hakijaa kohden. Luku
+        perustuu kyseisen vuoden toteutuneisiin valintoihin.
+      </>
+    ),
+  },
+  {
     question: "Kuka on tehnyt yhteishaku.app-sivun?",
     answer: (
       <>
