@@ -1,5 +1,6 @@
-import type { SchoolListItem } from "./+data";
-import type { SortOption } from "./components/SortControl";
+import type { SchoolListItem } from "../+data";
+
+export type SortOption = "asc" | "desc" | "most_popular" | "least_popular" | "most_first_choice" | "least_first_choice";
 
 export default function sortSchools(schools: SchoolListItem[], order: SortOption): SchoolListItem[] {
   return [...schools].sort((a, b) => {

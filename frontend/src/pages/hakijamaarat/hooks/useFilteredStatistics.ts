@@ -1,8 +1,7 @@
 import Fuse from "fuse.js";
 import { useMemo } from "react";
-import { getSisaanpaasyprosentti } from "@/components/hakijapaineTier";
 import type { StatisticsResponse } from "@/types.gen";
-import type { SortOption } from "../components/SortControl";
+import { type SortOption, sortStatistics } from "../lib/sortStatistics";
 
 const FUSE_OPTIONS = {
   keys: [{ name: "hakukohde", weight: 3 }, { name: "korkeakoulu", weight: 2 }, "sektori", "koulutusalaTaso1"],
@@ -51,31 +50,6 @@ export default function useFilteredStatistics(
     const normalizedSearch = searchTerm.trim();
     const filtered = normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : byFilters;
 
-    return [...filtered].sort((a, b) => {
-      switch (sortOrder) {
-        case "desc":
-          return b.hakukohde.localeCompare(a.hakukohde, "fi");
-        case "most_popular":
-          return b.kaikkiHakijatLkm - a.kaikkiHakijatLkm;
-        case "least_popular":
-          return a.kaikkiHakijatLkm - b.kaikkiHakijatLkm;
-        case "most_spots":
-          return b.aloituspaikatLkm - a.aloituspaikatLkm;
-        case "least_spots":
-          return a.aloituspaikatLkm - b.aloituspaikatLkm;
-        case "highest_acceptance_rate":
-        case "lowest_acceptance_rate": {
-          const aPercentage = getSisaanpaasyprosentti(a.valitutLkm, a.kaikkiHakijatLkm);
-          const bPercentage = getSisaanpaasyprosentti(b.valitutLkm, b.kaikkiHakijatLkm);
-          if (aPercentage == null) return bPercentage == null ? 0 : 1;
-          if (bPercentage == null) return -1;
-          return sortOrder === "highest_acceptance_rate" ? bPercentage - aPercentage : aPercentage - bPercentage;
-        }
-        case "asc":
-          return a.hakukohde.localeCompare(b.hakukohde, "fi");
-        default:
-          return 0;
-      }
-    });
+    return sortStatistics(filtered, sortOrder);
   }, [fuse, byFilters, searchTerm, sortOrder]);
 }

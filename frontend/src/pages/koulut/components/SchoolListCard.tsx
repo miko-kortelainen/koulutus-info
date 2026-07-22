@@ -1,6 +1,6 @@
 import { Badge, Card, Group, HStack, Text, VStack } from "@chakra-ui/react";
 import { HiOutlineAcademicCap } from "react-icons/hi";
-import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/components/hakijapaineTier";
+import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/lib/statistics";
 import { COLORS } from "@/theme";
 import type { SchoolListItem } from "../+data";
 

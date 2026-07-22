@@ -1,6 +1,6 @@
 import { writeFileSync } from "node:fs";
-import { cutoffAlaNames, cutoffSchoolNames, schoolNames } from "../src/api/loadData";
-import { slugify } from "../src/components/slug";
+import { cutoffAlaNames, cutoffSchoolNames, schoolNames } from "../src/api/serverData";
+import { slugify } from "../src/lib/slug";
 import { guides } from "../src/pages/oppaat/guides";
 
 const paths = [

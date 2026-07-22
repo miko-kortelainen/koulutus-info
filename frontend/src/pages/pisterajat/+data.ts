@@ -1,5 +1,5 @@
-import { cutoffAlaNames, cutoffSchoolNames } from "@/api/loadData";
-import { slugify } from "@/components/slug";
+import { cutoffAlaNames, cutoffSchoolNames } from "@/api/serverData";
+import { slugify } from "@/lib/slug";
 
 export interface CutoffIndexData {
   alat: { name: string; slug: string }[];

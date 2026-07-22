@@ -1,5 +1,5 @@
 import { Badge, Box, Flex, Skeleton, Stack, Text } from "@chakra-ui/react";
-import { numberFormat } from "@/components/hakijapaineTier";
+import { numberFormat } from "@/lib/statistics";
 
 interface BarListData {
   name: string;
