@@ -121,7 +121,7 @@ test("iPhone Safari users can dismiss the install tip and still find the guide i
 
   await page.goto("/ukk/");
   await page.getByRole("button", { name: "Miten lisään yhteishaku.app-palvelun iPhonen Koti-valikkoon?" }).click();
-  await page.getByRole("link", { name: "kuvallinen asennusohje" }).click();
+  await page.getByRole("link", { name: "lyhyet ohjeet" }).click();
 
   await expect(page).toHaveURL("/asenna/");
   await expect(
