@@ -67,6 +67,7 @@ test("renders accessible trends, pressure values, and pressure tiers", () => {
 
   expect(screen.getByRole("table", { name: "Hakukohteiden vertailu" })).toBeInTheDocument();
   expect(screen.getAllByRole("columnheader")).toHaveLength(2);
+  expect(screen.getAllByText("Valitut")).toHaveLength(2);
   expect(screen.getAllByRole("img", { name: "Suurempi arvo" })).toHaveLength(5);
   expect(screen.getAllByRole("img", { name: "Pienempi arvo" })).toHaveLength(5);
   expect(screen.getByText("10 %")).toBeInTheDocument();

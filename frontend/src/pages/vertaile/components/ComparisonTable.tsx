@@ -28,6 +28,7 @@ const countTrend = (value: number, other: number): Trend =>
 const COUNT_ROWS = [
   ["Kaikki hakijat", "kaikkiHakijatLkm"],
   ["Ensisijaiset hakijat", "ensisijaisetHakijatLkm"],
+  ["Valitut", "valitutLkm"],
   ["Aloituspaikat", "aloituspaikatLkm"],
 ] as const;
 

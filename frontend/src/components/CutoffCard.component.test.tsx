@@ -8,16 +8,24 @@ const programme: ProgrammeWithRounds = {
   name: "Kätilö (AMK), päivätoteutus",
   koulutusala: "Terveys- ja hyvinvointialat",
   cutoffs: [
+    {
+      selectionMethod: "Todistusvalinta (YO)",
+      score: 84.5,
+      startYear: 2026,
+      startSeason: "Kevät",
+      round: "2025-syksy",
+    },
     { selectionMethod: "Todistusvalinta (YO)", score: 69, startYear: 2026, startSeason: "Syksy", round: "2026-kevat" },
-    { selectionMethod: "Todistusvalinta (YO)", score: 84.5, startYear: 2026, startSeason: "Kevät", round: "2025-syksy" },
   ],
 };
 
 test("labels each cutoff with its hakukierros when showRound is set", () => {
   renderWithChakra(<CutoffCard programme={programme} showRound />);
 
-  expect(screen.getByText("kevät 2026")).toBeInTheDocument();
-  expect(screen.getByText("syksy 2025")).toBeInTheDocument();
+  expect(screen.getAllByText(/^(kevät 2026|syksy 2025)$/).map((label) => label.textContent)).toEqual([
+    "kevät 2026",
+    "syksy 2025",
+  ]);
 });
 
 test("omits round labels by default", () => {
