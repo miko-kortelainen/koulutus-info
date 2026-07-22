@@ -1,5 +1,6 @@
 import { screen } from "@testing-library/react";
-import { expect, test } from "vitest";
+import userEvent from "@testing-library/user-event";
+import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import type { StatisticsEntry } from "@/types.gen";
 import DegreeStatsCard from "./DegreeStatsCard";
@@ -26,4 +27,43 @@ test("shows the admission percentage and masks it when a source count is under f
   expect(screen.getAllByText("Sisäänpääsyprosentti")).toHaveLength(2);
   expect(screen.getByText("15,3 %")).toBeInTheDocument();
   expect(screen.getByText("–")).toBeInTheDocument();
+});
+
+test("shows the degree statistics, school link, and application pressure", () => {
+  renderWithChakra(
+    <ul>
+      <DegreeStatsCard degree={entry({})} />
+    </ul>,
+  );
+
+  expect(screen.getByRole("link", { name: "Testikorkeakoulu" })).toHaveAttribute("href", "/koulut/testikorkeakoulu/");
+  expect(screen.getByRole("listitem")).toHaveTextContent(
+    /Kaikki hakijat\s*281\s*Ensisijaiset hakijat\s*50\s*Aloituspaikat\s*20/,
+  );
+  expect(screen.getByText("Korkea hakijapaine")).toBeInTheDocument();
+});
+
+test("allows removing a selected degree while disabling a new selection when the comparison is full", async () => {
+  const user = userEvent.setup();
+  const onToggleCompare = vi.fn();
+
+  renderWithChakra(
+    <ul>
+      <DegreeStatsCard degree={entry({})} isSelected onToggleCompare={onToggleCompare} selectionFull />
+      <DegreeStatsCard
+        degree={entry({ hakukohde: "Toinen testikohde", kooditHakukohde: "full" })}
+        onToggleCompare={onToggleCompare}
+        selectionFull
+      />
+    </ul>,
+  );
+
+  const selectedButton = screen.getByRole("button", { name: "Valittu ✓" });
+  expect(selectedButton).toBeEnabled();
+  expect(screen.getByRole("button", { name: "Vertaile" })).toBeDisabled();
+
+  await user.click(selectedButton);
+
+  expect(onToggleCompare).toHaveBeenCalledOnce();
+  expect(onToggleCompare).toHaveBeenCalledWith(entry({}));
 });
