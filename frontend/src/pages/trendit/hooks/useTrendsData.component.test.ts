@@ -3,18 +3,20 @@ import { expect, test } from "vitest";
 import type { StatisticsEntry } from "@/types.gen";
 import useTrendsData from "./useTrendsData";
 
-const fields: [string | undefined, number][] = [
-  ["Tekniikka", 30],
-  ["Terveys", 40],
-  ["Tekniikka", 20],
-  ["Kauppa", 10],
-  [undefined, 100],
+const groups: [string | undefined, string | undefined, string | undefined, number][] = [
+  ["Tekniikka", "Aalto-yliopisto", "Yliopistokoulutus", 30],
+  ["Terveys", "Metropolia", "Ammattikorkeakoulukoulutus", 40],
+  ["Tekniikka", "Aalto-yliopisto", "Yliopistokoulutus", 20],
+  ["Kauppa", "Tampereen ammattikorkeakoulu", "Ammattikorkeakoulukoulutus", 15],
+  [undefined, undefined, undefined, 100],
 ];
 
-const statistics: StatisticsEntry[] = fields.map(([field, applicants], index) => ({
+const statistics: StatisticsEntry[] = groups.map(([field, school, sector, applicants], index) => ({
   kooditHakukohde: String(index),
   hakukohde: `Hakukohde ${index}`,
   koulutusalaTaso1: field,
+  korkeakoulu: school,
+  sektori: sector,
   aloituspaikatLkm: 1,
   kaikkiHakijatLkm: applicants,
   ensisijaisetHakijatLkm: applicants,
@@ -27,5 +29,13 @@ test("aggregates, sorts, and limits trend data", () => {
   expect(result.current.topKoulutusalat).toEqual([
     { name: "Tekniikka", value: 50 },
     { name: "Terveys", value: 40 },
+  ]);
+  expect(result.current.topKorkeakoulut).toEqual([
+    { name: "Aalto-yliopisto", value: 50 },
+    { name: "Metropolia", value: 40 },
+  ]);
+  expect(result.current.sektoriData).toEqual([
+    { name: "Ammattikorkeakoulukoulutus", value: 55 },
+    { name: "Yliopistokoulutus", value: 50 },
   ]);
 });

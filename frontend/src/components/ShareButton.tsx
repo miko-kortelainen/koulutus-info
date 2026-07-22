@@ -4,21 +4,27 @@ import { HiOutlineShare } from "react-icons/hi";
 
 interface ShareButtonProps {
   label: string;
+  onShared: () => void;
 }
 
-export default function ShareButton({ label }: ShareButtonProps) {
+export default function ShareButton({ label, onShared }: ShareButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const share = async () => {
     const url = window.location.href;
     if (navigator.share) {
       // AbortError when the user dismisses the share sheet
-      await navigator.share({ title: document.title, url }).catch(() => {});
-    } else {
-      await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      try {
+        await navigator.share({ title: document.title, url });
+        onShared();
+      } catch {}
+      return;
     }
+
+    await navigator.clipboard.writeText(url);
+    onShared();
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (

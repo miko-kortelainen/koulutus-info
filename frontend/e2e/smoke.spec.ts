@@ -1,6 +1,6 @@
 import { expect, type Page, test } from "@playwright/test";
 import { cutoffRoundLabel, cutoffRoundShortLabel, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
-import { CURRENT_YEAR } from "@/config/yearOptions";
+import { CURRENT_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
 
 test.describe.configure({ mode: "parallel" });
 
@@ -109,15 +109,15 @@ test("/oppaat: opens the AMK certificate-admission guide", async ({ page }) => {
 test("nav links navigate to all pages", async ({ page }) => {
   const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
 
-  for (const [label, url] of [
-    ["hakijamäärät", "/hakijamaarat/"],
-    ["koulutukset", "/koulutukset/"],
-    ["pistelaskuri", "/pistelaskuri/"],
-    ["koulut", "/koulut/"],
-    ["oma hakulista", "/oma-hakulista/"],
-    ["trendit", "/trendit/"],
-    ["palaute", "/palaute/"],
-    ["ukk", "/ukk/"],
+  for (const [label, url, heading] of [
+    ["hakijamäärät", "/hakijamaarat/", "Hakijamäärät"],
+    ["koulutukset", "/koulutukset/", "Koulutukset"],
+    ["pistelaskuri", "/pistelaskuri/", "Pistelaskuri"],
+    ["koulut", "/koulut/", "Koulut"],
+    ["oma hakulista", "/oma-hakulista/", "Oma hakulista"],
+    ["trendit", "/trendit/", "Trendit"],
+    ["palaute", "/palaute/", "Palaute"],
+    ["ukk", "/ukk/", "Usein kysytyt kysymykset"],
   ] as const) {
     await page.goto("/");
     await openNavDrawer(page);
@@ -126,6 +126,7 @@ test("nav links navigate to all pages", async ({ page }) => {
     const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     await nav.getByRole("link", { name: new RegExp(`^${escapedLabel}(\\s|$)`) }).click();
     await expect(page).toHaveURL(url);
+    await expect(page.getByRole("heading", { exact: true, level: 1, name: heading })).toBeVisible();
   }
 });
 
@@ -620,14 +621,25 @@ test("/koulut: sort control reorders the school list", async ({ page }) => {
 
 test("/koulut/:slug: selecting a school opens its detail page", async ({ page }) => {
   await page.goto("/koulut/");
+  await page.getByRole("tab", { name: "Ammattikorkeakoulut" }).click();
 
-  const firstSchool = page.getByRole("tabpanel").getByRole("link").first();
-  const href = await firstSchool.getAttribute("href");
-  expect(href).toBeTruthy();
-  await firstSchool.click();
+  await page
+    .getByRole("tabpanel")
+    .getByRole("link", { name: /^Centria-ammattikorkeakoulu(\s|$)/ })
+    .click();
 
-  await expect(page).toHaveURL(href as string);
-  await expect(page.getByRole("heading").first()).toBeVisible();
+  await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/");
+  await expect(page.getByRole("heading", { exact: true, level: 1, name: "Centria-ammattikorkeakoulu" })).toBeVisible();
+});
+
+test("/koulut/:slug: switches between programmes and applicant statistics", async ({ page }) => {
+  await page.goto("/koulut/centria-ammattikorkeakoulu/");
+  const statisticsTab = page.getByRole("tab", { name: /Hakijamäärät/ });
+
+  await statisticsTab.click();
+
+  await expect(statisticsTab).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tabpanel").getByText("Hakijat").first()).toBeVisible();
 });
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
@@ -715,6 +727,23 @@ test("/trendit: loads trend cards", async ({ page }) => {
   await expect(page.getByRole("img", { name: "Syksyn yhteishaun ensisijaiset hakijat vuosittain" })).toBeVisible();
   // "Hakijaa" column header renders only after skeletons are replaced by data
   await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
+});
+
+test("/trendit: compares two application rounds", async ({ page }) => {
+  const compareRound = YEAR_OPTIONS.find(({ value }) => value !== CURRENT_YEAR);
+  if (!compareRound) throw new Error("Expected at least two statistics rounds");
+
+  await page.goto("/trendit/");
+  await expect(page.getByText("Hakijaa").first()).toBeVisible({ timeout: 10000 });
+  const responsePromise = page.waitForResponse((response) =>
+    response.url().includes(`hakijamaarat-${compareRound.value.replace("_", "-")}.json`),
+  );
+
+  await selectOption(page, "Vertailuyhteishaku", compareRound.label);
+
+  expect((await responsePromise).status()).toBe(200);
+  await expectSelectedOption(page, "Vertailuyhteishaku", compareRound.label);
+  await expect(page.getByText("Muutos").first()).toBeVisible();
 });
 
 test("/trendit: shows a comparison loading error", async ({ page }) => {

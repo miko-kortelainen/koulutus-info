@@ -93,6 +93,11 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
     onModeChange(value);
   };
 
+  const submitScore = (score: number) => {
+    onSubmit(mode, score);
+    window.sa_event?.("calculate_score");
+  };
+
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -104,7 +109,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
       }
       setYoErrors({});
       writeStoredForms({ yo: yoState });
-      onSubmit(mode, calculateYoScore(result.input));
+      submitScore(calculateYoScore(result.input));
       return;
     }
 
@@ -116,7 +121,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
       }
       setAmmErrors({});
       writeStoredForms({ amm: ammState });
-      onSubmit(mode, calculateAmmScore(result.input));
+      submitScore(calculateAmmScore(result.input));
       return;
     }
 
@@ -124,7 +129,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
       const score = parseAmkScore(amkScoreInput);
       setAmkScoreError(score === null ? "Anna pistemäärä numerona." : undefined);
       if (score === null) return;
-      onSubmit(mode, score);
+      submitScore(score);
       return;
     }
   };

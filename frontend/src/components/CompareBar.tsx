@@ -41,7 +41,13 @@ export default function CompareBar({ selected, year, onRemove }: CompareBarProps
               size={{ base: "xs", md: "sm" }}
               variant="solid"
             >
-              {compareHref ? <a href={compareHref}>Vertaile</a> : <>Vertaile</>}
+              {compareHref ? (
+                <a href={compareHref} onClick={() => window.sa_event?.("compare_degrees")}>
+                  Vertaile
+                </a>
+              ) : (
+                <>Vertaile</>
+              )}
             </Button>
           </ActionBar.Content>
         </ActionBar.Positioner>
