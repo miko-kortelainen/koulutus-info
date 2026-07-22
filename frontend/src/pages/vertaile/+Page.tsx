@@ -63,7 +63,7 @@ export default function ComparePage() {
       <Stack align="flex-start" gap={4}>
         <ComparisonTable a={entryA} b={entryB} />
 
-        <ShareButton label="Jaa tämä vertailu" />
+        <ShareButton label="Jaa tämä vertailu" onShared={() => window.sa_event?.("share_comparison")} />
       </Stack>
     );
   }
