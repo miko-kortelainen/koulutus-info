@@ -91,6 +91,17 @@ test("homepage quick links point to their pages", async ({ page }) => {
   }
 });
 
+test("/oppaat: opens the AMK certificate-admission guide", async ({ page }) => {
+  await page.goto("/oppaat/");
+  await page.getByRole("link", { name: /Ammattikorkeakoulujen todistusvalinnan pisteytys/ }).click();
+
+  await expect(page).toHaveURL(/\/oppaat\/ammattikorkeakoulujen-todistusvalinta\/$/);
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Ammattikorkeakoulujen todistusvalinnan pisteytys" }),
+  ).toBeVisible();
+  await expect(page.getByText(/sinut huomioidaan automaattisesti molemmissa todistusvalintajonoissa/)).toBeVisible();
+});
+
 test("nav links navigate to all pages", async ({ page }) => {
   const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
 

@@ -23,6 +23,25 @@ export interface GuideMeta {
  */
 export const guides: GuideMeta[] = [
   {
+    slug: "ammattikorkeakoulujen-todistusvalinta",
+    title: "Ammattikorkeakoulujen todistusvalinnan pisteytys",
+    description:
+      "Ylioppilastutkinnon ja ammatillisen perustutkinnon pisteytys ammattikorkeakoulujen todistusvalinnassa vuonna 2026: valintajonot, vähimmäispisteet ja kynnysehdot.",
+    lede: "Ammattikorkeakoulut pisteyttävät ylioppilastutkinnon ja ammatillisen perustutkinnon eri pisteytysmalleilla, ja tutkinnoille on omat valintajononsa.",
+    tldr: [
+      "Ylioppilastutkinnosta voi saada enintään 198 pistettä ja ammatillisesta perustutkinnosta 150 pistettä.",
+      "Jos sinulla on molemmat todistusvalintaan kelpaavat tutkinnot, sinut huomioidaan automaattisesti molemmissa valintajonoissa.",
+      "Hakukohde voi asettaa vähimmäispistemäärän tai kynnysehdon.",
+    ],
+    updated: "2026-07-22",
+    sources: [
+      {
+        label: "Ammattikorkeakouluun.fi: Todistusvalinta",
+        href: "https://www.ammattikorkeakouluun.fi/hakijalle/valintatavat/todistusvalinta/",
+      },
+    ],
+  },
+  {
     slug: "yliopistojen-todistusvalinta",
     title: "Yliopistojen todistusvalintojen pisteytys ja kynnysehdot",
     description:
