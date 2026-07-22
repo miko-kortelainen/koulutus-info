@@ -4,6 +4,10 @@ import { CURRENT_YEAR } from "@/config/yearOptions";
 
 test.describe.configure({ mode: "parallel" });
 
+test.afterEach(async ({ page }) => {
+  expect((await page.pageErrors()).map((error) => error.message)).toEqual([]);
+});
+
 const NAV_LABEL = "Päänavigointi";
 
 // click can land before hydration, so retry without clicking an already-open drawer
@@ -578,6 +582,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
 
   await page.getByRole("link", { name: "Vertaile" }).click();
   await expect(page).toHaveURL(new RegExp(`/vertaile/\\?a=.+&b=.+&vuosi=${CURRENT_YEAR}$`));
+  await page.reload();
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
   await expect(page.getByText("Kaikki hakijat")).toHaveCount(2);
