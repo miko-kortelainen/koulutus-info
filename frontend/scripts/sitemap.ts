@@ -5,6 +5,7 @@ import { guides } from "../src/pages/oppaat/guides";
 
 const paths = [
   "/",
+  "/asenna/",
   "/hakijamaarat/",
   "/koulutukset/",
   "/pistelaskuri/",

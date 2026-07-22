@@ -1,5 +1,6 @@
 import { Group, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
+import IosInstallTip from "./components/IosInstallTip";
 import QuickLinkCard from "./components/QuickLinkCard";
 import { quickLinks } from "./components/quickLinks";
 import useCountdown from "./hooks/useCountdown";
@@ -70,6 +71,7 @@ export default function LandingPage() {
       <VStack flex={1} gap={10} justifyContent="center">
         {hero}
         {countdown}
+        <IosInstallTip />
         {quickLinksSection}
       </VStack>
     </PageContainer>

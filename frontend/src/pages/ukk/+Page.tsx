@@ -38,6 +38,7 @@ const QUESTIONS = [
       </>
     ),
   },
+
   {
     question: "Mihin hakijapaine perustuu?",
     answer: (
@@ -68,6 +69,7 @@ const QUESTIONS = [
       </>
     ),
   },
+
   {
     question: "Kuka on tehnyt yhteishaku.app-sivun?",
     answer: (
@@ -90,6 +92,19 @@ const QUESTIONS = [
           target="_blank"
         >
           GitHubista
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    question: "Miten lisään yhteishaku.app-palvelun iPhonen Koti-valikkoon?",
+    answer: (
+      <>
+        Se onnistuu Safarissa muutamalla painalluksella. <br />
+        Katso{" "}
+        <Link color="fg.accent" href="/asenna/">
+          lyhyet ohjeet
         </Link>
         .
       </>
