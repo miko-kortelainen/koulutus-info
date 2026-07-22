@@ -26,13 +26,19 @@ test("disables comparison with one selection and removes the selected entry", as
   expect(onRemove).toHaveBeenCalledWith(selected);
 });
 
-test("creates an encoded comparison URL with two selections", () => {
+test("creates an encoded comparison URL and tracks comparison", async () => {
+  const event = vi.fn();
+  const user = userEvent.setup();
+  vi.stubGlobal("sa_event", event);
+
   renderWithChakra(
     <CompareBar onRemove={vi.fn()} selected={[entry("a&1", "Kohde A"), entry("b/2", "Kohde B")]} year="2026_kevat" />,
   );
 
-  expect(screen.getByRole("link", { name: "Vertaile" })).toHaveAttribute(
-    "href",
-    "/vertaile/?a=a%261&b=b%2F2&vuosi=2026_kevat",
-  );
+  const link = screen.getByRole("link", { name: "Vertaile" });
+  expect(link).toHaveAttribute("href", "/vertaile/?a=a%261&b=b%2F2&vuosi=2026_kevat");
+
+  link.addEventListener("click", (click) => click.preventDefault());
+  await user.click(link);
+  expect(event).toHaveBeenCalledWith("compare_degrees");
 });

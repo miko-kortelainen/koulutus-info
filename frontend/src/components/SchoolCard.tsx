@@ -77,7 +77,10 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
       <IconButton
         aria-label={favorited ? "Poista tallennetuista" : "Tallenna"}
         height="fit"
-        onClick={() => toggleFavorite(toteutus)}
+        onClick={() => {
+          toggleFavorite(toteutus);
+          if (!favorited) window.sa_event?.("save_degree");
+        }}
         size="xl"
         variant="ghost"
       >
