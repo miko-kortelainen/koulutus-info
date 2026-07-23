@@ -50,13 +50,20 @@ export const readCurrentYearStatistics = (): StatisticsResponse => readStatistic
 export const readSchools = (): SchoolsResponse => readPublicData("schools.json", parseSchools);
 
 export const availableCutoffRounds = (): CutoffRound[] =>
-  fs
-    .readdirSync(`${process.cwd()}/public/data`)
-    .flatMap((filename) => cutoffRoundFromFilename(filename) ?? [])
-    .sort(compareCutoffRounds);
+  [
+    ...new Set(
+      fs
+        .readdirSync(`${process.cwd()}/public/data/pisterajat`)
+        .flatMap((filename) => cutoffRoundFromFilename(filename) ?? []),
+    ),
+  ].sort(compareCutoffRounds);
+
+const cutoffSectors = ["amk", "yliopisto"] as const;
 
 export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): CutoffSchool[] =>
-  readPublicData(`pisterajat-${round}.json`, parseCutoffSchools);
+  cutoffSectors.flatMap((sector) =>
+    readPublicData(`pisterajat/pisterajat-${round}-${sector}.json`, parseCutoffSchools),
+  );
 
 export const readSchoolsWithAvailableCutoffs = (): SchoolsResponse =>
   filterUnavailableCutoffAlat(

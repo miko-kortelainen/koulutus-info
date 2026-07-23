@@ -210,7 +210,7 @@ test("/pistelaskuri: searches active cutoffs", async ({ page }) => {
   await expect(page.getByRole("button", { name: /Humanistiset alat/ })).toHaveCount(0);
   await resultSearch.clear();
 
-  await resultSearch.fill("Pedagogik (undervisning på svenska)");
+  await resultSearch.fill("Pedagogik (undervisning på svenska), pedagogie kandidat");
   await expect(page.getByRole("article")).toHaveCount(1);
   await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
 });
@@ -221,7 +221,7 @@ test("/pistelaskuri: switches to first-time applicant cutoffs", async ({ page })
     name: "Näytä myös ensikertalaisten pisterajat",
   });
   const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
-  await resultSearch.fill("Pedagogik (undervisning på svenska)");
+  await resultSearch.fill("Pedagogik (undervisning på svenska), pedagogie kandidat");
 
   await expect(firstTimeApplicantCheckbox).not.toBeChecked();
   await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
@@ -250,7 +250,7 @@ test("/pistelaskuri: filters university results and paginates a group", async ({
 
 test("/pistelaskuri: switches cutoff rounds", async ({ page }) => {
   await openCalculator(page);
-  const roundResponse = page.waitForResponse((response) => response.url().includes("pisterajat-2025-syksy.json"));
+  const roundResponse = page.waitForResponse((response) => response.url().includes("pisterajat-2025-syksy"));
   await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
   expect((await roundResponse).status()).toBe(200);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
@@ -318,7 +318,7 @@ test("/pistelaskuri: switches selection methods", async ({ page }) => {
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true })).toHaveCount(0);
 
   await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
-  await expect(page.getByRole("article").getByText("AMK-valintakoe", { exact: true }).first()).toBeVisible();
+  await expect(page.getByRole("article").getByText("AMK-Valintakoe", { exact: true }).first()).toBeVisible();
 });
 
 test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
@@ -700,14 +700,16 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
 
   await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/pisterajat/");
   await expect(page.getByRole("heading", { name: "Centria-ammattikorkeakoulu – pisterajat" })).toBeVisible();
-  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible();
-  await expect(page.getByText("Todistusvalinta (YO)").first()).toBeVisible();
-  await expect(page.getByText("91")).toBeVisible();
+  await expect(
+    page.getByText("Bachelor of Business Administration (BBA), Business Management, blended learning / Kokkola"),
+  ).toBeVisible();
+  await expect(page.getByText("AMK-Valintakoe").first()).toBeVisible();
+  await expect(page.getByText("25,7")).toBeVisible();
 
   // click can land before hydration, so retry until page 2 actually renders
   await expect(async () => {
     await page.getByRole("button", { name: /Sivu 2\// }).click();
-    await expect(page.getByText("Insinööri (AMK), tekniikan yhteinen päivätoteutus / Kokkola")).toBeVisible({
+    await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
       timeout: 1000,
     });
   }).toPass();
@@ -716,17 +718,23 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
 test("/koulut/:slug/pisterajat: shows every selection method for a programme", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
 
-  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible();
-  await expect(page.getByText("AMK-valintakoe", { exact: true }).first()).toBeVisible();
+  // click can land before hydration, so retry until page 2 actually renders
+  await expect(async () => {
+    await page.getByRole("button", { name: /Sivu 2\// }).click();
+    await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
+      timeout: 1000,
+    });
+  }).toPass();
+  await expect(page.getByText("AMK-Valintakoe", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
 });
 
 test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
-  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
-    timeout: 10000,
-  });
+  await expect(
+    page.getByText("Bachelor of Business Administration (BBA), Business Management, blended learning / Kokkola"),
+  ).toBeVisible({ timeout: 10000 });
 
   const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");
@@ -738,9 +746,14 @@ test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => 
 
 test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
-  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
-    timeout: 10000,
-  });
+
+  // click can land before hydration, so retry until page 2 actually renders
+  await expect(async () => {
+    await page.getByRole("button", { name: /Sivu 2\// }).click();
+    await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
+      timeout: 1000,
+    });
+  }).toPass();
   await expect(page.getByText("Tradenomi (AMK), liiketalous, monimuotototeutus / Pietarsaari")).not.toBeVisible();
 
   await selectOption(page, "Hakukierros", "Syksyn yhteishaku 2024");
