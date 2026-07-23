@@ -3,7 +3,7 @@ export type CutoffRound = `${number}-${"kevat" | "syksy"}`;
 export const DEFAULT_CUTOFF_ROUND: CutoffRound = "2026-kevat";
 
 export function cutoffRoundFromFilename(filename: string): CutoffRound | null {
-  const match = /^pisterajat-(\d{4})-(kevat|syksy)\.json$/.exec(filename);
+  const match = /^pisterajat-(\d{4})-(kevat|syksy)-(?:amk|yliopisto)\.json$/.exec(filename);
   return match ? (`${match[1]}-${match[2]}` as CutoffRound) : null;
 }
 
