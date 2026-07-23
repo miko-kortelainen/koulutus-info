@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Turun yliopisto",
+    "sector": "Yliopistokoulutus",
+    "programmes": [
+      {
+        "name": "Digitaalisen kulttuurin, maiseman ja kulttuuriperinnön tutkinto-ohjelma, Pori, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v), syksy 2024",
+        "koulutusala": "Humanistiset alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Muu valinta",
+            "score": 20,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Saksan kieli, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v), syksy 2024",
+        "koulutusala": "Humanistiset alat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta",
+            "score": 79.6,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Jyväskylän yliopisto",
+    "sector": "Yliopistokoulutus",
+    "programmes": [
+      {
+        "name": "Luokanopettajan aikuiskoulutuksen kandidaatti- ja maisteriohjelma (Kokkolan yliopistokeskus Chydenius), kasvatustieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "koulutusala": "Kasvatusalat",
+        "cutoffs": [
+          {
+            "selectionMethod": "Muu valinta, ensikertalaiset",
+            "score": 33,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          },
+          {
+            "selectionMethod": "Valintakoe",
+            "score": 25,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      },
+      {
+        "name": "Tietojenkäsittelytieteen kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "koulutusala": "Tietojenkäsittely ja tietoliikenne",
+        "cutoffs": [
+          {
+            "selectionMethod": "Todistusvalinta",
+            "score": 84.2,
+            "startYear": 2025,
+            "startSeason": "Kevät"
+          }
+        ]
+      }
+    ]
+  }
+]

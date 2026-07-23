@@ -14,11 +14,12 @@ export const data = (pageContext: PageContextServer): CutoffPageData => {
   const entries: CutoffEntry[] = [];
 
   for (const round of availableCutoffRounds()) {
-    const school = readCutoffSchools(round).find((s) => slugify(s.name) === slug);
-    if (!school) continue;
-    schoolName = school.name;
-    for (const programme of school.programmes) {
-      entries.push({ programme, round });
+    const schools = readCutoffSchools(round).filter((s) => slugify(s.name) === slug);
+    for (const school of schools) {
+      schoolName = school.name;
+      for (const programme of school.programmes) {
+        entries.push({ programme, round });
+      }
     }
   }
 

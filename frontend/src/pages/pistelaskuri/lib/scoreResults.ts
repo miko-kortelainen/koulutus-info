@@ -15,6 +15,12 @@ type ScoreResultSelection = Pick<ScoreResult, "sector" | "selectionMethod">;
 
 const withFirstTime = (method: string) => [method, `${method}, ensikertalaiset`] as const;
 
+// "AMK-valintakoe" casing has drifted in the source data before (now "AMK-Valintakoe"), so
+// compare that one method case-insensitively; every other method stays an exact match.
+const isAmkValintakoe = (value: string) => value.toLowerCase().startsWith("amk-valintakoe");
+const sameSelectionMethod = (a: string, b: string) =>
+  a === b || (isAmkValintakoe(a) && isAmkValintakoe(b) && a.toLowerCase() === b.toLowerCase());
+
 const selectionMethodsFor = (result: ScoreResultSelection, scoreType: ScoreType) => {
   if (result.sector === "Yliopistokoulutus") {
     return scoreType === "Todistusvalinta (YO)" ? withFirstTime("Todistusvalinta") : undefined;
@@ -24,7 +30,8 @@ const selectionMethodsFor = (result: ScoreResultSelection, scoreType: ScoreType)
 };
 
 export function matchesScoreType(result: ScoreResultSelection, scoreType: ScoreType) {
-  return selectionMethodsFor(result, scoreType)?.includes(result.selectionMethod) ?? false;
+  const methods = selectionMethodsFor(result, scoreType);
+  return methods?.some((method) => sameSelectionMethod(method, result.selectionMethod)) ?? false;
 }
 
 const lowestCutoff = (results: ScoreResult[]) =>
@@ -38,7 +45,7 @@ export function selectApplicantResults(
   const programmeGroups = new Map<string, { methods: readonly [string, string]; results: ScoreResult[] }>();
   for (const result of results) {
     const methods = selectionMethodsFor(result, scoreType);
-    if (!methods?.includes(result.selectionMethod)) continue;
+    if (!methods?.some((method) => sameSelectionMethod(method, result.selectionMethod))) continue;
 
     const key = [result.sector, result.schoolName, result.programmeName].join("\0");
     const group = programmeGroups.get(key) ?? { methods, results: [] };
@@ -47,7 +54,8 @@ export function selectApplicantResults(
   }
 
   return [...programmeGroups.values()].flatMap(({ methods, results: programmeResults }) => {
-    const pick = (method: string) => programmeResults.filter((result) => result.selectionMethod === method);
+    const pick = (method: string) =>
+      programmeResults.filter((result) => sameSelectionMethod(result.selectionMethod, method));
     const preferred = pick(isFirstTimeApplicant ? methods[1] : methods[0]);
     const chosen = preferred.length > 0 ? preferred : isFirstTimeApplicant ? pick(methods[0]) : [];
     return chosen.length > 0 ? [lowestCutoff(chosen)] : [];
