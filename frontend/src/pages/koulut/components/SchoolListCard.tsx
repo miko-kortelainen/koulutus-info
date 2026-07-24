@@ -1,6 +1,6 @@
 import { Badge, Card, Group, HStack, Text, VStack } from "@chakra-ui/react";
 import { HiOutlineAcademicCap } from "react-icons/hi";
-import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/lib/statistics";
+import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier, ratioFormat } from "@/lib/statistics";
 import { COLORS } from "@/theme";
 import type { SchoolListItem } from "../+data";
 
@@ -53,6 +53,13 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
     </Text>
   );
 
+  const feedbackText =
+    school.feedbackAverage != null && school.feedbackYear != null ? (
+      <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }}>
+        Opiskelijapalautteen keskiarvo {ratioFormat.format(school.feedbackAverage)} / 5
+      </Text>
+    ) : null;
+
   const tierBadge = tier ? (
     <HStack alignItems="center" gap={1} mt={1}>
       <Badge bg={tier.bg} color={tier.color} fontWeight="semibold" size={{ base: "xs", md: "md" }}>
@@ -72,6 +79,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
             {nameRow}
             {hakijaStats}
             {sisaanpaasyprosenttiText}
+            {feedbackText}
             {tierBadge}
           </VStack>
         </Card.Body>

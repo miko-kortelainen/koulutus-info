@@ -1,5 +1,11 @@
 import fs from "node:fs";
-import { parseCutoffSchools, parseSchools, parseStatistics } from "@/api/dataValidation";
+import {
+  parseCutoffSchools,
+  parseSchools,
+  parseStatistics,
+  parseUniversityFeedback,
+  type UniversityFeedbackDataset,
+} from "@/api/dataValidation";
 import {
   type CutoffRound,
   compareCutoffRounds,
@@ -107,4 +113,18 @@ export const schoolNames = (): string[] => {
   assertNoSlugCollisions(uniqueNames, "School");
 
   return uniqueNames;
+};
+
+export const UNIVERSITY_FEEDBACK_YEAR = 2025;
+
+export const readUniversityFeedback = (): UniversityFeedbackDataset => {
+  const feedback = readPublicData("yliopisto-palaute.json", parseUniversityFeedback);
+  const knownSchoolNames = new Set(schoolNames());
+  const unknownSchools = Object.keys(feedback).filter((name) => !knownSchoolNames.has(name));
+  if (unknownSchools.length > 0) {
+    throw new Error(
+      `University feedback schools missing from schools or statistics data: ${unknownSchools.join(", ")}`,
+    );
+  }
+  return feedback;
 };

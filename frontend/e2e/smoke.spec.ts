@@ -653,9 +653,11 @@ test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
 
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
   await expect(page.getByText(/Sisäänpääsyprosentti \d/).first()).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText(/Opiskelijapalautteen keskiarvo 3,92/).first()).toBeVisible();
 
   await page.getByRole("tab", { name: "Ammattikorkeakoulut" }).click();
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText(/Opiskelijapalautteen keskiarvo/)).toHaveCount(0);
 });
 
 test("/koulut: sort control reorders the school list", async ({ page }) => {
@@ -684,14 +686,17 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
   await expect(page.getByRole("heading", { exact: true, level: 1, name: "Centria-ammattikorkeakoulu" })).toBeVisible();
 });
 
-test("/koulut/:slug: switches between programmes and applicant statistics", async ({ page }) => {
-  await page.goto("/koulut/centria-ammattikorkeakoulu/");
+test("/koulut/:slug: switches between detail tabs", async ({ page }) => {
+  await page.goto("/koulut/aalto-yliopisto/");
   const statisticsTab = page.getByRole("tab", { name: /Hakijamäärät/ });
 
   await statisticsTab.click();
 
   await expect(statisticsTab).toHaveAttribute("aria-selected", "true");
   await expect(page.getByRole("tabpanel").getByText("Hakijat").first()).toBeVisible();
+  await page.getByRole("tab", { name: "Opiskelijapalaute" }).click();
+
+  await expect(page.getByRole("heading", { level: 2, name: "Opiskelijapalaute 2025" })).toBeVisible();
 });
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {

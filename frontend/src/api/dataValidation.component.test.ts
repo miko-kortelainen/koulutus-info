@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { parseCutoffSchools, parseSchools, parseStatistics } from "./dataValidation";
+import { parseCutoffSchools, parseSchools, parseStatistics, parseUniversityFeedback } from "./dataValidation";
 
 const statistics = {
   kooditHakukohde: "1.2.246.562.20.00000000001",
@@ -39,10 +39,37 @@ const cutoffSchool = {
   ],
 };
 
+const universityFeedback = {
+  Testiyliopisto: {
+    tilastot: { vastaajatLkm: 100, keskiarvo: 3.75, keskihajonta: 1.1 },
+    koulutusalat: {
+      Kasvatusalat: {
+        tilastot: { vastaajatLkm: 40, keskiarvo: 3.8, keskihajonta: 1 },
+        osiot: {
+          Oppiminen: {
+            tasot: {
+              I: {
+                tilastot: { vastaajatLkm: 4, keskiarvo: 3.5, keskihajonta: 1 },
+                kohteet: [
+                  {
+                    kohde: "Olen oppinut uutta.",
+                    tilastot: { vastaajatLkm: null, keskiarvo: null, keskihajonta: null, salattu: true },
+                  },
+                ],
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
 test("accepts valid datasets", () => {
   expect(parseStatistics([statistics], "statistics.json")).toEqual([statistics]);
   expect(parseSchools([school], "schools.json")).toEqual([school]);
   expect(parseCutoffSchools([cutoffSchool], "pisterajat.json")).toEqual([cutoffSchool]);
+  expect(parseUniversityFeedback(universityFeedback, "yliopisto-palaute.json")).toEqual(universityFeedback);
 });
 
 test.each([-1, 1.5, Number.NaN])("rejects invalid statistics count %s", (valitutLkm) => {
@@ -66,4 +93,13 @@ test("rejects malformed nested cutoff data", () => {
   expect(() =>
     parseCutoffSchools([{ ...cutoffSchool, programmes: [{ ...programme, cutoffs: [cutoff] }] }], "pisterajat.json"),
   ).toThrow("Invalid data in pisterajat.json");
+});
+
+test("rejects malformed nested university feedback", () => {
+  const malformed = structuredClone(universityFeedback);
+  Reflect.deleteProperty(malformed.Testiyliopisto.koulutusalat.Kasvatusalat.osiot.Oppiminen.tasot.I, "tilastot");
+
+  expect(() => parseUniversityFeedback(malformed, "yliopisto-palaute.json")).toThrow(
+    "Invalid data in yliopisto-palaute.json",
+  );
 });
