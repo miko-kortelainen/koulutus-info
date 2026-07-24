@@ -1,10 +1,4 @@
-import {
-  readCurrentYearStatistics,
-  readSchools,
-  readUniversityFeedback,
-  schoolNames,
-  UNIVERSITY_FEEDBACK_YEAR,
-} from "@/api/serverData";
+import { readCurrentYearStatistics, readSchools, readUniversityFeedback, schoolNames } from "@/api/serverData";
 import { slugify } from "@/lib/slug";
 
 export interface SchoolListItem {
@@ -17,7 +11,6 @@ export interface SchoolListItem {
   ensisijaisetHakijat: number;
   aloituspaikat: number;
   feedbackAverage: number | null;
-  feedbackYear: number | null;
 }
 
 export const data = (): SchoolListItem[] => {
@@ -38,7 +31,6 @@ export const data = (): SchoolListItem[] => {
       ensisijaisetHakijat: rows.reduce((sum, r) => sum + r.ensisijaisetHakijatLkm, 0),
       aloituspaikat: rows.reduce((sum, r) => sum + r.aloituspaikatLkm, 0),
       feedbackAverage: schoolFeedback?.tilastot.keskiarvo ?? null,
-      feedbackYear: schoolFeedback ? UNIVERSITY_FEEDBACK_YEAR : null,
     };
   });
 };

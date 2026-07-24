@@ -652,12 +652,14 @@ test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Koulut" })).toBeVisible();
 
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
-  await expect(page.getByText(/Sisäänpääsyprosentti \d/).first()).toBeVisible();
-  await expect(page.getByRole("tabpanel").getByText(/Opiskelijapalautteen keskiarvo 3,92/).first()).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText("Sisäänpääsyprosentti").first()).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText("Opiskelijapalaute (ka.)").first()).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText("3,92 / 5").first()).toBeVisible();
 
   await page.getByRole("tab", { name: "Ammattikorkeakoulut" }).click();
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
-  await expect(page.getByRole("tabpanel").getByText(/Opiskelijapalautteen keskiarvo/)).toHaveCount(0);
+  await expect(page.getByRole("tabpanel").getByText("Opiskelijapalaute (ka.)").first()).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText("–").first()).toBeVisible();
 });
 
 test("/koulut: sort control reorders the school list", async ({ page }) => {
