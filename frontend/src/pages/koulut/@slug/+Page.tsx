@@ -10,9 +10,10 @@ import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 import type { SchoolPageData } from "./+data";
+import UniversityFeedback from "./components/UniversityFeedback";
 
 export default function SchoolPage() {
-  const { schoolName, hasCutoffs, toteutukset, statistics } = useData<SchoolPageData>();
+  const { schoolName, hasCutoffs, toteutukset, statistics, feedback, feedbackYear } = useData<SchoolPageData>();
   const pageSize = 5;
   const [programPage, setProgramPage] = useState(1);
   const [statsPage, setStatsPage] = useState(1);
@@ -84,6 +85,9 @@ export default function SchoolPage() {
     </Stack>
   );
 
+  const feedbackContent =
+    feedback && feedbackYear ? <UniversityFeedback feedback={feedback} year={feedbackYear} /> : null;
+
   const tabs = [
     {
       value: "koulutukset",
@@ -97,6 +101,12 @@ export default function SchoolPage() {
       content: statsList,
       visible: statistics.length > 0,
     },
+    {
+      value: "opiskelijapalaute",
+      label: "Opiskelijapalaute",
+      content: feedbackContent,
+      visible: feedbackContent != null,
+    },
   ].filter((t) => t.visible);
 
   return (
@@ -104,15 +114,16 @@ export default function SchoolPage() {
       {header}
       {tabs.length > 0 ? (
         <Tabs.Root defaultValue={tabs[0].value} size="sm">
-          <Tabs.List aria-label={`${schoolName}: tiedot`}>
+          <Tabs.List aria-label={`${schoolName}: tiedot`} overflowX="auto">
             {tabs.map(({ value, label }) => (
               <Tabs.Trigger
-                flex={1}
+                flex={{ base: "0 0 auto", md: 1 }}
                 fontWeight="semibold"
                 justifyContent="center"
                 key={value}
                 letterSpacing="wide"
                 value={value}
+                whiteSpace="nowrap"
               >
                 {label}
               </Tabs.Trigger>
