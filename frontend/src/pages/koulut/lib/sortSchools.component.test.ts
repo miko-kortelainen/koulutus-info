@@ -13,7 +13,6 @@ const schools: SchoolListItem[] = [
     ensisijaisetHakijat: 30,
     aloituspaikat: 10,
     feedbackAverage: 4.1,
-    feedbackYear: 2025,
   },
   {
     name: "Beta",
@@ -25,7 +24,6 @@ const schools: SchoolListItem[] = [
     ensisijaisetHakijat: 10,
     aloituspaikat: 10,
     feedbackAverage: null,
-    feedbackYear: null,
   },
   {
     name: "Gamma",
@@ -37,7 +35,6 @@ const schools: SchoolListItem[] = [
     ensisijaisetHakijat: 20,
     aloituspaikat: 10,
     feedbackAverage: null,
-    feedbackYear: null,
   },
 ];
 
