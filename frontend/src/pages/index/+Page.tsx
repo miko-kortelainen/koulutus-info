@@ -31,8 +31,8 @@ export default function LandingPage() {
             </Text>
           </Group>
 
-          <Text color="fg.muted" fontSize={{ base: "sm", md: "md" }} fontWeight="semibold" textWrap="pretty">
-            Korkeakouluun pyrkivän paras työkalu!
+          <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }} fontWeight="semibold" textWrap="pretty">
+            Hakijamäärät, pisterajat, koulutukset ja vertailut.
           </Text>
         </VStack>
       </Stack>

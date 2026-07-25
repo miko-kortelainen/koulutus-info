@@ -11,37 +11,37 @@ export const quickLinks = [
   {
     href: "/pistelaskuri/",
     label: "pistelaskuri",
-    description: "Yhteishaun todistusvalintapistelaskuri",
+    description: "Laske yhteishaun todistusvalintapisteesi",
     icon: HiOutlineCalculator,
   },
   {
     href: "/koulutukset/",
     label: "koulutukset",
-    description: "Syksyn 2026 yhteishaun koulutustarjonta",
+    description: "Katso yhteishaussa olevat koulutukset",
     icon: HiOutlineAcademicCap,
   },
   {
     href: "/oma-hakulista/",
     label: "oma hakulista",
-    description: "Tallenna ja järjestä omat hakukohteesi",
+    description: "Valitse yhteishaun hakukohteesi",
     icon: HiOutlineBookmark,
   },
   {
     href: "/hakijamaarat/",
     label: "hakijamäärät",
-    description: "Edellisvuosien hakijamääriä koulutuksittain",
+    description: "Katso yhteishakujen hakijamääriä",
     icon: HiOutlineChartBar,
   },
   {
     href: "/koulut/",
     label: "koulut",
-    description: "Koulujen pisterajat, hakijamäärät ja koulutukset",
+    description: "Katso koulujen pisterajat ja hakijamäärät.",
     icon: HiOutlineLibrary,
   },
   {
     href: "/trendit/",
     label: "trendit",
-    description: "Suositumpien alojen ja koulujen vertailu",
+    description: "Katso suosituimmat alat ja koulut",
     icon: HiOutlineTrendingUp,
   },
 ];
