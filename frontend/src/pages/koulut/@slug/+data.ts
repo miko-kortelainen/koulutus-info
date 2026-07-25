@@ -1,6 +1,7 @@
 import type { PageContextServer } from "vike/types";
 import {
   cutoffSchoolNames,
+  feedbackSchoolNames,
   readCurrentYearStatistics,
   readSchoolsWithAvailableCutoffs,
   schoolNames,
@@ -11,6 +12,7 @@ import type { StatisticsEntry, ToteutusEntry } from "@/types.gen";
 export interface SchoolPageData {
   schoolName: string;
   hasCutoffs: boolean;
+  hasFeedback: boolean;
   toteutukset: ToteutusEntry[];
   statistics: StatisticsEntry[];
 }
@@ -23,6 +25,7 @@ export const data = (pageContext: PageContextServer): SchoolPageData => {
   return {
     schoolName,
     hasCutoffs,
+    hasFeedback: feedbackSchoolNames().includes(schoolName),
     toteutukset: schools.flatMap((k) => k.toteutukset).filter((t) => t.oppilaitosNimi.fi === schoolName),
     statistics: statistics
       .filter((s) => s.korkeakoulu === schoolName)

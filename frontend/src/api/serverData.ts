@@ -1,5 +1,12 @@
 import fs from "node:fs";
-import { parseCutoffSchools, parseSchools, parseStatistics } from "@/api/dataValidation";
+import {
+  type FeedbackMaxScore,
+  parseCutoffSchools,
+  parseSchools,
+  parseStatistics,
+  parseStudentFeedback,
+  type StudentFeedback,
+} from "@/api/dataValidation";
 import {
   type CutoffRound,
   compareCutoffRounds,
@@ -108,3 +115,43 @@ export const schoolNames = (): string[] => {
 
   return uniqueNames;
 };
+
+export type FeedbackSurvey = "avop" | "kandipalaute";
+
+export interface StudentFeedbackEntry {
+  feedback: StudentFeedback;
+  maxScore: FeedbackMaxScore;
+  survey: FeedbackSurvey;
+  year: number;
+}
+
+export const readStudentFeedback = (): Record<string, StudentFeedbackEntry> => {
+  const universityFeedback = readPublicData("yliopisto-palaute.json", (value, source) =>
+    parseStudentFeedback(value, source, 5),
+  );
+  const amkFeedback = readPublicData("amk-palaute.json", (value, source) => parseStudentFeedback(value, source, 7));
+  const duplicateSchools = Object.keys(universityFeedback).filter((name) => name in amkFeedback);
+  if (duplicateSchools.length > 0) {
+    throw new Error(`Student feedback schools found in both datasets: ${duplicateSchools.join(", ")}`);
+  }
+
+  const feedback: Record<string, StudentFeedbackEntry> = Object.fromEntries([
+    ...Object.entries(universityFeedback).map(([name, schoolFeedback]) => [
+      name,
+      { feedback: schoolFeedback, maxScore: 5, survey: "kandipalaute", year: 2025 },
+    ]),
+    ...Object.entries(amkFeedback).map(([name, schoolFeedback]) => [
+      name,
+      { feedback: schoolFeedback, maxScore: 7, survey: "avop", year: 2025 },
+    ]),
+  ]);
+  const knownSchoolNames = new Set(schoolNames());
+  const unknownSchools = Object.keys(feedback).filter((name) => !knownSchoolNames.has(name));
+  if (unknownSchools.length > 0) {
+    throw new Error(`Student feedback schools missing from schools or statistics data: ${unknownSchools.join(", ")}`);
+  }
+  return feedback;
+};
+
+export const feedbackSchoolNames = (): string[] =>
+  Object.keys(readStudentFeedback()).sort((a, b) => a.localeCompare(b, "fi"));
