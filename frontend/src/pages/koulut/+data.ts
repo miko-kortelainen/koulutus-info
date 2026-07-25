@@ -1,4 +1,5 @@
-import { readCurrentYearStatistics, readSchools, readUniversityFeedback, schoolNames } from "@/api/serverData";
+import type { FeedbackMaxScore } from "@/api/dataValidation";
+import { readCurrentYearStatistics, readSchools, readStudentFeedback, schoolNames } from "@/api/serverData";
 import { slugify } from "@/lib/slug";
 
 export interface SchoolListItem {
@@ -11,12 +12,13 @@ export interface SchoolListItem {
   ensisijaisetHakijat: number;
   aloituspaikat: number;
   feedbackAverage: number | null;
+  feedbackMaxScore: FeedbackMaxScore | null;
 }
 
 export const data = (): SchoolListItem[] => {
   const statistics = readCurrentYearStatistics();
   const schools = readSchools();
-  const feedback = readUniversityFeedback();
+  const feedback = readStudentFeedback();
   const toteutukset = schools.flatMap((k) => k.toteutukset);
   return schoolNames().map((name) => {
     const rows = statistics.filter((s) => s.korkeakoulu === name);
@@ -30,7 +32,8 @@ export const data = (): SchoolListItem[] => {
       valitut: rows.reduce((sum, r) => sum + r.valitutLkm, 0),
       ensisijaisetHakijat: rows.reduce((sum, r) => sum + r.ensisijaisetHakijatLkm, 0),
       aloituspaikat: rows.reduce((sum, r) => sum + r.aloituspaikatLkm, 0),
-      feedbackAverage: schoolFeedback?.tilastot.keskiarvo ?? null,
+      feedbackAverage: schoolFeedback?.feedback.tilastot.keskiarvo ?? null,
+      feedbackMaxScore: schoolFeedback?.maxScore ?? null,
     };
   });
 };

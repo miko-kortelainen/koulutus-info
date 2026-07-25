@@ -81,7 +81,9 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
           Opiskelijapalaute (ka.)
         </Stat.Label>
         <Stat.ValueText fontSize={{ base: "md", md: "lg" }} fontWeight="semibold">
-          {school.feedbackAverage == null ? "–" : `${ratioFormat.format(school.feedbackAverage)} / 5`}
+          {school.feedbackAverage == null || school.feedbackMaxScore == null
+            ? "–"
+            : `${ratioFormat.format(school.feedbackAverage)} / ${school.feedbackMaxScore}`}
         </Stat.ValueText>
       </Stat.Root>
     </SimpleGrid>

@@ -4,9 +4,9 @@ import { Head as GlobalHead } from "../../../+Head";
 import type { FeedbackPageData } from "./+data";
 
 export function Head() {
-  const { schoolName, feedbackYear } = useData<FeedbackPageData>();
+  const { schoolName, year } = useData<FeedbackPageData>();
   const url = `https://yhteishaku.app/koulut/${slugify(schoolName)}/opiskelijapalautteet/`;
-  const description = `${schoolName} – vuoden ${feedbackYear} opiskelijapalautteen vastaajamäärät ja keskiarvot koulutusaloittain.`;
+  const description = `${schoolName} – vuoden ${year} opiskelijapalautteen vastaajamäärät ja keskiarvot koulutusaloittain.`;
 
   return (
     <>

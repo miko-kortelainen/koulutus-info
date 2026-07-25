@@ -3,16 +3,21 @@ import type { ReactNode } from "react";
 import type {
   FeedbackField,
   FeedbackGroup,
+  FeedbackMaxScore,
   FeedbackStatistics,
-  UniversityFeedback as UniversityFeedbackData,
+  StudentFeedback as StudentFeedbackData,
 } from "@/api/dataValidation";
+import type { FeedbackSurvey } from "@/api/serverData";
 import { numberFormat, ratioFormat } from "@/lib/statistics";
 
-interface UniversityFeedbackProps {
-  feedback: UniversityFeedbackData;
+interface StudentFeedbackProps {
+  feedback: StudentFeedbackData;
+  maxScore: FeedbackMaxScore;
+  survey: FeedbackSurvey;
 }
 
 interface FeedbackStatsProps {
+  maxScore: FeedbackMaxScore;
   statistics: FeedbackStatistics;
 }
 
@@ -23,11 +28,11 @@ function respondentText(count: number | null) {
   return `${numberFormat.format(count)} ${count === 1 ? "vastaaja" : "vastaajaa"}`;
 }
 
-function FeedbackStats({ statistics }: FeedbackStatsProps) {
+function FeedbackStats({ maxScore, statistics }: FeedbackStatsProps) {
   if (statistics.salattu) {
     return (
       <Text color="fg.muted" fontSize="sm">
-        Alle 5 vastaajaa - N/A
+        Alle 5 vastaajaa – arvo salattu.
       </Text>
     );
   }
@@ -45,14 +50,14 @@ function FeedbackStats({ statistics }: FeedbackStatsProps) {
       <Text>
         {statistics.keskiarvo == null
           ? "Ei numeerista vastausta"
-          : `Keskimääräinen vastaus ${ratioFormat.format(statistics.keskiarvo)} / 5`}
+          : `Keskimääräinen vastaus ${ratioFormat.format(statistics.keskiarvo)} / ${maxScore}`}
       </Text>
       {statistics.keskihajonta == null ? null : <Text>Keskihajonta {ratioFormat.format(statistics.keskihajonta)}</Text>}
     </Stack>
   );
 }
 
-function QuestionList({ group }: { group: FeedbackGroup }) {
+function QuestionList({ group, maxScore }: { group: FeedbackGroup; maxScore: FeedbackMaxScore }) {
   return (
     <Stack as="ul" gap={0} listStyleType="none">
       {group.kohteet.map((item) => (
@@ -70,7 +75,7 @@ function QuestionList({ group }: { group: FeedbackGroup }) {
           <Text fontSize="xs" lineHeight="tall" textWrap="pretty">
             {item.kohde}
           </Text>
-          <FeedbackStats statistics={item.tilastot} />
+          <FeedbackStats maxScore={maxScore} statistics={item.tilastot} />
         </Stack>
       ))}
     </Stack>
@@ -131,7 +136,17 @@ function AccordionHeaderRow({
   );
 }
 
-function TopicAccordionItem({ group, name, value }: { group: FeedbackGroup; name: string; value: string }) {
+function TopicAccordionItem({
+  group,
+  maxScore,
+  name,
+  value,
+}: {
+  group: FeedbackGroup;
+  maxScore: FeedbackMaxScore;
+  name: string;
+  value: string;
+}) {
   const questionCount = group.kohteet.length;
   const average = group.tilastot.keskiarvo;
   const averageText = group.tilastot.salattu
@@ -155,27 +170,35 @@ function TopicAccordionItem({ group, name, value }: { group: FeedbackGroup; name
       </Heading>
       <Accordion.ItemContent>
         <Accordion.ItemBody pb={4} px={{ base: 3, md: 4 }}>
-          <QuestionList group={group} />
+          <QuestionList group={group} maxScore={maxScore} />
         </Accordion.ItemBody>
       </Accordion.ItemContent>
     </Accordion.Item>
   );
 }
 
-export default function UniversityFeedback({ feedback }: UniversityFeedbackProps) {
+export default function StudentFeedback({ feedback, maxScore, survey }: StudentFeedbackProps) {
   const fields = Object.entries(feedback.koulutusalat)
     .filter(([name]) => name !== "Tieto puuttuu")
     .sort(([a], [b]) => collator.compare(a, b));
+  const isAvop = survey === "avop";
 
   return (
     <Stack gap={6}>
       <Stack gap={1}>
         <Text color="fg.muted" fontSize="xs">
-          Yliopistojen opiskelijapalaute (Kandipalaute).
+          {isAvop
+            ? "Ammattikorkeakoulujen opiskelijapalaute (AVOP)."
+            : "Yliopistojen opiskelijapalaute (Kandipalaute)."}
         </Text>
         <Text color="fg.muted" fontSize="xs">
-          Tulokset sisältävät vain rahoitusmallikysymykset.
-          <br />1 = täysin eri mieltä • 5 = täysin samaa mieltä.
+          {isAvop ? null : (
+            <>
+              Tulokset sisältävät vain rahoitusmallikysymykset.
+              <br />
+            </>
+          )}
+          1 = täysin eri mieltä • {maxScore} = täysin samaa mieltä.
         </Text>
       </Stack>
 
@@ -189,7 +212,9 @@ export default function UniversityFeedback({ feedback }: UniversityFeedbackProps
         <Stat.Root borderColor="border" borderRadius="md" borderWidth="1px" p={4} size="sm">
           <Stat.Label>Keskiarvo</Stat.Label>
           <Stat.ValueText color="accentFg">
-            {feedback.tilastot.keskiarvo == null ? "–" : ratioFormat.format(feedback.tilastot.keskiarvo)}
+            {feedback.tilastot.keskiarvo == null
+              ? "–"
+              : `${ratioFormat.format(feedback.tilastot.keskiarvo)} / ${maxScore}`}
           </Stat.ValueText>
         </Stat.Root>
       </SimpleGrid>
@@ -226,7 +251,7 @@ export default function UniversityFeedback({ feedback }: UniversityFeedbackProps
                   rounded="md"
                 >
                   {feedbackTopics(field).map((topic) => (
-                    <TopicAccordionItem key={topic.value} {...topic} />
+                    <TopicAccordionItem key={topic.value} maxScore={maxScore} {...topic} />
                   ))}
                 </Accordion.Root>
               </Accordion.ItemBody>
@@ -236,12 +261,20 @@ export default function UniversityFeedback({ feedback }: UniversityFeedbackProps
       </Accordion.Root>
       <Stack borderColor="border.subtle" borderTopWidth="1px" gap={2} pt={4}>
         <Text color="fg.muted" fontSize="xs" textWrap="pretty">
-          Keskiarvot perustuvat valtakunnalliseen kandipalautekyselyyn, jossa valmistuvat opiskelijat arvioivat
-          koulutustaan.
+          {isAvop
+            ? "Keskiarvot perustuvat valtakunnalliseen AVOP-kyselyyn, jossa ammattikorkeakouluista valmistuvat opiskelijat arvioivat koulutustaan."
+            : "Keskiarvot perustuvat valtakunnalliseen kandipalautekyselyyn, jossa valmistuvat opiskelijat arvioivat koulutustaan."}
         </Text>
         <Text color="fg.muted" fontSize="xs">
           Lähde: Opetushallituksen tilastopalvelu{" "}
-          <Link href="https://vipunen.fi/fi-fi/yliopisto/Sivut/Opiskelijapalaute.aspx" textDecoration="underline">
+          <Link
+            href={
+              isAvop
+                ? "https://vipunen.fi/fi-fi/amk/Sivut/Opiskelijapalaute.aspx"
+                : "https://vipunen.fi/fi-fi/yliopisto/Sivut/Opiskelijapalaute.aspx"
+            }
+            textDecoration="underline"
+          >
             Vipunen.fi
           </Link>
           .

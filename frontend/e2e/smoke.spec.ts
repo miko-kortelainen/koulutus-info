@@ -74,6 +74,16 @@ async function openResultsAccordion(page: Page, name: RegExp) {
   return item;
 }
 
+// click can land before hydration, so retry until page 2 actually renders
+async function openSecondCutoffPage(page: Page) {
+  await expect(async () => {
+    await page.getByRole("button", { name: /Sivu 2\// }).click();
+    await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
+      timeout: 1000,
+    });
+  }).toPass();
+}
+
 test("homepage loads and nav drawer opens", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "yhteishaku.app" })).toBeVisible();
@@ -659,20 +669,20 @@ test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
   await page.getByRole("tab", { name: "Ammattikorkeakoulut" }).click();
   await expect(page.getByRole("tabpanel").getByRole("link").first()).toBeVisible();
   await expect(page.getByRole("tabpanel").getByText("Opiskelijapalaute (ka.)").first()).toBeVisible();
-  await expect(page.getByRole("tabpanel").getByText("–").first()).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText("5,40 / 7").first()).toBeVisible();
 });
 
-test("/koulut: sort control reorders the school list", async ({ page }) => {
+test("/koulut: sorts university and AMK schools by feedback average", async ({ page }) => {
   await page.goto("/koulut/");
   const firstLink = page.getByRole("tabpanel").getByRole("link").first();
-  await expect(firstLink).toBeVisible();
-  const azFirstHref = await firstLink.getAttribute("href");
 
   await page.getByRole("combobox", { name: "Järjestys" }).click();
-  await page.getByRole("option", { name: "Eniten hakijoita" }).click();
+  await page.getByRole("option", { name: "Korkein keskiarvo" }).click();
 
-  await expect(firstLink).toBeVisible();
-  await expect(firstLink).not.toHaveAttribute("href", azFirstHref ?? "");
+  await expect(firstLink).toHaveAttribute("href", "/koulut/lappeenrannan-lahden-teknillinen-yliopisto-lut/");
+
+  await page.getByRole("tab", { name: "Ammattikorkeakoulut" }).click();
+  await expect(firstLink).toHaveAttribute("href", "/koulut/lapin-ammattikorkeakoulu/");
 });
 
 test("/koulut/:slug: selecting a school opens its detail page", async ({ page }) => {
@@ -686,7 +696,23 @@ test("/koulut/:slug: selecting a school opens its detail page", async ({ page })
 
   await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/");
   await expect(page.getByRole("heading", { exact: true, level: 1, name: "Centria-ammattikorkeakoulu" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Opiskelijapalautteet" })).toHaveCount(0);
+});
+
+test("/koulut/:slug/opiskelijapalautteet: opens AMK feedback", async ({ page }) => {
+  await page.goto("/koulut/centria-ammattikorkeakoulu/");
+  await page.getByRole("link", { name: "Opiskelijapalautteet" }).click();
+
+  await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/opiskelijapalautteet/");
+  await expect(
+    page.getByRole("heading", {
+      exact: true,
+      level: 1,
+      name: "Centria-ammattikorkeakoulu – opiskelijapalautteet",
+    }),
+  ).toBeVisible();
+  await expect(page.getByText("Vuoden 2025 opiskelijapalautteen tulokset koulutusaloittain.")).toBeVisible();
+  await expect(page.getByText("Ammattikorkeakoulujen opiskelijapalaute (AVOP).")).toBeVisible();
+  await expect(page.getByText("5,40 / 7", { exact: true })).toBeVisible();
 });
 
 test("/koulut/:slug: switches detail tab and opens feedback", async ({ page }) => {
@@ -704,6 +730,7 @@ test("/koulut/:slug: switches detail tab and opens feedback", async ({ page }) =
     page.getByRole("heading", { exact: true, level: 1, name: "Aalto-yliopisto – opiskelijapalautteet" }),
   ).toBeVisible();
   await expect(page.getByText("Vuoden 2025 opiskelijapalautteen tulokset koulutusaloittain.")).toBeVisible();
+  await expect(page.getByText("3,92 / 5", { exact: true })).toBeVisible();
 });
 
 test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async ({ page }) => {
@@ -718,25 +745,13 @@ test("/koulut/:slug/pisterajat: shows paginated programme cutoff cards", async (
   await expect(page.getByText("AMK-Valintakoe").first()).toBeVisible();
   await expect(page.getByText("25,7")).toBeVisible();
 
-  // click can land before hydration, so retry until page 2 actually renders
-  await expect(async () => {
-    await page.getByRole("button", { name: /Sivu 2\// }).click();
-    await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
-      timeout: 1000,
-    });
-  }).toPass();
+  await openSecondCutoffPage(page);
 });
 
 test("/koulut/:slug/pisterajat: shows every selection method for a programme", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
 
-  // click can land before hydration, so retry until page 2 actually renders
-  await expect(async () => {
-    await page.getByRole("button", { name: /Sivu 2\// }).click();
-    await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
-      timeout: 1000,
-    });
-  }).toPass();
+  await openSecondCutoffPage(page);
   await expect(page.getByText("AMK-Valintakoe", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
@@ -759,13 +774,7 @@ test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => 
 test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
 
-  // click can land before hydration, so retry until page 2 actually renders
-  await expect(async () => {
-    await page.getByRole("button", { name: /Sivu 2\// }).click();
-    await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible({
-      timeout: 1000,
-    });
-  }).toPass();
+  await openSecondCutoffPage(page);
   await expect(page.getByText("Tradenomi (AMK), liiketalous, monimuotototeutus / Pietarsaari")).not.toBeVisible();
 
   await selectOption(page, "Hakukierros", "Syksyn yhteishaku 2024");

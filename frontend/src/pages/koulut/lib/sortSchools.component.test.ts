@@ -13,6 +13,7 @@ const schools: SchoolListItem[] = [
     ensisijaisetHakijat: 30,
     aloituspaikat: 10,
     feedbackAverage: 4.1,
+    feedbackMaxScore: 5,
   },
   {
     name: "Beta",
@@ -23,7 +24,8 @@ const schools: SchoolListItem[] = [
     valitut: 30,
     ensisijaisetHakijat: 10,
     aloituspaikat: 10,
-    feedbackAverage: null,
+    feedbackAverage: 3.2,
+    feedbackMaxScore: 5,
   },
   {
     name: "Gamma",
@@ -35,6 +37,7 @@ const schools: SchoolListItem[] = [
     ensisijaisetHakijat: 20,
     aloituspaikat: 10,
     feedbackAverage: null,
+    feedbackMaxScore: null,
   },
 ];
 
@@ -47,6 +50,8 @@ test.each<[SortOption, string[]]>([
   ["least_popular", ["Alpha", "Gamma", "Beta"]],
   ["most_first_choice", ["Alpha", "Gamma", "Beta"]],
   ["least_first_choice", ["Beta", "Gamma", "Alpha"]],
+  ["highest_feedback", ["Alpha", "Beta", "Gamma"]],
+  ["lowest_feedback", ["Beta", "Alpha", "Gamma"]],
 ])("sorts schools with %s without mutating the source", (sortOrder, expected) => {
   expect(names(sortSchools(schools, sortOrder))).toEqual(expected);
   expect(names(schools)).toEqual(["Alpha", "Beta", "Gamma"]);
