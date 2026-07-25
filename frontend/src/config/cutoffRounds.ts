@@ -16,6 +16,8 @@ export function cutoffRoundYear(round: CutoffRound) {
   return round.slice(0, 4);
 }
 
+export const DEFAULT_CUTOFF_YEAR = cutoffRoundYear(DEFAULT_CUTOFF_ROUND);
+
 export function cutoffRoundLabel(round: CutoffRound) {
   const [year, season] = round.split("-");
   return `${season === "kevat" ? "Kevään" : "Syksyn"} yhteishaku ${year}`;

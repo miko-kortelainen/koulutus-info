@@ -1,4 +1,9 @@
-const description = "Tutki korkeakoulujen yhteishaun hakijamääriä, trendejä sekä koulutustarjontaa.";
+import { CURRENT_YEAR } from "@/config/yearOptions";
+
+const description = `Korkeakoulujen yhteishaku ${CURRENT_YEAR.slice(
+  0,
+  4,
+)}: hakuajat, koulutukset, hakijamäärät, pisterajat ja todistusvalintalaskuri.`;
 
 export function Head() {
   return (

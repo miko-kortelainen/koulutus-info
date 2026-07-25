@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { getCutoffSchools } from "@/api/browserData";
 import SearchInput from "@/components/SearchInput";
-import { cutoffRoundLabel, cutoffRoundShortLabel } from "@/config/cutoffRounds";
+import { cutoffRoundLabel, cutoffRoundShortLabel, DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
@@ -145,7 +145,7 @@ export default function ScoreCalculatorPage() {
   const header = (
     <Stack gap={1}>
       <Heading as="h1" size="lg">
-        Pistelaskuri
+        Todistusvalintalaskuri {DEFAULT_CUTOFF_YEAR}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         Laske todistusvalintapisteesi ylioppilastutkinnon tai ammatillisen perustutkinnon todistuksen perusteella.
@@ -340,14 +340,18 @@ export default function ScoreCalculatorPage() {
       {resultList}
 
       <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
-        Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelee vuosi
+        Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelevat vuosi
         vuodelta. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
         todistusvalinnan kynnysehtoihin{" "}
         <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
           täältä
         </Link>
         . <br /> <br />
-        Pisterajojen tiedot ovat peräisin Opetushallituksen Vipunen-palvelusta.
+        Pisterajojen tiedot ovat peräisin Opetushallituksen{" "}
+        <Link href="https://vipunen.fi/fi-fi/" rel="noopener noreferrer" target="_blank" textDecoration="underline">
+          Vipunen-palvelusta
+        </Link>
+        .
       </Text>
     </PageContainer>
   );

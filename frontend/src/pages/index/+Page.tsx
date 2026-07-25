@@ -1,4 +1,5 @@
-import { Group, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Group, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+
 import PageContainer from "@/layout/PageContainer";
 import IosInstallTip from "./components/IosInstallTip";
 import QuickLinkCard from "./components/QuickLinkCard";
@@ -22,12 +23,12 @@ export default function LandingPage() {
         <VStack gap={0}>
           <Group flexDir="column">
             <Image alt="yhteishaku.app" boxSize={{ base: "16", md: "28" }} src="/images/logo.png" />
-            <Heading as="h1" fontWeight="bold" letterSpacing="widest" size={{ base: "3xl", md: "5xl" }}>
+            <Text fontSize={{ base: "3xl", md: "5xl" }} fontWeight="bold" letterSpacing="widest">
               yhteishaku
               <Text as="span" color="fg.accent">
                 .app
               </Text>
-            </Heading>
+            </Text>
           </Group>
 
           <Text color="fg.muted" fontSize={{ base: "sm", md: "md" }} fontWeight="semibold" textWrap="pretty">

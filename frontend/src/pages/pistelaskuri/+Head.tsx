@@ -1,8 +1,6 @@
-import { cutoffRoundYear, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
+import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 
-const description = `Laske YO- tai AMM-todistuspisteet ja vertaa tulosta vuoden ${cutoffRoundYear(
-  DEFAULT_CUTOFF_ROUND,
-)} suuntaa-antaviin AMK-pisterajoihin.`;
+const description = `Laske vuoden ${DEFAULT_CUTOFF_YEAR} YO- tai ammatillisen perustutkinnon todistusvalintapisteet ja vertaa tulosta korkeakoulujen pisterajoihin.`;
 
 export function Head() {
   return (

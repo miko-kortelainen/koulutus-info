@@ -1,5 +1,6 @@
 import { Heading, Link, Separator, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
+import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import type { CutoffIndexData } from "./+data";
 
@@ -9,10 +10,17 @@ export default function CutoffIndexPage() {
   const header = (
     <Stack gap={1}>
       <Heading as="h1" size="lg">
-        Pisterajat
+        Pisterajat {DEFAULT_CUTOFF_YEAR}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Yhteishaun pisterajat koulutusaloittain ja kouluittain eri hakukierroksilta.
+        AMK- ja yliopistokoulutusten yhteishaun pisterajat koulutusaloittain ja kouluittain.
+      </Text>
+      <Text fontSize="sm">
+        Arvioi ensin omat pisteesi{" "}
+        <Link href="/pistelaskuri/" textDecoration="underline">
+          todistusvalintalaskurilla
+        </Link>
+        .
       </Text>
       <Separator mt={2} />
     </Stack>
