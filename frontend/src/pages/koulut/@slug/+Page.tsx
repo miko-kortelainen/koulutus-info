@@ -1,6 +1,6 @@
-import { Heading, Link, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Heading, HStack, Link, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import { HiOutlineSparkles } from "react-icons/hi";
+import { HiOutlineChatAlt2, HiOutlineSparkles } from "react-icons/hi";
 import { useData } from "vike-react/useData";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
@@ -10,10 +10,9 @@ import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 import type { SchoolPageData } from "./+data";
-import UniversityFeedback from "./components/UniversityFeedback";
 
 export default function SchoolPage() {
-  const { schoolName, hasCutoffs, toteutukset, statistics, feedback, feedbackYear } = useData<SchoolPageData>();
+  const { schoolName, hasCutoffs, hasFeedback, toteutukset, statistics } = useData<SchoolPageData>();
   const pageSize = 5;
   const [programPage, setProgramPage] = useState(1);
   const [statsPage, setStatsPage] = useState(1);
@@ -41,21 +40,39 @@ export default function SchoolPage() {
           ? "Yhteishaussa olevat toteutukset ja edellisten hakijamäärät."
           : `Yhteishaun ${statisticsRoundShortLabel(CURRENT_YEAR)} hakijamäärät.`}
       </Text>
-      {hasCutoffs ? (
-        <Link
-          alignSelf="flex-start"
-          display="flex"
-          fontSize="sm"
-          fontWeight="semibold"
-          gap={1}
-          href={`/koulut/${slugify(schoolName)}/pisterajat/`}
-          textDecoration="underline"
-          textDecorationColor={COLORS.accentFg}
-          textDecorationStyle="dotted"
-        >
-          <HiOutlineSparkles color={COLORS.accentFg} />
-          Pisterajat
-        </Link>
+      {hasCutoffs || hasFeedback ? (
+        <HStack align="flex-start" flexWrap="wrap" gap={{ base: 2, md: 4 }}>
+          {hasCutoffs ? (
+            <Link
+              display="flex"
+              fontSize="sm"
+              fontWeight="semibold"
+              gap={1}
+              href={`/koulut/${slugify(schoolName)}/pisterajat/`}
+              textDecoration="underline"
+              textDecorationColor={COLORS.accentFg}
+              textDecorationStyle="dotted"
+            >
+              <HiOutlineSparkles color={COLORS.accentFg} />
+              Pisterajat
+            </Link>
+          ) : null}
+          {hasFeedback ? (
+            <Link
+              display="flex"
+              fontSize="sm"
+              fontWeight="semibold"
+              gap={1}
+              href={`/koulut/${slugify(schoolName)}/opiskelijapalautteet/`}
+              textDecoration="underline"
+              textDecorationColor={COLORS.accentFg}
+              textDecorationStyle="dotted"
+            >
+              <HiOutlineChatAlt2 aria-hidden="true" color={COLORS.accentFg} />
+              Opiskelijapalautteet
+            </Link>
+          ) : null}
+        </HStack>
       ) : null}
       <Separator mt={2} />
     </Stack>
@@ -85,9 +102,6 @@ export default function SchoolPage() {
     </Stack>
   );
 
-  const feedbackContent =
-    feedback && feedbackYear ? <UniversityFeedback feedback={feedback} year={feedbackYear} /> : null;
-
   const tabs = [
     {
       value: "koulutukset",
@@ -100,12 +114,6 @@ export default function SchoolPage() {
       label: `Hakijamäärät, ${statisticsRoundShortLabel(CURRENT_YEAR)}`,
       content: statsList,
       visible: statistics.length > 0,
-    },
-    {
-      value: "opiskelijapalaute",
-      label: "Opiskelijapalaute",
-      content: feedbackContent,
-      visible: feedbackContent != null,
     },
   ].filter((t) => t.visible);
 
