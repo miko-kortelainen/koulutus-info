@@ -17,9 +17,8 @@ const withFirstTime = (method: string) => [method, `${method}, ensikertalaiset`]
 
 // "AMK-valintakoe" casing has drifted in the source data before (now "AMK-Valintakoe"), so
 // compare that one method case-insensitively; every other method stays an exact match.
-const isAmkValintakoe = (value: string) => value.toLowerCase().startsWith("amk-valintakoe");
 const sameSelectionMethod = (a: string, b: string) =>
-  a === b || (isAmkValintakoe(a) && isAmkValintakoe(b) && a.toLowerCase() === b.toLowerCase());
+  a === b || (a.toLowerCase().startsWith("amk-valintakoe") && a.toLowerCase() === b.toLowerCase());
 
 const selectionMethodsFor = (result: ScoreResultSelection, scoreType: ScoreType) => {
   if (result.sector === "Yliopistokoulutus") {

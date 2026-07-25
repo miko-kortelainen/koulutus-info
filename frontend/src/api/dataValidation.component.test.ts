@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { parseCutoffSchools, parseSchools, parseStatistics } from "./dataValidation";
+import { parseCutoffSchools, parseSchools, parseStatistics, parseStudentFeedback } from "./dataValidation";
 
 const statistics = {
   kooditHakukohde: "1.2.246.562.20.00000000001",
@@ -39,10 +39,37 @@ const cutoffSchool = {
   ],
 };
 
+const studentFeedback = {
+  Testiyliopisto: {
+    tilastot: { vastaajatLkm: 100, keskiarvo: 3.75, keskihajonta: 1.1 },
+    koulutusalat: {
+      Kasvatusalat: {
+        tilastot: { vastaajatLkm: 40, keskiarvo: 3.8, keskihajonta: 1 },
+        osiot: {
+          Oppiminen: {
+            tasot: {
+              I: {
+                tilastot: { vastaajatLkm: 4, keskiarvo: 3.5, keskihajonta: 1 },
+                kohteet: [
+                  {
+                    kohde: "Olen oppinut uutta.",
+                    tilastot: { vastaajatLkm: null, keskiarvo: null, keskihajonta: null, salattu: true },
+                  },
+                ],
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
 test("accepts valid datasets", () => {
   expect(parseStatistics([statistics], "statistics.json")).toEqual([statistics]);
   expect(parseSchools([school], "schools.json")).toEqual([school]);
   expect(parseCutoffSchools([cutoffSchool], "pisterajat.json")).toEqual([cutoffSchool]);
+  expect(parseStudentFeedback(studentFeedback, "yliopisto-palaute.json", 5)).toEqual(studentFeedback);
 });
 
 test.each([-1, 1.5, Number.NaN])("rejects invalid statistics count %s", (valitutLkm) => {
@@ -66,4 +93,41 @@ test("rejects malformed nested cutoff data", () => {
   expect(() =>
     parseCutoffSchools([{ ...cutoffSchool, programmes: [{ ...programme, cutoffs: [cutoff] }] }], "pisterajat.json"),
   ).toThrow("Invalid data in pisterajat.json");
+});
+
+test("rejects malformed nested student feedback", () => {
+  const malformed = structuredClone(studentFeedback);
+  Reflect.deleteProperty(malformed.Testiyliopisto.koulutusalat.Kasvatusalat.osiot.Oppiminen.tasot.I, "tilastot");
+
+  expect(() => parseStudentFeedback(malformed, "yliopisto-palaute.json", 5)).toThrow(
+    "Invalid data in yliopisto-palaute.json",
+  );
+});
+
+test("validates feedback averages against the survey scale", () => {
+  const field = studentFeedback.Testiyliopisto.koulutusalat.Kasvatusalat;
+  const amkFeedback = {
+    Testiamk: {
+      ...studentFeedback.Testiyliopisto,
+      koulutusalat: {
+        Kasvatusalat: {
+          ...field,
+          osiot: {
+            Opetus: {
+              tilastot: { ...field.tilastot, keskiarvo: 4.5 },
+              kohteet: [
+                {
+                  kohde: "Opetus oli asiantuntevaa.",
+                  tilastot: { ...field.tilastot, keskiarvo: 5.4 },
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+  };
+
+  expect(parseStudentFeedback(amkFeedback, "amk-palaute.json", 7)).toEqual(amkFeedback);
+  expect(() => parseStudentFeedback(amkFeedback, "amk-palaute.json", 5)).toThrow("Invalid data in amk-palaute.json");
 });
