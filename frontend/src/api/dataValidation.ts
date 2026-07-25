@@ -25,12 +25,14 @@ export interface FeedbackField {
   osiot: Record<string, FeedbackSection>;
 }
 
-export interface UniversityFeedback {
+export interface StudentFeedback {
   tilastot: FeedbackStatistics;
   koulutusalat: Record<string, FeedbackField>;
 }
 
-export type UniversityFeedbackDataset = Record<string, UniversityFeedback>;
+export type FeedbackMaxScore = 5 | 7;
+
+export type StudentFeedbackDataset = Record<string, StudentFeedback>;
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -39,6 +41,8 @@ const isString = (value: unknown) => typeof value === "string";
 const isNumber = (value: unknown): value is number => typeof value === "number" && Number.isFinite(value);
 const isNonNegativeInteger = (value: unknown) => isNumber(value) && Number.isSafeInteger(value) && value >= 0;
 const isNullableNumber = (value: unknown) => value === null || (isNumber(value) && value >= 0);
+const isNullableAverage = (value: unknown, maxScore: FeedbackMaxScore) =>
+  value === null || (isNumber(value) && value >= 1 && value <= maxScore);
 const isNullableCount = (value: unknown) => value === null || isNonNegativeInteger(value);
 const isOptionalString = (value: unknown) => value === undefined || isString(value);
 const isOptionalBoolean = (value: unknown) => value === undefined || typeof value === "boolean";
@@ -106,33 +110,39 @@ const isCutoffSchool = (value: unknown) =>
   Array.isArray(value.programmes) &&
   value.programmes.every(isCutoffProgramme);
 
-const isFeedbackStatistics = (value: unknown) =>
+const isFeedbackStatistics = (value: unknown, maxScore: FeedbackMaxScore) =>
   isRecord(value) &&
   isNullableCount(value.vastaajatLkm) &&
-  isNullableNumber(value.keskiarvo) &&
+  isNullableAverage(value.keskiarvo, maxScore) &&
   isNullableNumber(value.keskihajonta) &&
   isOptionalBoolean(value.salattu) &&
   (value.salattu !== true || (value.vastaajatLkm === null && value.keskiarvo === null && value.keskihajonta === null));
 
-const isFeedbackItem = (value: unknown) =>
-  isRecord(value) && isString(value.kohde) && value.kohde !== "" && isFeedbackStatistics(value.tilastot);
+const isFeedbackItem = (value: unknown, maxScore: FeedbackMaxScore) =>
+  isRecord(value) && isString(value.kohde) && value.kohde !== "" && isFeedbackStatistics(value.tilastot, maxScore);
 
-const isFeedbackGroup = (value: unknown) =>
+const isFeedbackGroup = (value: unknown, maxScore: FeedbackMaxScore) =>
   isRecord(value) &&
-  isFeedbackStatistics(value.tilastot) &&
+  isFeedbackStatistics(value.tilastot, maxScore) &&
   Array.isArray(value.kohteet) &&
-  value.kohteet.every(isFeedbackItem);
+  value.kohteet.every((item) => isFeedbackItem(item, maxScore));
 
-const isFeedbackSection = (value: unknown) =>
+const isFeedbackSection = (value: unknown, maxScore: FeedbackMaxScore) =>
   isRecord(value) &&
-  ((value.tasot === undefined && isFeedbackGroup(value)) ||
-    (value.tilastot === undefined && value.kohteet === undefined && isRecordOf(value.tasot, isFeedbackGroup)));
+  ((value.tasot === undefined && isFeedbackGroup(value, maxScore)) ||
+    (value.tilastot === undefined &&
+      value.kohteet === undefined &&
+      isRecordOf(value.tasot, (group) => isFeedbackGroup(group, maxScore))));
 
-const isFeedbackField = (value: unknown) =>
-  isRecord(value) && isFeedbackStatistics(value.tilastot) && isRecordOf(value.osiot, isFeedbackSection);
+const isFeedbackField = (value: unknown, maxScore: FeedbackMaxScore) =>
+  isRecord(value) &&
+  isFeedbackStatistics(value.tilastot, maxScore) &&
+  isRecordOf(value.osiot, (section) => isFeedbackSection(section, maxScore));
 
-const isUniversityFeedback = (value: unknown) =>
-  isRecord(value) && isFeedbackStatistics(value.tilastot) && isRecordOf(value.koulutusalat, isFeedbackField);
+const isStudentFeedback = (value: unknown, maxScore: FeedbackMaxScore) =>
+  isRecord(value) &&
+  isFeedbackStatistics(value.tilastot, maxScore) &&
+  isRecordOf(value.koulutusalat, (field) => isFeedbackField(field, maxScore));
 
 function parseArray<T>(value: unknown, isItem: (item: unknown) => boolean, source: string): T[] {
   if (!Array.isArray(value) || !value.every(isItem)) throw new Error(`Invalid data in ${source}`);
@@ -147,7 +157,13 @@ export const parseSchools = (value: unknown, source: string): SchoolsResponse =>
 export const parseCutoffSchools = (value: unknown, source: string): CutoffSchool[] =>
   parseArray(value, isCutoffSchool, source);
 
-export const parseUniversityFeedback = (value: unknown, source: string): UniversityFeedbackDataset => {
-  if (!isRecordOf(value, isUniversityFeedback)) throw new Error(`Invalid data in ${source}`);
-  return value as UniversityFeedbackDataset;
+export const parseStudentFeedback = (
+  value: unknown,
+  source: string,
+  maxScore: FeedbackMaxScore,
+): StudentFeedbackDataset => {
+  if (!isRecordOf(value, (feedback) => isStudentFeedback(feedback, maxScore))) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+  return value as StudentFeedbackDataset;
 };

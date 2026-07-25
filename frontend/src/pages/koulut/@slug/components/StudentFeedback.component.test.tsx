@@ -1,11 +1,11 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
-import type { UniversityFeedback as UniversityFeedbackData } from "@/api/dataValidation";
+import type { StudentFeedback as StudentFeedbackData } from "@/api/dataValidation";
 import { renderWithChakra } from "@/test/render";
-import UniversityFeedback from "./UniversityFeedback";
+import StudentFeedback from "./StudentFeedback";
 
-const feedback: UniversityFeedbackData = {
+const feedback: StudentFeedbackData = {
   tilastot: {
     vastaajatLkm: 1234,
     keskiarvo: 3.67,
@@ -112,7 +112,7 @@ const feedback: UniversityFeedbackData = {
 
 test("opens a field and topic to show aggregate and question statistics", async () => {
   const user = userEvent.setup();
-  renderWithChakra(<UniversityFeedback feedback={feedback} />);
+  renderWithChakra(<StudentFeedback feedback={feedback} maxScore={5} survey="kandipalaute" />);
   expect(screen.getByRole("link", { name: "Vipunen.fi" })).toHaveAttribute(
     "href",
     "https://vipunen.fi/fi-fi/yliopisto/Sivut/Opiskelijapalaute.aspx",
@@ -122,7 +122,7 @@ test("opens a field and topic to show aggregate and question statistics", async 
       /Tulokset sisältävät vain rahoitusmallikysymykset\.\s*1 = täysin eri mieltä • 5 = täysin samaa mieltä\./,
     ),
   ).toBeVisible();
-  expect(screen.getByText("3,67")).toBeVisible();
+  expect(screen.getByText("3,67 / 5")).toBeVisible();
   expect(screen.queryByText("Olen tyytyväinen opintoihini.")).not.toBeInTheDocument();
 
   await user.click(
@@ -149,4 +149,28 @@ test("opens a field and topic to show aggregate and question statistics", async 
   expect(screen.getByText("Keskimääräinen vastaus 4,08 / 5")).toBeVisible();
   expect(screen.getAllByText("297 vastaajaa")).toHaveLength(2);
   expect(screen.getByText("Keskihajonta 0,86")).toBeVisible();
+
+  await user.click(screen.getByRole("button", { name: /Ohjaus/ }));
+
+  expect(await screen.findByText("Alle 5 vastaajaa – arvo salattu.")).toBeVisible();
+});
+
+test("uses AVOP copy, source, and seven-point scale", async () => {
+  const user = userEvent.setup();
+  renderWithChakra(<StudentFeedback feedback={feedback} maxScore={7} survey="avop" />);
+
+  expect(screen.getByText("Ammattikorkeakoulujen opiskelijapalaute (AVOP).")).toBeVisible();
+  expect(screen.getByText("1 = täysin eri mieltä • 7 = täysin samaa mieltä.")).toBeVisible();
+  expect(screen.getByText("3,67 / 7")).toBeVisible();
+  expect(screen.getByRole("link", { name: "Vipunen.fi" })).toHaveAttribute(
+    "href",
+    "https://vipunen.fi/fi-fi/amk/Sivut/Opiskelijapalaute.aspx",
+  );
+
+  await user.click(
+    screen.getByRole("button", { name: /Kauppa, hallinto ja oikeustieteet.*297 vastaajaa.*Keskiarvo 3,70/ }),
+  );
+  await user.click(screen.getByRole("button", { name: /Opetus ja oppiminen/ }));
+
+  expect(await screen.findByText("Keskimääräinen vastaus 4,08 / 7")).toBeVisible();
 });

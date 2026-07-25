@@ -8,6 +8,8 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Vähiten hakijoita", value: "least_popular" },
   { label: "Eniten ensisijaisia hakijoita", value: "most_first_choice" },
   { label: "Vähiten ensisijaisia hakijoita", value: "least_first_choice" },
+  { label: "Korkein keskiarvo", value: "highest_feedback" },
+  { label: "Matalin keskiarvo", value: "lowest_feedback" },
 ];
 
 interface SortControlProps {

@@ -3,11 +3,11 @@ import { useData } from "vike-react/useData";
 import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
-import UniversityFeedback from "../components/UniversityFeedback";
+import StudentFeedback from "../components/StudentFeedback";
 import type { FeedbackPageData } from "./+data";
 
 export default function FeedbackPage() {
-  const { schoolName, feedback, feedbackYear } = useData<FeedbackPageData>();
+  const { schoolName, feedback, maxScore, survey, year } = useData<FeedbackPageData>();
 
   return (
     <PageContainer align="flex-start">
@@ -25,11 +25,11 @@ export default function FeedbackPage() {
           {schoolName} – opiskelijapalautteet
         </Heading>
         <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-          Vuoden {feedbackYear} opiskelijapalautteen tulokset koulutusaloittain.
+          Vuoden {year} opiskelijapalautteen tulokset koulutusaloittain.
         </Text>
         <Separator mt={2} />
       </Stack>
-      <UniversityFeedback feedback={feedback} />
+      <StudentFeedback feedback={feedback} maxScore={maxScore} survey={survey} />
     </PageContainer>
   );
 }

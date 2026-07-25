@@ -496,7 +496,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/koulut/centria-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/diakonia-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/haaga-helia-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/koulut/helsingin-yliopisto/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/humanistinen-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/hameen-ammattikorkeakoulu/opiskelijapalautteet/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -506,7 +531,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/koulut/jyvaskylan-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/koulut/jyvaskylan-yliopisto/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/kaakkois-suomen-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/kajaanin-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/karelia-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/lab-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/lapin-ammattikorkeakoulu/opiskelijapalautteet/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -521,7 +576,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/koulut/laurea-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/metropolia-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/oulun-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/koulut/oulun-yliopisto/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/satakunnan-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/savonia-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/seinajoen-ammattikorkeakoulu/opiskelijapalautteet/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -536,7 +621,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/koulut/tampereen-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/koulut/tampereen-yliopisto/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/turun-ammattikorkeakoulu/opiskelijapalautteet/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -546,7 +641,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/koulut/vaasan-ammattikorkeakoulu/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/koulut/vaasan-yliopisto/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/yrkeshogskolan-arcada/opiskelijapalautteet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/koulut/yrkeshogskolan-novia/opiskelijapalautteet/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
