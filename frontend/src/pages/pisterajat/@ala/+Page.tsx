@@ -1,8 +1,9 @@
-import { Heading, Link, Separator, Stack, Text } from "@chakra-ui/react";
+import { Heading, Link, Separator, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
 import CutoffCard from "@/components/CutoffCard";
 import Pagination from "@/components/Pagination";
+import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import { alaSlugParam } from "@/lib/cutoffs";
 import { COLORS } from "@/theme";
@@ -29,7 +30,7 @@ export default function AlaCutoffPage() {
         ← Takaisin
       </Link>
       <Heading as="h1" size="md">
-        {alaName} – pisterajat
+        {alaName} – pisterajat {DEFAULT_CUTOFF_YEAR}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         Koulutusalan pisterajat kouluittain eri hakukierroksilta.
@@ -37,6 +38,28 @@ export default function AlaCutoffPage() {
       <Separator mt={2} />
     </Stack>
   );
+
+  const schoolLinks =
+    schools.length > 0 ? (
+      <Stack gap={2} width="full">
+        <Heading as="h2" size="sm">
+          Korkeakoulut tällä alalla
+        </Heading>
+        <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={2} listStyleType="none">
+          {schools.map((school) => (
+            <li key={school.slug}>
+              <Link
+                href={`/koulut/${school.slug}/pisterajat/?ala=${alaSlugParam([alaName])}`}
+                textDecoration="underline"
+                textDecorationStyle="dotted"
+              >
+                {school.name}
+              </Link>
+            </li>
+          ))}
+        </SimpleGrid>
+      </Stack>
+    ) : null;
 
   const schoolSections = (
     <Stack as="ul" gap={{ base: 8, md: 12 }} listStyleType="none" width="full">
@@ -64,6 +87,7 @@ export default function AlaCutoffPage() {
   return (
     <PageContainer align="flex-start">
       {header}
+      {schoolLinks}
       {schoolSections}
       <Pagination count={schools.length} onPageChange={setPage} page={page} pageSize={pageSize} />
     </PageContainer>
