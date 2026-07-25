@@ -128,3 +128,6 @@ export const readUniversityFeedback = (): UniversityFeedbackDataset => {
   }
   return feedback;
 };
+
+export const feedbackSchoolNames = (): string[] =>
+  Object.keys(readUniversityFeedback()).sort((a, b) => a.localeCompare(b, "fi"));

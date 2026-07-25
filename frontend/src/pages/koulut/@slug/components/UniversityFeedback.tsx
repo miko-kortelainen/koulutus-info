@@ -1,12 +1,15 @@
-import { Accordion, Heading, SimpleGrid, Stack, Stat, Text } from "@chakra-ui/react";
+import { Accordion, Heading, Link, SimpleGrid, Stack, Stat, Text } from "@chakra-ui/react";
 import type { ReactNode } from "react";
-import type { FeedbackField, FeedbackGroup, FeedbackStatistics } from "@/api/dataValidation";
+import type {
+  FeedbackField,
+  FeedbackGroup,
+  FeedbackStatistics,
+  UniversityFeedback as UniversityFeedbackData,
+} from "@/api/dataValidation";
 import { numberFormat, ratioFormat } from "@/lib/statistics";
-import type { SchoolPageData } from "../+data";
 
 interface UniversityFeedbackProps {
-  feedback: NonNullable<SchoolPageData["feedback"]>;
-  year: number;
+  feedback: UniversityFeedbackData;
 }
 
 interface FeedbackStatsProps {
@@ -139,7 +142,7 @@ function TopicAccordionItem({ group, name, value }: { group: FeedbackGroup; name
 
   return (
     <Accordion.Item value={value}>
-      <Heading as="h5" size="xs">
+      <Heading as="h3" size="xs">
         <Accordion.ItemTrigger px={{ base: 3, md: 4 }} py={3}>
           <AccordionHeaderRow
             left={<Text fontSize="xs">Kysymyksiä: {questionCount}</Text>}
@@ -159,7 +162,7 @@ function TopicAccordionItem({ group, name, value }: { group: FeedbackGroup; name
   );
 }
 
-export default function UniversityFeedback({ feedback, year }: UniversityFeedbackProps) {
+export default function UniversityFeedback({ feedback }: UniversityFeedbackProps) {
   const fields = Object.entries(feedback.koulutusalat)
     .filter(([name]) => name !== "Tieto puuttuu")
     .sort(([a], [b]) => collator.compare(a, b));
@@ -167,9 +170,6 @@ export default function UniversityFeedback({ feedback, year }: UniversityFeedbac
   return (
     <Stack gap={6}>
       <Stack gap={1}>
-        <Heading as="h2" size="md">
-          Opiskelijapalaute {year}
-        </Heading>
         <Text color="fg.muted" fontSize="xs">
           Yliopistojen opiskelijapalaute (Kandipalaute).
         </Text>
@@ -187,7 +187,7 @@ export default function UniversityFeedback({ feedback, year }: UniversityFeedbac
           </Stat.ValueText>
         </Stat.Root>
         <Stat.Root borderColor="border" borderRadius="md" borderWidth="1px" p={4} size="sm">
-          <Stat.Label>Yliopiston keskiarvo</Stat.Label>
+          <Stat.Label>Keskiarvo</Stat.Label>
           <Stat.ValueText color="accentFg">
             {feedback.tilastot.keskiarvo == null ? "–" : ratioFormat.format(feedback.tilastot.keskiarvo)}
           </Stat.ValueText>
@@ -197,7 +197,7 @@ export default function UniversityFeedback({ feedback, year }: UniversityFeedbac
       <Accordion.Root aria-label="Opiskelijapalaute koulutusaloittain" collapsible lazyMount>
         {fields.map(([fieldName, field]) => (
           <Accordion.Item key={fieldName} value={fieldName}>
-            <Heading as="h3" size="sm">
+            <Heading as="h2" size="sm">
               <Accordion.ItemTrigger py={4}>
                 <AccordionHeaderRow
                   left={
@@ -234,6 +234,19 @@ export default function UniversityFeedback({ feedback, year }: UniversityFeedbac
           </Accordion.Item>
         ))}
       </Accordion.Root>
+      <Stack borderColor="border.subtle" borderTopWidth="1px" gap={2} pt={4}>
+        <Text color="fg.muted" fontSize="xs" textWrap="pretty">
+          Keskiarvot perustuvat valtakunnalliseen kandipalautekyselyyn, jossa valmistuvat opiskelijat arvioivat
+          koulutustaan.
+        </Text>
+        <Text color="fg.muted" fontSize="xs">
+          Lähde: Opetushallituksen tilastopalvelu{" "}
+          <Link href="https://vipunen.fi/fi-fi/yliopisto/Sivut/Opiskelijapalaute.aspx" textDecoration="underline">
+            Vipunen.fi
+          </Link>
+          .
+        </Text>
+      </Stack>
     </Stack>
   );
 }

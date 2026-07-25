@@ -112,9 +112,11 @@ const feedback: UniversityFeedbackData = {
 
 test("opens a field and topic to show aggregate and question statistics", async () => {
   const user = userEvent.setup();
-  renderWithChakra(<UniversityFeedback feedback={feedback} year={2025} />);
-
-  expect(screen.getByRole("heading", { level: 2, name: "Opiskelijapalaute 2025" })).toBeVisible();
+  renderWithChakra(<UniversityFeedback feedback={feedback} />);
+  expect(screen.getByRole("link", { name: "Vipunen.fi" })).toHaveAttribute(
+    "href",
+    "https://vipunen.fi/fi-fi/yliopisto/Sivut/Opiskelijapalaute.aspx",
+  );
   expect(
     screen.getByText(
       /Tulokset sisältävät vain rahoitusmallikysymykset\.\s*1 = täysin eri mieltä • 5 = täysin samaa mieltä\./,
