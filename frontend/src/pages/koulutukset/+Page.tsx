@@ -1,4 +1,4 @@
-import { Accordion, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
@@ -7,6 +7,7 @@ import SchoolCard from "@/components/SchoolCard";
 import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import type { SchoolsResponse } from "@/types.gen";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
 
@@ -71,16 +72,6 @@ export default function SchoolsListPage() {
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Koulutukset
-      </Heading>
-      <Text color="fg.muted">Korkeakoulujen syksyn 2026 yhteishaussa olevat toteutukset.</Text>
-      <Separator mt={2} />
-    </Stack>
-  );
-
   const sortControls = (
     <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
       <SearchInput
@@ -135,17 +126,18 @@ export default function SchoolsListPage() {
   );
 
   return (
-    <PageContainer align="flex-start">
-      {header}
+    <>
+      <PageIntro description="Korkeakoulujen syksyn 2026 yhteishaussa olevat toteutukset." title="Koulutukset" />
+      <PageContainer align="flex-start">
+        <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
+          {sortControls}
 
-      <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
-        {sortControls}
-
-        <Stack flex={1} gap={4} width="100%">
-          {cardList}
-          <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
+          <Stack flex={1} gap={4} width="100%">
+            {cardList}
+            <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
+          </Stack>
         </Stack>
-      </Stack>
-    </PageContainer>
+      </PageContainer>
+    </>
   );
 }

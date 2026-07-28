@@ -36,7 +36,7 @@ test("renders the real MDX guide with registry metadata, navigation and sources"
   }
 
   expect(screen.getByRole("link", { name: /Pistelaskuri/ })).toHaveAttribute("href", "/pistelaskuri/");
-  expect(screen.getByRole("link", { name: /Koulutukset/ })).toHaveAttribute("href", "/koulutukset/");
+  expect(screen.getByRole("link", { name: /Pisterajat/ })).toHaveAttribute("href", "/pisterajat/");
   expect(screen.getByRole("link", { name: /Hakijamäärät/ })).toHaveAttribute("href", "/hakijamaarat/");
 
   for (const citation of screen.getAllByRole("link", { name: "[1]" })) {
