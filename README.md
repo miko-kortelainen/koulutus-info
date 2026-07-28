@@ -2,6 +2,10 @@
 <img src="./docs/banner.png" alt="yhteishaku.app banner">
 </div>
 
+[Site usage statistics](https://dashboard.simpleanalytics.com/yhteishaku.app)
+
+I grew the site's audience without paid advertising. TikTok videos I made using the site as a source have received more than 300,000 views in total.
+
 ### About
 
 Yhteishaku.app helps you explore Finnish higher education joint application data. The site includes:
