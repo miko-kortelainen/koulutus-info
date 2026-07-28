@@ -79,5 +79,6 @@ I used Codex and GPT-5.6 for:
 - Writing component and e2e tests
 - Code review
 - Best practice checks
+- Interface design with the Figma MCP server
 - Reformatting a read-only Excel pivot table into the CSV structure required by the data generator
 - Learning about the technologies, patterns and domain concepts used in the project
