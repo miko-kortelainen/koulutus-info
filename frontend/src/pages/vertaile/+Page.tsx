@@ -1,10 +1,11 @@
-import { Alert, Heading, Link, Separator, Skeleton, Stack, Text } from "@chakra-ui/react";
+import { Alert, Link, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { type ReactNode, useSyncExternalStore } from "react";
 import { usePageContext } from "vike-react/usePageContext";
 import ShareButton from "@/components/ShareButton";
 import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import ComparisonTable from "./components/ComparisonTable";
 
 export default function ComparePage() {
@@ -68,22 +69,17 @@ export default function ComparePage() {
     );
   }
 
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Vertailu
-      </Heading>
-      <Text color="fg.muted">
-        Vertaa kahta hakukohdetta rinnakkain. <br /> Yhteishaku {statisticsRoundShortLabel(year)}.
-      </Text>
-      <Separator my={2} />
-    </Stack>
-  );
-
   return (
-    <PageContainer align="flex-start">
-      {header}
-      {body}
-    </PageContainer>
+    <>
+      <PageIntro
+        description={
+          <>
+            Vertaa kahta hakukohdetta rinnakkain. <br /> Yhteishaku {statisticsRoundShortLabel(year)}.
+          </>
+        }
+        title="Vertailu"
+      />
+      <PageContainer align="flex-start">{body}</PageContainer>
+    </>
   );
 }
