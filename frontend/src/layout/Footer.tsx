@@ -2,6 +2,7 @@ import { Box, Flex, HStack, Image, Link, SimpleGrid, Text, VStack } from "@chakr
 
 const FOOTER_LINKS = [
   ["Pistelaskuri", "/pistelaskuri/"],
+  ["Pisterajat", "/pisterajat/"],
   ["Koulutukset", "/koulutukset/"],
   ["Oppaat", "/oppaat/"],
   ["UKK", "/ukk/"],

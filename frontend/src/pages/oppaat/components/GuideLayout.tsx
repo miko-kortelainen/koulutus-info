@@ -24,9 +24,9 @@ const defaultRelated = [
     description: "Arvioi yhteishaun pistemääräsi omilla arvosanoillasi.",
   },
   {
-    href: "/koulutukset/",
-    label: "Koulutukset",
-    description: "Selaa yhteishaussa olevia koulutuksia ja pisterajoja.",
+    href: "/pisterajat/",
+    label: "Pisterajat",
+    description: "Selaa korkeakoulujen pisterajoja eri hakukierroksilta.",
   },
   {
     href: "/hakijamaarat/",

@@ -1,10 +1,11 @@
-import { Alert, Box, createListCollection, Heading, Select, Stack, Text, VisuallyHidden } from "@chakra-ui/react";
+import { Alert, Box, createListCollection, Select, Stack, Text, VisuallyHidden } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import YearControl from "@/components/YearControl";
 import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import type { TrendsPageData } from "./+data";
 import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
 import ApplicantTotalsChart from "./components/ApplicantTotalsChart";
@@ -33,15 +34,6 @@ export default function TrendsPage() {
   const trends = useTrendsData(primaryReady ? query.data : undefined);
   const compareTrends = useTrendsData(comparisonReady ? compareQuery.data : undefined, 0);
   const listsAreLoading = query.isPending || Boolean(compareYear && compareQuery.isPending);
-
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Trendit
-      </Heading>
-      <Text color="fg.muted">Vertaile koulutusalojen ja korkeakoulujen hakijamääriä.</Text>
-    </Stack>
-  );
 
   const loadingAndError = (
     <div aria-atomic="true" aria-live="polite">
@@ -180,15 +172,17 @@ export default function TrendsPage() {
   );
 
   return (
-    <PageContainer align="flex-start">
-      {header}
-      {loadingAndError}
-      {yearSelectors}
+    <>
+      <PageIntro description="Vertaile koulutusalojen ja korkeakoulujen hakijamääriä." title="Trendit" />
+      <PageContainer align="flex-start">
+        {loadingAndError}
+        {yearSelectors}
 
-      {applicantsByField}
-      {applicantsBySchool}
-      {applicantsBySector}
-      {applicantsByYear}
-    </PageContainer>
+        {applicantsByField}
+        {applicantsBySchool}
+        {applicantsBySector}
+        {applicantsByYear}
+      </PageContainer>
+    </>
   );
 }

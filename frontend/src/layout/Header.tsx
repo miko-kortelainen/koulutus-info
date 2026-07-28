@@ -8,6 +8,7 @@ import {
   HiOutlineHeart,
   HiOutlineLibrary,
   HiOutlineQuestionMarkCircle,
+  HiOutlineSparkles,
   HiOutlineTrendingUp,
 } from "react-icons/hi";
 import { COLORS } from "@/theme";
@@ -30,6 +31,12 @@ const links = [
     label: "pistelaskuri",
     description: "Arvioi yhteishaun pistemääräsi",
     icon: HiOutlineCalculator,
+  },
+  {
+    href: "/pisterajat/",
+    label: "pisterajat",
+    description: "Selaa korkeakoulujen pisterajoja",
+    icon: HiOutlineSparkles,
   },
   {
     href: "/koulut/",

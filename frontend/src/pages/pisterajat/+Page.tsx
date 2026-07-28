@@ -1,22 +1,12 @@
-import { Heading, Link, Separator, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Heading, Link, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
+import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import type { CutoffIndexData } from "./+data";
 
 export default function CutoffIndexPage() {
   const { alat, schools } = useData<CutoffIndexData>();
-
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Pisterajat
-      </Heading>
-      <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Yhteishaun pisterajat koulutusaloittain ja kouluittain eri hakukierroksilta.
-      </Text>
-      <Separator mt={2} />
-    </Stack>
-  );
 
   const linkList = (items: { name: string; slug: string }[], href: (slug: string) => string) => (
     <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={2} listStyleType="none">
@@ -31,20 +21,32 @@ export default function CutoffIndexPage() {
   );
 
   return (
-    <PageContainer align="flex-start">
-      {header}
-      <Stack gap={2} width="full">
-        <Heading as="h2" size="md">
-          Koulutusalat
-        </Heading>
-        {linkList(alat, (slug) => `/pisterajat/${slug}/`)}
-      </Stack>
-      <Stack gap={2} width="full">
-        <Heading as="h2" size="md">
-          Koulut
-        </Heading>
-        {linkList(schools, (slug) => `/koulut/${slug}/pisterajat/`)}
-      </Stack>
-    </PageContainer>
+    <>
+      <PageIntro
+        description="AMK- ja yliopistokoulutusten yhteishaun pisterajat koulutusaloittain ja kouluittain."
+        title={`Pisterajat ${DEFAULT_CUTOFF_YEAR}`}
+      />
+      <PageContainer align="flex-start">
+        <Text fontSize="sm">
+          Arvioi ensin omat pisteesi{" "}
+          <Link href="/pistelaskuri/" textDecoration="underline">
+            todistusvalintalaskurilla
+          </Link>
+          .
+        </Text>
+        <Stack gap={2} width="full">
+          <Heading as="h2" size="md">
+            Koulutusalat
+          </Heading>
+          {linkList(alat, (slug) => `/pisterajat/${slug}/`)}
+        </Stack>
+        <Stack gap={2} width="full">
+          <Heading as="h2" size="md">
+            Koulut
+          </Heading>
+          {linkList(schools, (slug) => `/koulut/${slug}/pisterajat/`)}
+        </Stack>
+      </PageContainer>
+    </>
   );
 }

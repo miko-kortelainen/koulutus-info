@@ -1,4 +1,6 @@
-const description = "Yhteishaun pisterajat koulutusaloittain ja kouluittain eri hakukierroksilta.";
+import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
+
+const description = `Korkeakoulujen alojen yhteishaun pisterajat ${DEFAULT_CUTOFF_YEAR}`;
 
 export function Head() {
   return (

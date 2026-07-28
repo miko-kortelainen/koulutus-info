@@ -1,7 +1,8 @@
-import { Box, Heading, Separator, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Box, Stack, Tabs } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import { COLORS } from "@/theme";
 import type { SchoolListItem } from "./+data";
 import SchoolListCard from "./components/SchoolListCard";
@@ -17,18 +18,6 @@ export default function SchoolIndexPage() {
   const schools = useData<SchoolListItem[]>();
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const sortedSchools = useMemo(() => sortSchools(schools, sortOrder), [schools, sortOrder]);
-
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Koulut
-      </Heading>
-      <Text color="fg.muted" fontSize="sm">
-        Korkeakoulut ja niiden hakijamäärät.
-      </Text>
-      <Separator mt={2} />
-    </Stack>
-  );
 
   const tabList = (
     <Tabs.List aria-label="Korkeakoulut sektoreittain">
@@ -63,13 +52,15 @@ export default function SchoolIndexPage() {
   ));
 
   return (
-    <PageContainer align="flex-start">
-      {header}
-      <Tabs.Root defaultValue={SECTIONS[0].heading} size="sm">
-        {tabList}
-        <SortControl onChange={setSortOrder} value={sortOrder} />
-        {tabContent}
-      </Tabs.Root>
-    </PageContainer>
+    <>
+      <PageIntro description="Korkeakoulut ja niiden hakijamäärät." title="Koulut" />
+      <PageContainer align="flex-start">
+        <Tabs.Root defaultValue={SECTIONS[0].heading} size="sm">
+          {tabList}
+          <SortControl onChange={setSortOrder} value={sortOrder} />
+          {tabContent}
+        </Tabs.Root>
+      </PageContainer>
+    </>
   );
 }

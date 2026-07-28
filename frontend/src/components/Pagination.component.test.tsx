@@ -13,6 +13,13 @@ test("uses Finnish accessible pagination labels", () => {
   expect(screen.getByRole("button", { name: "Seuraava sivu" })).toBeEnabled();
 });
 
+test("keeps large page ranges compact", () => {
+  renderWithChakra(<Pagination count={2130} onPageChange={vi.fn()} page={1} pageSize={10} />);
+
+  expect(screen.getAllByRole("button")).toHaveLength(6);
+  expect(screen.getByRole("button", { name: "Sivu 213/213" })).toBeInTheDocument();
+});
+
 test("page items and triggers report the new page and scroll to top", async () => {
   vi.stubGlobal("scrollTo", vi.fn());
   const user = userEvent.setup();
