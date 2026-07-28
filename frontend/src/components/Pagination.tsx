@@ -20,6 +20,7 @@ export default function Pagination({ count, page, pageSize, onPageChange }: Pagi
       onPageChange={(e) => handlePageChange(e.page)}
       page={page}
       pageSize={pageSize}
+      siblingCount={0}
       translations={{
         rootLabel: "Sivutus",
         prevTriggerLabel: "Edellinen sivu",
@@ -27,7 +28,7 @@ export default function Pagination({ count, page, pageSize, onPageChange }: Pagi
         itemLabel: ({ page, totalPages }) => `Sivu ${page}/${totalPages}`,
       }}
     >
-      <ButtonGroup flexWrap="wrap" justifyContent="center" variant="ghost" width="100%">
+      <ButtonGroup flexWrap="wrap" gap={{ base: 0, sm: 2 }} justifyContent="center" variant="ghost" width="100%">
         <ChakraPagination.PrevTrigger asChild>
           <IconButton variant="ghost">
             <HiChevronLeft />

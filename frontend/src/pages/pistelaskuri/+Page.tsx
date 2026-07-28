@@ -8,6 +8,7 @@ import SearchInput from "@/components/SearchInput";
 import { cutoffRoundLabel, cutoffRoundShortLabel, DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import { COLORS } from "@/theme";
 import type { ScoreCalculatorPageData } from "./+data";
 import ResultSelect from "./components/ResultSelect";
@@ -141,18 +142,6 @@ export default function ScoreCalculatorPage() {
   const resultListKey = [round, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
   const displayedQualifiedCount = cutoffQuery.isSuccess && calculation ? qualifiedCount : "–";
   const displayedTotalCount = cutoffQuery.isSuccess ? totalCount : "–";
-
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Todistusvalintalaskuri {DEFAULT_CUTOFF_YEAR}
-      </Heading>
-      <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Laske todistusvalintapisteesi ylioppilastutkinnon tai ammatillisen perustutkinnon todistuksen perusteella.
-      </Text>
-      <Separator mt={2} />
-    </Stack>
-  );
 
   const resultAccordion = (
     <Accordion.Root collapsible lazyMount multiple size="md">
@@ -324,35 +313,43 @@ export default function ScoreCalculatorPage() {
   );
 
   return (
-    <PageContainer align="flex-start">
-      {header}
-
-      <ScoreForm
-        onModeChange={(nextSelectionMethod) => {
-          setSelectionMethod(nextSelectionMethod);
-          setCalculation(null);
-        }}
-        onSubmit={(selectionMethod, score) => {
-          setCalculation({ score, selectionMethod });
-        }}
+    <>
+      <PageIntro
+        description="Laske todistusvalintapisteesi ylioppilastutkinnon tai ammatillisen perustutkinnon todistuksen perusteella."
+        title={
+          <>
+            Todistusvalinta<wbr />laskuri {DEFAULT_CUTOFF_YEAR}
+          </>
+        }
       />
+      <PageContainer align="flex-start">
+        <ScoreForm
+          onModeChange={(nextSelectionMethod) => {
+            setSelectionMethod(nextSelectionMethod);
+            setCalculation(null);
+          }}
+          onSubmit={(selectionMethod, score) => {
+            setCalculation({ score, selectionMethod });
+          }}
+        />
 
-      {resultList}
+        {resultList}
 
-      <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
-        Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelevat vuosi
-        vuodelta. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
-        todistusvalinnan kynnysehtoihin{" "}
-        <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
-          täältä
-        </Link>
-        . <br /> <br />
-        Pisterajojen tiedot ovat peräisin Opetushallituksen{" "}
-        <Link href="https://vipunen.fi/fi-fi/" rel="noopener noreferrer" target="_blank" textDecoration="underline">
-          Vipunen-palvelusta
-        </Link>
-        .
-      </Text>
-    </PageContainer>
+        <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
+          Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelevat vuosi
+          vuodelta. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
+          todistusvalinnan kynnysehtoihin{" "}
+          <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
+            täältä
+          </Link>
+          . <br /> <br />
+          Pisterajojen tiedot ovat peräisin Opetushallituksen{" "}
+          <Link href="https://vipunen.fi/fi-fi/" rel="noopener noreferrer" target="_blank" textDecoration="underline">
+            Vipunen-palvelusta
+          </Link>
+          .
+        </Text>
+      </PageContainer>
+    </>
   );
 }

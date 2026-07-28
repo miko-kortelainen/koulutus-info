@@ -31,7 +31,9 @@ async function openNavDrawer(page: Page) {
 
 async function selectOption(page: Page, label: string, option: string) {
   await page.getByRole("combobox", { name: label }).click();
-  await page.getByRole("option", { name: option, exact: true }).click();
+  const optionToSelect = page.getByRole("option", { name: option, exact: true });
+  await optionToSelect.click();
+  await expect(optionToSelect).toHaveCount(0);
 }
 
 async function expectSelectedOption(page: Page, label: string, option: string) {
@@ -81,9 +83,7 @@ async function openResultsAccordion(page: Page, name: RegExp) {
 
 test("homepage loads and nav drawer opens", async ({ page }) => {
   await page.goto("/");
-  await expect(
-    page.getByRole("heading", { exact: true, name: `Korkeakoulujen yhteishaku ${CURRENT_YEAR.slice(0, 4)}` }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { exact: true, name: "Löydä sopiva korkeakoulutus." })).toBeVisible();
   await openNavDrawer(page);
 });
 
@@ -91,12 +91,19 @@ test("homepage quick links point to their pages", async ({ page }) => {
   await page.goto("/");
 
   await expect(page.getByRole("complementary", { name: "Yhteishaku kotinäytöllä" })).toHaveCount(0);
+  await expect(page.getByRole("link", { exact: true, name: "Laske todistuspisteeni" })).toHaveAttribute(
+    "href",
+    "/pistelaskuri/",
+  );
+  await expect(page.getByRole("link", { exact: true, name: "Näytä hakijamäärät" })).toHaveAttribute(
+    "href",
+    "/hakijamaarat/",
+  );
 
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
     ["pistelaskuri", "/pistelaskuri/"],
-    ["pisterajat", "/pisterajat/"],
     ["koulut", "/koulut/"],
     ["oma hakulista", "/oma-hakulista/"],
     ["trendit", "/trendit/"],

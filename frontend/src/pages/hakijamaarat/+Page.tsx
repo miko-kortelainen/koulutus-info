@@ -1,4 +1,4 @@
-import { Accordion, Alert, Box, Group, Heading, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Box, Group, Stack, Text } from "@chakra-ui/react";
 import { useCallback, useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import CompareBar from "@/components/CompareBar";
@@ -11,6 +11,7 @@ import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import useDebounce from "@/hooks/useDebounce";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import SortControl from "./components/SortControl";
@@ -86,15 +87,6 @@ export default function StatsListPage() {
       <Alert.Indicator />
       <Alert.Title>Jotain meni vikaan, yritä uudelleen.</Alert.Title>
     </Alert.Root>
-  );
-
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Hakijamäärät
-      </Heading>
-      <Text color="fg.muted">Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.</Text>
-    </Stack>
   );
 
   const sidebar = (
@@ -208,9 +200,8 @@ export default function StatsListPage() {
 
   return (
     <>
+      <PageIntro description="Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain." title="Hakijamäärät" />
       <PageContainer align="flex-start">
-        {header}
-
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
           {sidebar}
 
