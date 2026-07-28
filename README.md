@@ -2,6 +2,10 @@
 <img src="./docs/banner.png" alt="yhteishaku.app banner">
 </div>
 
+[Site usage statistics](https://dashboard.simpleanalytics.com/yhteishaku.app)
+
+I grew the site's audience without paid advertising. TikTok videos I made using the site as a source have received more than 300,000 views in total.
+
 ### About
 
 Yhteishaku.app helps you explore Finnish higher education joint application data. The site includes:
@@ -79,5 +83,6 @@ I used Codex and GPT-5.6 for:
 - Writing component and e2e tests
 - Code review
 - Best practice checks
+- Interface design with the Figma MCP server
 - Reformatting a read-only Excel pivot table into the CSV structure required by the data generator
 - Learning about the technologies, patterns and domain concepts used in the project

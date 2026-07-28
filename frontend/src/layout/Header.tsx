@@ -74,7 +74,7 @@ export default function Header() {
           letterSpacing="widest"
           ml={3}
         >
-          <Image alt="" boxSize={6} src="/images/logo.png" />
+          <Image alt="" boxSize={6} src="/images/logo.webp" />
           <Text as="span" fontSize="md">
             yhteishaku
             <Text as="span" color="fg.accent">

@@ -29,7 +29,7 @@ export default function LandingPage() {
       backgroundImage={`linear-gradient(to bottom, ${COLORS.bg} 50%, color-mix(in srgb, ${COLORS.accent} 42%, ${COLORS.bg}))`}
       display="flex"
       minH="calc(100svh - 3.5rem)"
-      py={{ base: 10, md: 12, lg: 6 }}
+      py={{ base: 6, md: 12, lg: 6 }}
     >
       <SimpleGrid
         alignItems="center"
@@ -91,7 +91,7 @@ export default function LandingPage() {
           fetchPriority="high"
           justifySelf="center"
           src="/images/landing_illustration.png"
-          width={{ base: "10rem", md: "11rem", lg: "236px" }}
+          width={{ base: "8rem", md: "11rem", lg: "236px" }}
         />
       </SimpleGrid>
     </Box>
