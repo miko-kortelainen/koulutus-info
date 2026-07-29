@@ -86,6 +86,7 @@ flowchart TB
     schoolIndex["/koulut/<br/>SchoolIndexPage"] --> schoolIndexParts["SortControl · SchoolListCard"]
     schoolIndex --> school["/koulut/:slug/<br/>SchoolPage"] --> schoolParts["SchoolCard · DegreeStatsCard · Pagination"]
     school --> schoolCutoffs["/koulut/:slug/pisterajat/<br/>CutoffPage"]
+    school --> schoolFeedback["/koulut/:slug/opiskelijapalautteet/<br/>FeedbackPage"] --> schoolFeedbackParts["StudentFeedback"]
     schoolCutoffs --> schoolCutoffParts["SearchInput · OptionSelect · SortControl<br/>useFilteredProgrammes · CutoffCard · Pagination"]
     cutoffIndex["/pisterajat/<br/>CutoffIndexPage"] --> fieldCutoffs["/pisterajat/:ala/<br/>AlaCutoffPage"]
     cutoffIndex --> schoolCutoffs
@@ -101,11 +102,15 @@ flowchart TB
   end
 
   subgraph content["Content, saved items and support"]
-    saved["/tallennetut/<br/>SavedListPage"] --> savedParts["useFavorites · SchoolCard"]
-    guides["/oppaat/<br/>GuidesPage"] --> guide["/oppaat/yliopistojen-todistusvalinta/"]
+    saved["/oma-hakulista/<br/>SavedListPage"] --> savedParts["useFavorites · SchoolCard"]
+    guides["/oppaat/<br/>GuidesPage"] --> universityGuide["/oppaat/yliopistojen-todistusvalinta/"]
+    guides --> amkGuide["/oppaat/ammattikorkeakoulujen-<br/>todistusvalinta/"]
     registry["guides.ts"] --> guides
     registry --> guideLayout["GuideLayout"]
-    guide --> guideLayout --> mdx["content.mdx<br/>Callout · GuideAccordion · Chakra Table"]
+    universityGuide --> guideLayout
+    amkGuide --> guideLayout
+    guideLayout --> mdx["content.mdx<br/>Callout · GuideAccordion · Chakra Table"]
+    install["/asenna/<br/>InstallGuidePage"]
     faq["/ukk/<br/>Accordion"]
     privacy["/tietosuojaseloste/"]
     feedbackPage["/palaute/<br/>PalautePage"]
