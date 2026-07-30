@@ -2,27 +2,29 @@ import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Stac
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
-import { useData } from "vike-react/useData";
-import { getCutoffSchools } from "@/api/browserData";
+import {
+  getAmkPrograms,
+  getUniversityPrograms,
+  type AmkProgramsResponse,
+  type UniversityProgramsResponse,
+} from "@/api/calculatorApi";
 import SearchInput from "@/components/SearchInput";
-import { cutoffRoundLabel, cutoffRoundShortLabel, DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
+import { cutoffRoundShortLabel, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import { COLORS } from "@/theme";
-import type { ScoreCalculatorPageData } from "./+data";
 import ResultSelect from "./components/ResultSelect";
 import ScoreForm from "./components/ScoreForm";
 import ScoreResultList from "./components/ScoreResultList";
-import { AMM_MAX_SCORE } from "./lib/ammScoring";
-import { flattenScoreResults, type ScoreResult, selectApplicantResults } from "./lib/scoreResults";
-import { YO_MAX_SCORE } from "./lib/yoScoring";
+import {
+  type Calculation,
+  flattenAmkPrograms,
+  flattenUniversityPrograms,
+  type ScoreResult,
+  selectApplicantResults,
+} from "./lib/scoreResults";
 import type { ScoreType } from "./scoreTypes";
-
-const MAX_SCORE_BY_TYPE: Partial<Record<ScoreType, number>> = {
-  "Todistusvalinta (AMM)": AMM_MAX_SCORE,
-  "Todistusvalinta (YO)": YO_MAX_SCORE,
-};
 
 type SectorFilter = "all" | "university" | "amk";
 type SortOption = "lowest_cutoff" | "highest_cutoff" | "name_asc" | "name_desc";
@@ -40,9 +42,10 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Ö-A", value: "name_desc" },
 ];
 
-interface Calculation {
-  score: number;
-  selectionMethod: ScoreType;
+interface InitialPrograms {
+  amkAmm: AmkProgramsResponse;
+  amkYo: AmkProgramsResponse;
+  university: UniversityProgramsResponse;
 }
 
 const FUSE_OPTIONS = {
@@ -84,24 +87,42 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
   return true;
 }
 
+const qualifies = (result: ScoreResult) =>
+  result.applicantScore !== undefined && result.score <= result.applicantScore && result.kynnysehtoPassed !== false;
+
+async function getInitialPrograms(): Promise<InitialPrograms> {
+  const [university, amkYo, amkAmm] = await Promise.all([
+    getUniversityPrograms(),
+    getAmkPrograms("yo"),
+    getAmkPrograms("amm"),
+  ]);
+  if (new Set([university.applicationRound, amkYo.applicationRound, amkAmm.applicationRound]).size !== 1) {
+    throw new Error("Pistelaskurin API-vastaukset ovat eri hakukierroksilta.");
+  }
+  return { amkAmm, amkYo, university };
+}
+
 export default function ScoreCalculatorPage() {
-  const { initialResults, initialRound, rounds } = useData<ScoreCalculatorPageData>();
   const [selectionMethod, setSelectionMethod] = useState<ScoreType>("Todistusvalinta (YO)");
   const [isFirstTimeApplicant, setIsFirstTimeApplicant] = useState(false);
   const [calculation, setCalculation] = useState<Calculation | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [round, setRound] = useState(initialRound);
   const [sectorFilter, setSectorFilter] = useState<SectorFilter>("all");
   const [sortOrder, setSortOrder] = useState<SortOption>("lowest_cutoff");
-  const cutoffQuery = useQuery({
-    queryKey: ["cutoff-results", round],
-    queryFn: async () => flattenScoreResults(await getCutoffSchools(round)),
-    initialData: round === initialRound ? initialResults : undefined,
+  const programsQuery = useQuery({
+    queryKey: ["calculator-programs"],
+    queryFn: getInitialPrograms,
     staleTime: Infinity,
     gcTime: 10 * 60 * 1000,
   });
-  const results = cutoffQuery.data ?? [];
-  const maxScore = calculation ? MAX_SCORE_BY_TYPE[calculation.selectionMethod] : undefined;
+  const university = calculation?.university ?? programsQuery.data?.university;
+  const amk =
+    calculation?.amk ??
+    (selectionMethod === "Todistusvalinta (YO)" ? programsQuery.data?.amkYo : programsQuery.data?.amkAmm);
+  const results = useMemo(
+    () => [...(university ? flattenUniversityPrograms(university) : []), ...(amk ? flattenAmkPrograms(amk) : [])],
+    [amk, university],
+  );
   const filteredResults = useMemo(
     () =>
       selectApplicantResults(results, selectionMethod, isFirstTimeApplicant)
@@ -122,9 +143,7 @@ export default function ScoreCalculatorPage() {
       .map(([koulutusala, alaResults]) => ({
         koulutusala,
         results: alaResults,
-        qualifiedCount: calculation
-          ? alaResults.filter((result) => result.score <= calculation.score).length
-          : undefined,
+        qualifiedCount: calculation ? alaResults.filter(qualifies).length : undefined,
       }));
   }, [calculation, filteredResults]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
@@ -137,11 +156,16 @@ export default function ScoreCalculatorPage() {
     return filteredResults.filter((result) => matchingIds.has(result.id));
   }, [filteredResults, normalizedSearchTerm, resultFuse]);
   const totalCount = filteredResults.length;
-  const qualifiedCount = calculation ? filteredResults.filter((result) => result.score <= calculation.score).length : 0;
-  const roundLabel = cutoffRoundShortLabel(round);
-  const resultListKey = [round, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
-  const displayedQualifiedCount = cutoffQuery.isSuccess && calculation ? qualifiedCount : "–";
-  const displayedTotalCount = cutoffQuery.isSuccess ? totalCount : "–";
+  const qualifiedCount = calculation ? filteredResults.filter(qualifies).length : 0;
+  const resultsPending = !calculation && programsQuery.isPending;
+  const resultsError = !calculation && programsQuery.isError;
+  const resultsSuccess = Boolean(calculation) || programsQuery.isSuccess;
+  const applicationRound =
+    calculation?.amk.applicationRound ?? programsQuery.data?.university.applicationRound ?? DEFAULT_CUTOFF_ROUND;
+  const roundLabel = cutoffRoundShortLabel(applicationRound);
+  const resultListKey = [applicationRound, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
+  const displayedQualifiedCount = resultsSuccess && calculation ? qualifiedCount : "–";
+  const displayedTotalCount = resultsSuccess ? totalCount : "–";
 
   const resultAccordion = (
     <Accordion.Root collapsible lazyMount multiple size="md">
@@ -177,7 +201,6 @@ export default function ScoreCalculatorPage() {
                 key={`${resultListKey}:${group.koulutusala}`}
                 results={group.results}
                 roundLabel={roundLabel}
-                userScore={calculation?.score}
               />
             </Accordion.ItemBody>
           </Accordion.ItemContent>
@@ -201,17 +224,16 @@ export default function ScoreCalculatorPage() {
           results={searchResults}
           roundLabel={roundLabel}
           showKoulutusala
-          userScore={calculation?.score}
         />
       </Stack>
     );
 
-  const resultContent = cutoffQuery.isPending ? (
+  const resultContent = resultsPending ? (
     <Text role="status">Pisterajoja ladataan…</Text>
-  ) : cutoffQuery.isError ? (
+  ) : resultsError ? (
     <Alert.Root status="error">
       <Alert.Indicator />
-      <Alert.Title>Pisterajojen lataaminen epäonnistui.</Alert.Title>
+      <Alert.Title>Hakukohteiden lataaminen epäonnistui.</Alert.Title>
     </Alert.Root>
   ) : filteredResults.length === 0 ? (
     <Text color="fg.muted" fontSize="sm" textAlign="center">
@@ -224,30 +246,21 @@ export default function ScoreCalculatorPage() {
   );
 
   const resultList = (
-    <Stack aria-busy={cutoffQuery.isPending} gap={4} mt={{ base: 6, md: 10 }}>
+    <Stack aria-busy={resultsPending} gap={4} mt={{ base: 6, md: 10 }}>
       <Stack aria-live="polite" gap={1}>
         <Box border={`1px solid ${COLORS.accentFg}`} borderRadius={8} mb={{ base: 6, md: 10 }} p={4}>
           <Heading as="h2" size="lg" textAlign="center">
-            {calculation ? (
-              maxScore ? (
-                <>
-                  <Text as="span" color="fg.accent">
-                    {scoreFormatter.format(calculation.score)}
-                  </Text>{" "}
-                  /{" "}
-                  <Text as="span" color="fg.muted">
-                    {maxScore}
-                  </Text>{" "}
-                  pistettä
-                </>
-              ) : (
-                <>
-                  <Text as="span" color="fg.accent">
-                    {scoreFormatter.format(calculation.score)}
-                  </Text>{" "}
-                  pistettä
-                </>
-              )
+            {calculation?.amk.score !== undefined ? (
+              <>
+                <Text as="span" color="fg.accent">
+                  {scoreFormatter.format(calculation.amk.score)}
+                </Text>{" "}
+                /{" "}
+                <Text as="span" color="fg.muted">
+                  {scoreFormatter.format(calculation.amk.maximumScore)}
+                </Text>{" "}
+                pistettä
+              </>
             ) : (
               "Ei vielä laskettu"
             )}{" "}
@@ -267,25 +280,14 @@ export default function ScoreCalculatorPage() {
       </HStack>
 
       <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
-        <HStack flex={1} gap={6}>
-          <Box flex={6}>
-            <ResultSelect<typeof round>
-              items={rounds.map((value) => ({ label: cutoffRoundLabel(value), value }))}
-              label="Yhteishaku"
-              onChange={setRound}
-              value={round}
-            />
-          </Box>
-
-          <Box flex={4}>
-            <ResultSelect<SectorFilter>
-              items={SECTOR_OPTIONS}
-              label="Korkeakoulutyyppi"
-              onChange={setSectorFilter}
-              value={sectorFilter}
-            />
-          </Box>
-        </HStack>
+        <Box flex={1}>
+          <ResultSelect<SectorFilter>
+            items={SECTOR_OPTIONS}
+            label="Korkeakoulutyyppi"
+            onChange={setSectorFilter}
+            value={sectorFilter}
+          />
+        </Box>
         <Box flex={1}>
           <ResultSelect<SortOption>
             ariaLabel="Järjestys"
@@ -318,7 +320,9 @@ export default function ScoreCalculatorPage() {
         description="Laske todistusvalintapisteesi ylioppilastutkinnon tai ammatillisen perustutkinnon todistuksen perusteella."
         title={
           <>
-            Todistusvalinta<wbr />laskuri {DEFAULT_CUTOFF_YEAR}
+            Todistusvalinta
+            <wbr />
+            laskuri {applicationRound.slice(0, 4)}
           </>
         }
       />
@@ -328,16 +332,14 @@ export default function ScoreCalculatorPage() {
             setSelectionMethod(nextSelectionMethod);
             setCalculation(null);
           }}
-          onSubmit={(selectionMethod, score) => {
-            setCalculation({ score, selectionMethod });
-          }}
+          onSubmit={setCalculation}
         />
 
         {resultList}
 
         <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
           Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelevat vuosi
-          vuodelta. <br /> Vertailu ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
+          vuodelta. <br /> AMK-laskuri ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
           todistusvalinnan kynnysehtoihin{" "}
           <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
             täältä
@@ -346,6 +348,13 @@ export default function ScoreCalculatorPage() {
           Pisterajojen tiedot ovat peräisin Opetushallituksen{" "}
           <Link href="https://vipunen.fi/fi-fi/" rel="noopener noreferrer" target="_blank" textDecoration="underline">
             Vipunen-palvelusta
+          </Link>
+          .
+        </Text>
+        <Text color="fg.muted" fontSize="xs" mt={2} textWrap="pretty">
+          Löysitkö virheen? Ilmoita siitä{" "}
+          <Link href="/palaute/" textDecoration="underline">
+            täällä
           </Link>
           .
         </Text>

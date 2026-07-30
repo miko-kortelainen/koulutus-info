@@ -7,7 +7,6 @@ interface ScoreResultCardProps {
   roundLabel: string;
   result: ScoreResult;
   showKoulutusala?: boolean;
-  userScore?: number;
 }
 
 const scoreFormatter = new Intl.NumberFormat("fi-FI", {
@@ -19,9 +18,11 @@ export default function ScoreResultCard({
   result,
   roundLabel,
   showKoulutusala,
-  userScore,
 }: ScoreResultCardProps) {
-  const isQualified = userScore !== undefined && result.score <= userScore;
+  const displayedScore = result.applicantScore;
+  const isQualified =
+    displayedScore !== undefined && result.score <= displayedScore && result.kynnysehtoPassed !== false;
+  const hasThreshold = result.kynnysehtoLabel !== undefined || result.kynnysehtoPassed !== undefined;
 
   return (
     <Card.Root as="article" size="sm">
@@ -49,9 +50,31 @@ export default function ScoreResultCard({
               Pisteesi / alin hyväksytty pistemäärä ({roundLabel})
             </Text>
             <Text color={isQualified ? "fg.accent" : "fg.muted"} fontSize="lg" fontWeight="bold" letterSpacing="wide">
-              {userScore === undefined ? "–" : scoreFormatter.format(userScore)} / {scoreFormatter.format(result.score)}
+              {displayedScore === undefined ? "–" : scoreFormatter.format(displayedScore)} /{" "}
+              {scoreFormatter.format(result.score)}
             </Text>
           </Stack>
+          {hasThreshold ? (
+            <>
+              {result.kynnysehtoLabel ? (
+                <Text fontSize="xs">
+                  <Text as="span" fontWeight="semibold">
+                    Kynnysehto:{" "}
+                  </Text>
+                  {result.kynnysehtoLabel}
+                </Text>
+              ) : null}
+              {result.kynnysehtoPassed !== undefined ? (
+                <Text color={result.kynnysehtoPassed ? "fg.accent" : "fg.error"} fontSize="xs">
+                  Kynnysehto {result.kynnysehtoPassed ? "täyttyy" : "ei täyty"}.
+                </Text>
+              ) : null}
+            </>
+          ) : result.sector === "Yliopistokoulutus" ? (
+            <Text color="fg.muted" fontSize="xs">
+              Ei kynnysehtoa.
+            </Text>
+          ) : null}
         </Stack>
       </Card.Body>
     </Card.Root>

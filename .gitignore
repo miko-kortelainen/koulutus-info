@@ -165,3 +165,4 @@ AGENTS.md
 ideat.md
 backend/amk-palaute.csv
 backend/yliopisto-palaute.csv
+frontend/.config/opencode/opencode.jsonc
