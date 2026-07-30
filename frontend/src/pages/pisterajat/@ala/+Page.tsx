@@ -31,7 +31,7 @@ export default function AlaCutoffPage() {
   );
 
   const schoolAccordions = (
-    <Accordion.Root aria-label="Pisterajat kouluittain" as="ul" collapsible listStyleType="none" multiple width="full">
+    <Accordion.Root as="ul" collapsible listStyleType="none" multiple width="full">
       {schools.length === 0 ? <Text as="li">Ei pisterajoja tälle koulutusalalle.</Text> : null}
       {schools.map((school) => (
         <Accordion.Item as="li" key={school.slug} value={school.slug}>

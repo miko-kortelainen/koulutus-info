@@ -1,5 +1,5 @@
 import { expect, type Page, test } from "@playwright/test";
-import { CALCULATOR_API_URL } from "@/api/calculatorApi";
+import { CALCULATOR_API_URL } from "@/config/calculatorApi";
 import { DEFAULT_CUTOFF_ROUND, DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { CURRENT_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
 
