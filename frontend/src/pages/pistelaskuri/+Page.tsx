@@ -87,6 +87,8 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
   return true;
 }
 
+// kynnysehtoPassed is undefined when no threshold requirement exists (passes),
+// false when a threshold exists and was not met (fails), or true when met (passes).
 const qualifies = (result: ScoreResult) =>
   result.applicantScore !== undefined && result.score <= result.applicantScore && result.kynnysehtoPassed !== false;
 
@@ -161,7 +163,7 @@ export default function ScoreCalculatorPage() {
   const resultsError = !calculation && programsQuery.isError;
   const resultsSuccess = Boolean(calculation) || programsQuery.isSuccess;
   const applicationRound =
-    calculation?.amk.applicationRound ?? programsQuery.data?.university.applicationRound ?? DEFAULT_CUTOFF_ROUND;
+    programsQuery.data?.university.applicationRound ?? calculation?.amk.applicationRound ?? DEFAULT_CUTOFF_ROUND;
   const roundLabel = cutoffRoundShortLabel(applicationRound);
   const resultListKey = [applicationRound, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
   const displayedQualifiedCount = resultsSuccess && calculation ? qualifiedCount : "–";
