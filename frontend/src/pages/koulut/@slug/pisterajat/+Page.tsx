@@ -9,7 +9,6 @@ import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel, cutoffRoundYea
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/lib/cutoffs";
-import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 import type { CutoffPageData } from "./+data";
 import SortControl from "./components/SortControl";
@@ -56,21 +55,17 @@ export default function CutoffPage() {
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, sortOrder);
 
-  const linkBack = (
-    <Link
-      fontSize="sm"
-      href={`/koulut/${slugify(schoolName)}/`}
-      textDecoration="underline"
-      textDecorationColor={COLORS.accentFg}
-      textDecorationStyle="dotted"
-    >
-      ← Takaisin
-    </Link>
-  );
-
   const header = (
     <Stack gap={1}>
-      {linkBack}
+      <Link
+        fontSize="sm"
+        href="../"
+        textDecoration="underline"
+        textDecorationColor={COLORS.accentFg}
+        textDecorationStyle="dotted"
+      >
+        ← Takaisin
+      </Link>
       <Heading as="h1" size="md">
         {schoolName} – pisterajat {cutoffRoundYear(activeRound)}
       </Heading>
@@ -102,7 +97,7 @@ export default function CutoffPage() {
     <Stack as="ul" gap={{ base: 4, md: 8 }} listStyleType="none">
       {filteredProgrammes.length === 0 ? <Text as="li">Ei tuloksia valituilla rajauksilla.</Text> : null}
       {filteredProgrammes.map((programme) => (
-        <Box as="li" key={programme.name}>
+        <Box as="li" key={`${programme.name}\0${programme.koulutusala}`}>
           <CutoffCard programme={programme} showRound={rounds.length === 1} />
         </Box>
       ))}

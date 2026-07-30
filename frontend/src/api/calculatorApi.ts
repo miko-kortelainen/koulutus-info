@@ -1,6 +1,5 @@
+import { CALCULATOR_API_TIMEOUT_MS, CALCULATOR_API_URL } from "@/config/calculatorApi";
 import type { CutoffRound } from "@/config/cutoffRounds";
-
-export const CALCULATOR_API_URL = "https://pisterajat-api-546628865246.europe-north1.run.app/api/v1";
 
 export type UniversityGrade = "I" | "A" | "B" | "C" | "M" | "E" | "L";
 
@@ -120,7 +119,7 @@ const parseUniversityProgram = (value: unknown, index: number, requireScore: boo
   };
 };
 
-const parseUniversityResponse = (value: unknown, requireScores: boolean): UniversityProgramsResponse => {
+export const parseUniversityResponse = (value: unknown, requireScores: boolean): UniversityProgramsResponse => {
   if (!isRecord(value) || !Array.isArray(value.programs)) {
     throw new Error("Virheellinen pistelaskurin vastaus: programs.");
   }
@@ -158,7 +157,7 @@ const parseAmkSchool = (value: unknown, index: number): AmkSchool => {
   };
 };
 
-const parseAmkResponse = (value: unknown, requireScore: boolean): AmkProgramsResponse => {
+export const parseAmkResponse = (value: unknown, requireScore: boolean): AmkProgramsResponse => {
   if (
     !isRecord(value) ||
     !Array.isArray(value.ammattikorkeakoulut) ||
@@ -178,31 +177,41 @@ const parseAmkResponse = (value: unknown, requireScore: boolean): AmkProgramsRes
   };
 };
 
-const readResponse = async <T>(responsePromise: Promise<Response>, parse: (value: unknown) => T): Promise<T> => {
-  const response = await responsePromise;
-  const body: unknown = await response.json().catch(() => undefined);
-  if (!response.ok) {
-    const message =
-      isRecord(body) && isRecord(body.error) && typeof body.error.message === "string"
-        ? body.error.message
-        : "Pistelaskurin pyyntö epäonnistui.";
-    throw new Error(message);
+export const readResponse = async <T>(responsePromise: Promise<Response>, parse: (value: unknown) => T): Promise<T> => {
+  try {
+    const response = await responsePromise;
+    const body: unknown = await response.json().catch(() => undefined);
+    if (!response.ok) {
+      const message =
+        isRecord(body) && isRecord(body.error) && typeof body.error.message === "string"
+          ? body.error.message
+          : "Pistelaskurin pyyntö epäonnistui.";
+      throw new Error(message);
+    }
+    return parse(body);
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "TimeoutError") {
+      throw new Error("Pistelaskurin pyyntö aikakatkaistiin.");
+    }
+    throw error;
   }
-  return parse(body);
 };
 
+const fetchWithTimeout = (path: string, init?: RequestInit) =>
+  fetch(`${CALCULATOR_API_URL}${path}`, { ...init, signal: AbortSignal.timeout(CALCULATOR_API_TIMEOUT_MS) });
+
 const post = (path: string, grades: unknown) =>
-  fetch(`${CALCULATOR_API_URL}${path}`, {
+  fetchWithTimeout(path, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ grades }),
   });
 
 export const getUniversityPrograms = () =>
-  readResponse(fetch(`${CALCULATOR_API_URL}/programs`), (value) => parseUniversityResponse(value, false));
+  readResponse(fetchWithTimeout("/programs"), (value) => parseUniversityResponse(value, false));
 
 export const getAmkPrograms = (method: "yo" | "amm") =>
-  readResponse(fetch(`${CALCULATOR_API_URL}/amk/programs/${method}`), (value) => parseAmkResponse(value, false));
+  readResponse(fetchWithTimeout(`/amk/programs/${method}`), (value) => parseAmkResponse(value, false));
 
 export const calculateUniversityYo = (grades: Record<string, UniversityGrade>) =>
   readResponse(post("/calculate", grades), (value) => parseUniversityResponse(value, true));

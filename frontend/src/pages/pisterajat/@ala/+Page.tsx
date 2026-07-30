@@ -1,22 +1,13 @@
-import { Heading, Link, Separator, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { Accordion, Heading, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
-import CutoffCard from "@/components/CutoffCard";
-import Pagination from "@/components/Pagination";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
-import { alaSlugParam } from "@/lib/cutoffs";
 import { COLORS } from "@/theme";
 import type { AlaPageData } from "./+data";
-
-// paginated by school, no client-side search — the per-school page
-// already has search; add it here only if users ask for it
-const pageSize = 3;
+import SchoolProgrammeList from "./components/SchoolProgrammeList";
 
 export default function AlaCutoffPage() {
   const { alaName, schools } = useData<AlaPageData>();
-  const [page, setPage] = useState(1);
-  const visibleSchools = schools.slice((page - 1) * pageSize, page * pageSize);
 
   const header = (
     <Stack gap={1}>
@@ -39,57 +30,33 @@ export default function AlaCutoffPage() {
     </Stack>
   );
 
-  const schoolLinks =
-    schools.length > 0 ? (
-      <Stack gap={2} width="full">
-        <Heading as="h2" size="sm">
-          Korkeakoulut tällä alalla
-        </Heading>
-        <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={2} listStyleType="none">
-          {schools.map((school) => (
-            <li key={school.slug}>
-              <Link
-                href={`/koulut/${school.slug}/pisterajat/?ala=${alaSlugParam([alaName])}`}
-                textDecoration="underline"
-                textDecorationStyle="dotted"
-              >
-                {school.name}
-              </Link>
-            </li>
-          ))}
-        </SimpleGrid>
-      </Stack>
-    ) : null;
-
-  const schoolSections = (
-    <Stack as="ul" gap={{ base: 8, md: 12 }} listStyleType="none" width="full">
+  const schoolAccordions = (
+    <Accordion.Root as="ul" collapsible listStyleType="none" multiple width="full">
       {schools.length === 0 ? <Text as="li">Ei pisterajoja tälle koulutusalalle.</Text> : null}
-      {visibleSchools.map((school) => (
-        <Stack as="li" gap={{ base: 4, md: 6 }} key={school.slug}>
+      {schools.map((school) => (
+        <Accordion.Item as="li" key={school.slug} value={school.slug}>
           <Heading as="h2" size="sm">
-            <Link
-              href={`/koulut/${school.slug}/pisterajat/?ala=${alaSlugParam([alaName])}`}
-              textDecoration="underline"
-              textDecorationColor={COLORS.accentFg}
-              textDecorationStyle="dotted"
-            >
-              {school.name}
-            </Link>
+            <Accordion.ItemTrigger py={4}>
+              <Text as="span" flex="1" textAlign="start">
+                {school.name}
+              </Text>
+              <Accordion.ItemIndicator />
+            </Accordion.ItemTrigger>
           </Heading>
-          {school.programmes.map((programme) => (
-            <CutoffCard headingLevel="h3" key={programme.name} programme={programme} showRound />
-          ))}
-        </Stack>
+          <Accordion.ItemContent>
+            <Accordion.ItemBody pb={6}>
+              <SchoolProgrammeList headingLevel="h3" programmes={school.programmes} />
+            </Accordion.ItemBody>
+          </Accordion.ItemContent>
+        </Accordion.Item>
       ))}
-    </Stack>
+    </Accordion.Root>
   );
 
   return (
     <PageContainer align="flex-start">
       {header}
-      {schoolLinks}
-      {schoolSections}
-      <Pagination count={schools.length} onPageChange={setPage} page={page} pageSize={pageSize} />
+      {schoolAccordions}
     </PageContainer>
   );
 }
