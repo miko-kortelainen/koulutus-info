@@ -1,7 +1,7 @@
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
-import { CALCULATOR_API_URL } from "@/api/calculatorApi";
+import { CALCULATOR_API_URL } from "@/config/calculatorApi";
 import { renderWithChakra } from "@/test/render";
 import ScoreForm from "./ScoreForm";
 

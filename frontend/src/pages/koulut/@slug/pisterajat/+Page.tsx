@@ -1,4 +1,4 @@
-import { Box, Heading, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Link, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
@@ -9,6 +9,7 @@ import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel, cutoffRoundYea
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/lib/cutoffs";
+import { COLORS } from "@/theme";
 import type { CutoffPageData } from "./+data";
 import SortControl from "./components/SortControl";
 import useFilteredProgrammes, { type SortOption } from "./hooks/useFilteredProgrammes";
@@ -54,9 +55,17 @@ export default function CutoffPage() {
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, sortOrder);
 
-
   const header = (
     <Stack gap={1}>
+      <Link
+        fontSize="sm"
+        href="../"
+        textDecoration="underline"
+        textDecorationColor={COLORS.accentFg}
+        textDecorationStyle="dotted"
+      >
+        ← Takaisin
+      </Link>
       <Heading as="h1" size="md">
         {schoolName} – pisterajat {cutoffRoundYear(activeRound)}
       </Heading>
@@ -88,7 +97,7 @@ export default function CutoffPage() {
     <Stack as="ul" gap={{ base: 4, md: 8 }} listStyleType="none">
       {filteredProgrammes.length === 0 ? <Text as="li">Ei tuloksia valituilla rajauksilla.</Text> : null}
       {filteredProgrammes.map((programme) => (
-        <Box as="li" key={programme.name}>
+        <Box as="li" key={`${programme.name}\0${programme.koulutusala}`}>
           <CutoffCard programme={programme} showRound={rounds.length === 1} />
         </Box>
       ))}

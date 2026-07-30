@@ -19,7 +19,7 @@ export default function SchoolProgrammeList({ headingLevel, programmes }: School
     <Stack gap={4}>
       <Stack as="ul" gap={{ base: 4, md: 6 }} listStyleType="none">
         {visibleProgrammes.map((programme) => (
-          <Box as="li" key={programme.name}>
+          <Box as="li" key={`${programme.name}\0${programme.koulutusala}`}>
             <CutoffCard headingLevel={headingLevel} programme={programme} showRound />
           </Box>
         ))}
