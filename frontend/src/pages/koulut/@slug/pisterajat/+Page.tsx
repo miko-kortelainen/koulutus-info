@@ -1,4 +1,4 @@
-import { Box, Heading, Link, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
@@ -9,8 +9,6 @@ import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel, cutoffRoundYea
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/lib/cutoffs";
-import { slugify } from "@/lib/slug";
-import { COLORS } from "@/theme";
 import type { CutoffPageData } from "./+data";
 import SortControl from "./components/SortControl";
 import useFilteredProgrammes, { type SortOption } from "./hooks/useFilteredProgrammes";
@@ -56,21 +54,9 @@ export default function CutoffPage() {
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, sortOrder);
 
-  const linkBack = (
-    <Link
-      fontSize="sm"
-      href={`/koulut/${slugify(schoolName)}/`}
-      textDecoration="underline"
-      textDecorationColor={COLORS.accentFg}
-      textDecorationStyle="dotted"
-    >
-      ← Takaisin
-    </Link>
-  );
 
   const header = (
     <Stack gap={1}>
-      {linkBack}
       <Heading as="h1" size="md">
         {schoolName} – pisterajat {cutoffRoundYear(activeRound)}
       </Heading>

@@ -831,28 +831,22 @@ test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ p
   await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).not.toBeVisible();
 });
 
-test("/pisterajat: ala link opens per-ala cutoff listing", async ({ page }) => {
+test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/pisterajat/");
   await expect(page.getByRole("heading", { name: `Pisterajat ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
 
   await page.getByRole("link", { name: "Lääketieteet" }).click();
   await expect(page).toHaveURL("/pisterajat/laaketieteet/");
   await expect(page.getByRole("heading", { name: `Lääketieteet – pisterajat ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
-  await expect(page.getByRole("article").first()).toBeVisible();
-  await expect(page.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
-});
+  await expect(page.getByRole("heading", { name: "Korkeakoulut tällä alalla" })).toHaveCount(0);
+  await expect(page.getByRole("link", { exact: true, name: "Turun yliopisto" })).toHaveCount(0);
 
-test("/pisterajat/:ala: school link opens ala-filtered cutoff history", async ({ page }) => {
-  await page.goto("/pisterajat/laaketieteet/");
-  await expect(page.getByRole("link", { exact: true, name: "Turun yliopisto" }).first()).toHaveAttribute(
-    "href",
-    "/koulut/turun-yliopisto/pisterajat/?ala=laaketieteet",
-  );
-  await page.getByRole("link", { exact: true, name: "Helsingin yliopisto" }).first().click();
+  await page.getByRole("button", { name: "Turun yliopisto" }).click();
 
-  await expect(page).toHaveURL(/\/koulut\/[^/]+\/pisterajat\/\?ala=laaketieteet/);
-  await expect(page.getByRole("button", { name: "Poista alarajaus" })).toBeVisible();
-  await expect(page.getByRole("article").first()).toBeVisible();
+  const schoolAccordion = page.getByRole("region", { name: "Turun yliopisto" });
+  await expect(schoolAccordion.getByRole("article").first()).toBeVisible();
+  await expect(schoolAccordion.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {
