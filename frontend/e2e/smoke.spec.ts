@@ -1,13 +1,104 @@
 import { expect, type Page, test } from "@playwright/test";
-import {
-  cutoffRoundLabel,
-  cutoffRoundShortLabel,
-  DEFAULT_CUTOFF_ROUND,
-  DEFAULT_CUTOFF_YEAR,
-} from "@/config/cutoffRounds";
+import { CALCULATOR_API_URL } from "@/api/calculatorApi";
+import { DEFAULT_CUTOFF_ROUND, DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { CURRENT_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
 
 test.describe.configure({ mode: "parallel" });
+
+const calculatorCutoff = (selectionMethod: string, score: number) => ({
+  score,
+  selectionMethod,
+  startSeason: "Syksy",
+  startYear: Number(DEFAULT_CUTOFF_YEAR),
+});
+
+const universityProgram = (university: string, program: string, field: string, score: number) => ({
+  cutoffs: [calculatorCutoff("Todistusvalinta", score)],
+  eligible: true,
+  field,
+  program,
+  requiresRouteSelection: false,
+  university,
+});
+
+const calculatorUniversityPrograms = [
+  ...Array.from({ length: 40 }, (_, index) =>
+    universityProgram(
+      "Testiyliopisto",
+      `Humanistinen koulutus ${String(index + 1).padStart(2, "0")}`,
+      "Humanistiset alat",
+      80 + index,
+    ),
+  ),
+  universityProgram("Turun yliopisto", "Oikeustiede", "Kauppa, hallinto ja oikeustieteet", 105),
+  universityProgram("Turun yliopisto", "Tietojenkäsittelytiede", "Tietojenkäsittely ja tietoliikenne", 95),
+  universityProgram("Testiyliopisto", "Konetekniikka", "Tekniikan alat", 120),
+  universityProgram("Testiyliopisto", "Automaatiotekniikka", "Tekniikan alat", 75),
+  {
+    ...universityProgram("Åbo Akademi", "Pedagogik (undervisning på svenska), pedagogie kandidat", "Kasvatusalat", 100),
+    cutoffs: [calculatorCutoff("Todistusvalinta", 100), calculatorCutoff("Todistusvalinta, ensikertalaiset", 90)],
+  },
+];
+
+const universityResponse = (score?: number) => ({
+  applicationRound: DEFAULT_CUTOFF_ROUND,
+  programs: calculatorUniversityPrograms.map((program) => (score === undefined ? program : { ...program, score })),
+});
+
+const amkResponse = (method: "Todistusvalinta (YO)" | "Todistusvalinta (AMM)", score?: number) => ({
+  applicationRound: DEFAULT_CUTOFF_ROUND,
+  ammattikorkeakoulut: [
+    {
+      name: "Testi-ammattikorkeakoulu",
+      programmes: [
+        {
+          cutoffs: [calculatorCutoff(method, 85)],
+          koulutusala: "Tekniikan alat",
+          name: "Insinööri (AMK), konetekniikka",
+        },
+      ],
+      sector: "Ammattikorkeakoulukoulutus",
+    },
+  ],
+  maximumScore: 198,
+  ...(score === undefined ? {} : { score }),
+});
+
+async function mockCalculatorApi(page: Page) {
+  await page.route(`${CALCULATOR_API_URL}/**`, async (route) => {
+    const corsHeaders = {
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Origin": "*",
+    };
+    if (route.request().method() === "OPTIONS") {
+      await route.fulfill({ status: 204, headers: corsHeaders });
+      return;
+    }
+
+    const path = new URL(route.request().url()).pathname;
+    const responses: Record<string, () => unknown> = {
+      "/api/v1/programs": () => universityResponse(),
+      "/api/v1/calculate": () => universityResponse(106),
+      "/api/v1/amk/programs/yo": () => amkResponse("Todistusvalinta (YO)"),
+      "/api/v1/amk/programs/amm": () => amkResponse("Todistusvalinta (AMM)"),
+      "/api/v1/amk/calculate/yo": () => amkResponse("Todistusvalinta (YO)", 106),
+      "/api/v1/amk/calculate/amm": () => amkResponse("Todistusvalinta (AMM)", 106),
+    };
+    const response = responses[path]?.();
+
+    await route.fulfill({
+      body: JSON.stringify(response ?? { error: { message: `E2E-mock puuttuu: ${path}` } }),
+      contentType: "application/json",
+      headers: corsHeaders,
+      status: response ? 200 : 404,
+    });
+  });
+}
+
+test.beforeEach(async ({ page }) => {
+  await mockCalculatorApi(page);
+});
 
 test.afterEach(async ({ page }) => {
   expect((await page.pageErrors()).map((error) => error.message)).toEqual([]);
@@ -215,7 +306,6 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 test("/pistelaskuri: searches active cutoffs", async ({ page }) => {
   await openCalculator(page);
   await expect(page.getByText(/Pisteesi riittävät – \/ \d+ toteutukseen/)).toBeVisible();
-  await expectSelectedOption(page, "Yhteishaku", cutoffRoundLabel(DEFAULT_CUTOFF_ROUND));
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
 
   const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
@@ -264,32 +354,6 @@ test("/pistelaskuri: filters university results and paginates a group", async ({
   await expect(humanistisetAccordion.getByRole("article").getByText("AMK-valintakoe", { exact: true })).toHaveCount(0);
 });
 
-test("/pistelaskuri: switches cutoff rounds", async ({ page }) => {
-  await openCalculator(page);
-  const roundResponse = page.waitForResponse((response) => response.url().includes("pisterajat-2025-syksy"));
-  await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
-  expect((await roundResponse).status()).toBe(200);
-  const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
-  await expect(
-    tekniikkaAccordion.getByText("Pisteesi / alin hyväksytty pistemäärä (syksy 2025)").first(),
-  ).toBeVisible();
-
-  await selectOption(page, "Yhteishaku", cutoffRoundLabel(DEFAULT_CUTOFF_ROUND));
-  await expect(
-    tekniikkaAccordion
-      .getByText(`Pisteesi / alin hyväksytty pistemäärä (${cutoffRoundShortLabel(DEFAULT_CUTOFF_ROUND)})`)
-      .first(),
-  ).toBeVisible();
-
-  await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
-  await expect(
-    page
-      .getByRole("article")
-      .getByText(/^– \/ /)
-      .first(),
-  ).toBeVisible();
-});
-
 test("/pistelaskuri: sorts grouped results", async ({ page }) => {
   await openCalculator(page);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
@@ -332,14 +396,11 @@ test("/pistelaskuri: switches selection methods", async ({ page }) => {
   await page.getByRole("tab", { name: "AMM" }).click();
   await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true })).toHaveCount(0);
-
-  await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
-  await expect(page.getByRole("article").getByText("AMK-Valintakoe", { exact: true }).first()).toBeVisible();
 });
 
 test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
   await openCalculator(page);
-  await selectOption(page, "Äidinkieli", "M");
+  await selectOption(page, "Äidinkielen arvosana", "M");
   await selectOption(page, "Matematiikan oppimäärä", "Lyhyt");
   await selectOption(page, "Matematiikan arvosana", "M");
 
@@ -353,7 +414,7 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
 
   await page.getByRole("button", { name: "Laske pisteet" }).click();
 
-  await expect(page.getByText("106 / 198")).toBeVisible();
+  await expect(page.getByText(/106 \/ 198 pistettä/)).toBeVisible();
   await expect(page.getByText(/Pisteesi riittävät \d+ \/ \d+ toteutukseen/)).toBeVisible();
   await expect(page.getByText(/ei ota huomioon hakukohdekohtaisia kynnysehtoja/)).toBeVisible();
   await expect(page.getByRole("link", { name: "täältä" })).toHaveAttribute(
@@ -371,27 +432,6 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
   ).toBeVisible();
 });
 
-test("/pistelaskuri: validates and compares AMK-valintakoe points with cutoffs", async ({ page }) => {
-  await openCalculator(page);
-  await page.getByRole("tab", { name: "AMK-valintakoe" }).click();
-  const scoreInput = page.getByRole("textbox", { name: "Pistemäärä" });
-
-  await scoreInput.fill("ei numero");
-  await page.getByRole("button", { name: "Laske pisteet" }).click();
-  await expect(page.getByText("Anna pistemäärä numerona.")).toBeVisible();
-
-  await scoreInput.fill("120,5");
-  await page.getByRole("button", { name: "Laske pisteet" }).click();
-  await expect(page.getByRole("heading", { name: "120,5 pistettä" })).toBeVisible();
-  const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
-  await expect(
-    tekniikkaAccordion
-      .getByRole("article")
-      .getByText(/^120,5 \/ /)
-      .first(),
-  ).toBeVisible();
-});
-
 test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
   await page.addInitScript(() => {
     if (sessionStorage.getItem("pistelaskuri-storage-initialized")) return;
@@ -405,7 +445,7 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
   await page.goto("/pistelaskuri/");
   await waitForCalculatorHydration(page);
 
-  await selectOption(page, "Äidinkieli", "M");
+  await selectOption(page, "Äidinkielen arvosana", "M");
   await page.getByRole("button", { name: "+ Lisää kieli" }).click();
   await selectOption(page, "Kieli 1", "Englanti, pitkä");
   await selectOption(page, "Kielen 1 arvosana", "E");
@@ -421,15 +461,15 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
   await page.reload();
 
   await expect(page.getByRole("tab", { name: "YO" })).toHaveAttribute("aria-selected", "true");
-  await expectSelectedOption(page, "Äidinkieli", "M");
+  await expectSelectedOption(page, "Äidinkielen arvosana", "M");
   await expectSelectedOption(page, "Kieli 1", "Englanti, pitkä");
   await expectSelectedOption(page, "Kielen 1 arvosana", "E");
 
   await page.getByRole("button", { name: "+ Lisää kieli" }).click();
   await expect(page.getByRole("combobox", { name: "Kieli 2" })).toBeVisible();
-  await selectOption(page, "Äidinkieli", "L");
+  await selectOption(page, "Äidinkielen arvosana", "L");
   await page.reload();
-  await expectSelectedOption(page, "Äidinkieli", "M");
+  await expectSelectedOption(page, "Äidinkielen arvosana", "M");
   await expect(page.getByRole("combobox", { name: "Kieli 2" })).toHaveCount(0);
 
   await page.getByRole("tab", { name: "AMM" }).click();

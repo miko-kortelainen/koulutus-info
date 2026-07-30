@@ -2,6 +2,7 @@ import {
   type KieliLevel,
   type KieliType,
   type MathLevel,
+  type RealSubject,
   REAALIAINEET,
   YO_GRADES,
   type YoGrade,
@@ -9,6 +10,7 @@ import {
 } from "./yoScoring";
 
 interface LanguageOption {
+  exam: string;
   label: string;
   languageKey: string;
   level: KieliLevel;
@@ -17,9 +19,24 @@ interface LanguageOption {
 }
 
 export const LANGUAGE_OPTIONS = [
-  { label: "Englanti, pitkä", languageKey: "englanti", level: "pitkä", type: "vieras", value: "englanti-pitka" },
-  { label: "Englanti, lyhyt", languageKey: "englanti", level: "lyhyt", type: "vieras", value: "englanti-lyhyt" },
   {
+    exam: "ena",
+    label: "Englanti, pitkä",
+    languageKey: "englanti",
+    level: "pitkä",
+    type: "vieras",
+    value: "englanti-pitka",
+  },
+  {
+    exam: "enb",
+    label: "Englanti, lyhyt",
+    languageKey: "englanti",
+    level: "lyhyt",
+    type: "vieras",
+    value: "englanti-lyhyt",
+  },
+  {
+    exam: "rua",
     label: "Toinen kotimainen kieli, pitkä",
     languageKey: "toinen-kotimainen",
     level: "pitkä",
@@ -27,25 +44,70 @@ export const LANGUAGE_OPTIONS = [
     value: "toinen-kotimainen-pitka",
   },
   {
+    exam: "rub",
     label: "Toinen kotimainen kieli, keskipitkä",
     languageKey: "toinen-kotimainen",
     level: "keskipitkä",
     type: "kotimainen",
     value: "toinen-kotimainen-keskipitka",
   },
-  { label: "Venäjä, pitkä", languageKey: "venaja", level: "pitkä", type: "vieras", value: "venaja-pitka" },
-  { label: "Venäjä, lyhyt", languageKey: "venaja", level: "lyhyt", type: "vieras", value: "venaja-lyhyt" },
-  { label: "Ranska, pitkä", languageKey: "ranska", level: "pitkä", type: "vieras", value: "ranska-pitka" },
-  { label: "Ranska, lyhyt", languageKey: "ranska", level: "lyhyt", type: "vieras", value: "ranska-lyhyt" },
-  { label: "Espanja, pitkä", languageKey: "espanja", level: "pitkä", type: "vieras", value: "espanja-pitka" },
-  { label: "Espanja, lyhyt", languageKey: "espanja", level: "lyhyt", type: "vieras", value: "espanja-lyhyt" },
-  { label: "Saksa, pitkä", languageKey: "saksa", level: "pitkä", type: "vieras", value: "saksa-pitka" },
-  { label: "Saksa, lyhyt", languageKey: "saksa", level: "lyhyt", type: "vieras", value: "saksa-lyhyt" },
-  { label: "Saame, lyhyt", languageKey: "saame", level: "lyhyt", type: "vieras", value: "saame-lyhyt" },
-  { label: "Italia, lyhyt", languageKey: "italia", level: "lyhyt", type: "vieras", value: "italia-lyhyt" },
-  { label: "Portugali, lyhyt", languageKey: "portugali", level: "lyhyt", type: "vieras", value: "portugali-lyhyt" },
-  { label: "Latina, lyhyt", languageKey: "latina", level: "lyhyt", type: "vieras", value: "latina-lyhyt" },
+  { exam: "vea", label: "Venäjä, pitkä", languageKey: "venaja", level: "pitkä", type: "vieras", value: "venaja-pitka" },
+  { exam: "veb", label: "Venäjä, lyhyt", languageKey: "venaja", level: "lyhyt", type: "vieras", value: "venaja-lyhyt" },
+  { exam: "raa", label: "Ranska, pitkä", languageKey: "ranska", level: "pitkä", type: "vieras", value: "ranska-pitka" },
+  { exam: "rab", label: "Ranska, lyhyt", languageKey: "ranska", level: "lyhyt", type: "vieras", value: "ranska-lyhyt" },
+  {
+    exam: "esa",
+    label: "Espanja, pitkä",
+    languageKey: "espanja",
+    level: "pitkä",
+    type: "vieras",
+    value: "espanja-pitka",
+  },
+  {
+    exam: "esb",
+    label: "Espanja, lyhyt",
+    languageKey: "espanja",
+    level: "lyhyt",
+    type: "vieras",
+    value: "espanja-lyhyt",
+  },
+  { exam: "saa", label: "Saksa, pitkä", languageKey: "saksa", level: "pitkä", type: "vieras", value: "saksa-pitka" },
+  { exam: "sab", label: "Saksa, lyhyt", languageKey: "saksa", level: "lyhyt", type: "vieras", value: "saksa-lyhyt" },
+  { exam: "saame", label: "Saame, lyhyt", languageKey: "saame", level: "lyhyt", type: "vieras", value: "saame-lyhyt" },
+  { exam: "iab", label: "Italia, lyhyt", languageKey: "italia", level: "lyhyt", type: "vieras", value: "italia-lyhyt" },
+  {
+    exam: "pob",
+    label: "Portugali, lyhyt",
+    languageKey: "portugali",
+    level: "lyhyt",
+    type: "vieras",
+    value: "portugali-lyhyt",
+  },
+  { exam: "lab", label: "Latina, lyhyt", languageKey: "latina", level: "lyhyt", type: "vieras", value: "latina-lyhyt" },
 ] as const satisfies readonly LanguageOption[];
+
+export const MOTHER_TONGUE_OPTIONS = [
+  { label: "Suomi äidinkielenä", value: "ai_fi" },
+  { label: "Ruotsi äidinkielenä", value: "ai_sv" },
+  { label: "Saame äidinkielenä", value: "ai_smi" },
+] as const;
+
+type MotherTongueExam = (typeof MOTHER_TONGUE_OPTIONS)[number]["value"];
+
+const REAL_SUBJECT_EXAMS = {
+  Biologia: "bi",
+  Elämänkatsomustieto: "et",
+  "Evankelis-luterilainen uskonto": "ue",
+  Filosofia: "fi",
+  Fysiikka: "fy",
+  Historia: "hi",
+  Kemia: "ke",
+  Maantiede: "ge",
+  "Ortodoksinen uskonto": "uo",
+  Psykologia: "ps",
+  Terveystieto: "te",
+  Yhteiskuntaoppi: "yh",
+} as const satisfies Record<(typeof REAALIAINEET)[number], string>;
 
 export type YoLanguageValue = (typeof LANGUAGE_OPTIONS)[number]["value"];
 
@@ -57,12 +119,13 @@ export interface YoKieliRow {
 
 export interface YoReaaliaineRow {
   id: number;
-  subject: string;
+  subject: RealSubject | "";
   grade: YoGrade | "";
 }
 
 export interface YoFormState {
   aidinkieli: YoGrade | "";
+  aidinkieliExam?: MotherTongueExam;
   matematiikkaLevel: MathLevel;
   matematiikkaGrade: YoGrade | "";
   kielet: YoKieliRow[];
@@ -77,6 +140,7 @@ export interface YoFormErrors {
 
 export const emptyYoFormState = (): YoFormState => ({
   aidinkieli: "",
+  aidinkieliExam: "ai_fi",
   matematiikkaLevel: "pitkä",
   matematiikkaGrade: "",
   kielet: [],
@@ -100,13 +164,15 @@ const isKieliRow = (value: unknown): value is YoKieliRow =>
 const isReaaliaineRow = (value: unknown): value is YoReaaliaineRow =>
   isRecord(value) &&
   Number.isInteger(value.id) &&
-  (value.subject === "" || REAALIAINEET.includes(value.subject as (typeof REAALIAINEET)[number])) &&
+  (value.subject === "" || REAALIAINEET.includes(value.subject as RealSubject)) &&
   isYoGradeOrEmpty(value.grade);
 
 export const isYoFormState = (value: unknown): value is YoFormState => {
   if (
     !isRecord(value) ||
     !isYoGradeOrEmpty(value.aidinkieli) ||
+    (value.aidinkieliExam !== undefined &&
+      !MOTHER_TONGUE_OPTIONS.some((option) => option.value === value.aidinkieliExam)) ||
     (value.matematiikkaLevel !== "pitkä" && value.matematiikkaLevel !== "lyhyt") ||
     !isYoGradeOrEmpty(value.matematiikkaGrade) ||
     !Array.isArray(value.kielet) ||
@@ -154,9 +220,25 @@ export const parseYoForm = (state: YoFormState): { input: YoInput; errors?: unde
         : undefined,
       kielet: parsedLanguages.map(({ grade, level, type }) => ({ grade, level, type })),
       reaaliaineet: state.reaaliaineet.map((reaaliaine) => ({
-        subject: reaaliaine.subject,
+        subject: reaaliaine.subject as RealSubject,
         grade: reaaliaine.grade as YoGrade,
       })),
     },
   };
+};
+
+export const toUniversityGrades = (state: YoFormState): Record<string, YoGrade> => {
+  const grades: Record<string, YoGrade> = {};
+  if (state.aidinkieli) grades[state.aidinkieliExam ?? "ai_fi"] = state.aidinkieli;
+  if (state.matematiikkaGrade) {
+    grades[state.matematiikkaLevel === "pitkä" ? "maa" : "mab"] = state.matematiikkaGrade;
+  }
+  for (const language of state.kielet) {
+    const option = getLanguageOption(language.language);
+    if (option && language.grade) grades[option.exam] = language.grade;
+  }
+  for (const subject of state.reaaliaineet) {
+    if (subject.subject && subject.grade) grades[REAL_SUBJECT_EXAMS[subject.subject]] = subject.grade;
+  }
+  return grades;
 };

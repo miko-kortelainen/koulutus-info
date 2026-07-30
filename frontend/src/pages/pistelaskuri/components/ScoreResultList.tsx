@@ -10,16 +10,9 @@ interface ScoreResultListProps {
   results: ScoreResult[];
   roundLabel: string;
   showKoulutusala?: boolean;
-  userScore?: number;
 }
 
-export default function ScoreResultList({
-  headingLevel,
-  results,
-  roundLabel,
-  showKoulutusala,
-  userScore,
-}: ScoreResultListProps) {
+export default function ScoreResultList({ headingLevel, results, roundLabel, showKoulutusala }: ScoreResultListProps) {
   const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
   const visibleResults = results.slice(0, visibleCount);
   const hasMore = visibleResults.length < results.length;
@@ -34,7 +27,6 @@ export default function ScoreResultList({
               result={result}
               roundLabel={roundLabel}
               showKoulutusala={showKoulutusala}
-              userScore={userScore}
             />
           </Box>
         ))}

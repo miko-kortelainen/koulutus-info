@@ -1,7 +1,14 @@
-import type { School as CutoffSchool } from "@/types/pisterajat.gen";
-import { SCORE_TYPES, type ScoreType } from "../scoreTypes";
+import type { AmkProgramsResponse, UniversityProgramsResponse } from "@/api/calculatorApi";
+import type { ScoreType } from "../scoreTypes";
+
+export interface Calculation {
+  amk: AmkProgramsResponse;
+  selectionMethod: ScoreType;
+  university?: UniversityProgramsResponse;
+}
 
 export interface ScoreResult {
+  applicantScore?: number;
   id: string;
   programmeName: string;
   schoolName: string;
@@ -9,16 +16,15 @@ export interface ScoreResult {
   score: number;
   sector: string;
   selectionMethod: string;
+  kynnysehtoLabel?: string;
+  kynnysehtoPassed?: boolean;
 }
 
 type ScoreResultSelection = Pick<ScoreResult, "sector" | "selectionMethod">;
 
 const withFirstTime = (method: string) => [method, `${method}, ensikertalaiset`] as const;
 
-// "AMK-valintakoe" casing has drifted in the source data before (now "AMK-Valintakoe"), so
-// compare that one method case-insensitively; every other method stays an exact match.
-const sameSelectionMethod = (a: string, b: string) =>
-  a === b || (a.toLowerCase().startsWith("amk-valintakoe") && a.toLowerCase() === b.toLowerCase());
+const sameSelectionMethod = (a: string, b: string) => a === b;
 
 const selectionMethodsFor = (result: ScoreResultSelection, scoreType: ScoreType) => {
   if (result.sector === "Yliopistokoulutus") {
@@ -61,25 +67,38 @@ export function selectApplicantResults(
   });
 }
 
-export function flattenScoreResults(schools: CutoffSchool[]): ScoreResult[] {
-  return schools.flatMap((school) =>
+export function flattenAmkPrograms({ ammattikorkeakoulut, score: applicantScore }: AmkProgramsResponse): ScoreResult[] {
+  return ammattikorkeakoulut.flatMap((school) =>
     school.programmes.flatMap((programme) =>
-      programme.cutoffs.flatMap((cutoff, cutoffIndex) => {
-        const selection = { sector: school.sector, selectionMethod: cutoff.selectionMethod };
-        if (!SCORE_TYPES.some(({ value }) => matchesScoreType(selection, value))) return [];
-
-        return [
-          {
-            id: [school.name, programme.name, cutoff.selectionMethod, cutoff.score, cutoffIndex].join("\0"),
-            programmeName: programme.name,
-            schoolName: school.name,
-            koulutusala: programme.koulutusala,
-            score: cutoff.score,
-            sector: school.sector,
-            selectionMethod: cutoff.selectionMethod,
-          },
-        ];
-      }),
+      programme.cutoffs.map((cutoff, cutoffIndex) => ({
+        applicantScore,
+        id: [school.name, programme.name, cutoff.selectionMethod, cutoff.score, cutoffIndex].join("\0"),
+        programmeName: programme.name,
+        schoolName: school.name,
+        koulutusala: programme.koulutusala,
+        score: cutoff.score,
+        sector: school.sector,
+        selectionMethod: cutoff.selectionMethod,
+      })),
     ),
   );
+}
+
+export function flattenUniversityPrograms({ programs }: UniversityProgramsResponse): ScoreResult[] {
+  return programs.flatMap((program) => {
+    if (!program.eligible || program.requiresRouteSelection) return [];
+
+    return program.cutoffs.map((cutoff, cutoffIndex) => ({
+      applicantScore: program.score,
+      id: [program.university, program.program, cutoff.selectionMethod, cutoff.score, cutoffIndex].join("\0"),
+      programmeName: program.program,
+      schoolName: program.university,
+      koulutusala: program.field || "Tieto puuttuu",
+      score: cutoff.score,
+      sector: "Yliopistokoulutus",
+      selectionMethod: cutoff.selectionMethod,
+      kynnysehtoLabel: program.kynnysehtoLabel,
+      kynnysehtoPassed: program.kynnysehtoPassed,
+    }));
+  });
 }
