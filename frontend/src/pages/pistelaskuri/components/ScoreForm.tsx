@@ -1,10 +1,17 @@
-import { Box, Button, Field, Input, Stack, Tabs, Text } from "@chakra-ui/react";
+import { Box, Button, Stack, Tabs, Text } from "@chakra-ui/react";
 import { type SubmitEvent, useEffect, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
+import { calculateAmkAmm, calculateAmkYo, calculateUniversityYo } from "@/api/calculatorApi";
 import { COLORS } from "@/theme";
-import { calculateAmmScore } from "../lib/ammScoring";
-import { emptyYoFormState, isYoFormState, parseYoForm, type YoFormErrors, type YoFormState } from "../lib/yoForm";
-import { calculateYoScore } from "../lib/yoScoring";
+import {
+  emptyYoFormState,
+  isYoFormState,
+  parseYoForm,
+  toUniversityGrades,
+  type YoFormErrors,
+  type YoFormState,
+} from "../lib/yoForm";
+import type { Calculation } from "../lib/scoreResults";
 import { isScoreType, type ScoreType } from "../scoreTypes";
 import AmmForm, {
   type AmmFormErrors,
@@ -17,7 +24,7 @@ import YoForm from "./YoForm";
 
 interface ScoreFormProps {
   onModeChange: (selectionMethod: ScoreType) => void;
-  onSubmit: (selectionMethod: ScoreType, score: number) => void;
+  onSubmit: (calculation: Calculation) => void;
 }
 
 interface StoredForms {
@@ -60,22 +67,14 @@ const writeStoredForms = (next: Omit<StoredForms, "version">) => {
   }
 };
 
-const parseAmkScore = (value: string): number | null => {
-  const normalizedValue = value.trim().replace(",", ".");
-  if (normalizedValue === "") return null;
-
-  const score = Number(normalizedValue);
-  return Number.isFinite(score) && score >= 0 ? score : null;
-};
-
 export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
   const [mode, setMode] = useState<ScoreType>("Todistusvalinta (YO)");
   const [yoState, setYoState] = useState(emptyYoFormState());
   const [yoErrors, setYoErrors] = useState<YoFormErrors>({});
   const [ammState, setAmmState] = useState(emptyAmmFormState());
   const [ammErrors, setAmmErrors] = useState<AmmFormErrors>({});
-  const [amkScoreInput, setAmkScoreInput] = useState("");
-  const [amkScoreError, setAmkScoreError] = useState<string>();
+  const [apiError, setApiError] = useState<string>();
+  const [isCalculating, setIsCalculating] = useState(false);
 
   useEffect(() => {
     const storedForms = readStoredForms();
@@ -84,22 +83,23 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
   }, []);
 
   const handleModeChange = (value: string) => {
-    if (!isScoreType(value)) return;
+    if (isCalculating || !isScoreType(value)) return;
 
     setMode(value);
     setYoErrors({});
     setAmmErrors({});
-    setAmkScoreError(undefined);
+    setApiError(undefined);
     onModeChange(value);
   };
 
-  const submitScore = (score: number) => {
-    onSubmit(mode, score);
+  const submitCalculation = (calculation: Calculation) => {
+    onSubmit(calculation);
     window.sa_event?.("calculate_score");
   };
 
-  const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setApiError(undefined);
 
     if (mode === "Todistusvalinta (YO)") {
       const result = parseYoForm(yoState);
@@ -108,8 +108,20 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setYoErrors({});
-      writeStoredForms({ yo: yoState });
-      submitScore(calculateYoScore(result.input));
+      setIsCalculating(true);
+      try {
+        const grades = toUniversityGrades(yoState);
+        const [university, amk] = await Promise.all([calculateUniversityYo(grades), calculateAmkYo(grades)]);
+        if (university.applicationRound !== amk.applicationRound) {
+          throw new Error("Pistelaskurin API-vastaukset ovat eri hakukierroksilta.");
+        }
+        writeStoredForms({ yo: yoState });
+        submitCalculation({ amk, selectionMethod: "Todistusvalinta (YO)", university });
+      } catch (error) {
+        setApiError(error instanceof Error ? error.message : "Todistuspisteiden laskenta epäonnistui.");
+      } finally {
+        setIsCalculating(false);
+      }
       return;
     }
 
@@ -120,36 +132,19 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setAmmErrors({});
-      writeStoredForms({ amm: ammState });
-      submitScore(calculateAmmScore(result.input));
-      return;
-    }
-
-    if (mode === "AMK-valintakoe") {
-      const score = parseAmkScore(amkScoreInput);
-      setAmkScoreError(score === null ? "Anna pistemäärä numerona." : undefined);
-      if (score === null) return;
-      submitScore(score);
+      setIsCalculating(true);
+      try {
+        const amk = await calculateAmkAmm(result.input);
+        writeStoredForms({ amm: ammState });
+        submitCalculation({ amk, selectionMethod: "Todistusvalinta (AMM)" });
+      } catch (error) {
+        setApiError(error instanceof Error ? error.message : "Todistuspisteiden laskenta epäonnistui.");
+      } finally {
+        setIsCalculating(false);
+      }
       return;
     }
   };
-
-  const amkScoreField = (
-    <Field.Root invalid={Boolean(amkScoreError)} required={mode === "AMK-valintakoe"}>
-      <Field.Label>Pistemäärä</Field.Label>
-      <Input
-        inputMode="decimal"
-        onChange={(event) => {
-          setAmkScoreInput(event.target.value);
-          setAmkScoreError(undefined);
-        }}
-        placeholder="Esimerkiksi 120,5"
-        size="xs"
-        value={amkScoreInput}
-      />
-      <Field.ErrorText>{amkScoreError}</Field.ErrorText>
-    </Field.Root>
-  );
 
   return (
     <form onSubmit={handleSubmit}>
@@ -163,7 +158,6 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
               [
                 ["Todistusvalinta (YO)", "YO"],
                 ["Todistusvalinta (AMM)", "AMM"],
-                ["AMK-valintakoe", "AMK-valintakoe"],
               ] as const
             ).map(([value, label]) => (
               <Tabs.Trigger flex="1" fontSize="xs" justifyContent="center" key={value} value={value}>
@@ -180,6 +174,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
               onChange={(state) => {
                 setYoState(state);
                 setYoErrors({});
+                setApiError(undefined);
               }}
               value={yoState}
             />
@@ -194,13 +189,10 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
               value={ammState}
             />
           </Tabs.Content>
-          <Tabs.Content p={0} value="AMK-valintakoe">
-            {amkScoreField}
-          </Tabs.Content>
-
           <Box display="flex" justifyContent="flex-end">
             <Button
               bg={COLORS.accent}
+              loading={isCalculating}
               mt={4}
               size="xs"
               type="submit"
@@ -211,6 +203,11 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
               Laske pisteet / näytä koulutukset
             </Button>
           </Box>
+          {apiError ? (
+            <Text color="fg.error" fontSize="xs" mt={2} role="alert">
+              {apiError}
+            </Text>
+          ) : null}
         </Box>
       </Tabs.Root>
     </form>

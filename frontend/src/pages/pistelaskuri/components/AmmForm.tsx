@@ -1,7 +1,15 @@
 import { Box, Input, Separator, Stack, Text, VStack } from "@chakra-ui/react";
+import type { AmkAmmGrades } from "@/api/calculatorApi";
 import { COLORS } from "@/theme";
-import { AMM_GRADES, type AmmGrade, type AmmInput, type AmmScale } from "../lib/ammScoring";
 import FormSelect from "./FormSelect";
+
+export type AmmScale = "1-5" | "1-3";
+export type AmmGrade = 1 | 2 | 3 | 4 | 5;
+
+export const AMM_GRADES: Record<AmmScale, AmmGrade[]> = {
+  "1-5": [5, 4, 3, 2, 1],
+  "1-3": [3, 2, 1],
+};
 
 const OSA_ALUEET = [
   "Viestintä- ja vuorovaikutusosaaminen",
@@ -34,7 +42,7 @@ const parseKeskiarvo = (value: string): number | null => {
 
 export const parseAmmForm = (
   state: AmmFormState,
-): { input: AmmInput; errors?: undefined } | { errors: AmmFormErrors } => {
+): { input: AmkAmmGrades; errors?: undefined } | { errors: AmmFormErrors } => {
   const errors: AmmFormErrors = {};
   if (state.grades.some((grade) => grade === "")) errors.grades = "Valitse arvosana kaikille kolmelle osa-alueelle.";
 
@@ -48,10 +56,12 @@ export const parseAmmForm = (
 
   return {
     input: {
-      scale: state.scale,
-      grades: state.grades as [AmmGrade, AmmGrade, AmmGrade],
+      communication: state.grades[0] as AmmGrade,
+      gradeScale: state.scale === "1-3" ? 3 : 5,
+      mathematicsSciences: state.grades[1] as AmmGrade,
+      societyWork: state.grades[2] as AmmGrade,
       // biome-ignore lint/style/noNonNullAssertion: validated above
-      keskiarvo: keskiarvo!,
+      weightedAverage: keskiarvo!,
     },
   };
 };
