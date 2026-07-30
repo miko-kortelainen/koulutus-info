@@ -4,6 +4,7 @@ import { HiOutlineTrash } from "react-icons/hi";
 import { COLORS } from "@/theme";
 import {
   LANGUAGE_OPTIONS,
+  MOTHER_TONGUE_OPTIONS,
   type YoFormErrors,
   type YoFormState,
   type YoKieliRow,
@@ -169,15 +170,26 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
       <Text as="legend" fontSize="sm" fontWeight="medium" mb={2}>
         Äidinkieli
       </Text>
-      <Stack width="full">
-        <FormSelect
-          ariaLabel="Äidinkieli"
-          items={GRADE_OPTIONS}
-          onChange={(aidinkieli) => onChange({ ...value, aidinkieli })}
-          placeholder="Valitse arvosana"
-          value={value.aidinkieli}
-        />
-      </Stack>
+      <HStack gap={6} width="full">
+        <Box flex={16}>
+          <FormSelect
+            ariaLabel="Äidinkielen koe"
+            items={MOTHER_TONGUE_OPTIONS}
+            onChange={(aidinkieliExam) => onChange({ ...value, aidinkieliExam })}
+            placeholder="Valitse koe"
+            value={value.aidinkieliExam ?? "ai_fi"}
+          />
+        </Box>
+        <Box flex={17}>
+          <FormSelect
+            ariaLabel="Äidinkielen arvosana"
+            items={GRADE_OPTIONS}
+            onChange={(aidinkieli) => onChange({ ...value, aidinkieli })}
+            placeholder="Valitse arvosana"
+            value={value.aidinkieli}
+          />
+        </Box>
+      </HStack>
       {errors.aidinkieli ? (
         <Text color="fg.error" fontSize="xs" id="yo-mother-tongue-error">
           {errors.aidinkieli}
