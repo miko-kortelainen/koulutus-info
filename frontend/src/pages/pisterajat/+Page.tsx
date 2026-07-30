@@ -9,7 +9,7 @@ export default function CutoffIndexPage() {
   const { alat, schools } = useData<CutoffIndexData>();
 
   const linkList = (items: { name: string; slug: string }[], href: (slug: string) => string) => (
-    <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={2} listStyleType="none">
+    <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={4} listStyleType="none">
       {items.map(({ name, slug }) => (
         <li key={slug}>
           <Link href={href(slug)} textDecoration="underline" textDecorationStyle="dotted">
