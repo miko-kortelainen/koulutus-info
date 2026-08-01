@@ -1,5 +1,4 @@
 import { expect, type Page, test } from "@playwright/test";
-import { CALCULATOR_API_URL } from "@/config/calculatorApi";
 import { DEFAULT_CUTOFF_ROUND, DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { CURRENT_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
 
@@ -65,7 +64,7 @@ const amkResponse = (method: "Todistusvalinta (YO)" | "Todistusvalinta (AMM)", s
 });
 
 async function mockCalculatorApi(page: Page) {
-  await page.route(`${CALCULATOR_API_URL}/**`, async (route) => {
+  await page.route("**/api/v1/**", async (route) => {
     const corsHeaders = {
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",

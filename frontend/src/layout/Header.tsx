@@ -60,10 +60,13 @@ const links = [
   { href: "/palaute/", label: "palaute", description: "Anna palautetta tai kehitysehdotus", icon: HiOutlineChatAlt2 },
 ];
 
+/** Locked bar height so page gradients can pull up under the transparent nav. */
+export const HEADER_HEIGHT = "3.5rem";
+
 export default function Header() {
   return (
-    <Box as="header">
-      <HStack gap={2} justifyContent="space-between" px={2} py={1}>
+    <Box as="header" bg="transparent" height={HEADER_HEIGHT} position="relative" zIndex={1}>
+      <HStack gap={2} height="100%" justifyContent="space-between" px={2}>
         <Link
           _hover={{ textDecoration: "none" }}
           alignItems="center"
