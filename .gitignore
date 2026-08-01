@@ -167,3 +167,4 @@ backend/amk-palaute.csv
 backend/yliopisto-palaute.csv
 frontend/.config/opencode/opencode.jsonc
 yhteishaku-workspace.code-workspace
+frontend/src/pages/pistelaskuri/koulutus-info.code-workspace

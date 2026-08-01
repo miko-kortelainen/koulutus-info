@@ -170,7 +170,7 @@ export default function ScoreCalculatorPage() {
   const displayedTotalCount = resultsSuccess ? totalCount : "–";
 
   const resultAccordion = (
-    <Accordion.Root collapsible lazyMount multiple size="md">
+    <Accordion.Root collapsible display="flex" flexDirection="column" gap={3} lazyMount multiple size="md">
       {groups.map((group) => (
         <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
           <Heading as="h3" size="xs">

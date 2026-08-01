@@ -1,6 +1,7 @@
 import { Box, Button, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "react-icons/hi";
 
+import { HEADER_HEIGHT } from "@/layout/Header";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
 import IosInstallTip from "./components/IosInstallTip";
@@ -28,8 +29,14 @@ export default function LandingPage() {
     <Box
       backgroundImage={`linear-gradient(to bottom, ${COLORS.bg} 50%, color-mix(in srgb, ${COLORS.accent} 42%, ${COLORS.bg}))`}
       display="flex"
-      minH="calc(100svh - 3.5rem)"
-      py={{ base: 6, md: 12, lg: 6 }}
+      minH="100svh"
+      mt={`calc(-1 * ${HEADER_HEIGHT})`}
+      pb={{ base: 6, md: 12, lg: 6 }}
+      pt={{
+        base: `calc(${HEADER_HEIGHT} + 1.5rem)`,
+        md: `calc(${HEADER_HEIGHT} + 3rem)`,
+        lg: `calc(${HEADER_HEIGHT} + 1.5rem)`,
+      }}
     >
       <SimpleGrid
         alignItems="center"
