@@ -450,6 +450,7 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
   await selectOption(page, "Kieli 1", "Englanti, pitkä");
   await selectOption(page, "Kielen 1 arvosana", "E");
   await page.getByRole("button", { name: "Laske pisteet" }).click();
+  await expect(page.getByRole("button", { name: "Laske pisteet" })).toBeEnabled();
 
   await page.getByRole("tab", { name: "AMM" }).click();
   await selectOption(page, "Viestintä- ja vuorovaikutusosaaminen", "3");
@@ -457,6 +458,7 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
   await selectOption(page, "Yhteiskunta- ja työelämäosaaminen", "3");
   await page.getByRole("textbox", { name: "Tutkinnon painotettu keskiarvo" }).fill("3,96");
   await page.getByRole("button", { name: "Laske pisteet" }).click();
+  await expect(page.getByRole("button", { name: "Laske pisteet" })).toBeEnabled();
 
   await page.reload();
 
