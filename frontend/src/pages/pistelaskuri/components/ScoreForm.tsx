@@ -1,8 +1,9 @@
 import { Box, Button, Stack, Tabs, Text } from "@chakra-ui/react";
-import { type SubmitEvent, useEffect, useState } from "react";
+import { type SubmitEvent, useEffect, useRef, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import { calculateAmkAmm, calculateAmkYo, calculateUniversityYo } from "@/api/calculatorApi";
 import { COLORS } from "@/theme";
+import type { Calculation } from "../lib/scoreResults";
 import {
   emptyYoFormState,
   isYoFormState,
@@ -11,7 +12,6 @@ import {
   type YoFormErrors,
   type YoFormState,
 } from "../lib/yoForm";
-import type { Calculation } from "../lib/scoreResults";
 import { isScoreType, type ScoreType } from "../scoreTypes";
 import AmmForm, {
   type AmmFormErrors,
@@ -34,6 +34,7 @@ interface StoredForms {
 }
 
 const STORAGE_KEY = "yhteishaku:pistelaskuri";
+const SUBMIT_COOLDOWN_MS = 500;
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -75,6 +76,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
   const [ammErrors, setAmmErrors] = useState<AmmFormErrors>({});
   const [apiError, setApiError] = useState<string>();
   const [isCalculating, setIsCalculating] = useState(false);
+  const isSubmitting = useRef(false);
 
   useEffect(() => {
     const storedForms = readStoredForms();
@@ -99,6 +101,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
 
   const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (isSubmitting.current) return;
     setApiError(undefined);
 
     if (mode === "Todistusvalinta (YO)") {
@@ -108,6 +111,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setYoErrors({});
+      isSubmitting.current = true;
       setIsCalculating(true);
       try {
         const grades = toUniversityGrades(yoState);
@@ -120,6 +124,8 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
       } catch (error) {
         setApiError(error instanceof Error ? error.message : "Todistuspisteiden laskenta epäonnistui.");
       } finally {
+        await new Promise((resolve) => setTimeout(resolve, SUBMIT_COOLDOWN_MS));
+        isSubmitting.current = false;
         setIsCalculating(false);
       }
       return;
@@ -132,6 +138,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setAmmErrors({});
+      isSubmitting.current = true;
       setIsCalculating(true);
       try {
         const amk = await calculateAmkAmm(result.input);
@@ -140,6 +147,8 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
       } catch (error) {
         setApiError(error instanceof Error ? error.message : "Todistuspisteiden laskenta epäonnistui.");
       } finally {
+        await new Promise((resolve) => setTimeout(resolve, SUBMIT_COOLDOWN_MS));
+        isSubmitting.current = false;
         setIsCalculating(false);
       }
       return;
