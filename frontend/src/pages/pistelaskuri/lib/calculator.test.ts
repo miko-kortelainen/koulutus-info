@@ -11,31 +11,38 @@ import {
 import { emptyYoFormState, isYoFormState, parseYoForm, toUniversityGrades } from "./yoForm";
 
 const completeYoForm = {
-  ...emptyYoFormState(),
-  aidinkieli: "L" as const,
-  matematiikkaGrade: "E" as const,
-  kielet: [{ id: 0, language: "englanti-pitka" as const, grade: "M" as const }],
-  reaaliaineet: [{ id: 1, subject: "Fysiikka" as const, grade: "C" as const }],
+  aineet: [
+    { id: 0, subject: "ai_fi" as const, grade: "L" as const },
+    { id: 1, subject: "matematiikka-pitka" as const, grade: "E" as const },
+    { id: 2, subject: "englanti-pitka" as const, grade: "M" as const },
+    { id: 3, subject: "Fysiikka" as const, grade: "C" as const },
+  ],
 };
 assert.ok("input" in parseYoForm(completeYoForm));
 assert.deepEqual(toUniversityGrades(completeYoForm), { ai_fi: "L", ena: "M", fy: "C", maa: "E" });
 assert.deepEqual(
   toUniversityGrades({
-    ...completeYoForm,
-    aidinkieliExam: "ai_sv",
-    reaaliaineet: [{ id: 1, subject: "Ortodoksinen uskonto" as const, grade: "C" }],
+    aineet: [
+      { id: 0, subject: "ai_sv" as const, grade: "L" as const },
+      { id: 1, subject: "matematiikka-pitka" as const, grade: "E" as const },
+      { id: 2, subject: "englanti-pitka" as const, grade: "M" as const },
+      { id: 3, subject: "Ortodoksinen uskonto" as const, grade: "C" as const },
+    ],
   }),
   { ai_sv: "L", ena: "M", maa: "E", uo: "C" },
 );
 assert.equal(isYoFormState(completeYoForm), true);
-assert.equal(isYoFormState({ ...completeYoForm, aidinkieli: "H" }), false);
+assert.equal(isYoFormState({ aineet: [{ id: 0, subject: "ai_fi" as const, grade: "H" }] }), false);
+assert.equal(isYoFormState(emptyYoFormState()), false);
 
 const duplicateLanguage = parseYoForm({
-  ...completeYoForm,
-  kielet: [...completeYoForm.kielet, { id: 2, language: "englanti-lyhyt" as const, grade: "E" as const }],
+  aineet: [
+    ...completeYoForm.aineet,
+    { id: 4, subject: "englanti-lyhyt" as const, grade: "E" as const },
+  ],
 });
 if ("input" in duplicateLanguage) assert.fail("Duplicate language should fail validation.");
-assert.equal(duplicateLanguage.errors.kielet, "Saman kielen voi lisätä vain kerran.");
+assert.equal(duplicateLanguage.errors.aineet, "Saman aineen voi lisätä vain kerran.");
 
 const completeAmmForm: AmmFormState = {
   ...emptyAmmFormState(),
