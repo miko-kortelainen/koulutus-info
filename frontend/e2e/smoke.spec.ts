@@ -305,17 +305,15 @@ test("/pistelaskuri: switches selection methods", async ({ page }) => {
 
 test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
   await openCalculator(page);
-  await selectOption(page, "Äidinkielen arvosana", "M");
-  await selectOption(page, "Matematiikan oppimäärä", "Lyhyt");
-  await selectOption(page, "Matematiikan arvosana", "M");
-
-  await page.getByRole("button", { name: "+ Lisää kieli" }).click();
-  await selectOption(page, "Kieli 1", "Toinen kotimainen kieli, keskipitkä");
-  await selectOption(page, "Kielen 1 arvosana", "C");
-
-  await page.getByRole("button", { name: "+ Lisää aine" }).click();
-  await selectOption(page, "Reaaliaine 1", "Filosofia");
-  await selectOption(page, "Reaaliaineen 1 arvosana", "E");
+  await selectOption(page, "Aine 1", "Suomi äidinkielenä");
+  await selectOption(page, "Aineen 1 arvosana", "M");
+  await selectOption(page, "Aine 2", "Matematiikka, lyhyt");
+  await selectOption(page, "Aineen 2 arvosana", "M");
+  await selectOption(page, "Aine 3", "Toinen kotimainen kieli, keskipitkä");
+  await selectOption(page, "Aineen 3 arvosana", "C");
+  await selectOption(page, "Aine 4", "Filosofia");
+  await selectOption(page, "Aineen 4 arvosana", "E");
+  await page.getByRole("button", { name: "Poista aine 5" }).click();
 
   await page.getByRole("button", { name: "Laske pisteet" }).click();
 
@@ -345,10 +343,13 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
   await page.goto("/pistelaskuri/");
   await waitForCalculatorHydration(page);
 
-  await selectOption(page, "Äidinkielen arvosana", "M");
-  await page.getByRole("button", { name: "+ Lisää kieli" }).click();
-  await selectOption(page, "Kieli 1", "Englanti, pitkä");
-  await selectOption(page, "Kielen 1 arvosana", "E");
+  await selectOption(page, "Aine 1", "Suomi äidinkielenä");
+  await selectOption(page, "Aineen 1 arvosana", "M");
+  await selectOption(page, "Aine 2", "Englanti, pitkä");
+  await selectOption(page, "Aineen 2 arvosana", "E");
+  await page.getByRole("button", { name: "Poista aine 5" }).click();
+  await page.getByRole("button", { name: "Poista aine 4" }).click();
+  await page.getByRole("button", { name: "Poista aine 3" }).click();
   await page.getByRole("button", { name: "Laske pisteet" }).click();
   await expect(page.getByRole("button", { name: "Laske pisteet" })).toBeEnabled();
 
@@ -363,16 +364,17 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
   await page.reload();
 
   await expect(page.getByRole("tab", { name: "YO" })).toHaveAttribute("aria-selected", "true");
-  await expectSelectedOption(page, "Äidinkielen arvosana", "M");
-  await expectSelectedOption(page, "Kieli 1", "Englanti, pitkä");
-  await expectSelectedOption(page, "Kielen 1 arvosana", "E");
+  await expectSelectedOption(page, "Aine 1", "Suomi äidinkielenä");
+  await expectSelectedOption(page, "Aineen 1 arvosana", "M");
+  await expectSelectedOption(page, "Aine 2", "Englanti, pitkä");
+  await expectSelectedOption(page, "Aineen 2 arvosana", "E");
 
-  await page.getByRole("button", { name: "+ Lisää kieli" }).click();
-  await expect(page.getByRole("combobox", { name: "Kieli 2" })).toBeVisible();
-  await selectOption(page, "Äidinkielen arvosana", "L");
+  await page.getByRole("button", { name: "+ Lisää aine" }).click();
+  await expect(page.getByRole("combobox", { name: "Aine 3" })).toBeVisible();
+  await selectOption(page, "Aineen 1 arvosana", "L");
   await page.reload();
-  await expectSelectedOption(page, "Äidinkielen arvosana", "M");
-  await expect(page.getByRole("combobox", { name: "Kieli 2" })).toHaveCount(0);
+  await expectSelectedOption(page, "Aineen 1 arvosana", "M");
+  await expect(page.getByRole("combobox", { name: "Aine 3" })).toHaveCount(0);
 
   await page.getByRole("tab", { name: "AMM" }).click();
   await expectSelectedOption(page, "Viestintä- ja vuorovaikutusosaaminen", "3");

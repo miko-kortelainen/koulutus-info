@@ -25,12 +25,7 @@ test("submits YO grades to local calculators and tracks success", async () => {
     JSON.stringify({
       version: 1,
       yo: {
-        aidinkieli: "M",
-        aidinkieliExam: "ai_sv",
-        kielet: [],
-        matematiikkaGrade: "",
-        matematiikkaLevel: "pitkä",
-        reaaliaineet: [],
+        aineet: [{ id: 0, subject: "ai_sv", grade: "M" }],
       },
     }),
   );
@@ -38,8 +33,8 @@ test("submits YO grades to local calculators and tracks success", async () => {
 
   renderWithChakra(<ScoreForm onModeChange={vi.fn()} onSubmit={onSubmit} round="2026-kevat" />);
 
-  await waitFor(() => expect(screen.getByRole("combobox", { name: "Äidinkielen arvosana" })).toHaveTextContent("M"));
-  expect(screen.getByRole("combobox", { name: "Äidinkielen koe" })).toHaveTextContent("Ruotsi äidinkielenä");
+  await waitFor(() => expect(screen.getByRole("combobox", { name: "Aine 1" })).toHaveTextContent("Ruotsi äidinkielenä"));
+  expect(screen.getByRole("combobox", { name: "Aineen 1 arvosana" })).toHaveTextContent("M");
   const submitButton = screen.getByRole("button", { name: "Laske pisteet / näytä koulutukset" });
   await user.click(submitButton);
   const form = submitButton.closest("form");

@@ -168,7 +168,7 @@ export default function AmmForm({ errors, onChange, value }: AmmFormProps) {
           inputMode="decimal"
           onChange={(event) => onChange({ ...value, keskiarvoInput: event.target.value })}
           placeholder={value.scale === "1-5" ? "Esimerkiksi 3,96" : "Esimerkiksi 2,37"}
-          size="xs"
+          size="sm"
           value={value.keskiarvoInput}
         />
       </Stack>
