@@ -1,6 +1,6 @@
-export type YoGrade = "L" | "E" | "M" | "C" | "B" | "A" | "I";
+export type YoGrade = "L" | "E" | "M" | "C" | "B" | "A";
 
-export const YO_GRADES: YoGrade[] = ["L", "E", "M", "C", "B", "A", "I"];
+export const YO_GRADES: YoGrade[] = ["L", "E", "M", "C", "B", "A"];
 
 export type MathLevel = "pitkä" | "lyhyt";
 export type KieliLevel = "pitkä" | "keskipitkä" | "lyhyt";

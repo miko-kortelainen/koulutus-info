@@ -2,17 +2,24 @@ import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Stac
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
-import {
-  getAmkPrograms,
-  getUniversityPrograms,
-  type AmkProgramsResponse,
-  type UniversityProgramsResponse,
-} from "@/api/calculatorApi";
 import SearchInput from "@/components/SearchInput";
-import { cutoffRoundShortLabel, DEFAULT_CUTOFF_ROUND } from "@/config/cutoffRounds";
+import {
+  CALCULATOR_CUTOFF_ROUNDS,
+  type CutoffRound,
+  cutoffRoundLabel,
+  cutoffRoundShortLabel,
+  DEFAULT_CUTOFF_ROUND,
+} from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
+import {
+  getAmkPrograms,
+  getUniversityPrograms,
+  recalculateFromGrades,
+  type AmkProgramsResponse,
+  type UniversityProgramsResponse,
+} from "./lib/todistusvalinta";
 import { COLORS } from "@/theme";
 import ResultSelect from "./components/ResultSelect";
 import ScoreForm from "./components/ScoreForm";
@@ -41,6 +48,11 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "A-Ö", value: "name_asc" },
   { label: "Ö-A", value: "name_desc" },
 ];
+
+const ROUND_OPTIONS = CALCULATOR_CUTOFF_ROUNDS.map((round) => ({
+  label: cutoffRoundLabel(round),
+  value: round,
+}));
 
 interface InitialPrograms {
   amkAmm: AmkProgramsResponse;
@@ -92,28 +104,43 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
 const qualifies = (result: ScoreResult) =>
   result.applicantScore !== undefined && result.score <= result.applicantScore && result.kynnysehtoPassed !== false;
 
-async function getInitialPrograms(): Promise<InitialPrograms> {
+async function getInitialPrograms(round: CutoffRound): Promise<InitialPrograms> {
   const [university, amkYo, amkAmm] = await Promise.all([
-    getUniversityPrograms(),
-    getAmkPrograms("yo"),
-    getAmkPrograms("amm"),
+    getUniversityPrograms(round),
+    getAmkPrograms("yo", round),
+    getAmkPrograms("amm", round),
   ]);
-  if (new Set([university.applicationRound, amkYo.applicationRound, amkAmm.applicationRound]).size !== 1) {
-    throw new Error("Pistelaskurin API-vastaukset ovat eri hakukierroksilta.");
-  }
   return { amkAmm, amkYo, university };
+}
+
+async function recalculateForRound(calculation: Calculation, round: CutoffRound): Promise<Calculation> {
+  const { selectionMethod, yoGrades, ammGrades } = calculation;
+  if (selectionMethod === "Todistusvalinta (YO)" && yoGrades) {
+    return { ...calculation, ...(await recalculateFromGrades({ selectionMethod, yoGrades }, round)) };
+  }
+  if (selectionMethod === "Todistusvalinta (AMM)" && ammGrades) {
+    return {
+      ...calculation,
+      ...(await recalculateFromGrades({ selectionMethod, ammGrades }, round)),
+      university: undefined,
+    };
+  }
+  return calculation;
 }
 
 export default function ScoreCalculatorPage() {
   const [selectionMethod, setSelectionMethod] = useState<ScoreType>("Todistusvalinta (YO)");
-  const [isFirstTimeApplicant, setIsFirstTimeApplicant] = useState(false);
+  const [cutoffRound, setCutoffRound] = useState<CutoffRound>(DEFAULT_CUTOFF_ROUND);
+  const [isFirstTimeApplicant, setIsFirstTimeApplicant] = useState(true);
   const [calculation, setCalculation] = useState<Calculation | null>(null);
+  const [isRejoining, setIsRejoining] = useState(false);
+  const [rejoinError, setRejoinError] = useState<string>();
   const [searchTerm, setSearchTerm] = useState("");
   const [sectorFilter, setSectorFilter] = useState<SectorFilter>("all");
   const [sortOrder, setSortOrder] = useState<SortOption>("lowest_cutoff");
   const programsQuery = useQuery({
-    queryKey: ["calculator-programs"],
-    queryFn: getInitialPrograms,
+    queryKey: ["calculator-programs", cutoffRound],
+    queryFn: () => getInitialPrograms(cutoffRound),
     staleTime: Infinity,
     gcTime: 10 * 60 * 1000,
   });
@@ -159,15 +186,28 @@ export default function ScoreCalculatorPage() {
   }, [filteredResults, normalizedSearchTerm, resultFuse]);
   const totalCount = filteredResults.length;
   const qualifiedCount = calculation ? filteredResults.filter(qualifies).length : 0;
-  const resultsPending = !calculation && programsQuery.isPending;
-  const resultsError = !calculation && programsQuery.isError;
+  const resultsPending = (!calculation && programsQuery.isPending) || isRejoining;
+  const resultsError = (!calculation && programsQuery.isError) || Boolean(rejoinError);
   const resultsSuccess = Boolean(calculation) || programsQuery.isSuccess;
-  const applicationRound =
-    programsQuery.data?.university.applicationRound ?? calculation?.amk.applicationRound ?? DEFAULT_CUTOFF_ROUND;
-  const roundLabel = cutoffRoundShortLabel(applicationRound);
-  const resultListKey = [applicationRound, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
+  const roundLabel = cutoffRoundShortLabel(cutoffRound);
+  const resultListKey = [cutoffRound, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
   const displayedQualifiedCount = resultsSuccess && calculation ? qualifiedCount : "–";
   const displayedTotalCount = resultsSuccess ? totalCount : "–";
+
+  const handleRoundChange = async (round: CutoffRound) => {
+    if (round === cutoffRound) return;
+    setCutoffRound(round);
+    setRejoinError(undefined);
+    if (!calculation) return;
+    setIsRejoining(true);
+    try {
+      setCalculation(await recalculateForRound(calculation, round));
+    } catch (error) {
+      setRejoinError(error instanceof Error ? error.message : "Pisterajojen vaihtaminen epäonnistui.");
+    } finally {
+      setIsRejoining(false);
+    }
+  };
 
   const resultAccordion = (
     <Accordion.Root collapsible display="flex" flexDirection="column" gap={3} lazyMount multiple size="md">
@@ -183,12 +223,12 @@ export default function ScoreCalculatorPage() {
                 <HStack flex={1} justifyContent="space-between">
                   <Text
                     color={(group.qualifiedCount ?? 0) > 0 ? "fg.accent" : "fg"}
-                    fontSize="xs"
+                    fontSize="sm"
                     textDecor={(group.qualifiedCount ?? 0) > 0 ? "underline" : ""}
                   >
                     {group.qualifiedCount ?? "–"}
                   </Text>
-                  <Text color="fg.muted" fontSize="xs" textWrap="nowrap">
+                  <Text color="fg.muted" fontSize="sm" textWrap="nowrap">
                     / {group.results.length}
                   </Text>
                 </HStack>
@@ -235,7 +275,7 @@ export default function ScoreCalculatorPage() {
   ) : resultsError ? (
     <Alert.Root status="error">
       <Alert.Indicator />
-      <Alert.Title>Hakukohteiden lataaminen epäonnistui.</Alert.Title>
+      <Alert.Title>{rejoinError ?? "Hakukohteiden lataaminen epäonnistui."}</Alert.Title>
     </Alert.Root>
   ) : filteredResults.length === 0 ? (
     <Text color="fg.muted" fontSize="sm" textAlign="center">
@@ -255,6 +295,7 @@ export default function ScoreCalculatorPage() {
             {calculation?.amk.score !== undefined ? (
               <>
                 <Text as="span" color="fg.accent">
+                  {calculation.selectionMethod === "Todistusvalinta (YO)" ? "~" : null}
                   {scoreFormatter.format(calculation.amk.score)}
                 </Text>{" "}
                 /{" "}
@@ -268,12 +309,12 @@ export default function ScoreCalculatorPage() {
             )}{" "}
           </Heading>
           <Text color="fg.muted" fontSize="xs" textAlign="center">
-            Pisteesi riittävät {displayedQualifiedCount} / {displayedTotalCount} toteutukseen
+            Pisteesi riittää arviolta {displayedQualifiedCount} / {displayedTotalCount} toteutukseen
           </Text>
         </Box>
       </Stack>
 
-      <HStack>
+      <HStack id="vertaa-pisterajoihin">
         <Separator bg={COLORS.accentFg} flex={1} size="md" />
         <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" textAlign="center">
           Vertaa pisterajoihin
@@ -282,6 +323,14 @@ export default function ScoreCalculatorPage() {
       </HStack>
 
       <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
+        <Box flex={1}>
+          <ResultSelect<CutoffRound>
+            items={ROUND_OPTIONS}
+            label="Yhteishaku"
+            onChange={handleRoundChange}
+            value={cutoffRound}
+          />
+        </Box>
         <Box flex={1}>
           <ResultSelect<SectorFilter>
             items={SECTOR_OPTIONS}
@@ -310,7 +359,7 @@ export default function ScoreCalculatorPage() {
         <Checkbox.Control>
           <Checkbox.Indicator />
         </Checkbox.Control>
-        <Checkbox.Label>Näytä myös ensikertalaisten pisterajat</Checkbox.Label>
+        <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
       </Checkbox.Root>
       {resultContent}
     </Stack>
@@ -324,7 +373,7 @@ export default function ScoreCalculatorPage() {
           <>
             Todistusvalinta
             <wbr />
-            laskuri {applicationRound.slice(0, 4)}
+            laskuri {cutoffRound.slice(0, 4)}
           </>
         }
       />
@@ -334,19 +383,21 @@ export default function ScoreCalculatorPage() {
             setSelectionMethod(nextSelectionMethod);
             setCalculation(null);
           }}
-          onSubmit={setCalculation}
+          onSubmit={(next) => {
+            setCalculation(next);
+            document.getElementById("vertaa-pisterajoihin")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          round={cutoffRound}
         />
 
         {resultList}
 
         <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
-          Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelevat vuosi
-          vuodelta. <br /> AMK-laskuri ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
-          todistusvalinnan kynnysehtoihin{" "}
-          <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
-            täältä
-          </Link>
-          . <br /> <br />
+          Huom. Pisteet lasketaan aina vuoden 2026 todistusvalinnan pisteytyksellä. Vertailu vanhempiin yhteishakuihin
+          on suuntaa antava, koska pisterajat ja pisteytys voivat poiketa. Vaikka pisteesi ylittää mainitut pisterajat,
+          koulutuspaikka ei ole taattu.
+          <br />
+          <br />
           Pisterajojen tiedot ovat peräisin Opetushallituksen{" "}
           <Link href="https://vipunen.fi/fi-fi/" rel="noopener noreferrer" target="_blank" textDecoration="underline">
             Vipunen-palvelusta

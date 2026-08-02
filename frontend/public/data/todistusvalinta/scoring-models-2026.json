@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "applicationRound": "2026-kevat",
+  "gradeOrder": ["I", "A", "B", "C", "M", "E", "L"],
+  "sources": {
+    "overview": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
+    "humanities": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
+    "math": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/matemaattiset-tieteet-taloustiede-tietojenkasittelytieteet",
+    "education": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kasvatustieteet-kauppatieteet-logopedia",
+    "health": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/liikuntapedagogiikka-terveystieteet",
+    "geography": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/maantiede",
+    "psychology": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/psykologia",
+    "languages": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/vieraat-kielet",
+    "biosciences": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/biotieteet-farmasia-geotieteet-elintarviketieteet-maatalous-ja-metsatieteet",
+    "history": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/filosofia-historia-teologia",
+    "medicine": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/biolaaketiede-laaketieteelliset-alat-ravitsemustiede",
+    "technology": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
+    "amk": "https://www.ammattikorkeakouluun.fi/hakijalle/valintatavat/todistusvalinta/"
+  },
+  "pointCurves": {
+    "mother": {"I": 0, "A": 54, "B": 108, "C": 217, "M": 288, "E": 325, "L": 361},
+    "math-narrow-long": {"I": 0, "A": 43, "B": 87, "C": 202, "M": 260, "E": 286, "L": 289},
+    "math-narrow-short": {"I": 0, "A": 41, "B": 84, "C": 169, "M": 225, "E": 254, "L": 282},
+    "math-strong-long": {"I": 0, "A": 57, "B": 114, "C": 227, "M": 303, "E": 341, "L": 379},
+    "math-strong-short": {"I": 0, "A": 41, "B": 84, "C": 112, "M": 169, "E": 225, "L": 282},
+    "math-technology-long": {"I": 0, "A": 60, "B": 119, "C": 251, "M": 318, "E": 357, "L": 397},
+    "language-long": {"I": 0, "A": 42, "B": 85, "C": 170, "M": 226, "E": 255, "L": 283},
+    "language-medium": {"I": 0, "A": 38, "B": 75, "C": 100, "M": 150, "E": 200, "L": 250},
+    "base-24.5": {"I": 0, "A": 37, "B": 74, "C": 98, "M": 147, "E": 196, "L": 245},
+    "base-20.0": {"I": 0, "A": 30, "B": 60, "C": 80, "M": 120, "E": 160, "L": 200},
+    "weighted-34.0": {"I": 0, "A": 51, "B": 102, "C": 204, "M": 272, "E": 306, "L": 340},
+    "target-short": {"I": 0, "A": 45, "B": 90, "C": 179, "M": 239, "E": 269, "L": 299},
+    "medicine-chemistry": {"I": 0, "A": 48, "B": 97, "C": 194, "M": 258, "E": 291, "L": 323},
+    "amk-mother": {"I": 0, "A": 100, "B": 180, "C": 260, "M": 340, "E": 410, "L": 460},
+    "amk-math-long": {"I": 0, "A": 190, "B": 270, "C": 350, "M": 400, "E": 430, "L": 460},
+    "amk-math-short": {"I": 0, "A": 60, "B": 130, "C": 190, "M": 270, "E": 350, "L": 400},
+    "amk-language-long": {"I": 0, "A": 100, "B": 180, "C": 260, "M": 340, "E": 410, "L": 460},
+    "amk-language-medium": {"I": 0, "A": 50, "B": 120, "C": 180, "M": 260, "E": 340, "L": 380},
+    "amk-language-short": {"I": 0, "A": 30, "B": 90, "C": 150, "M": 210, "E": 270, "L": 300},
+    "amk-extra": {"I": 0, "A": 30, "B": 90, "C": 150, "M": 210, "E": 270, "L": 300}
+  },
+  "exams": {
+    "ai": {"kind": "mother", "group": "language:unknown-mother", "label": "Äidinkieli (kieli määrittämättä)"},
+    "ai_fi": {"kind": "mother", "group": "language:finnish", "label": "Suomi äidinkielenä"},
+    "ai_sv": {"kind": "mother", "group": "language:swedish", "label": "Ruotsi äidinkielenä"},
+    "ai_smn": {"kind": "mother", "group": "language:north-sami", "label": "Pohjoissaame äidinkielenä"},
+    "ai_smi": {"kind": "mother", "group": "language:inari-sami", "label": "Inarinsaame äidinkielenä"},
+    "ai_sms": {"kind": "mother", "group": "language:skolt-sami", "label": "Koltansaame äidinkielenä"},
+    "s2": {"kind": "mother", "group": "language:finnish", "label": "Suomi toisena kielenä"},
+    "r2": {"kind": "mother", "group": "language:swedish", "label": "Ruotsi toisena kielenä"},
+    "maa": {"kind": "math-long", "group": "mathematics", "label": "Pitkä matematiikka"},
+    "mab": {"kind": "math-short", "group": "mathematics", "label": "Lyhyt matematiikka"},
+    "ena": {"kind": "language-long", "group": "language:english", "label": "Pitkä englanti"},
+    "enb": {"kind": "language-short-english", "group": "language:english", "label": "Lyhyt englanti"},
+    "esa": {"kind": "language-long", "group": "language:spanish", "label": "Pitkä espanja"},
+    "esb": {"kind": "language-short", "group": "language:spanish", "label": "Lyhyt espanja"},
+    "fia": {"kind": "language-long", "group": "language:finnish", "label": "Pitkä suomi toisena kotimaisena"},
+    "fib": {"kind": "language-medium", "group": "language:finnish", "label": "Keskipitkä suomi toisena kotimaisena"},
+    "iab": {"kind": "language-short", "group": "language:italian", "label": "Lyhyt italia"},
+    "lab": {"kind": "language-short", "group": "language:latin", "label": "Lyhyt latina"},
+    "pob": {"kind": "language-short", "group": "language:portuguese", "label": "Lyhyt portugali"},
+    "raa": {"kind": "language-long", "group": "language:french", "label": "Pitkä ranska"},
+    "rab": {"kind": "language-short", "group": "language:french", "label": "Lyhyt ranska"},
+    "rua": {"kind": "language-long", "group": "language:swedish", "label": "Pitkä ruotsi toisena kotimaisena"},
+    "rub": {"kind": "language-medium", "group": "language:swedish", "label": "Keskipitkä ruotsi toisena kotimaisena"},
+    "saa": {"kind": "language-long", "group": "language:german", "label": "Pitkä saksa"},
+    "sab": {"kind": "language-short", "group": "language:german", "label": "Lyhyt saksa"},
+    "saame": {"kind": "language-short", "group": "language:unknown-sami", "label": "Lyhyt saame (kieli määrittämättä)"},
+    "smn_b": {"kind": "language-short", "group": "language:north-sami", "label": "Lyhyt pohjoissaame"},
+    "smi_b": {"kind": "language-short", "group": "language:inari-sami", "label": "Lyhyt inarinsaame"},
+    "sms_b": {"kind": "language-short", "group": "language:skolt-sami", "label": "Lyhyt koltansaame"},
+    "vea": {"kind": "language-long", "group": "language:russian", "label": "Pitkä venäjä"},
+    "veb": {"kind": "language-short", "group": "language:russian", "label": "Lyhyt venäjä"},
+    "bi": {"kind": "real", "group": "real:biology", "label": "Biologia"},
+    "et": {"kind": "real", "group": "real:ethics", "label": "Elämänkatsomustieto"},
+    "fi": {"kind": "real", "group": "real:philosophy", "label": "Filosofia"},
+    "fy": {"kind": "real", "group": "real:physics", "label": "Fysiikka"},
+    "ge": {"kind": "real", "group": "real:geography", "label": "Maantiede"},
+    "hi": {"kind": "real", "group": "real:history", "label": "Historia"},
+    "ke": {"kind": "real", "group": "real:chemistry", "label": "Kemia"},
+    "ps": {"kind": "real", "group": "real:psychology", "label": "Psykologia"},
+    "te": {"kind": "real", "group": "real:health", "label": "Terveystieto"},
+    "ue": {"kind": "real", "group": "real:religion", "label": "Evankelis-luterilainen uskonto"},
+    "uo": {"kind": "real", "group": "real:religion", "label": "Ortodoksinen uskonto"},
+    "yh": {"kind": "real", "group": "real:social-studies", "label": "Yhteiskuntaoppi"}
+  },
+  "pools": {
+    "mother": {"byKind": {"mother": "mother"}},
+    "math-narrow": {"byExam": {"maa": "math-narrow-long", "mab": "math-narrow-short"}},
+    "math-strong": {"byExam": {"maa": "math-strong-long", "mab": "math-strong-short"}},
+    "math-technology": {"byExam": {"maa": "math-technology-long", "mab": "math-strong-short"}},
+    "common": {
+      "byKind": {
+        "mother": "language-long",
+        "math-long": "math-narrow-long",
+        "math-short": "math-narrow-short",
+        "language-long": "language-long",
+        "language-medium": "language-medium",
+        "language-short": "base-24.5",
+        "language-short-english": "base-20.0",
+        "real": "base-24.5"
+      }
+    },
+    "common-no-math": {
+      "byKind": {
+        "mother": "language-long",
+        "language-long": "language-long",
+        "language-medium": "language-medium",
+        "language-short": "base-24.5",
+        "language-short-english": "base-20.0",
+        "real": "base-24.5"
+      }
+    },
+    "health": {"byExam": {"te": "weighted-34.0"}},
+    "geography": {"byExam": {"ge": "weighted-34.0"}},
+    "psychology": {"byExam": {"ps": "weighted-34.0"}},
+    "target-english": {"byExam": {"ena": "weighted-34.0"}},
+    "target-spanish": {"byExam": {"esa": "weighted-34.0", "esb": "target-short"}},
+    "target-italian": {"byExam": {"iab": "target-short"}},
+    "target-french": {"byExam": {"raa": "weighted-34.0", "rab": "target-short"}},
+    "target-german": {"byExam": {"saa": "weighted-34.0", "sab": "target-short"}},
+    "target-russian": {"byExam": {"vea": "weighted-34.0", "veb": "target-short"}},
+    "bioscience-weighted": {"byExam": {"bi": "weighted-34.0", "ke": "weighted-34.0", "fy": "weighted-34.0"}},
+    "bioscience-best": {
+      "byKind": {
+        "mother": "language-long",
+        "language-long": "language-long",
+        "language-medium": "language-medium",
+        "language-short": "base-24.5",
+        "language-short-english": "base-20.0",
+        "real": "base-20.0"
+      },
+      "byExam": {"bi": "base-24.5", "fy": "base-24.5", "ke": "base-24.5", "ge": "base-24.5"}
+    },
+    "history-weighted": {"byExam": {"fi": "weighted-34.0", "hi": "weighted-34.0", "et": "weighted-34.0", "ue": "weighted-34.0", "uo": "weighted-34.0"}},
+    "history-best": {
+      "byKind": {
+        "mother": "language-long",
+        "math-long": "math-narrow-long",
+        "math-short": "math-narrow-short",
+        "language-long": "language-long",
+        "language-medium": "language-medium",
+        "language-short": "base-24.5",
+        "language-short-english": "base-20.0",
+        "real": "base-20.0"
+      },
+      "byExam": {"et": "base-24.5", "fi": "base-24.5", "ge": "base-24.5", "hi": "base-24.5", "ps": "base-24.5", "te": "base-24.5", "ue": "base-24.5", "uo": "base-24.5", "yh": "base-24.5"}
+    },
+    "medicine-biology": {"byExam": {"bi": "weighted-34.0"}},
+    "medicine-chemistry": {"byExam": {"ke": "medicine-chemistry"}},
+    "medicine-real": {
+      "byExam": {"bi": "base-20.0", "et": "base-20.0", "fi": "base-20.0", "fy": "base-24.5", "ge": "base-20.0", "hi": "base-20.0", "ke": "base-20.0", "ps": "base-24.5", "te": "base-20.0", "ue": "base-20.0", "uo": "base-20.0", "yh": "base-20.0"}
+    },
+    "medicine-any": {
+      "byKind": {
+        "mother": "language-long",
+        "language-long": "language-long",
+        "language-medium": "language-medium",
+        "language-short": "base-24.5",
+        "language-short-english": "base-20.0",
+        "real": "base-20.0"
+      },
+      "byExam": {"fy": "base-24.5", "ps": "base-24.5"}
+    },
+    "technology-weighted": {"byExam": {"fy": "weighted-34.0", "ke": "weighted-34.0"}},
+    "technology-best": {
+      "byKind": {
+        "mother": "language-long",
+        "language-long": "language-long",
+        "language-medium": "language-medium",
+        "language-short": "base-24.5",
+        "language-short-english": "base-20.0",
+        "real": "base-20.0"
+      },
+      "byExam": {"fy": "weighted-34.0", "ke": "weighted-34.0", "bi": "base-24.5", "ps": "base-24.5"}
+    },
+    "amk-mother": {"byKind": {"mother": "amk-mother"}},
+    "amk-mathematics": {"byExam": {"maa": "amk-math-long", "mab": "amk-math-short"}},
+    "amk-language": {
+      "byKind": {
+        "language-long": "amk-language-long",
+        "language-medium": "amk-language-medium",
+        "language-short": "amk-language-short",
+        "language-short-english": "amk-language-short"
+      }
+    },
+    "amk-extra": {
+      "byKind": {"real": "amk-extra"},
+      "byExam": {
+        "ena": "amk-extra", "enb": "amk-extra", "esa": "amk-extra", "esb": "amk-extra",
+        "iab": "amk-extra", "lab": "amk-extra", "pob": "amk-extra", "raa": "amk-extra",
+        "rab": "amk-extra", "saa": "amk-extra", "sab": "amk-extra", "saame": "amk-extra",
+        "smn_b": "amk-extra", "smi_b": "amk-extra", "sms_b": "amk-extra", "vea": "amk-extra",
+        "veb": "amk-extra"
+      }
+    }
+  },
+  "models": {
+    "humanities": {"label": "Kielet, kulttuurit, oikeustiede ja yhteiskuntatieteet", "source": "humanities", "maximumTenths": 1499, "slots": [{"id": "mother", "pool": "mother"}, {"id": "best", "pool": "common", "count": 4}]},
+    "math-economics-computer-science": {"label": "Matemaattiset tieteet, taloustiede ja tietojenkäsittelytieteet", "source": "math", "maximumTenths": 1589, "slots": [{"id": "mathematics", "pool": "math-strong"}, {"id": "mother", "pool": "mother"}, {"id": "best", "pool": "common-no-math", "count": 3}]},
+    "education-business-logopedics": {"label": "Kasvatustieteet, kauppatieteet ja logopedia", "source": "education", "maximumTenths": 1499, "slots": [{"id": "mother", "pool": "mother"}, {"id": "mathematics", "pool": "math-narrow"}, {"id": "best", "pool": "common-no-math", "count": 3}]},
+    "health-sports": {"label": "Liikuntapedagogiikka ja terveystieteet", "source": "health", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "health", "pool": "health"}, {"id": "best", "pool": "common", "count": 3}]},
+    "geography": {"label": "Maantiede", "source": "geography", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "geography", "pool": "geography"}, {"id": "mathematics", "pool": "math-narrow"}, {"id": "best", "pool": "common-no-math", "count": 2}]},
+    "psychology": {"label": "Psykologia", "source": "psychology", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "psychology", "pool": "psychology"}, {"id": "mathematics", "pool": "math-narrow"}, {"id": "best", "pool": "common-no-math", "count": 2}]},
+    "target-language-english": {"label": "Englannin kieli", "source": "languages", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "target", "pool": "target-english"}, {"id": "best", "pool": "common", "count": 3}]},
+    "target-language-spanish": {"label": "Espanjan kieli", "source": "languages", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "target", "pool": "target-spanish"}, {"id": "best", "pool": "common", "count": 3}]},
+    "target-language-italian": {"label": "Italian kieli", "source": "languages", "maximumTenths": 1515, "slots": [{"id": "mother", "pool": "mother"}, {"id": "target", "pool": "target-italian"}, {"id": "best", "pool": "common", "count": 3}]},
+    "target-language-french": {"label": "Ranskan kieli", "source": "languages", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "target", "pool": "target-french"}, {"id": "best", "pool": "common", "count": 3}]},
+    "target-language-german": {"label": "Saksan kieli", "source": "languages", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "target", "pool": "target-german"}, {"id": "best", "pool": "common", "count": 3}]},
+    "target-language-russian": {"label": "Venäjän kieli", "source": "languages", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "target", "pool": "target-russian"}, {"id": "best", "pool": "common", "count": 3}]},
+    "biosciences": {"label": "Biotieteet, farmasia, geotieteet, elintarvike-, maatalous- ja metsätieteet", "source": "biosciences", "maximumTenths": 1646, "slots": [{"id": "mathematics", "pool": "math-strong"}, {"id": "mother", "pool": "mother"}, {"id": "science", "pool": "bioscience-weighted"}, {"id": "best", "pool": "bioscience-best", "count": 2}]},
+    "philosophy-history-theology": {"label": "Filosofia, historia ja teologia", "source": "history", "maximumTenths": 1556, "slots": [{"id": "mother", "pool": "mother"}, {"id": "field", "pool": "history-weighted"}, {"id": "best", "pool": "history-best", "count": 3}]},
+    "medicine": {"label": "Biolääketiede, lääketieteelliset alat ja ravitsemustiede", "source": "medicine", "maximumTenths": 1931, "slots": [{"id": "mathematics", "pool": "math-strong"}, {"id": "mother", "pool": "mother"}, {"id": "biology", "pool": "medicine-biology"}, {"id": "chemistry", "pool": "medicine-chemistry"}, {"id": "extra-real", "pool": "medicine-real"}, {"id": "extra", "pool": "medicine-any"}]},
+    "technology": {"label": "Fysiikka, kemia, matemaattisten alojen opettajankoulutukset ja tekniikka", "source": "technology", "maximumTenths": 1721, "slots": [{"id": "mathematics", "pool": "math-technology"}, {"id": "mother", "pool": "mother"}, {"id": "science", "pool": "technology-weighted"}, {"id": "best", "pool": "technology-best", "count": 2}]},
+    "amk-yo": {"label": "Ammattikorkeakoulujen ylioppilastutkinnon pisteytys", "source": "amk", "maximumTenths": 1980, "slots": [{"id": "mother", "pool": "amk-mother"}, {"id": "mathematics", "pool": "amk-mathematics"}, {"id": "language", "pool": "amk-language"}, {"id": "extra", "pool": "amk-extra", "count": 2}]}
+  }
+}

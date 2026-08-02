@@ -2,6 +2,7 @@ import { Heading, HStack, Link, Separator, Stack, Tabs, Text } from "@chakra-ui/
 import { useState } from "react";
 import { HiOutlineChatAlt2, HiOutlineSparkles } from "react-icons/hi";
 import { useData } from "vike-react/useData";
+import BackLink from "@/components/BackLink";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
@@ -17,21 +18,9 @@ export default function SchoolPage() {
   const [programPage, setProgramPage] = useState(1);
   const [statsPage, setStatsPage] = useState(1);
 
-  const linkBack = (
-    <Link
-      fontSize="sm"
-      href="/koulut/"
-      textDecoration="underline"
-      textDecorationColor={COLORS.accentFg}
-      textDecorationStyle="dotted"
-    >
-      ← Takaisin
-    </Link>
-  );
-
   const header = (
     <Stack gap={1}>
-      {linkBack}
+      <BackLink href="/koulut/" />
       <Heading as="h1" size="md">
         {schoolName}
       </Heading>

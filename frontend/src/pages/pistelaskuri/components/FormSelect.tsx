@@ -29,7 +29,7 @@ export default function FormSelect<T extends string>({
         const nextValue = details.value[0];
         if (nextValue) onChange(nextValue as T);
       }}
-      size="xs"
+      size="sm"
       value={value ? [value] : []}
       width="full"
     >
