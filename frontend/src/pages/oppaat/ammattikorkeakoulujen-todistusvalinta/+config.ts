@@ -1,5 +1,6 @@
 import type { Config } from "vike/types";
+import { getGuide } from "../guides";
 
 export default {
-  title: "Ammattikorkeakoulujen todistusvalinta 2026",
+  title: getGuide("ammattikorkeakoulujen-todistusvalinta").title,
 } satisfies Config;
