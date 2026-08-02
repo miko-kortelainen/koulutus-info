@@ -1,7 +1,8 @@
-import { Box, Heading, Link, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
+import BackLink from "@/components/BackLink";
 import CutoffCard from "@/components/CutoffCard";
 import OptionSelect from "@/components/OptionSelect";
 import SearchInput from "@/components/SearchInput";
@@ -9,7 +10,6 @@ import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel, cutoffRoundYea
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/lib/cutoffs";
-import { COLORS } from "@/theme";
 import type { CutoffPageData } from "./+data";
 import SortControl from "./components/SortControl";
 import useFilteredProgrammes, { type SortOption } from "./hooks/useFilteredProgrammes";
@@ -57,15 +57,7 @@ export default function CutoffPage() {
 
   const header = (
     <Stack gap={1}>
-      <Link
-        fontSize="sm"
-        href="../"
-        textDecoration="underline"
-        textDecorationColor={COLORS.accentFg}
-        textDecorationStyle="dotted"
-      >
-        ← Takaisin
-      </Link>
+      <BackLink href="../" />
       <Heading as="h1" size="md">
         {schoolName} – pisterajat {cutoffRoundYear(activeRound)}
       </Heading>

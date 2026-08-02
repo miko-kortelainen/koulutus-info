@@ -1,8 +1,8 @@
-import { Heading, Link, Separator, Stack, Text } from "@chakra-ui/react";
+import { Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
+import BackLink from "@/components/BackLink";
 import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
-import { COLORS } from "@/theme";
 import StudentFeedback from "../components/StudentFeedback";
 import type { FeedbackPageData } from "./+data";
 
@@ -12,15 +12,7 @@ export default function FeedbackPage() {
   return (
     <PageContainer align="flex-start">
       <Stack gap={1}>
-        <Link
-          fontSize="sm"
-          href={`/koulut/${slugify(schoolName)}/`}
-          textDecoration="underline"
-          textDecorationColor={COLORS.accentFg}
-          textDecorationStyle="dotted"
-        >
-          ← Takaisin
-        </Link>
+        <BackLink href={`/koulut/${slugify(schoolName)}/`} />
         <Heading as="h1" size="md">
           {schoolName} – opiskelijapalautteet
         </Heading>
