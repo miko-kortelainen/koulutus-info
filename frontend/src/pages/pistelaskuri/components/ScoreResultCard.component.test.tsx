@@ -42,7 +42,7 @@ test("university program with a passed threshold shows the label and täyttyy", 
   expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
 });
 
-test("university program with a failed threshold shows the label and ei täyty", () => {
+test("university program with a failed threshold shows status before the label", () => {
   renderWithChakra(
     <ScoreResultCard
       result={result({ kynnysehtoLabel: "Hyväksytty englannin koe.", kynnysehtoPassed: false })}
@@ -50,8 +50,9 @@ test("university program with a failed threshold shows the label and ei täyty",
     />,
   );
 
-  expect(screen.getByText("Hyväksytty englannin koe.")).toBeVisible();
-  expect(screen.getByText("Kynnysehto ei täyty.")).toBeVisible();
+  const status = screen.getByText("Kynnysehto ei täyty.");
+  const label = screen.getByText("Hyväksytty englannin koe.");
+  expect(status.compareDocumentPosition(label) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
 });
 

@@ -13,6 +13,33 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
   maximumFractionDigits: 2,
 });
 
+function KynnysehtoBadge({ passed }: { passed?: boolean }) {
+  if (passed === true) {
+    return (
+      <Badge alignSelf="flex-start" bg={COLORS.accent} color={COLORS.text} size="sm">
+        Kynnysehto täyttyy.
+      </Badge>
+    );
+  }
+  if (passed === false) {
+    return (
+      <Badge alignSelf="flex-start" colorPalette="red" size="sm" variant="subtle">
+        Kynnysehto ei täyty.
+      </Badge>
+    );
+  }
+  return (
+    <Badge
+      alignSelf="flex-start"
+      bg={`color-mix(in srgb, ${COLORS.text} 14%, ${COLORS.bg})`}
+      color="fg.muted"
+      size="sm"
+    >
+      Ei kynnysehtoa.
+    </Badge>
+  );
+}
+
 export default function ScoreResultCard({
   headingLevel = "h3",
   result,
@@ -56,6 +83,7 @@ export default function ScoreResultCard({
           </Stack>
           {hasThreshold ? (
             <>
+              {result.kynnysehtoPassed !== undefined ? <KynnysehtoBadge passed={result.kynnysehtoPassed} /> : null}
               {result.kynnysehtoLabel ? (
                 <Text fontSize="xs">
                   <Text as="span" fontWeight="semibold">
@@ -64,16 +92,9 @@ export default function ScoreResultCard({
                   {result.kynnysehtoLabel}
                 </Text>
               ) : null}
-              {result.kynnysehtoPassed !== undefined ? (
-                <Text color={result.kynnysehtoPassed ? "fg.accent" : "fg.error"} fontSize="xs">
-                  Kynnysehto {result.kynnysehtoPassed ? "täyttyy" : "ei täyty"}.
-                </Text>
-              ) : null}
             </>
           ) : displayedScore !== undefined && result.sector === "Yliopistokoulutus" ? (
-            <Text color="fg.muted" fontSize="xs">
-              Ei kynnysehtoa.
-            </Text>
+            <KynnysehtoBadge />
           ) : null}
         </Stack>
       </Card.Body>

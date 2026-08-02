@@ -223,12 +223,12 @@ export default function ScoreCalculatorPage() {
                 <HStack flex={1} justifyContent="space-between">
                   <Text
                     color={(group.qualifiedCount ?? 0) > 0 ? "fg.accent" : "fg"}
-                    fontSize="xs"
+                    fontSize="sm"
                     textDecor={(group.qualifiedCount ?? 0) > 0 ? "underline" : ""}
                   >
                     {group.qualifiedCount ?? "–"}
                   </Text>
-                  <Text color="fg.muted" fontSize="xs" textWrap="nowrap">
+                  <Text color="fg.muted" fontSize="sm" textWrap="nowrap">
                     / {group.results.length}
                   </Text>
                 </HStack>
@@ -295,6 +295,7 @@ export default function ScoreCalculatorPage() {
             {calculation?.amk.score !== undefined ? (
               <>
                 <Text as="span" color="fg.accent">
+                  {calculation.selectionMethod === "Todistusvalinta (YO)" ? "~" : null}
                   {scoreFormatter.format(calculation.amk.score)}
                 </Text>{" "}
                 /{" "}
@@ -313,7 +314,7 @@ export default function ScoreCalculatorPage() {
         </Box>
       </Stack>
 
-      <HStack>
+      <HStack id="vertaa-pisterajoihin">
         <Separator bg={COLORS.accentFg} flex={1} size="md" />
         <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" textAlign="center">
           Vertaa pisterajoihin
@@ -382,7 +383,10 @@ export default function ScoreCalculatorPage() {
             setSelectionMethod(nextSelectionMethod);
             setCalculation(null);
           }}
-          onSubmit={setCalculation}
+          onSubmit={(next) => {
+            setCalculation(next);
+            document.getElementById("vertaa-pisterajoihin")?.scrollIntoView({ behavior: "smooth" });
+          }}
           round={cutoffRound}
         />
 
