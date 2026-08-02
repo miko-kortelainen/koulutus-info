@@ -131,7 +131,7 @@ async function recalculateForRound(calculation: Calculation, round: CutoffRound)
 export default function ScoreCalculatorPage() {
   const [selectionMethod, setSelectionMethod] = useState<ScoreType>("Todistusvalinta (YO)");
   const [cutoffRound, setCutoffRound] = useState<CutoffRound>(DEFAULT_CUTOFF_ROUND);
-  const [isFirstTimeApplicant, setIsFirstTimeApplicant] = useState(false);
+  const [isFirstTimeApplicant, setIsFirstTimeApplicant] = useState(true);
   const [calculation, setCalculation] = useState<Calculation | null>(null);
   const [isRejoining, setIsRejoining] = useState(false);
   const [rejoinError, setRejoinError] = useState<string>();
@@ -309,7 +309,7 @@ export default function ScoreCalculatorPage() {
             )}{" "}
           </Heading>
           <Text color="fg.muted" fontSize="xs" textAlign="center">
-            Pisteesi riittävät {displayedQualifiedCount} / {displayedTotalCount} toteutukseen
+            Pisteesi riittää arviolta {displayedQualifiedCount} / {displayedTotalCount} toteutukseen
           </Text>
         </Box>
       </Stack>
@@ -359,7 +359,7 @@ export default function ScoreCalculatorPage() {
         <Checkbox.Control>
           <Checkbox.Indicator />
         </Checkbox.Control>
-        <Checkbox.Label>Näytä myös ensikertalaisten pisterajat</Checkbox.Label>
+        <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
       </Checkbox.Root>
       {resultContent}
     </Stack>

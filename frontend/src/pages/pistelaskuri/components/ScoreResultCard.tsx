@@ -1,4 +1,5 @@
-import { Badge, Card, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Badge, Card, Collapsible, Heading, Separator, Span, Stack, Table, Text } from "@chakra-ui/react";
+import { HiChevronDown } from "react-icons/hi";
 import { COLORS } from "@/theme";
 import type { ScoreResult } from "../lib/scoreResults";
 
@@ -40,6 +41,80 @@ function KynnysehtoBadge({ passed }: { passed?: boolean }) {
   );
 }
 
+function ScoreBreakdownDisclosure({
+  applicantScore,
+  breakdown,
+  disclosureHeading,
+}: {
+  applicantScore: number;
+  breakdown: NonNullable<ScoreResult["scoreBreakdown"]>;
+  disclosureHeading: "h4" | "h5";
+}) {
+  const rows = breakdown.rows.map((row) => ({
+    exam: row.exam,
+    label: row.label,
+    grade: row.grade,
+    points: row.points === null ? "–" : scoreFormatter.format(row.points),
+    muted: row.points === null,
+  }));
+
+  return (
+    <Collapsible.Root>
+      <Heading as={disclosureHeading} fontSize="xs" fontWeight="medium">
+        <Collapsible.Trigger
+          _focusVisible={{ outline: "2px solid", outlineColor: "fg.accent", outlineOffset: "2px" }}
+          alignItems="center"
+          color="fg.muted"
+          cursor="pointer"
+          display="flex"
+          gap={2}
+          textAlign="start"
+          width="100%"
+        >
+          <Span flex="1">Miten pisteeni laskettiin?</Span>
+          <Collapsible.Indicator _open={{ transform: "rotate(180deg)" }} aria-hidden>
+            <HiChevronDown />
+          </Collapsible.Indicator>
+        </Collapsible.Trigger>
+      </Heading>
+      <Collapsible.Content pt={3}>
+        <Table.Root aria-label="Pisteytyksen erittely aineittain" size="sm" variant="line">
+          <Table.Header>
+            <Table.Row>
+              <Table.ColumnHeader scope="col">Aine</Table.ColumnHeader>
+              <Table.ColumnHeader scope="col">Arvosana</Table.ColumnHeader>
+              <Table.ColumnHeader scope="col" textAlign="end">
+                Pisteet
+              </Table.ColumnHeader>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {rows.map((row) => (
+              <Table.Row key={row.exam}>
+                <Table.Cell color={row.muted ? "fg.muted" : undefined}>{row.label}</Table.Cell>
+                <Table.Cell color={row.muted ? "fg.muted" : undefined}>{row.grade}</Table.Cell>
+                <Table.Cell color={row.muted ? "fg.muted" : undefined} textAlign="end">
+                  {row.points}
+                </Table.Cell>
+              </Table.Row>
+            ))}
+          </Table.Body>
+          <Table.Footer>
+            <Table.Row>
+              <Table.Cell colSpan={2} fontWeight="semibold">
+                Yhteensä
+              </Table.Cell>
+              <Table.Cell fontWeight="semibold" textAlign="end">
+                {scoreFormatter.format(applicantScore)}
+              </Table.Cell>
+            </Table.Row>
+          </Table.Footer>
+        </Table.Root>
+      </Collapsible.Content>
+    </Collapsible.Root>
+  );
+}
+
 export default function ScoreResultCard({
   headingLevel = "h3",
   result,
@@ -50,6 +125,7 @@ export default function ScoreResultCard({
   const isQualified =
     displayedScore !== undefined && result.score <= displayedScore && result.kynnysehtoPassed !== false;
   const hasThreshold = result.kynnysehtoLabel !== undefined || result.kynnysehtoPassed !== undefined;
+  const disclosureHeading = headingLevel === "h3" ? "h4" : "h5";
 
   return (
     <Card.Root as="article" size="sm">
@@ -95,6 +171,13 @@ export default function ScoreResultCard({
             </>
           ) : displayedScore !== undefined && result.sector === "Yliopistokoulutus" ? (
             <KynnysehtoBadge />
+          ) : null}
+          {displayedScore !== undefined && result.scoreBreakdown ? (
+            <ScoreBreakdownDisclosure
+              applicantScore={displayedScore}
+              breakdown={result.scoreBreakdown}
+              disclosureHeading={disclosureHeading}
+            />
           ) : null}
         </Stack>
       </Card.Body>

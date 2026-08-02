@@ -1,6 +1,8 @@
 import { AMM_AVERAGE_THRESHOLDS, AMM_SECTION_POINTS } from "./constants";
 import { type GradeInput, normalizeGrades } from "./grades";
-import type { ScoringCatalog, ScoringModel } from "./types";
+import type { ScoreAssignment, ScoreBreakdown, ScoringCatalog, ScoringModel } from "./types";
+
+export type { ScoreAssignment, ScoreBreakdown } from "./types";
 
 function expandedSlots(model: ScoringModel): [string, string][] {
   const slots: [string, string][] = [];
@@ -20,6 +22,11 @@ interface PoolCandidate {
   grade: string | null;
   group: string | null;
   pointsTenths: number;
+}
+
+interface DpState {
+  picks: PoolCandidate[];
+  total: number;
 }
 
 /** Return the best candidate per logical subject group for one slot. */
@@ -66,8 +73,30 @@ function usedKey(groups: Iterable<string>): string {
 }
 
 export interface ScoreResult {
+  assignments: ScoreAssignment[];
   maximumScore: number;
   score: number;
+}
+
+/** Build UI breakdown in the same order as the entered grades. */
+export function buildScoreBreakdown(
+  grades: GradeInput,
+  assignments: ScoreAssignment[],
+  catalog: ScoringCatalog,
+): ScoreBreakdown {
+  const pointsByExam = new Map(assignments.map((assignment) => [assignment.exam, assignment.points]));
+  const rows: ScoreBreakdown["rows"] = [];
+  for (const [exam, grade] of Object.entries(grades)) {
+    const label = catalog.exams[exam]?.label;
+    if (label === undefined) continue;
+    rows.push({
+      exam,
+      grade: String(grade),
+      label,
+      points: pointsByExam.get(exam) ?? null,
+    });
+  }
+  return { rows };
 }
 
 /** Calculate the globally best valid assignment for one scoring model. */
@@ -77,7 +106,7 @@ export function scoreModel(modelId: string, grades: GradeInput, catalog: Scoring
   const normalized = normalizeGrades(grades, catalog.exams);
 
   // State is keyed by used logical subjects (sorted groups joined).
-  let states = new Map<string, number>([["", 0]]);
+  let states = new Map<string, DpState>([["", { total: 0, picks: [] }]]);
 
   for (const [, poolId] of expandedSlots(model)) {
     const pool = catalog.pools[poolId];
@@ -85,32 +114,44 @@ export function scoreModel(modelId: string, grades: GradeInput, catalog: Scoring
     const candidates = poolCandidates(pool, normalized, catalog);
     candidates.push({ exam: null, grade: null, group: null, curveId: null, pointsTenths: 0 });
 
-    const nextStates = new Map<string, number>();
-    for (const [used, total] of states) {
+    const nextStates = new Map<string, DpState>();
+    for (const [used, state] of states) {
       const usedGroups = used === "" ? new Set<string>() : new Set(used.split("\0"));
       for (const candidate of candidates) {
         const group = candidate.group;
         if (group !== null && usedGroups.has(group)) continue;
         const nextUsed = group === null ? usedGroups : new Set([...usedGroups, group]);
-        const nextTotal = total + candidate.pointsTenths;
+        const nextTotal = state.total + candidate.pointsTenths;
         const key = usedKey(nextUsed);
         const previous = nextStates.get(key);
-        if (previous === undefined || nextTotal > previous) {
-          nextStates.set(key, nextTotal);
+        if (previous === undefined || nextTotal > previous.total) {
+          nextStates.set(key, { total: nextTotal, picks: [...state.picks, candidate] });
         }
       }
     }
     states = nextStates;
   }
 
-  let bestTotal = -1;
-  for (const total of states.values()) {
-    if (total > bestTotal) bestTotal = total;
+  let best: DpState | undefined;
+  for (const state of states.values()) {
+    if (best === undefined || state.total > best.total) best = state;
+  }
+
+  const assignments: ScoreAssignment[] = [];
+  for (const pick of best?.picks ?? []) {
+    if (pick.exam === null || pick.grade === null) continue;
+    assignments.push({
+      exam: pick.exam,
+      grade: pick.grade,
+      label: catalog.exams[pick.exam]?.label ?? pick.exam,
+      points: pick.pointsTenths / 10,
+    });
   }
 
   return {
-    score: bestTotal / 10,
+    score: (best?.total ?? -1) / 10,
     maximumScore: model.maximumTenths / 10,
+    assignments,
   };
 }
 

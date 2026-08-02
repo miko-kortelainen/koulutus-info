@@ -5,7 +5,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { normalizeGrades } from "./grades";
 import { listUniversityPrograms, calculateUniversityPrograms } from "./programs";
-import { averageToHundredths, scoreAmkAmm, scoreAmkYo, scoreModel } from "./scoring";
+import { averageToHundredths, buildScoreBreakdown, scoreAmkAmm, scoreAmkYo, scoreModel } from "./scoring";
 import type { CutoffSchool, ProgramCrosswalk, ScoringCatalog, ThresholdCatalog, TodistusvalintaCatalogs } from "./types";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../../../../../public");
@@ -18,6 +18,27 @@ const GRADES = { ai_fi: "L", ena: "E", maa: "E", te: "B", hi: "E" };
 assert.equal(scoreModel("target-language-english", GRADES, scoring).score, 122.3);
 assert.equal(scoreAmkYo(GRADES, scoring).score, 166);
 assert.equal(scoreModel("philosophy-history-theology", { maa: "L" }, scoring).score, 28.9);
+
+const amkBreakdown = scoreAmkYo(GRADES, scoring);
+const sumAssignmentPoints = (assignments: { points: number }[]) =>
+  Math.round(assignments.reduce((sum, assignment) => sum + assignment.points * 10, 0)) / 10;
+assert.equal(sumAssignmentPoints(amkBreakdown.assignments), amkBreakdown.score);
+assert.deepEqual(
+  amkBreakdown.assignments.map((assignment) => assignment.exam).sort(),
+  ["ai_fi", "ena", "hi", "maa", "te"].sort(),
+);
+
+const englishModel = scoreModel("target-language-english", GRADES, scoring);
+assert.equal(sumAssignmentPoints(englishModel.assignments), englishModel.score);
+assert.ok(englishModel.assignments.some((assignment) => assignment.exam === "ai_fi"));
+assert.ok(englishModel.assignments.some((assignment) => assignment.exam === "ena"));
+
+const orderedGrades = { te: "B", ai_fi: "L", maa: "E", ena: "E", hi: "E" };
+const orderedBreakdown = buildScoreBreakdown(orderedGrades, amkBreakdown.assignments, scoring);
+assert.deepEqual(
+  orderedBreakdown.rows.map((row) => row.exam),
+  ["te", "ai_fi", "maa", "ena", "hi"],
+);
 
 assert.equal(
   scoreAmkAmm({
