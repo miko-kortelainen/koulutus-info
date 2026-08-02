@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "year": 2026,
+  "gradeOrder": ["I", "A", "B", "C", "M", "E", "L"],
+  "rules": [
+    {
+      "id": "biology-pass",
+      "label": "Biologia suoritettu hyväksytysti",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/biotieteet-farmasia-geotieteet-elintarviketieteet-maatalous-ja-metsatieteet",
+      "expression": {"exam": "bi", "minGrade": "A"}
+    },
+    {
+      "id": "pharmacy-chemistry-and-math-pass",
+      "label": "Kemia ja pitkä tai lyhyt matematiikka suoritettu hyväksytysti",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/biotieteet-farmasia-geotieteet-elintarviketieteet-maatalous-ja-metsatieteet",
+      "expression": {
+        "all": [
+          {"exam": "ke", "minGrade": "A"},
+          {
+            "any": [
+              {"exam": "maa", "minGrade": "A"},
+              {"exam": "mab", "minGrade": "A"}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-long-pass-or-short-c",
+      "label": "Pitkä matematiikka hyväksytysti tai lyhyt matematiikka vähintään C",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/matemaattiset-tieteet-taloustiede-tietojenkasittelytieteet",
+      "expression": {
+        "any": [
+          {"exam": "maa", "minGrade": "A"},
+          {"exam": "mab", "minGrade": "C"}
+        ]
+      }
+    },
+    {
+      "id": "nanoscience",
+      "label": "Matematiikan ja luonnontieteen kynnysehto nanotieteeseen",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/biotieteet-farmasia-geotieteet-elintarviketieteet-maatalous-ja-metsatieteet",
+      "expression": {
+        "all": [
+          {
+            "any": [
+              {"exam": "maa", "minGrade": "B"},
+              {"exam": "mab", "minGrade": "E"}
+            ]
+          },
+          {
+            "any": [
+              {"exam": "fy", "minGrade": "C"},
+              {"exam": "ke", "minGrade": "C"},
+              {"exam": "bi", "minGrade": "C"}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-long-c-or-short-m",
+      "label": "Pitkä matematiikka vähintään C tai lyhyt matematiikka vähintään M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/matemaattiset-tieteet-taloustiede-tietojenkasittelytieteet",
+      "expression": {
+        "any": [
+          {"exam": "maa", "minGrade": "C"},
+          {"exam": "mab", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "math-long-pass",
+      "label": "Pitkä matematiikka suoritettu hyväksytysti",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/matemaattiset-tieteet-taloustiede-tietojenkasittelytieteet",
+      "expression": {"exam": "maa", "minGrade": "A"}
+    },
+    {
+      "id": "liberal-arts",
+      "label": "Äidinkieli vähintään C ja pitkä matematiikka C tai lyhyt matematiikka M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/matemaattiset-tieteet-taloustiede-tietojenkasittelytieteet",
+      "expression": {
+        "all": [
+          {
+          "any": [
+              {"exam": "ai", "minGrade": "C"},
+              {"exam": "ai_fi", "minGrade": "C"},
+              {"exam": "ai_sv", "minGrade": "C"},
+              {"exam": "ai_smn", "minGrade": "C"},
+              {"exam": "ai_smi", "minGrade": "C"},
+              {"exam": "ai_sms", "minGrade": "C"},
+              {"exam": "s2", "minGrade": "C"},
+              {"exam": "r2", "minGrade": "C"}
+            ]
+          },
+          {
+            "any": [
+              {"exam": "maa", "minGrade": "C"},
+              {"exam": "mab", "minGrade": "M"}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-long-c-or-short-e",
+      "label": "Pitkä matematiikka vähintään C tai lyhyt matematiikka vähintään E",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
+      "expression": {
+        "any": [
+          {"exam": "maa", "minGrade": "C"},
+          {"exam": "mab", "minGrade": "E"}
+        ]
+      }
+    },
+    {
+      "id": "finnish-general",
+      "label": "Suomen kielen yleinen kynnysehto",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
+      "expression": {
+        "any": [
+          {"exam": "ai_fi", "minGrade": "M"},
+          {"exam": "s2", "minGrade": "M"},
+          {"exam": "fia", "minGrade": "E"}
+        ]
+      }
+    },
+    {
+      "id": "swedish-mother-level-general",
+      "label": "Ruotsia äidinkielen tasolla opiskeltavan hakukohteen yleinen kynnysehto",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
+      "expression": {
+        "any": [
+          {"exam": "ai_sv", "minGrade": "M"},
+          {"exam": "r2", "minGrade": "M"},
+          {"exam": "rua", "minGrade": "E"},
+          {"exam": "rub", "minGrade": "E"}
+        ]
+      }
+    },
+    {
+      "id": "swedish-second-level-general",
+      "label": "Ruotsia toisena kotimaisena opiskeltavan hakukohteen yleinen kynnysehto",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
+      "expression": {
+        "any": [
+          {"exam": "ai_sv", "minGrade": "C"},
+          {"exam": "r2", "minGrade": "C"},
+          {"exam": "rua", "minGrade": "M"},
+          {"exam": "rub", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "mother-tongue-m",
+      "label": "Äidinkieli vähintään M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
+      "expression": {
+        "any": [
+          {"exam": "ai", "minGrade": "M"},
+          {"exam": "ai_fi", "minGrade": "M"},
+          {"exam": "ai_sv", "minGrade": "M"},
+          {"exam": "ai_smn", "minGrade": "M"},
+          {"exam": "ai_smi", "minGrade": "M"},
+          {"exam": "ai_sms", "minGrade": "M"},
+          {"exam": "s2", "minGrade": "M"},
+          {"exam": "r2", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "north-sami",
+      "label": "Pohjoissaamen äidinkieli C tai lyhyt pohjoissaame E",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
+      "expression": {
+        "any": [
+          {"exam": "ai_smn", "minGrade": "C"},
+          {"exam": "smn_b", "minGrade": "E"}
+        ]
+      }
+    },
+    {
+      "id": "mother-tongue-c",
+      "label": "Äidinkieli vähintään C",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
+      "expression": {
+        "any": [
+          {"exam": "ai", "minGrade": "C"},
+          {"exam": "ai_fi", "minGrade": "C"},
+          {"exam": "ai_sv", "minGrade": "C"},
+          {"exam": "ai_smn", "minGrade": "C"},
+          {"exam": "ai_smi", "minGrade": "C"},
+          {"exam": "ai_sms", "minGrade": "C"},
+          {"exam": "s2", "minGrade": "C"},
+          {"exam": "r2", "minGrade": "C"}
+        ]
+      }
+    },
+    {
+      "id": "math-pass",
+      "label": "Pitkä tai lyhyt matematiikka suoritettu hyväksytysti",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kasvatustieteet-kauppatieteet-logopedia",
+      "expression": {
+        "any": [
+          {"exam": "maa", "minGrade": "A"},
+          {"exam": "mab", "minGrade": "A"}
+        ]
+      }
+    },
+    {
+      "id": "english",
+      "label": "Pitkä englanti vähintään E",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/vieraat-kielet",
+      "expression": {"exam": "ena", "minGrade": "E"}
+    },
+    {
+      "id": "spanish",
+      "label": "Pitkä espanja C tai lyhyt espanja M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/vieraat-kielet",
+      "expression": {
+        "any": [
+          {"exam": "esa", "minGrade": "C"},
+          {"exam": "esb", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "italian",
+      "label": "Lyhyt italia vähintään M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/vieraat-kielet",
+      "expression": {"exam": "iab", "minGrade": "M"}
+    },
+    {
+      "id": "french",
+      "label": "Pitkä ranska C tai lyhyt ranska M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/vieraat-kielet",
+      "expression": {
+        "any": [
+          {"exam": "raa", "minGrade": "C"},
+          {"exam": "rab", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "german",
+      "label": "Pitkä saksa C tai lyhyt saksa M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/vieraat-kielet",
+      "expression": {
+        "any": [
+          {"exam": "saa", "minGrade": "C"},
+          {"exam": "sab", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "russian",
+      "label": "Pitkä venäjä C tai lyhyt venäjä M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/vieraat-kielet",
+      "expression": {
+        "any": [
+          {"exam": "vea", "minGrade": "C"},
+          {"exam": "veb", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "chemistry-math",
+      "label": "Pitkä matematiikka vähintään B tai lyhyt matematiikka vähintään M",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
+      "expression": {
+        "any": [
+          {"exam": "maa", "minGrade": "B"},
+          {"exam": "mab", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "technology",
+      "label": "Pitkä matematiikka ja fysiikka tai kemia hyväksytysti sekä vähintään yksi niistä vähintään C",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
+      "expression": {
+        "all": [
+          {"exam": "maa", "minGrade": "A"},
+          {
+            "any": [
+              {"exam": "fy", "minGrade": "A"},
+              {"exam": "ke", "minGrade": "A"}
+            ]
+          },
+          {
+            "any": [
+              {"exam": "maa", "minGrade": "C"},
+              {"exam": "fy", "minGrade": "C"},
+              {"exam": "ke", "minGrade": "C"}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "hy-swedish-mother-only",
+      "label": "Helsingin yliopisto: ruotsi äidinkielen tasolla",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
+      "expression": {
+        "any": [
+          {"exam": "ai_sv", "minGrade": "M"},
+          {"exam": "r2", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "hy-swedish-second-only",
+      "label": "Helsingin yliopisto: ruotsi toisena kotimaisena",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
+      "expression": {
+        "any": [
+          {"exam": "rua", "minGrade": "M"},
+          {"exam": "rub", "minGrade": "M"}
+        ]
+      }
+    },
+    {
+      "id": "hy-finnish-mother-only",
+      "label": "Helsingin yliopisto: suomen kieli äidinkielenä",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
+      "expression": {"exam": "ai_fi", "minGrade": "M"}
+    },
+    {
+      "id": "hy-finnish-culture",
+      "label": "Helsingin yliopisto: suomen kieli ja kulttuuri, hakijan ensikieli muu kuin suomi",
+      "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
+      "expression": {
+        "any": [
+          {"exam": "s2", "minGrade": "M"},
+          {"exam": "fia", "minGrade": "E"}
+        ]
+      }
+    }
+  ]
+}

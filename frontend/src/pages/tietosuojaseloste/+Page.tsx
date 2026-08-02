@@ -28,9 +28,9 @@ export default function TietosuojaselostePage() {
           </Heading>
           <Text>Yhteishaku.app ei pyydä käyttäjältä nimeä tai yhteystietoja eikä käytä markkinointipalveluita.</Text>
           <Text>
-            Verkkopalvelun teknisestä toimittamisesta vastaavat GitHub Pages, Cloudflare ja pistelaskurin rajapinnan
-            osalta Google Cloud. Ne voivat käsitellä esimerkiksi IP-osoitteita ja muita teknisiä tietoja palvelun
-            tarjoamiseksi ja tietoturvan varmistamiseksi.
+            Verkkopalvelun teknisestä toimittamisesta vastaavat GitHub Pages ja Cloudflare. Ne voivat käsitellä
+            esimerkiksi IP-osoitteita ja muita teknisiä tietoja palvelun tarjoamiseksi ja tietoturvan varmistamiseksi.
+            Todistusvalintalaskuri laskee pisteet selaimessa paikallisesti.
           </Text>
         </Stack>
 

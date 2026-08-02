@@ -2,6 +2,14 @@ export type CutoffRound = `${number}-${"kevat" | "syksy"}`;
 
 export const DEFAULT_CUTOFF_ROUND: CutoffRound = "2026-kevat";
 
+/** Rounds with both amk and yliopisto cutoff files under public/data/pisterajat/. */
+export const CALCULATOR_CUTOFF_ROUNDS: readonly CutoffRound[] = [
+  "2026-kevat",
+  "2025-syksy",
+  "2025-kevat",
+  "2024-syksy",
+];
+
 export function cutoffRoundFromFilename(filename: string): CutoffRound | null {
   const match = /^pisterajat-(\d{4})-(kevat|syksy)-(?:amk|yliopisto)\.json$/.exec(filename);
   return match ? (`${match[1]}-${match[2]}` as CutoffRound) : null;

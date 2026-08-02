@@ -15,8 +15,14 @@ const result = (overrides: Partial<ScoreResult>): ScoreResult => ({
   ...overrides,
 });
 
-test("university program without a threshold shows Ei kynnysehtoa and no täyttyy status", () => {
+test("university program without a threshold hides Ei kynnysehtoa until calculated", () => {
   renderWithChakra(<ScoreResultCard result={result({})} roundLabel="kevät 2026" />);
+
+  expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
+});
+
+test("university program without a threshold shows Ei kynnysehtoa after calculation", () => {
+  renderWithChakra(<ScoreResultCard result={result({ applicantScore: 120 })} roundLabel="kevät 2026" />);
 
   expect(screen.getByText("Ei kynnysehtoa.")).toBeVisible();
   expect(screen.queryByText("Kynnysehto täyttyy.")).not.toBeInTheDocument();

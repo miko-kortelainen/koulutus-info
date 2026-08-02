@@ -7,11 +7,11 @@
   "scripts": {
     "dev": "vike dev",
     "build": "tsx scripts/sitemap.ts && vike build",
-    "lint": "tsx src/pages/pistelaskuri/lib/calculator.test.ts && tsc -b --noEmit && biome lint .",
+    "lint": "tsx src/pages/pistelaskuri/lib/calculator.test.ts && tsx src/pages/pistelaskuri/lib/todistusvalinta/todistusvalinta.test.ts && tsc -b --noEmit && biome lint .",
     "preview": "vike preview",
     "test:component": "vitest run",
     "test:component:coverage": "vitest run --coverage",
-    "test:unit": "tsx src/pages/pistelaskuri/lib/calculator.test.ts",
+    "test:unit": "tsx src/pages/pistelaskuri/lib/calculator.test.ts && tsx src/pages/pistelaskuri/lib/todistusvalinta/todistusvalinta.test.ts",
     "test:e2e": "playwright test",
     "format": "biome format --write src"
   },
