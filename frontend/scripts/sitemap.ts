@@ -4,8 +4,10 @@ import { CURRENT_YEAR } from "../src/config/yearOptions";
 import { slugify } from "../src/lib/slug";
 import { guides } from "../src/pages/oppaat/guides";
 
-const latestModifiedDate = (files: string[]) =>
-  new Date(Math.max(...files.map((file) => statSync(`public/data/${file}`).mtimeMs))).toISOString().slice(0, 10);
+const latestModifiedDate = (files: string[]): string | undefined => {
+  if (files.length === 0) return undefined;
+  return new Date(Math.max(...files.map((file) => statSync(`public/data/${file}`).mtimeMs))).toISOString().slice(0, 10);
+};
 
 const cutoffFiles = readdirSync("public/data/pisterajat").map((file) => `pisterajat/${file}`);
 const currentStatisticsFile = `hakijamaarat-${CURRENT_YEAR.replace("_", "-")}.json`;
