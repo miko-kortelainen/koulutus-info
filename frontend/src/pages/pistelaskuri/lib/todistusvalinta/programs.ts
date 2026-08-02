@@ -1,7 +1,7 @@
 import type { CutoffRound } from "@/config/cutoffRounds";
 import { AMK_METHODS, CERTIFICATE_METHODS } from "./constants";
 import { type GradeInput, normalizeGrades } from "./grades";
-import { scoreAmkAmm, scoreAmkYo, scoreModel } from "./scoring";
+import { buildScoreBreakdown, scoreAmkAmm, scoreAmkYo, scoreModel } from "./scoring";
 import { thresholdPassed } from "./thresholds";
 import type {
   AmkAmmGrades,
@@ -12,6 +12,7 @@ import type {
   CrosswalkSourceIssue,
   CutoffProgramme,
   CutoffSchool,
+  ScoreBreakdown,
   ScorableUniversityProgram,
   TodistusvalintaCatalogs,
   UniversityProgram,
@@ -46,10 +47,21 @@ function toUniversityProgram({
   cutoffs,
   eligible,
   score,
+  scoreBreakdown,
   kynnysehtoLabel,
   kynnysehtoPassed,
 }: ScorableUniversityProgram): UniversityProgram {
-  return { university, program, field, cutoffs, eligible, score, kynnysehtoLabel, kynnysehtoPassed };
+  return {
+    university,
+    program,
+    field,
+    cutoffs,
+    eligible,
+    score,
+    scoreBreakdown,
+    kynnysehtoLabel,
+    kynnysehtoPassed,
+  };
 }
 
 function scorableProgram(
@@ -119,19 +131,24 @@ export function calculateUniversityPrograms(
   yliopistoCutoffs: CutoffSchool[],
 ): { applicationRound: CutoffRound; programs: UniversityProgram[] } {
   const normalized = normalizeGrades(grades, catalogs.scoring.exams);
-  const scoreCache = new Map<string, number>();
+  const scoreCache = new Map<string, { score: number; scoreBreakdown: ScoreBreakdown }>();
   const thresholdCache = new Map<string, { label: string; passed: boolean } | null>();
   const programs = listUniversityPrograms(round, catalogs, yliopistoCutoffs);
 
   for (const program of programs) {
     if (!program.eligible || program.scoringModelId === undefined) continue;
 
-    let score = scoreCache.get(program.scoringModelId);
-    if (score === undefined) {
-      score = scoreModel(program.scoringModelId, normalized, catalogs.scoring).score;
-      scoreCache.set(program.scoringModelId, score);
+    let cached = scoreCache.get(program.scoringModelId);
+    if (cached === undefined) {
+      const scored = scoreModel(program.scoringModelId, normalized, catalogs.scoring);
+      cached = {
+        score: scored.score,
+        scoreBreakdown: buildScoreBreakdown(normalized, scored.assignments, catalogs.scoring),
+      };
+      scoreCache.set(program.scoringModelId, cached);
     }
-    program.score = score;
+    program.score = cached.score;
+    program.scoreBreakdown = cached.scoreBreakdown;
 
     const ruleId = program.thresholdRuleId;
     if (ruleId === null || ruleId === undefined) continue;
@@ -191,8 +208,14 @@ export function calculateAmkPrograms(
 ): AmkProgramsResponse {
   const listed = listAmkPrograms(method, round, amkCutoffs);
   if (method === "yo") {
-    const { score, maximumScore } = scoreAmkYo(grades as GradeInput, catalogs.scoring);
-    return { ...listed, score, maximumScore };
+    const scored = scoreAmkYo(grades as GradeInput, catalogs.scoring);
+    const normalized = normalizeGrades(grades as GradeInput, catalogs.scoring.exams);
+    return {
+      ...listed,
+      score: scored.score,
+      maximumScore: scored.maximumScore,
+      scoreBreakdown: buildScoreBreakdown(normalized, scored.assignments, catalogs.scoring),
+    };
   }
   const { score, maximumScore } = scoreAmkAmm(grades as Record<string, unknown>);
   return { ...listed, score, maximumScore };

@@ -210,36 +210,38 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
 test("/pistelaskuri: searches active cutoffs", async ({ page }) => {
   await openCalculator(page);
-  await expect(page.getByText(/Pisteesi riittävät – \/ \d+ toteutukseen/)).toBeVisible();
+  await expect(page.getByText(/Pisteesi riittää arviolta – \/ \d+ toteutukseen/)).toBeVisible();
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
 
   const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
   await resultSearch.fill("Turun yliopisto");
   await expect(page.getByText(/\d+ hakutulosta/)).toBeVisible();
-  await expect(page.getByText("Kauppa, hallinto ja oikeustieteet").first()).toBeVisible();
+  await expect(page.getByRole("article").getByText("Turun yliopisto").first()).toBeVisible();
   await expect(page.getByText("Tietojenkäsittely ja tietoliikenne").first()).toBeVisible();
+  await page.getByRole("button", { name: "Näytä lisää" }).click();
+  await expect(page.getByText("Kauppa, hallinto ja oikeustieteet").first()).toBeVisible();
   await expect(page.getByRole("button", { name: /Humanistiset alat/ })).toHaveCount(0);
   await resultSearch.clear();
 
   await resultSearch.fill("Pedagogik (undervisning på svenska), pedagogie kandidat");
   await expect(page.getByRole("article")).toHaveCount(1);
-  await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
+  await expect(page.getByRole("article").getByText("Todistusvalinta, ensikertalaiset", { exact: true })).toBeVisible();
 });
 
 test("/pistelaskuri: switches to first-time applicant cutoffs", async ({ page }) => {
   await openCalculator(page);
   const firstTimeApplicantCheckbox = page.getByRole("checkbox", {
-    name: "Näytä myös ensikertalaisten pisterajat",
+    name: "Olen ensikertalainen",
   });
   const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
   await resultSearch.fill("Pedagogik (undervisning på svenska), pedagogie kandidat");
 
-  await expect(firstTimeApplicantCheckbox).not.toBeChecked();
-  await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
-  await page.getByText("Näytä myös ensikertalaisten pisterajat", { exact: true }).click();
   await expect(firstTimeApplicantCheckbox).toBeChecked();
-  await expect(page.getByRole("article")).toHaveCount(1);
   await expect(page.getByRole("article").getByText("Todistusvalinta, ensikertalaiset", { exact: true })).toBeVisible();
+  await page.getByText("Olen ensikertalainen", { exact: true }).click();
+  await expect(firstTimeApplicantCheckbox).not.toBeChecked();
+  await expect(page.getByRole("article")).toHaveCount(1);
+  await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
 });
 
 test("/pistelaskuri: filters university results and paginates a group", async ({ page }) => {
@@ -297,10 +299,14 @@ test("/pistelaskuri: sorts grouped results", async ({ page }) => {
 test("/pistelaskuri: switches selection methods", async ({ page }) => {
   await openCalculator(page);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
-  await expect(tekniikkaAccordion.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
+  await expect(tekniikkaAccordion.getByText("Todistusvalinta (YO), ensikertalaiset", { exact: true }).first()).toBeVisible();
   await page.getByRole("tab", { name: "AMM" }).click();
-  await expect(page.getByRole("article").getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
-  await expect(page.getByRole("article").getByText("Todistusvalinta (YO)", { exact: true })).toHaveCount(0);
+  await expect(
+    page.getByRole("article").getByText("Todistusvalinta (AMM), ensikertalaiset", { exact: true }).first(),
+  ).toBeVisible();
+  await expect(page.getByRole("article").getByText("Todistusvalinta (YO), ensikertalaiset", { exact: true })).toHaveCount(
+    0,
+  );
 });
 
 test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
@@ -318,7 +324,7 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
   await page.getByRole("button", { name: "Laske pisteet" }).click();
 
   await expect(page.getByText(/~106 \/ 198 pistettä/)).toBeVisible();
-  await expect(page.getByText(/Pisteesi riittävät \d+ \/ \d+ toteutukseen/)).toBeVisible();
+  await expect(page.getByText(/Pisteesi riittää arviolta \d+ \/ \d+ toteutukseen/)).toBeVisible();
 
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await expect(tekniikkaAccordion.getByText(/Pisteesi \/ alin hyväksytty pistemäärä/).first()).toBeVisible();

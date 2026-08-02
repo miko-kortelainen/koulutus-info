@@ -1,4 +1,5 @@
 import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import type { ScoreResult } from "../lib/scoreResults";
@@ -63,4 +64,39 @@ test("AMK program without a threshold shows no kynnysehto line", () => {
 
   expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
   expect(screen.queryByText(/Kynnysehto/)).not.toBeInTheDocument();
+});
+
+test("score breakdown disclosure lists assigned and unused subjects", async () => {
+  const user = userEvent.setup();
+  renderWithChakra(
+    <ScoreResultCard
+      result={result({
+        applicantScore: 166,
+        scoreBreakdown: {
+          rows: [
+            { exam: "ai_fi", grade: "L", label: "Suomi äidinkielenä", points: 46 },
+            { exam: "te", grade: "B", label: "Terveystieto", points: null },
+            { exam: "maa", grade: "E", label: "Matematiikka, pitkä", points: 36 },
+          ],
+        },
+      })}
+      roundLabel="kevät 2026"
+    />,
+  );
+
+  await user.click(screen.getByRole("button", { name: "Miten pisteeni laskettiin?" }));
+  const table = screen.getByRole("table", { name: "Pisteytyksen erittely aineittain" });
+  expect(table).toBeVisible();
+  expect(screen.getByRole("columnheader", { name: "Aine" })).toBeVisible();
+  const aineCells = screen.getAllByRole("row").slice(1, -1).map((row) => row.querySelector("td")?.textContent);
+  expect(aineCells).toEqual(["Suomi äidinkielenä", "Terveystieto", "Matematiikka, pitkä"]);
+  expect(screen.getByRole("cell", { name: "46" })).toBeVisible();
+  expect(screen.getByRole("cell", { name: "–" })).toBeVisible();
+  expect(screen.getByRole("cell", { name: "166" })).toBeVisible();
+});
+
+test("score breakdown disclosure is hidden without breakdown data", () => {
+  renderWithChakra(<ScoreResultCard result={result({ applicantScore: 120 })} roundLabel="kevät 2026" />);
+
+  expect(screen.queryByRole("button", { name: "Miten pisteeni laskettiin?" })).not.toBeInTheDocument();
 });

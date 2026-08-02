@@ -4,6 +4,25 @@ export type UniversityGrade = "I" | "A" | "B" | "C" | "M" | "E" | "L";
 
 export type AmkMethod = "yo" | "amm";
 
+export interface ScoreAssignment {
+  exam: string;
+  grade: string;
+  label: string;
+  points: number;
+}
+
+export interface ScoreBreakdownRow {
+  exam: string;
+  grade: string;
+  label: string;
+  /** Points when the aine was used in the best combination; otherwise null. */
+  points: number | null;
+}
+
+export interface ScoreBreakdown {
+  rows: ScoreBreakdownRow[];
+}
+
 export interface CalculatorCutoff {
   score: number;
   selectionMethod: string;
@@ -19,6 +38,7 @@ export interface UniversityProgram {
   kynnysehtoPassed?: boolean;
   program: string;
   score?: number;
+  scoreBreakdown?: ScoreBreakdown;
   university: string;
 }
 
@@ -42,6 +62,7 @@ export interface AmkProgramsResponse {
   ammattikorkeakoulut: AmkSchool[];
   maximumScore: number;
   score?: number;
+  scoreBreakdown?: ScoreBreakdown;
 }
 
 export interface AmkAmmGrades {

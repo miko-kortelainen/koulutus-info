@@ -1,4 +1,10 @@
-import type { AmkAmmGrades, AmkProgramsResponse, UniversityGrade, UniversityProgramsResponse } from "./todistusvalinta";
+import type {
+  AmkAmmGrades,
+  AmkProgramsResponse,
+  ScoreBreakdown,
+  UniversityGrade,
+  UniversityProgramsResponse,
+} from "./todistusvalinta";
 import type { ScoreType } from "../scoreTypes";
 
 export interface Calculation {
@@ -20,6 +26,7 @@ export interface ScoreResult {
   selectionMethod: string;
   kynnysehtoLabel?: string;
   kynnysehtoPassed?: boolean;
+  scoreBreakdown?: ScoreBreakdown;
 }
 
 type ScoreResultSelection = Pick<ScoreResult, "sector" | "selectionMethod">;
@@ -65,7 +72,11 @@ export function selectApplicantResults(
   });
 }
 
-export function flattenAmkPrograms({ ammattikorkeakoulut, score: applicantScore }: AmkProgramsResponse): ScoreResult[] {
+export function flattenAmkPrograms({
+  ammattikorkeakoulut,
+  score: applicantScore,
+  scoreBreakdown,
+}: AmkProgramsResponse): ScoreResult[] {
   return ammattikorkeakoulut.flatMap((school) =>
     school.programmes.flatMap((programme) =>
       programme.cutoffs.map((cutoff, cutoffIndex) => ({
@@ -77,6 +88,7 @@ export function flattenAmkPrograms({ ammattikorkeakoulut, score: applicantScore 
         score: cutoff.score,
         sector: school.sector,
         selectionMethod: cutoff.selectionMethod,
+        scoreBreakdown,
       })),
     ),
   );
@@ -97,6 +109,7 @@ export function flattenUniversityPrograms({ programs }: UniversityProgramsRespon
       selectionMethod: cutoff.selectionMethod,
       kynnysehtoLabel: program.kynnysehtoLabel,
       kynnysehtoPassed: program.kynnysehtoPassed,
+      scoreBreakdown: program.scoreBreakdown,
     }));
   });
 }

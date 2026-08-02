@@ -14,7 +14,13 @@ import type {
   UniversityProgramsResponse,
 } from "./types";
 
-export type { AmkAmmGrades, AmkProgramsResponse, UniversityGrade, UniversityProgramsResponse } from "./types";
+export type {
+  AmkAmmGrades,
+  AmkProgramsResponse,
+  ScoreBreakdown,
+  UniversityGrade,
+  UniversityProgramsResponse,
+} from "./types";
 
 export async function getUniversityPrograms(round: CutoffRound): Promise<UniversityProgramsResponse> {
   const [catalogs, cutoffs] = await Promise.all([ensureCatalogs(), loadCutoffSchools(round, "yliopisto")]);
