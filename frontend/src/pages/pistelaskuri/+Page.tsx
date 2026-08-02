@@ -341,12 +341,9 @@ export default function ScoreCalculatorPage() {
 
         <Text color="fg.muted" fontSize="xs" lineHeight="tall" mt={2} textWrap="pretty">
           Huom. Vaikka pisteesi ylittää mainitut pisterajat, koulutuspaikka ei ole taattu. Pisterajat vaihtelevat vuosi
-          vuodelta. <br /> AMK-laskuri ei ota huomioon hakukohdekohtaisia kynnysehtoja. Voit tutustua yliopistojen
-          todistusvalinnan kynnysehtoihin{" "}
-          <Link href="/oppaat/yliopistojen-todistusvalinta/" textDecoration="underline">
-            täältä
-          </Link>
-          . <br /> <br />
+          vuodelta.
+          <br />
+          <br />
           Pisterajojen tiedot ovat peräisin Opetushallituksen{" "}
           <Link href="https://vipunen.fi/fi-fi/" rel="noopener noreferrer" target="_blank" textDecoration="underline">
             Vipunen-palvelusta
