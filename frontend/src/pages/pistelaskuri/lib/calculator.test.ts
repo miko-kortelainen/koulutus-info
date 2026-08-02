@@ -91,7 +91,6 @@ const universityPrograms = flattenUniversityPrograms({
       field: "Humanistiset alat",
       kynnysehtoLabel: "Hyväksytty englannin koe.",
       program: "Saksan kieli ja kulttuuri",
-      requiresRouteSelection: false,
       score: 120,
       university: "Oulun yliopisto",
     },

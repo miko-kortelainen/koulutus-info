@@ -1,5 +1,5 @@
 import { Box, Input, Separator, Stack, Text, VStack } from "@chakra-ui/react";
-import type { AmkAmmGrades } from "@/api/calculatorApi";
+import type { AmkAmmGrades } from "../lib/todistusvalinta";
 import { COLORS } from "@/theme";
 import FormSelect from "./FormSelect";
 

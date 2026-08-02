@@ -1,103 +1,8 @@
 import { expect, type Page, test } from "@playwright/test";
-import { DEFAULT_CUTOFF_ROUND, DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
+import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { CURRENT_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
 
 test.describe.configure({ mode: "parallel" });
-
-const calculatorCutoff = (selectionMethod: string, score: number) => ({
-  score,
-  selectionMethod,
-  startSeason: "Syksy",
-  startYear: Number(DEFAULT_CUTOFF_YEAR),
-});
-
-const universityProgram = (university: string, program: string, field: string, score: number) => ({
-  cutoffs: [calculatorCutoff("Todistusvalinta", score)],
-  eligible: true,
-  field,
-  program,
-  requiresRouteSelection: false,
-  university,
-});
-
-const calculatorUniversityPrograms = [
-  ...Array.from({ length: 40 }, (_, index) =>
-    universityProgram(
-      "Testiyliopisto",
-      `Humanistinen koulutus ${String(index + 1).padStart(2, "0")}`,
-      "Humanistiset alat",
-      80 + index,
-    ),
-  ),
-  universityProgram("Turun yliopisto", "Oikeustiede", "Kauppa, hallinto ja oikeustieteet", 105),
-  universityProgram("Turun yliopisto", "Tietojenkäsittelytiede", "Tietojenkäsittely ja tietoliikenne", 95),
-  universityProgram("Testiyliopisto", "Konetekniikka", "Tekniikan alat", 120),
-  universityProgram("Testiyliopisto", "Automaatiotekniikka", "Tekniikan alat", 75),
-  {
-    ...universityProgram("Åbo Akademi", "Pedagogik (undervisning på svenska), pedagogie kandidat", "Kasvatusalat", 100),
-    cutoffs: [calculatorCutoff("Todistusvalinta", 100), calculatorCutoff("Todistusvalinta, ensikertalaiset", 90)],
-  },
-];
-
-const universityResponse = (score?: number) => ({
-  applicationRound: DEFAULT_CUTOFF_ROUND,
-  programs: calculatorUniversityPrograms.map((program) => (score === undefined ? program : { ...program, score })),
-});
-
-const amkResponse = (method: "Todistusvalinta (YO)" | "Todistusvalinta (AMM)", score?: number) => ({
-  applicationRound: DEFAULT_CUTOFF_ROUND,
-  ammattikorkeakoulut: [
-    {
-      name: "Testi-ammattikorkeakoulu",
-      programmes: [
-        {
-          cutoffs: [calculatorCutoff(method, 85)],
-          koulutusala: "Tekniikan alat",
-          name: "Insinööri (AMK), konetekniikka",
-        },
-      ],
-      sector: "Ammattikorkeakoulukoulutus",
-    },
-  ],
-  maximumScore: 198,
-  ...(score === undefined ? {} : { score }),
-});
-
-async function mockCalculatorApi(page: Page) {
-  await page.route("**/api/v1/**", async (route) => {
-    const corsHeaders = {
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-      "Access-Control-Allow-Origin": "*",
-    };
-    if (route.request().method() === "OPTIONS") {
-      await route.fulfill({ status: 204, headers: corsHeaders });
-      return;
-    }
-
-    const path = new URL(route.request().url()).pathname;
-    const responses: Record<string, () => unknown> = {
-      "/api/v1/programs": () => universityResponse(),
-      "/api/v1/calculate": () => universityResponse(106),
-      "/api/v1/amk/programs/yo": () => amkResponse("Todistusvalinta (YO)"),
-      "/api/v1/amk/programs/amm": () => amkResponse("Todistusvalinta (AMM)"),
-      "/api/v1/amk/calculate/yo": () => amkResponse("Todistusvalinta (YO)", 106),
-      "/api/v1/amk/calculate/amm": () => amkResponse("Todistusvalinta (AMM)", 106),
-    };
-    const response = responses[path]?.();
-
-    await route.fulfill({
-      body: JSON.stringify(response ?? { error: { message: `E2E-mock puuttuu: ${path}` } }),
-      contentType: "application/json",
-      headers: corsHeaders,
-      status: response ? 200 : 404,
-    });
-  });
-}
-
-test.beforeEach(async ({ page }) => {
-  await mockCalculatorApi(page);
-});
 
 test.afterEach(async ({ page }) => {
   expect((await page.pageErrors()).map((error) => error.message)).toEqual([]);
@@ -158,6 +63,7 @@ async function openCalculator(page: Page) {
   await page.goto("/pistelaskuri/");
   await expect(page.getByRole("heading", { name: `Todistusvalintalaskuri ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
   await waitForCalculatorHydration(page);
+  await expect(page.getByText("Pisterajoja ladataan…")).toHaveCount(0, { timeout: 30_000 });
 }
 
 async function openResultsAccordion(page: Page, name: RegExp) {

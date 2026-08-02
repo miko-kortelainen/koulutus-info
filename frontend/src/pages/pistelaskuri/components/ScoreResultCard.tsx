@@ -70,7 +70,7 @@ export default function ScoreResultCard({
                 </Text>
               ) : null}
             </>
-          ) : result.sector === "Yliopistokoulutus" ? (
+          ) : displayedScore !== undefined && result.sector === "Yliopistokoulutus" ? (
             <Text color="fg.muted" fontSize="xs">
               Ei kynnysehtoa.
             </Text>

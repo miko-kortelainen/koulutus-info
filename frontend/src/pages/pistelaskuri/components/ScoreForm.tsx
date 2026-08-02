@@ -1,9 +1,10 @@
 import { Box, Button, Stack, Tabs, Text } from "@chakra-ui/react";
 import { type SubmitEvent, useEffect, useRef, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
-import { calculateAmkAmm, calculateAmkYo, calculateUniversityYo } from "@/api/calculatorApi";
+import type { CutoffRound } from "@/config/cutoffRounds";
 import { COLORS } from "@/theme";
 import type { Calculation } from "../lib/scoreResults";
+import { recalculateFromGrades } from "../lib/todistusvalinta";
 import {
   emptyYoFormState,
   isYoFormState,
@@ -25,6 +26,7 @@ import YoForm from "./YoForm";
 interface ScoreFormProps {
   onModeChange: (selectionMethod: ScoreType) => void;
   onSubmit: (calculation: Calculation) => void;
+  round: CutoffRound;
 }
 
 interface StoredForms {
@@ -34,7 +36,6 @@ interface StoredForms {
 }
 
 const STORAGE_KEY = "yhteishaku:pistelaskuri";
-const SUBMIT_COOLDOWN_MS = 500;
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -68,13 +69,13 @@ const writeStoredForms = (next: Omit<StoredForms, "version">) => {
   }
 };
 
-export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
+export default function ScoreForm({ onModeChange, onSubmit, round }: ScoreFormProps) {
   const [mode, setMode] = useState<ScoreType>("Todistusvalinta (YO)");
   const [yoState, setYoState] = useState(emptyYoFormState());
   const [yoErrors, setYoErrors] = useState<YoFormErrors>({});
   const [ammState, setAmmState] = useState(emptyAmmFormState());
   const [ammErrors, setAmmErrors] = useState<AmmFormErrors>({});
-  const [apiError, setApiError] = useState<string>();
+  const [calcError, setCalcError] = useState<string>();
   const [isCalculating, setIsCalculating] = useState(false);
   const isSubmitting = useRef(false);
 
@@ -90,19 +91,28 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
     setMode(value);
     setYoErrors({});
     setAmmErrors({});
-    setApiError(undefined);
+    setCalcError(undefined);
     onModeChange(value);
   };
 
-  const submitCalculation = (calculation: Calculation) => {
-    onSubmit(calculation);
-    window.sa_event?.("calculate_score");
+  const runCalculation = async (build: () => Promise<Calculation>) => {
+    isSubmitting.current = true;
+    setIsCalculating(true);
+    try {
+      onSubmit(await build());
+      window.sa_event?.("calculate_score");
+    } catch (error) {
+      setCalcError(error instanceof Error ? error.message : "Todistuspisteiden laskenta epäonnistui.");
+    } finally {
+      isSubmitting.current = false;
+      setIsCalculating(false);
+    }
   };
 
   const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (isSubmitting.current) return;
-    setApiError(undefined);
+    setCalcError(undefined);
 
     if (mode === "Todistusvalinta (YO)") {
       const result = parseYoForm(yoState);
@@ -111,23 +121,12 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setYoErrors({});
-      isSubmitting.current = true;
-      setIsCalculating(true);
-      try {
-        const grades = toUniversityGrades(yoState);
-        const [university, amk] = await Promise.all([calculateUniversityYo(grades), calculateAmkYo(grades)]);
-        if (university.applicationRound !== amk.applicationRound) {
-          throw new Error("Pistelaskurin API-vastaukset ovat eri hakukierroksilta.");
-        }
+      await runCalculation(async () => {
+        const yoGrades = toUniversityGrades(yoState);
+        const scored = await recalculateFromGrades({ selectionMethod: "Todistusvalinta (YO)", yoGrades }, round);
         writeStoredForms({ yo: yoState });
-        submitCalculation({ amk, selectionMethod: "Todistusvalinta (YO)", university });
-      } catch (error) {
-        setApiError(error instanceof Error ? error.message : "Todistuspisteiden laskenta epäonnistui.");
-      } finally {
-        await new Promise((resolve) => setTimeout(resolve, SUBMIT_COOLDOWN_MS));
-        isSubmitting.current = false;
-        setIsCalculating(false);
-      }
+        return { ...scored, selectionMethod: "Todistusvalinta (YO)", yoGrades };
+      });
       return;
     }
 
@@ -138,20 +137,12 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
         return;
       }
       setAmmErrors({});
-      isSubmitting.current = true;
-      setIsCalculating(true);
-      try {
-        const amk = await calculateAmkAmm(result.input);
+      await runCalculation(async () => {
+        const ammGrades = result.input;
+        const scored = await recalculateFromGrades({ selectionMethod: "Todistusvalinta (AMM)", ammGrades }, round);
         writeStoredForms({ amm: ammState });
-        submitCalculation({ amk, selectionMethod: "Todistusvalinta (AMM)" });
-      } catch (error) {
-        setApiError(error instanceof Error ? error.message : "Todistuspisteiden laskenta epäonnistui.");
-      } finally {
-        await new Promise((resolve) => setTimeout(resolve, SUBMIT_COOLDOWN_MS));
-        isSubmitting.current = false;
-        setIsCalculating(false);
-      }
-      return;
+        return { ...scored, ammGrades, selectionMethod: "Todistusvalinta (AMM)" };
+      });
     }
   };
 
@@ -183,7 +174,7 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
               onChange={(state) => {
                 setYoState(state);
                 setYoErrors({});
-                setApiError(undefined);
+                setCalcError(undefined);
               }}
               value={yoState}
             />
@@ -212,9 +203,9 @@ export default function ScoreForm({ onModeChange, onSubmit }: ScoreFormProps) {
               Laske pisteet / näytä koulutukset
             </Button>
           </Box>
-          {apiError ? (
+          {calcError ? (
             <Text color="fg.error" fontSize="xs" mt={2} role="alert">
-              {apiError}
+              {calcError}
             </Text>
           ) : null}
         </Box>

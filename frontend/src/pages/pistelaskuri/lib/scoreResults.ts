@@ -1,10 +1,12 @@
-import type { AmkProgramsResponse, UniversityProgramsResponse } from "@/api/calculatorApi";
+import type { AmkAmmGrades, AmkProgramsResponse, UniversityGrade, UniversityProgramsResponse } from "./todistusvalinta";
 import type { ScoreType } from "../scoreTypes";
 
 export interface Calculation {
   amk: AmkProgramsResponse;
+  ammGrades?: AmkAmmGrades;
   selectionMethod: ScoreType;
   university?: UniversityProgramsResponse;
+  yoGrades?: Record<string, UniversityGrade>;
 }
 
 export interface ScoreResult {
@@ -24,8 +26,6 @@ type ScoreResultSelection = Pick<ScoreResult, "sector" | "selectionMethod">;
 
 const withFirstTime = (method: string) => [method, `${method}, ensikertalaiset`] as const;
 
-const sameSelectionMethod = (a: string, b: string) => a === b;
-
 const selectionMethodsFor = (result: ScoreResultSelection, scoreType: ScoreType) => {
   if (result.sector === "Yliopistokoulutus") {
     return scoreType === "Todistusvalinta (YO)" ? withFirstTime("Todistusvalinta") : undefined;
@@ -35,8 +35,7 @@ const selectionMethodsFor = (result: ScoreResultSelection, scoreType: ScoreType)
 };
 
 export function matchesScoreType(result: ScoreResultSelection, scoreType: ScoreType) {
-  const methods = selectionMethodsFor(result, scoreType);
-  return methods?.some((method) => sameSelectionMethod(method, result.selectionMethod)) ?? false;
+  return selectionMethodsFor(result, scoreType)?.includes(result.selectionMethod) ?? false;
 }
 
 const lowestCutoff = (results: ScoreResult[]) =>
@@ -50,7 +49,7 @@ export function selectApplicantResults(
   const programmeGroups = new Map<string, { methods: readonly [string, string]; results: ScoreResult[] }>();
   for (const result of results) {
     const methods = selectionMethodsFor(result, scoreType);
-    if (!methods?.some((method) => sameSelectionMethod(method, result.selectionMethod))) continue;
+    if (!methods?.includes(result.selectionMethod)) continue;
 
     const key = [result.sector, result.schoolName, result.programmeName].join("\0");
     const group = programmeGroups.get(key) ?? { methods, results: [] };
@@ -59,8 +58,7 @@ export function selectApplicantResults(
   }
 
   return [...programmeGroups.values()].flatMap(({ methods, results: programmeResults }) => {
-    const pick = (method: string) =>
-      programmeResults.filter((result) => sameSelectionMethod(result.selectionMethod, method));
+    const pick = (method: string) => programmeResults.filter((result) => result.selectionMethod === method);
     const preferred = pick(isFirstTimeApplicant ? methods[1] : methods[0]);
     const chosen = preferred.length > 0 ? preferred : isFirstTimeApplicant ? pick(methods[0]) : [];
     return chosen.length > 0 ? [lowestCutoff(chosen)] : [];
@@ -86,7 +84,7 @@ export function flattenAmkPrograms({ ammattikorkeakoulut, score: applicantScore 
 
 export function flattenUniversityPrograms({ programs }: UniversityProgramsResponse): ScoreResult[] {
   return programs.flatMap((program) => {
-    if (!program.eligible || program.requiresRouteSelection) return [];
+    if (!program.eligible) return [];
 
     return program.cutoffs.map((cutoff, cutoffIndex) => ({
       applicantScore: program.score,
