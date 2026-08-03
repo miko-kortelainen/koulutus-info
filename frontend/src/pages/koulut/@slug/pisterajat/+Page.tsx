@@ -1,4 +1,4 @@
-import { Box, Heading, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
+import { Accordion, Box, Heading, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
@@ -13,6 +13,8 @@ import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAl
 import type { CutoffPageData } from "./+data";
 import SortControl from "./components/SortControl";
 import useFilteredProgrammes, { type SortOption } from "./hooks/useFilteredProgrammes";
+
+const collator = new Intl.Collator("fi");
 
 export default function CutoffPage() {
   const { schoolName, programmes } = useData<CutoffPageData>();
@@ -54,6 +56,15 @@ export default function CutoffPage() {
   }, [programmes, scopedAlaParam, activeRound]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, sortOrder);
+  const programmesByAla = useMemo(() => {
+    const byAla = new Map<string, typeof filteredProgrammes>();
+    for (const programme of filteredProgrammes) {
+      const group = byAla.get(programme.koulutusala) ?? [];
+      group.push(programme);
+      byAla.set(programme.koulutusala, group);
+    }
+    return [...byAla.entries()].sort(([a], [b]) => collator.compare(a, b));
+  }, [filteredProgrammes]);
 
   const header = (
     <Stack gap={1}>
@@ -86,14 +97,42 @@ export default function CutoffPage() {
     ) : null;
 
   const programList = (
-    <Stack as="ul" gap={{ base: 4, md: 8 }} listStyleType="none">
-      {filteredProgrammes.length === 0 ? <Text as="li">Ei tuloksia valituilla rajauksilla.</Text> : null}
-      {filteredProgrammes.map((programme) => (
-        <Box as="li" key={`${programme.name}\0${programme.koulutusala}`}>
-          <CutoffCard programme={programme} showRound={rounds.length === 1} />
-        </Box>
+    <Accordion.Root
+      aria-label="Pisterajat koulutusaloittain"
+      as="ul"
+      collapsible
+      display="flex"
+      flexDirection="column"
+      gap={3}
+      listStyleType="none"
+      multiple
+      width="full"
+    >
+      {programmesByAla.length === 0 ? <Text as="li">Ei tuloksia valituilla rajauksilla.</Text> : null}
+      {programmesByAla.map(([ala, alaProgrammes]) => (
+        <Accordion.Item as="li" key={ala} value={ala}>
+          <Heading as="h2" size="sm">
+            <Accordion.ItemTrigger py={4}>
+              <Text as="span" color="text" flex="1" fontSize="sm" textAlign="start" textWrap="pretty">
+                {ala}
+              </Text>
+              <Accordion.ItemIndicator />
+            </Accordion.ItemTrigger>
+          </Heading>
+          <Accordion.ItemContent>
+            <Accordion.ItemBody pb={6}>
+              <Stack as="ul" gap={{ base: 4, md: 6 }} listStyleType="none">
+                {alaProgrammes.map((programme) => (
+                  <Box as="li" key={`${programme.name}\0${programme.koulutusala}`}>
+                    <CutoffCard headingLevel="h3" programme={programme} showRound={rounds.length === 1} />
+                  </Box>
+                ))}
+              </Stack>
+            </Accordion.ItemBody>
+          </Accordion.ItemContent>
+        </Accordion.Item>
       ))}
-    </Stack>
+    </Accordion.Root>
   );
 
   return (
