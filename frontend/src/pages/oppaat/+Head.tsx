@@ -1,4 +1,5 @@
-const description = "Oppaat korkeakoulujen valintatavoista, todistusvalinnasta ja pisteytyksistä.";
+const description =
+  "Oppaita ammattikorkeakoulujen ja yliopistojen todistusvalinnasta: pisteytys, valintajonot, kynnysehdot ja vähimmäispisteet.";
 
 export function Head() {
   return (

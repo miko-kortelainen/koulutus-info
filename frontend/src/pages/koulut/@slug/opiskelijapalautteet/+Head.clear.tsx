@@ -6,7 +6,7 @@ import type { FeedbackPageData } from "./+data";
 export function Head() {
   const { schoolName, year } = useData<FeedbackPageData>();
   const url = `https://yhteishaku.app/koulut/${slugify(schoolName)}/opiskelijapalautteet/`;
-  const description = `${schoolName} – vuoden ${year} opiskelijapalautteen vastaajamäärät ja keskiarvot koulutusaloittain.`;
+  const description = `${schoolName}: vuoden ${year} opiskelijapalaute. Palautekyselyn vastaajamäärät ja keskiarvot koulutusaloittain ja aiheittain.`;
 
   return (
     <>
