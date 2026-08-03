@@ -1,4 +1,5 @@
-const description = "Näin lisäät yhteishaku.app-palvelun iPhonen kotinäyttöön Safarissa.";
+const description =
+  "Näin lisäät yhteishaku.app-palvelun iPhonen Koti-valikkoon Safarissa: avaa valikko, valitse Jaa ja sitten Lisää Koti-valikkoon.";
 
 export function Head() {
   return (

@@ -1,6 +1,7 @@
 import { QUESTIONS } from "./questions";
 
-const description = "Vastauksia yleisimpiin kysymyksiin Yhteishaku.app-sivustosta.";
+const description =
+  "UKK Yhteishaku.app-sivustosta: datan lähteet Vipusesta ja Opintopolusta, hakijapaineen ja sisäänpääsyprosentin laskenta sekä tietojen päivittyminen.";
 
 const jsonLd = {
   "@context": "https://schema.org",

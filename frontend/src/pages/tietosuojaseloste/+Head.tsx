@@ -1,4 +1,5 @@
-const description = "Yhteishaku.app tietosuojaseloste.";
+const description =
+  "Yhteishaku.app-palvelun tietosuojaseloste: rekisterinpitäjä, analytiikka (Cloudflare, Simple Analytics) ja palautelomakkeen FormSubmit.";
 
 export function Head() {
   return (

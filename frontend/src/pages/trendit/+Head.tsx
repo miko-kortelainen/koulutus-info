@@ -1,4 +1,5 @@
-const description = "Suosituimmat koulutusalat, korkeakoulut ja sektorit yhteishaun hakijamäärien mukaan.";
+const description =
+  "Suosituimmat koulutusalat, korkeakoulut ja sektorit yhteishaun hakijamäärien perusteella sekä hakijamäärien vertailu vuosien välillä.";
 
 export function Head() {
   return (

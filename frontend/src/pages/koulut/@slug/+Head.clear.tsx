@@ -6,7 +6,7 @@ import type { SchoolPageData } from "./+data";
 export function Head() {
   const { schoolName } = useData<SchoolPageData>();
   const url = `https://yhteishaku.app/koulut/${slugify(schoolName)}/`;
-  const description = `${schoolName}: tutustu yhteishaun koulutuksiin, hakijamääriin, aloituspaikkoihin ja pisterajoihin.`;
+  const description = `${schoolName}: yhteishaun koulutukset, hakukohteiden hakijamäärät, aloituspaikat ja hakijapaine sekä linkit pisterajoihin.`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
+Disallow: /*?
 
 Sitemap: https://yhteishaku.app/sitemap.xml

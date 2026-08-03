@@ -7,7 +7,7 @@ import type { AlaPageData } from "./+data";
 export function Head() {
   const { alaName } = useData<AlaPageData>();
   const url = `https://yhteishaku.app/pisterajat/${slugify(alaName)}/`;
-  const description = `${alaName}: katso vuoden ${DEFAULT_CUTOFF_YEAR} yhteishaun pisterajat korkeakouluittain ja koulutuksittain.`;
+  const description = `${alaName}: vuoden ${DEFAULT_CUTOFF_YEAR} yhteishaun alimmat hyväksytyt pistemäärät kouluittain, koulutuksittain ja valintatavoittain.`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
