@@ -498,13 +498,14 @@ test("/koulutukset: card link opens ala-filtered pisterajat history", async ({ p
   // ala filter badge is active and scoped results exist
   const dismissBadge = page.getByRole("button", { name: "Poista alarajaus" });
   await expect(dismissBadge).toBeVisible({ timeout: 10000 });
-  await expect(page.getByText("Kauppa, hallinto ja oikeustieteet")).toBeVisible();
-  await expect(page.getByRole("article").first()).toBeVisible();
+  await expect(page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" })).toBeVisible();
+  const programmeList = page.getByRole("list", { name: "Pisterajat koulutusaloittain" });
+  await expect(programmeList.getByRole("button").first()).toBeVisible();
 
   // dismissing the badge widens to the school's full list
   await dismissBadge.click();
   await expect(dismissBadge).not.toBeVisible();
-  await expect(page.getByRole("article").first()).toBeVisible();
+  await expect(programmeList.getByRole("button").first()).toBeVisible();
 });
 
 test("/koulutukset: saving a card lists it on /oma-hakulista and unsaving clears it", async ({ page }) => {
@@ -699,17 +700,21 @@ test("/koulut/:slug/pisterajat: shows complete current-round programme cutoff ca
       name: `Centria-ammattikorkeakoulu – pisterajat ${DEFAULT_CUTOFF_YEAR}`,
     }),
   ).toBeVisible();
-  await expect(
-    page.getByText("Bachelor of Business Administration (BBA), Business Management, blended learning / Kokkola"),
-  ).toBeVisible();
+  await expect(page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Tekniikan alat" })).toBeVisible();
+
+  await page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" }).click();
+  const bba =
+    "Bachelor of Business Administration (BBA), Business Management, blended learning / Kokkola";
+  await expect(page.getByRole("heading", { name: bba })).toBeVisible();
   await expect(page.getByText("AMK-Valintakoe").first()).toBeVisible();
   await expect(page.getByText("25,7")).toBeVisible();
-  await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).toBeVisible();
 });
 
 test("/koulut/:slug/pisterajat: shows every selection method for a programme", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
 
+  await page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" }).click();
   await expect(page.getByText("AMK-Valintakoe", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (AMM)", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("Todistusvalinta (YO)", { exact: true }).first()).toBeVisible();
@@ -717,6 +722,7 @@ test("/koulut/:slug/pisterajat: shows every selection method for a programme", a
 
 test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
+  await page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" }).click();
   await expect(
     page.getByText("Bachelor of Business Administration (BBA), Business Management, blended learning / Kokkola"),
   ).toBeVisible({ timeout: 10000 });
@@ -731,10 +737,12 @@ test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => 
 
 test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ page }) => {
   await page.goto("/koulut/centria-ammattikorkeakoulu/pisterajat/");
+  await page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" }).click();
 
   await expect(page.getByText("Tradenomi (AMK), liiketalous, monimuotototeutus / Pietarsaari")).not.toBeVisible();
 
   await selectOption(page, "Hakukierros", "Syksyn yhteishaku 2024");
+  await page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" }).click();
 
   await expect(page.getByRole("heading", { name: "Centria-ammattikorkeakoulu – pisterajat 2024" })).toBeVisible();
   await expect(page.getByText("Tradenomi (AMK), liiketalous, monimuotototeutus / Pietarsaari")).toBeVisible();

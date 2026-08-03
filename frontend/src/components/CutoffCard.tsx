@@ -6,6 +6,7 @@ import { COLORS } from "@/theme";
 interface CutoffCardProps {
   programme: ProgrammeWithRounds;
   headingLevel?: "h2" | "h3";
+  showHeading?: boolean;
   showRound?: boolean;
 }
 
@@ -51,20 +52,27 @@ function CutoffRow({ cutoff, showRound }: CutoffRowProps) {
   );
 }
 
-export default function CutoffCard({ programme, headingLevel = "h2", showRound = false }: CutoffCardProps) {
+export default function CutoffCard({
+  programme,
+  headingLevel = "h2",
+  showHeading = true,
+  showRound = false,
+}: CutoffCardProps) {
   const sorted = [...programme.cutoffs].sort(
     (a, b) => b.startYear - a.startYear || b.startSeason.localeCompare(a.startSeason, "fi"),
   );
 
   return (
     <Card.Root as="article" size="md">
-      <Card.Header pb={3}>
-        <Heading as={headingLevel} fontSize={{ base: "xs", md: "md" }} fontWeight="semibold" textWrap="pretty">
-          {programme.name}
-        </Heading>
-        <Separator />
-      </Card.Header>
-      <Card.Body pt={0}>
+      {showHeading ? (
+        <Card.Header pb={3}>
+          <Heading as={headingLevel} fontSize={{ base: "xs", md: "md" }} fontWeight="semibold" textWrap="pretty">
+            {programme.name}
+          </Heading>
+          <Separator />
+        </Card.Header>
+      ) : null}
+      <Card.Body pt={showHeading ? 0 : undefined}>
         <Stack gap={1}>
           {sorted.map((cutoff) => (
             <CutoffRow
