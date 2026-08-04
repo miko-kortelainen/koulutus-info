@@ -1,4 +1,4 @@
-import { Accordion, Box, Flex, Heading, Input, Link, Stack, Text, chakra } from "@chakra-ui/react";
+import { Accordion, Box, Field, Flex, Heading, Input, Link, Stack, Text, chakra } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import Pagination from "@/components/Pagination";
@@ -24,6 +24,7 @@ const selectProps = {
   fontSize: "sm",
   px: 3,
   py: 2,
+  width: "full",
 } as const;
 
 export default function EnnakointiPage() {
@@ -103,11 +104,12 @@ export default function EnnakointiPage() {
 
           <Stack aria-label="Koulutustarpeet" as="section" gap={6}>
             <Flex direction={{ base: "column", md: "row" }} gap={6}>
-              <Box as="label" display="flex" flex="1" flexDirection="column" gap={1}>
-                <Text color="fg.muted" fontSize="xs">
+              <Field.Root flex="1" gap={1}>
+                <Field.Label color="fg.muted" fontSize="xs">
                   Haku
-                </Text>
+                </Field.Label>
                 <Input
+                  aria-label="Haku"
                   fontSize="sm"
                   minHeight={9}
                   onChange={(e) => {
@@ -119,13 +121,14 @@ export default function EnnakointiPage() {
                   type="search"
                   value={search}
                 />
-              </Box>
-              <Box as="label" display="flex" flex="1" flexDirection="column" gap={1} maxW={{ md: "16rem" }}>
-                <Text color="fg.muted" fontSize="xs">
+              </Field.Root>
+              <Field.Root flex="1" gap={1} maxW={{ md: "16rem" }}>
+                <Field.Label color="fg.muted" fontSize="xs">
                   Sektori
-                </Text>
+                </Field.Label>
                 <chakra.select
                   {...selectProps}
+                  aria-label="Sektori"
                   onChange={(e) => {
                     setSektori(e.target.value as SektoriFilter);
                     setPage(1);
@@ -136,13 +139,14 @@ export default function EnnakointiPage() {
                   <option value="Ammattikorkeakoulu">Ammattikorkeakoulu</option>
                   <option value="Yliopisto">Yliopisto</option>
                 </chakra.select>
-              </Box>
-              <Box as="label" display="flex" flex="1" flexDirection="column" gap={1} maxW={{ md: "16rem" }}>
-                <Text color="fg.muted" fontSize="xs">
+              </Field.Root>
+              <Field.Root flex="1" gap={1} maxW={{ md: "16rem" }}>
+                <Field.Label color="fg.muted" fontSize="xs">
                   Järjestys
-                </Text>
+                </Field.Label>
                 <chakra.select
                   {...selectProps}
+                  aria-label="Järjestys"
                   onChange={(e) => {
                     setSort(e.target.value as VajeSort);
                     setPage(1);
@@ -154,7 +158,7 @@ export default function EnnakointiPage() {
                   <option value="a-o">A-Ö</option>
                   <option value="o-a">Ö-A</option>
                 </chakra.select>
-              </Box>
+              </Field.Root>
             </Flex>
 
             <Text color="fg.muted" fontSize="sm" role="status">
