@@ -1,7 +1,7 @@
 import { CURRENT_YEAR, statisticsRoundShortLabel } from "@/config/yearOptions";
 
 export function Head() {
-  const description = `Selaa korkeakoulujen yhteishaun hakijamääriä yhteishausta ${statisticsRoundShortLabel(CURRENT_YEAR)}.`;
+  const description = `Korkeakoulujen yhteishaun hakijamäärät (${statisticsRoundShortLabel(CURRENT_YEAR)}): hakijat, aloituspaikat, sisäänpääsyprosentit ja hakijapaine hakukohteittain.`;
 
   return (
     <>

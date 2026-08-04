@@ -34,6 +34,20 @@ export type FeedbackMaxScore = 5 | 7;
 
 export type StudentFeedbackDataset = Record<string, StudentFeedback>;
 
+export type EnnakointiSektori = "Ammattikorkeakoulu" | "Yliopisto";
+
+export interface EnnakointiKoulutustarveItem {
+  sektori: EnnakointiSektori;
+  koodi: string;
+  ala: string;
+  tarve2045: number;
+  tuotosNuoret: number;
+}
+
+export interface EnnakointiKoulutustarpeet {
+  items: EnnakointiKoulutustarveItem[];
+}
+
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
 
@@ -166,4 +180,28 @@ export const parseStudentFeedback = (
     throw new Error(`Invalid data in ${source}`);
   }
   return value as StudentFeedbackDataset;
+};
+
+const isEnnakointiSektori = (value: unknown): value is EnnakointiSektori =>
+  value === "Ammattikorkeakoulu" || value === "Yliopisto";
+
+const isEnnakointiKoulutustarveItem = (value: unknown) =>
+  isRecord(value) &&
+  isEnnakointiSektori(value.sektori) &&
+  isString(value.koodi) &&
+  isString(value.ala) &&
+  isNonNegativeInteger(value.tarve2045) &&
+  isNonNegativeInteger(value.tuotosNuoret);
+
+export const parseKoulutustarpeet = (value: unknown, source: string): EnnakointiKoulutustarpeet => {
+  if (!isRecord(value) || !Array.isArray(value.items) || !value.items.every(isEnnakointiKoulutustarveItem)) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+  const keys = new Set<string>();
+  for (const item of value.items as EnnakointiKoulutustarveItem[]) {
+    const key = `${item.sektori}:${item.koodi}`;
+    if (keys.has(key)) throw new Error(`Invalid data in ${source}: duplicate (${item.sektori}, ${item.koodi})`);
+    keys.add(key);
+  }
+  return value as unknown as EnnakointiKoulutustarpeet;
 };

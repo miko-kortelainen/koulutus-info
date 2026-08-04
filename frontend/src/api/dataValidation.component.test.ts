@@ -1,5 +1,11 @@
 import { expect, test } from "vitest";
-import { parseCutoffSchools, parseSchools, parseStatistics, parseStudentFeedback } from "./dataValidation";
+import {
+  parseCutoffSchools,
+  parseKoulutustarpeet,
+  parseSchools,
+  parseStatistics,
+  parseStudentFeedback,
+} from "./dataValidation";
 
 const statistics = {
   kooditHakukohde: "1.2.246.562.20.00000000001",
@@ -130,4 +136,33 @@ test("validates feedback averages against the survey scale", () => {
 
   expect(parseStudentFeedback(amkFeedback, "amk-palaute.json", 7)).toEqual(amkFeedback);
   expect(() => parseStudentFeedback(amkFeedback, "amk-palaute.json", 5)).toThrow("Invalid data in amk-palaute.json");
+});
+
+const koulutustarveItem = {
+  sektori: "Ammattikorkeakoulu" as const,
+  koodi: "amk-1",
+  ala: "Sairaanhoitaja (AMK)",
+  tarve2045: 4200,
+  tuotosNuoret: 2800,
+};
+
+test("accepts valid koulutustarpeet", () => {
+  expect(parseKoulutustarpeet({ items: [koulutustarveItem] }, "ennakointi/koulutustarpeet.json")).toEqual({
+    items: [koulutustarveItem],
+  });
+});
+
+test("rejects ammatillinen sektori in koulutustarpeet", () => {
+  expect(() =>
+    parseKoulutustarpeet(
+      { items: [{ ...koulutustarveItem, sektori: "Ammatillinen koulutus" as "Ammattikorkeakoulu" }] },
+      "ennakointi/koulutustarpeet.json",
+    ),
+  ).toThrow("Invalid data in ennakointi/koulutustarpeet.json");
+});
+
+test("rejects duplicate koulutustarve keys", () => {
+  expect(() =>
+    parseKoulutustarpeet({ items: [koulutustarveItem, { ...koulutustarveItem }] }, "ennakointi/koulutustarpeet.json"),
+  ).toThrow("duplicate");
 });
