@@ -1,7 +1,9 @@
 import fs from "node:fs";
 import {
   type FeedbackMaxScore,
+  type EnnakointiKoulutustarpeet,
   parseCutoffSchools,
+  parseKoulutustarpeet,
   parseSchools,
   parseStatistics,
   parseStudentFeedback,
@@ -155,3 +157,6 @@ export const readStudentFeedback = (): Record<string, StudentFeedbackEntry> => {
 
 export const feedbackSchoolNames = (): string[] =>
   Object.keys(readStudentFeedback()).sort((a, b) => a.localeCompare(b, "fi"));
+
+export const readKoulutustarpeet = (): EnnakointiKoulutustarpeet =>
+  readPublicData("ennakointi/koulutustarpeet.json", parseKoulutustarpeet);

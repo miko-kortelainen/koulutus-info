@@ -31,7 +31,7 @@ const priorityFor = (path: string) => {
   if (path === "/") return "1.0";
   if (hubPaths.has(path)) return "0.9";
   if (utilityPaths.has(path)) return "0.4";
-  if (path === "/ukk/") return "0.6";
+  if (path === "/ukk/" || path === "/ennakointi/") return "0.6";
   if ((path.startsWith("/koulut/") && path !== "/koulut/") || path.startsWith("/pisterajat/")) return "0.7";
   return "0.8";
 };
@@ -44,6 +44,9 @@ const lastmodFor = (path: string) => {
     return cutoffsLastmod;
   }
   if (path === "/koulut/" || path.startsWith("/koulut/")) return schoolsLastmod;
+  if (path === "/ennakointi/") {
+    return latestModifiedDate(["ennakointi/koulutustarpeet.json"]);
+  }
   return guideLastmods.get(path);
 };
 
@@ -60,6 +63,7 @@ const paths = [
   "/koulut/",
   "/trendit/",
   "/ukk/",
+  "/ennakointi/",
   "/tietosuojaseloste/",
   ...schoolNames().map((name) => `/koulut/${slugify(name)}/`),
   ...cutoffSchoolNames().map((name) => `/koulut/${slugify(name)}/pisterajat/`),

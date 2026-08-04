@@ -1,4 +1,5 @@
-const description = "Selaa yhteishaussa mukana olevia yliopistoja ja ammattikorkeakouluja sekä niiden hakijamääriä.";
+const description =
+  "Yhteishaun yliopistot ja ammattikorkeakoulut: hakijamäärät, sisäänpääsyprosentit, hakijapaine ja opiskelijapalautteen keskiarvot.";
 
 export function Head() {
   return (
