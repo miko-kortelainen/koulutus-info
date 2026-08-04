@@ -806,3 +806,13 @@ test("/trendit: shows a comparison loading error", async ({ page }) => {
   await expect(page.getByText("Vertailutietojen lataaminen epäonnistui.")).toBeVisible({ timeout: 15000 });
   await expect(page.getByText("uusi", { exact: true })).toHaveCount(0);
 });
+
+test("/ennakointi: shows ranked vaje list and filters by sektori", async ({ page }) => {
+  await page.goto("/ennakointi/");
+  await expect(page.getByRole("heading", { exact: true, level: 1, name: "Ennakointi" })).toBeVisible();
+  await expect(page.getByText("Hoitotyö", { exact: true })).toBeVisible();
+
+  await page.getByLabel("Sektori").selectOption("Yliopisto");
+  await expect(page.getByText("Hoitotyö", { exact: true })).toHaveCount(0);
+  await expect(page.getByText("Sosiaalitieteet", { exact: true })).toBeVisible();
+});
