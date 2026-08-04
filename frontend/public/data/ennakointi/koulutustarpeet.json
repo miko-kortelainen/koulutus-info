@@ -1,0 +1,669 @@
+{
+  "items": [
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0913",
+      "ala": "Hoitotyö",
+      "tarve2045": 3568,
+      "tuotosNuoret": 2723
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0418",
+      "ala": "Kauppa ja hallinto, monialaiset koulutusohjelmat",
+      "tarve2045": 3065,
+      "tuotosNuoret": 3809
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0923",
+      "ala": "Sosiaalityö ja -ohjaus",
+      "tarve2045": 2796,
+      "tuotosNuoret": 1302
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0418",
+      "ala": "Kauppa ja hallinto, monialaiset koulutusohjelmat",
+      "tarve2045": 2270,
+      "tuotosNuoret": 1683
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0618",
+      "ala": "Tietojenkäsittely- ja tietoliikenne ICT), monialaiset koulutusohjelmat",
+      "tarve2045": 1719,
+      "tuotosNuoret": 1246
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0618",
+      "ala": "Tietojenkäsittely- ja tietoliikenne ICT), monialaiset koulutusohjelmat",
+      "tarve2045": 1601,
+      "tuotosNuoret": 1075
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0732",
+      "ala": "Rakentaminen ja rakennussuunnittelu",
+      "tarve2045": 1378,
+      "tuotosNuoret": 788
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0112",
+      "ala": "Varhaiskasvatuksen opettajien koulutus",
+      "tarve2045": 789,
+      "tuotosNuoret": 419
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0113",
+      "ala": "Luokanopettajien koulutus",
+      "tarve2045": 775,
+      "tuotosNuoret": 693
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0912",
+      "ala": "Lääketiede",
+      "tarve2045": 763,
+      "tuotosNuoret": 609
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0421",
+      "ala": "Oikeustieteet",
+      "tarve2045": 741,
+      "tuotosNuoret": 520
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0915",
+      "ala": "Kuntoutus",
+      "tarve2045": 737,
+      "tuotosNuoret": 605
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0231",
+      "ala": "Kielten opiskelu",
+      "tarve2045": 722,
+      "tuotosNuoret": 340
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0314",
+      "ala": "Sosiaalitieteet",
+      "tarve2045": 715,
+      "tuotosNuoret": 332
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0715",
+      "ala": "Mekaniikka ja metalliala",
+      "tarve2045": 697,
+      "tuotosNuoret": 561
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0718",
+      "ala": "Kone-, energia- ja sähkötekniikka, monialaiset koulutusohjelmat",
+      "tarve2045": 672,
+      "tuotosNuoret": 383
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0713",
+      "ala": "Sähkö ja energia",
+      "tarve2045": 631,
+      "tuotosNuoret": 507
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0718",
+      "ala": "Kone-, energia- ja sähkötekniikka, monialaiset koulutusohjelmat",
+      "tarve2045": 598,
+      "tuotosNuoret": 403
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0111",
+      "ala": "Kasvatustieteet",
+      "tarve2045": 584,
+      "tuotosNuoret": 382
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0312",
+      "ala": "Valtiotieteet",
+      "tarve2045": 555,
+      "tuotosNuoret": 325
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0713",
+      "ala": "Sähkö ja energia",
+      "tarve2045": 513,
+      "tuotosNuoret": 469
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0715",
+      "ala": "Mekaniikka ja metalliala",
+      "tarve2045": 419,
+      "tuotosNuoret": 267
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0313",
+      "ala": "Psykologia",
+      "tarve2045": 409,
+      "tuotosNuoret": 217
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0222",
+      "ala": "Historia ja arkeologia",
+      "tarve2045": 407,
+      "tuotosNuoret": 218
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0211",
+      "ala": "Audiovisuaaliset tekniikat ja media",
+      "tarve2045": 393,
+      "tuotosNuoret": 290
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0914",
+      "ala": "Terveystekniikka, kuvantaminen ja bioanalytiikka",
+      "tarve2045": 379,
+      "tuotosNuoret": 293
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "1013",
+      "ala": "Hotelli- ja ravintola-ala",
+      "tarve2045": 372,
+      "tuotosNuoret": 286
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0916",
+      "ala": "Farmasia",
+      "tarve2045": 341,
+      "tuotosNuoret": 76
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "1015",
+      "ala": "Matkailu, turismi ja vapaa-aika",
+      "tarve2045": 338,
+      "tuotosNuoret": 374
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0918",
+      "ala": "Terveys, monialaiset koulutusohjelmat",
+      "tarve2045": 316,
+      "tuotosNuoret": 112
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0232",
+      "ala": "Kirjallisuus ja kielitiede",
+      "tarve2045": 313,
+      "tuotosNuoret": 180
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0714",
+      "ala": "Elektroniikka ja automatiikka",
+      "tarve2045": 289,
+      "tuotosNuoret": 186
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0732",
+      "ala": "Rakentaminen ja rakennussuunnittelu",
+      "tarve2045": 280,
+      "tuotosNuoret": 170
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0318",
+      "ala": "Sosiaali- ja käyttäytymistieteet, monialaiset koulutusohjelmat",
+      "tarve2045": 271,
+      "tuotosNuoret": 170
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0731",
+      "ala": "Arkkitehtuuri ja kaupunkisuunnittelu",
+      "tarve2045": 261,
+      "tuotosNuoret": 188
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0215",
+      "ala": "Musiikki ja esittävät taiteet",
+      "tarve2045": 260,
+      "tuotosNuoret": 149
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0711",
+      "ala": "Kemian tekniikka ja prosessit",
+      "tarve2045": 250,
+      "tuotosNuoret": 164
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0218",
+      "ala": "Taidealat, monialaiset koulutusohjelmat",
+      "tarve2045": 248,
+      "tuotosNuoret": 150
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0711",
+      "ala": "Kemian tekniikka ja prosessit",
+      "tarve2045": 242,
+      "tuotosNuoret": 290
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0221",
+      "ala": "Uskonto ja teologia",
+      "tarve2045": 235,
+      "tuotosNuoret": 62
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0212",
+      "ala": "Muoti, sisustussunnittelu ja teollinen muotoilu",
+      "tarve2045": 231,
+      "tuotosNuoret": 219
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0511",
+      "ala": "Biologia",
+      "tarve2045": 208,
+      "tuotosNuoret": 144
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0541",
+      "ala": "Matematiikka",
+      "tarve2045": 203,
+      "tuotosNuoret": 154
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0532",
+      "ala": "Geotieteet",
+      "tarve2045": 202,
+      "tuotosNuoret": 107
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0321",
+      "ala": "Viestintätieteet",
+      "tarve2045": 192,
+      "tuotosNuoret": 108
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0821",
+      "ala": "Metsätalous",
+      "tarve2045": 188,
+      "tuotosNuoret": 137
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0533",
+      "ala": "Fysiikka",
+      "tarve2045": 172,
+      "tuotosNuoret": 156
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0712",
+      "ala": "Ympäristönsuojeluteknologia",
+      "tarve2045": 171,
+      "tuotosNuoret": 163
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0716",
+      "ala": "Moottoriajoneuvo-, laiva- ja lentokonetekniikka",
+      "tarve2045": 170,
+      "tuotosNuoret": 133
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0218",
+      "ala": "Taidealat, monialaiset koulutusohjelmat",
+      "tarve2045": 159,
+      "tuotosNuoret": 122
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0512",
+      "ala": "Biokemia",
+      "tarve2045": 157,
+      "tuotosNuoret": 214
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0114",
+      "ala": "Aineenopettajien koulutus",
+      "tarve2045": 157,
+      "tuotosNuoret": 89
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0911",
+      "ala": "Suun terveydenhuolto",
+      "tarve2045": 148,
+      "tuotosNuoret": 127
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0714",
+      "ala": "Elektroniikka ja automatiikka",
+      "tarve2045": 142,
+      "tuotosNuoret": 49
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0531",
+      "ala": "Kemia",
+      "tarve2045": 140,
+      "tuotosNuoret": 116
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0114",
+      "ala": "Aineenopettajien koulutus",
+      "tarve2045": 138,
+      "tuotosNuoret": 122
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0911",
+      "ala": "Suun terveydenhuolto",
+      "tarve2045": 126,
+      "tuotosNuoret": 94
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0521",
+      "ala": "Ympäristötieteet",
+      "tarve2045": 123,
+      "tuotosNuoret": 94
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0712",
+      "ala": "Ympäristönsuojeluteknologia",
+      "tarve2045": 122,
+      "tuotosNuoret": 101
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0811",
+      "ala": "Viljan ja karjantuotanto",
+      "tarve2045": 117,
+      "tuotosNuoret": 144
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0311",
+      "ala": "Kansantaloustiede",
+      "tarve2045": 116,
+      "tuotosNuoret": 83
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "1014",
+      "ala": "Urheilu ja liikunta",
+      "tarve2045": 108,
+      "tuotosNuoret": 106
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0821",
+      "ala": "Metsätalous",
+      "tarve2045": 100,
+      "tuotosNuoret": 67
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "1014",
+      "ala": "Urheilu ja liikunta",
+      "tarve2045": 95,
+      "tuotosNuoret": 178
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0500",
+      "ala": "Luonnontieteet, yleiset koulutusohjelmat",
+      "tarve2045": 94,
+      "tuotosNuoret": 22
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0728",
+      "ala": "Tuotanto- ja prosessitekniikka, monialaiset koulutusohjelmat",
+      "tarve2045": 93,
+      "tuotosNuoret": 100
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0841",
+      "ala": "Eläinlääketiede",
+      "tarve2045": 90,
+      "tuotosNuoret": 51
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0728",
+      "ala": "Tuotanto- ja prosessitekniikka, monialaiset koulutusohjelmat",
+      "tarve2045": 84,
+      "tuotosNuoret": 40
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0818",
+      "ala": "Maa- ja metsätalousalat, monialaiset koulutusohjelmat",
+      "tarve2045": 84,
+      "tuotosNuoret": 45
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0731",
+      "ala": "Arkkitehtuuri ja kaupunkisuunnittelu",
+      "tarve2045": 81,
+      "tuotosNuoret": 37
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0223",
+      "ala": "Filosofia ja etiikka",
+      "tarve2045": 80,
+      "tuotosNuoret": 13
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0310",
+      "ala": "Sosiaali- ja käyttäytymistieteet, yleiset koulutusohjelmat",
+      "tarve2045": 73,
+      "tuotosNuoret": 20
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0213",
+      "ala": "Kuvataiteet",
+      "tarve2045": 72,
+      "tuotosNuoret": 27
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0918",
+      "ala": "Terveys, monialaiset koulutusohjelmat",
+      "tarve2045": 72,
+      "tuotosNuoret": 21
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0811",
+      "ala": "Viljan ja karjantuotanto",
+      "tarve2045": 63,
+      "tuotosNuoret": 38
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0410",
+      "ala": "Kauppa ja hallinto, yleiset koulutusohjelmat",
+      "tarve2045": 62,
+      "tuotosNuoret": 11
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0215",
+      "ala": "Musiikki ja esittävät taiteet",
+      "tarve2045": 62,
+      "tuotosNuoret": 40
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0213",
+      "ala": "Kuvataiteet",
+      "tarve2045": 56,
+      "tuotosNuoret": 62
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "1041",
+      "ala": "Kuljetuspalvelut",
+      "tarve2045": 56,
+      "tuotosNuoret": 54
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0322",
+      "ala": "Kirjasto- ja informaatiotieteet",
+      "tarve2045": 49,
+      "tuotosNuoret": 14
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0542",
+      "ala": "Tilastotiede",
+      "tarve2045": 42,
+      "tuotosNuoret": 30
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0231",
+      "ala": "Kielten opiskelu",
+      "tarve2045": 38,
+      "tuotosNuoret": 39
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0722",
+      "ala": "Materiaalitekniikka (lasi, paperi, muovi ja puu)",
+      "tarve2045": 36,
+      "tuotosNuoret": 5
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0812",
+      "ala": "Puutarhanhoito",
+      "tarve2045": 35,
+      "tuotosNuoret": 21
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "1012",
+      "ala": "Hiusten ja kauneudenhoitopalvelut",
+      "tarve2045": 31,
+      "tuotosNuoret": 39
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0528",
+      "ala": "Ympäristöalat, monialaiset koulutusohjelmat",
+      "tarve2045": 28,
+      "tuotosNuoret": 17
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0220",
+      "ala": "Humanistiset alat (paitsi kielet)",
+      "tarve2045": 25,
+      "tuotosNuoret": 31
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0528",
+      "ala": "Ympäristöalat, monialaiset koulutusohjelmat",
+      "tarve2045": 22,
+      "tuotosNuoret": 14
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "1015",
+      "ala": "Matkailu, turismi ja vapaa-aika",
+      "tarve2045": 21,
+      "tuotosNuoret": 14
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0800",
+      "ala": "Maa- ja metsätalousalat, yleiset koulutusohjelmat",
+      "tarve2045": 20,
+      "tuotosNuoret": 2
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0210",
+      "ala": "Taidealat, yleiset koulutusohjelmat",
+      "tarve2045": 20,
+      "tuotosNuoret": 3
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0214",
+      "ala": "Käsityöalat",
+      "tarve2045": 16,
+      "tuotosNuoret": 2
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0723",
+      "ala": "Tekstiilitekniikka (vaatteet, jalkineet ja nahkatuotteet)",
+      "tarve2045": 14,
+      "tuotosNuoret": 0
+    },
+    {
+      "sektori": "Ammattikorkeakoulu",
+      "koodi": "0210",
+      "ala": "Taidealat, yleiset koulutusohjelmat",
+      "tarve2045": 6,
+      "tuotosNuoret": 0
+    },
+    {
+      "sektori": "Yliopisto",
+      "koodi": "0724",
+      "ala": "Kaivos- ja rikastustekniikka",
+      "tarve2045": 2,
+      "tuotosNuoret": 10
+    }
+  ]
+}
