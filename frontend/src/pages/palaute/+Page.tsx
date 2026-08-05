@@ -61,7 +61,7 @@ export default function PalautePage() {
         <Button
           alignSelf="flex-end"
           bg={COLORS.accent}
-          color={COLORS.text}
+          color={COLORS.onAccent}
           loading={status === "sending"}
           size="sm"
           type="submit"

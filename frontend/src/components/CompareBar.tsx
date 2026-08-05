@@ -37,6 +37,7 @@ export default function CompareBar({ selected, year, onRemove }: CompareBarProps
             <Button
               asChild={!!compareHref}
               bg={COLORS.accent}
+              color={COLORS.onAccent}
               disabled={!compareHref}
               size={{ base: "xs", md: "sm" }}
               variant="solid"

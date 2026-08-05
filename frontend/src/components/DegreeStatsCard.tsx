@@ -97,8 +97,8 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
         href={`/koulut/${slugify(degree.korkeakoulu ?? "")}/`}
         textDecor="none"
       >
-        <Badge bg="accent" size="sm">
-          <HiLocationMarker aria-hidden="true" color={COLORS.text} /> {degree.korkeakoulu}
+        <Badge bg="accent" color="onAccent" size="sm">
+          <HiLocationMarker aria-hidden="true" /> {degree.korkeakoulu}
         </Badge>
       </Link>
       <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" textWrap="pretty">
@@ -110,13 +110,12 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
   const footer = (
     <HStack flexWrap="wrap" gap={2} justify="space-between">
       <Badge
-        bg={tier ? `color-mix(in srgb, ${tier.bg} 14%, ${COLORS.bg})` : undefined}
-        color={tier?.bg}
+        bg={tier?.bg}
+        color={tier?.color}
         fontWeight="semibold"
         height={6}
         rounded="sm"
         size={{ base: "sm", md: "md" }}
-        variant="subtle"
       >
         {tier ? `${tier.label} hakijapaine` : "Määrittämätön hakijapaine"}
       </Badge>
@@ -124,7 +123,7 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
         <Button
           bg={isSelected ? COLORS.accent : undefined}
           borderColor="accent"
-          color={isSelected ? COLORS.bg : "fg.accent"}
+          color={isSelected ? COLORS.onAccent : "fg.accent"}
           disabled={!isSelected && selectionFull}
           height={6}
           onClick={() => onToggleCompare(degree)}

@@ -1,5 +1,6 @@
-import { ChakraProvider, Theme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ColorModeProvider } from "@/components/color-mode";
 import { system } from "@/theme";
 
 let browserQueryClient: QueryClient | undefined;
@@ -16,7 +17,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider value={system}>
-        <Theme appearance="light">{children}</Theme>
+        <ColorModeProvider>{children}</ColorModeProvider>
       </ChakraProvider>
     </QueryClientProvider>
   );

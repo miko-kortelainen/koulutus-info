@@ -92,18 +92,17 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
   const footer = (
     <HStack flexWrap="wrap" gap={4} justify="space-between">
       <Badge
-        bg={tier ? `color-mix(in srgb, ${tier.bg} 14%, ${COLORS.bg})` : undefined}
-        color={tier?.bg}
+        bg={tier?.bg}
+        color={tier?.color}
         fontWeight="semibold"
         height={6}
         rounded="sm"
         size={{ base: "sm", md: "md" }}
-        variant="subtle"
       >
         {tier ? `${tier.label} hakijapaine` : "Määrittämätön hakijapaine"}
       </Badge>
       {school.koulutuksia > 0 ? (
-        <Badge bg={COLORS.accent} color={COLORS.text} fontWeight="semibold" height={6} rounded="sm" size="sm">
+        <Badge bg={COLORS.accent} color={COLORS.onAccent} fontWeight="semibold" height={6} rounded="sm" size="sm">
           Mukana syksyn yhteishaussa!
         </Badge>
       ) : null}

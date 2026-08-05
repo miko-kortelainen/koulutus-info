@@ -11,6 +11,7 @@ import {
   HiOutlineSparkles,
   HiOutlineTrendingUp,
 } from "react-icons/hi";
+import { ColorModeButton } from "@/components/color-mode";
 import { COLORS } from "@/theme";
 
 const links = [
@@ -133,6 +134,9 @@ export default function Header() {
                     </Stack>
                   </Box>
                 </Drawer.Body>
+                <Drawer.Footer borderColor="border.subtle" justifyContent="flex-start" pt={4}>
+                  <ColorModeButton />
+                </Drawer.Footer>
                 <Drawer.CloseTrigger asChild>
                   <CloseButton aria-label="sulje navigointi" size="xl" />
                 </Drawer.CloseTrigger>

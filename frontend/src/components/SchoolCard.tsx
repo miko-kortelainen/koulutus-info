@@ -26,7 +26,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
     <Badge
       asChild
       bg={COLORS.accent}
-      color={COLORS.text}
+      color={COLORS.onAccent}
       fontWeight="semibold"
       letterSpacing="wide"
       mb={2}

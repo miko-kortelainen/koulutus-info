@@ -22,8 +22,12 @@ export default function ApplicantTotalsChart({ chartData, color, title }: Applic
           style={{ height: "100%", width: "100%" }}
         >
           <CartesianGrid stroke="var(--chakra-colors-border-subtle)" strokeDasharray="3 3" />
-          <XAxis dataKey="year" tick={{ fontSize: 12 }} />
-          <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => numberFormat.format(v)} width={32} />
+          <XAxis dataKey="year" tick={{ fill: "var(--chakra-colors-fg-muted)", fontSize: 12 }} />
+          <YAxis
+            tick={{ fill: "var(--chakra-colors-fg-muted)", fontSize: 11 }}
+            tickFormatter={(v) => numberFormat.format(v)}
+            width={32}
+          />
           <Tooltip />
           <Line
             activeDot={{ r: 6 }}

@@ -192,6 +192,7 @@ export default function ScoreForm({ onModeChange, onSubmit, round }: ScoreFormPr
           <Box display="flex" justifyContent="flex-end">
             <Button
               bg={COLORS.accent}
+              color={COLORS.onAccent}
               loading={isCalculating}
               mt={4}
               size="xs"
