@@ -105,7 +105,7 @@ export default function Header() {
                     </Text>
                   </Drawer.Title>
                 </Drawer.Header>
-                <Drawer.Body>
+                <Drawer.Body pb={{ base: 10, md: 4 }}>
                   <Box aria-label="Päänavigointi" as="nav">
                     <Stack as="ul" fontSize="xl" gap={{ base: 8, md: 10 }} listStyleType="none">
                       {links.map(({ href, label, description, icon: Icon }) => (
@@ -131,12 +131,12 @@ export default function Header() {
                           </Drawer.ActionTrigger>
                         </Box>
                       ))}
+                      <Box as="li">
+                        <ColorModeButton />
+                      </Box>
                     </Stack>
                   </Box>
                 </Drawer.Body>
-                <Drawer.Footer borderColor="border.subtle" justifyContent="flex-start" pt={4}>
-                  <ColorModeButton />
-                </Drawer.Footer>
                 <Drawer.CloseTrigger asChild>
                   <CloseButton aria-label="sulje navigointi" size="xl" />
                 </Drawer.CloseTrigger>

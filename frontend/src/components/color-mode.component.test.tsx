@@ -10,25 +10,26 @@ test("toggles appearance and persists the choice", async () => {
 
   renderWithChakra(<ColorModeButton />);
 
-  const toggle = await screen.findByRole("button", { name: "Tumma teema" });
+  const toggle = await screen.findByRole("button", { name: /tumma teema/i });
   await waitFor(() => {
     expect(toggle).toBeEnabled();
   });
   expect(toggle).toHaveAttribute("aria-pressed", "false");
+  expect(toggle).toHaveTextContent("Vaihda tummaan ulkoasuun");
 
   await user.click(toggle);
 
-  expect(toggle).toHaveAttribute("aria-pressed", "true");
+  expect(screen.getByRole("button", { name: /vaalea teema/i })).toHaveAttribute("aria-pressed", "true");
   expect(localStorage.getItem(APPEARANCE_STORAGE_KEY)).toBe("dark");
   expect(document.documentElement.classList.contains("dark")).toBe(true);
 
   await waitFor(() => {
-    expect(toggle).toBeEnabled();
+    expect(screen.getByRole("button", { name: /vaalea teema/i })).toBeEnabled();
   });
-  await user.click(toggle);
+  await user.click(screen.getByRole("button", { name: /vaalea teema/i }));
 
   await waitFor(() => {
-    expect(screen.getByRole("button", { name: "Tumma teema" })).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getByRole("button", { name: /tumma teema/i })).toHaveAttribute("aria-pressed", "false");
   });
   expect(localStorage.getItem(APPEARANCE_STORAGE_KEY)).toBe("light");
   expect(document.documentElement.classList.contains("dark")).toBe(false);
@@ -40,7 +41,7 @@ test("ignores rapid repeat clicks during cooldown", async () => {
 
   renderWithChakra(<ColorModeButton />);
 
-  const toggle = await screen.findByRole("button", { name: "Tumma teema" });
+  const toggle = await screen.findByRole("button", { name: /tumma teema/i });
   await waitFor(() => {
     expect(toggle).toBeEnabled();
   });
@@ -48,6 +49,6 @@ test("ignores rapid repeat clicks during cooldown", async () => {
   await user.click(toggle);
   await user.click(toggle);
 
-  expect(await screen.findByRole("button", { name: "Tumma teema" })).toHaveAttribute("aria-pressed", "true");
+  expect(await screen.findByRole("button", { name: /vaalea teema/i })).toHaveAttribute("aria-pressed", "true");
   expect(localStorage.getItem(APPEARANCE_STORAGE_KEY)).toBe("dark");
 });
