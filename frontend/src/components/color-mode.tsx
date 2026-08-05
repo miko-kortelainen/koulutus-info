@@ -33,7 +33,7 @@ export function ColorModeButton() {
 
   return (
     <IconButton
-      aria-label={isDark ? "Vaalea teema" : "Tumma teema"}
+      aria-label="Tumma teema"
       aria-pressed={mounted ? isDark : undefined}
       disabled={!mounted || busy}
       onClick={() => {
