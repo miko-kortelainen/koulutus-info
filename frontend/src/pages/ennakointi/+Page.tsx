@@ -12,10 +12,10 @@ import { filterAndSortVajeRows, statusLabel, type SektoriFilter, type VajeSort }
 
 const PAGE_SIZE = 10;
 const BAR_H = "8";
-/** Ylituotos bar — viz map constant until theme token exists */
-const YLITUOTOS_BAR = "oklch(0.72 0.14 55)";
-/** Full-width bar track */
-const BAR_TRACK = "oklch(0.266 0.008 17.636 / 0.12)";
+/** Ylituotos bar — appearance-tuned viz token */
+const YLITUOTOS_BAR = "var(--chakra-colors-viz-ylituotos)";
+/** Full-width bar track — follows appearance via border.subtle */
+const BAR_TRACK = "var(--chakra-colors-border-subtle)";
 const selectProps = {
   bg: "bg",
   borderColor: "border",
