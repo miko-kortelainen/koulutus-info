@@ -90,7 +90,7 @@ export default function LandingPage() {
         margin="0 auto"
         maxW="65rem"
         minH={0}
-        pb={{ base: 4, md: 12, lg: 6 }}
+        pb={{ base: 10, md: 12, lg: 6 }}
         position="relative"
         px={{ base: 4, md: 6, lg: 0 }}
         transform={{ lg: "translateY(-1.75rem)" }}
