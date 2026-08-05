@@ -8,7 +8,7 @@ const LIGHT = {
   text: "oklch(0.266 0.008 17.636)", // dark grey/near-black — text, borders, icons
   accent: "oklch(0.65 0.156 126.033)", // CTA/badge fill — ≥3:1 vs bg with dark onAccent
   accentFg: "oklch(0.38 0.165 125.721)", // accent text/icons/outlines on light bg (≥4.5:1)
-  border: "oklch(0.266 0.008 17.636 / 0.75)", // controls and other meaningful boundaries
+  border: "oklch(0.266 0.008 17.636 / 0.75)", // stronger outlines via COLORS.border / borderColor token
   surfaceMuted: "oklch(0.965 0.002 17.636)", // solid — portaled overlays must not be see-through
   muted: "oklch(0.266 0.008 17.636 / 0.72)",
   borderSubtle: "oklch(0.266 0.008 17.636 / 0.45)", // ≥3:1 blended vs bg (tracks, separators)
@@ -70,7 +70,7 @@ const config = defineConfig({
         surfaceMuted: { value: { _light: LIGHT.surfaceMuted, _dark: DARK.surfaceMuted } },
         onAccent: { value: { _light: LIGHT.onAccent, _dark: DARK.onAccent } },
         border: {
-          DEFAULT: { value: { _light: LIGHT.border, _dark: DARK.border } },
+          // Keep Chakra's default border (gray.200 / gray.800) for Select, Input, and other outline controls.
           subtle: { value: { _light: LIGHT.borderSubtle, _dark: DARK.borderSubtle } },
         },
         fg: {
