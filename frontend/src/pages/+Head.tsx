@@ -20,7 +20,8 @@ export function Head() {
         rel="preload"
         type="font/woff2"
       />
-      <meta content="#80aa2a" name="theme-color" />
+      <meta content="#80aa2a" media="(prefers-color-scheme: light)" name="theme-color" />
+      <meta content="#1c2424" media="(prefers-color-scheme: dark)" name="theme-color" />
       <meta content="website" property="og:type" />
       <meta content="https://yhteishaku.app/images/og-img.png" property="og:image" />
       <meta content="summary_large_image" name="twitter:card" />

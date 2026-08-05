@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "react-icons/hi";
 
 import { HEADER_HEIGHT } from "@/layout/Header";
@@ -14,6 +14,45 @@ const heroLinks = [
   { href: "/hakijamaarat/", icon: HiOutlineChartBar, label: "Näytä hakijamäärät" },
 ];
 
+function HeroButtons() {
+  return (
+    <Stack
+      direction={{ base: "column", lg: "row" }}
+      gap={{ base: 3, md: 4, lg: 8 }}
+      position="relative"
+      pt={{ base: 4, lg: 0 }}
+      width={{ base: "100%", lg: "auto" }}
+      zIndex={1}
+    >
+      {heroLinks.map(({ href, icon: Icon, label }) => (
+        <Button
+          _active={{ transform: "scale(0.96)" }}
+          _hover={{ bg: "accentFg", color: "bg" }}
+          asChild
+          bg="accent"
+          color="onAccent"
+          key={href}
+          transitionDuration="0.15s"
+          transitionProperty="transform, background-color, color"
+          transitionTimingFunction="ease-out"
+          variant="solid"
+          width={{ base: "100%", lg: "236px" }}
+        >
+          <a href={href}>
+            <HStack gap={2} width="13rem">
+              <Icon aria-hidden="true" />
+              <Text as="span" flex={1} textAlign="left">
+                {label}
+              </Text>
+              <HiOutlineArrowRight aria-hidden="true" />
+            </HStack>
+          </a>
+        </Button>
+      ))}
+    </Stack>
+  );
+}
+
 export default function LandingPage() {
   const timeLeft = useCountdown();
 
@@ -27,29 +66,46 @@ export default function LandingPage() {
 
   const hero = (
     <Box
-      backgroundImage={`linear-gradient(to bottom, ${COLORS.bg} 50%, color-mix(in srgb, ${COLORS.accent} 42%, ${COLORS.bg}))`}
+      backgroundImage={`linear-gradient(to bottom, ${COLORS.bg} 50%, color-mix(in srgb, ${COLORS.accent} 28%, ${COLORS.bg}))`}
       display="flex"
-      minH="100svh"
+      flexDirection="column"
+      minH="100dvh"
       mt={`calc(-1 * ${HEADER_HEIGHT})`}
-      pb={{ base: 6, md: 12, lg: 6 }}
+      position="relative"
       pt={{
-        base: `calc(${HEADER_HEIGHT} + 1.5rem)`,
+        base: `calc(${HEADER_HEIGHT} + 1rem)`,
         md: `calc(${HEADER_HEIGHT} + 3rem)`,
         lg: `calc(${HEADER_HEIGHT} + 1.5rem)`,
       }}
     >
-      <SimpleGrid
-        alignItems="center"
+      <Box
+        alignItems={{ lg: "center" }}
+        columnGap={{ lg: "122px" }}
+        display={{ base: "flex", lg: "grid" }}
         flex={1}
-        gap={{ base: 8, lg: "122px" }}
-        gridTemplateColumns={{ base: "1fr", lg: "minmax(0, 593px) 236px" }}
+        flexDirection="column"
+        gridTemplateAreas={{ lg: `"copy illus"` }}
+        gridTemplateColumns={{ lg: "minmax(0, 593px) 236px" }}
+        justifyContent={{ base: "space-between", lg: "center" }}
         margin="0 auto"
         maxW="65rem"
+        minH={0}
+        pb={{ base: 4, md: 12, lg: 6 }}
+        position="relative"
         px={{ base: 4, md: 6, lg: 0 }}
         transform={{ lg: "translateY(-1.75rem)" }}
+        width="100%"
+        zIndex={1}
       >
-        <Stack align={{ base: "center", lg: "flex-start" }} gap={8} textAlign={{ base: "center", lg: "left" }}>
-          <Stack gap={0}>
+        {/* contents on mobile → heading + buttons become space-between flex siblings */}
+        <Stack align={{ lg: "flex-start" }} display={{ base: "contents", lg: "flex" }} gap={8} gridArea={{ lg: "copy" }}>
+          <Stack
+            align={{ base: "center", lg: "flex-start" }}
+            gap={0}
+            position="relative"
+            textAlign={{ base: "center", lg: "left" }}
+            zIndex={1}
+          >
             <Heading
               as="h1"
               fontSize={{ base: "4xl", md: "5xl", lg: "56px" }}
@@ -64,43 +120,31 @@ export default function LandingPage() {
             </Text>
           </Stack>
 
-          <Stack
-            direction={{ base: "column", md: "row" }}
-            gap={{ base: 4, md: 8 }}
-            width={{ base: "100%", md: "auto" }}
-          >
-            {heroLinks.map(({ href, icon: Icon, label }) => (
-              <Button
-                _hover={{ bg: "accentFg" }}
-                asChild
-                bg="accent"
-                color="text"
-                key={href}
-                variant="solid"
-                width={{ base: "100%", md: "236px" }}
-              >
-                <a href={href}>
-                  <HStack gap={2} width="13rem">
-                    <Icon aria-hidden="true" />
-                    <Text as="span" flex={1} textAlign="left">
-                      {label}
-                    </Text>
-                    <HiOutlineArrowRight aria-hidden="true" />
-                  </HStack>
-                </a>
-              </Button>
-            ))}
-          </Stack>
+          <HeroButtons />
         </Stack>
 
-        <Image
-          alt=""
-          fetchPriority="high"
-          justifySelf="center"
-          src="/images/landing_illustration.png"
-          width={{ base: "8rem", md: "11rem", lg: "236px" }}
+        <Box
+          _dark={{ backgroundImage: "url('/images/landing_illustration_for_dark.png')" }}
+          aria-hidden="true"
+          aspectRatio="550 / 1450"
+          backgroundImage="url('/images/landing_illustration.png')"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          backgroundSize="contain"
+          bottom={0}
+          gridArea={{ lg: "illus" }}
+          justifySelf={{ lg: "center" }}
+          left={0}
+          marginInline="auto"
+          maxW={{ base: "13rem", lg: "none" }}
+          overflow="hidden"
+          pointerEvents="none"
+          position={{ base: "absolute", lg: "static" }}
+          right={0}
+          width={{ base: "100%", lg: "236px" }}
+          zIndex={0}
         />
-      </SimpleGrid>
+      </Box>
     </Box>
   );
 
@@ -137,7 +181,7 @@ export default function LandingPage() {
       {hero}
       <Box
         as="section"
-        backgroundImage={`linear-gradient(to bottom, color-mix(in srgb, ${COLORS.accent} 42%, ${COLORS.bg}), ${COLORS.bg} 18%)`}
+        backgroundImage={`linear-gradient(to bottom, color-mix(in srgb, ${COLORS.accent} 28%, ${COLORS.bg}), ${COLORS.bg} 20%)`}
       >
         <PageContainer>
           <VStack flex={1} gap={10} justifyContent="center" py={10}>

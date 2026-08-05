@@ -41,6 +41,7 @@ function AineRow({ canRemove, index, onRemove, onUpdate, row }: AineRowProps) {
             onChange={(subject) => onUpdate({ subject })}
             placeholder="Valitse aine"
             value={row.subject}
+            
           />
         </Box>
         <Box flex="3">
@@ -130,6 +131,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
           type="button"
           variant="outline"
           w={{ base: "100%", md: "8rem" }}
+          mt={2}
         >
           + Lisää aine
         </Button>

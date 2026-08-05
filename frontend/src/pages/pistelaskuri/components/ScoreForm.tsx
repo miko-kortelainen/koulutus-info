@@ -167,7 +167,7 @@ export default function ScoreForm({ onModeChange, onSubmit, round }: ScoreFormPr
           </Tabs.List>
         </Stack>
 
-        <Box borderColor="border" borderRadius="lg" borderWidth="1px" mt={4} p={{ base: 3, md: 5 }}>
+        <Box mt={6}>
           <Tabs.Content p={0} value="Todistusvalinta (YO)">
             <YoForm
               errors={yoErrors}
@@ -192,8 +192,9 @@ export default function ScoreForm({ onModeChange, onSubmit, round }: ScoreFormPr
           <Box display="flex" justifyContent="flex-end">
             <Button
               bg={COLORS.accent}
+              color={COLORS.onAccent}
               loading={isCalculating}
-              mt={4}
+              mt={6}
               size="xs"
               type="submit"
               variant="solid"

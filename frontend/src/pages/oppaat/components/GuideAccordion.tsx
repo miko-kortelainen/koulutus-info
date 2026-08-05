@@ -35,7 +35,7 @@ export default function GuideAccordion({ title, children }: GuideAccordionProps)
             bg="accent"
             borderRadius="full"
             boxSize={8}
-            color="text"
+            color="onAccent"
             display="grid"
             flexShrink={0}
             placeItems="center"

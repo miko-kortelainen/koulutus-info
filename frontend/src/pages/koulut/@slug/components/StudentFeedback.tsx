@@ -161,7 +161,7 @@ function TopicAccordionItem({
         <Accordion.ItemTrigger px={{ base: 3, md: 4 }} py={3}>
           <AccordionHeaderRow
             left={<Text fontSize="xs">Kysymyksiä: {questionCount}</Text>}
-            right={<Text color="accent">{averageText}</Text>}
+            right={<Text color="fg.accent">{averageText}</Text>}
             title={name}
             titleFontSize="sm"
           />
@@ -211,7 +211,7 @@ export default function StudentFeedback({ feedback, maxScore, survey }: StudentF
         </Stat.Root>
         <Stat.Root borderColor="border" borderRadius="md" borderWidth="1px" p={4} size="sm">
           <Stat.Label>Keskiarvo</Stat.Label>
-          <Stat.ValueText color="accentFg">
+          <Stat.ValueText color="fg.accent">
             {feedback.tilastot.keskiarvo == null
               ? "–"
               : `${ratioFormat.format(feedback.tilastot.keskiarvo)} / ${maxScore}`}
@@ -232,7 +232,7 @@ export default function StudentFeedback({ feedback, maxScore, survey }: StudentF
                   }
                   right={
                     field.tilastot.keskiarvo == null ? null : (
-                      <Text color="accentFg">Keskiarvo {ratioFormat.format(field.tilastot.keskiarvo)}</Text>
+                      <Text color="fg.accent">Keskiarvo {ratioFormat.format(field.tilastot.keskiarvo)}</Text>
                     )
                   }
                   title={fieldName}

@@ -4,9 +4,9 @@ import Header from "@/layout/Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Flex direction="column">
+    <Flex bg="bg" color="fg" direction="column" minH="100svh">
       <Header />
-      <Box as="main" display="flex" flexDirection="column" minHeight="100svh">
+      <Box as="main" display="flex" flexDirection="column" flex="1">
         {children}
       </Box>
       <Footer />

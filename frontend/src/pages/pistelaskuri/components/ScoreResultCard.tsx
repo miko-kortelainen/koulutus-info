@@ -17,7 +17,7 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
 function KynnysehtoBadge({ passed }: { passed?: boolean }) {
   if (passed === true) {
     return (
-      <Badge alignSelf="flex-start" bg={COLORS.accent} color={COLORS.text} size="sm">
+      <Badge alignSelf="flex-start" bg={COLORS.accent} color={COLORS.onAccent} size="sm">
         Kynnysehto täyttyy.
       </Badge>
     );
