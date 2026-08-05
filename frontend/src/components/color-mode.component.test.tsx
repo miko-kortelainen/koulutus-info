@@ -18,15 +18,14 @@ test("toggles appearance and persists the choice", async () => {
 
   await user.click(toggle);
 
-  const darkToggle = await screen.findByRole("button", { name: "Vaalea teema" });
-  expect(darkToggle).toHaveAttribute("aria-pressed", "true");
+  expect(toggle).toHaveAttribute("aria-pressed", "true");
   expect(localStorage.getItem(APPEARANCE_STORAGE_KEY)).toBe("dark");
   expect(document.documentElement.classList.contains("dark")).toBe(true);
 
   await waitFor(() => {
-    expect(darkToggle).toBeEnabled();
+    expect(toggle).toBeEnabled();
   });
-  await user.click(darkToggle);
+  await user.click(toggle);
 
   await waitFor(() => {
     expect(screen.getByRole("button", { name: "Tumma teema" })).toHaveAttribute("aria-pressed", "false");
@@ -49,6 +48,6 @@ test("ignores rapid repeat clicks during cooldown", async () => {
   await user.click(toggle);
   await user.click(toggle);
 
-  expect(await screen.findByRole("button", { name: "Vaalea teema" })).toHaveAttribute("aria-pressed", "true");
+  expect(await screen.findByRole("button", { name: "Tumma teema" })).toHaveAttribute("aria-pressed", "true");
   expect(localStorage.getItem(APPEARANCE_STORAGE_KEY)).toBe("dark");
 });

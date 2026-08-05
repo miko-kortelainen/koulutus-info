@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "react-icons/hi";
 
 import { HEADER_HEIGHT } from "@/layout/Header";
@@ -12,11 +12,6 @@ import useCountdown from "./hooks/useCountdown";
 const heroLinks = [
   { href: "/pistelaskuri/", icon: HiOutlineCalculator, label: "Laske todistuspisteeni" },
   { href: "/hakijamaarat/", icon: HiOutlineChartBar, label: "Näytä hakijamäärät" },
-];
-
-const heroImages = [
-  { src: "/images/landing_illustration.png", fetchPriority: "high" as const, dark: false },
-  { src: "/images/landing_illustration_for_dark.png", dark: true },
 ];
 
 function HeroButtons() {
@@ -58,23 +53,6 @@ function HeroButtons() {
   );
 }
 
-function HeroIllustration() {
-  return heroImages.map(({ src, dark, fetchPriority }) => (
-    <Image
-      _dark={{ display: dark ? "block" : "none" }}
-      alt=""
-      display={dark ? "none" : "block"}
-      fetchPriority={fetchPriority}
-      height={{ base: "100%", lg: "auto" }}
-      key={src}
-      marginInline="auto"
-      objectFit="contain"
-      src={src}
-      width="100%"
-    />
-  ));
-}
-
 export default function LandingPage() {
   const timeLeft = useCountdown();
 
@@ -91,10 +69,8 @@ export default function LandingPage() {
       backgroundImage={`linear-gradient(to bottom, ${COLORS.bg} 50%, color-mix(in srgb, ${COLORS.accent} 28%, ${COLORS.bg}))`}
       display="flex"
       flexDirection="column"
-      h={{ base: "100svh", lg: "auto" }}
-      minH="100svh"
+      minH="100dvh"
       mt={`calc(-1 * ${HEADER_HEIGHT})`}
-      overflow="hidden"
       position="relative"
       pt={{
         base: `calc(${HEADER_HEIGHT} + 1rem)`,
@@ -126,7 +102,9 @@ export default function LandingPage() {
           <Stack
             align={{ base: "center", lg: "flex-start" }}
             gap={0}
+            position="relative"
             textAlign={{ base: "center", lg: "left" }}
+            zIndex={1}
           >
             <Heading
               as="h1"
@@ -146,21 +124,26 @@ export default function LandingPage() {
         </Stack>
 
         <Box
+          _dark={{ backgroundImage: "url('/images/landing_illustration_for_dark.png')" }}
           aria-hidden="true"
+          aspectRatio="550 / 1450"
+          backgroundImage="url('/images/landing_illustration.png')"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          backgroundSize="contain"
           bottom={0}
           gridArea={{ lg: "illus" }}
           justifySelf={{ lg: "center" }}
           left={0}
           marginInline="auto"
           maxW={{ base: "13rem", lg: "none" }}
+          overflow="hidden"
           pointerEvents="none"
           position={{ base: "absolute", lg: "static" }}
           right={0}
-          width={{ lg: "236px" }}
+          width={{ base: "100%", lg: "236px" }}
           zIndex={0}
-        >
-          <HeroIllustration />
-        </Box>
+        />
       </Box>
     </Box>
   );
