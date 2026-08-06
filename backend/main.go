@@ -19,11 +19,12 @@ import (
 )
 
 const (
-	configPath         = "config.json"
-	dataOutputDir      = "../frontend/public/data"
-	schoolsOutputPath  = dataOutputDir + "/schools.json"
-	metaOutputPath     = dataOutputDir + "/meta.json"
-	manifestModulePath = "../frontend/src/generated/dataManifest.ts"
+	configPath          = "config.json"
+	dataOutputDir       = "../frontend/public/data"
+	statisticsOutputDir = dataOutputDir + "/hakijamäärät"
+	schoolsOutputPath   = dataOutputDir + "/schools.json"
+	metaOutputPath      = dataOutputDir + "/meta.json"
+	manifestModulePath  = "../frontend/src/generated/dataManifest.ts"
 )
 
 var statisticsFilename = regexp.MustCompile(`^hakijamaarat-(\d{4})-(kevat|syksy)\.json$`)
@@ -83,7 +84,7 @@ func run(args []string) error {
 		}
 	}
 
-	statisticsRounds, err := availableStatisticsRounds(dataOutputDir)
+	statisticsRounds, err := availableStatisticsRounds(statisticsOutputDir)
 	if err != nil {
 		return err
 	}
@@ -211,7 +212,7 @@ func generateVipunen(cfg models.VipunenConfig) (bool, error) {
 			return false, fmt.Errorf("Vipunen produced no statistics for %s after cleanup", round)
 		}
 
-		outputPath := filepath.Join(dataOutputDir, "hakijamaarat-"+strings.ReplaceAll(round, "_", "-")+".json")
+		outputPath := filepath.Join(statisticsOutputDir, "hakijamaarat-"+strings.ReplaceAll(round, "_", "-")+".json")
 		if err := validateRecordCount(outputPath, len(statistics), "Vipunen statistics"); err != nil {
 			return false, err
 		}

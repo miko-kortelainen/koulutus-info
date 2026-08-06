@@ -48,7 +48,7 @@ See the [frontend README](./frontend/README.md) for the full command list.
 
 Run the required commands in `/backend` to update applicant numbers and degree programmes. The Go CLI fetches data from the Opintopolku and Vipunen APIs, cleans it and writes JSON files to `/frontend/public/data/`.
 
-The generator updates `schools.json`, joint-application applicant files such as `hakijamaarat-2026-kevat.json` and `hakijamaarat-2025-syksy.json`, `meta.json` and `frontend/src/generated/dataManifest.ts`.
+The generator updates `schools.json`, joint-application applicant files under `frontend/public/data/hakijamäärät/` such as `hakijamaarat-2026-kevat.json` and `hakijamaarat-2025-syksy.json`, `meta.json` and `frontend/src/generated/dataManifest.ts`.
 
 Download admission cutoffs from Vipunen's public cutoff report and use Excel to convert the read-only pivot table into the CSV format required by the backend. Run the cutoff CLI to generate one file per joint application in `/frontend/public/data/`, such as `pisterajat-2026-kevat.json`.
 
