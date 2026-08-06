@@ -52,7 +52,7 @@ const readPublicData = <T>(file: string, parse: (value: unknown, source: string)
 };
 
 export const readStatistics = (round: YearOption): StatisticsResponse =>
-  readPublicData(`hakijamaarat-${round.replace("_", "-")}.json`, parseStatistics);
+  readPublicData(`hakijamäärät/hakijamaarat-${round.replace("_", "-")}.json`, parseStatistics);
 
 export const readCurrentYearStatistics = (): StatisticsResponse => readStatistics(CURRENT_YEAR);
 
