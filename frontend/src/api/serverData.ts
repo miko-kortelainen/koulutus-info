@@ -128,10 +128,12 @@ export interface StudentFeedbackEntry {
 }
 
 export const readStudentFeedback = (): Record<string, StudentFeedbackEntry> => {
-  const universityFeedback = readPublicData("yliopisto-palaute.json", (value, source) =>
+  const universityFeedback = readPublicData("opiskelijapalaute/yliopisto-palaute.json", (value, source) =>
     parseStudentFeedback(value, source, 5),
   );
-  const amkFeedback = readPublicData("amk-palaute.json", (value, source) => parseStudentFeedback(value, source, 7));
+  const amkFeedback = readPublicData("opiskelijapalaute/amk-palaute.json", (value, source) =>
+    parseStudentFeedback(value, source, 7),
+  );
   const duplicateSchools = Object.keys(universityFeedback).filter((name) => name in amkFeedback);
   if (duplicateSchools.length > 0) {
     throw new Error(`Student feedback schools found in both datasets: ${duplicateSchools.join(", ")}`);
