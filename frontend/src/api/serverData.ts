@@ -3,8 +3,9 @@ import {
   type FeedbackMaxScore,
   type EnnakointiKoulutustarpeet,
   parseCutoffSchools,
+  parseCurrentPrograms,
   parseKoulutustarpeet,
-  parseSchools,
+  parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
   type StudentFeedback,
@@ -19,7 +20,7 @@ import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import { filterUnavailableCutoffAlat } from "@/lib/cutoffs";
 import { slugify } from "@/lib/slug";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
-import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
+import type { CurrentProgramsResponse, SchoolCatalog, SchoolCatalogEntry, StatisticsResponse } from "@/types.gen";
 
 interface CacheEntry {
   modifiedAt: number;
@@ -56,7 +57,10 @@ export const readStatistics = (round: YearOption): StatisticsResponse =>
 
 export const readCurrentYearStatistics = (): StatisticsResponse => readStatistics(CURRENT_YEAR);
 
-export const readSchools = (): SchoolsResponse => readPublicData("schools.json", parseSchools);
+export const readSchools = (): SchoolCatalog => readPublicData("schools.json", parseSchoolCatalog);
+
+export const readCurrentPrograms = (): CurrentProgramsResponse =>
+  readPublicData("current_programs.json", parseCurrentPrograms);
 
 export const availableCutoffRounds = (): CutoffRound[] =>
   [
@@ -74,9 +78,9 @@ export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): Cu
     readPublicData(`pisterajat/pisterajat-${round}-${sector}.json`, parseCutoffSchools),
   );
 
-export const readSchoolsWithAvailableCutoffs = (): SchoolsResponse =>
+export const readCurrentProgramsWithAvailableCutoffs = (): CurrentProgramsResponse =>
   filterUnavailableCutoffAlat(
-    readSchools(),
+    readCurrentPrograms(),
     availableCutoffRounds().flatMap((round) => readCutoffSchools(round)),
   );
 
@@ -89,7 +93,7 @@ export const cutoffSchoolNames = (): string[] => {
   const schoolNameSet = new Set(schoolNames());
   const unknownSchools = names.filter((name) => !schoolNameSet.has(name));
   if (unknownSchools.length > 0) {
-    throw new Error(`Cutoff schools missing from schools or statistics data: ${unknownSchools.join(", ")}`);
+    throw new Error(`Cutoff schools missing from school catalog: ${unknownSchools.join(", ")}`);
   }
 
   return names;
@@ -105,17 +109,18 @@ export const cutoffAlaNames = (): string[] => {
 };
 
 export const schoolNames = (): string[] => {
-  const schools = readSchools();
-  const statistics = readCurrentYearStatistics();
-  const names = [
-    ...schools.flatMap((k) => k.toteutukset.map((t) => t.oppilaitosNimi.fi)),
-    ...statistics.map((s) => s.korkeakoulu),
-  ].filter((n): n is string => Boolean(n));
+  const names = readSchools().map((school) => school.name);
   const uniqueNames = [...new Set(names)].sort((a, b) => a.localeCompare(b, "fi"));
-
   assertNoSlugCollisions(uniqueNames, "School");
-
   return uniqueNames;
+};
+
+export const resolveSchool = (slug: string): SchoolCatalogEntry | undefined =>
+  readSchools().find((school) => slugify(school.name) === slug);
+
+export const formatSchoolName = (name: string): string => {
+  const short = readSchools().find((school) => school.name === name)?.shortName;
+  return short ? `${name} (${short})` : name;
 };
 
 export type FeedbackSurvey = "avop" | "kandipalaute";
@@ -152,7 +157,7 @@ export const readStudentFeedback = (): Record<string, StudentFeedbackEntry> => {
   const knownSchoolNames = new Set(schoolNames());
   const unknownSchools = Object.keys(feedback).filter((name) => !knownSchoolNames.has(name));
   if (unknownSchools.length > 0) {
-    throw new Error(`Student feedback schools missing from schools or statistics data: ${unknownSchools.join(", ")}`);
+    throw new Error(`Student feedback schools missing from school catalog: ${unknownSchools.join(", ")}`);
   }
   return feedback;
 };

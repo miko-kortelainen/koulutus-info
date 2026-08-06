@@ -62,10 +62,10 @@ export interface LanguageStrings {
   en?: string;
 }
 /**
- * SchoolsResponse is the optimized schools.json format:
+ * CurrentProgramsResponse is current_programs.json:
  * a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
  */
-export type SchoolsResponse = KoulutusEntry[];
+export type CurrentProgramsResponse = KoulutusEntry[];
 export interface KoulutusEntry {
   nimi: LanguageStrings;
   sektori: string;
@@ -84,6 +84,22 @@ export interface ToteutusEntry {
   koulutusalat?: string[];
   muuntokoulutus?: boolean;
 }
+
+//////////
+// source: schools.go
+
+/**
+ * SchoolCatalogEntry is one institution row in schools.json.
+ * Name is the canonical join key shared with programmes, statistics, cutoffs, and palaute.
+ */
+export interface SchoolCatalogEntry {
+  name: string;
+  shortName?: string;
+}
+/**
+ * SchoolCatalog is schools.json.
+ */
+export type SchoolCatalog = SchoolCatalogEntry[];
 
 //////////
 // source: vipunen.go

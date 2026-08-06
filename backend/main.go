@@ -22,10 +22,40 @@ const (
 	configPath          = "config.json"
 	dataOutputDir       = "../frontend/public/data"
 	statisticsOutputDir = dataOutputDir + "/hakijamäärät"
-	schoolsOutputPath   = dataOutputDir + "/schools.json"
+	programsOutputPath  = dataOutputDir + "/current_programs.json"
+	schoolsCatalogPath  = dataOutputDir + "/schools.json"
 	metaOutputPath      = dataOutputDir + "/meta.json"
 	manifestModulePath  = "../frontend/src/generated/dataManifest.ts"
 )
+
+// Institution short names for schools.json display. Finnish universities without
+// an established short stay name-only.
+var schoolShortNames = map[string]string{
+	"Centria-ammattikorkeakoulu":         "Centria",
+	"Diakonia-ammattikorkeakoulu":        "Diak",
+	"Haaga-Helia ammattikorkeakoulu":     "Haaga-Helia",
+	"Humanistinen ammattikorkeakoulu":    "Humak",
+	"Hämeen ammattikorkeakoulu":          "HAMK",
+	"Jyväskylän ammattikorkeakoulu":      "Jamk",
+	"Kaakkois-Suomen ammattikorkeakoulu": "Xamk",
+	"Kajaanin ammattikorkeakoulu":        "KAMK",
+	"Karelia-ammattikorkeakoulu":         "Karelia",
+	"LAB-ammattikorkeakoulu":             "LAB",
+	"Lapin ammattikorkeakoulu":           "Lapin AMK",
+	"Laurea-ammattikorkeakoulu":          "Laurea",
+	"Metropolia Ammattikorkeakoulu":      "Metropolia",
+	"Oulun ammattikorkeakoulu":           "OAMK",
+	"Satakunnan ammattikorkeakoulu":      "SAMK",
+	"Savonia-ammattikorkeakoulu":         "Savonia",
+	"Seinäjoen ammattikorkeakoulu":       "SEAMK",
+	"Tampereen ammattikorkeakoulu":       "TAMK",
+	"Turun ammattikorkeakoulu":           "Turun AMK",
+	"Vaasan ammattikorkeakoulu":          "VAMK",
+	"Yrkeshögskolan Arcada":              "Arcada",
+	"Yrkeshögskolan Novia":               "Novia",
+	"Åbo Akademi":                        "ÅA",
+	"Svenska handelshögskolan":           "Hanken",
+}
 
 var statisticsFilename = regexp.MustCompile(`^hakijamaarat-(\d{4})-(kevat|syksy)\.json$`)
 
@@ -104,6 +134,10 @@ func run(args []string) error {
 		return err
 	}
 
+	if err := rebuildSchoolCatalog(meta.CurrentStatisticsRound); err != nil {
+		return err
+	}
+
 	fmt.Printf(
 		"Data manifest: currentStatisticsRound=%s statisticsRounds=%v\n",
 		meta.CurrentStatisticsRound,
@@ -121,6 +155,9 @@ func parseRefreshOptions(args []string, cfg models.Config) (refreshOptions, erro
 			return refreshOptions{programmes: true, yhteishakuOID: cfg.Opintopolku.YhteishakuOID, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
 		case "all":
 			return refreshOptions{statistics: true, programmes: true, yhteishakuOID: cfg.Opintopolku.YhteishakuOID, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
+		case "catalog":
+			// Offline rebuild of schools.json from on-disk programmes + current stats round.
+			return refreshOptions{vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
 		}
 	}
 
@@ -257,24 +294,82 @@ func generateOpintopolku(cfg models.OpintopolkuConfig) (bool, error) {
 		return false, err
 	}
 
-	schools := services.TransformOpintopolkuData(fetched, koulutusalat)
-	if len(schools) == 0 {
-		return false, errors.New("Opintopolku produced no schools after cleanup")
+	programs := services.TransformOpintopolkuData(fetched, koulutusalat)
+	if len(programs) == 0 {
+		return false, errors.New("Opintopolku produced no programmes after cleanup")
 	}
-	if err := validateRecordCount(schoolsOutputPath, len(schools), "Opintopolku programmes"); err != nil {
+	if err := validateRecordCount(programsOutputPath, len(programs), "Opintopolku programmes"); err != nil {
 		return false, err
 	}
-	changed, err := jsonChanged(schoolsOutputPath, schools)
+	changed, err := jsonChanged(programsOutputPath, programs)
 	if err != nil {
 		return false, err
 	}
 
-	if err := writeJSON(schoolsOutputPath, schools); err != nil {
+	if err := writeJSON(programsOutputPath, programs); err != nil {
 		return false, err
 	}
 
-	fmt.Printf("Opintopolku: selection=%s fetched=%d generated=%d changed=%t output=%s\n", selection, len(fetched.Hits), len(schools), changed, schoolsOutputPath)
+	fmt.Printf("Opintopolku: selection=%s fetched=%d generated=%d changed=%t output=%s\n", selection, len(fetched.Hits), len(programs), changed, programsOutputPath)
 	return changed, nil
+}
+
+func rebuildSchoolCatalog(currentRound string) error {
+	if currentRound == "" {
+		return errors.New("school catalog requires currentStatisticsRound")
+	}
+	programsData, err := os.ReadFile(programsOutputPath)
+	if err != nil {
+		return fmt.Errorf("school catalog requires %s: %w", programsOutputPath, err)
+	}
+	var programs models.CurrentProgramsResponse
+	if err := json.Unmarshal(programsData, &programs); err != nil {
+		return fmt.Errorf("decode %s: %w", programsOutputPath, err)
+	}
+
+	statsPath := filepath.Join(statisticsOutputDir, "hakijamaarat-"+strings.ReplaceAll(currentRound, "_", "-")+".json")
+	statsData, err := os.ReadFile(statsPath)
+	if err != nil {
+		return fmt.Errorf("school catalog requires %s: %w", statsPath, err)
+	}
+	var statistics models.StatisticsResponse
+	if err := json.Unmarshal(statsData, &statistics); err != nil {
+		return fmt.Errorf("decode %s: %w", statsPath, err)
+	}
+
+	names := make(map[string]struct{})
+	for _, programme := range programs {
+		for _, toteutus := range programme.Toteutukset {
+			if name := strings.TrimSpace(toteutus.OppilaitosNimi.Fi); name != "" {
+				names[name] = struct{}{}
+			}
+		}
+	}
+	for _, row := range statistics {
+		if name := strings.TrimSpace(row.Korkeakoulu); name != "" {
+			names[name] = struct{}{}
+		}
+	}
+	if len(names) == 0 {
+		return errors.New("school catalog union produced no names")
+	}
+
+	sorted := make([]string, 0, len(names))
+	for name := range names {
+		sorted = append(sorted, name)
+	}
+	// ponytail: catalog order non-semantic; UI sorts with localeCompare("fi")
+	sort.Strings(sorted)
+
+	catalog := make(models.SchoolCatalog, 0, len(sorted))
+	for _, name := range sorted {
+		catalog = append(catalog, models.SchoolCatalogEntry{Name: name, ShortName: schoolShortNames[name]})
+	}
+	if err := writeJSON(schoolsCatalogPath, catalog); err != nil {
+		return err
+	}
+	fmt.Printf("School catalog: round=%s schools=%d output=%s\n", currentRound, len(catalog), schoolsCatalogPath)
+	return nil
 }
 
 func jsonChanged(path string, value any) (bool, error) {

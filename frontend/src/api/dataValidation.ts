@@ -1,5 +1,5 @@
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
-import type { SchoolsResponse, StatisticsResponse } from "@/types.gen";
+import type { CurrentProgramsResponse, SchoolCatalog, StatisticsResponse } from "@/types.gen";
 
 export interface FeedbackStatistics {
   vastaajatLkm: number | null;
@@ -95,13 +95,19 @@ const isToteutus = (value: unknown) =>
   isStringArray(value.koulutusalat) &&
   isOptionalBoolean(value.muuntokoulutus);
 
-const isSchool = (value: unknown) =>
+const isProgramme = (value: unknown) =>
   isRecord(value) &&
   isLanguageStrings(value.nimi) &&
   isString(value.sektori) &&
   isString(value.tutkintotaso) &&
   Array.isArray(value.toteutukset) &&
   value.toteutukset.every(isToteutus);
+
+const isSchoolCatalogEntry = (value: unknown) =>
+  isRecord(value) &&
+  isString(value.name) &&
+  value.name !== "" &&
+  (value.shortName === undefined || (isString(value.shortName) && value.shortName !== ""));
 
 const isCutoff = (value: unknown) =>
   isRecord(value) &&
@@ -166,7 +172,11 @@ function parseArray<T>(value: unknown, isItem: (item: unknown) => boolean, sourc
 export const parseStatistics = (value: unknown, source: string): StatisticsResponse =>
   parseArray(value, isStatisticsEntry, source);
 
-export const parseSchools = (value: unknown, source: string): SchoolsResponse => parseArray(value, isSchool, source);
+export const parseCurrentPrograms = (value: unknown, source: string): CurrentProgramsResponse =>
+  parseArray(value, isProgramme, source);
+
+export const parseSchoolCatalog = (value: unknown, source: string): SchoolCatalog =>
+  parseArray(value, isSchoolCatalogEntry, source);
 
 export const parseCutoffSchools = (value: unknown, source: string): CutoffSchool[] =>
   parseArray(value, isCutoffSchool, source);

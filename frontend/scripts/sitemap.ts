@@ -15,9 +15,10 @@ const feedbackFiles = ["opiskelijapalaute/amk-palaute.json", "opiskelijapalaute/
 const cutoffsLastmod = latestModifiedDate(cutoffFiles);
 const feedbackLastmod = latestModifiedDate(feedbackFiles);
 const statisticsLastmod = latestModifiedDate([currentStatisticsFile]);
-const programmesLastmod = latestModifiedDate(["schools.json", ...cutoffFiles]);
+const programmesLastmod = latestModifiedDate(["current_programs.json", ...cutoffFiles]);
 const schoolsLastmod = latestModifiedDate([
   "schools.json",
+  "current_programs.json",
   currentStatisticsFile,
   ...cutoffFiles,
   ...feedbackFiles,
