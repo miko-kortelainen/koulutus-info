@@ -63,7 +63,7 @@ const koulutusDetailBaseURL = "https://opintopolku.fi/konfo-backend/external/kou
 // okmOhjauksenAlat maps OKM ohjauksen ala codes to the exact koulutusala names
 // used in the Vipunen cutoff (pisterajat) data. The classification is official
 // and stable; an unknown code fails generation loudly instead of silently
-// dropping the schools.json -> pisterajat link.
+// dropping the current_programs.json -> pisterajat link.
 var okmOhjauksenAlat = map[string]string{
 	"okmohjauksenala_1":  "Kasvatusalat",
 	"okmohjauksenala_2":  "Taiteet ja kulttuurialat",

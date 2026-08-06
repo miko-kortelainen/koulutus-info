@@ -6,17 +6,16 @@ import (
 	"school-api/models"
 )
 
-// TransformOpintopolkuData converts raw Opintopolku data into the optimized
-// schools.json format: a flat array of koulutus entries. koulutusalat maps
-// koulutus oid -> OKM ohjauksen ala names (see FetchKoulutusalat); the names
-// are duplicated onto every toteutus for direct use in flat toteutus lists
-// and localStorage favorites.
-func TransformOpintopolkuData(data *models.OpintopolkuData, koulutusalat map[string][]string) models.SchoolsResponse {
+// TransformOpintopolkuData converts raw Opintopolku data into current_programs.json:
+// a flat array of koulutus entries. koulutusalat maps koulutus oid -> OKM
+// ohjauksen ala names (see FetchKoulutusalat); the names are duplicated onto
+// every toteutus for direct use in flat toteutus lists and localStorage favorites.
+func TransformOpintopolkuData(data *models.OpintopolkuData, koulutusalat map[string][]string) models.CurrentProgramsResponse {
 	if data == nil {
-		return models.SchoolsResponse{}
+		return models.CurrentProgramsResponse{}
 	}
 
-	result := make(models.SchoolsResponse, 0, len(data.Hits))
+	result := make(models.CurrentProgramsResponse, 0, len(data.Hits))
 
 	for _, school := range data.Hits {
 		nimi := models.LanguageStrings{}

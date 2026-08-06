@@ -56,6 +56,15 @@ func TestParseRefreshOptions(t *testing.T) {
 				}
 			},
 		},
+		{
+			name: "catalog rebuilds offline without network refresh",
+			args: []string{"catalog"},
+			check: func(t *testing.T, options refreshOptions) {
+				if options.programmes || options.statistics {
+					t.Fatalf("unexpected options: %+v", options)
+				}
+			},
+		},
 	}
 
 	for _, test := range tests {
@@ -82,7 +91,7 @@ func TestAvailableStatisticsRounds(t *testing.T) {
 		"hakijamaarat-2026-kevat.json",
 		"2026_kevat.json",
 		"statistics-2025.json",
-		"schools.json",
+		"current_programs.json",
 	} {
 		if err := os.WriteFile(filepath.Join(directory, name), []byte("[]"), 0644); err != nil {
 			t.Fatal(err)

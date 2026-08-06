@@ -1,8 +1,9 @@
 import { expect, test } from "vitest";
 import {
   parseCutoffSchools,
+  parseCurrentPrograms,
   parseKoulutustarpeet,
-  parseSchools,
+  parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
 } from "./dataValidation";
@@ -73,7 +74,13 @@ const studentFeedback = {
 
 test("accepts valid datasets", () => {
   expect(parseStatistics([statistics], "statistics.json")).toEqual([statistics]);
-  expect(parseSchools([school], "schools.json")).toEqual([school]);
+  expect(parseCurrentPrograms([school], "current_programs.json")).toEqual([school]);
+  expect(parseSchoolCatalog([{ name: "Testikorkeakoulu", shortName: "Testi" }], "schools.json")).toEqual([
+    { name: "Testikorkeakoulu", shortName: "Testi" },
+  ]);
+  expect(parseSchoolCatalog([{ name: "Helsingin yliopisto" }], "schools.json")).toEqual([
+    { name: "Helsingin yliopisto" },
+  ]);
   expect(parseCutoffSchools([cutoffSchool], "pisterajat.json")).toEqual([cutoffSchool]);
   expect(parseStudentFeedback(studentFeedback, "yliopisto-palaute.json", 5)).toEqual(studentFeedback);
 });
@@ -84,10 +91,17 @@ test.each([-1, 1.5, Number.NaN])("rejects invalid statistics count %s", (valitut
   );
 });
 
-test("rejects malformed nested school data", () => {
+test("rejects malformed nested programme data", () => {
   const toteutus = { ...school.toteutukset[0], kunnat: [1] };
 
-  expect(() => parseSchools([{ ...school, toteutukset: [toteutus] }], "schools.json")).toThrow(
+  expect(() => parseCurrentPrograms([{ ...school, toteutukset: [toteutus] }], "current_programs.json")).toThrow(
+    "Invalid data in current_programs.json",
+  );
+});
+
+test("rejects malformed school catalog entries", () => {
+  expect(() => parseSchoolCatalog([{ shortName: "Testi" }], "schools.json")).toThrow("Invalid data in schools.json");
+  expect(() => parseSchoolCatalog([{ name: "", shortName: "Testi" }], "schools.json")).toThrow(
     "Invalid data in schools.json",
   );
 });

@@ -8,7 +8,7 @@ import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import type { SchoolsResponse } from "@/types.gen";
+import type { CurrentProgramsResponse } from "@/types.gen";
 import useFilteredDegrees from "./hooks/useFilteredDegrees";
 
 const PAGE_SIZE = 10;
@@ -24,7 +24,7 @@ const TASO_LABELS: Record<string, string> = {
 };
 
 export default function SchoolsListPage() {
-  const data = useData<SchoolsResponse>();
+  const data = useData<CurrentProgramsResponse>();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());

@@ -2,11 +2,10 @@ import type { PageContextServer } from "vike/types";
 import {
   cutoffSchoolNames,
   feedbackSchoolNames,
+  readCurrentProgramsWithAvailableCutoffs,
   readCurrentYearStatistics,
-  readSchoolsWithAvailableCutoffs,
-  schoolNames,
+  resolveSchool,
 } from "@/api/serverData";
-import { slugify } from "@/lib/slug";
 import type { StatisticsEntry, ToteutusEntry } from "@/types.gen";
 
 export interface SchoolPageData {
@@ -18,15 +17,15 @@ export interface SchoolPageData {
 }
 
 export const data = (pageContext: PageContextServer): SchoolPageData => {
-  const schoolName = schoolNames().find((name) => slugify(name) === pageContext.routeParams.slug) ?? "";
-  const schools = readSchoolsWithAvailableCutoffs();
+  const schoolName = resolveSchool(pageContext.routeParams.slug)?.name ?? "";
+  const programs = readCurrentProgramsWithAvailableCutoffs();
   const statistics = readCurrentYearStatistics();
   const hasCutoffs = cutoffSchoolNames().includes(schoolName);
   return {
     schoolName,
     hasCutoffs,
     hasFeedback: feedbackSchoolNames().includes(schoolName),
-    toteutukset: schools.flatMap((k) => k.toteutukset).filter((t) => t.oppilaitosNimi.fi === schoolName),
+    toteutukset: programs.flatMap((k) => k.toteutukset).filter((t) => t.oppilaitosNimi.fi === schoolName),
     statistics: statistics
       .filter((s) => s.korkeakoulu === schoolName)
       .sort((a, b) => b.ensisijaisetHakijatLkm - a.ensisijaisetHakijatLkm),

@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import type { School as CutoffSchool, Programme } from "@/types/pisterajat.gen";
-import type { SchoolsResponse } from "@/types.gen";
+import type { CurrentProgramsResponse } from "@/types.gen";
 import {
   alaNamesForAlaParam,
   alaSlugParam,
@@ -56,7 +56,7 @@ test("newestCutoffRoundForAlaParam chooses the newest round containing the reque
 });
 
 test("filterUnavailableCutoffAlat removes school and ala combinations without cutoff data", () => {
-  const schools: SchoolsResponse = [
+  const schools: CurrentProgramsResponse = [
     {
       nimi: { fi: "Musiikki" },
       sektori: "amk",
