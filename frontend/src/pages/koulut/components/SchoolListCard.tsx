@@ -20,7 +20,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
     <SimpleGrid columns={{ base: 2, md: 4 }}>
       <Stat.Root
         borderBottomWidth={{ base: "1px", md: "0" }}
-        borderColor="border.subtle"
+        borderColor="border"
         gap={1}
         pb={{ base: 3, md: 0 }}
         pe={3}
@@ -36,7 +36,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
 
       <Stat.Root
         borderBottomWidth={{ base: "1px", md: "0" }}
-        borderColor="border.subtle"
+        borderColor="border"
         borderInlineStartWidth="1px"
         gap={1}
         pb={{ base: 3, md: 0 }}
@@ -53,7 +53,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
       </Stat.Root>
 
       <Stat.Root
-        borderColor="border.subtle"
+        borderColor="border"
         borderInlineStartWidth={{ base: "0", md: "1px" }}
         gap={1}
         pe={3}
@@ -70,7 +70,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
       </Stat.Root>
 
       <Stat.Root
-        borderColor="border.subtle"
+        borderColor="border"
         borderInlineStartWidth="1px"
         gap={1}
         ps={3}
@@ -110,7 +110,7 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
   );
 
   return (
-    <Card.Root asChild borderColor="border.subtle" size="md" zIndex={1}>
+    <Card.Root asChild size="md" zIndex={1}>
       <a href={`/koulut/${school.slug}/`}>
         <Card.Header pb={4}>
           <HStack gap={2}>

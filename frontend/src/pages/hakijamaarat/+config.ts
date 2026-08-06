@@ -1,5 +1,6 @@
 import type { Config } from "vike/types";
+import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 
 export default {
-  title: "Hakijamäärät – korkeakoulujen yhteishaun tilastot",
+  title: `Korkeakoulujen yhteishaun hakijamäärät ${DEFAULT_CUTOFF_YEAR}`,
 } satisfies Config;
