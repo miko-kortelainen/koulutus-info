@@ -664,10 +664,12 @@ test("/koulut/:slug/opiskelijapalautteet: opens AMK feedback", async ({ page }) 
     page.getByRole("heading", {
       exact: true,
       level: 1,
-      name: "Centria-ammattikorkeakoulu – opiskelijapalautteet",
+      name: "Centria-ammattikorkeakoulu opiskelijapalautteet",
     }),
   ).toBeVisible();
-  await expect(page.getByText("Vuoden 2025 opiskelijapalautteen tulokset koulutusaloittain.")).toBeVisible();
+  await expect(
+    page.getByText("Vuoden 2025 opiskelijapalautteen vastauksien keskiarvot koulutusaloittain."),
+  ).toBeVisible();
   await expect(page.getByText("Ammattikorkeakoulujen opiskelijapalaute (AVOP).")).toBeVisible();
   await expect(page.getByText("5,40 / 7", { exact: true })).toBeVisible();
 });
@@ -684,9 +686,11 @@ test("/koulut/:slug: switches detail tab and opens feedback", async ({ page }) =
 
   await expect(page).toHaveURL("/koulut/aalto-yliopisto/opiskelijapalautteet/");
   await expect(
-    page.getByRole("heading", { exact: true, level: 1, name: "Aalto-yliopisto – opiskelijapalautteet" }),
+    page.getByRole("heading", { exact: true, level: 1, name: "Aalto-yliopisto opiskelijapalautteet" }),
   ).toBeVisible();
-  await expect(page.getByText("Vuoden 2025 opiskelijapalautteen tulokset koulutusaloittain.")).toBeVisible();
+  await expect(
+    page.getByText("Vuoden 2025 opiskelijapalautteen vastauksien keskiarvot koulutusaloittain."),
+  ).toBeVisible();
   await expect(page.getByText("3,92 / 5", { exact: true })).toBeVisible();
 });
 
@@ -697,7 +701,7 @@ test("/koulut/:slug/pisterajat: shows complete current-round programme cutoff ca
   await expect(page).toHaveURL("/koulut/centria-ammattikorkeakoulu/pisterajat/");
   await expect(
     page.getByRole("heading", {
-      name: `Centria-ammattikorkeakoulu – pisterajat ${DEFAULT_CUTOFF_YEAR}`,
+      name: `Centria-ammattikorkeakoulu pisterajat ${DEFAULT_CUTOFF_YEAR}`,
     }),
   ).toBeVisible();
   await expect(page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" })).toBeVisible();
@@ -744,7 +748,7 @@ test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ p
   await selectOption(page, "Hakukierros", "Syksyn yhteishaku 2024");
   await page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" }).click();
 
-  await expect(page.getByRole("heading", { name: "Centria-ammattikorkeakoulu – pisterajat 2024" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Centria-ammattikorkeakoulu pisterajat 2024" })).toBeVisible();
   await expect(page.getByText("Tradenomi (AMK), liiketalous, monimuotototeutus / Pietarsaari")).toBeVisible();
   await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).not.toBeVisible();
 });

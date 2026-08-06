@@ -62,6 +62,7 @@ var statisticsFilename = regexp.MustCompile(`^hakijamaarat-(\d{4})-(kevat|syksy)
 type refreshOptions struct {
 	statistics    bool
 	programmes    bool
+	catalog       bool // offline schools.json rebuild; requires on-disk programmes + stats
 	yhteishakuOID string
 	vipunen       models.VipunenConfig
 	opintopolku   models.OpintopolkuConfig
@@ -134,7 +135,7 @@ func run(args []string) error {
 		return err
 	}
 
-	if err := rebuildSchoolCatalog(meta.CurrentStatisticsRound); err != nil {
+	if err := maybeRebuildSchoolCatalog(meta.CurrentStatisticsRound, options.catalog); err != nil {
 		return err
 	}
 
@@ -157,7 +158,7 @@ func parseRefreshOptions(args []string, cfg models.Config) (refreshOptions, erro
 			return refreshOptions{statistics: true, programmes: true, yhteishakuOID: cfg.Opintopolku.YhteishakuOID, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
 		case "catalog":
 			// Offline rebuild of schools.json from on-disk programmes + current stats round.
-			return refreshOptions{vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
+			return refreshOptions{catalog: true, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
 		}
 	}
 
@@ -312,6 +313,22 @@ func generateOpintopolku(cfg models.OpintopolkuConfig) (bool, error) {
 
 	fmt.Printf("Opintopolku: selection=%s fetched=%d generated=%d changed=%t output=%s\n", selection, len(fetched.Hits), len(programs), changed, programsOutputPath)
 	return changed, nil
+}
+
+// maybeRebuildSchoolCatalog rebuilds schools.json when programmes exist on disk.
+// Partial refreshes (e.g. vipunen alone on a fresh install) skip the catalog
+// until current_programs.json is available; the catalog command still requires it.
+func maybeRebuildSchoolCatalog(currentRound string, catalogRequired bool) error {
+	if _, err := os.Stat(programsOutputPath); errors.Is(err, os.ErrNotExist) {
+		if catalogRequired {
+			return fmt.Errorf("school catalog requires %s", programsOutputPath)
+		}
+		fmt.Printf("School catalog: skipped (missing %s); run opintopolku or catalog after programmes exist\n", programsOutputPath)
+		return nil
+	} else if err != nil {
+		return fmt.Errorf("stat %s: %w", programsOutputPath, err)
+	}
+	return rebuildSchoolCatalog(currentRound)
 }
 
 func rebuildSchoolCatalog(currentRound string) error {

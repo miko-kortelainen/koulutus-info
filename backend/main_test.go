@@ -51,7 +51,7 @@ func TestParseRefreshOptions(t *testing.T) {
 			name: "legacy all command remains supported",
 			args: []string{"all"},
 			check: func(t *testing.T, options refreshOptions) {
-				if !options.programmes || !options.statistics || options.yhteishakuOID != "configured-oid" {
+				if !options.programmes || !options.statistics || options.catalog || options.yhteishakuOID != "configured-oid" {
 					t.Fatalf("unexpected options: %+v", options)
 				}
 			},
@@ -60,7 +60,25 @@ func TestParseRefreshOptions(t *testing.T) {
 			name: "catalog rebuilds offline without network refresh",
 			args: []string{"catalog"},
 			check: func(t *testing.T, options refreshOptions) {
-				if options.programmes || options.statistics {
+				if options.programmes || options.statistics || !options.catalog {
+					t.Fatalf("unexpected options: %+v", options)
+				}
+			},
+		},
+		{
+			name: "vipunen refreshes statistics only",
+			args: []string{"vipunen"},
+			check: func(t *testing.T, options refreshOptions) {
+				if !options.statistics || options.programmes || options.catalog {
+					t.Fatalf("unexpected options: %+v", options)
+				}
+			},
+		},
+		{
+			name: "opintopolku refreshes programmes only",
+			args: []string{"opintopolku"},
+			check: func(t *testing.T, options refreshOptions) {
+				if !options.programmes || options.statistics || options.catalog {
 					t.Fatalf("unexpected options: %+v", options)
 				}
 			},
