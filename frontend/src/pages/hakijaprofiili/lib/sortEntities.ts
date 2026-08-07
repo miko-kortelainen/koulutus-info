@@ -1,5 +1,5 @@
 import type { HakijaprofiiliEntity } from "@/api/dataValidation";
-import { publishableCounts } from "./masking";
+import { isPublishableCount, publishableCounts } from "./masking";
 
 export type SortOption =
   | "asc"
@@ -14,20 +14,16 @@ export type SortOption =
 const fiCollator = new Intl.Collator("fi");
 
 /** Publishable gender count (≥ 5); missing, null, or under five → null for ordering. */
-export function publishableGenderCount(
+function publishableGenderCount(
   entity: Pick<HakijaprofiiliEntity, "sukupuoli">,
   gender: "nainen" | "mies",
 ): number | null {
   const row = entity.sukupuoli.find((entry) => entry.nimi.toLocaleLowerCase("fi") === gender);
-  if (row == null || row.lkm == null || row.lkm < 5) return null;
-  return row.lkm;
+  return row != null && isPublishableCount(row.lkm) ? row.lkm : null;
 }
 
-/**
- * Share of `gender` among publishable sukupuoli counts (lkm ≥ 5 only).
- * Missing/under-five target gender or zero publishable total → null (sort last).
- */
-export function genderShare(entity: Pick<HakijaprofiiliEntity, "sukupuoli">, gender: "nainen" | "mies"): number | null {
+/** Share of `gender` among publishable sukupuoli counts; missing target or empty total → null. */
+function genderShare(entity: Pick<HakijaprofiiliEntity, "sukupuoli">, gender: "nainen" | "mies"): number | null {
   const count = publishableGenderCount(entity, gender);
   if (count == null) return null;
   const total = publishableCounts(entity.sukupuoli).reduce((sum, row) => sum + row.lkm, 0);

@@ -4,14 +4,11 @@ import { formatCount } from "@/lib/statistics";
 const fiCollator = new Intl.Collator("fi");
 const percentFormat = new Intl.NumberFormat("fi-FI", { style: "percent", maximumFractionDigits: 1 });
 
-/** Canonical sukupuoli labels in fixed display order. */
-export const GENDER_LABELS = ["nainen", "mies"] as const;
+const GENDER_LABELS = ["nainen", "mies"] as const;
 
-/** Published margin count: null or under 5 → alle 5. */
-export const formatProfiliCount = (lkm: number | null) => (lkm == null || lkm < 5 ? "alle 5" : formatCount(lkm));
-
-/** Sukupuoli disclaimer: null or under 5 → 1-4 hakijaa (not alle 5). */
-export const formatGenderCount = (lkm: number | null) => (lkm == null || lkm < 5 ? "1-4 hakijaa" : formatCount(lkm));
+/** Sukupuoli: null or under 5 → 1-4 hakijaa (not alle 5). */
+export const formatGenderCount = (lkm: number | null) =>
+  isPublishableCount(lkm) ? formatCount(lkm) : "1-4 hakijaa";
 
 export const isPublishableCount = (lkm: number | null): lkm is number => lkm != null && lkm >= 5;
 

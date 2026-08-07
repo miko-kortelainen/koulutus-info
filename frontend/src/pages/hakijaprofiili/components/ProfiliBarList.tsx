@@ -1,23 +1,25 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import type { HakijaprofiiliCount } from "@/api/dataValidation";
-import { formatProfiliCount, isPublishableCount, shareOf } from "../lib/masking";
+import { formatCount } from "@/lib/statistics";
+import { isPublishableCount, shareOf } from "../lib/masking";
 
 interface ProfiliBarListProps {
   ariaLabel: string;
   rows: HakijaprofiiliCount[];
   /** Null when shares must stay hidden (any part masked or under five). */
   total: number | null;
-  /** Defaults to formatProfiliCount (alle 5). Sukupuoli passes formatGenderCount. */
+  /** Defaults to alle 5 / formatCount. Sukupuoli passes formatGenderCount. */
   formatCountLabel?: (lkm: number | null) => string;
 }
 
 const BAR_H = "8";
+const defaultCountLabel = (lkm: number | null) => (isPublishableCount(lkm) ? formatCount(lkm) : "alle 5");
 
 export default function ProfiliBarList({
   ariaLabel,
   rows,
   total,
-  formatCountLabel = formatProfiliCount,
+  formatCountLabel = defaultCountLabel,
 }: ProfiliBarListProps) {
   if (rows.length === 0) {
     return <Text color="fg.muted">Ei tietoja saatavilla.</Text>;
