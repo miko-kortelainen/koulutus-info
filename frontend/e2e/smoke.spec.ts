@@ -811,6 +811,15 @@ test("/trendit: shows a comparison loading error", async ({ page }) => {
   await expect(page.getByText("uusi", { exact: true })).toHaveCount(0);
 });
 
+test("/hakijaprofiili: selects a school and shows gender breakdown", async ({ page }) => {
+  await page.goto("/hakijaprofiili/");
+  await expect(page.getByRole("heading", { exact: true, level: 1, name: "Hakijaprofiili" })).toBeVisible();
+  await page.getByRole("button", { name: "Haaga-Helia ammattikorkeakoulu" }).click();
+  await expect(page.getByRole("heading", { level: 2, name: "Haaga-Helia ammattikorkeakoulu" })).toBeVisible();
+  await expect(page.getByRole("list", { name: /Sukupuolijakauma/ })).toBeVisible();
+  await expect(page.getByRole("list", { name: /Ikäryhmäjakauma/ })).toBeVisible();
+});
+
 test("/ennakointi: shows ranked vaje list and filters by sektori", async ({ page }) => {
   await page.goto("/ennakointi/");
   await expect(page.getByRole("heading", { exact: true, level: 1, name: "Ennakointi" })).toBeVisible();
