@@ -23,7 +23,7 @@ export default function CutoffIndexPage() {
   return (
     <>
       <PageIntro
-        description="AMK- ja yliopistokoulutusten yhteishaun pisterajat koulutusaloittain ja kouluittain."
+        description="Korkeakoulujen yhteishaun pisterajat koulutusaloittain ja kouluittain."
         title={`Pisterajat ${DEFAULT_CUTOFF_YEAR}`}
       />
       <PageContainer align="flex-start">

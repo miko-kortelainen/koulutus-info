@@ -1,9 +1,8 @@
 import type { Config } from "vike/types";
 import vikeReact from "vike-react/config";
-import { CURRENT_YEAR } from "@/config/yearOptions";
 
 export default {
-  title: `Korkeakoulujen yhteishaku ${CURRENT_YEAR.slice(0, 4)} – pisterajat ja pistelaskuri`,
+  title: `Yhteishaku.app – korkeakoulujen yhteishaun tilastot`,
   prerender: true,
   extends: vikeReact,
   lang: "fi",

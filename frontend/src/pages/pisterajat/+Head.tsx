@@ -1,6 +1,6 @@
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 
-const description = `Vuoden ${DEFAULT_CUTOFF_YEAR} yhteishaun pisterajat: AMK- ja yliopistokoulutusten alimmat hyväksytyt pisteet koulutusaloittain ja kouluittain.`;
+const description = `Vuoden ${DEFAULT_CUTOFF_YEAR} yhteishakujen pisterajat: AMK- ja yliopistokoulutusten alimmat hyväksytyt pisteet koulutusaloittain ja kouluittain.`;
 
 export function Head() {
   return (

@@ -1,15 +1,14 @@
 import { useData } from "vike-react/useData";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
-import { schoolNameWithShort } from "@/config/schoolShortNames";
 import { slugify } from "@/lib/slug";
 import { Head as GlobalHead } from "../../../+Head";
 import type { CutoffPageData } from "./+data";
 
 export function Head() {
-  const { schoolName } = useData<CutoffPageData>();
+  const { schoolName, schoolLabel } = useData<CutoffPageData>();
   const url = `https://yhteishaku.app/koulut/${slugify(schoolName)}/pisterajat/`;
   const schoolUrl = `https://yhteishaku.app/koulut/${slugify(schoolName)}/`;
-  const description = `${schoolNameWithShort(schoolName)}: katso vuoden ${DEFAULT_CUTOFF_YEAR} yhteishaun alimmat hyväksytyt pistemäärät koulutuksittain ja valintatavoittain.`;
+  const description = `${schoolLabel}: katso vuoden ${DEFAULT_CUTOFF_YEAR} yhteishaun alimmat hyväksytyt pistemäärät koulutuksittain ja valintatavoittain.`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

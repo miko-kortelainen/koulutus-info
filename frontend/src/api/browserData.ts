@@ -8,4 +8,8 @@ async function fetchJson<T>(url: string, error: string, parse: (value: unknown, 
 }
 
 export const getStatistics = (year: YearOption) =>
-  fetchJson(`/data/hakijamaarat-${year.replace("_", "-")}.json`, "failed to fetch statistics", parseStatistics);
+  fetchJson(
+    `/data/hakijamäärät/hakijamaarat-${year.replace("_", "-")}.json`,
+    "failed to fetch statistics",
+    parseStatistics,
+  );

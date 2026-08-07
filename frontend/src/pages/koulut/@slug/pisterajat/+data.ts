@@ -1,10 +1,11 @@
 import type { PageContextServer } from "vike/types";
-import { availableCutoffRounds, readCutoffSchools } from "@/api/serverData";
+import { availableCutoffRounds, formatSchoolName, readCutoffSchools } from "@/api/serverData";
 import { type CutoffEntry, mergeCutoffProgrammes, type ProgrammeWithRounds } from "@/lib/cutoffs";
 import { slugify } from "@/lib/slug";
 
 export interface CutoffPageData {
   schoolName: string;
+  schoolLabel: string;
   programmes: ProgrammeWithRounds[];
 }
 
@@ -25,6 +26,7 @@ export const data = (pageContext: PageContextServer): CutoffPageData => {
 
   return {
     schoolName,
+    schoolLabel: formatSchoolName(schoolName),
     programmes: mergeCutoffProgrammes(entries),
   };
 };

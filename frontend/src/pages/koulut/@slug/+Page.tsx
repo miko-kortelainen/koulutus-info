@@ -26,8 +26,8 @@ export default function SchoolPage() {
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         {toteutukset.length > 0
-          ? "Yhteishaussa olevat toteutukset ja edellisten hakijamäärät."
-          : `Yhteishaun ${statisticsRoundShortLabel(CURRENT_YEAR)} hakijamäärät.`}
+          ? "Yhteishaun pisterajat, hakijamäärät ja toteutukset."
+          : `Yhteishaun ${statisticsRoundShortLabel(CURRENT_YEAR)} pisterajat ja hakijamäärät.`}
       </Text>
       {hasCutoffs || hasFeedback ? (
         <HStack align="flex-start" flexWrap="wrap" gap={{ base: 2, md: 4 }}>

@@ -70,10 +70,10 @@ export default function CutoffPage() {
     <Stack gap={1}>
       <BackLink href="../" />
       <Heading as="h1" size="md">
-        {schoolName} – pisterajat {cutoffRoundYear(activeRound)}
+        {schoolName} pisterajat {cutoffRoundYear(activeRound)}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Pisterajat valintatavoittain eri hakukierroksilta.
+        Yhteishaun alimmat hyväksytyt pisteet aloittain.
       </Text>
       <Separator mt={2} />
     </Stack>
