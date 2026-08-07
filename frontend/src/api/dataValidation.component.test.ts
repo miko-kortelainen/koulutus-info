@@ -185,7 +185,6 @@ test("rejects duplicate koulutustarve keys", () => {
 const hakijaprofiiliEntity = {
   kohdeTyyppi: "koulu" as const,
   kohdeNimi: "Testikorkeakoulu",
-  sektori: "Ammattikorkeakoulukoulutus",
   sukupuoli: [
     { nimi: "nainen", lkm: 40 },
     { nimi: "mies", lkm: 20 },
@@ -193,7 +192,7 @@ const hakijaprofiiliEntity = {
   ikaryhmat: [{ nimi: "19 tai alle", lkm: 10 }],
 };
 
-test("accepts valid hakijaprofiili with optional sektori", () => {
+test("accepts valid hakijaprofiili", () => {
   expect(parseHakijaprofiili([hakijaprofiiliEntity], "hakijaprofiili/test.json")).toEqual([hakijaprofiiliEntity]);
 });
 
@@ -207,4 +206,10 @@ test("rejects malformed hakijaprofiili payload", () => {
   expect(() =>
     parseHakijaprofiili([{ ...hakijaprofiiliEntity, sukupuoli: [{ nimi: "nainen", lkm: -1 }] }], "hakijaprofiili/test.json"),
   ).toThrow("Invalid hakijaprofiili payload");
+});
+
+test("rejects duplicate hakijaprofiili identity", () => {
+  expect(() => parseHakijaprofiili([hakijaprofiiliEntity, { ...hakijaprofiiliEntity }], "hakijaprofiili/test.json")).toThrow(
+    "duplicate",
+  );
 });

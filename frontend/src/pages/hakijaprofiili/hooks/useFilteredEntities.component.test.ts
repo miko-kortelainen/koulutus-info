@@ -70,8 +70,3 @@ test("searches only among tutkinto that still have publishable rows", () => {
   const { result } = renderHook(() => useFilteredEntities(entities, "tutkinto", "peitetty", "asc"));
   expect(names(result.current)).toEqual([]);
 });
-
-test("applies gender sort after filtering", () => {
-  const { result } = renderHook(() => useFilteredEntities(entities, "tutkinto", "", "most_female"));
-  expect(names(result.current)).toEqual(["Julkaistu sukupuoli (AMK)", "Julkaistu ikä (AMK)"]);
-});

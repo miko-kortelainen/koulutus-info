@@ -226,8 +226,6 @@ export interface HakijaprofiiliCount {
 export interface HakijaprofiiliEntity {
   kohdeTyyppi: HakijaprofiiliKohdeTyyppi;
   kohdeNimi: string;
-  /** Present on koulu rows (Vipunen: Ammattikorkeakoulukoulutus | Yliopistokoulutus). */
-  sektori?: string;
   sukupuoli: HakijaprofiiliCount[];
   ikaryhmat: HakijaprofiiliCount[];
 }
@@ -245,7 +243,6 @@ const isHakijaprofiiliEntity = (value: unknown): value is HakijaprofiiliEntity =
   isHakijaprofiiliKohdeTyyppi(value.kohdeTyyppi) &&
   isString(value.kohdeNimi) &&
   value.kohdeNimi !== "" &&
-  isOptionalString(value.sektori) &&
   Array.isArray(value.sukupuoli) &&
   value.sukupuoli.every(isHakijaprofiiliCount) &&
   Array.isArray(value.ikaryhmat) &&
@@ -254,6 +251,12 @@ const isHakijaprofiiliEntity = (value: unknown): value is HakijaprofiiliEntity =
 export const parseHakijaprofiili = (value: unknown, source: string): HakijaprofiiliResponse => {
   if (!Array.isArray(value) || !value.every(isHakijaprofiiliEntity)) {
     throw new Error(`Invalid hakijaprofiili payload: ${source}`);
+  }
+  const keys = new Set<string>();
+  for (const entity of value as HakijaprofiiliEntity[]) {
+    const key = `${entity.kohdeTyyppi}:${entity.kohdeNimi}`;
+    if (keys.has(key)) throw new Error(`Invalid hakijaprofiili payload: ${source}: duplicate (${key})`);
+    keys.add(key);
   }
   return value;
 };
