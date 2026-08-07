@@ -1,5 +1,5 @@
 import type { FeedbackMaxScore } from "@/api/dataValidation";
-import { readCurrentYearStatistics, readSchools, readStudentFeedback, schoolNames } from "@/api/serverData";
+import { readCurrentPrograms, readCurrentYearStatistics, readStudentFeedback, schoolNames } from "@/api/serverData";
 import { slugify } from "@/lib/slug";
 
 export interface SchoolListItem {
@@ -17,9 +17,9 @@ export interface SchoolListItem {
 
 export const data = (): SchoolListItem[] => {
   const statistics = readCurrentYearStatistics();
-  const schools = readSchools();
+  const programs = readCurrentPrograms();
   const feedback = readStudentFeedback();
-  const toteutukset = schools.flatMap((k) => k.toteutukset);
+  const toteutukset = programs.flatMap((k) => k.toteutukset);
   return schoolNames().map((name) => {
     const rows = statistics.filter((s) => s.korkeakoulu === name);
     const schoolFeedback = feedback[name];

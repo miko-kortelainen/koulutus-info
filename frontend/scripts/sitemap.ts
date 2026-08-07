@@ -10,14 +10,15 @@ const latestModifiedDate = (files: string[]): string | undefined => {
 };
 
 const cutoffFiles = readdirSync("public/data/pisterajat").map((file) => `pisterajat/${file}`);
-const currentStatisticsFile = `hakijamaarat-${CURRENT_YEAR.replace("_", "-")}.json`;
-const feedbackFiles = ["amk-palaute.json", "yliopisto-palaute.json"];
+const currentStatisticsFile = `hakijamäärät/hakijamaarat-${CURRENT_YEAR.replace("_", "-")}.json`;
+const feedbackFiles = ["opiskelijapalaute/amk-palaute.json", "opiskelijapalaute/yliopisto-palaute.json"];
 const cutoffsLastmod = latestModifiedDate(cutoffFiles);
 const feedbackLastmod = latestModifiedDate(feedbackFiles);
 const statisticsLastmod = latestModifiedDate([currentStatisticsFile]);
-const programmesLastmod = latestModifiedDate(["schools.json", ...cutoffFiles]);
+const programmesLastmod = latestModifiedDate(["current_programs.json", ...cutoffFiles]);
 const schoolsLastmod = latestModifiedDate([
   "schools.json",
+  "current_programs.json",
   currentStatisticsFile,
   ...cutoffFiles,
   ...feedbackFiles,

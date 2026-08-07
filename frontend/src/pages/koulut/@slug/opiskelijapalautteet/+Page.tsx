@@ -14,10 +14,10 @@ export default function FeedbackPage() {
       <Stack gap={1}>
         <BackLink href={`/koulut/${slugify(schoolName)}/`} />
         <Heading as="h1" size="md">
-          {schoolName} – opiskelijapalautteet
+          {schoolName} opiskelijapalautteet
         </Heading>
         <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-          Vuoden {year} opiskelijapalautteen tulokset koulutusaloittain.
+          Vuoden {year} opiskelijapalautteen vastauksien keskiarvot koulutusaloittain.
         </Text>
         <Separator mt={2} />
       </Stack>

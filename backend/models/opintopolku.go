@@ -35,11 +35,11 @@ type LanguageStrings struct {
 	En string `json:"en,omitempty"`
 }
 
-// --- Optimized output format for schools.json ---
+// --- Optimized output format for current_programs.json ---
 
-// SchoolsResponse is the optimized schools.json format:
+// CurrentProgramsResponse is current_programs.json:
 // a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
-type SchoolsResponse []KoulutusEntry
+type CurrentProgramsResponse []KoulutusEntry
 
 type KoulutusEntry struct {
 	Nimi         LanguageStrings `json:"nimi"`
@@ -55,6 +55,6 @@ type ToteutusEntry struct {
 	Kunnat         []string        `json:"kunnat"`
 	// omitempty keeps the generated TS type optional: favorites saved to
 	// localStorage before this field existed have no koulutusalat.
-	Koulutusalat []string `json:"koulutusalat,omitempty"`
-	Muuntokoulutus bool            `json:"muuntokoulutus,omitempty"`
+	Koulutusalat   []string `json:"koulutusalat,omitempty"`
+	Muuntokoulutus bool     `json:"muuntokoulutus,omitempty"`
 }

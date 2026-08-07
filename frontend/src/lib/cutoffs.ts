@@ -1,7 +1,7 @@
 import { type CutoffRound, compareCutoffRounds } from "@/config/cutoffRounds";
 import { slugify } from "@/lib/slug";
 import type { Cutoff, Programme as CutoffProgramme, School as CutoffSchool } from "@/types/pisterajat.gen";
-import type { SchoolsResponse } from "@/types.gen";
+import type { CurrentProgramsResponse } from "@/types.gen";
 
 export interface CutoffWithRound extends Cutoff {
   round: CutoffRound;
@@ -37,9 +37,9 @@ export const newestCutoffRoundForAlaParam = (
 };
 
 export const filterUnavailableCutoffAlat = (
-  schools: SchoolsResponse,
+  schools: CurrentProgramsResponse,
   cutoffSchools: CutoffSchool[],
-): SchoolsResponse => {
+): CurrentProgramsResponse => {
   const availableAlat = new Map<string, Set<string>>();
   for (const school of cutoffSchools) {
     const alat = availableAlat.get(school.name) ?? new Set<string>();

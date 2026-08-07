@@ -21,7 +21,7 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
     <SimpleGrid columns={{ base: 2, md: 4 }}>
       <Stat.Root
         borderBottomWidth={{ base: "1px", md: "0" }}
-        borderColor="border.subtle"
+        borderColor="border"
         gap={1}
         pb={{ base: 3, md: 0 }}
         pe={3}
@@ -37,7 +37,7 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
 
       <Stat.Root
         borderBottomWidth={{ base: "1px", md: "0" }}
-        borderColor="border.subtle"
+        borderColor="border"
         borderInlineStartWidth="1px"
         gap={1}
         pb={{ base: 3, md: 0 }}
@@ -54,7 +54,7 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
       </Stat.Root>
 
       <Stat.Root
-        borderColor="border.subtle"
+        borderColor="border"
         borderInlineStartWidth={{ base: "0", md: "1px" }}
         gap={1}
         pe={3}
@@ -71,7 +71,7 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
       </Stat.Root>
 
       <Stat.Root
-        borderColor="border.subtle"
+        borderColor="border"
         borderInlineStartWidth="1px"
         gap={1}
         ps={3}
@@ -138,7 +138,7 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
   );
 
   return (
-    <Card.Root as="li" borderColor="border.subtle" size="md" zIndex={1}>
+    <Card.Root as="li" size="md" zIndex={1}>
       <Card.Header pb={4}>{header}</Card.Header>
       <Card.Body pt={0}>
         <Stack>
