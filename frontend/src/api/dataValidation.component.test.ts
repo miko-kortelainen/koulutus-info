@@ -2,6 +2,7 @@ import { expect, test } from "vitest";
 import {
   parseCutoffSchools,
   parseCurrentPrograms,
+  parseHakijaprofiili,
   parseKoulutustarpeet,
   parseSchoolCatalog,
   parseStatistics,
@@ -179,4 +180,31 @@ test("rejects duplicate koulutustarve keys", () => {
   expect(() =>
     parseKoulutustarpeet({ items: [koulutustarveItem, { ...koulutustarveItem }] }, "ennakointi/koulutustarpeet.json"),
   ).toThrow("duplicate");
+});
+
+const hakijaprofiiliEntity = {
+  kohdeTyyppi: "koulu" as const,
+  kohdeNimi: "Testikorkeakoulu",
+  sektori: "Ammattikorkeakoulukoulutus",
+  sukupuoli: [
+    { nimi: "nainen", lkm: 40 },
+    { nimi: "mies", lkm: 20 },
+  ],
+  ikaryhmat: [{ nimi: "19 tai alle", lkm: 10 }],
+};
+
+test("accepts valid hakijaprofiili with optional sektori", () => {
+  expect(parseHakijaprofiili([hakijaprofiiliEntity], "hakijaprofiili/test.json")).toEqual([hakijaprofiiliEntity]);
+});
+
+test("rejects malformed hakijaprofiili payload", () => {
+  expect(() => parseHakijaprofiili({ entities: [] }, "hakijaprofiili/test.json")).toThrow(
+    "Invalid hakijaprofiili payload: hakijaprofiili/test.json",
+  );
+  expect(() =>
+    parseHakijaprofiili([{ ...hakijaprofiiliEntity, kohdeTyyppi: "okm_ala" }], "hakijaprofiili/test.json"),
+  ).toThrow("Invalid hakijaprofiili payload");
+  expect(() =>
+    parseHakijaprofiili([{ ...hakijaprofiiliEntity, sukupuoli: [{ nimi: "nainen", lkm: -1 }] }], "hakijaprofiili/test.json"),
+  ).toThrow("Invalid hakijaprofiili payload");
 });
