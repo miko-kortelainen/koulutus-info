@@ -1,0 +1,6990 @@
+[
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Centria-ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 384
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 615
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 36
+      },
+      {
+        "nimi": "20",
+        "lkm": 69
+      },
+      {
+        "nimi": "21",
+        "lkm": 66
+      },
+      {
+        "nimi": "22",
+        "lkm": 57
+      },
+      {
+        "nimi": "23",
+        "lkm": 57
+      },
+      {
+        "nimi": "24",
+        "lkm": 54
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 192
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 183
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 123
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 69
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Diakonia-ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 414
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 2892
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 12
+      },
+      {
+        "nimi": "19",
+        "lkm": 117
+      },
+      {
+        "nimi": "20",
+        "lkm": 165
+      },
+      {
+        "nimi": "21",
+        "lkm": 129
+      },
+      {
+        "nimi": "22",
+        "lkm": 156
+      },
+      {
+        "nimi": "23",
+        "lkm": 144
+      },
+      {
+        "nimi": "24",
+        "lkm": 132
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 627
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 540
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 462
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 369
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 252
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 135
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Haaga-Helia ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 2481
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 3018
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 78
+      },
+      {
+        "nimi": "19",
+        "lkm": 510
+      },
+      {
+        "nimi": "20",
+        "lkm": 627
+      },
+      {
+        "nimi": "21",
+        "lkm": 594
+      },
+      {
+        "nimi": "22",
+        "lkm": 459
+      },
+      {
+        "nimi": "23",
+        "lkm": 336
+      },
+      {
+        "nimi": "24",
+        "lkm": 261
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1083
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 708
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 348
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 258
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 150
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Humanistinen ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 93
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 534
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 6
+      },
+      {
+        "nimi": "19",
+        "lkm": 12
+      },
+      {
+        "nimi": "20",
+        "lkm": 12
+      },
+      {
+        "nimi": "21",
+        "lkm": 12
+      },
+      {
+        "nimi": "22",
+        "lkm": 12
+      },
+      {
+        "nimi": "23",
+        "lkm": 21
+      },
+      {
+        "nimi": "24",
+        "lkm": 15
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 99
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 87
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 108
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Hämeen ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1269
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1545
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 24
+      },
+      {
+        "nimi": "19",
+        "lkm": 117
+      },
+      {
+        "nimi": "20",
+        "lkm": 165
+      },
+      {
+        "nimi": "21",
+        "lkm": 180
+      },
+      {
+        "nimi": "22",
+        "lkm": 150
+      },
+      {
+        "nimi": "23",
+        "lkm": 114
+      },
+      {
+        "nimi": "24",
+        "lkm": 138
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 561
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 474
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 351
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 255
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 186
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 69
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Jyväskylän ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1419
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1884
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 18
+      },
+      {
+        "nimi": "19",
+        "lkm": 231
+      },
+      {
+        "nimi": "20",
+        "lkm": 288
+      },
+      {
+        "nimi": "21",
+        "lkm": 264
+      },
+      {
+        "nimi": "22",
+        "lkm": 183
+      },
+      {
+        "nimi": "23",
+        "lkm": 153
+      },
+      {
+        "nimi": "24",
+        "lkm": 168
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 627
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 477
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 342
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 258
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 168
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 87
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Jyväskylän yliopisto",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 264
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 441
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 33
+      },
+      {
+        "nimi": "20",
+        "lkm": 45
+      },
+      {
+        "nimi": "21",
+        "lkm": 39
+      },
+      {
+        "nimi": "22",
+        "lkm": 27
+      },
+      {
+        "nimi": "23",
+        "lkm": 21
+      },
+      {
+        "nimi": "24",
+        "lkm": 33
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 132
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 87
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 69
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Kaakkois-Suomen ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 3162
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 5988
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 78
+      },
+      {
+        "nimi": "19",
+        "lkm": 339
+      },
+      {
+        "nimi": "20",
+        "lkm": 474
+      },
+      {
+        "nimi": "21",
+        "lkm": 516
+      },
+      {
+        "nimi": "22",
+        "lkm": 513
+      },
+      {
+        "nimi": "23",
+        "lkm": 435
+      },
+      {
+        "nimi": "24",
+        "lkm": 429
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1995
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 1626
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 1062
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 849
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 498
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 225
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 114
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Kajaanin ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 156
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 270
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 33
+      },
+      {
+        "nimi": "20",
+        "lkm": 15
+      },
+      {
+        "nimi": "21",
+        "lkm": 42
+      },
+      {
+        "nimi": "22",
+        "lkm": 36
+      },
+      {
+        "nimi": "23",
+        "lkm": 24
+      },
+      {
+        "nimi": "24",
+        "lkm": 21
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 111
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Karelia-ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 810
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1005
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 36
+      },
+      {
+        "nimi": "19",
+        "lkm": 153
+      },
+      {
+        "nimi": "20",
+        "lkm": 204
+      },
+      {
+        "nimi": "21",
+        "lkm": 228
+      },
+      {
+        "nimi": "22",
+        "lkm": 186
+      },
+      {
+        "nimi": "23",
+        "lkm": 144
+      },
+      {
+        "nimi": "24",
+        "lkm": 114
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 387
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 165
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 102
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "LAB-ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1827
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 4254
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 33
+      },
+      {
+        "nimi": "19",
+        "lkm": 231
+      },
+      {
+        "nimi": "20",
+        "lkm": 381
+      },
+      {
+        "nimi": "21",
+        "lkm": 348
+      },
+      {
+        "nimi": "22",
+        "lkm": 312
+      },
+      {
+        "nimi": "23",
+        "lkm": 237
+      },
+      {
+        "nimi": "24",
+        "lkm": 288
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1149
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 1059
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 798
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 564
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 378
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 198
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Lapin ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1218
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 3501
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 15
+      },
+      {
+        "nimi": "19",
+        "lkm": 105
+      },
+      {
+        "nimi": "20",
+        "lkm": 165
+      },
+      {
+        "nimi": "21",
+        "lkm": 174
+      },
+      {
+        "nimi": "22",
+        "lkm": 204
+      },
+      {
+        "nimi": "23",
+        "lkm": 174
+      },
+      {
+        "nimi": "24",
+        "lkm": 201
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1044
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 921
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 660
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 510
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 333
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 171
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 75
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Laurea-ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 3171
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 7650
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 75
+      },
+      {
+        "nimi": "19",
+        "lkm": 639
+      },
+      {
+        "nimi": "20",
+        "lkm": 747
+      },
+      {
+        "nimi": "21",
+        "lkm": 804
+      },
+      {
+        "nimi": "22",
+        "lkm": 720
+      },
+      {
+        "nimi": "23",
+        "lkm": 561
+      },
+      {
+        "nimi": "24",
+        "lkm": 471
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 2175
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 1725
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 1092
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 822
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 591
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 300
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 96
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 24
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Metropolia Ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 3258
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 6804
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 138
+      },
+      {
+        "nimi": "19",
+        "lkm": 771
+      },
+      {
+        "nimi": "20",
+        "lkm": 1002
+      },
+      {
+        "nimi": "21",
+        "lkm": 1011
+      },
+      {
+        "nimi": "22",
+        "lkm": 816
+      },
+      {
+        "nimi": "23",
+        "lkm": 624
+      },
+      {
+        "nimi": "24",
+        "lkm": 543
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 2127
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 1290
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 744
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 543
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 285
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 129
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Oulun ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 936
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1575
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 15
+      },
+      {
+        "nimi": "19",
+        "lkm": 144
+      },
+      {
+        "nimi": "20",
+        "lkm": 189
+      },
+      {
+        "nimi": "21",
+        "lkm": 201
+      },
+      {
+        "nimi": "22",
+        "lkm": 147
+      },
+      {
+        "nimi": "23",
+        "lkm": 147
+      },
+      {
+        "nimi": "24",
+        "lkm": 105
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 513
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 405
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 255
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 189
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 135
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Satakunnan ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1674
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 3108
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 57
+      },
+      {
+        "nimi": "19",
+        "lkm": 174
+      },
+      {
+        "nimi": "20",
+        "lkm": 237
+      },
+      {
+        "nimi": "21",
+        "lkm": 372
+      },
+      {
+        "nimi": "22",
+        "lkm": 339
+      },
+      {
+        "nimi": "23",
+        "lkm": 258
+      },
+      {
+        "nimi": "24",
+        "lkm": 213
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1116
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 729
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 468
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 393
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 246
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 126
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Savonia-ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 828
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 3450
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 12
+      },
+      {
+        "nimi": "19",
+        "lkm": 138
+      },
+      {
+        "nimi": "20",
+        "lkm": 165
+      },
+      {
+        "nimi": "21",
+        "lkm": 144
+      },
+      {
+        "nimi": "22",
+        "lkm": 123
+      },
+      {
+        "nimi": "23",
+        "lkm": 144
+      },
+      {
+        "nimi": "24",
+        "lkm": 150
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 708
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 738
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 660
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 579
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 411
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 237
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 72
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Seinäjoen ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 444
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1137
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 12
+      },
+      {
+        "nimi": "19",
+        "lkm": 126
+      },
+      {
+        "nimi": "20",
+        "lkm": 129
+      },
+      {
+        "nimi": "21",
+        "lkm": 105
+      },
+      {
+        "nimi": "22",
+        "lkm": 96
+      },
+      {
+        "nimi": "23",
+        "lkm": 84
+      },
+      {
+        "nimi": "24",
+        "lkm": 81
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 321
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 219
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 147
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 132
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Tampereen ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 2034
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 3369
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 33
+      },
+      {
+        "nimi": "19",
+        "lkm": 432
+      },
+      {
+        "nimi": "20",
+        "lkm": 600
+      },
+      {
+        "nimi": "21",
+        "lkm": 510
+      },
+      {
+        "nimi": "22",
+        "lkm": 363
+      },
+      {
+        "nimi": "23",
+        "lkm": 288
+      },
+      {
+        "nimi": "24",
+        "lkm": 285
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 996
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 690
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 498
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 348
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 222
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 99
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Turun ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1647
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 3636
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 42
+      },
+      {
+        "nimi": "19",
+        "lkm": 474
+      },
+      {
+        "nimi": "20",
+        "lkm": 522
+      },
+      {
+        "nimi": "21",
+        "lkm": 507
+      },
+      {
+        "nimi": "22",
+        "lkm": 378
+      },
+      {
+        "nimi": "23",
+        "lkm": 279
+      },
+      {
+        "nimi": "24",
+        "lkm": 231
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 870
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 627
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 465
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 342
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 270
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 174
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 72
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Turun yliopisto",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 36
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 102
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 15
+      },
+      {
+        "nimi": "20",
+        "lkm": 24
+      },
+      {
+        "nimi": "21",
+        "lkm": 15
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 9
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Vaasan ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 525
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1071
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 24
+      },
+      {
+        "nimi": "19",
+        "lkm": 63
+      },
+      {
+        "nimi": "20",
+        "lkm": 96
+      },
+      {
+        "nimi": "21",
+        "lkm": 99
+      },
+      {
+        "nimi": "22",
+        "lkm": 90
+      },
+      {
+        "nimi": "23",
+        "lkm": 99
+      },
+      {
+        "nimi": "24",
+        "lkm": 75
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 330
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 216
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 171
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 141
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 123
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Kauppa, hallinto ja oikeustieteet",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 8781
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 15699
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 234
+      },
+      {
+        "nimi": "19",
+        "lkm": 1413
+      },
+      {
+        "nimi": "20",
+        "lkm": 1860
+      },
+      {
+        "nimi": "21",
+        "lkm": 2049
+      },
+      {
+        "nimi": "22",
+        "lkm": 1725
+      },
+      {
+        "nimi": "23",
+        "lkm": 1356
+      },
+      {
+        "nimi": "24",
+        "lkm": 1095
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 5013
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 3555
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 2298
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 1836
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 1158
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 627
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 261
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Tekniikan alat",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 6075
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 2388
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 93
+      },
+      {
+        "nimi": "19",
+        "lkm": 483
+      },
+      {
+        "nimi": "20",
+        "lkm": 738
+      },
+      {
+        "nimi": "21",
+        "lkm": 714
+      },
+      {
+        "nimi": "22",
+        "lkm": 522
+      },
+      {
+        "nimi": "23",
+        "lkm": 456
+      },
+      {
+        "nimi": "24",
+        "lkm": 405
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1710
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 1308
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 882
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 636
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 375
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 144
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 102
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Terveys- ja hyvinvointialat",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 6075
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 31725
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 243
+      },
+      {
+        "nimi": "19",
+        "lkm": 2157
+      },
+      {
+        "nimi": "20",
+        "lkm": 2607
+      },
+      {
+        "nimi": "21",
+        "lkm": 2415
+      },
+      {
+        "nimi": "22",
+        "lkm": 2139
+      },
+      {
+        "nimi": "23",
+        "lkm": 1767
+      },
+      {
+        "nimi": "24",
+        "lkm": 1767
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 7092
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 5661
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 4353
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 3447
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 2418
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 1230
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 486
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 105
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Palvelualat",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1719
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 2391
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 45
+      },
+      {
+        "nimi": "19",
+        "lkm": 246
+      },
+      {
+        "nimi": "20",
+        "lkm": 276
+      },
+      {
+        "nimi": "21",
+        "lkm": 342
+      },
+      {
+        "nimi": "22",
+        "lkm": 306
+      },
+      {
+        "nimi": "23",
+        "lkm": 228
+      },
+      {
+        "nimi": "24",
+        "lkm": 195
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 912
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 585
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 348
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 279
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 201
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 102
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Taiteet ja kulttuurialat",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 345
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 873
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 9
+      },
+      {
+        "nimi": "19",
+        "lkm": 66
+      },
+      {
+        "nimi": "20",
+        "lkm": 75
+      },
+      {
+        "nimi": "21",
+        "lkm": 63
+      },
+      {
+        "nimi": "22",
+        "lkm": 66
+      },
+      {
+        "nimi": "23",
+        "lkm": 57
+      },
+      {
+        "nimi": "24",
+        "lkm": 48
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 231
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 201
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 147
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 96
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Tietojenkäsittely ja tietoliikenne",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 4671
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 3561
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 78
+      },
+      {
+        "nimi": "19",
+        "lkm": 435
+      },
+      {
+        "nimi": "20",
+        "lkm": 621
+      },
+      {
+        "nimi": "21",
+        "lkm": 654
+      },
+      {
+        "nimi": "22",
+        "lkm": 510
+      },
+      {
+        "nimi": "23",
+        "lkm": 408
+      },
+      {
+        "nimi": "24",
+        "lkm": 414
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1908
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 1521
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 771
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 516
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 276
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 114
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 63
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Maa- ja metsätalousalat",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 207
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 207
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 15
+      },
+      {
+        "nimi": "20",
+        "lkm": 24
+      },
+      {
+        "nimi": "21",
+        "lkm": 21
+      },
+      {
+        "nimi": "22",
+        "lkm": 24
+      },
+      {
+        "nimi": "23",
+        "lkm": 21
+      },
+      {
+        "nimi": "24",
+        "lkm": 21
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 90
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 75
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Kasvatusalat",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 57
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 282
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 9
+      },
+      {
+        "nimi": "20",
+        "lkm": 21
+      },
+      {
+        "nimi": "21",
+        "lkm": 9
+      },
+      {
+        "nimi": "22",
+        "lkm": 12
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Lääketieteet",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 72
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 585
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 12
+      },
+      {
+        "nimi": "19",
+        "lkm": 54
+      },
+      {
+        "nimi": "20",
+        "lkm": 75
+      },
+      {
+        "nimi": "21",
+        "lkm": 78
+      },
+      {
+        "nimi": "22",
+        "lkm": 63
+      },
+      {
+        "nimi": "23",
+        "lkm": 45
+      },
+      {
+        "nimi": "24",
+        "lkm": 48
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 129
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 87
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Tieto puuttuu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 12
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 36
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulutusala",
+    "kohdeNimi": "Humanistiset alat",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 36
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 102
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 15
+      },
+      {
+        "nimi": "20",
+        "lkm": 24
+      },
+      {
+        "nimi": "21",
+        "lkm": 15
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 9
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 7911
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 13086
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 234
+      },
+      {
+        "nimi": "19",
+        "lkm": 1410
+      },
+      {
+        "nimi": "20",
+        "lkm": 1851
+      },
+      {
+        "nimi": "21",
+        "lkm": 2043
+      },
+      {
+        "nimi": "22",
+        "lkm": 1719
+      },
+      {
+        "nimi": "23",
+        "lkm": 1344
+      },
+      {
+        "nimi": "24",
+        "lkm": 1071
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 4518
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 2814
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 1644
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 1197
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 639
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 324
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 138
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), sähkötekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 2007
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 384
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 21
+      },
+      {
+        "nimi": "19",
+        "lkm": 159
+      },
+      {
+        "nimi": "20",
+        "lkm": 258
+      },
+      {
+        "nimi": "21",
+        "lkm": 255
+      },
+      {
+        "nimi": "22",
+        "lkm": 168
+      },
+      {
+        "nimi": "23",
+        "lkm": 156
+      },
+      {
+        "nimi": "24",
+        "lkm": 120
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 474
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 297
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 231
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 129
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), kemia",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 228
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 174
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 6
+      },
+      {
+        "nimi": "19",
+        "lkm": 33
+      },
+      {
+        "nimi": "20",
+        "lkm": 60
+      },
+      {
+        "nimi": "21",
+        "lkm": 45
+      },
+      {
+        "nimi": "22",
+        "lkm": 21
+      },
+      {
+        "nimi": "23",
+        "lkm": 18
+      },
+      {
+        "nimi": "24",
+        "lkm": 27
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Sosionomi (AMK), sosiaaliala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 2172
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 13344
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 69
+      },
+      {
+        "nimi": "19",
+        "lkm": 636
+      },
+      {
+        "nimi": "20",
+        "lkm": 849
+      },
+      {
+        "nimi": "21",
+        "lkm": 828
+      },
+      {
+        "nimi": "22",
+        "lkm": 783
+      },
+      {
+        "nimi": "23",
+        "lkm": 735
+      },
+      {
+        "nimi": "24",
+        "lkm": 717
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 2970
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 2385
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 1911
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 1617
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 1200
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 540
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 219
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Yhteisöpedagogi (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 177
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 792
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 9
+      },
+      {
+        "nimi": "19",
+        "lkm": 24
+      },
+      {
+        "nimi": "20",
+        "lkm": 27
+      },
+      {
+        "nimi": "21",
+        "lkm": 27
+      },
+      {
+        "nimi": "22",
+        "lkm": 21
+      },
+      {
+        "nimi": "23",
+        "lkm": 33
+      },
+      {
+        "nimi": "24",
+        "lkm": 36
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 144
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 150
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 132
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 138
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 108
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Terveydenhoitaja (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 213
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 2751
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 15
+      },
+      {
+        "nimi": "19",
+        "lkm": 237
+      },
+      {
+        "nimi": "20",
+        "lkm": 240
+      },
+      {
+        "nimi": "21",
+        "lkm": 222
+      },
+      {
+        "nimi": "22",
+        "lkm": 192
+      },
+      {
+        "nimi": "23",
+        "lkm": 180
+      },
+      {
+        "nimi": "24",
+        "lkm": 204
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 690
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 417
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 261
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 111
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 117
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Sairaanhoitaja (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1569
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 7272
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 117
+      },
+      {
+        "nimi": "19",
+        "lkm": 717
+      },
+      {
+        "nimi": "20",
+        "lkm": 786
+      },
+      {
+        "nimi": "21",
+        "lkm": 744
+      },
+      {
+        "nimi": "22",
+        "lkm": 597
+      },
+      {
+        "nimi": "23",
+        "lkm": 477
+      },
+      {
+        "nimi": "24",
+        "lkm": 411
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1611
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 1206
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 903
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 579
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 378
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 195
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 96
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 24
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 825
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 2409
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 12
+      },
+      {
+        "nimi": "20",
+        "lkm": 15
+      },
+      {
+        "nimi": "21",
+        "lkm": 15
+      },
+      {
+        "nimi": "22",
+        "lkm": 9
+      },
+      {
+        "nimi": "23",
+        "lkm": 15
+      },
+      {
+        "nimi": "24",
+        "lkm": 39
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 453
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 654
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 585
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 567
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 468
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 270
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 120
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Restonomi (AMK), liikkeenjohto",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 147
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 378
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 12
+      },
+      {
+        "nimi": "19",
+        "lkm": 54
+      },
+      {
+        "nimi": "20",
+        "lkm": 54
+      },
+      {
+        "nimi": "21",
+        "lkm": 48
+      },
+      {
+        "nimi": "22",
+        "lkm": 30
+      },
+      {
+        "nimi": "23",
+        "lkm": 27
+      },
+      {
+        "nimi": "24",
+        "lkm": 30
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 75
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Restonomi (AMK), matkailu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 750
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1176
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 36
+      },
+      {
+        "nimi": "19",
+        "lkm": 132
+      },
+      {
+        "nimi": "20",
+        "lkm": 132
+      },
+      {
+        "nimi": "21",
+        "lkm": 198
+      },
+      {
+        "nimi": "22",
+        "lkm": 168
+      },
+      {
+        "nimi": "23",
+        "lkm": 129
+      },
+      {
+        "nimi": "24",
+        "lkm": 102
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 477
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 240
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 117
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 96
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Liikunnanohjaaja (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 324
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 426
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 60
+      },
+      {
+        "nimi": "20",
+        "lkm": 75
+      },
+      {
+        "nimi": "21",
+        "lkm": 72
+      },
+      {
+        "nimi": "22",
+        "lkm": 75
+      },
+      {
+        "nimi": "23",
+        "lkm": 57
+      },
+      {
+        "nimi": "24",
+        "lkm": 60
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 165
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Restonomi (AMK), majoitus- ja ravitsemisala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 33
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 51
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 9
+      },
+      {
+        "nimi": "20",
+        "lkm": 9
+      },
+      {
+        "nimi": "21",
+        "lkm": 6
+      },
+      {
+        "nimi": "22",
+        "lkm": 6
+      },
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Restonomi (ylempi AMK), matkailu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 57
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 72
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "22",
+        "lkm": 6
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Medianomi (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 57
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 99
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 3
+      },
+      {
+        "nimi": "20",
+        "lkm": 6
+      },
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (AMK), tietojenkäsittely",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 2295
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 2256
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 18
+      },
+      {
+        "nimi": "19",
+        "lkm": 192
+      },
+      {
+        "nimi": "20",
+        "lkm": 282
+      },
+      {
+        "nimi": "21",
+        "lkm": 294
+      },
+      {
+        "nimi": "22",
+        "lkm": 285
+      },
+      {
+        "nimi": "23",
+        "lkm": 210
+      },
+      {
+        "nimi": "24",
+        "lkm": 219
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 1089
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 933
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 465
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 303
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 156
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 27
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (ylempi AMK), tietojenkäsittely",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 123
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 150
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 9
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 9
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Artenomi (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 69
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 294
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 12
+      },
+      {
+        "nimi": "20",
+        "lkm": 21
+      },
+      {
+        "nimi": "21",
+        "lkm": 18
+      },
+      {
+        "nimi": "22",
+        "lkm": 27
+      },
+      {
+        "nimi": "23",
+        "lkm": 15
+      },
+      {
+        "nimi": "24",
+        "lkm": 21
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 84
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), konetekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1692
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 579
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 36
+      },
+      {
+        "nimi": "19",
+        "lkm": 171
+      },
+      {
+        "nimi": "20",
+        "lkm": 252
+      },
+      {
+        "nimi": "21",
+        "lkm": 225
+      },
+      {
+        "nimi": "22",
+        "lkm": 165
+      },
+      {
+        "nimi": "23",
+        "lkm": 129
+      },
+      {
+        "nimi": "24",
+        "lkm": 129
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 480
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 309
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 174
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 111
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), rakennustekniikka ja yhdyskuntatekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 597
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 342
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 15
+      },
+      {
+        "nimi": "19",
+        "lkm": 45
+      },
+      {
+        "nimi": "20",
+        "lkm": 57
+      },
+      {
+        "nimi": "21",
+        "lkm": 72
+      },
+      {
+        "nimi": "22",
+        "lkm": 51
+      },
+      {
+        "nimi": "23",
+        "lkm": 36
+      },
+      {
+        "nimi": "24",
+        "lkm": 42
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 195
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 159
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 105
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Rakennusmestari (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 903
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 264
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 12
+      },
+      {
+        "nimi": "19",
+        "lkm": 57
+      },
+      {
+        "nimi": "20",
+        "lkm": 90
+      },
+      {
+        "nimi": "21",
+        "lkm": 90
+      },
+      {
+        "nimi": "22",
+        "lkm": 66
+      },
+      {
+        "nimi": "23",
+        "lkm": 60
+      },
+      {
+        "nimi": "24",
+        "lkm": 42
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 162
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 177
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 168
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 108
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), tietotekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1944
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 984
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 57
+      },
+      {
+        "nimi": "19",
+        "lkm": 222
+      },
+      {
+        "nimi": "20",
+        "lkm": 312
+      },
+      {
+        "nimi": "21",
+        "lkm": 336
+      },
+      {
+        "nimi": "22",
+        "lkm": 216
+      },
+      {
+        "nimi": "23",
+        "lkm": 186
+      },
+      {
+        "nimi": "24",
+        "lkm": 165
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 666
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 399
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 177
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 105
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Agrologi (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 15
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 18
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), logistiikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 429
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 183
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 12
+      },
+      {
+        "nimi": "20",
+        "lkm": 36
+      },
+      {
+        "nimi": "21",
+        "lkm": 33
+      },
+      {
+        "nimi": "22",
+        "lkm": 30
+      },
+      {
+        "nimi": "23",
+        "lkm": 36
+      },
+      {
+        "nimi": "24",
+        "lkm": 24
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 156
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 114
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 63
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), rakennustekniikka ja yhdyskuntatekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 54
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 15
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), automaatiotekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 51
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 21
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Fysioterapeutti (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1140
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 2340
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 30
+      },
+      {
+        "nimi": "19",
+        "lkm": 282
+      },
+      {
+        "nimi": "20",
+        "lkm": 378
+      },
+      {
+        "nimi": "21",
+        "lkm": 375
+      },
+      {
+        "nimi": "22",
+        "lkm": 354
+      },
+      {
+        "nimi": "23",
+        "lkm": 192
+      },
+      {
+        "nimi": "24",
+        "lkm": 213
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 672
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 405
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 279
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 144
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 12
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Toimintaterapeutti (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 141
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1284
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 96
+      },
+      {
+        "nimi": "20",
+        "lkm": 132
+      },
+      {
+        "nimi": "21",
+        "lkm": 138
+      },
+      {
+        "nimi": "22",
+        "lkm": 108
+      },
+      {
+        "nimi": "23",
+        "lkm": 78
+      },
+      {
+        "nimi": "24",
+        "lkm": 90
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 300
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 177
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 105
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 105
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Kätilö (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 42
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1116
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 9
+      },
+      {
+        "nimi": "19",
+        "lkm": 204
+      },
+      {
+        "nimi": "20",
+        "lkm": 183
+      },
+      {
+        "nimi": "21",
+        "lkm": 129
+      },
+      {
+        "nimi": "22",
+        "lkm": 111
+      },
+      {
+        "nimi": "23",
+        "lkm": 90
+      },
+      {
+        "nimi": "24",
+        "lkm": 75
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 192
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 84
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Sairaanhoitaja (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 129
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1173
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "24",
+        "lkm": 9
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 174
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 285
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 255
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 225
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 180
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 111
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 15
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Kasvatust. kand. (alempi), luokanopettaja (ei opettajankelpoisuutta)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 60
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 270
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 9
+      },
+      {
+        "nimi": "20",
+        "lkm": 18
+      },
+      {
+        "nimi": "21",
+        "lkm": 9
+      },
+      {
+        "nimi": "22",
+        "lkm": 12
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Luonnont. kand., tietojenkäsittelytiede",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 132
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 111
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 24
+      },
+      {
+        "nimi": "20",
+        "lkm": 27
+      },
+      {
+        "nimi": "21",
+        "lkm": 30
+      },
+      {
+        "nimi": "22",
+        "lkm": 15
+      },
+      {
+        "nimi": "23",
+        "lkm": 15
+      },
+      {
+        "nimi": "24",
+        "lkm": 15
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Fil. maist., tietojenkäsittelytiede",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 96
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 72
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "22",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 168
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 357
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 6
+      },
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 9
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 117
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 84
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 93
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Merikapteeni (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 30
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Muotoilija (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 198
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 339
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 9
+      },
+      {
+        "nimi": "19",
+        "lkm": 45
+      },
+      {
+        "nimi": "20",
+        "lkm": 39
+      },
+      {
+        "nimi": "21",
+        "lkm": 36
+      },
+      {
+        "nimi": "22",
+        "lkm": 33
+      },
+      {
+        "nimi": "23",
+        "lkm": 33
+      },
+      {
+        "nimi": "24",
+        "lkm": 15
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 120
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), ympäristötekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 72
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 129
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 6
+      },
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 9
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), LVI-tekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 90
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 18
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 3
+      },
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 9
+      },
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), merenkulku",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 30
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 6
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 6
+      },
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Ensihoitaja (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 753
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1764
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 42
+      },
+      {
+        "nimi": "19",
+        "lkm": 318
+      },
+      {
+        "nimi": "20",
+        "lkm": 396
+      },
+      {
+        "nimi": "21",
+        "lkm": 330
+      },
+      {
+        "nimi": "22",
+        "lkm": 261
+      },
+      {
+        "nimi": "23",
+        "lkm": 186
+      },
+      {
+        "nimi": "24",
+        "lkm": 153
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 444
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 171
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 99
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 300
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1719
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 6
+      },
+      {
+        "nimi": "23",
+        "lkm": 9
+      },
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 303
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 474
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 420
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 354
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 213
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 156
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 63
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Muu tai tuntematon sosiaalialan ylempi ammattikorkeakoulututkinto",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 60
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 201
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 69
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), tietotekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 234
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 108
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 3
+      },
+      {
+        "nimi": "20",
+        "lkm": 6
+      },
+      {
+        "nimi": "21",
+        "lkm": 6
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 57
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), muu tai tuntematon tekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 171
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 108
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 9
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK),Energia- ja Ympäristötekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 123
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 225
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 9
+      },
+      {
+        "nimi": "20",
+        "lkm": 15
+      },
+      {
+        "nimi": "21",
+        "lkm": 12
+      },
+      {
+        "nimi": "22",
+        "lkm": 12
+      },
+      {
+        "nimi": "23",
+        "lkm": 12
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Metsätalousinsinööri (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 165
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 132
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 9
+      },
+      {
+        "nimi": "20",
+        "lkm": 18
+      },
+      {
+        "nimi": "21",
+        "lkm": 18
+      },
+      {
+        "nimi": "22",
+        "lkm": 18
+      },
+      {
+        "nimi": "23",
+        "lkm": 15
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Geronomi (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 117
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 468
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 120
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 120
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 120
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 78
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Estenomi (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 3
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 81
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 6
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (AMK), turvallisuusala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 276
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 231
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 18
+      },
+      {
+        "nimi": "20",
+        "lkm": 21
+      },
+      {
+        "nimi": "21",
+        "lkm": 30
+      },
+      {
+        "nimi": "22",
+        "lkm": 33
+      },
+      {
+        "nimi": "23",
+        "lkm": 24
+      },
+      {
+        "nimi": "24",
+        "lkm": 18
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 114
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 105
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (ylempi AMK), turvallisuusala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 231
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 117
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 69
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 72
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Sosiaali- ja terveysalan AMK, rikosseuraamusala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 108
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 648
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 45
+      },
+      {
+        "nimi": "20",
+        "lkm": 54
+      },
+      {
+        "nimi": "21",
+        "lkm": 63
+      },
+      {
+        "nimi": "22",
+        "lkm": 54
+      },
+      {
+        "nimi": "23",
+        "lkm": 57
+      },
+      {
+        "nimi": "24",
+        "lkm": 45
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 177
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 102
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 63
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Sosionomi (ylempi AMK), sosiaaliala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 39
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 153
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 9
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Suuhygienisti (AMK): hammashuoltaja (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 75
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 585
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 12
+      },
+      {
+        "nimi": "19",
+        "lkm": 54
+      },
+      {
+        "nimi": "20",
+        "lkm": 75
+      },
+      {
+        "nimi": "21",
+        "lkm": 78
+      },
+      {
+        "nimi": "22",
+        "lkm": 63
+      },
+      {
+        "nimi": "23",
+        "lkm": 45
+      },
+      {
+        "nimi": "24",
+        "lkm": 48
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 129
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 87
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Bioanalyytikko (AMK): laboratoriohoitaja (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 219
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 897
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 120
+      },
+      {
+        "nimi": "20",
+        "lkm": 132
+      },
+      {
+        "nimi": "21",
+        "lkm": 99
+      },
+      {
+        "nimi": "22",
+        "lkm": 87
+      },
+      {
+        "nimi": "23",
+        "lkm": 69
+      },
+      {
+        "nimi": "24",
+        "lkm": 81
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 216
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 135
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Röntgenhoitaja (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 141
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 660
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 6
+      },
+      {
+        "nimi": "19",
+        "lkm": 63
+      },
+      {
+        "nimi": "20",
+        "lkm": 105
+      },
+      {
+        "nimi": "21",
+        "lkm": 78
+      },
+      {
+        "nimi": "22",
+        "lkm": 72
+      },
+      {
+        "nimi": "23",
+        "lkm": 45
+      },
+      {
+        "nimi": "24",
+        "lkm": 45
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 177
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 90
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Geronomi (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 27
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 96
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 6
+      },
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "21",
+        "lkm": 9
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Optometristi (AMK): optikko (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 90
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 426
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 51
+      },
+      {
+        "nimi": "20",
+        "lkm": 72
+      },
+      {
+        "nimi": "21",
+        "lkm": 51
+      },
+      {
+        "nimi": "22",
+        "lkm": 42
+      },
+      {
+        "nimi": "23",
+        "lkm": 33
+      },
+      {
+        "nimi": "24",
+        "lkm": 36
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 111
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Muu tai tuntematon ylempi ammattikorkeakoulututkinto",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 18
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 36
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Agrologi (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 45
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 63
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 6
+      },
+      {
+        "nimi": "20",
+        "lkm": 6
+      },
+      {
+        "nimi": "21",
+        "lkm": 3
+      },
+      {
+        "nimi": "22",
+        "lkm": 6
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), bio- ja elintarviketekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 72
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 141
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 9
+      },
+      {
+        "nimi": "20",
+        "lkm": 15
+      },
+      {
+        "nimi": "21",
+        "lkm": 12
+      },
+      {
+        "nimi": "22",
+        "lkm": 9
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Musiikkipedagogi (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 9
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 12
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "20",
+        "lkm": 3
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Kuvataiteilija (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 54
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 114
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 6
+      },
+      {
+        "nimi": "20",
+        "lkm": 9
+      },
+      {
+        "nimi": "21",
+        "lkm": 6
+      },
+      {
+        "nimi": "22",
+        "lkm": 6
+      },
+      {
+        "nimi": "23",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 9
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Kuvataiteilija (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 3
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 45
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), projekti- ja myyntijohtaminen",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 51
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 27
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Hum. kand., englannin kieli",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 45
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 105
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "19",
+        "lkm": 15
+      },
+      {
+        "nimi": "20",
+        "lkm": 24
+      },
+      {
+        "nimi": "21",
+        "lkm": 15
+      },
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "23",
+        "lkm": 9
+      },
+      {
+        "nimi": "24",
+        "lkm": 12
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 6
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), energiatekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 324
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 240
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 18
+      },
+      {
+        "nimi": "19",
+        "lkm": 39
+      },
+      {
+        "nimi": "20",
+        "lkm": 60
+      },
+      {
+        "nimi": "21",
+        "lkm": 66
+      },
+      {
+        "nimi": "22",
+        "lkm": 57
+      },
+      {
+        "nimi": "23",
+        "lkm": 57
+      },
+      {
+        "nimi": "24",
+        "lkm": 33
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 126
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), ympäristötekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 27
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 21
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 9
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 3
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 3
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Sosiaali- ja terveysalan AMK-jatkotutkinto, muu tai tuntematon ala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 18
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 144
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "22",
+        "lkm": 3
+      },
+      {
+        "nimi": "24",
+        "lkm": 3
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 15
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      }
+    ]
+  }
+]

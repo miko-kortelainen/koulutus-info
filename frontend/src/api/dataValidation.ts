@@ -215,3 +215,48 @@ export const parseKoulutustarpeet = (value: unknown, source: string): Ennakointi
   }
   return value as unknown as EnnakointiKoulutustarpeet;
 };
+
+export type HakijaprofiiliKohdeTyyppi = "koulu" | "koulutusala" | "tutkinto";
+
+export interface HakijaprofiiliCount {
+  nimi: string;
+  lkm: number | null;
+}
+
+export interface HakijaprofiiliEntity {
+  kohdeTyyppi: HakijaprofiiliKohdeTyyppi;
+  kohdeNimi: string;
+  sukupuoli: HakijaprofiiliCount[];
+  ikaryhmat: HakijaprofiiliCount[];
+}
+
+export type HakijaprofiiliResponse = HakijaprofiiliEntity[];
+
+const isHakijaprofiiliCount = (value: unknown): value is HakijaprofiiliCount =>
+  isRecord(value) && isString(value.nimi) && value.nimi !== "" && isNullableCount(value.lkm);
+
+const isHakijaprofiiliKohdeTyyppi = (value: unknown): value is HakijaprofiiliKohdeTyyppi =>
+  value === "koulu" || value === "koulutusala" || value === "tutkinto";
+
+const isHakijaprofiiliEntity = (value: unknown): value is HakijaprofiiliEntity =>
+  isRecord(value) &&
+  isHakijaprofiiliKohdeTyyppi(value.kohdeTyyppi) &&
+  isString(value.kohdeNimi) &&
+  value.kohdeNimi !== "" &&
+  Array.isArray(value.sukupuoli) &&
+  value.sukupuoli.every(isHakijaprofiiliCount) &&
+  Array.isArray(value.ikaryhmat) &&
+  value.ikaryhmat.every(isHakijaprofiiliCount);
+
+export const parseHakijaprofiili = (value: unknown, source: string): HakijaprofiiliResponse => {
+  if (!Array.isArray(value) || !value.every(isHakijaprofiiliEntity)) {
+    throw new Error(`Invalid hakijaprofiili payload: ${source}`);
+  }
+  const keys = new Set<string>();
+  for (const entity of value as HakijaprofiiliEntity[]) {
+    const key = `${entity.kohdeTyyppi}:${entity.kohdeNimi}`;
+    if (keys.has(key)) throw new Error(`Invalid hakijaprofiili payload: ${source}: duplicate (${key})`);
+    keys.add(key);
+  }
+  return value;
+};
