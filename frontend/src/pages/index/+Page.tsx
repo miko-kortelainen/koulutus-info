@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "react-icons/hi";
 
 import { HEADER_HEIGHT } from "@/layout/Header";
@@ -50,6 +50,39 @@ function HeroButtons() {
         </Button>
       ))}
     </Stack>
+  );
+}
+
+interface LandingIllustrationProps {
+  fetchPriority?: "high";
+  src: string;
+  hideIn: "_light" | "_dark";
+}
+
+function LandingIllustration({ fetchPriority, hideIn, src }: LandingIllustrationProps) {
+  return (
+    <Image
+      {...{ [hideIn]: { display: "none" } }}
+      alt=""
+      aria-hidden="true"
+      aspectRatio="550 / 1450"
+      bottom={0}
+      fetchPriority={fetchPriority}
+      gridArea={{ lg: "illus" }}
+      height="auto"
+      justifySelf={{ lg: "center" }}
+      left={0}
+      loading="eager"
+      marginInline="auto"
+      maxW={{ base: "13rem", lg: "none" }}
+      objectFit="contain"
+      pointerEvents="none"
+      position={{ base: "absolute", lg: "static" }}
+      right={0}
+      src={src}
+      width={{ base: "100%", lg: "236px" }}
+      zIndex={0}
+    />
   );
 }
 
@@ -123,27 +156,8 @@ export default function LandingPage() {
           <HeroButtons />
         </Stack>
 
-        <Box
-          _dark={{ backgroundImage: "url('/images/landing_illustration_for_dark.png')" }}
-          aria-hidden="true"
-          aspectRatio="550 / 1450"
-          backgroundImage="url('/images/landing_illustration.png')"
-          backgroundPosition="center"
-          backgroundRepeat="no-repeat"
-          backgroundSize="contain"
-          bottom={0}
-          gridArea={{ lg: "illus" }}
-          justifySelf={{ lg: "center" }}
-          left={0}
-          marginInline="auto"
-          maxW={{ base: "13rem", lg: "none" }}
-          overflow="hidden"
-          pointerEvents="none"
-          position={{ base: "absolute", lg: "static" }}
-          right={0}
-          width={{ base: "100%", lg: "236px" }}
-          zIndex={0}
-        />
+        <LandingIllustration fetchPriority="high" hideIn="_dark" src="/images/landing_illustration.png" />
+        <LandingIllustration hideIn="_light" src="/images/landing_illustration_for_dark.png" />
       </Box>
     </Box>
   );

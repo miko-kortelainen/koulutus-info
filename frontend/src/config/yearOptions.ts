@@ -1,13 +1,14 @@
 import { CURRENT_STATISTICS_ROUND, STATISTICS_ROUNDS } from "@/generated/dataManifest";
 
 export type YearOption = (typeof STATISTICS_ROUNDS)[number];
+export type RoundLabelId = YearOption | (typeof import("@/generated/dataManifest").HAKIJAPROFIILI_ROUNDS)[number];
 
-export function statisticsRoundLabel(round: YearOption) {
+export function statisticsRoundLabel(round: RoundLabelId) {
   const [year, season] = round.split("_");
   return `${season === "kevat" ? "Kevään" : "Syksyn"} yhteishaku ${year}`;
 }
 
-export function statisticsRoundShortLabel(round: YearOption) {
+export function statisticsRoundShortLabel(round: RoundLabelId) {
   const [year, season] = round.split("_");
   return `${season === "kevat" ? "kevät" : "syksy"} ${year}`;
 }

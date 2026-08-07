@@ -15,6 +15,11 @@ const feedbackFiles = ["opiskelijapalaute/amk-palaute.json", "opiskelijapalaute/
 const cutoffsLastmod = latestModifiedDate(cutoffFiles);
 const feedbackLastmod = latestModifiedDate(feedbackFiles);
 const statisticsLastmod = latestModifiedDate([currentStatisticsFile]);
+const profiliLastmod = latestModifiedDate(
+  readdirSync("public/data/hakijaprofiili")
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => `hakijaprofiili/${file}`),
+);
 const programmesLastmod = latestModifiedDate(["current_programs.json", ...cutoffFiles]);
 const schoolsLastmod = latestModifiedDate([
   "schools.json",
@@ -39,6 +44,7 @@ const priorityFor = (path: string) => {
 
 const lastmodFor = (path: string) => {
   if (path === "/hakijamaarat/" || path === "/trendit/") return statisticsLastmod;
+  if (path === "/hakijaprofiili/") return profiliLastmod ?? statisticsLastmod;
   if (path === "/koulutukset/") return programmesLastmod;
   if (path.endsWith("/opiskelijapalautteet/")) return feedbackLastmod;
   if (path === "/pistelaskuri/" || path.startsWith("/pisterajat/") || path.endsWith("/pisterajat/")) {
@@ -55,6 +61,7 @@ const paths = [
   "/",
   "/asenna/",
   "/hakijamaarat/",
+  "/hakijaprofiili/",
   "/koulutukset/",
   "/pistelaskuri/",
   "/pisterajat/",

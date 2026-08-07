@@ -2,8 +2,10 @@ import fs from "node:fs";
 import {
   type FeedbackMaxScore,
   type EnnakointiKoulutustarpeet,
+  type HakijaprofiiliResponse,
   parseCutoffSchools,
   parseCurrentPrograms,
+  parseHakijaprofiili,
   parseKoulutustarpeet,
   parseSchoolCatalog,
   parseStatistics,
@@ -16,6 +18,7 @@ import {
   cutoffRoundFromFilename,
   DEFAULT_CUTOFF_ROUND,
 } from "@/config/cutoffRounds";
+import type { HakijaprofiiliRound } from "@/config/hakijaprofiiliRounds";
 import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import { filterUnavailableCutoffAlat } from "@/lib/cutoffs";
 import { slugify } from "@/lib/slug";
@@ -167,3 +170,6 @@ export const feedbackSchoolNames = (): string[] =>
 
 export const readKoulutustarpeet = (): EnnakointiKoulutustarpeet =>
   readPublicData("ennakointi/koulutustarpeet.json", parseKoulutustarpeet);
+
+export const readHakijaprofiili = (round: HakijaprofiiliRound): HakijaprofiiliResponse =>
+  readPublicData(`hakijaprofiili/hakijaprofiili-${round.replace("_", "-")}.json`, parseHakijaprofiili);

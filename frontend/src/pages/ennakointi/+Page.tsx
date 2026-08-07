@@ -14,8 +14,8 @@ const PAGE_SIZE = 10;
 const BAR_H = "8";
 /** Ylituotos bar — appearance-tuned viz token */
 const YLITUOTOS_BAR = "var(--chakra-colors-viz-ylituotos)";
-/** Full-width bar track — follows appearance via border.subtle */
-const BAR_TRACK = "var(--chakra-colors-border-subtle)";
+/** Full-width bar track — follows appearance via bg.muted */
+const BAR_TRACK = "bg.muted";
 const selectProps = {
   bg: "bg",
   borderColor: "border",
