@@ -152,6 +152,9 @@ export default function HakijaprofiiliPage() {
       <PageContainer align="flex-start">
         {status}
         {browse}
+        <Text color="fg.muted" fontSize="xs">
+          Lähde: Opetushallituksen tilastopalvelu Vipunen
+        </Text>
       </PageContainer>
     </>
   );
