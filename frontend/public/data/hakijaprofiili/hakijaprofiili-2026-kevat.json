@@ -308,10 +308,6 @@
       {
         "nimi": "60–64-vuotiaat",
         "lkm": 15
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -1432,10 +1428,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 12
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -1580,10 +1572,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 21
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -1744,10 +1732,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 15
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -1988,10 +1972,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 3
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 6
       }
     ]
   },
@@ -2152,10 +2132,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 6
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -2632,10 +2608,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 3
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -2792,10 +2764,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 9
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -2876,10 +2844,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 18
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -2960,10 +2924,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 63
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 15
       }
     ]
   },
@@ -3044,10 +3004,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 54
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -3128,10 +3084,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 27
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 6
       }
     ]
   },
@@ -3372,10 +3324,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 69
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -3536,10 +3484,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 9
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -3860,70 +3804,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 63
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "koulutusala",
-    "kohdeNimi": "Tieto puuttuu",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 105
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 153
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "21",
-        "lkm": 3
-      },
-      {
-        "nimi": "22",
-        "lkm": 6
-      },
-      {
-        "nimi": "23",
-        "lkm": 12
-      },
-      {
-        "nimi": "24",
-        "lkm": 9
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 75
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 60
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 30
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 15
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 15
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
       }
     ]
   },
@@ -4696,10 +4576,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 6
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 6
       }
     ]
   },
@@ -5372,10 +5248,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 24
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 9
       }
     ]
   },
@@ -6100,10 +5972,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 9
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -6639,10 +6507,6 @@
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "Tieto puuttuu",
         "lkm": 3
       }
     ]
@@ -13280,10 +13144,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 6
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -17996,10 +17856,6 @@
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
         "lkm": 6
-      },
-      {
-        "nimi": "Tieto puuttuu",
-        "lkm": 3
       }
     ]
   },
@@ -21651,10 +21507,6 @@
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "Tieto puuttuu",
         "lkm": 3
       }
     ]

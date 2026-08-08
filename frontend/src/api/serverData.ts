@@ -7,6 +7,7 @@ import {
   parseCurrentPrograms,
   parseHakijaprofiili,
   parseKoulutustarpeet,
+  parseMeta,
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
@@ -23,7 +24,13 @@ import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import { filterUnavailableCutoffAlat } from "@/lib/cutoffs";
 import { slugify } from "@/lib/slug";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
-import type { CurrentProgramsResponse, SchoolCatalog, SchoolCatalogEntry, StatisticsResponse } from "@/types.gen";
+import type {
+  CurrentProgramsResponse,
+  Meta,
+  SchoolCatalog,
+  SchoolCatalogEntry,
+  StatisticsResponse,
+} from "@/types.gen";
 
 interface CacheEntry {
   modifiedAt: number;
@@ -59,6 +66,8 @@ export const readStatistics = (round: YearOption): StatisticsResponse =>
   readPublicData(`hakijamäärät/hakijamaarat-${round.replace("_", "-")}.json`, parseStatistics);
 
 export const readCurrentYearStatistics = (): StatisticsResponse => readStatistics(CURRENT_YEAR);
+
+export const readMeta = (): Meta => readPublicData("meta.json", parseMeta);
 
 export const readSchools = (): SchoolCatalog => readPublicData("schools.json", parseSchoolCatalog);
 
