@@ -12,10 +12,12 @@ import useDebounce from "@/hooks/useDebounce";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
+import type { StatisticsEntry } from "@/types.gen";
 import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
 import SortControl from "./components/SortControl";
 import useFilteredStatistics from "./hooks/useFilteredStatistics";
+import type { HakijamaaratPageData } from "./+data";
+import { formatStatisticsUpdatedAt } from "./lib/formatStatisticsUpdatedAt";
 import type { SortOption } from "./lib/sortStatistics";
 
 const PAGE_SIZE = 10;
@@ -26,7 +28,7 @@ const SEKTORI_LABELS: Record<string, string> = {
 };
 
 export default function StatsListPage() {
-  const ssrData = useData<StatisticsResponse>();
+  const ssrData = useData<HakijamaaratPageData>();
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
@@ -38,7 +40,7 @@ export default function StatsListPage() {
   const [selectedKielet, setSelectedKielet] = useState<Set<string>>(new Set());
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
-  const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? ssrData : undefined);
+  const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? ssrData.statistics : undefined);
 
   const toggleCompare = useCallback((degree: StatisticsEntry) => {
     setCompareSelection((prev) =>
@@ -200,7 +202,20 @@ export default function StatsListPage() {
 
   return (
     <>
-      <PageIntro description="Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain." title="Hakijamäärät" />
+      <PageIntro
+        description={
+          <>
+            Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.
+            {ssrData.statisticsUpdatedAt ? (
+              <>
+                <br />
+                Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)}
+              </>
+            ) : null}
+          </>
+        }
+        title="Hakijamäärät"
+      />
       <PageContainer align="flex-start">
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
           {sidebar}
