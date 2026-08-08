@@ -31,6 +31,7 @@ export default function SchoolsListPage() {
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
   const [selectedTasot, setSelectedTasot] = useState<Set<string>>(new Set());
+  const [selectedKoulutusalat, setSelectedKoulutusalat] = useState<Set<string>>(new Set());
   const toteutukset = useMemo(
     () =>
       data.flatMap((k) =>
@@ -60,6 +61,10 @@ export default function SchoolsListPage() {
   );
   const kuntaCollection = useMemo(() => toCollection(toteutukset.flatMap((t) => t.kunnat)), [toteutukset]);
   const schoolCollection = useMemo(() => toCollection(toteutukset.map((t) => t.oppilaitosNimi.fi)), [toteutukset]);
+  const koulutusalaCollection = useMemo(
+    () => toCollection(toteutukset.flatMap((t) => t.koulutusalat ?? [])),
+    [toteutukset],
+  );
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredDegrees(
     toteutukset,
@@ -68,6 +73,7 @@ export default function SchoolsListPage() {
     selectedKunnat,
     selectedSchools,
     selectedTasot,
+    selectedKoulutusalat,
   );
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -97,6 +103,13 @@ export default function SchoolsListPage() {
           onChange={selectFilter(setSelectedTasot, () => setPage(1))}
           selected={selectedTasot}
           value="koulutusaste"
+        />
+        <FilterItem
+          collection={koulutusalaCollection}
+          label="Koulutusala"
+          onChange={selectFilter(setSelectedKoulutusalat, () => setPage(1))}
+          selected={selectedKoulutusalat}
+          value="koulutusala"
         />
         <FilterItem
           collection={kuntaCollection}

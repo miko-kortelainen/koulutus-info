@@ -1,5 +1,5 @@
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
-import type { CurrentProgramsResponse, SchoolCatalog, StatisticsResponse } from "@/types.gen";
+import type { CurrentProgramsResponse, Meta, SchoolCatalog, StatisticsResponse } from "@/types.gen";
 
 export interface FeedbackStatistics {
   vastaajatLkm: number | null;
@@ -171,6 +171,20 @@ function parseArray<T>(value: unknown, isItem: (item: unknown) => boolean, sourc
 
 export const parseStatistics = (value: unknown, source: string): StatisticsResponse =>
   parseArray(value, isStatisticsEntry, source);
+
+const isMeta = (value: unknown): value is Meta =>
+  isRecord(value) &&
+  isString(value.generatedAt) &&
+  isStringArray(value.statisticsRounds) &&
+  isString(value.currentStatisticsRound) &&
+  isOptionalString(value.statisticsUpdatedAt) &&
+  isOptionalString(value.programmesUpdatedAt) &&
+  isOptionalString(value.programmesYhteishakuOid);
+
+export const parseMeta = (value: unknown, source: string): Meta => {
+  if (!isMeta(value)) throw new Error(`Invalid data in ${source}`);
+  return value;
+};
 
 export const parseCurrentPrograms = (value: unknown, source: string): CurrentProgramsResponse =>
   parseArray(value, isProgramme, source);

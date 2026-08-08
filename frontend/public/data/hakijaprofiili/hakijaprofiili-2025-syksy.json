@@ -2413,54 +2413,6 @@
   },
   {
     "kohdeTyyppi": "koulutusala",
-    "kohdeNimi": "Tieto puuttuu",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 12
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 36
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "24",
-        "lkm": 3
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "koulutusala",
     "kohdeNimi": "Humanistiset alat",
     "sukupuoli": [
       {

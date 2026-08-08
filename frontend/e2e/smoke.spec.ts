@@ -1,6 +1,6 @@
 import { expect, type Page, test } from "@playwright/test";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
-import { CURRENT_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
+import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS } from "@/config/yearOptions";
 
 test.describe.configure({ mode: "parallel" });
 
@@ -797,7 +797,7 @@ test("/trendit: compares two application rounds", async ({ page }) => {
 
   expect((await responsePromise).status()).toBe(200);
   await expectSelectedOption(page, "Vertailuyhteishaku", compareRound.label);
-  await expect(page.getByText("Muutos").first()).toBeVisible();
+  await expect(page.getByText(new RegExp(statisticsRoundShortLabel(compareRound.value), "i")).first()).toBeVisible();
 });
 
 test("/trendit: shows a comparison loading error", async ({ page }) => {
