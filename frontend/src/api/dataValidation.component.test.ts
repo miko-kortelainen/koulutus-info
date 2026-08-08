@@ -4,6 +4,7 @@ import {
   parseCurrentPrograms,
   parseHakijaprofiili,
   parseKoulutustarpeet,
+  parseMeta,
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
@@ -104,6 +105,19 @@ test("rejects malformed school catalog entries", () => {
   expect(() => parseSchoolCatalog([{ shortName: "Testi" }], "schools.json")).toThrow("Invalid data in schools.json");
   expect(() => parseSchoolCatalog([{ name: "", shortName: "Testi" }], "schools.json")).toThrow(
     "Invalid data in schools.json",
+  );
+});
+
+test("accepts meta.json and rejects malformed meta", () => {
+  const meta = {
+    generatedAt: "2026-08-08T14:38:02.955Z",
+    statisticsRounds: ["2026_kevat"],
+    currentStatisticsRound: "2026_kevat",
+    statisticsUpdatedAt: "2026-08-08T14:38:02.955Z",
+  };
+  expect(parseMeta(meta, "meta.json")).toEqual(meta);
+  expect(() => parseMeta({ ...meta, statisticsRounds: "2026_kevat" }, "meta.json")).toThrow(
+    "Invalid data in meta.json",
   );
 });
 
