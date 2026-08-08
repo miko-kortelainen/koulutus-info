@@ -8,6 +8,7 @@ const degrees = [
     toteutusNimi: { fi: "Oikeustiede", en: "Law" },
     oppilaitosNimi: { fi: "Turun yliopisto", en: "University of Turku" },
     kunnat: ["Turku"],
+    koulutusalat: ["Kauppa, hallinto ja oikeustieteet"],
     sektori: "yo",
     tutkintotaso: "alempi",
   },
@@ -16,6 +17,7 @@ const degrees = [
     toteutusNimi: { fi: "Muotoilu" },
     oppilaitosNimi: { fi: "Metropolia" },
     kunnat: ["Helsinki"],
+    koulutusalat: ["Taiteet ja kulttuurialat"],
     sektori: "amk",
     tutkintotaso: "alempi",
   },
@@ -24,6 +26,7 @@ const degrees = [
     toteutusNimi: { fi: "Insinööri" },
     oppilaitosNimi: { fi: "TAMK" },
     kunnat: ["Tampere"],
+    koulutusalat: ["Tekniikan alat"],
     sektori: "amk",
     tutkintotaso: "alempi",
   },
@@ -38,18 +41,20 @@ const degrees = [
 ];
 
 const ids = (items: { toteutusOid: string }[]) => items.map((item) => item.toteutusOid);
+const none = () => new Set<string>();
 
-test("combines filter groups including koulutusaste", () => {
+test("combines filter groups including koulutusala", () => {
   const { result, rerender } = renderHook(
-    ({ data, sectors, municipalities, schools, tasot }) =>
-      useFilteredDegrees(data, "", sectors, municipalities, schools, tasot),
+    ({ data, sectors, municipalities, schools, tasot, alat }) =>
+      useFilteredDegrees(data, "", sectors, municipalities, schools, tasot, alat),
     {
       initialProps: {
         data: degrees as typeof degrees | undefined,
-        sectors: new Set<string>(),
-        municipalities: new Set<string>(),
-        schools: new Set<string>(),
-        tasot: new Set<string>(),
+        sectors: none(),
+        municipalities: none(),
+        schools: none(),
+        tasot: none(),
+        alat: none(),
       },
     },
   );
@@ -62,31 +67,34 @@ test("combines filter groups including koulutusaste", () => {
     municipalities: new Set(["Helsinki", "Tampere"]),
     schools: new Set(["Metropolia", "TAMK"]),
     tasot: new Set(["alempi"]),
+    alat: new Set(["Taiteet ja kulttuurialat", "Tekniikan alat"]),
   });
   expect(ids(result.current)).toEqual(["amk-design", "amk-engineering"]);
 
   rerender({
     data: degrees,
-    sectors: new Set<string>(),
-    municipalities: new Set<string>(),
-    schools: new Set<string>(),
-    tasot: new Set(["ylempi"]),
+    sectors: none(),
+    municipalities: none(),
+    schools: none(),
+    tasot: none(),
+    alat: new Set(["Tekniikan alat"]),
   });
-  expect(ids(result.current)).toEqual(["amk-master"]);
+  expect(ids(result.current)).toEqual(["amk-engineering"]);
 
   rerender({
     data: undefined,
-    sectors: new Set<string>(),
-    municipalities: new Set<string>(),
-    schools: new Set<string>(),
-    tasot: new Set<string>(),
+    sectors: none(),
+    municipalities: none(),
+    schools: none(),
+    tasot: none(),
+    alat: none(),
   });
   expect(result.current).toEqual([]);
 });
 
 test("trims search terms and searches translated names", () => {
   const { result } = renderHook(() =>
-    useFilteredDegrees(degrees, "  Law  ", new Set(), new Set(), new Set(), new Set()),
+    useFilteredDegrees(degrees, "  Law  ", none(), none(), none(), none(), none()),
   );
 
   expect(ids(result.current)).toEqual(["yo-law"]);

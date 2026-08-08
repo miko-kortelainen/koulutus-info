@@ -25,6 +25,7 @@ export default function useFilteredDegrees(
   selectedKunnat: Set<string>,
   selectedSchools: Set<string>,
   selectedTasot: Set<string>,
+  selectedKoulutusalat: Set<string>,
 ) {
   const byFilters = useMemo(() => {
     const items = data ?? [];
@@ -33,9 +34,10 @@ export default function useFilteredDegrees(
         (!selectedSektorit.size || selectedSektorit.has(t.sektori)) &&
         (!selectedKunnat.size || t.kunnat.some((k) => selectedKunnat.has(k))) &&
         (!selectedSchools.size || selectedSchools.has(t.oppilaitosNimi.fi ?? "")) &&
-        (!selectedTasot.size || selectedTasot.has(t.tutkintotaso)),
+        (!selectedTasot.size || selectedTasot.has(t.tutkintotaso)) &&
+        (!selectedKoulutusalat.size || t.koulutusalat?.some((a) => selectedKoulutusalat.has(a))),
     );
-  }, [data, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot]);
+  }, [data, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat]);
 
   const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
 
