@@ -3,13 +3,12 @@ import type { ReactNode } from "react";
 
 interface TrendCardProps {
   title: string;
-  color: string;
   children: ReactNode;
 }
 
-export default function TrendCard({ title, color, children }: TrendCardProps) {
+export default function TrendCard({ title, children }: TrendCardProps) {
   return (
-    <Card.Root borderLeftColor={color} borderLeftWidth="4px" variant="outline">
+    <Card.Root variant="outline">
       <Card.Body gap={4}>
         <Heading as="h2" size="sm">
           {title}

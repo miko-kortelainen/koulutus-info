@@ -102,7 +102,7 @@ export default function TrendsPage() {
   );
 
   const applicantsByField = (
-    <TrendCard color={FIELD_COLOR} title="Suosituimmat koulutusalat">
+    <TrendCard title="Suosituimmat koulutusalat">
       <TopBarList
         color={FIELD_COLOR}
         compareData={comparisonReady ? compareTrends.topKoulutusalat : undefined}
@@ -116,7 +116,7 @@ export default function TrendsPage() {
   );
 
   const applicantsBySchool = (
-    <TrendCard color={SCHOOL_COLOR} title="Suosituimmat korkeakoulut">
+    <TrendCard title="Suosituimmat korkeakoulut">
       <TopBarList
         color={SCHOOL_COLOR}
         compareData={comparisonReady ? compareTrends.topKorkeakoulut : undefined}
@@ -130,7 +130,7 @@ export default function TrendsPage() {
   );
 
   const applicantsBySector = (
-    <TrendCard color={SECTOR_COLOR} title="Hakijat sektoreittain">
+    <TrendCard title="Hakijat sektoreittain">
       <TopBarList
         color={SECTOR_COLOR}
         compareData={comparisonReady ? compareTrends.sektoriData : undefined}
@@ -145,14 +145,14 @@ export default function TrendsPage() {
 
   const applicantsByYear = (
     <>
-      <TrendCard color={TREND_COLOR} title="Kevään 1. ja 2. yhteishaun hakijamäärät">
+      <TrendCard title="Kevään 1. ja 2. yhteishaun hakijamäärät">
         <ApplicantTotalsChart
           chartData={springTotals}
           color={TREND_COLOR}
           title="Kevään yhteishakujen ensisijaiset hakijat vuosittain"
         />
       </TrendCard>
-      <TrendCard color={TREND_COLOR} title="Syksyn yhteishaun hakijamäärät">
+      <TrendCard title="Syksyn yhteishaun hakijamäärät">
         <ApplicantTotalsChart
           chartData={autumnTotals}
           color={TREND_COLOR}
