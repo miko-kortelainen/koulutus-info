@@ -1,67 +1,94 @@
 id: architecture
 name: Frontend architecture
 description: >-
-  Route-oriented modules for yhteishaku.app. Routes own features; shared
-  modules point toward small data, domain, and configuration interfaces; app
-  shell, generated data, and type contracts stay at stable seams.
+  Route-oriented modules for yhteishaku.app. Dependencies point toward stable
+  shared interfaces: routes compose feature modules, UI uses hooks and pure logic,
+  and data, configuration, generated values, and types stay framework-neutral.
 rules:
   - id: routes-isolated
     description: >-
-      Each top-level Vike route is an independent feature. A route may use its
-      own modules, but must not import another route. This keeps route changes
-      local. Cross-route reuse belongs in @/components, @/hooks, @/lib, @/api,
-      or @/layout.
+      Each top-level Vike route is an independent feature module. It may compose its
+      own modules and shared interfaces, but no other route. This keeps route
+      changes local.
     target: "@/pages/{{file-name}}/**"
+    exclude:
+      - "**/*.test"
     forbids:
-      - import: "@/pages/**"
+      - import: "@/**"
     allows:
       - import: "@/pages/{{file-name}}/**"
+      - import: "@/pages/+Head"
+      - import: "@/api/**"
+      - import: "@/components/**"
+      - import: "@/config/**"
+      - import: "@/hooks/**"
+      - import: "@/layout/**"
+      - import: "@/lib/**"
+      - import: "@/theme"
+      - import: "@/types**"
     fix: >-
-      Move shared code under @/components, @/hooks, @/lib, @/api, or @/layout,
-      or keep it inside the same top-level route directory
-      (src/pages/{{file-name}}/).
+      Keep feature code inside src/pages/{{file-name}}/. Move cross-route code
+      to the shared module that owns its behavior.
 
   - id: error-route-isolated
     description: >-
-      The Vike _error route must not depend on other route features. Share via
-      the shared layers instead.
+      The Vike _error route may use stable shared interfaces, but must not
+      depend on another route module.
     target: "@/pages/_error/**"
     forbids:
-      - import: "@/pages/**"
+      - import: "@/**"
     allows:
       - import: "@/pages/_error/**"
+      - import: "@/components/**"
+      - import: "@/config/**"
+      - import: "@/layout/**"
+      - import: "@/lib/**"
+      - import: "@/theme"
+      - import: "@/types**"
     fix: >-
-      Remove the cross-route import. Put shared UI or helpers in @/components
-      or @/lib.
+      Remove the route import. Put shared UI or behavior in its owning shared
+      module.
 
   - id: page-shell-no-routes
     description: >-
-      Site-wide Vike shell files (+Layout, +Wrapper, +Head, +config) wire the
-      app shell. They must not import route feature modules.
+      Site-wide Vike shell files (+Layout, +Wrapper, +Head, +config) compose
+      providers and layout from stable shared interfaces, never route modules.
     target: "@/pages/+*"
     forbids:
-      - import: "@/pages/**"
+      - import: "@/**"
     allows:
       - import: "@/pages/+*"
+      - import: "@/components/**"
+      - import: "@/config/**"
+      - import: "@/hooks/**"
+      - import: "@/layout/**"
+      - import: "@/lib/**"
+      - import: "@/theme"
+      - import: "@/types**"
     fix: >-
-      Keep route-specific UI in the route directory. The shell should only
-      compose @/layout, @/components, providers, and config.
+      Keep route-specific behavior in its route. Compose the shell from the
+      listed shared interfaces.
 
   - id: components-layer
     description: >-
-      Shared components are reusable UI. They may use hooks, lib, config,
+      Modules under @/components are reusable UI. They may use hooks, lib, config,
       theme, and types, but not api, layout, or pages — those pull data access
       or route ownership into the shared UI layer.
     target: "@/components/**"
     exclude:
       - "**/*.test"
     forbids:
-      - import: "@/api/**"
-      - import: "@/layout/**"
-      - import: "@/pages/**"
+      - import: "@/**"
+    allows:
+      - import: "@/components/**"
+      - import: "@/hooks/**"
+      - import: "@/lib/**"
+      - import: "@/config/**"
+      - import: "@/theme"
+      - import: "@/types**"
     fix: >-
       Call data through a page or shared hook instead of @/api. Keep app-shell
-      chrome in @/layout. Do not import route modules from shared components.
+      chrome in @/layout. Do not import route modules from shared UI modules.
 
   - id: hooks-layer
     description: >-
@@ -72,18 +99,23 @@ rules:
     exclude:
       - "**/*.test"
     forbids:
+      - import: "@/**"
       - import: "@/api/serverData"
         transitive: true
-      - import: "@/components/**"
-      - import: "@/layout/**"
-      - import: "@/pages/**"
+    allows:
+      - import: "@/hooks/**"
+      - import: "@/api/browserData"
+      - import: "@/api/dataValidation"
+      - import: "@/config/**"
+      - import: "@/lib/**"
+      - import: "@/types**"
     fix: >-
       Use @/api/browserData for browser data. Keep UI in components or pages.
-      Shared hooks should depend on data and pure helpers, not React UI.
+      Shared hooks should depend on data and pure helpers, not UI modules.
 
   - id: api-layer
     description: >-
-      @/api is the trust boundary for static JSON. It may use lib, config, and
+      @/api is the data seam for static JSON. It may use lib, config, and
       types, but must not import React UI, hooks, layout, or pages.
     target: "@/api/**"
     exclude:
@@ -97,10 +129,12 @@ rules:
         transitive: true
       - import: "@tanstack/**"
         transitive: true
-      - import: "@/components/**"
-      - import: "@/hooks/**"
-      - import: "@/layout/**"
-      - import: "@/pages/**"
+      - import: "@/**"
+    allows:
+      - import: "@/api/**"
+      - import: "@/config/**"
+      - import: "@/lib/**"
+      - import: "@/types**"
     fix: >-
       Keep validation and fetch helpers free of UI. Put React and Query usage
       in hooks or pages that call @/api.
@@ -108,7 +142,7 @@ rules:
   - id: lib-is-pure
     description: >-
       @/lib is shared pure domain and formatting logic. It may use config and
-      types, but not React, UI, hooks, layout, pages, or the data-access layer.
+      types, but not React, UI, hooks, layout, pages, or the data seam.
     target: "@/lib/**"
     exclude:
       - "**/*.test"
@@ -121,11 +155,11 @@ rules:
         transitive: true
       - import: "@tanstack/**"
         transitive: true
-      - import: "@/api/**"
-      - import: "@/components/**"
-      - import: "@/hooks/**"
-      - import: "@/layout/**"
-      - import: "@/pages/**"
+      - import: "@/**"
+    allows:
+      - import: "@/config/**"
+      - import: "@/lib/**"
+      - import: "@/types**"
     fix: >-
       Move React or data-access logic into a hook, component, or @/api module.
       Keep @/lib to pure functions.
@@ -138,9 +172,17 @@ rules:
     exclude:
       - "**/*.test"
     forbids:
+      - import: "@/**"
       - import: "@/api/**"
         transitive: true
-      - import: "@/pages/**"
+    allows:
+      - import: "@/components/**"
+      - import: "@/config/**"
+      - import: "@/hooks/**"
+      - import: "@/layout/**"
+      - import: "@/lib/**"
+      - import: "@/theme"
+      - import: "@/types**"
     fix: >-
       Fetch data in pages or hooks. Keep route feature code under @/pages.
       Layout should only compose shell chrome.
@@ -160,13 +202,12 @@ rules:
         transitive: true
       - import: "@tanstack/**"
         transitive: true
-      - import: "@/api/**"
-      - import: "@/components/**"
-      - import: "@/hooks/**"
-      - import: "@/layout/**"
-      - import: "@/pages/**"
-      - import: "@/test/**"
-      - import: "@/theme"
+      - import: "@/**"
+    allows:
+      - import: "@/config/**"
+      - import: "@/generated/**"
+      - import: "@/lib/**"
+      - import: "@/types**"
     fix: >-
       Import generated manifest values, @/lib helpers, or types only. Move UI
       or data-access concerns out of config.
@@ -187,15 +228,12 @@ rules:
 
   - id: theme-is-low-level
     description: >-
-      @/theme is shared UI configuration. It may depend on Chakra, but not on
-      feature, data, state, or app-shell modules.
+      @/theme is the shared UI configuration module. Chakra is its only dependency.
     target: "@/theme"
     forbids:
-      - import: "@/api/**"
-      - import: "@/components/**"
-      - import: "@/hooks/**"
-      - import: "@/layout/**"
-      - import: "@/pages/**"
+      - import: "**"
+    allows:
+      - import: "@chakra-ui/**"
     fix: >-
       Keep only theme tokens and Chakra configuration in @/theme. Move runtime
       behavior to its owning hook, UI module, layout, or route.
@@ -214,15 +252,10 @@ rules:
 
   - id: type-contracts-stay-portable
     description: >-
-      Shared type contracts may compose other type contracts, but must not
-      depend on application behavior or UI frameworks.
+      Shared type contracts may compose other type contracts and nothing else.
     target: "@/types**"
     forbids:
-      - import: "react"
-      - import: "react-dom"
-      - import: "@chakra-ui/**"
-      - import: "@tanstack/**"
-      - import: "@/**"
+      - import: "**"
     allows:
       - import: "@/types**"
     fix: >-
