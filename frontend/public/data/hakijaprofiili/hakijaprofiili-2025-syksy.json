@@ -5,73 +5,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 384
+        "lkm": 366
       },
       {
         "nimi": "nainen",
-        "lkm": 615
+        "lkm": 597
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 36
-      },
-      {
-        "nimi": "20",
-        "lkm": 69
-      },
-      {
-        "nimi": "21",
-        "lkm": 66
-      },
-      {
-        "nimi": "22",
-        "lkm": 57
-      },
-      {
-        "nimi": "23",
-        "lkm": 57
-      },
-      {
-        "nimi": "24",
-        "lkm": 54
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 192
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 183
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 123
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 78
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 69
-      },
-      {
-        "nimi": "50–54-vuotiaat",
         "lkm": 33
       },
       {
+        "nimi": "20",
+        "lkm": 63
+      },
+      {
+        "nimi": "21",
+        "lkm": 63
+      },
+      {
+        "nimi": "22",
+        "lkm": 51
+      },
+      {
+        "nimi": "23",
+        "lkm": 51
+      },
+      {
+        "nimi": "24",
+        "lkm": 51
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 186
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 171
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 114
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 75
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 27
+      },
+      {
         "nimi": "55–59-vuotiaat",
-        "lkm": 12
+        "lkm": 4
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -147,11 +147,11 @@
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -161,77 +161,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 2481
+        "lkm": 1980
       },
       {
         "nimi": "nainen",
-        "lkm": 3018
+        "lkm": 2532
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 78
+        "lkm": 63
       },
       {
         "nimi": "19",
-        "lkm": 510
+        "lkm": 423
       },
       {
         "nimi": "20",
-        "lkm": 627
+        "lkm": 513
       },
       {
         "nimi": "21",
-        "lkm": 594
+        "lkm": 489
       },
       {
         "nimi": "22",
-        "lkm": 459
+        "lkm": 369
       },
       {
         "nimi": "23",
-        "lkm": 336
+        "lkm": 273
       },
       {
         "nimi": "24",
-        "lkm": 261
+        "lkm": 213
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1083
+        "lkm": 882
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 708
+        "lkm": 576
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 348
+        "lkm": 285
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 258
+        "lkm": 216
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 150
+        "lkm": 123
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 66
+        "lkm": 54
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 33
+        "lkm": 27
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 4
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 2
       }
     ]
   },
@@ -251,15 +251,15 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "19",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "20",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "21",
@@ -267,11 +267,11 @@
       },
       {
         "nimi": "22",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "23",
-        "lkm": 21
+        "lkm": 20
       },
       {
         "nimi": "24",
@@ -303,11 +303,11 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 24
+        "lkm": 23
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       }
     ]
   },
@@ -317,91 +317,11 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 1269
+        "lkm": 1218
       },
       {
         "nimi": "nainen",
-        "lkm": 1545
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 24
-      },
-      {
-        "nimi": "19",
-        "lkm": 117
-      },
-      {
-        "nimi": "20",
-        "lkm": 165
-      },
-      {
-        "nimi": "21",
-        "lkm": 180
-      },
-      {
-        "nimi": "22",
-        "lkm": 150
-      },
-      {
-        "nimi": "23",
-        "lkm": 114
-      },
-      {
-        "nimi": "24",
-        "lkm": 138
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 561
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 474
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 351
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 255
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 186
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 69
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 42
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 15
-      },
-      {
-        "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "koulu",
-    "kohdeNimi": "Jyväskylän ammattikorkeakoulu",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 1419
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 1884
+        "lkm": 1515
       }
     ],
     "ikaryhmat": [
@@ -411,63 +331,143 @@
       },
       {
         "nimi": "19",
-        "lkm": 231
+        "lkm": 114
       },
       {
         "nimi": "20",
-        "lkm": 288
-      },
-      {
-        "nimi": "21",
-        "lkm": 264
-      },
-      {
-        "nimi": "22",
-        "lkm": 183
-      },
-      {
-        "nimi": "23",
         "lkm": 153
       },
       {
-        "nimi": "24",
+        "nimi": "21",
         "lkm": 168
+      },
+      {
+        "nimi": "22",
+        "lkm": 144
+      },
+      {
+        "nimi": "23",
+        "lkm": 108
+      },
+      {
+        "nimi": "24",
+        "lkm": 132
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 627
+        "lkm": 540
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 477
+        "lkm": 462
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 342
+        "lkm": 339
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 258
+        "lkm": 249
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 168
+        "lkm": 189
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 87
+        "lkm": 66
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 45
+        "lkm": 39
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "koulu",
+    "kohdeNimi": "Jyväskylän ammattikorkeakoulu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1329
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1809
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 14
+      },
+      {
+        "nimi": "19",
+        "lkm": 219
+      },
+      {
+        "nimi": "20",
+        "lkm": 264
+      },
+      {
+        "nimi": "21",
+        "lkm": 240
+      },
+      {
+        "nimi": "22",
+        "lkm": 174
+      },
+      {
+        "nimi": "23",
+        "lkm": 144
+      },
+      {
+        "nimi": "24",
+        "lkm": 156
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 600
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 456
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 324
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 252
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 162
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 84
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 2
       }
     ]
   },
@@ -477,25 +477,25 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 264
+        "lkm": 255
       },
       {
         "nimi": "nainen",
-        "lkm": 441
+        "lkm": 423
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 33
+        "lkm": 27
       },
       {
         "nimi": "20",
-        "lkm": 45
+        "lkm": 39
       },
       {
         "nimi": "21",
@@ -507,15 +507,15 @@
       },
       {
         "nimi": "23",
-        "lkm": 21
+        "lkm": 18
       },
       {
         "nimi": "24",
-        "lkm": 33
+        "lkm": 24
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 132
+        "lkm": 129
       },
       {
         "nimi": "30–34-vuotiaat",
@@ -523,7 +523,7 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 78
+        "lkm": 75
       },
       {
         "nimi": "40–44-vuotiaat",
@@ -531,19 +531,19 @@
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 69
+        "lkm": 72
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 45
+        "lkm": 42
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 9
+        "lkm": 4
       }
     ]
   },
@@ -553,77 +553,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 3162
+        "lkm": 2754
       },
       {
         "nimi": "nainen",
-        "lkm": 5988
+        "lkm": 5565
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 78
+        "lkm": 60
       },
       {
         "nimi": "19",
-        "lkm": 339
+        "lkm": 309
       },
       {
         "nimi": "20",
-        "lkm": 474
+        "lkm": 420
       },
       {
         "nimi": "21",
-        "lkm": 516
+        "lkm": 456
       },
       {
         "nimi": "22",
-        "lkm": 513
+        "lkm": 465
       },
       {
         "nimi": "23",
-        "lkm": 435
+        "lkm": 387
       },
       {
         "nimi": "24",
-        "lkm": 429
+        "lkm": 390
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1995
+        "lkm": 1812
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 1626
+        "lkm": 1473
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 1062
+        "lkm": 978
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 849
+        "lkm": 777
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 498
+        "lkm": 462
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 225
+        "lkm": 210
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 114
+        "lkm": 99
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 18
+        "lkm": 14
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 9
+        "lkm": 2
       }
     ]
   },
@@ -633,21 +633,21 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 156
+        "lkm": 153
       },
       {
         "nimi": "nainen",
-        "lkm": 270
+        "lkm": 267
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 33
+        "lkm": 30
       },
       {
         "nimi": "20",
@@ -671,15 +671,15 @@
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 111
+        "lkm": 105
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 57
+        "lkm": 54
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 36
+        "lkm": 33
       },
       {
         "nimi": "40–44-vuotiaat",
@@ -691,11 +691,11 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -705,69 +705,69 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 810
+        "lkm": 699
       },
       {
         "nimi": "nainen",
-        "lkm": 1005
+        "lkm": 927
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 36
+        "lkm": 30
       },
       {
         "nimi": "19",
-        "lkm": 153
+        "lkm": 132
       },
       {
         "nimi": "20",
-        "lkm": 204
+        "lkm": 183
       },
       {
         "nimi": "21",
-        "lkm": 228
+        "lkm": 201
       },
       {
         "nimi": "22",
-        "lkm": 186
+        "lkm": 168
       },
       {
         "nimi": "23",
-        "lkm": 144
+        "lkm": 120
       },
       {
         "nimi": "24",
-        "lkm": 114
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 387
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 165
-      },
-      {
-        "nimi": "35–39-vuotiaat",
         "lkm": 102
       },
       {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 345
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 150
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 90
+      },
+      {
         "nimi": "40–44-vuotiaat",
-        "lkm": 81
+        "lkm": 69
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 27
+        "lkm": 24
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 2
       }
     ]
   },
@@ -777,11 +777,11 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 1827
+        "lkm": 1716
       },
       {
         "nimi": "nainen",
-        "lkm": 4254
+        "lkm": 4086
       }
     ],
     "ikaryhmat": [
@@ -791,63 +791,63 @@
       },
       {
         "nimi": "19",
-        "lkm": 231
+        "lkm": 222
       },
       {
         "nimi": "20",
-        "lkm": 381
+        "lkm": 363
       },
       {
         "nimi": "21",
-        "lkm": 348
+        "lkm": 321
       },
       {
         "nimi": "22",
-        "lkm": 312
+        "lkm": 294
       },
       {
         "nimi": "23",
-        "lkm": 237
+        "lkm": 231
       },
       {
         "nimi": "24",
-        "lkm": 288
+        "lkm": 273
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1149
+        "lkm": 1104
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 1059
+        "lkm": 1002
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 798
+        "lkm": 762
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 564
+        "lkm": 549
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 378
+        "lkm": 372
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 198
+        "lkm": 189
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 78
+        "lkm": 75
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 18
+        "lkm": 15
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -857,77 +857,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 1218
+        "lkm": 1080
       },
       {
         "nimi": "nainen",
-        "lkm": 3501
+        "lkm": 3165
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 15
+        "lkm": 4
       },
       {
         "nimi": "19",
-        "lkm": 105
+        "lkm": 90
       },
       {
         "nimi": "20",
-        "lkm": 165
+        "lkm": 141
       },
       {
         "nimi": "21",
-        "lkm": 174
+        "lkm": 153
       },
       {
         "nimi": "22",
-        "lkm": 204
-      },
-      {
-        "nimi": "23",
         "lkm": 174
       },
       {
+        "nimi": "23",
+        "lkm": 153
+      },
+      {
         "nimi": "24",
-        "lkm": 201
+        "lkm": 177
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1044
+        "lkm": 918
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 921
+        "lkm": 825
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 660
+        "lkm": 597
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 510
+        "lkm": 465
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 333
+        "lkm": 312
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 171
+        "lkm": 159
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 75
+        "lkm": 66
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 15
+        "lkm": 8
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 2
       }
     ]
   },
@@ -937,73 +937,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 3171
+        "lkm": 2730
       },
       {
         "nimi": "nainen",
-        "lkm": 7650
+        "lkm": 6885
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 75
+        "lkm": 63
       },
       {
         "nimi": "19",
-        "lkm": 639
+        "lkm": 567
       },
       {
         "nimi": "20",
-        "lkm": 747
+        "lkm": 657
       },
       {
         "nimi": "21",
-        "lkm": 804
+        "lkm": 699
       },
       {
         "nimi": "22",
-        "lkm": 720
+        "lkm": 627
       },
       {
         "nimi": "23",
-        "lkm": 561
+        "lkm": 486
       },
       {
         "nimi": "24",
-        "lkm": 471
+        "lkm": 423
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 2175
+        "lkm": 1899
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 1725
+        "lkm": 1539
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 1092
+        "lkm": 990
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 822
+        "lkm": 759
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 591
+        "lkm": 534
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 300
+        "lkm": 267
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 96
+        "lkm": 90
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 24
+        "lkm": 11
       }
     ]
   },
@@ -1013,73 +1013,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 3258
+        "lkm": 2676
       },
       {
         "nimi": "nainen",
-        "lkm": 6804
+        "lkm": 5949
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 138
+        "lkm": 105
       },
       {
         "nimi": "19",
-        "lkm": 771
+        "lkm": 651
       },
       {
         "nimi": "20",
-        "lkm": 1002
-      },
-      {
-        "nimi": "21",
-        "lkm": 1011
-      },
-      {
-        "nimi": "22",
         "lkm": 816
       },
       {
+        "nimi": "21",
+        "lkm": 831
+      },
+      {
+        "nimi": "22",
+        "lkm": 675
+      },
+      {
         "nimi": "23",
-        "lkm": 624
+        "lkm": 525
       },
       {
         "nimi": "24",
-        "lkm": 543
+        "lkm": 456
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 2127
+        "lkm": 1824
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 1290
+        "lkm": 1134
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 744
+        "lkm": 669
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 543
+        "lkm": 495
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 285
+        "lkm": 261
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 129
+        "lkm": 123
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 60
+        "lkm": 57
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       }
     ]
   },
@@ -1089,57 +1089,57 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 936
+        "lkm": 843
       },
       {
         "nimi": "nainen",
-        "lkm": 1575
+        "lkm": 1479
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 15
+        "lkm": 8
       },
       {
         "nimi": "19",
-        "lkm": 144
+        "lkm": 123
       },
       {
         "nimi": "20",
-        "lkm": 189
+        "lkm": 159
       },
       {
         "nimi": "21",
-        "lkm": 201
+        "lkm": 168
       },
       {
         "nimi": "22",
-        "lkm": 147
+        "lkm": 126
       },
       {
         "nimi": "23",
-        "lkm": 147
+        "lkm": 123
       },
       {
         "nimi": "24",
-        "lkm": 105
+        "lkm": 90
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 513
+        "lkm": 474
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 405
+        "lkm": 393
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 255
+        "lkm": 252
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 189
+        "lkm": 177
       },
       {
         "nimi": "45–49-vuotiaat",
@@ -1151,15 +1151,15 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 33
+        "lkm": 27
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -1169,73 +1169,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 1674
+        "lkm": 1227
       },
       {
         "nimi": "nainen",
-        "lkm": 3108
+        "lkm": 2562
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 57
+        "lkm": 39
       },
       {
         "nimi": "19",
-        "lkm": 174
+        "lkm": 132
       },
       {
         "nimi": "20",
-        "lkm": 237
+        "lkm": 168
       },
       {
         "nimi": "21",
-        "lkm": 372
+        "lkm": 255
       },
       {
         "nimi": "22",
-        "lkm": 339
+        "lkm": 234
       },
       {
         "nimi": "23",
-        "lkm": 258
+        "lkm": 183
       },
       {
         "nimi": "24",
-        "lkm": 213
+        "lkm": 156
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1116
+        "lkm": 858
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 729
+        "lkm": 612
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 468
+        "lkm": 411
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 393
+        "lkm": 345
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 246
+        "lkm": 213
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 126
+        "lkm": 114
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 66
+        "lkm": 60
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       }
     ]
   },
@@ -1245,11 +1245,11 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 828
+        "lkm": 810
       },
       {
         "nimi": "nainen",
-        "lkm": 3450
+        "lkm": 3363
       }
     ],
     "ikaryhmat": [
@@ -1259,51 +1259,51 @@
       },
       {
         "nimi": "19",
-        "lkm": 138
+        "lkm": 135
       },
       {
         "nimi": "20",
-        "lkm": 165
+        "lkm": 159
       },
       {
         "nimi": "21",
-        "lkm": 144
+        "lkm": 135
       },
       {
         "nimi": "22",
-        "lkm": 123
+        "lkm": 120
       },
       {
         "nimi": "23",
-        "lkm": 144
+        "lkm": 147
       },
       {
         "nimi": "24",
-        "lkm": 150
+        "lkm": 144
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 708
+        "lkm": 699
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 738
+        "lkm": 711
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 660
+        "lkm": 633
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 579
+        "lkm": 567
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 411
+        "lkm": 402
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 237
+        "lkm": 231
       },
       {
         "nimi": "55–59-vuotiaat",
@@ -1311,11 +1311,11 @@
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 9
+        "lkm": 6
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -1325,73 +1325,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 444
+        "lkm": 411
       },
       {
         "nimi": "nainen",
-        "lkm": 1137
+        "lkm": 1071
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 12
+        "lkm": 6
       },
       {
         "nimi": "19",
-        "lkm": 126
+        "lkm": 114
       },
       {
         "nimi": "20",
-        "lkm": 129
+        "lkm": 117
       },
       {
         "nimi": "21",
-        "lkm": 105
+        "lkm": 102
       },
       {
         "nimi": "22",
-        "lkm": 96
+        "lkm": 87
       },
       {
         "nimi": "23",
-        "lkm": 84
+        "lkm": 78
       },
       {
         "nimi": "24",
-        "lkm": 81
+        "lkm": 75
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 321
+        "lkm": 303
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 219
+        "lkm": 210
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 147
+        "lkm": 144
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 132
+        "lkm": 129
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 81
+        "lkm": 72
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 45
+        "lkm": 36
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 21
+        "lkm": 14
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -1401,77 +1401,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 2034
+        "lkm": 1842
       },
       {
         "nimi": "nainen",
-        "lkm": 3369
+        "lkm": 3159
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 33
+        "lkm": 27
       },
       {
         "nimi": "19",
-        "lkm": 432
+        "lkm": 384
       },
       {
         "nimi": "20",
-        "lkm": 600
+        "lkm": 513
       },
       {
         "nimi": "21",
-        "lkm": 510
+        "lkm": 453
       },
       {
         "nimi": "22",
-        "lkm": 363
+        "lkm": 333
       },
       {
         "nimi": "23",
-        "lkm": 288
+        "lkm": 264
       },
       {
         "nimi": "24",
-        "lkm": 285
+        "lkm": 264
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 996
+        "lkm": 948
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 690
+        "lkm": 654
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 498
+        "lkm": 477
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 348
+        "lkm": 330
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 222
+        "lkm": 210
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 99
+        "lkm": 96
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 45
+        "lkm": 33
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 15
+        "lkm": 11
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -1481,11 +1481,11 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 1647
+        "lkm": 1521
       },
       {
         "nimi": "nainen",
-        "lkm": 3636
+        "lkm": 3507
       }
     ],
     "ikaryhmat": [
@@ -1495,63 +1495,63 @@
       },
       {
         "nimi": "19",
-        "lkm": 474
+        "lkm": 450
       },
       {
         "nimi": "20",
-        "lkm": 522
+        "lkm": 495
       },
       {
         "nimi": "21",
-        "lkm": 507
+        "lkm": 480
       },
       {
         "nimi": "22",
-        "lkm": 378
+        "lkm": 357
       },
       {
         "nimi": "23",
-        "lkm": 279
+        "lkm": 264
       },
       {
         "nimi": "24",
-        "lkm": 231
+        "lkm": 216
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 870
+        "lkm": 822
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 627
+        "lkm": 597
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 465
+        "lkm": 441
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 342
+        "lkm": 336
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 270
+        "lkm": 264
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 174
+        "lkm": 171
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 72
+        "lkm": 69
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 18
+        "lkm": 15
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 9
+        "lkm": 8
       }
     ]
   },
@@ -1571,7 +1571,7 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
@@ -1583,51 +1583,51 @@
       },
       {
         "nimi": "21",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "24",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -1637,11 +1637,11 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 525
+        "lkm": 522
       },
       {
         "nimi": "nainen",
-        "lkm": 1071
+        "lkm": 1065
       }
     ],
     "ikaryhmat": [
@@ -1655,15 +1655,15 @@
       },
       {
         "nimi": "20",
-        "lkm": 96
+        "lkm": 93
       },
       {
         "nimi": "21",
-        "lkm": 99
+        "lkm": 96
       },
       {
         "nimi": "22",
-        "lkm": 90
+        "lkm": 93
       },
       {
         "nimi": "23",
@@ -1671,11 +1671,11 @@
       },
       {
         "nimi": "24",
-        "lkm": 75
+        "lkm": 72
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 330
+        "lkm": 324
       },
       {
         "nimi": "30–34-vuotiaat",
@@ -1687,7 +1687,7 @@
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 141
+        "lkm": 138
       },
       {
         "nimi": "45–49-vuotiaat",
@@ -1695,19 +1695,19 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 51
+        "lkm": 45
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 33
+        "lkm": 30
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 6
+        "lkm": 2
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -1717,77 +1717,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 8781
+        "lkm": 4230
       },
       {
         "nimi": "nainen",
-        "lkm": 15699
+        "lkm": 7656
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 234
+        "lkm": 105
       },
       {
         "nimi": "19",
-        "lkm": 1413
+        "lkm": 684
       },
       {
         "nimi": "20",
-        "lkm": 1860
+        "lkm": 900
       },
       {
         "nimi": "21",
-        "lkm": 2049
+        "lkm": 918
       },
       {
         "nimi": "22",
-        "lkm": 1725
+        "lkm": 735
       },
       {
         "nimi": "23",
-        "lkm": 1356
+        "lkm": 588
       },
       {
         "nimi": "24",
-        "lkm": 1095
+        "lkm": 474
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 5013
+        "lkm": 2193
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 3555
+        "lkm": 1806
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 2298
+        "lkm": 1227
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 1836
+        "lkm": 1020
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 1158
+        "lkm": 696
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 627
+        "lkm": 366
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 261
+        "lkm": 153
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 54
+        "lkm": 21
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 12
+        "lkm": 4
       }
     ]
   },
@@ -1797,77 +1797,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 6075
+        "lkm": 3732
       },
       {
         "nimi": "nainen",
-        "lkm": 2388
+        "lkm": 1635
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 93
+        "lkm": 42
       },
       {
         "nimi": "19",
-        "lkm": 483
+        "lkm": 294
       },
       {
         "nimi": "20",
-        "lkm": 738
+        "lkm": 450
       },
       {
         "nimi": "21",
-        "lkm": 714
+        "lkm": 459
       },
       {
         "nimi": "22",
-        "lkm": 522
+        "lkm": 315
       },
       {
         "nimi": "23",
-        "lkm": 456
+        "lkm": 279
       },
       {
         "nimi": "24",
-        "lkm": 405
+        "lkm": 258
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1710
+        "lkm": 1029
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 1308
+        "lkm": 819
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 882
+        "lkm": 561
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 636
+        "lkm": 435
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 375
+        "lkm": 246
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 144
+        "lkm": 105
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 102
+        "lkm": 60
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 15
+        "lkm": 11
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 9
+        "lkm": 2
       }
     ]
   },
@@ -1877,77 +1877,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 6075
+        "lkm": 3372
       },
       {
         "nimi": "nainen",
-        "lkm": 31725
+        "lkm": 15249
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 243
+        "lkm": 111
       },
       {
         "nimi": "19",
-        "lkm": 2157
+        "lkm": 1023
       },
       {
         "nimi": "20",
-        "lkm": 2607
+        "lkm": 1263
       },
       {
         "nimi": "21",
-        "lkm": 2415
+        "lkm": 1155
       },
       {
         "nimi": "22",
-        "lkm": 2139
+        "lkm": 981
       },
       {
         "nimi": "23",
-        "lkm": 1767
+        "lkm": 804
       },
       {
         "nimi": "24",
-        "lkm": 1767
+        "lkm": 762
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 7092
+        "lkm": 3360
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 5661
+        "lkm": 2766
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 4353
+        "lkm": 2232
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 3447
+        "lkm": 1830
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 2418
+        "lkm": 1314
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 1230
+        "lkm": 672
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 486
+        "lkm": 282
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 105
+        "lkm": 60
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 9
+        "lkm": 2
       }
     ]
   },
@@ -1957,77 +1957,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 1719
+        "lkm": 1533
       },
       {
         "nimi": "nainen",
-        "lkm": 2391
+        "lkm": 2013
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 45
+        "lkm": 36
       },
       {
         "nimi": "19",
-        "lkm": 246
-      },
-      {
-        "nimi": "20",
-        "lkm": 276
-      },
-      {
-        "nimi": "21",
-        "lkm": 342
-      },
-      {
-        "nimi": "22",
-        "lkm": 306
-      },
-      {
-        "nimi": "23",
-        "lkm": 228
-      },
-      {
-        "nimi": "24",
         "lkm": 195
       },
       {
+        "nimi": "20",
+        "lkm": 246
+      },
+      {
+        "nimi": "21",
+        "lkm": 297
+      },
+      {
+        "nimi": "22",
+        "lkm": 264
+      },
+      {
+        "nimi": "23",
+        "lkm": 195
+      },
+      {
+        "nimi": "24",
+        "lkm": 162
+      },
+      {
         "nimi": "25–29-vuotiaat",
-        "lkm": 912
+        "lkm": 789
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 585
+        "lkm": 498
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 348
+        "lkm": 309
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 279
+        "lkm": 258
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 201
+        "lkm": 177
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 102
+        "lkm": 93
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 39
+        "lkm": 30
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 6
+        "lkm": 2
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 9
+        "lkm": 2
       }
     ]
   },
@@ -2037,57 +2037,57 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 345
+        "lkm": 315
       },
       {
         "nimi": "nainen",
-        "lkm": 873
+        "lkm": 789
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "19",
-        "lkm": 66
-      },
-      {
-        "nimi": "20",
-        "lkm": 75
-      },
-      {
-        "nimi": "21",
-        "lkm": 63
-      },
-      {
-        "nimi": "22",
-        "lkm": 66
-      },
-      {
-        "nimi": "23",
         "lkm": 57
       },
       {
+        "nimi": "20",
+        "lkm": 63
+      },
+      {
+        "nimi": "21",
+        "lkm": 57
+      },
+      {
+        "nimi": "22",
+        "lkm": 54
+      },
+      {
+        "nimi": "23",
+        "lkm": 51
+      },
+      {
         "nimi": "24",
-        "lkm": 48
+        "lkm": 42
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 231
+        "lkm": 207
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 201
+        "lkm": 177
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 147
+        "lkm": 132
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 96
+        "lkm": 87
       },
       {
         "nimi": "45–49-vuotiaat",
@@ -2095,19 +2095,19 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 54
+        "lkm": 48
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 30
+        "lkm": 23
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 12
+        "lkm": 8
       }
     ]
   },
@@ -2117,77 +2117,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 4671
+        "lkm": 2976
       },
       {
         "nimi": "nainen",
-        "lkm": 3561
+        "lkm": 2349
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 78
+        "lkm": 48
       },
       {
         "nimi": "19",
-        "lkm": 435
+        "lkm": 294
       },
       {
         "nimi": "20",
-        "lkm": 621
+        "lkm": 411
       },
       {
         "nimi": "21",
-        "lkm": 654
+        "lkm": 423
       },
       {
         "nimi": "22",
-        "lkm": 510
+        "lkm": 345
       },
       {
         "nimi": "23",
-        "lkm": 408
+        "lkm": 279
       },
       {
         "nimi": "24",
-        "lkm": 414
+        "lkm": 249
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1908
+        "lkm": 1197
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 1521
+        "lkm": 924
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 771
+        "lkm": 504
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 516
+        "lkm": 345
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 276
+        "lkm": 186
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 114
+        "lkm": 69
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 63
+        "lkm": 36
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 39
+        "lkm": 8
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -2197,25 +2197,25 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 207
+        "lkm": 198
       },
       {
         "nimi": "nainen",
-        "lkm": 207
+        "lkm": 204
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 15
+        "lkm": 8
       },
       {
         "nimi": "20",
-        "lkm": 24
+        "lkm": 27
       },
       {
         "nimi": "21",
@@ -2223,11 +2223,11 @@
       },
       {
         "nimi": "22",
-        "lkm": 24
+        "lkm": 21
       },
       {
         "nimi": "23",
-        "lkm": 21
+        "lkm": 15
       },
       {
         "nimi": "24",
@@ -2235,15 +2235,15 @@
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 90
+        "lkm": 84
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 75
+        "lkm": 72
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 57
+        "lkm": 51
       },
       {
         "nimi": "40–44-vuotiaat",
@@ -2255,19 +2255,19 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -2281,33 +2281,33 @@
       },
       {
         "nimi": "nainen",
-        "lkm": 282
+        "lkm": 279
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "20",
-        "lkm": 21
+        "lkm": 18
       },
       {
         "nimi": "21",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "22",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "23",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "24",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "25–29-vuotiaat",
@@ -2315,7 +2315,7 @@
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 33
+        "lkm": 32
       },
       {
         "nimi": "35–39-vuotiaat",
@@ -2323,23 +2323,23 @@
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 48
+        "lkm": 45
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 51
+        "lkm": 50
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 36
+        "lkm": 35
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 15
+        "lkm": 11
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -2359,11 +2359,11 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "19",
-        "lkm": 54
+        "lkm": 53
       },
       {
         "nimi": "20",
@@ -2375,11 +2375,11 @@
       },
       {
         "nimi": "22",
-        "lkm": 63
+        "lkm": 62
       },
       {
         "nimi": "23",
-        "lkm": 45
+        "lkm": 44
       },
       {
         "nimi": "24",
@@ -2395,19 +2395,19 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 39
+        "lkm": 38
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -2427,7 +2427,7 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
@@ -2439,51 +2439,51 @@
       },
       {
         "nimi": "21",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "24",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -2493,77 +2493,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 7911
+        "lkm": 3669
       },
       {
         "nimi": "nainen",
-        "lkm": 13086
+        "lkm": 6090
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 234
+        "lkm": 105
       },
       {
         "nimi": "19",
-        "lkm": 1410
+        "lkm": 684
       },
       {
         "nimi": "20",
-        "lkm": 1851
+        "lkm": 900
       },
       {
         "nimi": "21",
-        "lkm": 2043
+        "lkm": 918
       },
       {
         "nimi": "22",
-        "lkm": 1719
+        "lkm": 732
       },
       {
         "nimi": "23",
-        "lkm": 1344
+        "lkm": 582
       },
       {
         "nimi": "24",
-        "lkm": 1071
+        "lkm": 462
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 4518
+        "lkm": 1926
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 2814
+        "lkm": 1353
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 1644
+        "lkm": 825
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 1197
+        "lkm": 642
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 639
+        "lkm": 369
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 324
+        "lkm": 177
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 138
+        "lkm": 72
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 39
+        "lkm": 11
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 12
+        "lkm": 4
       }
     ]
   },
@@ -2573,73 +2573,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 2007
+        "lkm": 1308
       },
       {
         "nimi": "nainen",
-        "lkm": 384
+        "lkm": 249
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 21
+        "lkm": 9
       },
       {
         "nimi": "19",
-        "lkm": 159
+        "lkm": 108
       },
       {
         "nimi": "20",
-        "lkm": 258
+        "lkm": 180
       },
       {
         "nimi": "21",
-        "lkm": 255
+        "lkm": 186
       },
       {
         "nimi": "22",
-        "lkm": 168
+        "lkm": 108
       },
       {
         "nimi": "23",
-        "lkm": 156
+        "lkm": 93
       },
       {
         "nimi": "24",
-        "lkm": 120
+        "lkm": 78
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 474
-      },
-      {
-        "nimi": "30–34-vuotiaat",
         "lkm": 297
       },
       {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 189
+      },
+      {
         "nimi": "35–39-vuotiaat",
-        "lkm": 231
+        "lkm": 144
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 129
+        "lkm": 87
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 81
+        "lkm": 54
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 27
+        "lkm": 23
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 12
+        "lkm": 4
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -2649,17 +2649,17 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 228
+        "lkm": 195
       },
       {
         "nimi": "nainen",
-        "lkm": 174
+        "lkm": 147
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "19",
@@ -2671,7 +2671,7 @@
       },
       {
         "nimi": "21",
-        "lkm": 45
+        "lkm": 39
       },
       {
         "nimi": "22",
@@ -2679,43 +2679,43 @@
       },
       {
         "nimi": "23",
-        "lkm": 18
+        "lkm": 11
       },
       {
         "nimi": "24",
-        "lkm": 27
+        "lkm": 21
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 57
+        "lkm": 51
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 45
+        "lkm": 42
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 33
+        "lkm": 30
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 24
+        "lkm": 18
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 15
+        "lkm": 4
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 9
+        "lkm": 4
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -2725,77 +2725,77 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 2172
+        "lkm": 1200
       },
       {
         "nimi": "nainen",
-        "lkm": 13344
+        "lkm": 6561
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 69
+        "lkm": 36
       },
       {
         "nimi": "19",
-        "lkm": 636
+        "lkm": 384
       },
       {
         "nimi": "20",
-        "lkm": 849
+        "lkm": 483
       },
       {
         "nimi": "21",
-        "lkm": 828
+        "lkm": 495
       },
       {
         "nimi": "22",
-        "lkm": 783
+        "lkm": 423
       },
       {
         "nimi": "23",
-        "lkm": 735
+        "lkm": 375
       },
       {
         "nimi": "24",
-        "lkm": 717
+        "lkm": 330
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 2970
+        "lkm": 1422
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 2385
+        "lkm": 1164
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 1911
+        "lkm": 912
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 1617
+        "lkm": 771
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 1200
+        "lkm": 576
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 540
+        "lkm": 249
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 219
+        "lkm": 111
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 48
+        "lkm": 23
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 9
+        "lkm": 2
       }
     ]
   },
@@ -2805,73 +2805,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 177
+        "lkm": 132
       },
       {
         "nimi": "nainen",
-        "lkm": 792
+        "lkm": 687
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 9
+        "lkm": 4
       },
       {
         "nimi": "19",
-        "lkm": 24
+        "lkm": 17
       },
       {
         "nimi": "20",
-        "lkm": 27
+        "lkm": 23
       },
       {
         "nimi": "21",
-        "lkm": 27
+        "lkm": 20
       },
       {
         "nimi": "22",
-        "lkm": 21
+        "lkm": 17
       },
       {
         "nimi": "23",
-        "lkm": 33
+        "lkm": 26
       },
       {
         "nimi": "24",
-        "lkm": 36
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 144
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 150
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 132
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 138
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 108
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 81
-      },
-      {
-        "nimi": "55–59-vuotiaat",
         "lkm": 27
       },
       {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 117
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 126
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 117
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 126
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 99
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 69
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 23
+      },
+      {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       }
     ]
   },
@@ -2881,73 +2881,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 213
+        "lkm": 108
       },
       {
         "nimi": "nainen",
-        "lkm": 2751
+        "lkm": 1803
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 15
+        "lkm": 9
       },
       {
         "nimi": "19",
-        "lkm": 237
+        "lkm": 164
       },
       {
         "nimi": "20",
-        "lkm": 240
+        "lkm": 177
       },
       {
         "nimi": "21",
-        "lkm": 222
+        "lkm": 168
       },
       {
         "nimi": "22",
-        "lkm": 192
+        "lkm": 125
       },
       {
         "nimi": "23",
-        "lkm": 180
+        "lkm": 120
       },
       {
         "nimi": "24",
-        "lkm": 204
+        "lkm": 114
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 690
+        "lkm": 429
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 417
+        "lkm": 273
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 261
+        "lkm": 147
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 111
+        "lkm": 78
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 117
+        "lkm": 65
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 33
+        "lkm": 21
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 33
+        "lkm": 8
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 2
       }
     ]
   },
@@ -2957,73 +2957,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 1569
+        "lkm": 1014
       },
       {
         "nimi": "nainen",
-        "lkm": 7272
+        "lkm": 4350
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 117
+        "lkm": 69
       },
       {
         "nimi": "19",
-        "lkm": 717
+        "lkm": 414
       },
       {
         "nimi": "20",
-        "lkm": 786
+        "lkm": 492
       },
       {
         "nimi": "21",
-        "lkm": 744
+        "lkm": 447
       },
       {
         "nimi": "22",
-        "lkm": 597
+        "lkm": 354
       },
       {
         "nimi": "23",
-        "lkm": 477
+        "lkm": 276
       },
       {
         "nimi": "24",
-        "lkm": 411
+        "lkm": 237
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 1611
+        "lkm": 1005
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 1206
+        "lkm": 729
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 903
+        "lkm": 573
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 579
+        "lkm": 372
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 378
+        "lkm": 246
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 195
+        "lkm": 102
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 96
+        "lkm": 39
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 24
+        "lkm": 8
       }
     ]
   },
@@ -3033,69 +3033,69 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 825
+        "lkm": 528
       },
       {
         "nimi": "nainen",
-        "lkm": 2409
+        "lkm": 1533
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 12
+        "lkm": 4
       },
       {
         "nimi": "20",
-        "lkm": 15
+        "lkm": 4
       },
       {
         "nimi": "21",
-        "lkm": 15
+        "lkm": 4
       },
       {
         "nimi": "22",
-        "lkm": 9
+        "lkm": 4
       },
       {
         "nimi": "23",
-        "lkm": 15
+        "lkm": 8
       },
       {
         "nimi": "24",
-        "lkm": 39
+        "lkm": 18
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 453
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 654
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 585
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 567
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 468
-      },
-      {
-        "nimi": "50–54-vuotiaat",
         "lkm": 270
       },
       {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 441
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 384
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 363
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 306
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 180
+      },
+      {
         "nimi": "55–59-vuotiaat",
-        "lkm": 120
+        "lkm": 69
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 12
+        "lkm": 6
       }
     ]
   },
@@ -3105,45 +3105,45 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 147
+        "lkm": 114
       },
       {
         "nimi": "nainen",
-        "lkm": 378
+        "lkm": 327
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 12
+        "lkm": 8
       },
       {
         "nimi": "19",
-        "lkm": 54
+        "lkm": 42
       },
       {
         "nimi": "20",
-        "lkm": 54
+        "lkm": 51
       },
       {
         "nimi": "21",
-        "lkm": 48
+        "lkm": 39
       },
       {
         "nimi": "22",
-        "lkm": 30
+        "lkm": 24
       },
       {
         "nimi": "23",
-        "lkm": 27
+        "lkm": 20
       },
       {
         "nimi": "24",
-        "lkm": 30
+        "lkm": 24
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 75
+        "lkm": 69
       },
       {
         "nimi": "30–34-vuotiaat",
@@ -3151,27 +3151,27 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 57
+        "lkm": 48
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 36
+        "lkm": 33
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 15
+        "lkm": 11
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 12
+        "lkm": 8
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 9
+        "lkm": 4
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 2
       }
     ]
   },
@@ -3181,73 +3181,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 750
+        "lkm": 669
       },
       {
         "nimi": "nainen",
-        "lkm": 1176
+        "lkm": 999
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 36
-      },
-      {
-        "nimi": "19",
-        "lkm": 132
-      },
-      {
-        "nimi": "20",
-        "lkm": 132
-      },
-      {
-        "nimi": "21",
-        "lkm": 198
-      },
-      {
-        "nimi": "22",
-        "lkm": 168
-      },
-      {
-        "nimi": "23",
-        "lkm": 129
-      },
-      {
-        "nimi": "24",
-        "lkm": 102
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 477
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 240
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 117
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 96
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 60
-      },
-      {
-        "nimi": "50–54-vuotiaat",
         "lkm": 27
       },
       {
+        "nimi": "19",
+        "lkm": 108
+      },
+      {
+        "nimi": "20",
+        "lkm": 123
+      },
+      {
+        "nimi": "21",
+        "lkm": 174
+      },
+      {
+        "nimi": "22",
+        "lkm": 147
+      },
+      {
+        "nimi": "23",
+        "lkm": 117
+      },
+      {
+        "nimi": "24",
+        "lkm": 87
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 426
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 207
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 99
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 75
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 20
+      },
+      {
         "nimi": "55–59-vuotiaat",
-        "lkm": 9
+        "lkm": 2
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -3257,1595 +3257,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 324
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 426
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
-      },
-      {
-        "nimi": "19",
-        "lkm": 60
-      },
-      {
-        "nimi": "20",
-        "lkm": 75
-      },
-      {
-        "nimi": "21",
-        "lkm": 72
-      },
-      {
-        "nimi": "22",
-        "lkm": 75
-      },
-      {
-        "nimi": "23",
-        "lkm": 57
-      },
-      {
-        "nimi": "24",
-        "lkm": 60
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 165
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 81
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 39
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 24
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 27
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 9
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Restonomi (AMK), majoitus- ja ravitsemisala",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 33
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 51
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "19",
-        "lkm": 9
-      },
-      {
-        "nimi": "20",
-        "lkm": 9
-      },
-      {
-        "nimi": "21",
-        "lkm": 6
-      },
-      {
-        "nimi": "22",
-        "lkm": 6
-      },
-      {
-        "nimi": "23",
-        "lkm": 3
-      },
-      {
-        "nimi": "24",
-        "lkm": 3
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 9
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Restonomi (ylempi AMK), matkailu",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 57
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 72
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "22",
-        "lkm": 6
-      },
-      {
-        "nimi": "23",
-        "lkm": 6
-      },
-      {
-        "nimi": "24",
-        "lkm": 6
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 27
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 21
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 6
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Medianomi (ylempi AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 57
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 99
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "19",
-        "lkm": 3
-      },
-      {
-        "nimi": "20",
-        "lkm": 6
-      },
-      {
-        "nimi": "21",
-        "lkm": 3
-      },
-      {
-        "nimi": "22",
-        "lkm": 3
-      },
-      {
-        "nimi": "23",
-        "lkm": 6
-      },
-      {
-        "nimi": "24",
-        "lkm": 6
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 24
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 21
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 24
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Tradenomi (AMK), tietojenkäsittely",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 2295
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 2256
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 18
-      },
-      {
-        "nimi": "19",
-        "lkm": 192
-      },
-      {
-        "nimi": "20",
-        "lkm": 282
-      },
-      {
-        "nimi": "21",
-        "lkm": 294
-      },
-      {
-        "nimi": "22",
-        "lkm": 285
-      },
-      {
-        "nimi": "23",
-        "lkm": 210
-      },
-      {
-        "nimi": "24",
-        "lkm": 219
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 1089
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 933
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 465
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 303
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 156
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 54
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 24
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 27
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Tradenomi (ylempi AMK), tietojenkäsittely",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 123
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 150
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "19",
-        "lkm": 3
-      },
-      {
-        "nimi": "21",
-        "lkm": 9
-      },
-      {
-        "nimi": "22",
-        "lkm": 3
-      },
-      {
-        "nimi": "23",
-        "lkm": 6
-      },
-      {
-        "nimi": "24",
-        "lkm": 9
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 51
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 66
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 45
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 33
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 27
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 15
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Artenomi (AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 69
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 294
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "19",
-        "lkm": 12
-      },
-      {
-        "nimi": "20",
-        "lkm": 21
-      },
-      {
-        "nimi": "21",
-        "lkm": 18
-      },
-      {
-        "nimi": "22",
-        "lkm": 27
-      },
-      {
-        "nimi": "23",
-        "lkm": 15
-      },
-      {
-        "nimi": "24",
-        "lkm": 21
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 84
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 81
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 21
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 15
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Insinööri (AMK), konetekniikka",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 1692
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 579
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 36
-      },
-      {
-        "nimi": "19",
-        "lkm": 171
-      },
-      {
-        "nimi": "20",
-        "lkm": 252
-      },
-      {
-        "nimi": "21",
-        "lkm": 225
-      },
-      {
-        "nimi": "22",
-        "lkm": 165
-      },
-      {
-        "nimi": "23",
-        "lkm": 129
-      },
-      {
-        "nimi": "24",
-        "lkm": 129
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 480
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 309
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 174
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 111
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 60
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Insinööri (AMK), rakennustekniikka ja yhdyskuntatekniikka",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 597
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 342
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 15
-      },
-      {
-        "nimi": "19",
-        "lkm": 45
-      },
-      {
-        "nimi": "20",
-        "lkm": 57
-      },
-      {
-        "nimi": "21",
-        "lkm": 72
-      },
-      {
-        "nimi": "22",
-        "lkm": 51
-      },
-      {
-        "nimi": "23",
-        "lkm": 36
-      },
-      {
-        "nimi": "24",
-        "lkm": 42
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 195
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 159
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 105
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 81
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 33
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 24
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 6
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Rakennusmestari (AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 903
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 264
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 12
-      },
-      {
-        "nimi": "19",
-        "lkm": 57
-      },
-      {
-        "nimi": "20",
-        "lkm": 90
-      },
-      {
-        "nimi": "21",
-        "lkm": 90
-      },
-      {
-        "nimi": "22",
-        "lkm": 66
-      },
-      {
-        "nimi": "23",
-        "lkm": 60
-      },
-      {
-        "nimi": "24",
-        "lkm": 42
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 162
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 177
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 168
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 108
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 78
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 27
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 21
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 9
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Insinööri (AMK), tietotekniikka",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 1944
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 984
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 57
-      },
-      {
-        "nimi": "19",
-        "lkm": 222
-      },
-      {
-        "nimi": "20",
-        "lkm": 312
-      },
-      {
-        "nimi": "21",
-        "lkm": 336
-      },
-      {
-        "nimi": "22",
-        "lkm": 216
-      },
-      {
-        "nimi": "23",
-        "lkm": 186
-      },
-      {
-        "nimi": "24",
-        "lkm": 165
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 666
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 399
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 177
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 105
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 45
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 15
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 9
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Agrologi (ylempi AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 15
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 18
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "24",
-        "lkm": 3
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Insinööri (AMK), logistiikka",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 429
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 183
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "19",
-        "lkm": 12
-      },
-      {
-        "nimi": "20",
-        "lkm": 36
-      },
-      {
-        "nimi": "21",
-        "lkm": 33
-      },
-      {
-        "nimi": "22",
-        "lkm": 30
-      },
-      {
-        "nimi": "23",
-        "lkm": 36
-      },
-      {
-        "nimi": "24",
-        "lkm": 24
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 156
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 114
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 63
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 51
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Insinööri (ylempi AMK), rakennustekniikka ja yhdyskuntatekniikka",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 54
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 15
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "23",
-        "lkm": 3
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Insinööri (ylempi AMK), automaatiotekniikka",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 51
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 21
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 15
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Fysioterapeutti (AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 1140
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 2340
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 30
-      },
-      {
-        "nimi": "19",
-        "lkm": 282
-      },
-      {
-        "nimi": "20",
-        "lkm": 378
-      },
-      {
-        "nimi": "21",
-        "lkm": 375
-      },
-      {
-        "nimi": "22",
-        "lkm": 354
-      },
-      {
-        "nimi": "23",
-        "lkm": 192
-      },
-      {
-        "nimi": "24",
-        "lkm": 213
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 672
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 405
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 279
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 144
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 81
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 45
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 12
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Toimintaterapeutti (AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 141
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 1284
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
-      },
-      {
-        "nimi": "19",
-        "lkm": 96
-      },
-      {
-        "nimi": "20",
-        "lkm": 132
-      },
-      {
-        "nimi": "21",
-        "lkm": 138
-      },
-      {
-        "nimi": "22",
-        "lkm": 108
-      },
-      {
-        "nimi": "23",
-        "lkm": 78
-      },
-      {
-        "nimi": "24",
-        "lkm": 90
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 300
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 177
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 105
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 105
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 51
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 30
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Kätilö (AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 42
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 1116
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 9
-      },
-      {
-        "nimi": "19",
-        "lkm": 204
-      },
-      {
-        "nimi": "20",
-        "lkm": 183
-      },
-      {
-        "nimi": "21",
-        "lkm": 129
-      },
-      {
-        "nimi": "22",
-        "lkm": 111
-      },
-      {
-        "nimi": "23",
-        "lkm": 90
-      },
-      {
-        "nimi": "24",
-        "lkm": 75
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 192
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 84
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 48
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 24
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Sairaanhoitaja (ylempi AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 129
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 1173
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "24",
-        "lkm": 9
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 174
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 285
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 255
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 225
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 180
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 111
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 48
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 15
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Kasvatust. kand. (alempi), luokanopettaja (ei opettajankelpoisuutta)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 60
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 270
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "19",
-        "lkm": 9
-      },
-      {
-        "nimi": "20",
-        "lkm": 18
-      },
-      {
-        "nimi": "21",
-        "lkm": 9
-      },
-      {
-        "nimi": "22",
-        "lkm": 12
-      },
-      {
-        "nimi": "23",
-        "lkm": 6
-      },
-      {
-        "nimi": "24",
-        "lkm": 12
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 51
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 33
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 42
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 42
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 48
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 33
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Luonnont. kand., tietojenkäsittelytiede",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 132
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 111
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
-      },
-      {
-        "nimi": "19",
-        "lkm": 24
-      },
-      {
-        "nimi": "20",
-        "lkm": 27
-      },
-      {
-        "nimi": "21",
-        "lkm": 30
-      },
-      {
-        "nimi": "22",
-        "lkm": 15
-      },
-      {
-        "nimi": "23",
-        "lkm": 15
-      },
-      {
-        "nimi": "24",
-        "lkm": 15
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 45
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 21
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 12
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 6
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Fil. maist., tietojenkäsittelytiede",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 96
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 72
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "22",
-        "lkm": 6
-      },
-      {
-        "nimi": "24",
-        "lkm": 6
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 33
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 30
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 18
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 9
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 6
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 6
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 168
-      },
-      {
-        "nimi": "nainen",
-        "lkm": 357
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "19",
-        "lkm": 3
-      },
-      {
-        "nimi": "21",
-        "lkm": 6
-      },
-      {
-        "nimi": "23",
-        "lkm": 3
-      },
-      {
-        "nimi": "24",
-        "lkm": 9
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 66
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 117
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 84
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 93
-      },
-      {
-        "nimi": "45–49-vuotiaat",
-        "lkm": 66
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 48
-      },
-      {
-        "nimi": "55–59-vuotiaat",
-        "lkm": 24
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 6
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Merikapteeni (AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 30
-      }
-    ],
-    "ikaryhmat": [
-      {
-        "nimi": "20",
-        "lkm": 3
-      },
-      {
-        "nimi": "21",
-        "lkm": 3
-      },
-      {
-        "nimi": "22",
-        "lkm": 3
-      },
-      {
-        "nimi": "23",
-        "lkm": 3
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 3
-      },
-      {
-        "nimi": "60–64-vuotiaat",
-        "lkm": 3
-      }
-    ]
-  },
-  {
-    "kohdeTyyppi": "tutkinto",
-    "kohdeNimi": "Muotoilija (AMK)",
-    "sukupuoli": [
-      {
-        "nimi": "mies",
-        "lkm": 198
+        "lkm": 246
       },
       {
         "nimi": "nainen",
@@ -4855,7 +3267,1595 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 9
+        "lkm": 2
+      },
+      {
+        "nimi": "19",
+        "lkm": 54
+      },
+      {
+        "nimi": "20",
+        "lkm": 63
+      },
+      {
+        "nimi": "21",
+        "lkm": 63
+      },
+      {
+        "nimi": "22",
+        "lkm": 63
+      },
+      {
+        "nimi": "23",
+        "lkm": 42
+      },
+      {
+        "nimi": "24",
+        "lkm": 42
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 117
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 63
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 4
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Restonomi (AMK), majoitus- ja ravitsemisala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 27
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 48
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 8
+      },
+      {
+        "nimi": "20",
+        "lkm": 8
+      },
+      {
+        "nimi": "21",
+        "lkm": 4
+      },
+      {
+        "nimi": "22",
+        "lkm": 4
+      },
+      {
+        "nimi": "23",
+        "lkm": 2
+      },
+      {
+        "nimi": "24",
+        "lkm": 2
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 8
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Restonomi (ylempi AMK), matkailu",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 54
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 69
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "22",
+        "lkm": 4
+      },
+      {
+        "nimi": "23",
+        "lkm": 4
+      },
+      {
+        "nimi": "24",
+        "lkm": 4
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 4
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Medianomi (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 30
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 81
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 2
+      },
+      {
+        "nimi": "20",
+        "lkm": 2
+      },
+      {
+        "nimi": "21",
+        "lkm": 2
+      },
+      {
+        "nimi": "22",
+        "lkm": 2
+      },
+      {
+        "nimi": "23",
+        "lkm": 4
+      },
+      {
+        "nimi": "24",
+        "lkm": 2
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 14
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 17
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 17
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (AMK), tietojenkäsittely",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1464
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1425
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 14
+      },
+      {
+        "nimi": "19",
+        "lkm": 141
+      },
+      {
+        "nimi": "20",
+        "lkm": 225
+      },
+      {
+        "nimi": "21",
+        "lkm": 213
+      },
+      {
+        "nimi": "22",
+        "lkm": 192
+      },
+      {
+        "nimi": "23",
+        "lkm": 153
+      },
+      {
+        "nimi": "24",
+        "lkm": 141
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 663
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 546
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 279
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 177
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 93
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 14
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 4
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (ylempi AMK), tietojenkäsittely",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 117
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 147
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 2
+      },
+      {
+        "nimi": "21",
+        "lkm": 4
+      },
+      {
+        "nimi": "22",
+        "lkm": 2
+      },
+      {
+        "nimi": "23",
+        "lkm": 6
+      },
+      {
+        "nimi": "24",
+        "lkm": 4
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 69
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Artenomi (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 72
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 297
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 11
+      },
+      {
+        "nimi": "20",
+        "lkm": 21
+      },
+      {
+        "nimi": "21",
+        "lkm": 17
+      },
+      {
+        "nimi": "22",
+        "lkm": 27
+      },
+      {
+        "nimi": "23",
+        "lkm": 14
+      },
+      {
+        "nimi": "24",
+        "lkm": 21
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 84
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 35
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 20
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 14
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), konetekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1233
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 462
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 24
+      },
+      {
+        "nimi": "19",
+        "lkm": 129
+      },
+      {
+        "nimi": "20",
+        "lkm": 195
+      },
+      {
+        "nimi": "21",
+        "lkm": 177
+      },
+      {
+        "nimi": "22",
+        "lkm": 123
+      },
+      {
+        "nimi": "23",
+        "lkm": 105
+      },
+      {
+        "nimi": "24",
+        "lkm": 108
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 354
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 225
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 117
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 87
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), rakennustekniikka ja yhdyskuntatekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 438
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 261
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 4
+      },
+      {
+        "nimi": "19",
+        "lkm": 33
+      },
+      {
+        "nimi": "20",
+        "lkm": 48
+      },
+      {
+        "nimi": "21",
+        "lkm": 51
+      },
+      {
+        "nimi": "22",
+        "lkm": 33
+      },
+      {
+        "nimi": "23",
+        "lkm": 21
+      },
+      {
+        "nimi": "24",
+        "lkm": 33
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 147
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 120
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 84
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 14
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Rakennusmestari (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 609
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 159
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 2
+      },
+      {
+        "nimi": "19",
+        "lkm": 39
+      },
+      {
+        "nimi": "20",
+        "lkm": 75
+      },
+      {
+        "nimi": "21",
+        "lkm": 57
+      },
+      {
+        "nimi": "22",
+        "lkm": 38
+      },
+      {
+        "nimi": "23",
+        "lkm": 36
+      },
+      {
+        "nimi": "24",
+        "lkm": 30
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 105
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 111
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 120
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 72
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 20
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), tietotekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 1455
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 792
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 39
+      },
+      {
+        "nimi": "19",
+        "lkm": 177
+      },
+      {
+        "nimi": "20",
+        "lkm": 228
+      },
+      {
+        "nimi": "21",
+        "lkm": 252
+      },
+      {
+        "nimi": "22",
+        "lkm": 171
+      },
+      {
+        "nimi": "23",
+        "lkm": 147
+      },
+      {
+        "nimi": "24",
+        "lkm": 117
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 513
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 315
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 147
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 84
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 4
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Agrologi (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 6
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 12
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "24",
+        "lkm": 2
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 4
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 4
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 4
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (AMK), logistiikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 351
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 147
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 8
+      },
+      {
+        "nimi": "20",
+        "lkm": 36
+      },
+      {
+        "nimi": "21",
+        "lkm": 30
+      },
+      {
+        "nimi": "22",
+        "lkm": 24
+      },
+      {
+        "nimi": "23",
+        "lkm": 24
+      },
+      {
+        "nimi": "24",
+        "lkm": 17
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 126
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 96
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 54
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 27
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "65–vuotiaat ja sitä vanhemmat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), rakennustekniikka ja yhdyskuntatekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 57
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 12
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "23",
+        "lkm": 2
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 17
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 4
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Insinööri (ylempi AMK), automaatiotekniikka",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 48
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 15
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 14
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 4
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Fysioterapeutti (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 576
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1383
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 8
+      },
+      {
+        "nimi": "19",
+        "lkm": 174
+      },
+      {
+        "nimi": "20",
+        "lkm": 234
+      },
+      {
+        "nimi": "21",
+        "lkm": 216
+      },
+      {
+        "nimi": "22",
+        "lkm": 192
+      },
+      {
+        "nimi": "23",
+        "lkm": 114
+      },
+      {
+        "nimi": "24",
+        "lkm": 105
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 351
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 231
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 162
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 90
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 48
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 17
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 4
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Toimintaterapeutti (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 102
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 924
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 2
+      },
+      {
+        "nimi": "19",
+        "lkm": 75
+      },
+      {
+        "nimi": "20",
+        "lkm": 102
+      },
+      {
+        "nimi": "21",
+        "lkm": 99
+      },
+      {
+        "nimi": "22",
+        "lkm": 81
+      },
+      {
+        "nimi": "23",
+        "lkm": 57
+      },
+      {
+        "nimi": "24",
+        "lkm": 53
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 210
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 129
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 75
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 72
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 38
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 17
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 6
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Kätilö (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 15
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 855
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 6
+      },
+      {
+        "nimi": "19",
+        "lkm": 140
+      },
+      {
+        "nimi": "20",
+        "lkm": 143
+      },
+      {
+        "nimi": "21",
+        "lkm": 95
+      },
+      {
+        "nimi": "22",
+        "lkm": 87
+      },
+      {
+        "nimi": "23",
+        "lkm": 74
+      },
+      {
+        "nimi": "24",
+        "lkm": 53
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 155
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 62
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 38
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 20
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Sairaanhoitaja (ylempi AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 105
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 1005
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "24",
+        "lkm": 6
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 138
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 243
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 216
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 201
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 156
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 99
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 41
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 8
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Kasvatust. kand. (alempi), luokanopettaja (ei opettajankelpoisuutta)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 54
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 273
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 8
+      },
+      {
+        "nimi": "20",
+        "lkm": 18
+      },
+      {
+        "nimi": "21",
+        "lkm": 8
+      },
+      {
+        "nimi": "22",
+        "lkm": 11
+      },
+      {
+        "nimi": "23",
+        "lkm": 4
+      },
+      {
+        "nimi": "24",
+        "lkm": 11
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 51
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 32
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 42
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 47
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 32
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 11
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Luonnont. kand., tietojenkäsittelytiede",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 123
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 108
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 2
+      },
+      {
+        "nimi": "19",
+        "lkm": 24
+      },
+      {
+        "nimi": "20",
+        "lkm": 27
+      },
+      {
+        "nimi": "21",
+        "lkm": 30
+      },
+      {
+        "nimi": "22",
+        "lkm": 15
+      },
+      {
+        "nimi": "23",
+        "lkm": 15
+      },
+      {
+        "nimi": "24",
+        "lkm": 15
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 45
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 21
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 12
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 4
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Fil. maist., tietojenkäsittelytiede",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 90
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 66
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "22",
+        "lkm": 4
+      },
+      {
+        "nimi": "24",
+        "lkm": 4
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 36
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 33
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 18
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 4
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 4
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 147
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 327
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "19",
+        "lkm": 2
+      },
+      {
+        "nimi": "21",
+        "lkm": 4
+      },
+      {
+        "nimi": "23",
+        "lkm": 2
+      },
+      {
+        "nimi": "24",
+        "lkm": 2
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 60
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 114
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 81
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 87
+      },
+      {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 66
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 39
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 24
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 4
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Merikapteeni (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 15
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "20",
+        "lkm": 2
+      },
+      {
+        "nimi": "21",
+        "lkm": 2
+      },
+      {
+        "nimi": "22",
+        "lkm": 2
+      },
+      {
+        "nimi": "23",
+        "lkm": 2
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "40–44-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 2
+      },
+      {
+        "nimi": "60–64-vuotiaat",
+        "lkm": 2
+      }
+    ]
+  },
+  {
+    "kohdeTyyppi": "tutkinto",
+    "kohdeNimi": "Muotoilija (AMK)",
+    "sukupuoli": [
+      {
+        "nimi": "mies",
+        "lkm": 195
+      },
+      {
+        "nimi": "nainen",
+        "lkm": 339
+      }
+    ],
+    "ikaryhmat": [
+      {
+        "nimi": "18–vuotiaat ja sitä nuoremmat",
+        "lkm": 8
       },
       {
         "nimi": "19",
@@ -4903,11 +4903,11 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -4917,33 +4917,33 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 72
+        "lkm": 69
       },
       {
         "nimi": "nainen",
-        "lkm": 129
+        "lkm": 126
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "20",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "21",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
@@ -4951,7 +4951,7 @@
       },
       {
         "nimi": "24",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "25–29-vuotiaat",
@@ -4971,7 +4971,7 @@
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
@@ -4979,7 +4979,7 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -4993,29 +4993,29 @@
       },
       {
         "nimi": "nainen",
-        "lkm": 18
+        "lkm": 9
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "20",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "21",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "24",
@@ -5023,15 +5023,15 @@
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 21
+        "lkm": 20
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "40–44-vuotiaat",
@@ -5039,15 +5039,15 @@
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5057,53 +5057,53 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 30
+        "lkm": 15
       },
       {
         "nimi": "nainen",
-        "lkm": 6
+        "lkm": 2
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "20",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "21",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "24",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5113,69 +5113,69 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 753
+        "lkm": 453
       },
       {
         "nimi": "nainen",
-        "lkm": 1764
+        "lkm": 1158
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 42
+        "lkm": 17
       },
       {
         "nimi": "19",
-        "lkm": 318
+        "lkm": 198
       },
       {
         "nimi": "20",
-        "lkm": 396
+        "lkm": 243
       },
       {
         "nimi": "21",
-        "lkm": 330
+        "lkm": 195
       },
       {
         "nimi": "22",
-        "lkm": 261
-      },
-      {
-        "nimi": "23",
-        "lkm": 186
-      },
-      {
-        "nimi": "24",
         "lkm": 153
       },
       {
+        "nimi": "23",
+        "lkm": 114
+      },
+      {
+        "nimi": "24",
+        "lkm": 96
+      },
+      {
         "nimi": "25–29-vuotiaat",
-        "lkm": 444
+        "lkm": 315
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 171
+        "lkm": 123
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 99
+        "lkm": 78
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 51
+        "lkm": 39
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 33
-      },
-      {
-        "nimi": "50–54-vuotiaat",
         "lkm": 24
       },
       {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 11
+      },
+      {
         "nimi": "55–59-vuotiaat",
-        "lkm": 9
+        "lkm": 4
       }
     ]
   },
@@ -5185,65 +5185,65 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 300
+        "lkm": 228
       },
       {
         "nimi": "nainen",
-        "lkm": 1719
+        "lkm": 1287
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "20",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "21",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "23",
-        "lkm": 9
+        "lkm": 4
       },
       {
         "nimi": "24",
-        "lkm": 6
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 303
+        "lkm": 231
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 474
+        "lkm": 345
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 420
+        "lkm": 312
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 354
+        "lkm": 270
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 213
+        "lkm": 177
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 156
+        "lkm": 120
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 63
+        "lkm": 35
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 9
+        "lkm": 2
       }
     ]
   },
@@ -5253,21 +5253,21 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 60
+        "lkm": 54
       },
       {
         "nimi": "nainen",
-        "lkm": 201
+        "lkm": 195
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "23",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 21
+        "lkm": 20
       },
       {
         "nimi": "30–34-vuotiaat",
@@ -5291,11 +5291,11 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5305,49 +5305,49 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 234
+        "lkm": 195
       },
       {
         "nimi": "nainen",
-        "lkm": 108
+        "lkm": 78
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "20",
-        "lkm": 6
+        "lkm": 2
       },
       {
         "nimi": "21",
-        "lkm": 6
+        "lkm": 2
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "24",
-        "lkm": 12
+        "lkm": 4
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 54
+        "lkm": 48
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 78
+        "lkm": 72
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 57
+        "lkm": 51
       },
       {
         "nimi": "40–44-vuotiaat",
@@ -5355,19 +5355,19 @@
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "50–54-vuotiaat",
         "lkm": 24
       },
       {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 11
+      },
+      {
         "nimi": "55–59-vuotiaat",
-        "lkm": 15
+        "lkm": 8
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5377,61 +5377,61 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 171
+        "lkm": 117
       },
       {
         "nimi": "nainen",
-        "lkm": 108
+        "lkm": 60
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "21",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "24",
-        "lkm": 9
+        "lkm": 4
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 48
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 60
-      },
-      {
-        "nimi": "35–39-vuotiaat",
-        "lkm": 45
-      },
-      {
-        "nimi": "40–44-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "45–49-vuotiaat",
         "lkm": 30
       },
       {
-        "nimi": "50–54-vuotiaat",
-        "lkm": 15
+        "nimi": "30–34-vuotiaat",
+        "lkm": 51
       },
       {
-        "nimi": "55–59-vuotiaat",
+        "nimi": "35–39-vuotiaat",
+        "lkm": 30
+      },
+      {
+        "nimi": "40–44-vuotiaat",
         "lkm": 21
       },
       {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 17
+      },
+      {
+        "nimi": "50–54-vuotiaat",
+        "lkm": 8
+      },
+      {
+        "nimi": "55–59-vuotiaat",
+        "lkm": 11
+      },
+      {
         "nimi": "60–64-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5441,7 +5441,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 123
+        "lkm": 117
       },
       {
         "nimi": "nainen",
@@ -5451,11 +5451,11 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "20",
@@ -5467,15 +5467,15 @@
       },
       {
         "nimi": "22",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "23",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "24",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "25–29-vuotiaat",
@@ -5509,7 +5509,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 165
+        "lkm": 159
       },
       {
         "nimi": "nainen",
@@ -5519,7 +5519,7 @@
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "20",
@@ -5563,7 +5563,7 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -5573,25 +5573,25 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 117
+        "lkm": 114
       },
       {
         "nimi": "nainen",
-        "lkm": 468
+        "lkm": 462
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "20",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "24",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
@@ -5623,7 +5623,7 @@
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -5633,29 +5633,29 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "nainen",
-        "lkm": 81
+        "lkm": 78
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "24",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
@@ -5683,7 +5683,7 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5697,7 +5697,7 @@
       },
       {
         "nimi": "nainen",
-        "lkm": 231
+        "lkm": 228
       }
     ],
     "ikaryhmat": [
@@ -5751,7 +5751,7 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -5761,11 +5761,11 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 231
+        "lkm": 225
       },
       {
         "nimi": "nainen",
-        "lkm": 117
+        "lkm": 114
       }
     ],
     "ikaryhmat": [
@@ -5795,11 +5795,11 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5809,7 +5809,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 108
+        "lkm": 102
       },
       {
         "nimi": "nainen",
@@ -5819,11 +5819,11 @@
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 45
+        "lkm": 44
       },
       {
         "nimi": "20",
-        "lkm": 54
+        "lkm": 53
       },
       {
         "nimi": "21",
@@ -5863,15 +5863,15 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -5881,53 +5881,53 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 39
+        "lkm": 27
       },
       {
         "nimi": "nainen",
-        "lkm": 153
+        "lkm": 147
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "21",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "24",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 30
+        "lkm": 29
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 30
+        "lkm": 26
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 24
+        "lkm": 20
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 36
-      },
-      {
-        "nimi": "45–49-vuotiaat",
         "lkm": 39
       },
       {
+        "nimi": "45–49-vuotiaat",
+        "lkm": 36
+      },
+      {
         "nimi": "50–54-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 9
+        "lkm": 4
       }
     ]
   },
@@ -5937,7 +5937,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 75
+        "lkm": 72
       },
       {
         "nimi": "nainen",
@@ -5947,11 +5947,11 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "19",
-        "lkm": 54
+        "lkm": 53
       },
       {
         "nimi": "20",
@@ -5963,11 +5963,11 @@
       },
       {
         "nimi": "22",
-        "lkm": 63
+        "lkm": 62
       },
       {
         "nimi": "23",
-        "lkm": 45
+        "lkm": 44
       },
       {
         "nimi": "24",
@@ -5983,19 +5983,19 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 39
+        "lkm": 38
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6005,73 +6005,73 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 219
+        "lkm": 174
       },
       {
         "nimi": "nainen",
-        "lkm": 897
+        "lkm": 738
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 120
+        "lkm": 93
       },
       {
         "nimi": "20",
-        "lkm": 132
+        "lkm": 114
       },
       {
         "nimi": "21",
-        "lkm": 99
-      },
-      {
-        "nimi": "22",
         "lkm": 87
       },
       {
-        "nimi": "23",
+        "nimi": "22",
         "lkm": 69
       },
       {
-        "nimi": "24",
-        "lkm": 81
-      },
-      {
-        "nimi": "25–29-vuotiaat",
-        "lkm": 216
-      },
-      {
-        "nimi": "30–34-vuotiaat",
-        "lkm": 135
-      },
-      {
-        "nimi": "35–39-vuotiaat",
+        "nimi": "23",
         "lkm": 60
       },
       {
+        "nimi": "24",
+        "lkm": 57
+      },
+      {
+        "nimi": "25–29-vuotiaat",
+        "lkm": 183
+      },
+      {
+        "nimi": "30–34-vuotiaat",
+        "lkm": 111
+      },
+      {
+        "nimi": "35–39-vuotiaat",
+        "lkm": 54
+      },
+      {
         "nimi": "40–44-vuotiaat",
-        "lkm": 66
+        "lkm": 54
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 27
+        "lkm": 20
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 12
+        "lkm": 9
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 2
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6085,17 +6085,17 @@
       },
       {
         "nimi": "nainen",
-        "lkm": 660
+        "lkm": 663
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "19",
-        "lkm": 63
+        "lkm": 62
       },
       {
         "nimi": "20",
@@ -6143,11 +6143,11 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6157,33 +6157,33 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 27
+        "lkm": 15
       },
       {
         "nimi": "nainen",
-        "lkm": 96
+        "lkm": 93
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "20",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "21",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "24",
@@ -6191,23 +6191,23 @@
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
@@ -6215,11 +6215,11 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6229,21 +6229,21 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 90
+        "lkm": 81
       },
       {
         "nimi": "nainen",
-        "lkm": 426
+        "lkm": 423
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 51
+        "lkm": 50
       },
       {
         "nimi": "20",
@@ -6275,27 +6275,27 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 21
+        "lkm": 20
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6305,7 +6305,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 18
+        "lkm": 12
       },
       {
         "nimi": "nainen",
@@ -6315,15 +6315,15 @@
     "ikaryhmat": [
       {
         "nimi": "24",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "35–39-vuotiaat",
@@ -6331,19 +6331,19 @@
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6353,7 +6353,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 45
+        "lkm": 42
       },
       {
         "nimi": "nainen",
@@ -6363,31 +6363,31 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "20",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "21",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "22",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "23",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "24",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "25–29-vuotiaat",
@@ -6399,23 +6399,23 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -6429,17 +6429,17 @@
       },
       {
         "nimi": "nainen",
-        "lkm": 141
+        "lkm": 138
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "19",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "20",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "21",
@@ -6447,11 +6447,11 @@
       },
       {
         "nimi": "22",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "23",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "24",
@@ -6467,7 +6467,7 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "40–44-vuotiaat",
@@ -6475,15 +6475,15 @@
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6493,37 +6493,37 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 9
+        "lkm": 2
       },
       {
         "nimi": "nainen",
-        "lkm": 12
+        "lkm": 9
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "20",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6533,11 +6533,11 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 54
+        "lkm": 48
       },
       {
         "nimi": "nainen",
-        "lkm": 114
+        "lkm": 108
       }
     ],
     "ikaryhmat": [
@@ -6547,23 +6547,23 @@
       },
       {
         "nimi": "20",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "21",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "22",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "23",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "24",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "25–29-vuotiaat",
@@ -6571,7 +6571,7 @@
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "35–39-vuotiaat",
@@ -6587,19 +6587,19 @@
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "60–64-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -6609,7 +6609,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "nainen",
@@ -6619,15 +6619,15 @@
     "ikaryhmat": [
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "40–44-vuotiaat",
@@ -6643,7 +6643,7 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6657,13 +6657,13 @@
       },
       {
         "nimi": "nainen",
-        "lkm": 27
+        "lkm": 24
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "30–34-vuotiaat",
@@ -6671,23 +6671,23 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6697,17 +6697,17 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 45
+        "lkm": 36
       },
       {
         "nimi": "nainen",
-        "lkm": 105
+        "lkm": 102
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "19",
@@ -6719,51 +6719,51 @@
       },
       {
         "nimi": "21",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "23",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "24",
-        "lkm": 12
+        "lkm": 11
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   },
@@ -6773,17 +6773,17 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 324
+        "lkm": 327
       },
       {
         "nimi": "nainen",
-        "lkm": 240
+        "lkm": 234
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 18
+        "lkm": 17
       },
       {
         "nimi": "19",
@@ -6831,7 +6831,7 @@
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6841,7 +6841,7 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 27
+        "lkm": 21
       },
       {
         "nimi": "nainen",
@@ -6851,39 +6851,39 @@
     "ikaryhmat": [
       {
         "nimi": "18–vuotiaat ja sitä nuoremmat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "30–34-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 9
+        "lkm": 8
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       },
       {
         "nimi": "65–vuotiaat ja sitä vanhemmat",
-        "lkm": 3
+        "lkm": 2
       }
     ]
   },
@@ -6893,25 +6893,25 @@
     "sukupuoli": [
       {
         "nimi": "mies",
-        "lkm": 18
+        "lkm": 9
       },
       {
         "nimi": "nainen",
-        "lkm": 144
+        "lkm": 138
       }
     ],
     "ikaryhmat": [
       {
         "nimi": "22",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "24",
-        "lkm": 3
+        "lkm": 2
       },
       {
         "nimi": "25–29-vuotiaat",
-        "lkm": 21
+        "lkm": 20
       },
       {
         "nimi": "30–34-vuotiaat",
@@ -6919,23 +6919,23 @@
       },
       {
         "nimi": "35–39-vuotiaat",
-        "lkm": 27
+        "lkm": 26
       },
       {
         "nimi": "40–44-vuotiaat",
-        "lkm": 30
+        "lkm": 29
       },
       {
         "nimi": "45–49-vuotiaat",
-        "lkm": 24
+        "lkm": 23
       },
       {
         "nimi": "50–54-vuotiaat",
-        "lkm": 15
+        "lkm": 14
       },
       {
         "nimi": "55–59-vuotiaat",
-        "lkm": 6
+        "lkm": 4
       }
     ]
   }
