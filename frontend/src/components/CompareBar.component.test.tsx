@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import type { StatisticsEntry } from "@/types.gen";
-import CompareBar from "./CompareBar";
+import CompareBar from "@/components/CompareBar";
 
 const entry = (id: string, name: string): StatisticsEntry => ({
   kooditHakukohde: id,

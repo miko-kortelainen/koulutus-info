@@ -2,14 +2,9 @@ import { Box, Button, Flex, IconButton, Stack, Text } from "@chakra-ui/react";
 import { useRef } from "react";
 import { HiOutlineTrash } from "react-icons/hi";
 import { COLORS } from "@/theme";
-import {
-  SUBJECT_OPTIONS,
-  type YoAineRow,
-  type YoFormErrors,
-  type YoFormState,
-} from "../lib/yoForm";
-import { YO_GRADES } from "../lib/yoScoring";
-import FormSelect from "./FormSelect";
+import { SUBJECT_OPTIONS, type YoAineRow, type YoFormErrors, type YoFormState } from "@/pages/pistelaskuri/lib/yoForm";
+import { YO_GRADES } from "@/pages/pistelaskuri/lib/yoScoring";
+import FormSelect from "@/pages/pistelaskuri/components/FormSelect";
 
 interface YoFormProps {
   errors: YoFormErrors;
@@ -41,7 +36,6 @@ function AineRow({ canRemove, index, onRemove, onUpdate, row }: AineRowProps) {
             onChange={(subject) => onUpdate({ subject })}
             placeholder="Valitse aine"
             value={row.subject}
-            
           />
         </Box>
         <Box flex="3">
@@ -51,7 +45,6 @@ function AineRow({ canRemove, index, onRemove, onUpdate, row }: AineRowProps) {
             onChange={(grade) => onUpdate({ grade })}
             placeholder="Arvosana"
             value={row.grade}
-            
           />
         </Box>
         {canRemove ? (

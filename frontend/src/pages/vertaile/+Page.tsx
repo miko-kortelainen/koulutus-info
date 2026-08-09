@@ -6,7 +6,7 @@ import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption 
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import ComparisonTable from "./components/ComparisonTable";
+import ComparisonTable from "@/pages/vertaile/components/ComparisonTable";
 
 export default function ComparePage() {
   const { urlParsed } = usePageContext();

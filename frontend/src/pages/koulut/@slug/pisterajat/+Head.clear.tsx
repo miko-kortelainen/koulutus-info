@@ -1,8 +1,8 @@
 import { useData } from "vike-react/useData";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { slugify } from "@/lib/slug";
-import { Head as GlobalHead } from "../../../+Head";
-import type { CutoffPageData } from "./+data";
+import { Head as GlobalHead } from "@/pages/+Head";
+import type { CutoffPageData } from "@/pages/koulut/@slug/pisterajat/+data";
 
 export function Head() {
   const { schoolName, schoolLabel } = useData<CutoffPageData>();

@@ -1,7 +1,7 @@
 import { screen } from "@testing-library/react";
 import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
-import ApplicantTotalsChart from "./ApplicantTotalsChart";
+import ApplicantTotalsChart from "@/pages/trendit/components/ApplicantTotalsChart";
 
 test("names the chart and exposes its data as text", () => {
   vi.stubGlobal(

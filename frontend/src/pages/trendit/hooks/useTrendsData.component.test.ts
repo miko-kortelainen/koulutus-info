@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react";
 import { expect, test } from "vitest";
 import type { StatisticsEntry } from "@/types.gen";
-import useTrendsData from "./useTrendsData";
+import useTrendsData from "@/pages/trendit/hooks/useTrendsData";
 
 const groups: [string | undefined, string | undefined, string | undefined, number][] = [
   ["Tekniikka", "Aalto-yliopisto", "Yliopistokoulutus", 30],

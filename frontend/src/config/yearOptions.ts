@@ -1,7 +1,7 @@
 import { CURRENT_STATISTICS_ROUND, STATISTICS_ROUNDS } from "@/generated/dataManifest";
 
 export type YearOption = (typeof STATISTICS_ROUNDS)[number];
-export type RoundLabelId = YearOption | (typeof import("@/generated/dataManifest").HAKIJAPROFIILI_ROUNDS)[number];
+export type RoundLabelId = YearOption | typeof import("@/generated/dataManifest").HAKIJAPROFIILI_ROUNDS[number];
 
 export function statisticsRoundLabel(round: RoundLabelId) {
   const [year, season] = round.split("_");

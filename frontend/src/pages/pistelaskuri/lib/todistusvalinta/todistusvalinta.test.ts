@@ -3,10 +3,22 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { normalizeGrades } from "./grades";
-import { listUniversityPrograms, calculateUniversityPrograms } from "./programs";
-import { averageToHundredths, buildScoreBreakdown, scoreAmkAmm, scoreAmkYo, scoreModel } from "./scoring";
-import type { CutoffSchool, ProgramCrosswalk, ScoringCatalog, ThresholdCatalog, TodistusvalintaCatalogs } from "./types";
+import { normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
+import { listUniversityPrograms, calculateUniversityPrograms } from "@/pages/pistelaskuri/lib/todistusvalinta/programs";
+import {
+  averageToHundredths,
+  buildScoreBreakdown,
+  scoreAmkAmm,
+  scoreAmkYo,
+  scoreModel,
+} from "@/pages/pistelaskuri/lib/todistusvalinta/scoring";
+import type {
+  CutoffSchool,
+  ProgramCrosswalk,
+  ScoringCatalog,
+  ThresholdCatalog,
+  TodistusvalintaCatalogs,
+} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../../../../../public");
 const scoring = JSON.parse(

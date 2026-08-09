@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react";
 import { expect, test } from "vitest";
-import useFilteredDegrees from "./useFilteredDegrees";
+import useFilteredDegrees from "@/pages/koulutukset/hooks/useFilteredDegrees";
 
 const degrees = [
   {
@@ -93,9 +93,7 @@ test("combines filter groups including koulutusala", () => {
 });
 
 test("trims search terms and searches translated names", () => {
-  const { result } = renderHook(() =>
-    useFilteredDegrees(degrees, "  Law  ", none(), none(), none(), none(), none()),
-  );
+  const { result } = renderHook(() => useFilteredDegrees(degrees, "  Law  ", none(), none(), none(), none(), none()));
 
   expect(ids(result.current)).toEqual(["yo-law"]);
 });

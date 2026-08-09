@@ -8,7 +8,8 @@ export const HAKIJAPROFIILI_YEAR_OPTIONS = HAKIJAPROFIILI_ROUNDS.map((round) => 
   value: round,
 }));
 
-export const DEFAULT_HAKIJAPROFIILI_ROUND: HakijaprofiiliRound =
-  (HAKIJAPROFIILI_ROUNDS as readonly string[]).includes(CURRENT_STATISTICS_ROUND)
-    ? (CURRENT_STATISTICS_ROUND as HakijaprofiiliRound)
-    : HAKIJAPROFIILI_ROUNDS[0];
+export const DEFAULT_HAKIJAPROFIILI_ROUND: HakijaprofiiliRound = (HAKIJAPROFIILI_ROUNDS as readonly string[]).includes(
+  CURRENT_STATISTICS_ROUND,
+)
+  ? (CURRENT_STATISTICS_ROUND as HakijaprofiiliRound)
+  : HAKIJAPROFIILI_ROUNDS[0];

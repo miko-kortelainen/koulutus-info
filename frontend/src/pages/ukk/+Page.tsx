@@ -1,6 +1,6 @@
 import { Accordion, Heading, Stack, Text } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
-import { QUESTIONS } from "./questions";
+import { QUESTIONS } from "@/pages/ukk/questions";
 
 export default function UKKPage() {
   return (

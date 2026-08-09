@@ -1,6 +1,11 @@
-import { AMM_AVERAGE_THRESHOLDS, AMM_SECTION_POINTS } from "./constants";
-import { type GradeInput, normalizeGrades } from "./grades";
-import type { ScoreAssignment, ScoreBreakdown, ScoringCatalog, ScoringModel } from "./types";
+import { AMM_AVERAGE_THRESHOLDS, AMM_SECTION_POINTS } from "@/pages/pistelaskuri/lib/todistusvalinta/constants";
+import { type GradeInput, normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
+import type {
+  ScoreAssignment,
+  ScoreBreakdown,
+  ScoringCatalog,
+  ScoringModel,
+} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
 
 export type { ScoreAssignment, ScoreBreakdown } from "./types";
 

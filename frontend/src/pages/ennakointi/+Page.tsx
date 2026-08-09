@@ -7,8 +7,8 @@ import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import { numberFormat } from "@/lib/statistics";
 import { COLORS } from "@/theme";
-import type { EnnakointiPageData } from "./+data";
-import { filterAndSortVajeRows, statusLabel, type SektoriFilter, type VajeSort } from "./lib/vaje";
+import type { EnnakointiPageData } from "@/pages/ennakointi/+data";
+import { filterAndSortVajeRows, statusLabel, type SektoriFilter, type VajeSort } from "@/pages/ennakointi/lib/vaje";
 
 const PAGE_SIZE = 10;
 const BAR_H = "8";
@@ -216,19 +216,13 @@ export default function EnnakointiPage() {
                               top={0}
                               width="100%"
                             >
-                              <Text
-                                color="text"
-                                fontSize="sm"
-                                fontVariantNumeric="tabular-nums"
-                                fontWeight="semibold"
-                              >
+                              <Text color="text" fontSize="sm" fontVariantNumeric="tabular-nums" fontWeight="semibold">
                                 Vaje {vajeText}
                               </Text>
                             </Flex>
                           </Box>
                           <Text color="fg.muted" fontSize="xs" fontVariantNumeric="tabular-nums">
-                            Tarve {numberFormat.format(row.tarve2045)} · tuotos{" "}
-                            {numberFormat.format(row.tuotosNuoret)}
+                            Tarve {numberFormat.format(row.tarve2045)} · tuotos {numberFormat.format(row.tuotosNuoret)}
                           </Text>
                         </Stack>
                       </Box>

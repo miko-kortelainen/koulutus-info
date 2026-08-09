@@ -2,7 +2,7 @@ import { fireEvent, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
-import ScoreForm from "./ScoreForm";
+import ScoreForm from "@/pages/pistelaskuri/components/ScoreForm";
 
 vi.mock("../lib/todistusvalinta", () => ({
   recalculateFromGrades: vi.fn(async () => ({
@@ -17,7 +17,7 @@ vi.mock("../lib/todistusvalinta", () => ({
 }));
 
 test("submits YO grades to local calculators and tracks success", async () => {
-  const { recalculateFromGrades } = await import("../lib/todistusvalinta");
+  const { recalculateFromGrades } = await import("@/pages/pistelaskuri/lib/todistusvalinta/index");
   const event = vi.fn();
   const onSubmit = vi.fn();
   const user = userEvent.setup();
@@ -33,7 +33,9 @@ test("submits YO grades to local calculators and tracks success", async () => {
 
   renderWithChakra(<ScoreForm onModeChange={vi.fn()} onSubmit={onSubmit} round="2026-kevat" />);
 
-  await waitFor(() => expect(screen.getByRole("combobox", { name: "Aine 1" })).toHaveTextContent("Ruotsi äidinkielenä"));
+  await waitFor(() =>
+    expect(screen.getByRole("combobox", { name: "Aine 1" })).toHaveTextContent("Ruotsi äidinkielenä"),
+  );
   expect(screen.getByRole("combobox", { name: "Aineen 1 arvosana" })).toHaveTextContent("M");
   const submitButton = screen.getByRole("button", { name: "Laske pisteet / näytä koulutukset" });
   await user.click(submitButton);

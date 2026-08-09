@@ -6,12 +6,12 @@ import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption 
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import type { TrendsPageData } from "./+data";
-import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "./colors";
-import ApplicantTotalsChart from "./components/ApplicantTotalsChart";
-import TopBarList from "./components/TopBarList";
-import TrendCard from "./components/TrendCard";
-import useTrendsData from "./hooks/useTrendsData";
+import type { TrendsPageData } from "@/pages/trendit/+data";
+import { FIELD_COLOR, SCHOOL_COLOR, SECTOR_COLOR, TREND_COLOR } from "@/pages/trendit/colors";
+import ApplicantTotalsChart from "@/pages/trendit/components/ApplicantTotalsChart";
+import TopBarList from "@/pages/trendit/components/TopBarList";
+import TrendCard from "@/pages/trendit/components/TrendCard";
+import useTrendsData from "@/pages/trendit/hooks/useTrendsData";
 
 export default function TrendsPage() {
   const { autumnTotals, currentStatistics, springTotals } = useData<TrendsPageData>();
