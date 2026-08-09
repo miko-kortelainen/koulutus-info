@@ -45,6 +45,9 @@ importers:
       '@biomejs/biome':
         specifier: 2.5.3
         version: 2.5.3
+      '@ivy-apps/deslop':
+        specifier: ^0.8.2
+        version: 0.8.2
       '@mdx-js/rollup':
         specifier: ^3.1.1
         version: 3.1.1(rollup@4.62.2)
@@ -552,6 +555,26 @@ packages:
 
   '@internationalized/number@3.6.5':
     resolution: {integrity: sha512-6hY4Kl4HPBvtfS62asS/R22JzNNy8vi/Ssev7x6EobfCp+9QIB2hKvI2EtbdJ0VSQacxVNtqhE/NmF/NZ0gm6g==}
+
+  '@ivy-apps/deslop-darwin-arm64@0.8.2':
+    resolution: {integrity: sha512-rIT7/ntuJpzE7qMGtsSeiymFOAjaYHTCScSeUOwcuA/zMZd4WlO/AfJ2qBGfzA4tAxIUzZlm2TmGG4opzZeN8w==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@ivy-apps/deslop-linux-arm64@0.8.2':
+    resolution: {integrity: sha512-Cxge9vzX+bxG5Jk7G1fiwIks1MTwFfqjQTV2LLSW2wUMgWmGli/HeVdtnpQJg9hcCYJTAQ8hH0bOPmpEgzdxtg==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@ivy-apps/deslop-linux-x64@0.8.2':
+    resolution: {integrity: sha512-6M/VjIn2X7JRdv+NQ0SB2GRpBNTsdHdkQP2wW2hjm12U5Xq6vpFzNtFhc8YLBtTcUPcvGT5Hn1C48pzR+WD8ag==}
+    cpu: [x64]
+    os: [linux]
+
+  '@ivy-apps/deslop@0.8.2':
+    resolution: {integrity: sha512-vZfLwCg/ZblvQs7YYeWMv0N59aozFi0pdoQa3u1La91JoRwuI86xz0/D6GVJ05Idz8Yk1XqHIJC0Ll47wq1+EQ==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -3203,6 +3226,21 @@ snapshots:
   '@internationalized/number@3.6.5':
     dependencies:
       '@swc/helpers': 0.5.21
+
+  '@ivy-apps/deslop-darwin-arm64@0.8.2':
+    optional: true
+
+  '@ivy-apps/deslop-linux-arm64@0.8.2':
+    optional: true
+
+  '@ivy-apps/deslop-linux-x64@0.8.2':
+    optional: true
+
+  '@ivy-apps/deslop@0.8.2':
+    optionalDependencies:
+      '@ivy-apps/deslop-darwin-arm64': 0.8.2
+      '@ivy-apps/deslop-linux-arm64': 0.8.2
+      '@ivy-apps/deslop-linux-x64': 0.8.2
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
