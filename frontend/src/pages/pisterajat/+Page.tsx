@@ -3,7 +3,7 @@ import { useData } from "vike-react/useData";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import type { CutoffIndexData } from "./+data";
+import type { CutoffIndexData } from "@/pages/pisterajat/+data";
 
 export default function CutoffIndexPage() {
   const { alat, schools } = useData<CutoffIndexData>();

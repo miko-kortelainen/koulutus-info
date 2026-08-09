@@ -3,8 +3,8 @@ import { type SubmitEvent, useEffect, useRef, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import type { CutoffRound } from "@/config/cutoffRounds";
 import { COLORS } from "@/theme";
-import type { Calculation } from "../lib/scoreResults";
-import { recalculateFromGrades } from "../lib/todistusvalinta";
+import type { Calculation } from "@/pages/pistelaskuri/lib/scoreResults";
+import { recalculateFromGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/index";
 import {
   emptyYoFormState,
   isYoFormState,
@@ -12,16 +12,16 @@ import {
   toUniversityGrades,
   type YoFormErrors,
   type YoFormState,
-} from "../lib/yoForm";
-import { isScoreType, type ScoreType } from "../scoreTypes";
+} from "@/pages/pistelaskuri/lib/yoForm";
+import { isScoreType, type ScoreType } from "@/pages/pistelaskuri/scoreTypes";
 import AmmForm, {
   type AmmFormErrors,
   type AmmFormState,
   emptyAmmFormState,
   isAmmFormState,
   parseAmmForm,
-} from "./AmmForm";
-import YoForm from "./YoForm";
+} from "@/pages/pistelaskuri/components/AmmForm";
+import YoForm from "@/pages/pistelaskuri/components/YoForm";
 
 interface ScoreFormProps {
   onModeChange: (selectionMethod: ScoreType) => void;

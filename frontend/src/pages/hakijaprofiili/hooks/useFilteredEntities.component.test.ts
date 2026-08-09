@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react";
 import { expect, test } from "vitest";
 import type { HakijaprofiiliEntity } from "@/api/dataValidation";
-import useFilteredEntities from "./useFilteredEntities";
+import useFilteredEntities from "@/pages/hakijaprofiili/hooks/useFilteredEntities";
 
 const entities: HakijaprofiiliEntity[] = [
   {

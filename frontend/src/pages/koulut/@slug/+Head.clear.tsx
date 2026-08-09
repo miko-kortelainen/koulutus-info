@@ -1,7 +1,7 @@
 import { useData } from "vike-react/useData";
 import { slugify } from "@/lib/slug";
-import { Head as GlobalHead } from "../../+Head";
-import type { SchoolPageData } from "./+data";
+import { Head as GlobalHead } from "@/pages/+Head";
+import type { SchoolPageData } from "@/pages/koulut/@slug/+data";
 
 export function Head() {
   const { schoolName } = useData<SchoolPageData>();

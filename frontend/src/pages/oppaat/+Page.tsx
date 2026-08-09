@@ -1,6 +1,6 @@
 import { Heading, Link, Stack, Text } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
-import { guides } from "./guides";
+import { guides } from "@/pages/oppaat/guides";
 
 export default function GuidesPage() {
   return (

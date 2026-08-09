@@ -2,8 +2,8 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import { renderWithChakra } from "@/test/render";
-import type { ScoreResult } from "../lib/scoreResults";
-import ScoreResultCard from "./ScoreResultCard";
+import type { ScoreResult } from "@/pages/pistelaskuri/lib/scoreResults";
+import ScoreResultCard from "@/pages/pistelaskuri/components/ScoreResultCard";
 
 const result = (overrides: Partial<ScoreResult>): ScoreResult => ({
   id: "k1",
@@ -88,7 +88,10 @@ test("score breakdown disclosure lists assigned and unused subjects", async () =
   const table = screen.getByRole("table", { name: "Pisteytyksen erittely aineittain" });
   expect(table).toBeVisible();
   expect(screen.getByRole("columnheader", { name: "Aine" })).toBeVisible();
-  const aineCells = screen.getAllByRole("row").slice(1, -1).map((row) => row.querySelector("td")?.textContent);
+  const aineCells = screen
+    .getAllByRole("row")
+    .slice(1, -1)
+    .map((row) => row.querySelector("td")?.textContent);
   expect(aineCells).toEqual(["Suomi äidinkielenä", "Terveystieto", "Matematiikka, pitkä"]);
   expect(screen.getByRole("cell", { name: "46" })).toBeVisible();
   expect(screen.getByRole("cell", { name: "–" })).toBeVisible();

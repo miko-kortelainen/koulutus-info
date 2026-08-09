@@ -10,7 +10,7 @@ import { CURRENT_YEAR, statisticsRoundShortLabel } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
-import type { SchoolPageData } from "./+data";
+import type { SchoolPageData } from "@/pages/koulut/@slug/+data";
 
 export default function SchoolPage() {
   const { schoolName, hasCutoffs, hasFeedback, toteutukset, statistics } = useData<SchoolPageData>();

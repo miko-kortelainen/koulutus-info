@@ -4,10 +4,10 @@ import { useData } from "vike-react/useData";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import { COLORS } from "@/theme";
-import type { SchoolListItem } from "./+data";
-import SchoolListCard from "./components/SchoolListCard";
-import SortControl from "./components/SortControl";
-import sortSchools, { type SortOption } from "./lib/sortSchools";
+import type { SchoolListItem } from "@/pages/koulut/+data";
+import SchoolListCard from "@/pages/koulut/components/SchoolListCard";
+import SortControl from "@/pages/koulut/components/SortControl";
+import sortSchools, { type SortOption } from "@/pages/koulut/lib/sortSchools";
 
 const SECTIONS = [
   { sektori: "Yliopistokoulutus", heading: "Yliopistot" },

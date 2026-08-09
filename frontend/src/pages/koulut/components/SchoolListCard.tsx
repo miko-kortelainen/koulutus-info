@@ -2,7 +2,7 @@ import { Badge, Card, HStack, Separator, SimpleGrid, Stack, Stat, Text } from "@
 import { HiOutlineAcademicCap } from "react-icons/hi";
 import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier, ratioFormat } from "@/lib/statistics";
 import { COLORS } from "@/theme";
-import type { SchoolListItem } from "../+data";
+import type { SchoolListItem } from "@/pages/koulut/+data";
 
 interface SchoolListCardProps {
   school: SchoolListItem;

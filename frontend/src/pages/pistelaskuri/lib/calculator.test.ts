@@ -1,14 +1,19 @@
 // Run with: pnpm exec tsx src/pages/pistelaskuri/lib/calculator.test.ts
 import assert from "node:assert/strict";
-import { type AmmFormState, emptyAmmFormState, isAmmFormState, parseAmmForm } from "../components/AmmForm";
+import {
+  type AmmFormState,
+  emptyAmmFormState,
+  isAmmFormState,
+  parseAmmForm,
+} from "@/pages/pistelaskuri/components/AmmForm";
 import {
   flattenAmkPrograms,
   flattenUniversityPrograms,
   matchesScoreType,
   type ScoreResult,
   selectApplicantResults,
-} from "./scoreResults";
-import { emptyYoFormState, isYoFormState, parseYoForm, toUniversityGrades } from "./yoForm";
+} from "@/pages/pistelaskuri/lib/scoreResults";
+import { emptyYoFormState, isYoFormState, parseYoForm, toUniversityGrades } from "@/pages/pistelaskuri/lib/yoForm";
 
 const completeYoForm = {
   aineet: [
@@ -36,10 +41,7 @@ assert.equal(isYoFormState({ aineet: [{ id: 0, subject: "ai_fi" as const, grade:
 assert.equal(isYoFormState(emptyYoFormState()), false);
 
 const duplicateLanguage = parseYoForm({
-  aineet: [
-    ...completeYoForm.aineet,
-    { id: 4, subject: "englanti-lyhyt" as const, grade: "E" as const },
-  ],
+  aineet: [...completeYoForm.aineet, { id: 4, subject: "englanti-lyhyt" as const, grade: "E" as const }],
 });
 if ("input" in duplicateLanguage) assert.fail("Duplicate language should fail validation.");
 assert.equal(duplicateLanguage.errors.aineet, "Saman aineen voi lisätä vain kerran.");

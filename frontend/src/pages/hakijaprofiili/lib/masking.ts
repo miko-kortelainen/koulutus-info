@@ -7,8 +7,7 @@ const percentFormat = new Intl.NumberFormat("fi-FI", { style: "percent", maximum
 const GENDER_LABELS = ["nainen", "mies"] as const;
 
 /** Sukupuoli: null or under 5 → 1-4 hakijaa (not alle 5). */
-export const formatGenderCount = (lkm: number | null) =>
-  isPublishableCount(lkm) ? formatCount(lkm) : "1-4 hakijaa";
+export const formatGenderCount = (lkm: number | null) => (isPublishableCount(lkm) ? formatCount(lkm) : "1-4 hakijaa");
 
 export const isPublishableCount = (lkm: number | null): lkm is number => lkm != null && lkm >= 5;
 

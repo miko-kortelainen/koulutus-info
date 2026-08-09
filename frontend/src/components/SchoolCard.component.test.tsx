@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import type { ToteutusEntry } from "@/types.gen";
-import SchoolCard from "./SchoolCard";
+import SchoolCard from "@/components/SchoolCard";
 
 const toteutus: ToteutusEntry = {
   toteutusOid: "1.2.3",

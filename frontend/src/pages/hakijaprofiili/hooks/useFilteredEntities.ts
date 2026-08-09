@@ -1,8 +1,8 @@
 import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { HakijaprofiiliEntity, HakijaprofiiliKohdeTyyppi } from "@/api/dataValidation";
-import { hasPublishableProfili } from "../lib/masking";
-import { type SortOption, sortEntities } from "../lib/sortEntities";
+import { hasPublishableProfili } from "@/pages/hakijaprofiili/lib/masking";
+import { type SortOption, sortEntities } from "@/pages/hakijaprofiili/lib/sortEntities";
 
 const FUSE_OPTIONS = { keys: ["kohdeNimi"], threshold: 0.35, ignoreLocation: true };
 

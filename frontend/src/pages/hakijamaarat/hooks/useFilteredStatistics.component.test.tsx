@@ -1,8 +1,8 @@
 import { renderHook } from "@testing-library/react";
 import { expect, test } from "vitest";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
-import type { SortOption } from "../lib/sortStatistics";
-import useFilteredStatistics from "./useFilteredStatistics";
+import type { SortOption } from "@/pages/hakijamaarat/lib/sortStatistics";
+import useFilteredStatistics from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
 
 const statistics: StatisticsResponse = [
   {

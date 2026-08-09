@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
-import PalautePage from "./+Page";
+import PalautePage from "@/pages/palaute/+Page";
 
 test("preserves feedback and shows an error when submission fails", async () => {
   const fetchMock = vi.fn().mockResolvedValue({ ok: false, status: 500 });

@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react";
 import { expect, test } from "vitest";
 import type { Programme } from "@/types/pisterajat.gen";
-import useFilteredProgrammes, { type SortOption } from "./useFilteredProgrammes";
+import useFilteredProgrammes, { type SortOption } from "@/pages/koulut/@slug/pisterajat/hooks/useFilteredProgrammes";
 
 const programmes: Programme[] = ["Zoologia", "Fysiikka", "Biologia"].map((name) => ({
   name,

@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import type { StatisticsEntry } from "@/types.gen";
-import DegreeStatsCard from "./DegreeStatsCard";
+import DegreeStatsCard from "@/components/DegreeStatsCard";
 
 const entry = (overrides: Partial<StatisticsEntry>): StatisticsEntry => ({
   kooditHakukohde: "test",
