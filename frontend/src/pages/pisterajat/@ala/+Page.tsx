@@ -3,8 +3,8 @@ import { useData } from "vike-react/useData";
 import BackLink from "@/components/BackLink";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
-import type { AlaPageData } from "./+data";
-import SchoolProgrammeList from "./components/SchoolProgrammeList";
+import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
+import SchoolProgrammeList from "@/pages/pisterajat/@ala/components/SchoolProgrammeList";
 
 export default function AlaCutoffPage() {
   const { alaName, schools } = useData<AlaPageData>();

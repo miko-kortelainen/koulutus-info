@@ -1,5 +1,5 @@
 import OptionSelect from "@/components/OptionSelect";
-import type { SortOption } from "../hooks/useFilteredProgrammes";
+import type { SortOption } from "@/pages/koulut/@slug/pisterajat/hooks/useFilteredProgrammes";
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "A-Ö", value: "asc" },

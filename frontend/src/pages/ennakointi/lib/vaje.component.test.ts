@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { filterAndSortVajeRows, statusLabel } from "./vaje";
+import { filterAndSortVajeRows, statusLabel } from "@/pages/ennakointi/lib/vaje";
 
 const items = [
   {

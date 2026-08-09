@@ -8,7 +8,7 @@ import {
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
-} from "./dataValidation";
+} from "@/api/dataValidation";
 
 const statistics = {
   kooditHakukohde: "1.2.246.562.20.00000000001",
@@ -218,12 +218,15 @@ test("rejects malformed hakijaprofiili payload", () => {
     parseHakijaprofiili([{ ...hakijaprofiiliEntity, kohdeTyyppi: "okm_ala" }], "hakijaprofiili/test.json"),
   ).toThrow("Invalid hakijaprofiili payload");
   expect(() =>
-    parseHakijaprofiili([{ ...hakijaprofiiliEntity, sukupuoli: [{ nimi: "nainen", lkm: -1 }] }], "hakijaprofiili/test.json"),
+    parseHakijaprofiili(
+      [{ ...hakijaprofiiliEntity, sukupuoli: [{ nimi: "nainen", lkm: -1 }] }],
+      "hakijaprofiili/test.json",
+    ),
   ).toThrow("Invalid hakijaprofiili payload");
 });
 
 test("rejects duplicate hakijaprofiili identity", () => {
-  expect(() => parseHakijaprofiili([hakijaprofiiliEntity, { ...hakijaprofiiliEntity }], "hakijaprofiili/test.json")).toThrow(
-    "duplicate",
-  );
+  expect(() =>
+    parseHakijaprofiili([hakijaprofiiliEntity, { ...hakijaprofiiliEntity }], "hakijaprofiili/test.json"),
+  ).toThrow("duplicate");
 });

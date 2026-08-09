@@ -1,8 +1,8 @@
 import { readdirSync, statSync, writeFileSync } from "node:fs";
-import { cutoffAlaNames, cutoffSchoolNames, feedbackSchoolNames, schoolNames } from "../src/api/serverData";
-import { CURRENT_YEAR } from "../src/config/yearOptions";
-import { slugify } from "../src/lib/slug";
-import { guides } from "../src/pages/oppaat/guides";
+import { cutoffAlaNames, cutoffSchoolNames, feedbackSchoolNames, schoolNames } from "@/api/serverData";
+import { CURRENT_YEAR } from "@/config/yearOptions";
+import { slugify } from "@/lib/slug";
+import { guides } from "@/pages/oppaat/guides";
 
 const latestModifiedDate = (files: string[]): string | undefined => {
   if (files.length === 0) return undefined;

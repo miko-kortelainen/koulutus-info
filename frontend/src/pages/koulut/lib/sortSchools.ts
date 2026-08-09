@@ -1,4 +1,4 @@
-import type { SchoolListItem } from "../+data";
+import type { SchoolListItem } from "@/pages/koulut/+data";
 
 export type SortOption =
   | "asc"

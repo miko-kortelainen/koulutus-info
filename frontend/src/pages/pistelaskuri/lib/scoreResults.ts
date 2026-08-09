@@ -4,8 +4,8 @@ import type {
   ScoreBreakdown,
   UniversityGrade,
   UniversityProgramsResponse,
-} from "./todistusvalinta";
-import type { ScoreType } from "../scoreTypes";
+} from "@/pages/pistelaskuri/lib/todistusvalinta/index";
+import type { ScoreType } from "@/pages/pistelaskuri/scoreTypes";
 
 export interface Calculation {
   amk: AmkProgramsResponse;

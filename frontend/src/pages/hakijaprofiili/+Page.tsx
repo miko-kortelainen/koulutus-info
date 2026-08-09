@@ -12,13 +12,13 @@ import {
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import type { HakijaprofiiliPageData } from "./+data";
-import EntityList from "./components/EntityList";
-import ProfiliDetail from "./components/ProfiliDetail";
-import ScopeControl from "./components/ScopeControl";
-import useFilteredEntities from "./hooks/useFilteredEntities";
-import useHakijaprofiiliQuery from "./hooks/useHakijaprofiiliQuery";
-import type { SortOption } from "./lib/sortEntities";
+import type { HakijaprofiiliPageData } from "@/pages/hakijaprofiili/+data";
+import EntityList from "@/pages/hakijaprofiili/components/EntityList";
+import ProfiliDetail from "@/pages/hakijaprofiili/components/ProfiliDetail";
+import ScopeControl from "@/pages/hakijaprofiili/components/ScopeControl";
+import useFilteredEntities from "@/pages/hakijaprofiili/hooks/useFilteredEntities";
+import useHakijaprofiiliQuery from "@/pages/hakijaprofiili/hooks/useHakijaprofiiliQuery";
+import type { SortOption } from "@/pages/hakijaprofiili/lib/sortEntities";
 
 const SEARCH_PLACEHOLDER: Record<HakijaprofiiliKohdeTyyppi, string> = {
   koulu: "Hae korkeakoulua",

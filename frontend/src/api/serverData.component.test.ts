@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { formatSchoolName } from "./serverData";
+import { formatSchoolName } from "@/api/serverData";
 
 test("formats Swedish schools with catalog short names", () => {
   expect(formatSchoolName("Yrkeshögskolan Arcada")).toBe("Yrkeshögskolan Arcada (Arcada)");

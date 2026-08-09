@@ -1,5 +1,5 @@
-import { Head as GlobalHead } from "../+Head";
-import { getGuide } from "./guides";
+import { Head as GlobalHead } from "@/pages/+Head";
+import { getGuide } from "@/pages/oppaat/guides";
 
 /**
  * Shared <head> for guide subpages: global tags + description/canonical/og

@@ -12,9 +12,7 @@ export const APPEARANCE_STORAGE_KEY = "yhteishaku:appearance";
 const TOGGLE_COOLDOWN_MS = 400;
 
 export function ColorModeProvider(props: ThemeProviderProps) {
-  return (
-    <ThemeProvider attribute="class" disableTransitionOnChange storageKey={APPEARANCE_STORAGE_KEY} {...props} />
-  );
+  return <ThemeProvider attribute="class" disableTransitionOnChange storageKey={APPEARANCE_STORAGE_KEY} {...props} />;
 }
 
 export function ColorModeButton() {

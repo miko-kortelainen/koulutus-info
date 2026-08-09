@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 import { expect, test } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import type { StatisticsEntry } from "@/types.gen";
-import ComparisonTable from "./ComparisonTable";
+import ComparisonTable from "@/pages/vertaile/components/ComparisonTable";
 
 const entry = (overrides: Partial<StatisticsEntry>): StatisticsEntry => ({
   kooditHakukohde: "test",

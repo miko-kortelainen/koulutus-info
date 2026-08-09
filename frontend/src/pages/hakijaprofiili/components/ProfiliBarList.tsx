@@ -1,7 +1,7 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import type { HakijaprofiiliCount } from "@/api/dataValidation";
 import { formatCount } from "@/lib/statistics";
-import { isPublishableCount, shareOf } from "../lib/masking";
+import { isPublishableCount, shareOf } from "@/pages/hakijaprofiili/lib/masking";
 
 interface ProfiliBarListProps {
   ariaLabel: string;

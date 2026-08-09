@@ -24,13 +24,7 @@ import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import { filterUnavailableCutoffAlat } from "@/lib/cutoffs";
 import { slugify } from "@/lib/slug";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
-import type {
-  CurrentProgramsResponse,
-  Meta,
-  SchoolCatalog,
-  SchoolCatalogEntry,
-  StatisticsResponse,
-} from "@/types.gen";
+import type { CurrentProgramsResponse, Meta, SchoolCatalog, SchoolCatalogEntry, StatisticsResponse } from "@/types.gen";
 
 interface CacheEntry {
   modifiedAt: number;

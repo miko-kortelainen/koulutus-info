@@ -8,7 +8,7 @@ import {
   filterUnavailableCutoffAlat,
   mergeCutoffProgrammes,
   newestCutoffRoundForAlaParam,
-} from "./cutoffs";
+} from "@/lib/cutoffs";
 
 const programme = (name: string, koulutusala: string): Programme => ({
   name,

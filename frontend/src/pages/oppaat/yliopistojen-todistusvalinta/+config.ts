@@ -1,5 +1,5 @@
 import type { Config } from "vike/types";
-import { getGuide } from "../guides";
+import { getGuide } from "@/pages/oppaat/guides";
 
 export default {
   title: getGuide("yliopistojen-todistusvalinta").title,

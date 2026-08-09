@@ -19,19 +19,19 @@ import {
   recalculateFromGrades,
   type AmkProgramsResponse,
   type UniversityProgramsResponse,
-} from "./lib/todistusvalinta";
+} from "@/pages/pistelaskuri/lib/todistusvalinta/index";
 import { COLORS } from "@/theme";
-import ResultSelect from "./components/ResultSelect";
-import ScoreForm from "./components/ScoreForm";
-import ScoreResultList from "./components/ScoreResultList";
+import ResultSelect from "@/pages/pistelaskuri/components/ResultSelect";
+import ScoreForm from "@/pages/pistelaskuri/components/ScoreForm";
+import ScoreResultList from "@/pages/pistelaskuri/components/ScoreResultList";
 import {
   type Calculation,
   flattenAmkPrograms,
   flattenUniversityPrograms,
   type ScoreResult,
   selectApplicantResults,
-} from "./lib/scoreResults";
-import type { ScoreType } from "./scoreTypes";
+} from "@/pages/pistelaskuri/lib/scoreResults";
+import type { ScoreType } from "@/pages/pistelaskuri/scoreTypes";
 
 type SectorFilter = "all" | "university" | "amk";
 type SortOption = "lowest_cutoff" | "highest_cutoff" | "name_asc" | "name_desc";

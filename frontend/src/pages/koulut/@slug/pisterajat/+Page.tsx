@@ -10,9 +10,9 @@ import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel, cutoffRoundYea
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/lib/cutoffs";
-import type { CutoffPageData } from "./+data";
-import SortControl from "./components/SortControl";
-import useFilteredProgrammes, { type SortOption } from "./hooks/useFilteredProgrammes";
+import type { CutoffPageData } from "@/pages/koulut/@slug/pisterajat/+data";
+import SortControl from "@/pages/koulut/@slug/pisterajat/components/SortControl";
+import useFilteredProgrammes, { type SortOption } from "@/pages/koulut/@slug/pisterajat/hooks/useFilteredProgrammes";
 
 const collator = new Intl.Collator("fi");
 

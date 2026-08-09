@@ -114,13 +114,7 @@ export default function TopBarList({
                 {name}
               </Text>
               <SeriesBar color={color} label={selectedYear} maxValue={maxValue} name={name} value={item.value} />
-              <SeriesBar
-                color={compareFill}
-                label={compareYear}
-                maxValue={maxValue}
-                name={name}
-                value={compareValue}
-              />
+              <SeriesBar color={compareFill} label={compareYear} maxValue={maxValue} name={name} value={compareValue} />
             </Stack>
           );
         })}

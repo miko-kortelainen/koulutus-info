@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import type { HakijaprofiiliEntity } from "@/api/dataValidation";
-import { type SortOption, sortEntities } from "./sortEntities";
+import { type SortOption, sortEntities } from "@/pages/hakijaprofiili/lib/sortEntities";
 
 const entity = (
   kohdeNimi: string,

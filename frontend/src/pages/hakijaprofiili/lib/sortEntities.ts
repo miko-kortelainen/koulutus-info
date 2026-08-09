@@ -1,5 +1,5 @@
 import type { HakijaprofiiliEntity } from "@/api/dataValidation";
-import { isPublishableCount, publishableCounts } from "./masking";
+import { isPublishableCount, publishableCounts } from "@/pages/hakijaprofiili/lib/masking";
 
 export type SortOption =
   | "asc"

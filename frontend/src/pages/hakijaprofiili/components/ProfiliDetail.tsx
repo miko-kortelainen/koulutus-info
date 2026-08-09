@@ -7,8 +7,8 @@ import {
   hasPublishableProfili,
   publishableCounts,
   sortAgeBands,
-} from "../lib/masking";
-import ProfiliBarList from "./ProfiliBarList";
+} from "@/pages/hakijaprofiili/lib/masking";
+import ProfiliBarList from "@/pages/hakijaprofiili/components/ProfiliBarList";
 
 interface ProfiliDetailProps {
   entity: HakijaprofiiliEntity;
