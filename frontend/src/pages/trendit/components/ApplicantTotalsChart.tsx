@@ -1,7 +1,7 @@
 import { Box, VisuallyHidden } from "@chakra-ui/react";
 import { CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 import { numberFormat } from "@/lib/statistics";
-import type { TrendPoint } from "../+data";
+import type { TrendPoint } from "@/pages/trendit/+data";
 
 interface ApplicantTotalsChartProps {
   chartData: TrendPoint[];

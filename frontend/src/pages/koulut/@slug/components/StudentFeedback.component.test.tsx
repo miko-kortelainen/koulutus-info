@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import type { StudentFeedback as StudentFeedbackData } from "@/api/dataValidation";
 import { renderWithChakra } from "@/test/render";
-import StudentFeedback from "./StudentFeedback";
+import StudentFeedback from "@/pages/koulut/@slug/components/StudentFeedback";
 
 const feedback: StudentFeedbackData = {
   tilastot: {

@@ -13,12 +13,12 @@ import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import type { StatisticsEntry } from "@/types.gen";
-import DegreeStatsCardSkeleton from "./components/DegreeStatsCardSkeleton";
-import SortControl from "./components/SortControl";
-import useFilteredStatistics from "./hooks/useFilteredStatistics";
-import type { HakijamaaratPageData } from "./+data";
-import { formatStatisticsUpdatedAt } from "./lib/formatStatisticsUpdatedAt";
-import type { SortOption } from "./lib/sortStatistics";
+import DegreeStatsCardSkeleton from "@/pages/hakijamaarat/components/DegreeStatsCardSkeleton";
+import SortControl from "@/pages/hakijamaarat/components/SortControl";
+import useFilteredStatistics from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
+import type { HakijamaaratPageData } from "@/pages/hakijamaarat/+data";
+import { formatStatisticsUpdatedAt } from "@/pages/hakijamaarat/lib/formatStatisticsUpdatedAt";
+import type { SortOption } from "@/pages/hakijamaarat/lib/sortStatistics";
 
 const PAGE_SIZE = 10;
 

@@ -7,7 +7,7 @@ import {
   YO_GRADES,
   type YoGrade,
   type YoInput,
-} from "./yoScoring";
+} from "@/pages/pistelaskuri/lib/yoScoring";
 
 interface LanguageOption {
   exam: string;
@@ -322,9 +322,7 @@ export const parseYoForm = (state: YoFormState): { input: YoInput; errors?: unde
     input: {
       aidinkieli: motherTongues[0].grade,
       matematiikka:
-        math && math.option.kind === "matematiikka"
-          ? { level: math.option.level, grade: math.grade }
-          : undefined,
+        math && math.option.kind === "matematiikka" ? { level: math.option.level, grade: math.grade } : undefined,
       kielet: languages.flatMap(({ grade, option }) =>
         option.kind === "kieli" ? [{ grade, level: option.level, type: option.type }] : [],
       ),

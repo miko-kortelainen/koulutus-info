@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { formatStatisticsUpdatedAt } from "./formatStatisticsUpdatedAt";
+import { formatStatisticsUpdatedAt } from "@/pages/hakijamaarat/lib/formatStatisticsUpdatedAt";
 
 test("formats statisticsUpdatedAt as dd.mm.yyyy in Europe/Helsinki", () => {
   expect(formatStatisticsUpdatedAt("2026-08-08T14:38:02.955Z")).toBe("08.08.2026");

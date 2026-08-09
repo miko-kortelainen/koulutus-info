@@ -1,8 +1,8 @@
 import { useData } from "vike-react/useData";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { slugify } from "@/lib/slug";
-import { Head as GlobalHead } from "../../+Head";
-import type { AlaPageData } from "./+data";
+import { Head as GlobalHead } from "@/pages/+Head";
+import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
 
 export function Head() {
   const { alaName } = useData<AlaPageData>();

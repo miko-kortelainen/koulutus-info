@@ -4,10 +4,10 @@ import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "rea
 import { HEADER_HEIGHT } from "@/layout/Header";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
-import IosInstallTip from "./components/IosInstallTip";
-import QuickLinkCard from "./components/QuickLinkCard";
-import { quickLinks } from "./components/quickLinks";
-import useCountdown from "./hooks/useCountdown";
+import IosInstallTip from "@/pages/index/components/IosInstallTip";
+import QuickLinkCard from "@/pages/index/components/QuickLinkCard";
+import { quickLinks } from "@/pages/index/components/quickLinks";
+import useCountdown from "@/pages/index/hooks/useCountdown";
 
 const heroLinks = [
   { href: "/pistelaskuri/", icon: HiOutlineCalculator, label: "Laske todistuspisteeni" },
@@ -131,7 +131,12 @@ export default function LandingPage() {
         zIndex={1}
       >
         {/* contents on mobile → heading + buttons become space-between flex siblings */}
-        <Stack align={{ lg: "flex-start" }} display={{ base: "contents", lg: "flex" }} gap={8} gridArea={{ lg: "copy" }}>
+        <Stack
+          align={{ lg: "flex-start" }}
+          display={{ base: "contents", lg: "flex" }}
+          gap={8}
+          gridArea={{ lg: "copy" }}
+        >
           <Stack
             align={{ base: "center", lg: "flex-start" }}
             gap={0}

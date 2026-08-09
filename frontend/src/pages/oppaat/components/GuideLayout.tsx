@@ -3,8 +3,8 @@ import type { MDXComponents, MDXProps } from "mdx/types.js";
 import type { ComponentProps, ComponentType, ReactNode } from "react";
 import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
-import { formatGuideDate, getGuide } from "../guides";
-import GuideAccordion from "./GuideAccordion";
+import { formatGuideDate, getGuide } from "@/pages/oppaat/guides";
+import GuideAccordion from "@/pages/oppaat/components/GuideAccordion";
 
 interface GuideLayoutProps {
   slug: string;
@@ -158,13 +158,7 @@ const mdxComponents = {
     </Table.ColumnHeader>
   ),
   td: ({ children }: ComponentProps<"td">) => (
-    <Table.Cell
-      _first={{ width: "35%" }}
-      borderColor="border.subtle"
-      p={3}
-      verticalAlign="top"
-      whiteSpace="normal"
-    >
+    <Table.Cell _first={{ width: "35%" }} borderColor="border.subtle" p={3} verticalAlign="top" whiteSpace="normal">
       {children}
     </Table.Cell>
   ),

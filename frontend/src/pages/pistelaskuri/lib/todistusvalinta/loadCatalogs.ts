@@ -5,7 +5,7 @@ import type {
   ScoringCatalog,
   ThresholdCatalog,
   TodistusvalintaCatalogs,
-} from "./types";
+} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
 
 let catalogsPromise: Promise<TodistusvalintaCatalogs> | null = null;
 const cutoffCache = new Map<string, Promise<CutoffSchool[]>>();

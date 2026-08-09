@@ -1,4 +1,4 @@
-import { QUESTIONS } from "./questions";
+import { QUESTIONS } from "@/pages/ukk/questions";
 
 const description =
   "UKK Yhteishaku.app-sivustosta: datan lähteet Vipusesta ja Opintopolusta, hakijapaineen ja sisäänpääsyprosentin laskenta sekä tietojen päivittyminen.";

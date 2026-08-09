@@ -3,8 +3,8 @@ import { useData } from "vike-react/useData";
 import BackLink from "@/components/BackLink";
 import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
-import StudentFeedback from "../components/StudentFeedback";
-import type { FeedbackPageData } from "./+data";
+import StudentFeedback from "@/pages/koulut/@slug/components/StudentFeedback";
+import type { FeedbackPageData } from "@/pages/koulut/@slug/opiskelijapalautteet/+data";
 
 export default function FeedbackPage() {
   const { schoolName, feedback, maxScore, survey, year } = useData<FeedbackPageData>();

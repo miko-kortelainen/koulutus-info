@@ -1,8 +1,13 @@
 import type { CutoffRound } from "@/config/cutoffRounds";
-import { AMK_METHODS, CERTIFICATE_METHODS } from "./constants";
-import { type GradeInput, normalizeGrades } from "./grades";
-import { buildScoreBreakdown, scoreAmkAmm, scoreAmkYo, scoreModel } from "./scoring";
-import { thresholdPassed } from "./thresholds";
+import { AMK_METHODS, CERTIFICATE_METHODS } from "@/pages/pistelaskuri/lib/todistusvalinta/constants";
+import { type GradeInput, normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
+import {
+  buildScoreBreakdown,
+  scoreAmkAmm,
+  scoreAmkYo,
+  scoreModel,
+} from "@/pages/pistelaskuri/lib/todistusvalinta/scoring";
+import { thresholdPassed } from "@/pages/pistelaskuri/lib/todistusvalinta/thresholds";
 import type {
   AmkAmmGrades,
   AmkMethod,
@@ -16,7 +21,7 @@ import type {
   ScorableUniversityProgram,
   TodistusvalintaCatalogs,
   UniversityProgram,
-} from "./types";
+} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
 
 function programKey(university: string, program: string): string {
   return `${university}\0${program}`;
@@ -187,9 +192,7 @@ export function listAmkPrograms(
         ? []
         : [{ name: sourceProgram.name, koulutusala: sourceProgram.koulutusala, cutoffs }];
     });
-    return programmes.length === 0
-      ? []
-      : [{ name: sourceSchool.name, sector: sourceSchool.sector, programmes }];
+    return programmes.length === 0 ? [] : [{ name: sourceSchool.name, sector: sourceSchool.sector, programmes }];
   });
 
   return {

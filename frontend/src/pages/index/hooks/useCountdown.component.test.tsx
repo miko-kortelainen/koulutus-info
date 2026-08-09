@@ -1,7 +1,7 @@
 import { act, renderHook } from "@testing-library/react";
 import { expect, test, vi } from "vitest";
 import { YHTEISHAKU_ROUNDS } from "@/config/season";
-import useCountdown from "./useCountdown";
+import useCountdown from "@/pages/index/hooks/useCountdown";
 
 test("stores application starts as absolute Finland instants", () => {
   expect(Date.parse(YHTEISHAKU_ROUNDS[0].start)).toBe(Date.UTC(2026, 0, 7, 6));

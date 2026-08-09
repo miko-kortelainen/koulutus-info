@@ -9,7 +9,7 @@ import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import type { CurrentProgramsResponse } from "@/types.gen";
-import useFilteredDegrees from "./hooks/useFilteredDegrees";
+import useFilteredDegrees from "@/pages/koulutukset/hooks/useFilteredDegrees";
 
 const PAGE_SIZE = 10;
 

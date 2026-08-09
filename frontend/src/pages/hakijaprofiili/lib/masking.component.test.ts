@@ -1,10 +1,5 @@
 import { expect, test } from "vitest";
-import {
-  canShowShares,
-  formatGenderCount,
-  publishableCounts,
-  sortAgeBands,
-} from "./masking";
+import { canShowShares, formatGenderCount, publishableCounts, sortAgeBands } from "@/pages/hakijaprofiili/lib/masking";
 
 test("formats null and under-five gender counts as 1-4 hakijaa", () => {
   expect(formatGenderCount(null)).toBe("1-4 hakijaa");
@@ -25,9 +20,24 @@ test("keeps only published counts (lkm >= 5) for bar lists", () => {
 });
 
 test("blocks %-shares when any part is null or under five", () => {
-  expect(canShowShares([{ nimi: "nainen", lkm: 100 }, { nimi: "mies", lkm: 80 }])).toBe(true);
-  expect(canShowShares([{ nimi: "nainen", lkm: 100 }, { nimi: "mies", lkm: null }])).toBe(false);
-  expect(canShowShares([{ nimi: "nainen", lkm: 100 }, { nimi: "mies", lkm: 2 }])).toBe(false);
+  expect(
+    canShowShares([
+      { nimi: "nainen", lkm: 100 },
+      { nimi: "mies", lkm: 80 },
+    ]),
+  ).toBe(true);
+  expect(
+    canShowShares([
+      { nimi: "nainen", lkm: 100 },
+      { nimi: "mies", lkm: null },
+    ]),
+  ).toBe(false);
+  expect(
+    canShowShares([
+      { nimi: "nainen", lkm: 100 },
+      { nimi: "mies", lkm: 2 },
+    ]),
+  ).toBe(false);
   expect(canShowShares([])).toBe(false);
 });
 

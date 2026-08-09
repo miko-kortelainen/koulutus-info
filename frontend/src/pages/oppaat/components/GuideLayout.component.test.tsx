@@ -2,10 +2,10 @@ import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import { renderWithChakra } from "@/test/render";
-import { getGuide } from "../guides";
-import Content from "../yliopistojen-todistusvalinta/content.mdx";
-import source from "../yliopistojen-todistusvalinta/content.mdx?raw";
-import GuideLayout, { Callout, getGuideHeadings } from "./GuideLayout";
+import { getGuide } from "@/pages/oppaat/guides";
+import Content from "@/pages/oppaat/yliopistojen-todistusvalinta/content.mdx";
+import source from "@/pages/oppaat/yliopistojen-todistusvalinta/content.mdx?raw";
+import GuideLayout, { Callout, getGuideHeadings } from "@/pages/oppaat/components/GuideLayout";
 
 const slug = "yliopistojen-todistusvalinta";
 
