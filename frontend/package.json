@@ -7,13 +7,16 @@
   "scripts": {
     "dev": "vike dev",
     "build": "tsx scripts/sitemap.ts && vike build",
-    "lint": "tsx src/pages/pistelaskuri/lib/calculator.test.ts && tsx src/pages/pistelaskuri/lib/todistusvalinta/todistusvalinta.test.ts && tsc -b --noEmit && biome lint .",
+    "lint": "tsx src/pages/pistelaskuri/lib/calculator.test.ts && tsx src/pages/pistelaskuri/lib/todistusvalinta/todistusvalinta.test.ts && tsc -b --noEmit && biome lint . && pnpm run deslop",
     "preview": "vike preview",
     "test:component": "vitest run",
     "test:component:coverage": "vitest run --coverage",
     "test:unit": "tsx src/pages/pistelaskuri/lib/calculator.test.ts && tsx src/pages/pistelaskuri/lib/todistusvalinta/todistusvalinta.test.ts",
     "test:e2e": "playwright test",
-    "format": "biome format --write src"
+    "format": "biome format --write src",
+    "deslop": "deslop check .",
+    "deslop:fix": "deslop fix . && pnpm run format",
+    "deslop:baseline": "deslop baseline ."
   },
   "dependencies": {
     "@chakra-ui/react": "^3.35.0",
@@ -30,6 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.3",
+    "@ivy-apps/deslop": "^0.8.2",
     "@mdx-js/rollup": "^3.1.1",
     "@playwright/test": "^1.61.1",
     "@testing-library/dom": "^10.4.1",

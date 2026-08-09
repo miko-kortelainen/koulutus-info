@@ -1,0 +1,254 @@
+id: architecture
+name: Frontend architecture
+description: >-
+  Route-oriented modules for yhteishaku.app. Routes own features; shared
+  modules point toward small data, domain, and configuration interfaces; app
+  shell, generated data, and type contracts stay at stable seams.
+rules:
+  - id: routes-isolated
+    description: >-
+      Each top-level Vike route is an independent feature. A route may use its
+      own modules, but must not import another route. This keeps route changes
+      local. Cross-route reuse belongs in @/components, @/hooks, @/lib, @/api,
+      or @/layout.
+    target: "@/pages/{{file-name}}/**"
+    forbids:
+      - import: "@/pages/**"
+    allows:
+      - import: "@/pages/{{file-name}}/**"
+    fix: >-
+      Move shared code under @/components, @/hooks, @/lib, @/api, or @/layout,
+      or keep it inside the same top-level route directory
+      (src/pages/{{file-name}}/).
+
+  - id: error-route-isolated
+    description: >-
+      The Vike _error route must not depend on other route features. Share via
+      the shared layers instead.
+    target: "@/pages/_error/**"
+    forbids:
+      - import: "@/pages/**"
+    allows:
+      - import: "@/pages/_error/**"
+    fix: >-
+      Remove the cross-route import. Put shared UI or helpers in @/components
+      or @/lib.
+
+  - id: page-shell-no-routes
+    description: >-
+      Site-wide Vike shell files (+Layout, +Wrapper, +Head, +config) wire the
+      app shell. They must not import route feature modules.
+    target: "@/pages/+*"
+    forbids:
+      - import: "@/pages/**"
+    allows:
+      - import: "@/pages/+*"
+    fix: >-
+      Keep route-specific UI in the route directory. The shell should only
+      compose @/layout, @/components, providers, and config.
+
+  - id: components-layer
+    description: >-
+      Shared components are reusable UI. They may use hooks, lib, config,
+      theme, and types, but not api, layout, or pages — those pull data access
+      or route ownership into the shared UI layer.
+    target: "@/components/**"
+    exclude:
+      - "**/*.test"
+    forbids:
+      - import: "@/api/**"
+      - import: "@/layout/**"
+      - import: "@/pages/**"
+    fix: >-
+      Call data through a page or shared hook instead of @/api. Keep app-shell
+      chrome in @/layout. Do not import route modules from shared components.
+
+  - id: hooks-layer
+    description: >-
+      Shared hooks hold reusable client logic. They may use the browser data
+      adapter, lib, config, and types, but not the server data adapter,
+      components, layout, or pages.
+    target: "@/hooks/**"
+    exclude:
+      - "**/*.test"
+    forbids:
+      - import: "@/api/serverData"
+        transitive: true
+      - import: "@/components/**"
+      - import: "@/layout/**"
+      - import: "@/pages/**"
+    fix: >-
+      Use @/api/browserData for browser data. Keep UI in components or pages.
+      Shared hooks should depend on data and pure helpers, not React UI.
+
+  - id: api-layer
+    description: >-
+      @/api is the trust boundary for static JSON. It may use lib, config, and
+      types, but must not import React UI, hooks, layout, or pages.
+    target: "@/api/**"
+    exclude:
+      - "**/*.test"
+    forbids:
+      - import: "react"
+        transitive: true
+      - import: "react-dom"
+        transitive: true
+      - import: "@chakra-ui/**"
+        transitive: true
+      - import: "@tanstack/**"
+        transitive: true
+      - import: "@/components/**"
+      - import: "@/hooks/**"
+      - import: "@/layout/**"
+      - import: "@/pages/**"
+    fix: >-
+      Keep validation and fetch helpers free of UI. Put React and Query usage
+      in hooks or pages that call @/api.
+
+  - id: lib-is-pure
+    description: >-
+      @/lib is shared pure domain and formatting logic. It may use config and
+      types, but not React, UI, hooks, layout, pages, or the data-access layer.
+    target: "@/lib/**"
+    exclude:
+      - "**/*.test"
+    forbids:
+      - import: "react"
+        transitive: true
+      - import: "react-dom"
+        transitive: true
+      - import: "@chakra-ui/**"
+        transitive: true
+      - import: "@tanstack/**"
+        transitive: true
+      - import: "@/api/**"
+      - import: "@/components/**"
+      - import: "@/hooks/**"
+      - import: "@/layout/**"
+      - import: "@/pages/**"
+    fix: >-
+      Move React or data-access logic into a hook, component, or @/api module.
+      Keep @/lib to pure functions.
+
+  - id: layout-layer
+    description: >-
+      @/layout owns the app shell. It may use shared UI, hooks, lib, config,
+      theme, and types, but not pages or the data-access layer.
+    target: "@/layout/**"
+    exclude:
+      - "**/*.test"
+    forbids:
+      - import: "@/api/**"
+        transitive: true
+      - import: "@/pages/**"
+    fix: >-
+      Fetch data in pages or hooks. Keep route feature code under @/pages.
+      Layout should only compose shell chrome.
+
+  - id: config-deps
+    description: >-
+      @/config holds runtime-neutral season and round configuration. It may
+      depend on other config modules, generated data, @/lib, and types, but
+      not UI, client state, data adapters, routes, or tests.
+    target: "@/config/**"
+    forbids:
+      - import: "react"
+        transitive: true
+      - import: "react-dom"
+        transitive: true
+      - import: "@chakra-ui/**"
+        transitive: true
+      - import: "@tanstack/**"
+        transitive: true
+      - import: "@/api/**"
+      - import: "@/components/**"
+      - import: "@/hooks/**"
+      - import: "@/layout/**"
+      - import: "@/pages/**"
+      - import: "@/test/**"
+      - import: "@/theme"
+    fix: >-
+      Import generated manifest values, @/lib helpers, or types only. Move UI
+      or data-access concerns out of config.
+
+  - id: browser-api-stays-browser-safe
+    description: >-
+      @/api/browserData is the browser data adapter. Node built-ins and the
+      server adapter must not be reachable through its interface.
+    target: "@/api/browserData"
+    forbids:
+      - import: "node:**"
+        transitive: true
+      - import: "@/api/serverData"
+        transitive: true
+    fix: >-
+      Keep filesystem access in @/api/serverData. Put shared parsing and types
+      in @/api/dataValidation, then call them from each adapter.
+
+  - id: theme-is-low-level
+    description: >-
+      @/theme is shared UI configuration. It may depend on Chakra, but not on
+      feature, data, state, or app-shell modules.
+    target: "@/theme"
+    forbids:
+      - import: "@/api/**"
+      - import: "@/components/**"
+      - import: "@/hooks/**"
+      - import: "@/layout/**"
+      - import: "@/pages/**"
+    fix: >-
+      Keep only theme tokens and Chakra configuration in @/theme. Move runtime
+      behavior to its owning hook, UI module, layout, or route.
+
+  - id: generated-data-is-a-leaf
+    description: >-
+      Generated manifests are dependency-free data leaves. This keeps codegen
+      output portable and prevents application logic from hiding in generated
+      files.
+    target: "@/generated/**"
+    forbids:
+      - import: "**"
+    fix: >-
+      Remove the import. Generate plain values only, then interpret them in
+      @/config or another owning module.
+
+  - id: type-contracts-stay-portable
+    description: >-
+      Shared type contracts may compose other type contracts, but must not
+      depend on application behavior or UI frameworks.
+    target: "@/types**"
+    forbids:
+      - import: "react"
+      - import: "react-dom"
+      - import: "@chakra-ui/**"
+      - import: "@tanstack/**"
+      - import: "@/**"
+    allows:
+      - import: "@/types**"
+    fix: >-
+      Keep the contract framework-neutral. Import another @/types contract or
+      compose the application-specific type in the module that owns behavior.
+
+  - id: no-tests-in-prod
+    description: >-
+      Test helpers must never be reachable from shipping modules.
+    target: "**/*"
+    exclude:
+      - "**/*.test"
+      - "**/*.spec"
+      - "**/*.stories"
+      - "@/test/**"
+      - "**/vitest.*"
+      - "**/playwright.*"
+    forbids:
+      - import: "@/test/**"
+        transitive: true
+      - import: "**/*.test"
+        transitive: true
+      - import: "**/*.spec"
+        transitive: true
+      - import: "**/*.stories"
+        transitive: true
+    fix: >-
+      Remove the test import from production code. If a helper is needed at
+      runtime, move it to a non-test module under @/lib or the owning feature.
