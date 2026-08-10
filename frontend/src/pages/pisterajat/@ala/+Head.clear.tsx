@@ -3,11 +3,12 @@ import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { slugify } from "@/lib/slug";
 import { Head as GlobalHead } from "@/pages/+Head";
 import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
+import { alaMetaDescription } from "@/pages/pisterajat/@ala/alaDescriptions";
 
 export function Head() {
   const { alaName } = useData<AlaPageData>();
   const url = `https://yhteishaku.app/pisterajat/${slugify(alaName)}/`;
-  const description = `${alaName}: vuoden ${DEFAULT_CUTOFF_YEAR} yhteishaun alimmat hyväksytyt pistemäärät kouluittain, koulutuksittain ja valintatavoittain.`;
+  const description = alaMetaDescription(alaName, DEFAULT_CUTOFF_YEAR);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
