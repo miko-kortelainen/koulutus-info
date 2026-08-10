@@ -760,7 +760,7 @@ test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) =>
 
   await page.getByRole("link", { name: "Lääketieteet" }).click();
   await expect(page).toHaveURL("/pisterajat/laaketieteet/");
-  await expect(page.getByRole("heading", { name: `Lääketieteet – pisterajat ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
+  await expect(page.getByRole("heading", { name: `Lääketieteet pisterajat ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Korkeakoulut tällä alalla" })).toHaveCount(0);
   await expect(page.getByRole("link", { exact: true, name: "Turun yliopisto" })).toHaveCount(0);
 

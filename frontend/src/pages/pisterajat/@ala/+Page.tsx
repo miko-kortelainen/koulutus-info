@@ -13,7 +13,7 @@ export default function AlaCutoffPage() {
     <Stack gap={1}>
       <BackLink href="/pisterajat/" />
       <Heading as="h1" size="md">
-        {alaName} – pisterajat {DEFAULT_CUTOFF_YEAR}
+        {alaName} pisterajat {DEFAULT_CUTOFF_YEAR}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         Koulutusalan pisterajat kouluittain eri hakukierroksilta.
