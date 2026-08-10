@@ -2,7 +2,7 @@ import { expect, test } from "vitest";
 import { alaMetaDescription } from "@/pages/pisterajat/@ala/alaDescriptions";
 
 test("alaMetaDescription returns keyword copy for a known ala", () => {
-  expect(alaMetaDescription("Lääketieteet", "2026")).toContain("Lääkis");
+  expect(alaMetaDescription("Lääketieteet", "2026")).toContain("lääkiksen");
   expect(alaMetaDescription("Lääketieteet", "2026")).toContain("2026");
 });
 
