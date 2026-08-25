@@ -341,3 +341,10 @@ export const toUniversityGrades = (state: YoFormState): Record<string, YoGrade> 
   }
   return grades;
 };
+
+export const yoFormFromExamGrades = (grades: Record<string, YoGrade>): YoFormState => ({
+  aineet: Object.entries(grades).flatMap(([exam, grade], id) => {
+    const option = SUBJECT_OPTIONS.find((subject) => subject.exam === exam);
+    return option ? [{ id, subject: option.value, grade }] : [];
+  }),
+});

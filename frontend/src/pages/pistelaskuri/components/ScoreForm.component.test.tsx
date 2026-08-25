@@ -21,7 +21,8 @@ test("submits YO grades to local calculators and tracks success", async () => {
   const event = vi.fn();
   const onSubmit = vi.fn();
   const user = userEvent.setup();
-  vi.spyOn(Storage.prototype, "getItem").mockReturnValue(
+  window.localStorage.setItem(
+    "yhteishaku:pistelaskuri",
     JSON.stringify({
       version: 1,
       yo: {
@@ -55,4 +56,18 @@ test("submits YO grades to local calculators and tracks success", async () => {
     yoGrades: { ai_sv: "M" },
   });
   expect(event).toHaveBeenCalledWith("calculate_score");
+});
+
+test("applied YO grades show after storage hydrate", async () => {
+  renderWithChakra(
+    <ScoreForm
+      applied={{ mode: "Todistusvalinta (YO)", yo: { aineet: [{ id: 0, subject: "ai_fi", grade: "L" }] } }}
+      onModeChange={vi.fn()}
+      onSubmit={vi.fn()}
+      round="2026-kevat"
+    />,
+  );
+
+  await waitFor(() => expect(screen.getByRole("combobox", { name: "Aine 1" })).toHaveTextContent("Suomi äidinkielenä"));
+  expect(screen.getByRole("combobox", { name: "Aineen 1 arvosana" })).toHaveTextContent("L");
 });

@@ -94,6 +94,23 @@ export function flattenAmkPrograms({
   );
 }
 
+const scoreFormatter = new Intl.NumberFormat("fi-FI", { maximumFractionDigits: 2 });
+
+// kynnysehtoPassed is undefined when no threshold exists (passes), false when unmet.
+export const qualifies = (result: ScoreResult) =>
+  result.applicantScore !== undefined && result.score <= result.applicantScore && result.kynnysehtoPassed !== false;
+
+export function toCompactQualified(results: ScoreResult[]) {
+  const items = results.filter(qualifies).map((result) => ({
+    nimi: result.programmeName,
+    koulu: result.schoolName,
+    ala: result.koulutusala,
+    pisteraja: scoreFormatter.format(result.score),
+    ...(result.kynnysehtoLabel ? { kynnysehto: result.kynnysehtoLabel } : {}),
+  }));
+  return { total: items.length, items };
+}
+
 export function flattenUniversityPrograms({ programs }: UniversityProgramsResponse): ScoreResult[] {
   return programs.flatMap((program) => {
     if (!program.eligible) return [];
