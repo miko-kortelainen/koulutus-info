@@ -1,5 +1,6 @@
 import { Accordion, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
+import { useWebMCP } from "use-webmcp-tool";
 import { useData } from "vike-react/useData";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
@@ -9,7 +10,7 @@ import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import type { CurrentProgramsResponse } from "@/types.gen";
-import useFilteredDegrees from "@/pages/koulutukset/hooks/useFilteredDegrees";
+import useFilteredDegrees, { filterDegrees } from "@/pages/koulutukset/hooks/useFilteredDegrees";
 
 const PAGE_SIZE = 10;
 
@@ -22,6 +23,13 @@ const TASO_LABELS: Record<string, string> = {
   alempi: "Alempi",
   ylempi: "Ylempi",
 };
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+function stringSet(value: unknown) {
+  return new Set(Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : []);
+}
 
 export default function SchoolsListPage() {
   const data = useData<CurrentProgramsResponse>();
@@ -75,6 +83,49 @@ export default function SchoolsListPage() {
     selectedTasot,
     selectedKoulutusalat,
   );
+
+  useWebMCP({
+    name: "search_koulutukset",
+    description:
+      "Hakee ja suodattaa yhteishaun koulutuksia. Asettaa sivun haun ja suodattimet ja palauttaa osumat. Sektori: yo tai amk. Koulutusaste: alempi tai ylempi.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        haku: { type: "string", description: "Vapaa haku nimen tai koulun perusteella." },
+        sektori: { type: "array", items: { type: "string", enum: ["yo", "amk"] } },
+        koulutusaste: { type: "array", items: { type: "string", enum: ["alempi", "ylempi"] } },
+        koulutusala: { type: "array", items: { type: "string" }, description: "OKM-koulutusala, täsmällinen nimi." },
+        kunta: { type: "array", items: { type: "string" } },
+        koulu: { type: "array", items: { type: "string" }, description: "Oppilaitoksen suomenkielinen nimi." },
+      },
+    },
+    execute: (args: unknown) => {
+      const input = isRecord(args) ? args : {};
+      const haku = typeof input.haku === "string" ? input.haku : "";
+      const sektorit = stringSet(input.sektori);
+      const tasot = stringSet(input.koulutusaste);
+      const alat = stringSet(input.koulutusala);
+      const kunnat = stringSet(input.kunta);
+      const koulut = stringSet(input.koulu);
+      setSearchTerm(haku);
+      setSelectedSektorit(sektorit);
+      setSelectedTasot(tasot);
+      setSelectedKoulutusalat(alat);
+      setSelectedKunnat(kunnat);
+      setSelectedSchools(koulut);
+      setPage(1);
+      const items = filterDegrees(toteutukset, haku, sektorit, kunnat, koulut, tasot, alat);
+      return {
+        total: items.length,
+        items: items.map((t) => ({
+          nimi: t.toteutusNimi.fi ?? "",
+          koulu: t.oppilaitosNimi.fi ?? "",
+          kunta: t.kunnat,
+          oid: t.toteutusOid,
+        })),
+      };
+    },
+  });
 
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 

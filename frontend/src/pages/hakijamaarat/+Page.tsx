@@ -1,13 +1,16 @@
 import { Accordion, Alert, Box, Group, Stack, Text } from "@chakra-ui/react";
+import { useQueryClient } from "@tanstack/react-query";
 import { useCallback, useMemo, useState } from "react";
+import { useWebMCP } from "use-webmcp-tool";
 import { useData } from "vike-react/useData";
+import { getStatistics } from "@/api/browserData";
 import CompareBar from "@/components/CompareBar";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
 import YearControl from "@/components/YearControl";
-import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
+import { CURRENT_YEAR, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useDebounce from "@/hooks/useDebounce";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
@@ -15,7 +18,7 @@ import PageIntro from "@/layout/PageIntro";
 import type { StatisticsEntry } from "@/types.gen";
 import DegreeStatsCardSkeleton from "@/pages/hakijamaarat/components/DegreeStatsCardSkeleton";
 import SortControl from "@/pages/hakijamaarat/components/SortControl";
-import useFilteredStatistics from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
+import useFilteredStatistics, { filterStatistics, toCompactStatistics } from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
 import type { HakijamaaratPageData } from "@/pages/hakijamaarat/+data";
 import { formatStatisticsUpdatedAt } from "@/pages/hakijamaarat/lib/formatStatisticsUpdatedAt";
 import type { SortOption } from "@/pages/hakijamaarat/lib/sortStatistics";
@@ -27,8 +30,35 @@ const SEKTORI_LABELS: Record<string, string> = {
   Ammattikorkeakoulukoulutus: "Ammattikorkeakoulu",
 };
 
+const SORT_VALUES = [
+  "asc",
+  "desc",
+  "most_popular",
+  "least_popular",
+  "most_spots",
+  "least_spots",
+  "highest_acceptance_rate",
+  "lowest_acceptance_rate",
+] as const satisfies readonly SortOption[];
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+function stringSet(value: unknown) {
+  return new Set(Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : []);
+}
+
+function isYearOption(value: unknown): value is YearOption {
+  return YEAR_OPTIONS.some((option) => option.value === value);
+}
+
+function isSortOption(value: unknown): value is SortOption {
+  return typeof value === "string" && (SORT_VALUES as readonly string[]).includes(value);
+}
+
 export default function StatsListPage() {
   const ssrData = useData<HakijamaaratPageData>();
+  const queryClient = useQueryClient();
   const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
@@ -78,6 +108,56 @@ export default function StatsListPage() {
     selectedKunnat,
     selectedSchools,
   );
+
+  useWebMCP({
+    name: "search_hakijamaarat",
+    description:
+      "Hakee ja suodattaa yhteishaun hakijamääriä. Asettaa sivun haun, vuoden ja suodattimet. Sektori: Yliopistokoulutus tai Ammattikorkeakoulukoulutus. Vuosi muodossa 2026_kevat.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        haku: { type: "string", description: "Vapaa haku nimen tai koulun perusteella." },
+        vuosi: { type: "string", enum: YEAR_OPTIONS.map((option) => option.value), description: "Tilastokierros, esimerkiksi 2026_kevat." },
+        jarjestys: { type: "string", enum: [...SORT_VALUES] },
+        sektori: { type: "array", items: { type: "string", enum: ["Yliopistokoulutus", "Ammattikorkeakoulukoulutus"] } },
+        koulutusaste: { type: "array", items: { type: "string" } },
+        koulutusala: { type: "array", items: { type: "string" } },
+        kieli: { type: "array", items: { type: "string" } },
+        kunta: { type: "array", items: { type: "string" } },
+        koulu: { type: "array", items: { type: "string" } },
+      },
+    },
+    execute: async (args: unknown) => {
+      const input = isRecord(args) ? args : {};
+      const year = isYearOption(input.vuosi) ? input.vuosi : selectedYear;
+      const haku = typeof input.haku === "string" ? input.haku : "";
+      const jarjestys = isSortOption(input.jarjestys) ? input.jarjestys : sortOrder;
+      const sektorit = stringSet(input.sektori);
+      const asteet = stringSet(input.koulutusaste);
+      const alat = stringSet(input.koulutusala);
+      const kielet = stringSet(input.kieli);
+      const kunnat = stringSet(input.kunta);
+      const koulut = stringSet(input.koulu);
+      const data = await queryClient.ensureQueryData({
+        queryKey: ["statistics", year],
+        queryFn: () => getStatistics(year),
+      });
+      if (year !== selectedYear) setCompareSelection([]);
+      setSelectedYear(year);
+      setSearchTerm(haku);
+      setSortOrder(jarjestys);
+      setSelectedSektorit(sektorit);
+      setSelectedKoulutusasteet(asteet);
+      setSelectedKoulutusalat(alat);
+      setSelectedKielet(kielet);
+      setSelectedKunnat(kunnat);
+      setSelectedSchools(koulut);
+      setPage(1);
+      const items = filterStatistics(data, haku, jarjestys, sektorit, asteet, alat, kielet, kunnat, koulut);
+      return { year, total: items.length, items: items.map(toCompactStatistics) };
+    },
+  });
+
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const degreeSkeletonList = Array.from({ length: 10 }).map((_, i) => (
     // biome-ignore lint/suspicious/noArrayIndexKey: fixed loading placeholders have no identity or state
