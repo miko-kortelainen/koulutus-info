@@ -2,7 +2,7 @@ import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { ToteutusEntry } from "@/types.gen";
 
-type ToteutusWithSektori = ToteutusEntry & { sektori: string; tutkintotaso: string };
+export type ToteutusWithSektori = ToteutusEntry & { sektori: string; tutkintotaso: string };
 
 const FUSE_OPTIONS = {
   keys: [
@@ -18,6 +18,27 @@ const FUSE_OPTIONS = {
   useExtendedSearch: true,
 };
 
+export function filterDegrees(
+  data: ToteutusWithSektori[] | undefined,
+  searchTerm: string,
+  selectedSektorit: Set<string>,
+  selectedKunnat: Set<string>,
+  selectedSchools: Set<string>,
+  selectedTasot: Set<string>,
+  selectedKoulutusalat: Set<string>,
+) {
+  const byFilters = (data ?? []).filter(
+    (t) =>
+      (!selectedSektorit.size || selectedSektorit.has(t.sektori)) &&
+      (!selectedKunnat.size || t.kunnat.some((k) => selectedKunnat.has(k))) &&
+      (!selectedSchools.size || selectedSchools.has(t.oppilaitosNimi.fi ?? "")) &&
+      (!selectedTasot.size || selectedTasot.has(t.tutkintotaso)) &&
+      (!selectedKoulutusalat.size || t.koulutusalat?.some((a) => selectedKoulutusalat.has(a))),
+  );
+  const normalizedSearch = searchTerm.trim();
+  return normalizedSearch ? new Fuse(byFilters, FUSE_OPTIONS).search(normalizedSearch).map((result) => result.item) : byFilters;
+}
+
 export default function useFilteredDegrees(
   data: ToteutusWithSektori[] | undefined,
   searchTerm: string,
@@ -27,22 +48,9 @@ export default function useFilteredDegrees(
   selectedTasot: Set<string>,
   selectedKoulutusalat: Set<string>,
 ) {
-  const byFilters = useMemo(() => {
-    const items = data ?? [];
-    return items.filter(
-      (t) =>
-        (!selectedSektorit.size || selectedSektorit.has(t.sektori)) &&
-        (!selectedKunnat.size || t.kunnat.some((k) => selectedKunnat.has(k))) &&
-        (!selectedSchools.size || selectedSchools.has(t.oppilaitosNimi.fi ?? "")) &&
-        (!selectedTasot.size || selectedTasot.has(t.tutkintotaso)) &&
-        (!selectedKoulutusalat.size || t.koulutusalat?.some((a) => selectedKoulutusalat.has(a))),
-    );
-  }, [data, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat]);
-
-  const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
-
-  return useMemo(() => {
-    const normalizedSearch = searchTerm.trim();
-    return normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : byFilters;
-  }, [fuse, byFilters, searchTerm]);
+  return useMemo(
+    () =>
+      filterDegrees(data, searchTerm, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat),
+    [data, searchTerm, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat],
+  );
 }

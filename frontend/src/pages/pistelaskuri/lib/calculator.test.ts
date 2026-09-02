@@ -10,10 +10,17 @@ import {
   flattenAmkPrograms,
   flattenUniversityPrograms,
   matchesScoreType,
+  qualifies,
   type ScoreResult,
   selectApplicantResults,
 } from "@/pages/pistelaskuri/lib/scoreResults";
-import { emptyYoFormState, isYoFormState, parseYoForm, toUniversityGrades } from "@/pages/pistelaskuri/lib/yoForm";
+import {
+  emptyYoFormState,
+  isYoFormState,
+  parseYoForm,
+  toUniversityGrades,
+  yoFormFromExamGrades,
+} from "@/pages/pistelaskuri/lib/yoForm";
 
 const completeYoForm = {
   aineet: [
@@ -25,6 +32,12 @@ const completeYoForm = {
 };
 assert.ok("input" in parseYoForm(completeYoForm));
 assert.deepEqual(toUniversityGrades(completeYoForm), { ai_fi: "L", ena: "M", fy: "C", maa: "E" });
+assert.deepEqual(toUniversityGrades(yoFormFromExamGrades({ ai_fi: "L", maa: "E", ena: "M", fy: "C" })), {
+  ai_fi: "L",
+  ena: "M",
+  fy: "C",
+  maa: "E",
+});
 assert.deepEqual(
   toUniversityGrades({
     aineet: [
@@ -129,5 +142,10 @@ const amkPrograms = flattenAmkPrograms({
   score: 90,
 });
 assert.equal(amkPrograms[0].applicantScore, 90);
+
+const overCutoff: ScoreResult = { ...scoreResult("Todistusvalinta", 110), applicantScore: 100 };
+assert.equal(qualifies({ ...overCutoff, applicantScore: 120 }), true);
+assert.equal(qualifies(overCutoff), false);
+assert.equal(qualifies({ ...overCutoff, applicantScore: 120, kynnysehtoPassed: false }), false);
 
 console.log("calculator.test.ts: OK");

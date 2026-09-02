@@ -2,7 +2,7 @@ import { renderHook } from "@testing-library/react";
 import { expect, test } from "vitest";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 import type { SortOption } from "@/pages/hakijamaarat/lib/sortStatistics";
-import useFilteredStatistics from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
+import useFilteredStatistics, { toCompactStatistics } from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
 
 const statistics: StatisticsResponse = [
   {
@@ -181,4 +181,23 @@ test.each<SortOption>([
   );
 
   expect(ids(result.current).at(-1)).toBe("masked");
+});
+
+test("masks compact counts under five and omits derived ratios", () => {
+  const compact = toCompactStatistics({
+    ...statistics[0],
+    kooditHakukohde: "masked",
+    hakukohde: "Åbo Akademi",
+    valitutLkm: 4,
+    ensisijaisetHakijatLkm: 4,
+    kaikkiHakijatLkm: 4,
+    aloituspaikatLkm: 4,
+  });
+
+  expect(compact.nimi).toBe("Åbo Akademi");
+  expect(compact.kaikkiHakijat).toBe("alle 5");
+  expect(compact.ensisijaiset).toBe("alle 5");
+  expect(compact.aloituspaikat).toBe("alle 5");
+  expect(compact.sisaanpaasyprosentti).toBeNull();
+  expect(compact.hakijapaine).toBeNull();
 });
