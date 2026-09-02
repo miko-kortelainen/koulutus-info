@@ -289,7 +289,7 @@ export default function StatsListPage() {
             {ssrData.statisticsUpdatedAt ? (
               <>
                 <br />
-                Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)}
+                Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)} (seuraava 29.9.2026)
               </>
             ) : null}
           </>
