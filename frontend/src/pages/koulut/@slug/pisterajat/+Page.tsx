@@ -5,6 +5,7 @@ import { usePageContext } from "vike-react/usePageContext";
 import BackLink from "@/components/BackLink";
 import CutoffCard from "@/components/CutoffCard";
 import OptionSelect from "@/components/OptionSelect";
+import PistelaskuriCta from "@/components/PistelaskuriCta";
 import SearchInput from "@/components/SearchInput";
 import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel, cutoffRoundYear } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
@@ -154,6 +155,7 @@ export default function CutoffPage() {
         {alaFilter}
       </VStack>
       {programList}
+      <PistelaskuriCta />
     </PageContainer>
   );
 }
