@@ -2,6 +2,7 @@ import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Stac
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
+import { useWebMCP } from "use-webmcp-tool";
 import SearchInput from "@/components/SearchInput";
 import {
   CALCULATOR_CUTOFF_ROUNDS,
@@ -21,6 +22,12 @@ import {
   type UniversityProgramsResponse,
 } from "@/pages/pistelaskuri/lib/todistusvalinta/index";
 import { COLORS } from "@/theme";
+import {
+  AMM_GRADES,
+  type AmmFormState,
+  type AmmGrade,
+  parseAmmForm,
+} from "@/pages/pistelaskuri/components/AmmForm";
 import ResultSelect from "@/pages/pistelaskuri/components/ResultSelect";
 import ScoreForm from "@/pages/pistelaskuri/components/ScoreForm";
 import ScoreResultList from "@/pages/pistelaskuri/components/ScoreResultList";
@@ -28,9 +35,13 @@ import {
   type Calculation,
   flattenAmkPrograms,
   flattenUniversityPrograms,
+  qualifies,
   type ScoreResult,
   selectApplicantResults,
+  toCompactQualified,
 } from "@/pages/pistelaskuri/lib/scoreResults";
+import { SUBJECT_OPTIONS, parseYoForm, toUniversityGrades, yoFormFromExamGrades, type YoFormState } from "@/pages/pistelaskuri/lib/yoForm";
+import { YO_GRADES, type YoGrade } from "@/pages/pistelaskuri/lib/yoScoring";
 import type { ScoreType } from "@/pages/pistelaskuri/scoreTypes";
 
 type SectorFilter = "all" | "university" | "amk";
@@ -99,10 +110,48 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
   return true;
 }
 
-// kynnysehtoPassed is undefined when no threshold requirement exists (passes),
-// false when a threshold exists and was not met (fails), or true when met (passes).
-const qualifies = (result: ScoreResult) =>
-  result.applicantScore !== undefined && result.score <= result.applicantScore && result.kynnysehtoPassed !== false;
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+function isCutoffRound(value: unknown): value is CutoffRound {
+  return typeof value === "string" && (CALCULATOR_CUTOFF_ROUNDS as readonly string[]).includes(value);
+}
+
+function parseYoAgentForm(args: Record<string, unknown>): YoFormState | string {
+  if (!Array.isArray(args.aineet) || args.aineet.length === 0) {
+    return "Anna vähintään yksi aine ja arvosana.";
+  }
+  const grades: Record<string, YoGrade> = {};
+  for (const row of args.aineet) {
+    if (!isRecord(row) || typeof row.aine !== "string" || typeof row.arvosana !== "string") {
+      return "Jokaisella aineella tarvitaan aine-koodi ja arvosana.";
+    }
+    if (!SUBJECT_OPTIONS.some((option) => option.exam === row.aine)) {
+      return `Tuntematon aine: ${row.aine}.`;
+    }
+    if (!(YO_GRADES as string[]).includes(row.arvosana)) {
+      return `Virheellinen arvosana: ${row.arvosana}.`;
+    }
+    grades[row.aine] = row.arvosana as YoGrade;
+  }
+  return yoFormFromExamGrades(grades);
+}
+
+function parseAmmAgentForm(args: Record<string, unknown>): AmmFormState | string {
+  const scale = args.asteikko === "1-3" || args.asteikko === "1-5" ? args.asteikko : null;
+  if (!scale) return "Valitse asteikko 1-5 tai 1-3.";
+  const grades = [args.viestinta, args.matemaattinen, args.yhteiskunta];
+  if (!grades.every((grade): grade is AmmGrade => typeof grade === "number" && AMM_GRADES[scale].includes(grade as AmmGrade))) {
+    return "Anna arvosana kaikille kolmelle osa-alueelle.";
+  }
+  const keskiarvoInput =
+    typeof args.keskiarvo === "number"
+      ? String(args.keskiarvo).replace(".", ",")
+      : typeof args.keskiarvo === "string"
+        ? args.keskiarvo
+        : "";
+  return { scale, grades: grades as [AmmGrade, AmmGrade, AmmGrade], keskiarvoInput };
+}
 
 async function getInitialPrograms(round: CutoffRound): Promise<InitialPrograms> {
   const [university, amkYo, amkAmm] = await Promise.all([
@@ -133,6 +182,7 @@ export default function ScoreCalculatorPage() {
   const [cutoffRound, setCutoffRound] = useState<CutoffRound>(DEFAULT_CUTOFF_ROUND);
   const [isFirstTimeApplicant, setIsFirstTimeApplicant] = useState(true);
   const [calculation, setCalculation] = useState<Calculation | null>(null);
+  const [appliedForm, setAppliedForm] = useState<{ mode: ScoreType; yo?: YoFormState; amm?: AmmFormState }>();
   const [isRejoining, setIsRejoining] = useState(false);
   const [rejoinError, setRejoinError] = useState<string>();
   const [searchTerm, setSearchTerm] = useState("");
@@ -193,6 +243,94 @@ export default function ScoreCalculatorPage() {
   const resultListKey = [cutoffRound, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
   const displayedQualifiedCount = resultsSuccess && calculation ? qualifiedCount : "–";
   const displayedTotalCount = resultsSuccess ? totalCount : "–";
+
+  useWebMCP({
+    name: "calculate_todistuspisteet",
+    description:
+      "Laskee todistusvalintapisteet ylioppilastutkinnosta (yo) tai ammatillisesta perustutkinnosta (amm), täyttää pistelaskurin ja palauttaa koulutukset joihin pisteet riittävät.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        valintatapa: { type: "string", enum: ["yo", "amm"], description: "YO-todistus tai ammatillinen perustutkinto." },
+        aineet: {
+          type: "array",
+          description: "YO-aineet koodeina, esimerkiksi ai_fi, maa, fy, ena.",
+          items: {
+            type: "object",
+            properties: {
+              aine: { type: "string", description: "YO-koodi, esimerkiksi ai_fi, maa, fy." },
+              arvosana: { type: "string", enum: YO_GRADES, description: "L, E, M, C, B tai A." },
+            },
+            required: ["aine", "arvosana"],
+          },
+        },
+        asteikko: { type: "string", enum: ["1-5", "1-3"], description: "AMM-arvosana-asteikko." },
+        viestinta: { type: "number", description: "Viestintä- ja vuorovaikutusosaaminen." },
+        matemaattinen: { type: "number", description: "Matemaattis-luonnontieteellinen osaaminen." },
+        yhteiskunta: { type: "number", description: "Yhteiskunta- ja työelämäosaaminen." },
+        keskiarvo: { description: "Painotettu keskiarvo, myös 3,5." },
+        kierros: { type: "string", enum: [...CALCULATOR_CUTOFF_ROUNDS], description: "Pisterajakierros, esimerkiksi 2026-kevat." },
+        ensikertalainen: { type: "boolean", description: "Onko hakija ensikertalainen." },
+      },
+      required: ["valintatapa"],
+    },
+    execute: async (args: unknown) => {
+      if (!isRecord(args) || (args.valintatapa !== "yo" && args.valintatapa !== "amm")) {
+        return "Valitse valintatapa yo tai amm.";
+      }
+      const round = isCutoffRound(args.kierros) ? args.kierros : cutoffRound;
+      const ensikertalainen = typeof args.ensikertalainen === "boolean" ? args.ensikertalainen : isFirstTimeApplicant;
+
+      if (args.valintatapa === "yo") {
+        const yo = parseYoAgentForm(args);
+        if (typeof yo === "string") return yo;
+        const parsed = parseYoForm(yo);
+        if (!("input" in parsed)) return parsed.errors.aineet ?? "YO-todistus on puutteellinen.";
+        const yoGrades = toUniversityGrades(yo);
+        const selectionMethod = "Todistusvalinta (YO)" as const;
+        const scored = await recalculateFromGrades({ selectionMethod, yoGrades }, round);
+        const next: Calculation = { ...scored, selectionMethod, yoGrades };
+        setCutoffRound(round);
+        setIsFirstTimeApplicant(ensikertalainen);
+        setSelectionMethod(selectionMethod);
+        setAppliedForm({ mode: selectionMethod, yo });
+        setCalculation(next);
+        return {
+          valintatapa: selectionMethod,
+          pisteet: next.amk.score,
+          enintaan: next.amk.maximumScore,
+          kierros: round,
+          ...toCompactQualified(
+            selectApplicantResults(
+              [...(next.university ? flattenUniversityPrograms(next.university) : []), ...flattenAmkPrograms(next.amk)],
+              selectionMethod,
+              ensikertalainen,
+            ),
+          ),
+        };
+      }
+
+      const amm = parseAmmAgentForm(args);
+      if (typeof amm === "string") return amm;
+      const parsed = parseAmmForm(amm);
+      if (!("input" in parsed)) return parsed.errors.grades ?? parsed.errors.keskiarvo ?? "AMM-todistus on puutteellinen.";
+      const selectionMethod = "Todistusvalinta (AMM)" as const;
+      const scored = await recalculateFromGrades({ selectionMethod, ammGrades: parsed.input }, round);
+      const next: Calculation = { ...scored, selectionMethod, ammGrades: parsed.input, university: undefined };
+      setCutoffRound(round);
+      setIsFirstTimeApplicant(ensikertalainen);
+      setSelectionMethod(selectionMethod);
+      setAppliedForm({ mode: selectionMethod, amm });
+      setCalculation(next);
+      return {
+        valintatapa: selectionMethod,
+        pisteet: next.amk.score,
+        enintaan: next.amk.maximumScore,
+        kierros: round,
+        ...toCompactQualified(selectApplicantResults(flattenAmkPrograms(next.amk), selectionMethod, ensikertalainen)),
+      };
+    },
+  });
 
   const handleRoundChange = async (round: CutoffRound) => {
     if (round === cutoffRound) return;
@@ -379,6 +517,7 @@ export default function ScoreCalculatorPage() {
       />
       <PageContainer align="flex-start">
         <ScoreForm
+          applied={appliedForm}
           onModeChange={(nextSelectionMethod) => {
             setSelectionMethod(nextSelectionMethod);
             setCalculation(null);

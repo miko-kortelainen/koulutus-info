@@ -24,6 +24,7 @@ import AmmForm, {
 import YoForm from "@/pages/pistelaskuri/components/YoForm";
 
 interface ScoreFormProps {
+  applied?: { mode: ScoreType; yo?: YoFormState; amm?: AmmFormState };
   onModeChange: (selectionMethod: ScoreType) => void;
   onSubmit: (calculation: Calculation) => void;
   round: CutoffRound;
@@ -41,10 +42,10 @@ const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
 
 const readStoredForms = (): Omit<StoredForms, "version"> => {
-  if (typeof localStorage === "undefined") return {};
+  if (typeof window === "undefined") return {};
 
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return {};
 
     const parsed: unknown = JSON.parse(raw);
@@ -60,16 +61,16 @@ const readStoredForms = (): Omit<StoredForms, "version"> => {
 };
 
 const writeStoredForms = (next: Omit<StoredForms, "version">) => {
-  if (typeof localStorage === "undefined") return;
+  if (typeof window === "undefined") return;
 
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, ...readStoredForms(), ...next }));
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, ...readStoredForms(), ...next }));
   } catch {
     // Storage is an optional enhancement; calculation should still succeed if it is unavailable.
   }
 };
 
-export default function ScoreForm({ onModeChange, onSubmit, round }: ScoreFormProps) {
+export default function ScoreForm({ applied, onModeChange, onSubmit, round }: ScoreFormProps) {
   const [mode, setMode] = useState<ScoreType>("Todistusvalinta (YO)");
   const [yoState, setYoState] = useState(emptyYoFormState());
   const [yoErrors, setYoErrors] = useState<YoFormErrors>({});
@@ -84,6 +85,20 @@ export default function ScoreForm({ onModeChange, onSubmit, round }: ScoreFormPr
     if (storedForms.yo) setYoState(storedForms.yo);
     if (storedForms.amm) setAmmState(storedForms.amm);
   }, []);
+
+  useEffect(() => {
+    if (!applied) return;
+    setMode(applied.mode);
+    if (applied.yo) {
+      setYoState(applied.yo);
+      setYoErrors({});
+    }
+    if (applied.amm) {
+      setAmmState(applied.amm);
+      setAmmErrors({});
+    }
+    setCalcError(undefined);
+  }, [applied]);
 
   const handleModeChange = (value: string) => {
     if (isCalculating || !isScoreType(value)) return;

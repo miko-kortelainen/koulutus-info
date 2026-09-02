@@ -1,6 +1,7 @@
 import { Accordion, Heading, Separator, Stack, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
 import BackLink from "@/components/BackLink";
+import PistelaskuriCta from "@/components/PistelaskuriCta";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
@@ -49,6 +50,7 @@ export default function AlaCutoffPage() {
     <PageContainer align="flex-start">
       {header}
       {schoolAccordions}
+      <PistelaskuriCta />
     </PageContainer>
   );
 }
