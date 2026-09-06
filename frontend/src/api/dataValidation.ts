@@ -8,7 +8,7 @@ export interface FeedbackStatistics {
   salattu?: boolean;
 }
 
-export interface FeedbackItem {
+interface FeedbackItem {
   kohde: string;
   tilastot: FeedbackStatistics;
 }
@@ -18,7 +18,7 @@ export interface FeedbackGroup {
   kohteet: FeedbackItem[];
 }
 
-export type FeedbackSection = FeedbackGroup | { tasot: Record<string, FeedbackGroup> };
+type FeedbackSection = FeedbackGroup | { tasot: Record<string, FeedbackGroup> };
 
 export interface FeedbackField {
   tilastot: FeedbackStatistics;
@@ -32,7 +32,7 @@ export interface StudentFeedback {
 
 export type FeedbackMaxScore = 5 | 7;
 
-export type StudentFeedbackDataset = Record<string, StudentFeedback>;
+type StudentFeedbackDataset = Record<string, StudentFeedback>;
 
 export type EnnakointiSektori = "Ammattikorkeakoulu" | "Yliopisto";
 

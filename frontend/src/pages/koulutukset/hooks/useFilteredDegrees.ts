@@ -2,7 +2,7 @@ import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { ToteutusEntry } from "@/types.gen";
 
-export type ToteutusWithSektori = ToteutusEntry & { sektori: string; tutkintotaso: string };
+type ToteutusWithSektori = ToteutusEntry & { sektori: string; tutkintotaso: string };
 
 const FUSE_OPTIONS = {
   keys: [

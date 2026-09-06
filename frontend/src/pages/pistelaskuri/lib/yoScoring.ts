@@ -23,13 +23,13 @@ export const REAALIAINEET = [
 
 export type RealSubject = (typeof REAALIAINEET)[number];
 
-export interface YoKieli {
+interface YoKieli {
   type: KieliType;
   level: KieliLevel;
   grade: YoGrade;
 }
 
-export interface YoReaaliaine {
+interface YoReaaliaine {
   subject: RealSubject;
   grade: YoGrade;
 }
