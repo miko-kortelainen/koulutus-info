@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const MotionHeading = motion.create(Heading);
 
-const HERO_TOPICS = ["hakijamäärät", "pisterajat", "koulutukset", "koulut", "trendit"] as const;
+const HERO_TOPICS = ["hakijamäärät", "pisterajat", "koulutukset", "koulut"] as const;
 
 export const HERO_HEADING_NAME = "Katso yhteishaun hakijamäärät, pisterajat, koulutukset, koulut ja trendit.";
 
@@ -55,7 +55,7 @@ export default function LandingHeadline() {
     <MotionHeading
       animate={{ opacity: 1, transform: "translateY(0)" }}
       as="h1"
-      fontSize={{ base: "3xl", md: "5xl", lg: "56px" }}
+      fontSize={{ base: "4xl", md: "5xl", lg: "56px" }}
       fontWeight="semibold"
       initial={{ opacity: 0, transform: "translateY(30px)" }}
       lineHeight={1.25}
