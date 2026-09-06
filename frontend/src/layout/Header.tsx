@@ -89,7 +89,7 @@ export default function Header() {
 
         <Drawer.Root placement="end" size={{ base: "full", md: "xs" }}>
           <Drawer.Trigger asChild>
-            <IconButton aria-label="avaa navigointi" size="xl" variant="ghost">
+            <IconButton _hover={{ bg: "transparent" }} aria-label="avaa navigointi" size="xl" variant="ghost">
               <HiMenu />
             </IconButton>
           </Drawer.Trigger>

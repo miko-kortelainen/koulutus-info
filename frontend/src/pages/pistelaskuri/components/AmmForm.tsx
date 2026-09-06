@@ -3,7 +3,7 @@ import type { AmkAmmGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/inde
 import { COLORS } from "@/theme";
 import FormSelect from "@/pages/pistelaskuri/components/FormSelect";
 
-export type AmmScale = "1-5" | "1-3";
+type AmmScale = "1-5" | "1-3";
 export type AmmGrade = 1 | 2 | 3 | 4 | 5;
 
 export const AMM_GRADES: Record<AmmScale, AmmGrade[]> = {

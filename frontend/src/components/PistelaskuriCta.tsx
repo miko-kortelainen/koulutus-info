@@ -16,7 +16,7 @@ export default function PistelaskuriCta() {
       variant="solid"
       width={{ base: "full", md: "auto" }}
     >
-      <a href="/pistelaskuri/">
+      <a href="/pistelaskuri/" onClick={() => window.sa_event?.("open_pistelaskuri")}>
         <HiOutlineCalculator aria-hidden="true" />
         Laske todistusvalintapisteesi
         <HiOutlineArrowRight aria-hidden="true" />
