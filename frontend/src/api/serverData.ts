@@ -63,7 +63,7 @@ export const readCurrentYearStatistics = (): StatisticsResponse => readStatistic
 
 export const readMeta = (): Meta => readPublicData("meta.json", parseMeta);
 
-export const readSchools = (): SchoolCatalog => readPublicData("schools.json", parseSchoolCatalog);
+const readSchools = (): SchoolCatalog => readPublicData("schools.json", parseSchoolCatalog);
 
 export const readCurrentPrograms = (): CurrentProgramsResponse =>
   readPublicData("current_programs.json", parseCurrentPrograms);

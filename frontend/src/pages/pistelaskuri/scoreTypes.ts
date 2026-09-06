@@ -1,4 +1,4 @@
-export const SCORE_TYPES = [
+const SCORE_TYPES = [
   { label: "Todistuspisteet (AMM)", value: "Todistusvalinta (AMM)" },
   { label: "Todistuspisteet (YO)", value: "Todistusvalinta (YO)" },
 ] as const;

@@ -1,4 +1,4 @@
-export interface GuideMeta {
+interface GuideMeta {
   slug: string;
   title: string;
   /** Used for the index card, meta description and structured data */

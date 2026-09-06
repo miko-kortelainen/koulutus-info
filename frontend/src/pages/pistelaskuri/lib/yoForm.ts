@@ -235,7 +235,7 @@ export const SUBJECT_OPTIONS = [
   ...REAL_SUBJECT_OPTIONS,
 ] as const satisfies readonly SubjectOption[];
 
-export type YoSubjectValue = (typeof SUBJECT_OPTIONS)[number]["value"];
+type YoSubjectValue = (typeof SUBJECT_OPTIONS)[number]["value"];
 
 export interface YoAineRow {
   id: number;

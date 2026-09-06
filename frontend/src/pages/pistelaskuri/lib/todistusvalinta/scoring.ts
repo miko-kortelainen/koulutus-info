@@ -7,8 +7,6 @@ import type {
   ScoringModel,
 } from "@/pages/pistelaskuri/lib/todistusvalinta/types";
 
-export type { ScoreAssignment, ScoreBreakdown } from "./types";
-
 function expandedSlots(model: ScoringModel): [string, string][] {
   const slots: [string, string][] = [];
   for (const slot of model.slots) {
@@ -191,13 +189,13 @@ export function averageToHundredths(text: string): number {
   return negative ? -hundredths : hundredths;
 }
 
-export interface AmmAssignment {
+interface AmmAssignment {
   grade: number;
   part: string;
   points: number;
 }
 
-export interface AmmScoreResult {
+interface AmmScoreResult {
   assignments: AmmAssignment[];
   maximumScore: number;
   score: number;
