@@ -26,9 +26,9 @@ export default function PageIntro({ title, description }: PageIntroProps) {
       <Stack alignItems="start" gap={1} width={{ base: "100%", md: "60rem" }}>
         <Heading
           as="h1"
-          fontSize={{ base: "28px", md: "40px" }}
+          fontSize={{ base: "24px", md: "36px" }}
           fontWeight="semibold"
-          lineHeight="44px"
+          lineHeight={{ base: "32px", md: "40px" }}
           textWrap="balance"
         >
           {title}
