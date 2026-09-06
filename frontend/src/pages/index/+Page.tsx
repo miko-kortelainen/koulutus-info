@@ -1,13 +1,17 @@
 import { Box, Button, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "react-icons/hi";
-
 import { HEADER_HEIGHT } from "@/layout/Header";
 import PageContainer from "@/layout/PageContainer";
-import { COLORS } from "@/theme";
 import IosInstallTip from "@/pages/index/components/IosInstallTip";
+import LandingHeadline from "@/pages/index/components/LandingHeadline";
 import QuickLinkCard from "@/pages/index/components/QuickLinkCard";
 import { quickLinks } from "@/pages/index/components/quickLinks";
 import useCountdown from "@/pages/index/hooks/useCountdown";
+import { COLORS } from "@/theme";
+
+const MotionDiv = motion.div;
+const MotionVStack = motion.create(VStack);
 
 const heroLinks = [
   { href: "/pistelaskuri/", icon: HiOutlineCalculator, label: "Laske todistuspisteeni" },
@@ -19,70 +23,70 @@ function HeroButtons() {
     <Stack
       direction={{ base: "column", lg: "row" }}
       gap={{ base: 3, md: 4, lg: 8 }}
-      position="relative"
-      pt={{ base: 4, lg: 0 }}
       width={{ base: "100%", lg: "auto" }}
-      zIndex={1}
     >
-      {heroLinks.map(({ href, icon: Icon, label }) => (
-        <Button
-          _active={{ transform: "scale(0.96)" }}
-          _hover={{ bg: "accentFg", color: "bg" }}
-          asChild
-          bg="accent"
-          color="onAccent"
+      {heroLinks.map(({ href, icon: Icon, label }, index) => (
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 8 }}
           key={href}
-          transitionDuration="0.15s"
-          transitionProperty="transform, background-color, color"
-          transitionTimingFunction="ease-out"
-          variant="solid"
-          width={{ base: "100%", lg: "236px" }}
+          transition={{ duration: 0.5, delay: 0.4 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <a href={href}>
-            <HStack gap={2} width="13rem">
-              <Icon aria-hidden="true" />
-              <Text as="span" flex={1} textAlign="left">
-                {label}
-              </Text>
-              <HiOutlineArrowRight aria-hidden="true" />
-            </HStack>
-          </a>
-        </Button>
+          <Button
+            _active={{ transform: "scale(0.96)" }}
+            _hover={{ bg: "accentFg", color: "bg" }}
+            asChild
+            bg="accent"
+            color="onAccent"
+            transitionDuration="0.15s"
+            transitionProperty="transform, background-color, color"
+            transitionTimingFunction="ease-out"
+            variant="solid"
+            width={{ base: "100%", lg: "236px" }}
+          >
+            <a href={href}>
+              <HStack gap={2} width="13rem">
+                <Icon aria-hidden="true" />
+                <Text as="span" flex={1} textAlign="left">
+                  {label}
+                </Text>
+                <HiOutlineArrowRight aria-hidden="true" />
+              </HStack>
+            </a>
+          </Button>
+        </motion.div>
       ))}
     </Stack>
   );
 }
 
-interface LandingIllustrationProps {
-  fetchPriority?: "high";
-  src: string;
-  hideIn: "_light" | "_dark";
-}
+function LandingBackground() {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, 150]);
 
-function LandingIllustration({ fetchPriority, hideIn, src }: LandingIllustrationProps) {
   return (
-    <Image
-      {...{ [hideIn]: { display: "none" } }}
-      alt=""
-      aria-hidden="true"
-      aspectRatio="550 / 1450"
-      bottom={0}
-      fetchPriority={fetchPriority}
-      gridArea={{ lg: "illus" }}
-      height="auto"
-      justifySelf={{ lg: "center" }}
-      left={0}
-      loading="eager"
-      marginInline="auto"
-      maxW={{ base: "13rem", lg: "none" }}
-      objectFit="contain"
-      pointerEvents="none"
-      position={{ base: "absolute", lg: "static" }}
-      right={0}
-      src={src}
-      width={{ base: "100%", lg: "236px" }}
-      zIndex={0}
-    />
+    <Box aria-hidden="true" inset={0} overflow="hidden" pointerEvents="none" position="absolute" zIndex={0}>
+      <MotionDiv aria-hidden="true" style={{ y }}>
+        <Image
+          alt=""
+          fetchPriority="high"
+          height={{ base: "100vh", md: "100%" }}
+          loading="eager"
+          objectFit="cover"
+          objectPosition="center"
+          src="/images/nature.jpg"
+          width="100%"
+        />
+      </MotionDiv>
+      <Box
+        backgroundImage={{
+          _light: `linear-gradient(to bottom, color-mix(in srgb, ${COLORS.bg} 8%, transparent) 70%, ${COLORS.bg})`,
+          _dark: `linear-gradient(to bottom, color-mix(in srgb, ${COLORS.bg} 42%, transparent) 60%, ${COLORS.bg})`,
+        }}
+        inset={0}
+        position="absolute"
+      />
+    </Box>
   );
 }
 
@@ -99,11 +103,11 @@ export default function LandingPage() {
 
   const hero = (
     <Box
-      backgroundImage={`linear-gradient(to bottom, ${COLORS.bg} 50%, color-mix(in srgb, ${COLORS.accent} 28%, ${COLORS.bg}))`}
       display="flex"
       flexDirection="column"
       minH="100dvh"
       mt={`calc(-1 * ${HEADER_HEIGHT})`}
+      overflow="hidden"
       position="relative"
       pt={{
         base: `calc(${HEADER_HEIGHT} + 1rem)`,
@@ -111,15 +115,12 @@ export default function LandingPage() {
         lg: `calc(${HEADER_HEIGHT} + 1.5rem)`,
       }}
     >
+      <LandingBackground />
       <Box
-        alignItems={{ lg: "center" }}
-        columnGap={{ lg: "122px" }}
-        display={{ base: "flex", lg: "grid" }}
+        display="flex"
         flex={1}
         flexDirection="column"
-        gridTemplateAreas={{ lg: `"copy illus"` }}
-        gridTemplateColumns={{ lg: "minmax(0, 593px) 236px" }}
-        justifyContent={{ base: "space-between", lg: "center" }}
+        justifyContent="center"
         margin="0 auto"
         maxW="65rem"
         minH={0}
@@ -130,61 +131,43 @@ export default function LandingPage() {
         width="100%"
         zIndex={1}
       >
-        {/* contents on mobile → heading + buttons become space-between flex siblings */}
-        <Stack
-          align={{ lg: "flex-start" }}
-          display={{ base: "contents", lg: "flex" }}
-          gap={8}
-          gridArea={{ lg: "copy" }}
-        >
-          <Stack
-            align={{ base: "center", lg: "flex-start" }}
-            gap={0}
-            position="relative"
-            textAlign={{ base: "center", lg: "left" }}
-            zIndex={1}
-          >
-            <Heading
-              as="h1"
-              fontSize={{ base: "4xl", md: "5xl", lg: "56px" }}
-              fontWeight="semibold"
-              lineHeight={1.1}
-              textWrap="balance"
-            >
-              Löydä sopiva korkeakoulutus.
-            </Heading>
-            <Text color="fg.muted" fontSize={{ base: "lg", md: "2xl" }} fontWeight="medium" textWrap="pretty">
-              Yhteishaun hakijamäärät, pisterajat ja koulutukset.
-            </Text>
-          </Stack>
+        <Stack align="center" gap={8} textAlign="center">
+          <LandingHeadline />
 
           <HeroButtons />
         </Stack>
-
-        <LandingIllustration fetchPriority="high" hideIn="_dark" src="/images/landing_illustration.png" />
-        <LandingIllustration hideIn="_light" src="/images/landing_illustration_for_dark.png" />
       </Box>
     </Box>
   );
 
   const countdown = timeLeft && (
-    <VStack>
+    <MotionVStack
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 16 }}
+      transition={{ duration: 0.6, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+    >
       <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }} letterSpacing="wide">
         {timeLeft.label} alkuun
       </Text>
       <SimpleGrid columns={3} gap={6} textAlign="center" width="100%">
-        {countdownTiles.map(({ value, label }) => (
-          <VStack gap={0} key={label}>
+        {countdownTiles.map(({ value, label }, index) => (
+          <MotionVStack
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            gap={0}
+            initial={{ opacity: 0, scale: 0.95, y: 12 }}
+            key={label}
+            transition={{ duration: 0.5, delay: 0.7 + index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+          >
             <Text color="fg.accent" fontSize="2xl" fontWeight="bold">
               {value}
             </Text>
             <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }}>
               {label}
             </Text>
-          </VStack>
+          </MotionVStack>
         ))}
       </SimpleGrid>
-    </VStack>
+    </MotionVStack>
   );
 
   const quickLinksSection = (
@@ -198,10 +181,7 @@ export default function LandingPage() {
   return (
     <>
       {hero}
-      <Box
-        as="section"
-        backgroundImage={`linear-gradient(to bottom, color-mix(in srgb, ${COLORS.accent} 28%, ${COLORS.bg}), ${COLORS.bg} 20%)`}
-      >
+      <Box as="section" bg="bg">
         <PageContainer>
           <VStack flex={1} gap={10} justifyContent="center" py={10}>
             <Stack alignItems="start" gap={2} width="100%">

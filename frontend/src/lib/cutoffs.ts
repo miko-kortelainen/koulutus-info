@@ -3,7 +3,7 @@ import { slugify } from "@/lib/slug";
 import type { Cutoff, Programme as CutoffProgramme, School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { CurrentProgramsResponse } from "@/types.gen";
 
-export interface CutoffWithRound extends Cutoff {
+interface CutoffWithRound extends Cutoff {
   round: CutoffRound;
 }
 

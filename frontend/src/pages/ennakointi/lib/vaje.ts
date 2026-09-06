@@ -6,7 +6,7 @@ export type SektoriFilter = "kaikki" | EnnakointiSektori;
 
 export type VajeSort = "isoin-vaje" | "pienin-vaje" | "a-o" | "o-a";
 
-export interface VajeRow extends EnnakointiKoulutustarveItem {
+interface VajeRow extends EnnakointiKoulutustarveItem {
   vaje: number;
 }
 

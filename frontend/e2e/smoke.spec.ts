@@ -79,7 +79,12 @@ async function openResultsAccordion(page: Page, name: RegExp) {
 
 test("homepage loads and nav drawer opens", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { exact: true, name: "Löydä sopiva korkeakoulutus." })).toBeVisible();
+  await expect(
+    page.getByRole("heading", {
+      exact: true,
+      name: "Katso yhteishaun hakijamäärät, pisterajat, koulutukset, koulut ja trendit.",
+    }),
+  ).toBeVisible();
   await openNavDrawer(page);
 });
 

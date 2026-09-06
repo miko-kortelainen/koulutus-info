@@ -11,7 +11,7 @@ export interface ScoreAssignment {
   points: number;
 }
 
-export interface ScoreBreakdownRow {
+interface ScoreBreakdownRow {
   exam: string;
   grade: string;
   label: string;
@@ -47,7 +47,7 @@ export interface UniversityProgramsResponse {
   programs: UniversityProgram[];
 }
 
-export interface AmkSchool {
+interface AmkSchool {
   name: string;
   programmes: {
     cutoffs: CalculatorCutoff[];
@@ -79,7 +79,7 @@ export interface ExamInfo {
   label: string;
 }
 
-export interface ScoringSlot {
+interface ScoringSlot {
   count?: number;
   id: string;
   pool: string;
@@ -90,7 +90,7 @@ export interface ScoringModel {
   slots: ScoringSlot[];
 }
 
-export interface ScoringPool {
+interface ScoringPool {
   byExam?: Record<string, string>;
   byKind?: Record<string, string>;
 }
@@ -117,7 +117,7 @@ export interface ThresholdCatalog {
   rules: ThresholdRule[];
 }
 
-export interface CrosswalkMapping {
+interface CrosswalkMapping {
   // ponytail: route picker deferred; presence alone marks ineligible
   routes?: unknown[];
   scoringModelId?: string;
