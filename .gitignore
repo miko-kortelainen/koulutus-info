@@ -155,13 +155,11 @@ ideat.txt
 backend/pisterajat.csv
 backend/excel_prompt.txt
 frontend/src/pages/pistelaskuri/SCORE_CALCULATION.md
-/graphify-out
 */.codex
 */.agents
 */.claude
 .claude
 AGENTS.md
-/*/graphify-out
 ideat.md
 backend/amk-palaute.csv
 backend/yliopisto-palaute.csv
