@@ -63,6 +63,10 @@ under `frontend/public/data/`, for example `pisterajat-2026-kevat.json` and
 go run ./cmd/pisterajat --input path/to/pisterajat.csv --output-dir path/to/data
 ```
 
+The lukio averages at
+`frontend/public/data/pisterajat/lukio/lukio-keskiarvot-2026.json` are a separate manual import. This command does not
+generate them.
+
 The JSON preserves the CSV's order and groups each row as:
 
 ```json

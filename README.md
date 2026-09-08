@@ -8,10 +8,12 @@ I grew the site's audience without paid advertising. TikTok videos I made using 
 
 ### About
 
-Yhteishaku.app helps you explore Finnish higher education joint application data. The site includes:
+Yhteishaku.app helps you explore Finnish joint application data for higher education and upper secondary schools. The
+site includes:
 
 - Applicant numbers
 - Admission cutoffs
+- Upper secondary school admission averages
 - Degree programmes
 - Trends
 - A certificate-based admission score calculator
@@ -64,6 +66,9 @@ Run the required commands in `/backend` to update applicant numbers and degree p
 The generator updates `current_programs.json`, `schools.json` (institution catalog), joint-application applicant files under `frontend/public/data/hakijamäärät/` such as `hakijamaarat-2026-kevat.json` and `hakijamaarat-2025-syksy.json`, `meta.json` and `frontend/src/generated/dataManifest.ts`.
 
 Download admission cutoffs from Vipunen's public cutoff report and use Excel to convert the read-only pivot table into the CSV format required by the backend. Run the cutoff CLI to generate one file per joint application in `/frontend/public/data/`, such as `pisterajat-2026-kevat.json`.
+
+The 2026 upper secondary school averages are a separate, manually imported dataset at
+`frontend/public/data/pisterajat/lukio/lukio-keskiarvot-2026.json`. No backend command generates it.
 
 See the [backend README](./backend/README.md) for the data update commands and CSV format.
 

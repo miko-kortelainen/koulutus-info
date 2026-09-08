@@ -4,6 +4,7 @@ import {
   parseCurrentPrograms,
   parseHakijaprofiili,
   parseKoulutustarpeet,
+  parseLukioKeskiarvot,
   parseMeta,
   parseSchoolCatalog,
   parseStatistics,
@@ -128,6 +129,29 @@ test("rejects malformed nested cutoff data", () => {
   expect(() =>
     parseCutoffSchools([{ ...cutoffSchool, programmes: [{ ...programme, cutoffs: [cutoff] }] }], "pisterajat.json"),
   ).toThrow("Invalid data in pisterajat.json");
+});
+
+const lukioKeskiarvo = {
+  koulu: "Akaan lukio",
+  linja: "Lukion yleislinja",
+  alinKeskiarvo: 7,
+  yleislinja: true,
+};
+
+test("accepts valid lukio keskiarvot", () => {
+  expect(parseLukioKeskiarvot([lukioKeskiarvo], "lukio-keskiarvot.json")).toEqual([lukioKeskiarvo]);
+});
+
+test("rejects malformed lukio keskiarvot", () => {
+  expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, koulu: "" }], "lukio-keskiarvot.json")).toThrow(
+    "Invalid data in lukio-keskiarvot.json",
+  );
+  expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, alinKeskiarvo: Number.NaN }], "lukio-keskiarvot.json")).toThrow(
+    "Invalid data in lukio-keskiarvot.json",
+  );
+  expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, yleislinja: "true" }], "lukio-keskiarvot.json")).toThrow(
+    "Invalid data in lukio-keskiarvot.json",
+  );
 });
 
 test("rejects malformed nested student feedback", () => {
