@@ -32,6 +32,9 @@ pnpm run format                 # Format the src directory with Biome
 
 The backend tools write the frontend datasets into `public/data/`. Tygo generates `src/types.gen.ts` and `src/types/pisterajat.gen.ts`, while the data generator updates `src/generated/dataManifest.ts`. Do not edit these files by hand.
 
+The lukio averages are a separate manual dataset at
+`public/data/pisterajat/lukio/lukio-keskiarvot-2026.json`; the backend does not generate it.
+
 ### WebMCP
 
 `useWebMCP` from `use-webmcp-tool` registers one tool on each of `/pistelaskuri/`, `/koulutukset/` and `/hakijamaarat/`. The hook no-ops where `document.modelContext` is missing. Call sites live in those route `+Page.tsx` files.
@@ -51,6 +54,7 @@ flowchart LR
     generator --> json["public/data/*.json"]
     generator --> manifest["generated/dataManifest.ts"]
     cutoffCsv["cutoff CSV"] --> cutoffConverter["Go cutoff converter"] --> json
+    lukioImport["manual lukio averages import"] --> json
   end
 
   subgraph prerender["Vike prerender"]
@@ -100,6 +104,9 @@ flowchart TB
     cutoffIndex --> schoolCutoffs
     fieldCutoffs --> fieldCutoffParts["CutoffCard · Pagination"]
     fieldCutoffs --> schoolCutoffs
+    lukioIndex["/lukiot/<br/>LukiotPage"] --> lukioIndexParts["SearchInput · SortControl · LukioSchoolCard · Pagination"]
+    lukioIndex -. prerendered SEO pages .-> lukioSchool["/lukiot/:slug/<br/>LukioSchoolPage"]
+    lukioSchool --> lukioSchoolParts["Admission cutoff table"]
   end
 
   subgraph calculator["Score calculator"]

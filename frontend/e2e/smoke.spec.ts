@@ -1,5 +1,6 @@
 import { expect, type Page, test } from "@playwright/test";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
+import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
 import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS } from "@/config/yearOptions";
 
 test.describe.configure({ mode: "parallel" });
@@ -774,6 +775,21 @@ test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) =>
   const schoolAccordion = page.getByRole("region", { name: "Turun yliopisto" });
   await expect(schoolAccordion.getByRole("article").first()).toBeVisible();
   await expect(schoolAccordion.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
+});
+
+test("/lukiot: search expands school keskiarvot accordion", async ({ page }) => {
+  await page.goto("/lukiot/");
+  await expect(page.getByRole("heading", { level: 1, name: `Lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}` })).toBeVisible();
+
+  await page.getByRole("textbox", { name: "Hae lukiota tai linjaa" }).fill("Akaan lukio");
+  await page.getByRole("button", { name: "Akaan lukio" }).click();
+
+  const schoolPanel = page.getByRole("region", { name: "Akaan lukio" });
+  const card = schoolPanel.getByRole("article", { name: `Akaan lukio keskiarvot ${LUKIO_KESKIARVOT_YEAR}` });
+  await expect(card).toBeVisible();
+  await expect(card.getByText("Lukion yleislinja")).toBeVisible();
+  await expect(card.getByText("Alin hyväksytty").first()).toBeVisible();
+  await expect(card.getByText("7,00")).toBeVisible();
 });
 
 test("/trendit: loads trend cards", async ({ page }) => {

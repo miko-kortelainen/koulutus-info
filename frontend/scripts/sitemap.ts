@@ -1,5 +1,11 @@
 import { readdirSync, statSync, writeFileSync } from "node:fs";
-import { cutoffAlaNames, cutoffSchoolNames, feedbackSchoolNames, schoolNames } from "@/api/serverData";
+import {
+  cutoffAlaNames,
+  cutoffSchoolNames,
+  feedbackSchoolNames,
+  lukioSchoolNames,
+  schoolNames,
+} from "@/api/serverData";
 import { CURRENT_YEAR } from "@/config/yearOptions";
 import { slugify } from "@/lib/slug";
 import { guides } from "@/pages/oppaat/guides";
@@ -9,10 +15,16 @@ const latestModifiedDate = (files: string[]): string | undefined => {
   return new Date(Math.max(...files.map((file) => statSync(`public/data/${file}`).mtimeMs))).toISOString().slice(0, 10);
 };
 
-const cutoffFiles = readdirSync("public/data/pisterajat").map((file) => `pisterajat/${file}`);
+const cutoffFiles = readdirSync("public/data/pisterajat")
+  .filter((file) => file.endsWith(".json"))
+  .map((file) => `pisterajat/${file}`);
+const lukioKeskiarvotFiles = readdirSync("public/data/pisterajat/lukio")
+  .filter((file) => file.endsWith(".json"))
+  .map((file) => `pisterajat/lukio/${file}`);
 const currentStatisticsFile = `hakijamäärät/hakijamaarat-${CURRENT_YEAR.replace("_", "-")}.json`;
 const feedbackFiles = ["opiskelijapalaute/amk-palaute.json", "opiskelijapalaute/yliopisto-palaute.json"];
 const cutoffsLastmod = latestModifiedDate(cutoffFiles);
+const lukioKeskiarvotLastmod = latestModifiedDate(lukioKeskiarvotFiles);
 const feedbackLastmod = latestModifiedDate(feedbackFiles);
 const statisticsLastmod = latestModifiedDate([currentStatisticsFile]);
 const profiliLastmod = latestModifiedDate(
@@ -29,7 +41,14 @@ const schoolsLastmod = latestModifiedDate([
   ...feedbackFiles,
 ]);
 
-const hubPaths = new Set(["/pistelaskuri/", "/pisterajat/", "/hakijamaarat/", "/koulutukset/", "/oppaat/"]);
+const hubPaths = new Set([
+  "/pistelaskuri/",
+  "/pisterajat/",
+  "/lukiot/",
+  "/hakijamaarat/",
+  "/koulutukset/",
+  "/oppaat/",
+]);
 const utilityPaths = new Set(["/asenna/", "/tietosuojaseloste/"]);
 const guideLastmods = new Map(guides.map((guide) => [`/oppaat/${guide.slug}/`, guide.updated]));
 
@@ -38,7 +57,13 @@ const priorityFor = (path: string) => {
   if (hubPaths.has(path)) return "0.9";
   if (utilityPaths.has(path)) return "0.4";
   if (path === "/ukk/" || path === "/ennakointi/") return "0.6";
-  if ((path.startsWith("/koulut/") && path !== "/koulut/") || path.startsWith("/pisterajat/")) return "0.7";
+  if (
+    (path.startsWith("/koulut/") && path !== "/koulut/") ||
+    path.startsWith("/pisterajat/") ||
+    (path.startsWith("/lukiot/") && path !== "/lukiot/")
+  ) {
+    return "0.7";
+  }
   return "0.8";
 };
 
@@ -50,6 +75,7 @@ const lastmodFor = (path: string) => {
   if (path === "/pistelaskuri/" || path.startsWith("/pisterajat/") || path.endsWith("/pisterajat/")) {
     return cutoffsLastmod;
   }
+  if (path === "/lukiot/" || path.startsWith("/lukiot/")) return lukioKeskiarvotLastmod;
   if (path === "/koulut/" || path.startsWith("/koulut/")) return schoolsLastmod;
   if (path === "/ennakointi/") {
     return latestModifiedDate(["ennakointi/koulutustarpeet.json"]);
@@ -66,6 +92,8 @@ const paths = [
   "/pistelaskuri/",
   "/pisterajat/",
   ...cutoffAlaNames().map((name) => `/pisterajat/${slugify(name)}/`),
+  "/lukiot/",
+  ...lukioSchoolNames().map((name) => `/lukiot/${slugify(name)}/`),
   "/oppaat/",
   ...guides.map((guide) => `/oppaat/${guide.slug}/`),
   "/koulut/",

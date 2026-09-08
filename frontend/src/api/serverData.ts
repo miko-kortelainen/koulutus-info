@@ -3,16 +3,19 @@ import {
   type FeedbackMaxScore,
   type EnnakointiKoulutustarpeet,
   type HakijaprofiiliResponse,
+  type LukioKeskiarvoEntry,
   parseCutoffSchools,
   parseCurrentPrograms,
   parseHakijaprofiili,
   parseKoulutustarpeet,
+  parseLukioKeskiarvot,
   parseMeta,
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
   type StudentFeedback,
 } from "@/api/dataValidation";
+import { LUKIO_KESKIARVOT_DATA_PATH } from "@/config/lukioKeskiarvot";
 import {
   type CutoffRound,
   compareCutoffRounds,
@@ -73,6 +76,7 @@ export const availableCutoffRounds = (): CutoffRound[] =>
     ...new Set(
       fs
         .readdirSync(`${process.cwd()}/public/data/pisterajat`)
+        .filter((filename) => filename.endsWith(".json"))
         .flatMap((filename) => cutoffRoundFromFilename(filename) ?? []),
     ),
   ].sort(compareCutoffRounds);
@@ -176,3 +180,22 @@ export const readKoulutustarpeet = (): EnnakointiKoulutustarpeet =>
 
 export const readHakijaprofiili = (round: HakijaprofiiliRound): HakijaprofiiliResponse =>
   readPublicData(`hakijaprofiili/hakijaprofiili-${round.replace("_", "-")}.json`, parseHakijaprofiili);
+
+export const readLukioKeskiarvot = (): LukioKeskiarvoEntry[] =>
+  readPublicData(LUKIO_KESKIARVOT_DATA_PATH, parseLukioKeskiarvot);
+
+export const lukioSchoolNames = (): string[] => {
+  const names = [...new Set(readLukioKeskiarvot().map((entry) => entry.koulu))].sort((a, b) =>
+    a.localeCompare(b, "fi"),
+  );
+  assertNoSlugCollisions(names, "Lukio");
+  return names;
+};
+
+export const resolveLukioSchool = (slug: string): string | undefined =>
+  lukioSchoolNames().find((name) => slugify(name) === slug);
+
+export const readLukioKeskiarvotForSchool = (schoolName: string): LukioKeskiarvoEntry[] =>
+  readLukioKeskiarvot()
+    .filter((entry) => entry.koulu === schoolName)
+    .sort((a, b) => a.alinKeskiarvo - b.alinKeskiarvo || a.linja.localeCompare(b.linja, "fi"));
