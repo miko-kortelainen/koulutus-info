@@ -111,7 +111,7 @@ export default function LandingPage() {
       position="relative"
       pt={{
         base: `calc(${HEADER_HEIGHT} + 1rem)`,
-        md: `calc(${HEADER_HEIGHT} + 3rem)`,
+        md: `calc(${HEADER_HEIGHT} + 6dvh)`,
         lg: `calc(${HEADER_HEIGHT} + 1.5rem)`,
       }}
     >
@@ -120,7 +120,7 @@ export default function LandingPage() {
         display="flex"
         flex={1}
         flexDirection="column"
-        justifyContent="center"
+        justifyContent={{ base: "center", md: "flex-start", lg: "center" }}
         margin="0 auto"
         maxW="65rem"
         minH={0}
