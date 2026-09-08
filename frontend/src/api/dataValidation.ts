@@ -195,6 +195,25 @@ export const parseSchoolCatalog = (value: unknown, source: string): SchoolCatalo
 export const parseCutoffSchools = (value: unknown, source: string): CutoffSchool[] =>
   parseArray(value, isCutoffSchool, source);
 
+export interface LukioKeskiarvoEntry {
+  koulu: string;
+  linja: string;
+  alinKeskiarvo: number;
+  yleislinja: boolean;
+}
+
+const isNonEmptyString = (value: unknown): value is string => isString(value) && value !== "";
+
+const isLukioKeskiarvoEntry = (value: unknown): value is LukioKeskiarvoEntry =>
+  isRecord(value) &&
+  isNonEmptyString(value.koulu) &&
+  isNonEmptyString(value.linja) &&
+  isNumber(value.alinKeskiarvo) &&
+  typeof value.yleislinja === "boolean";
+
+export const parseLukioKeskiarvot = (value: unknown, source: string): LukioKeskiarvoEntry[] =>
+  parseArray(value, isLukioKeskiarvoEntry, source);
+
 export const parseStudentFeedback = (
   value: unknown,
   source: string,
