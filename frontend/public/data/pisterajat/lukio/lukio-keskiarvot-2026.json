@@ -1314,28 +1314,28 @@
     "yleislinja": true
   },
   {
-    "koulu": "Kouvolan Yhteislyseo, Kuusankosken toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kouvolan Yhteislyseo, Kuusankosken toimipiste",
+    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.5,
     "yleislinja": true
   },
   {
-    "koulu": "Kouvolan Yhteislyseo, Kuusankosken toimipiste",
+    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
     "linja": "Lukion Studies in English -linja",
     "alinKeskiarvo": 8.54,
     "yleislinja": false
   },
   {
-    "koulu": "Kouvolan Yhteislyseo, Kuusankosken toimipiste",
+    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
     "linja": "Lukion urheilulinja",
     "alinKeskiarvo": 11.2,
     "yleislinja": false
+  },
+  {
+    "koulu": "Kouvolan Yhteislyseo, Kuusankosken toimipiste",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.33,
+    "yleislinja": true
   },
   {
     "koulu": "Kristiinankaupungin lukio",
