@@ -16,3 +16,5 @@ export const STATISTICS_ROUNDS = [
 ] as const;
 export const CURRENT_STATISTICS_ROUND = "2026_syksy";
 export const HAKIJAPROFIILI_ROUNDS = ["2026_kevat", "2025_syksy"] as const;
+export const PROGRAMME_ROUNDS = ["2027_kevat_1", "2027_kevat_2"] as const;
+export const CURRENT_PROGRAMME_ROUND = "2027_kevat_1";
