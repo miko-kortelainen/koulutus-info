@@ -191,6 +191,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/lukiot/elias-koulun-lukio/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/lukiot/elisenvaaran-lukio/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -210,6 +216,12 @@
   </url>
   <url>
     <loc>https://yhteishaku.app/lukiot/erkon-yhteiskoulu/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/espoon-steinerkoulun-lukio/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -509,7 +521,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/lukiot/ita-suomen-suomalais-venalainen-koulu/</loc>
+    <loc>https://yhteishaku.app/lukiot/ita-suomen-suomalais-venalainen-koulu-imatra/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/ita-suomen-suomalais-venalainen-koulu-joensuu/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/ita-suomen-suomalais-venalainen-koulu-lappeenranta/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -533,7 +557,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/lukiot/janakkalan-lukio/</loc>
+    <loc>https://yhteishaku.app/lukiot/janakkalan-lukio-tervakosken-toimipiste/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/janakkalan-lukio-turengin-toimipiste/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1043,7 +1073,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/lukiot/lappeenrannan-lukio/</loc>
+    <loc>https://yhteishaku.app/lukiot/lappeenrannan-lukio-kimpisen-toimipiste/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/lappeenrannan-lukio-lyseon-toimipiste/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1301,7 +1337,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/lukiot/nurmijarven-lukio/</loc>
+    <loc>https://yhteishaku.app/lukiot/nurmijarven-lukio-kirkonkylan-toimipiste/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/nurmijarven-lukio-rajamaen-toimipiste/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1343,7 +1385,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/lukiot/oulun-lyseon-lukio-tyrnava/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/lukiot/oulun-normaalikoulu/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/oulun-steinerkoulu/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1967,6 +2021,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://yhteishaku.app/lukiot/turun-steiner-koulu/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://yhteishaku.app/lukiot/turun-suomalaisen-yhteiskoulun-lukio/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -1979,7 +2039,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/lukiot/tuusulan-lukio/</loc>
+    <loc>https://yhteishaku.app/lukiot/tuusulan-lukio-hyrylan-toimipiste/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/tuusulan-lukio-jokelan-toimipiste/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/tuusulan-lukio-kellokosken-toimipiste/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2040,6 +2112,12 @@
   </url>
   <url>
     <loc>https://yhteishaku.app/lukiot/vammalan-lukio/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/lukiot/vantaan-seudun-steinerkoulun-lukio/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
