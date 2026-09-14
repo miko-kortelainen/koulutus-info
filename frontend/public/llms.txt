@@ -44,6 +44,7 @@ Tietojen tulkinta:
 - [Nykyisen yhteishaun koulutukset](https://yhteishaku.app/data/current_programs.json): Koulutusten toteutustiedot
 - [Korkeakoulut](https://yhteishaku.app/data/schools.json): Oppilaitosluettelo
 - [Hakijamäärät, kevät 2026](https://yhteishaku.app/data/hakijamäärät/hakijamaarat-2026-kevat.json): Hakijamäärien aineisto; tilastokierros `2026_kevat`
+- [Hakijamäärät, syksy 2026](https://yhteishaku.app/data/hakijamäärät/hakijamaarat-2026-syksy.json): Hakijamäärien aineisto; tilastokierros `2026_syksy`
 - [AMK-pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/pisterajat-2026-kevat-amk.json): Ammattikorkeakoulujen alimmat hyväksytyt pisteet valintatavoittain
 - [Yliopistojen pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/pisterajat-2026-kevat-yliopisto.json): Yliopistojen alimmat hyväksytyt pisteet valintatavoittain
 - [Lukioiden keskiarvorajat 2026](https://yhteishaku.app/data/pisterajat/lukio/lukio-keskiarvot-2026.json): Lukioiden alimmat hyväksytyt keskiarvot
