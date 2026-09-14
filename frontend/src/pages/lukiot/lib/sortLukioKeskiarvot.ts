@@ -6,7 +6,10 @@ const schoolCollator = new Intl.Collator("fi");
 
 export function sortLukioLinjat(entries: LukioKeskiarvoEntry[]): LukioKeskiarvoEntry[] {
   return [...entries].sort(
-    (a, b) => Number(b.yleislinja) - Number(a.yleislinja) || a.alinKeskiarvo - b.alinKeskiarvo || a.linja.localeCompare(b.linja, "fi"),
+    (a, b) =>
+      Number(b.yleislinja) - Number(a.yleislinja) ||
+      a.alinKeskiarvo - b.alinKeskiarvo ||
+      a.linja.localeCompare(b.linja, "fi"),
   );
 }
 

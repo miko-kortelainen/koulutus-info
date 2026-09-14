@@ -6,11 +6,23 @@ import { LUKIO_KUNTA_ALL, uniqueLukioKunnat } from "@/pages/lukiot/lib/lukioKunn
 import { type LukioSortOption, parseOmaKeskiarvo } from "@/pages/lukiot/lib/sortLukioKeskiarvot";
 
 const entries: LukioKeskiarvoEntry[] = [
-  { kunta: "Vårdö", koulu: "Örnsköldsviks gymnasium", linja: "Gymnasiets allmänna linje", alinKeskiarvo: 7.5, yleislinja: true },
+  {
+    kunta: "Vårdö",
+    koulu: "Örnsköldsviks gymnasium",
+    linja: "Gymnasiets allmänna linje",
+    alinKeskiarvo: 7.5,
+    yleislinja: true,
+  },
   { kunta: "Äänekoski", koulu: "Äänekosken lukio", linja: "Lukion yleislinja", alinKeskiarvo: 7.0, yleislinja: true },
   { kunta: "Akaa", koulu: "Akaan lukio", linja: "Lukion yleislinja", alinKeskiarvo: 7.0, yleislinja: true },
   { kunta: "Akaa", koulu: "Akaan lukio", linja: "Lukion urheilulinja", alinKeskiarvo: 15.83, yleislinja: false },
-  { kunta: "Brändö", koulu: "Brändö gymnasium", linja: "Gymnasiets allmänna linje", alinKeskiarvo: 8.33, yleislinja: true },
+  {
+    kunta: "Brändö",
+    koulu: "Brändö gymnasium",
+    linja: "Gymnasiets allmänna linje",
+    alinKeskiarvo: 8.33,
+    yleislinja: true,
+  },
   { kunta: "Akaa", koulu: "Erityislukio", linja: "Lukion urheilulinja", alinKeskiarvo: 12, yleislinja: false },
   { kunta: "Helsinki", koulu: "Steiner-lukio", linja: "Lukion yleislinja", alinKeskiarvo: 8.0, yleislinja: true },
   { kunta: "Espoo", koulu: "Steiner-lukio", linja: "Lukion urheilulinja", alinKeskiarvo: 14.0, yleislinja: false },
@@ -117,13 +129,15 @@ test("filters schools by kunta and keeps only matching linjat", () => {
     "Erityislukio",
   ]);
   expect(names(filterLukioSchools(entries, "", null, true, "school_asc", "Brändö"))).toEqual(["Brändö gymnasium"]);
-  expect(names(filterLukioSchools(entries, "", null, true, "school_asc", "Vårdö"))).toEqual(["Örnsköldsviks gymnasium"]);
-  expect(filterLukioSchools(entries, "", null, true, "school_asc", "Helsinki")[0]?.entries.map((entry) => entry.linja)).toEqual([
-    "Lukion yleislinja",
+  expect(names(filterLukioSchools(entries, "", null, true, "school_asc", "Vårdö"))).toEqual([
+    "Örnsköldsviks gymnasium",
   ]);
-  expect(filterLukioSchools(entries, "", null, true, "school_asc", "Espoo")[0]?.entries.map((entry) => entry.linja)).toEqual([
-    "Lukion urheilulinja",
-  ]);
+  expect(
+    filterLukioSchools(entries, "", null, true, "school_asc", "Helsinki")[0]?.entries.map((entry) => entry.linja),
+  ).toEqual(["Lukion yleislinja"]);
+  expect(
+    filterLukioSchools(entries, "", null, true, "school_asc", "Espoo")[0]?.entries.map((entry) => entry.linja),
+  ).toEqual(["Lukion urheilulinja"]);
   expect(names(filterLukioSchools(entries, "Akaa", null, true, "school_asc", "Brändö"))).toEqual([]);
   expect(names(filterLukioSchools(entries, "", null, true, "school_asc", LUKIO_KUNTA_ALL))).toHaveLength(6);
 });

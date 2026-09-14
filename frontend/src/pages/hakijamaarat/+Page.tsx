@@ -18,7 +18,10 @@ import PageIntro from "@/layout/PageIntro";
 import type { StatisticsEntry } from "@/types.gen";
 import DegreeStatsCardSkeleton from "@/pages/hakijamaarat/components/DegreeStatsCardSkeleton";
 import SortControl from "@/pages/hakijamaarat/components/SortControl";
-import useFilteredStatistics, { filterStatistics, toCompactStatistics } from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
+import useFilteredStatistics, {
+  filterStatistics,
+  toCompactStatistics,
+} from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
 import type { HakijamaaratPageData } from "@/pages/hakijamaarat/+data";
 import { formatStatisticsUpdatedAt } from "@/pages/hakijamaarat/lib/formatStatisticsUpdatedAt";
 import type { SortOption } from "@/pages/hakijamaarat/lib/sortStatistics";
@@ -117,9 +120,16 @@ export default function StatsListPage() {
       type: "object",
       properties: {
         haku: { type: "string", description: "Vapaa haku nimen tai koulun perusteella." },
-        vuosi: { type: "string", enum: YEAR_OPTIONS.map((option) => option.value), description: "Tilastokierros, esimerkiksi 2026_kevat." },
+        vuosi: {
+          type: "string",
+          enum: YEAR_OPTIONS.map((option) => option.value),
+          description: "Tilastokierros, esimerkiksi 2026_kevat.",
+        },
         jarjestys: { type: "string", enum: [...SORT_VALUES] },
-        sektori: { type: "array", items: { type: "string", enum: ["Yliopistokoulutus", "Ammattikorkeakoulukoulutus"] } },
+        sektori: {
+          type: "array",
+          items: { type: "string", enum: ["Yliopistokoulutus", "Ammattikorkeakoulukoulutus"] },
+        },
         koulutusaste: { type: "array", items: { type: "string" } },
         koulutusala: { type: "array", items: { type: "string" } },
         kieli: { type: "array", items: { type: "string" } },
