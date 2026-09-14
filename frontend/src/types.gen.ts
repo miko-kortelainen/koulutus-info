@@ -13,8 +13,12 @@ export interface VipunenConfig {
   hakutapa: string;
 }
 export interface OpintopolkuConfig {
-  yhteishakuOid: string;
+  haut: OpintopolkuHaku[];
   alkamisajankohdat: string[];
+}
+export interface OpintopolkuHaku {
+  id: string;
+  oid: string;
 }
 
 //////////
@@ -26,7 +30,10 @@ export interface Meta {
   currentStatisticsRound: string;
   statisticsUpdatedAt?: string /* RFC3339 */;
   programmesUpdatedAt?: string /* RFC3339 */;
-  programmesYhteishakuOid?: string;
+  /**
+   * ProgrammesHaut[0] is the default /koulutukset wave; the manifest derives PROGRAMME_ROUNDS from it.
+   */
+  programmesHaut?: OpintopolkuHaku[];
 }
 
 //////////
@@ -62,7 +69,7 @@ export interface LanguageStrings {
   en?: string;
 }
 /**
- * CurrentProgramsResponse is current_programs.json:
+ * CurrentProgramsResponse is one joint-application programme file:
  * a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
  */
 export type CurrentProgramsResponse = KoulutusEntry[];
