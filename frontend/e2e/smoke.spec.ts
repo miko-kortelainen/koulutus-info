@@ -101,6 +101,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
     "href",
     "/hakijamaarat/",
   );
+  await expect(page.getByText("Kevään 2027 ensimmäiseen yhteishakuun")).toBeVisible();
 
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
