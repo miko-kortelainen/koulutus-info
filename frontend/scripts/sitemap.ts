@@ -4,8 +4,10 @@ import {
   cutoffSchoolNames,
   feedbackSchoolNames,
   lukioSchoolNames,
+  programmeDataFile,
   schoolNames,
 } from "@/api/serverData";
+import { PROGRAMME_ROUNDS } from "@/config/programmeRounds";
 import { CURRENT_YEAR } from "@/config/yearOptions";
 import { slugify } from "@/lib/slug";
 import { guides } from "@/pages/oppaat/guides";
@@ -32,10 +34,11 @@ const profiliLastmod = latestModifiedDate(
     .filter((file) => file.endsWith(".json"))
     .map((file) => `hakijaprofiili/${file}`),
 );
-const programmesLastmod = latestModifiedDate(["current_programs.json", ...cutoffFiles]);
+const programmeFiles = PROGRAMME_ROUNDS.map(programmeDataFile);
+const programmesLastmod = latestModifiedDate([...programmeFiles, ...cutoffFiles]);
 const schoolsLastmod = latestModifiedDate([
   "schools.json",
-  "current_programs.json",
+  ...programmeFiles,
   currentStatisticsFile,
   ...cutoffFiles,
   ...feedbackFiles,

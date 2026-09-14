@@ -3,14 +3,23 @@ import { useMemo, useState } from "react";
 import { useWebMCP } from "use-webmcp-tool";
 import { useData } from "vike-react/useData";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
+import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
 import SearchInput from "@/components/SearchInput";
+import {
+  CURRENT_PROGRAMME_ROUND,
+  PROGRAMME_ROUND_OPTIONS,
+  PROGRAMME_ROUNDS,
+  programmeRoundIntro,
+  type ProgrammeRound,
+} from "@/config/programmeRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import type { CurrentProgramsResponse } from "@/types.gen";
 import useFilteredDegrees, { filterDegrees } from "@/pages/koulutukset/hooks/useFilteredDegrees";
+import type { KoulutuksetPageData } from "@/pages/koulutukset/+data";
+import type { CurrentProgramsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
 
@@ -31,41 +40,43 @@ function stringSet(value: unknown) {
   return new Set(Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : []);
 }
 
+function isProgrammeRound(value: unknown): value is ProgrammeRound {
+  return PROGRAMME_ROUNDS.some((round) => round === value);
+}
+
+function flattenToteutukset(programmes: CurrentProgramsResponse) {
+  return programmes.flatMap((k) =>
+    k.toteutukset.map((t) => ({ ...t, sektori: k.sektori, tutkintotaso: k.tutkintotaso })),
+  );
+}
+
 export default function SchoolsListPage() {
-  const data = useData<CurrentProgramsResponse>();
+  const data = useData<KoulutuksetPageData>();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedRound, setSelectedRound] = useState<ProgrammeRound>(CURRENT_PROGRAMME_ROUND);
   const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
   const [selectedKunnat, setSelectedKunnat] = useState<Set<string>>(new Set());
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
   const [selectedTasot, setSelectedTasot] = useState<Set<string>>(new Set());
   const [selectedKoulutusalat, setSelectedKoulutusalat] = useState<Set<string>>(new Set());
-  const toteutukset = useMemo(
-    () =>
-      data.flatMap((k) =>
-        k.toteutukset.map((t) => ({
-          ...t,
-          sektori: k.sektori,
-          tutkintotaso: k.tutkintotaso,
-        })),
-      ),
-    [data],
-  );
+  const programmes = data[selectedRound];
+  const toteutukset = useMemo(() => flattenToteutukset(programmes), [programmes]);
   const sektoriCollection = useMemo(
     () =>
       toCollection(
-        data.map((k) => k.sektori),
+        programmes.map((k) => k.sektori),
         (s) => SEKTORI_LABELS[s] ?? s,
       ),
-    [data],
+    [programmes],
   );
   const tasoCollection = useMemo(
     () =>
       toCollection(
-        data.map((k) => k.tutkintotaso),
+        programmes.map((k) => k.tutkintotaso),
         (t) => TASO_LABELS[t] ?? t,
       ),
-    [data],
+    [programmes],
   );
   const kuntaCollection = useMemo(() => toCollection(toteutukset.flatMap((t) => t.kunnat)), [toteutukset]);
   const schoolCollection = useMemo(() => toCollection(toteutukset.map((t) => t.oppilaitosNimi.fi)), [toteutukset]);
@@ -87,11 +98,16 @@ export default function SchoolsListPage() {
   useWebMCP({
     name: "search_koulutukset",
     description:
-      "Hakee ja suodattaa yhteishaun koulutuksia. Asettaa sivun haun ja suodattimet ja palauttaa osumat. Sektori: yo tai amk. Koulutusaste: alempi tai ylempi.",
+      "Hakee ja suodattaa yhteishaun koulutuksia. Asettaa sivun haun, yhteishaun ja suodattimet ja palauttaa osumat. Sektori: yo tai amk. Koulutusaste: alempi tai ylempi. Yhteishaku muodossa 2027_kevat_1.",
     inputSchema: {
       type: "object",
       properties: {
         haku: { type: "string", description: "Vapaa haku nimen tai koulun perusteella." },
+        yhteishaku: {
+          type: "string",
+          enum: [...PROGRAMME_ROUNDS],
+          description: "Yhteishakukierros, esimerkiksi 2027_kevat_1.",
+        },
         sektori: { type: "array", items: { type: "string", enum: ["yo", "amk"] } },
         koulutusaste: { type: "array", items: { type: "string", enum: ["alempi", "ylempi"] } },
         koulutusala: { type: "array", items: { type: "string" }, description: "OKM-koulutusala, täsmällinen nimi." },
@@ -102,19 +118,21 @@ export default function SchoolsListPage() {
     execute: (args: unknown) => {
       const input = isRecord(args) ? args : {};
       const haku = typeof input.haku === "string" ? input.haku : "";
+      const round = isProgrammeRound(input.yhteishaku) ? input.yhteishaku : selectedRound;
       const sektorit = stringSet(input.sektori);
       const tasot = stringSet(input.koulutusaste);
       const alat = stringSet(input.koulutusala);
       const kunnat = stringSet(input.kunta);
       const koulut = stringSet(input.koulu);
       setSearchTerm(haku);
+      setSelectedRound(round);
       setSelectedSektorit(sektorit);
       setSelectedTasot(tasot);
       setSelectedKoulutusalat(alat);
       setSelectedKunnat(kunnat);
       setSelectedSchools(koulut);
       setPage(1);
-      const items = filterDegrees(toteutukset, haku, sektorit, kunnat, koulut, tasot, alat);
+      const items = filterDegrees(flattenToteutukset(data[round]), haku, sektorit, kunnat, koulut, tasot, alat);
       return {
         total: items.length,
         items: items.map((t) => ({
@@ -131,6 +149,22 @@ export default function SchoolsListPage() {
 
   const sortControls = (
     <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
+      <OptionSelect
+        ariaLabel="Yhteishaku"
+        items={PROGRAMME_ROUND_OPTIONS}
+        onChange={(round) => {
+          setSelectedRound(round);
+          setPage(1);
+          setSelectedSektorit(new Set());
+          setSelectedTasot(new Set());
+          setSelectedKoulutusalat(new Set());
+          setSelectedKunnat(new Set());
+          setSelectedSchools(new Set());
+        }}
+        placeholder="Valitse yhteishaku"
+        size="sm"
+        value={selectedRound}
+      />
       <SearchInput
         onChange={(value) => {
           setSearchTerm(value);
@@ -191,7 +225,7 @@ export default function SchoolsListPage() {
 
   return (
     <>
-      <PageIntro description="Korkeakoulujen syksyn 2026 yhteishaussa olevat toteutukset." title="Koulutukset" />
+      <PageIntro description={programmeRoundIntro(selectedRound)} title="Koulutukset" />
       <PageContainer align="flex-start">
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
           {sortControls}
