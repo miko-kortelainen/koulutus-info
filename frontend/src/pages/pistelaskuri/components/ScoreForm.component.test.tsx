@@ -58,6 +58,28 @@ test("submits YO grades to local calculators and tracks success", async () => {
   expect(event).toHaveBeenCalledWith("calculate_score");
 });
 
+test("valintatapa tabs expose ID references without whitespace", async () => {
+  const onModeChange = vi.fn();
+  const user = userEvent.setup();
+  renderWithChakra(<ScoreForm onModeChange={onModeChange} onSubmit={vi.fn()} round="2026-kevat" />);
+
+  const yoTab = screen.getByRole("tab", { name: "YO" });
+  const yoControls = yoTab.getAttribute("aria-controls");
+  expect(yoTab.id).toMatch(/^\S+$/);
+  expect(yoControls).toMatch(/^\S+$/);
+  expect(document.getElementById(yoControls ?? "")).toHaveAttribute("role", "tabpanel");
+
+  await user.click(screen.getByRole("tab", { name: "AMM" }));
+  expect(onModeChange).toHaveBeenCalledWith("Todistusvalinta (AMM)");
+
+  const ammTab = screen.getByRole("tab", { name: "AMM" });
+  const ammControls = ammTab.getAttribute("aria-controls");
+  expect(ammTab.id).toMatch(/^\S+$/);
+  expect(ammControls).toMatch(/^\S+$/);
+  expect(document.getElementById(ammControls ?? "")).toHaveAttribute("role", "tabpanel");
+  expect(screen.getByRole("textbox", { name: "Tutkinnon painotettu keskiarvo" })).toBeVisible();
+});
+
 test("applied YO grades show after storage hydrate", async () => {
   renderWithChakra(
     <ScoreForm
