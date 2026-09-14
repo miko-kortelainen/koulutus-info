@@ -12,6 +12,11 @@ type VipunenConfig struct {
 }
 
 type OpintopolkuConfig struct {
-	YhteishakuOID     string   `json:"yhteishakuOid"`
-	Alkamisajankohdat []string `json:"alkamisajankohdat"`
+	Haut              []OpintopolkuHaku `json:"haut"`
+	Alkamisajankohdat []string          `json:"alkamisajankohdat"`
+}
+
+type OpintopolkuHaku struct {
+	ID  string `json:"id"`
+	OID string `json:"oid"`
 }
