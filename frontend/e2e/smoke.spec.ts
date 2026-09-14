@@ -792,6 +792,19 @@ test("/lukiot: search expands school keskiarvot accordion", async ({ page }) => 
   await expect(card.getByText("7,00")).toBeVisible();
 });
 
+test("/lukiot: kunta filter shows that municipality's lukiot", async ({ page }) => {
+  await page.goto("/lukiot/");
+  await expect(page.getByRole("heading", { level: 1, name: `Lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}` })).toBeVisible();
+
+  await selectOption(page, "Kunta", "Akaa");
+  await page.getByRole("button", { name: "Akaan lukio" }).click();
+
+  const card = page.getByRole("article", { name: `Akaan lukio keskiarvot ${LUKIO_KESKIARVOT_YEAR}` });
+  await expect(card).toBeVisible();
+  await expect(card.getByText("Lukion yleislinja")).toBeVisible();
+  await expect(card.getByText("7,00")).toBeVisible();
+});
+
 test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit/");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();

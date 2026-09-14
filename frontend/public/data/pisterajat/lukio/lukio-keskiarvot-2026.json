@@ -1,3605 +1,4206 @@
 [
   {
+    "kunta": "Akaa",
     "koulu": "Akaan lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
+    "kunta": "Akaa",
     "koulu": "Akaan lukio",
     "linja": "Lukion liikuntalinja",
     "alinKeskiarvo": 7.33,
     "yleislinja": false
   },
   {
+    "kunta": "Akaa",
     "koulu": "Akaan lukio",
     "linja": "Lukion kuvataidelinja",
     "alinKeskiarvo": 7.5,
     "yleislinja": false
   },
   {
+    "kunta": "Akaa",
     "koulu": "Akaan lukio",
     "linja": "Lukion kotitalouslinja",
     "alinKeskiarvo": 7.58,
     "yleislinja": false
   },
   {
+    "kunta": "Akaa",
     "koulu": "Akaan lukio",
     "linja": "Lukion musiikkilinja",
     "alinKeskiarvo": 8.0,
     "yleislinja": false
   },
   {
+    "kunta": "Akaa",
     "koulu": "Akaan lukio",
     "linja": "Lukion luonnontieteellis-matemaattinen linja",
     "alinKeskiarvo": 8.08,
     "yleislinja": false
   },
   {
+    "kunta": "Alajärvi",
     "koulu": "Alajärven lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.17,
     "yleislinja": true
   },
   {
+    "kunta": "Alavus",
     "koulu": "Alavuden lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 6.67,
     "yleislinja": true
   },
   {
-    "koulu": "Alppilan lukio, lukio",
+    "kunta": "Asikkala",
+    "koulu": "Vääksyn Yhteiskoulu",
     "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.75,
+    "alinKeskiarvo": 7.25,
     "yleislinja": true
   },
   {
-    "koulu": "Apollon yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.38,
-    "yleislinja": true
+    "kunta": "Asikkala",
+    "koulu": "Vääksyn Yhteiskoulu",
+    "linja": "Lukion liikuntalinja",
+    "alinKeskiarvo": 14.25,
+    "yleislinja": false
   },
   {
-    "koulu": "Arkadian yhteislyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
+    "kunta": "Asikkala",
+    "koulu": "Vääksyn Yhteiskoulu",
+    "linja": "Lukion ilmailulinja",
+    "alinKeskiarvo": 17.08,
+    "yleislinja": false
   },
   {
+    "kunta": "Askola",
     "koulu": "Askolan lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
-    "koulu": "Aviapoliksen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Björneborgs svenska samskola",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.23,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Björneborgs svenska samskola",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.64,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Borgå Gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Brändö gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Brändö gymnasium",
-    "linja": "Gymnasiets idrottslinje (särskild utbildningsuppgift)",
-    "alinKeskiarvo": 15.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Ekenäs gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Elisenvaaran lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Englantilainen koulu, lukio",
-    "linja": "Lukion englannin ja suomen kielen ja kulttuurin linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": false
-  },
-  {
+    "kunta": "Enontekiö",
     "koulu": "Enontekiön Erälukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.33,
     "yleislinja": true
   },
   {
-    "koulu": "Erkon yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Erkon yhteiskoulu",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.93,
-    "yleislinja": false
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Espoon yhteislyseo",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.5,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Espoonlahden lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.17,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Etelä-Tapiolan lukio",
     "linja": "IB-programme (special educational mission)",
     "alinKeskiarvo": 8.71,
     "yleislinja": false
   },
   {
+    "kunta": "Espoo",
     "koulu": "Etelä-Tapiolan lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.75,
     "yleislinja": true
   },
   {
-    "koulu": "Etu-Töölön lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Eurajoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Euran lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Evijärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.31,
-    "yleislinja": true
-  },
-  {
-    "koulu": "F.E. Sillanpään lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Forssan yhteislyseo",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Forssan yhteislyseo",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Forssan yhteislyseo",
-    "linja": "Lukion kuvataide- ja designlinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Gymnasiet Grankulla samskola",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 8.54,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Gymnasiet i Petalax",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Gymnasiet i Petalax",
-    "linja": "Gymnasiets tvärvetenskapliga linje",
-    "alinKeskiarvo": 7.15,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Gymnasiet Lärkan",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 8.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Haapajärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Haapaveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Halikon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Haminan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hangö gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hangö gymnasium",
-    "linja": "Gymnasiets ridlinje",
-    "alinKeskiarvo": 8.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Hangö gymnasium",
-    "linja": "Gymnasiets tennislinje",
-    "alinKeskiarvo": 8.38,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Hankasalmen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.23,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hankasalmen lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Hankoniemen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hankoniemen lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 7.85,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Harjavallan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.08,
-    "yleislinja": true
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Haukilahden lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.67,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Haukilahden lukio",
     "linja": "Lukion urheilulinja",
     "alinKeskiarvo": 15.08,
     "yleislinja": false
   },
   {
-    "koulu": "Haukiputaan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hausjärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Heinolan lukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Heinolan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Heinolan lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Heinäveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsinge gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin kielilukio",
-    "linja": "Lukion englannin- ja suomenkielinen linja",
-    "alinKeskiarvo": 8.14,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin kielilukio",
-    "linja": "Lukion kielet ja kansainvälisyys linja",
-    "alinKeskiarvo": 8.23,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin kielilukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.38,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin kuvataidelukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin kuvataidelukio",
-    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.58,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin luonnontiedelukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin luonnontiedelukio",
-    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.3,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin medialukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin medialukio",
-    "linja": "Lukion yhteiskunta- ja medialinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin normaalilyseo",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin Ranskalais-Suomalainen koulu",
-    "linja": "Lukion A-ranskan kielen linja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Ranskalais-Suomalainen koulu",
-    "linja": "Lukion A-ranskan kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 17.0,
-    "yleislinja": false
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Helsingin Rudolf Steiner -koulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Rudolf Steiner -koulu",
-    "linja": "Lukion esittävän taiteen linja",
-    "alinKeskiarvo": 12.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Rudolf Steiner -koulu, Elias-koulun lukio",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.4,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Rudolf Steiner -koulu, Espoon Steinerkoulun lukio",
     "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 7.47,
     "yleislinja": false
   },
   {
-    "koulu": "Helsingin Rudolf Steiner -koulu, Espoon Steinerkoulun lukio",
+    "kunta": "Espoo",
+    "koulu": "Helsingin Rudolf Steiner -koulu",
     "linja": "Lukion elokuvailmaisun linja",
     "alinKeskiarvo": 11.53,
     "yleislinja": false
   },
   {
-    "koulu": "Helsingin Rudolf Steiner -koulu, Vantaan seudun steinerkoulun lukio",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Rudolf Steiner -koulu, Vantaan seudun steinerkoulun lukio",
-    "linja": "Lukion historian ja yhteiskuntatieteiden linja",
-    "alinKeskiarvo": 7.29,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Suomalainen Yhteiskoulu",
-    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Suomalainen Yhteiskoulu",
-    "linja": "Lukion A-saksan kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.31,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Suomalainen Yhteiskoulu",
-    "linja": "Lukion A-ranskan kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.38,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Suomalainen Yhteiskoulu",
-    "linja": "Lukion lyhyiden vieraiden kielten linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Suomalainen Yhteiskoulu",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 12.6,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin Uusi yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.77,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin Uusi yhteiskoulu",
-    "linja": "Lukion kuvataidelinja",
-    "alinKeskiarvo": 9.19,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin yhteislyseo",
-    "linja": "Lukion skeittilinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin yhteislyseo",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Helsingin yhteislyseo",
-    "linja": "Lukion taito- ja taidelinja",
-    "alinKeskiarvo": 13.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Helsingin yliopiston Viikin normaalikoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Herttoniemen yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Honkajoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hyvinkään lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hyvinkään lukio",
-    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Hämeenlinnan lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Hämeenlinnan lyseon lukio",
-    "linja": "Lukion yrittäjyyslinja",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Hämeenlinnan lyseon lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 14.39,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Härmän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Iin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Iisalmen lyseo",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Iitin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ikaalisten lukio",
-    "linja": "Lukion arkkitehtuurilinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Ikaalisten lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ilmajoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ilomantsin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.23,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Imatran yhteislukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Imatran yhteislukio",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Itä-Suomen suomalais-venäläinen koulu, Imatra",
-    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 14.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Itä-Suomen suomalais-venäläinen koulu, Joensuu",
-    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Itä-Suomen suomalais-venäläinen koulu, Lappeenranta",
-    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Ivalon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Jakobstads gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Jakobstads gymnasium",
-    "linja": "Gymnasiets bildkonstlinje",
-    "alinKeskiarvo": 8.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Jakobstads gymnasium",
-    "linja": "Gymnasiets musiklinje",
-    "alinKeskiarvo": 8.14,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Jakobstads gymnasium",
-    "linja": "Gymnasiets idrottslinje",
-    "alinKeskiarvo": 12.2,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Jalasjärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Janakkalan lukio, Tervakosken toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Janakkalan lukio, Tervakosken toimipiste",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 18.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Janakkalan lukio, Turengin toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Janakkalan lukio, Turengin toimipiste",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 17.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Joensuun lyseon lukio",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Joensuun lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.38,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Joensuun yhteiskoulun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Joensuun yhteiskoulun lukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.71,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Joensuun yhteiskoulun lukio",
-    "linja": "Lukion musiikin ja ilmaisun linja",
-    "alinKeskiarvo": 15.77,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Joroisten lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Joutsan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Juankosken lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Juuan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Juuan lukio",
-    "linja": "Lukion salibandylinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Juvan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.45,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Jyväskylän Lyseon lukio, Harjun kampus, Jyväskylä",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Jyväskylän Lyseon lukio, Harjun kampus, Jyväskylä",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Jyväskylän Lyseon lukio, Harjun kampus, Jyväskylä",
-    "linja": "Lukion it-linja",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Jyväskylän normaalikoulu, yläkoulu ja lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Jyväskylän normaalikoulu, yläkoulu ja lukio",
-    "linja": "Lukion liikuntalinja",
-    "alinKeskiarvo": 12.44,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Jämsän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Järvenpään lukio",
-    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.09,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Järvenpään lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Järvenpään lukio",
-    "linja": "Lukion kuva- ja mediataidelinja",
-    "alinKeskiarvo": 9.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Järvenpään lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 10.23,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Järvenpään lukio",
-    "linja": "Lukion musiikki- ja tanssilinja",
-    "alinKeskiarvo": 11.5,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Järvenpään lukio",
-    "linja": "Lukion draama- ja teatterilinja",
-    "alinKeskiarvo": 12.15,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kaarinan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kajaanin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kajaanin lukio",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 11.8,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kalajoen lukio",
-    "linja": "Lukion kuvataidelinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kalajoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kalajoen lukio",
-    "linja": "Lukion kansainvälinen linja",
-    "alinKeskiarvo": 7.75,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kalajoen lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 8.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kalevan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kalevan lukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 10.12,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kallaveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kallaveden lukio",
-    "linja": "Lukion bisneslinja",
-    "alinKeskiarvo": 16.94,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kallion lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kallion lukio",
-    "linja": "Lukion ilmaisutaitolinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.12,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kangasalan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kangasalan lukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 16.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kangasniemen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kankaanpään Yhteislyseo",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.54,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kankaanpään Yhteislyseo",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kannuksen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kannuksen lukio",
-    "linja": "Lukion eläinlääketieteellinen linja",
-    "alinKeskiarvo": 8.06,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kannuksen lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 13.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Karhulan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Karhulan lukio",
-    "linja": "Lukion bisneslinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Karhulan lukio",
-    "linja": "Lukion matemaattis-teknologinen linja",
-    "alinKeskiarvo": 9.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Karis-Billnäs gymnasium",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.15,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Karjaan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Karkkilan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Karleby svenska gymnasium",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Karleby svenska gymnasium",
-    "linja": "Lukion liikuntalinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Karstulan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kastellin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kastellin lukio, Kastellin urheilulukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Katedralskolan i Åbo",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Katedralskolan i Åbo",
-    "linja": "Gymnasiets idrottslinje",
-    "alinKeskiarvo": 11.53,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kauhajoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kauhavan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kauniaisten lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kauniaisten lukio",
-    "linja": "Lukion bisneslinja",
-    "alinKeskiarvo": 8.94,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kaurialan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kaurialan lukio",
-    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.05,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kaurialan lukio",
-    "linja": "Lukion taidelinja",
-    "alinKeskiarvo": 17.75,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kaustisen musiikkilukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kaustisen musiikkilukio",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 10.62,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kemijärven lukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kemijärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.23,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kemin lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.79,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Keminmaan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kempeleen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Keravan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kerttulin lukio",
-    "linja": "Lukion ICT-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.18,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kerttulin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kerttulin lukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 14.89,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Keuruun yhteiskoulun lukio",
-    "linja": "Lukion liikuntalinja",
-    "alinKeskiarvo": 6.5,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Keuruun yhteiskoulun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Keuruun yhteiskoulun lukio",
-    "linja": "Lukion yrittäjyyslinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kiimingin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kimitoöns gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kimitoöns gymnasium",
-    "linja": "Gymnasiets marina linje",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kinnulan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kiteen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.31,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kiuruveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kiuruveden lukio",
-    "linja": "Lukion esittävän taiteen linja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kiuruveden lukio",
-    "linja": "Lukion luonnontieteellis-matemaattinen linja",
-    "alinKeskiarvo": 7.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kiuruveden lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 8.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kokemäen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kokkolan suomalainen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kokkolan suomalainen lukio",
-    "linja": "Lukion luonnontiede- ja teknologialinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kolarin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Konepajan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Konneveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.46,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kontiolahden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Korsholms gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.09,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kosken lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kotka Svenska Samskola",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 6.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kotkan lyseo",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
-    "linja": "Lukion Studies in English -linja",
-    "alinKeskiarvo": 8.54,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 11.2,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kouvolan Yhteislyseo, Kuusankosken toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kristiinankaupungin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kristiinankaupungin lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 14.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kristinestads gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 6.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kristinestads gymnasium",
-    "linja": "Gymnasiets ridlinje",
-    "alinKeskiarvo": 14.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kronoby gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kronoby gymnasium",
-    "linja": "Gymnasiets jakt- och naturlinje",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kronoby gymnasium",
-    "linja": "Gymnasiets flyglinje",
-    "alinKeskiarvo": 8.69,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuhmoisten yhtenäiskoulu, lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuhmoisten yhtenäiskoulu, lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.15,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuhmon yhteislukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuhmon yhteislukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 8.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kulosaaren yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kulosaaren yhteiskoulu",
-    "linja": "Lukion tiede- ja teknologialinja",
-    "alinKeskiarvo": 10.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kulosaaren yhteiskoulu",
-    "linja": "Lukion yhteiskunta- ja talouslinja",
-    "alinKeskiarvo": 11.63,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kulosaaren yhteiskoulu",
-    "linja": "Lukion englanninkielinen linja",
-    "alinKeskiarvo": 12.36,
-    "yleislinja": false
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Kuninkaantien lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.23,
     "yleislinja": true
   },
   {
-    "koulu": "Kuopion klassillinen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuopion klassillinen lukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.73,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuopion Lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuopion Lyseon lukio, IB-linja",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.85,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuopion taidelukio Lumit",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuopion taidelukio Lumit",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.79,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuopion taidelukio Lumit",
-    "linja": "Lukion tanssilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 14.38,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuopion taidelukio Lumit",
-    "linja": "Lukion ilmaisutaitolinja",
-    "alinKeskiarvo": 17.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuortaneen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuortaneen lukio, Kuortaneen urheilulukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.85,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kurikan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.64,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuusamon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kuusamon lukio",
-    "linja": "Lukion bisneslinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuusamon lukio",
-    "linja": "Lukion urheiluvalmennuslinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kuusamon lukio",
-    "linja": "Lukion luonto- ja ympäristölinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kyrkslätts gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.54,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kyrkslätts gymnasium",
-    "linja": "Gymnasiets företagarlinje",
-    "alinKeskiarvo": 8.19,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Kyrönmaan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kärsämäen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Kärsämäen lukio",
-    "linja": "Lukion taidelinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Laanilan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lahden lukio Gaudia, IB- linja",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lahden lukio Gaudia, kuvataide- ja muotoilulinja",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lahden lukio Gaudia, kuvataide- ja muotoilulinja",
-    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.07,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lahden lukio Gaudia, musiikkilinja",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.75,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lahden lyseo, lukion luonnontiede- ja teknologialinja (erityinen koulutustehtävä)",
-    "linja": "Lukion luonnontiede- ja teknologialinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.39,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lahden lyseo, urheilulinja (erityinen koulutustehtävä)",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.46,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lahden lyseo, urheilulinja (erityinen koulutustehtävä)",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.38,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lahden Rudolf Steiner-koulu, Lahti",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.53,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lahden Rudolf Steiner-koulu, Turku",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lahden yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lahden yhteiskoulu",
-    "linja": "Lukion yhteiskunta- ja talouslinja",
-    "alinKeskiarvo": 12.44,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Laihian lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Laitilan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lammin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lapinlahden Lukio ja Kuvataidelukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.15,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lapinlahden Lukio ja Kuvataidelukio, kuvataidelinja",
-    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lappajärven Geolukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lappeenrannan lukio, Kimpisen toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lappeenrannan lukio, Kimpisen toimipiste",
-    "linja": "Lukion yhteiskunta- ja talouslinja",
-    "alinKeskiarvo": 8.11,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lappeenrannan lukio, Lyseon toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lappeenrannan lukio, Lyseon toimipiste",
-    "linja": "Lukion luonnontieteellis-matemaattinen linja",
-    "alinKeskiarvo": 8.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lapuan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Laukaan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.45,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lauttakylän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lauttasaaren yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lauttasaaren yhteiskoulu",
-    "linja": "Lukion yrittäjyyden ja kansainvälisen liiketoiminnan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lempäälän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": true
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Leppävaaran lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.08,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Leppävaaran lukio",
     "linja": "Lukion urheilulinja",
     "alinKeskiarvo": 12.18,
     "yleislinja": false
   },
   {
-    "koulu": "Leppävirran lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Liedon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Liedon lukio",
-    "linja": "Lukion kansainvälinen linja",
-    "alinKeskiarvo": 13.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lieksan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Limingan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Limingan lukio",
-    "linja": "Lukion englannin- ja suomenkielinen linja",
-    "alinKeskiarvo": 11.88,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Linnankosken lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lohjan Yhteislyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lopen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Loviisan lukio, lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lovisa Gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lumon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Luostarivuoren Lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lyseonpuiston lukio",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.6,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lyseonpuiston lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Lyseonpuiston lukio",
-    "linja": "Lukion kuvataidelinja",
-    "alinKeskiarvo": 11.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Lyseonpuiston lukio",
-    "linja": "Lukion musiikki- ja tanssilinja",
-    "alinKeskiarvo": 12.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Madetojan musiikkilukio",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 10.85,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Martinlaakson lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Martinlaakson lukio",
-    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.37,
-    "yleislinja": false
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Matinkylän lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.5,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Matinkylän lukio",
     "linja": "Lukion kuvataidelinja",
     "alinKeskiarvo": 13.02,
     "yleislinja": false
   },
   {
+    "kunta": "Espoo",
     "koulu": "Mattlidens gymnasium",
     "linja": "Gymnasiets allmänna linje",
     "alinKeskiarvo": 7.5,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
+    "koulu": "Mattlidens gymnasium",
+    "linja": "IB-programme (special educational mission)",
+    "alinKeskiarvo": 8.57,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Espoo",
     "koulu": "Mattlidens gymnasium",
     "linja": "Gymnasiets idrottslinje",
     "alinKeskiarvo": 12.24,
     "yleislinja": false
   },
   {
-    "koulu": "Mattlidens gymnasium, IB-linjen",
-    "linja": "IB-programme (special educational mission)",
-    "alinKeskiarvo": 8.57,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Maunulan yhteiskoulu - Helsingin matematiikkalukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Maunulan yhteiskoulu - Helsingin matematiikkalukio",
-    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 11.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Merikarvian lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Mikkelin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.62,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Muhoksen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Munkkiniemen yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Munkkiniemen yhteiskoulu",
-    "linja": "Lukion luonnontiedelinja",
-    "alinKeskiarvo": 14.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Munkkiniemen yhteiskoulu",
-    "linja": "Lukion koripallolinja",
-    "alinKeskiarvo": 15.21,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Munkkiniemen yhteiskoulu",
-    "linja": "Lukion yhteiskunta- ja talouslinja",
-    "alinKeskiarvo": 15.55,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Muonion lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Muuramen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Mynämäen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Mynämäen lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Mäkelänrinteen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Mäkelänrinteen lukio, Mäkelänrinteen urheilulukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.65,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Mäntsälän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Mäntsälän lukio",
-    "linja": "Lukion yhteiskunta- ja talouslinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Mäntyharjun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Mäntän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Mäntän lukio",
-    "linja": "Lukion lääketieteellis- ja luonnontieteellinen linja",
-    "alinKeskiarvo": 8.42,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Naantalin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nakkilan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nilsiän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nivalan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nokian lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nousiaisten lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Novida - Ammattiopisto ja lukio, Loimaan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Novida - Ammattiopisto ja lukio, Loimaan lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 17.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Nurmeksen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nurmijärven lukio, Kirkonkylän toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nurmijärven lukio, Rajamäen toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nurmon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Nurmon lukio",
-    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.24,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Närpes gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 6.85,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Närpes gymnasium",
-    "linja": "Gymnasiets fotbollslinje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Närpes gymnasium",
-    "linja": "Gymnasiets musiklinje",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Närpes gymnasium",
-    "linja": "Gymnasiets matematisk-naturvetenskapliga linje",
-    "alinKeskiarvo": 7.31,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Närpes gymnasium",
-    "linja": "Gymnasiets danslinje",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Närpes gymnasium",
-    "linja": "Gymnasiets idrottslinje",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Oriveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Oriveden lukio",
-    "linja": "Lukion lentopallo- ja urheilulinja",
-    "alinKeskiarvo": 13.73,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Oriveden lukio",
-    "linja": "Lukion kirjoittajalinja",
-    "alinKeskiarvo": 15.67,
-    "yleislinja": false
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Otaniemen lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 9.17,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Otaniemen lukio",
     "linja": "Lukion teatteri- ja medialinja",
     "alinKeskiarvo": 16.27,
     "yleislinja": false
   },
   {
+    "kunta": "Espoo",
     "koulu": "Otaniemen lukio",
     "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 17.88,
     "yleislinja": false
   },
   {
-    "koulu": "Oulaisten lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Oulun Lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Oulun Lyseon lukio, IB-linja",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.6,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Oulun Lyseon lukio, Tyrnävä",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Oulun normaalikoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Oulun Suomalaisen Yhteiskoulun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Oulunkylän yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.62,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Oulunkylän yhteiskoulu",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 10.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Oulunkylän yhteiskoulu",
-    "linja": "Lukion luonnontiedelinja",
-    "alinKeskiarvo": 10.73,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Oulunsalon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ounasvaaran lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ounasvaaran lukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 12.49,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Outokummun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.55,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Padasjoen lukio",
-    "linja": "Lukion veneilylinja",
-    "alinKeskiarvo": 8.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Padasjoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.31,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Paimion lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Paltamon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Paraisten lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pargas svenska gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Parikkalan lukio",
-    "linja": "Lukion eläinlääketieteellinen linja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Parikkalan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Parolan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pedersöre gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pedersöre gymnasium",
-    "linja": "Gymnasiets idrottslinje",
-    "alinKeskiarvo": 8.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pellon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Perhon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Perniön lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Petäjäveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Petäjäveden lukio",
-    "linja": "Lukion tieto- ja ohjelmistotekniikan DI-linja",
-    "alinKeskiarvo": 9.42,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pieksämäen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pielaveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pietarsaaren lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pietarsaaren lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pihtiputaan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pihtiputaan lukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 6.58,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pihtiputaan lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 6.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pihtiputaan lukio",
-    "linja": "Lukion partio- ja johtajalinja",
-    "alinKeskiarvo": 6.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pihtiputaan lukio",
-    "linja": "Lukion lentopallolinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pihtiputaan lukio",
-    "linja": "Lukion kyberturvallisuuslinja",
-    "alinKeskiarvo": 9.58,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pirkkalan yhteislukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pohjois-Haagan yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pohjois-Haagan yhteiskoulu",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 14.2,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Polvijärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pomarkun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Porin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Porin lukio",
-    "linja": "Lukion ilmaisutaitolinja",
-    "alinKeskiarvo": 8.9,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Porin lukio",
-    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.47,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Porin lukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.41,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Porkkalan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Posion lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.38,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pudasjärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pudasjärven lukio",
-    "linja": "Lukion ilmailulinja",
-    "alinKeskiarvo": 15.3,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Punkalaitumen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Puolalanmäen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Puolalanmäen lukio",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Puolangan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.82,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pyhäjoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.31,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pyhäjärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pyhäselän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pyynikin lukio",
-    "linja": "Lukion englannin- ja suomenkielinen linja",
-    "alinKeskiarvo": 7.94,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pyynikin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pyynikin lukio",
-    "linja": "Lukion musiikki - ja musiikkiteatterilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Pälkäneen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Pälkäneen lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Raahen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Raision lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Raksilan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rantasalmen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rantasalmen lukio",
-    "linja": "Lukion musiikkiteatterilinja",
-    "alinKeskiarvo": 9.23,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Rantasalmen lukio",
-    "linja": "Lukion studiotekniikkalinja",
-    "alinKeskiarvo": 9.23,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Ranuan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rauman Lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rautalammin lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Rautalammin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rautavaaran lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rautjärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rautjärven lukio",
-    "linja": "Lukion oikeustieteellinen linja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Reisjärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ressun lukio",
-    "linja": "IB-programme (special educational mission)",
-    "alinKeskiarvo": 9.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Ressun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Riihimäen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Rudolf Steinerskolan i Helsingfors",
-    "linja": "Gymnasiets linje för steinerpedagogik (särskild utbildningsuppgift)",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Ruoveden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ruoveden lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 8.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Ruoveden lukio",
-    "linja": "Lukion eläinlääketieteellinen linja",
-    "alinKeskiarvo": 11.85,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Saarijärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sallan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Salon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sammon keskuslukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sammon keskuslukio",
-    "linja": "Lukion viestintälinja",
-    "alinKeskiarvo": 14.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Sammon keskuslukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.54,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Savitaipaleen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Savitaipaleen lukio",
-    "linja": "Lukion tennislinja",
-    "alinKeskiarvo": 9.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Savonlinnan lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Savonlinnan lyseon lukio",
-    "linja": "Lukion it-linja",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Savonlinnan lyseon lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 12.11,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Savonlinnan Taidelukio",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 11.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Savonlinnan Taidelukio",
-    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 11.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Savukosken lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Schildtin lukio, Viitaniemen kampus, Jyväskylä",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Schildtin lukio, Viitaniemen kampus, Jyväskylä",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 11.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Schildtin lukio, Viitaniemen kampus, Jyväskylä",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.8,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Seinäjoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sibbo gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sibelius-lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sibelius-lukio",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 15.54,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Sibelius-lukio",
-    "linja": "Lukion tanssilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 16.7,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Sievin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Siikajoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Siikajoen lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 7.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Siikalatvan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Siilinjärven lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Siilinjärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Simon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sipoon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sipoon lukio",
-    "linja": "Lukion luonnontieteellis-matemaattinen linja",
-    "alinKeskiarvo": 8.03,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Sodankylän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Someron lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sonkajärven  lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sotkamon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sotkamon lukio",
-    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 12.62,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Sotungin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.6,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sotungin lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 11.21,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Sulkavan lukio",
-    "linja": "Lukion yrittäjyyslinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Sulkavan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Suomalais-venäläinen koulu",
-    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Suomalais-venäläinen koulu",
-    "linja": "Lukion B3-venäjän kielen linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Suomen kristillinen yhteiskoulu",
-    "linja": "Lukion kristillinen linja",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Suomussalmen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Suonenjoen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Svenska privatskolan i Uleåborg",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Svenska samskolan i Tammerfors",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sysmän Lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Sysmän Lukio",
-    "linja": "Lukion eSport-linja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Säkylän seudun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Taavetin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.38,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Taivalkosken lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tammerkosken lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tammerkosken lukio",
-    "linja": "Lukion kuvataide- ja designlinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 14.34,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen klassillinen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tampereen klassillinen lukio",
-    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.31,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen lyseon lukio",
-    "linja": "Lukion yhteiskuntatiedelinja",
-    "alinKeskiarvo": 8.94,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen lyseon lukio, IB-linja (IB-lukio, IB Diploma Programme)",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tampereen lyseon lukio, IB-linja (IB-lukio, IB Diploma Programme)",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.85,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen steinerkoulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.42,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen steinerkoulu, Oulun steinerkoulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.03,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen teknillinen lukio",
-    "linja": "Lukion matemaattis-teknologinen linja",
-    "alinKeskiarvo": 7.64,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen teknillinen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tampereen yhteiskoulun lukio",
-    "linja": "Lukion ilmaisutaitolinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen yliopiston normaalikoulu",
-    "linja": "Lukion talous- ja elinkeinoelämä -linja",
-    "alinKeskiarvo": 9.06,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tampereen yliopiston normaalikoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tampereen yliopiston normaalikoulu",
-    "linja": "Lukion sirkustaiteen linja",
-    "alinKeskiarvo": 16.13,
-    "yleislinja": false
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Tapiolan lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 9.17,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Tapiolan lukio",
     "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 16.53,
     "yleislinja": false
   },
   {
-    "koulu": "Tervolan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.85,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Teuvan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tikkurilan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tikkurilan lukio",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 11.05,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tohmajärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Toholammin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Topeliusgymnasiet i Nykarleby",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 6.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Topeliusgymnasiet i Nykarleby",
-    "linja": "Gymnasiets innebandylinje",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tornion Yhteislyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tulliportin normaalikoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tulliportin normaalikoulu",
-    "linja": "Lukion matemaattis-luonnontieteellinen linja",
-    "alinKeskiarvo": 8.15,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Turun klassillinen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Turun klassillinen lukio",
-    "linja": "Lukion ilmaisutaitolinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 13.88,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Turun normaalikoulu, IB-linja",
-    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 8.53,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Turun normaalikoulu, Turun normaalikoulun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.64,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Turun Suomalaisen Yhteiskoulun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Turun Suomalaisen Yhteiskoulun lukio",
-    "linja": "Lukion merilinja",
-    "alinKeskiarvo": 9.0,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Turun Suomalaisen Yhteiskoulun lukio",
-    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 9.24,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tuusniemen lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 11.17,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
-    "linja": "Lukion kuvataidelinja",
-    "alinKeskiarvo": 12.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 13.77,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tuusulan lukio, Jokelan toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tuusulan lukio, Kellokosken toimipiste",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tölö gymnasium, Sandelsgatan",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Tölö gymnasium, Sandelsgatan",
-    "linja": "Gymnasiets bildkonstlinje (särskild utbildningsuppgift)",
-    "alinKeskiarvo": 15.96,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tölö gymnasium, Sandelsgatan",
-    "linja": "Gymnasiets humanekologilinje (särskild utbildningsuppgift)",
-    "alinKeskiarvo": 16.62,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Tölö gymnasium, Sandelsgatan",
-    "linja": "Gymnasiets musiklinje (särskild utbildningsuppgift)",
-    "alinKeskiarvo": 17.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Töölön yhteiskoulu",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 9.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ulvilan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Ulvilan lukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 11.08,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Utajärven lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Utsjoen saamelaislukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Uudenkaupungin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vaalan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 5.75,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vaasan lyseon lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vaasan lyseon lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 13.25,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Valkeakosken Tietotien lukio",
-    "linja": "Lukion bisneslinja",
-    "alinKeskiarvo": 7.58,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Valkeakosken Tietotien lukio",
-    "linja": "Lukion matematiikka/tietotekniikkalinja",
-    "alinKeskiarvo": 7.67,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Valkeakosken Tietotien lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vammalan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vammalan lukio",
-    "linja": "Lukion lentopallo- ja urheilulinja",
-    "alinKeskiarvo": 10.5,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Varkauden lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vasa gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vasa gymnasium",
-    "linja": "Gymnasiets idrottslinje",
-    "alinKeskiarvo": 11.48,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Vasa övningsskola, IB-linje",
-    "linja": "IB-programme (special educational mission)",
-    "alinKeskiarvo": 7.29,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Vasa övningsskola, Vasa övningsskolas gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 8.92,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vasa övningsskola, Vasa övningsskolas gymnasium",
-    "linja": "Gymnasiets musiklinje",
-    "alinKeskiarvo": 10.85,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Vasa övningsskola, Vasa övningsskolas gymnasium",
-    "linja": "Gymnasiets bildkonstlinje",
-    "alinKeskiarvo": 14.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Vaskivuoren lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.83,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vaskivuoren lukio",
-    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 17.46,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Vaskivuoren lukio",
-    "linja": "Lukion tanssilinja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 18.33,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Vesannon yhtenäiskoulun lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vetelin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vieremän lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.33,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Vihdin lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.54,
-    "yleislinja": true
-  },
-  {
+    "kunta": "Espoo",
     "koulu": "Viherlaakson lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.58,
     "yleislinja": true
   },
   {
+    "kunta": "Espoo",
     "koulu": "Viherlaakson lukio",
     "linja": "Lukion kuvataidelinja",
     "alinKeskiarvo": 9.25,
     "yleislinja": false
   },
   {
-    "koulu": "Viitasaaren lukio",
+    "kunta": "Eura",
+    "koulu": "Euran lukio",
     "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.45,
+    "alinKeskiarvo": 5.33,
     "yleislinja": true
   },
   {
-    "koulu": "Viitasaaren lukio",
-    "linja": "Lukion musiikkilinja",
-    "alinKeskiarvo": 7.92,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Viitasaaren lukio",
-    "linja": "Lukion pelastus- ja turvallisuuslinja",
-    "alinKeskiarvo": 8.83,
-    "yleislinja": false
-  },
-  {
-    "koulu": "Vimpelin lukio",
+    "kunta": "Eurajoki",
+    "koulu": "Eurajoen lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
-    "koulu": "Virkby gymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 7.17,
-    "yleislinja": true
-  },
-  {
-    "koulu": "Virolahden lukio",
+    "kunta": "Evijärvi",
+    "koulu": "Evijärven lukio",
     "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 8.08,
+    "alinKeskiarvo": 6.31,
     "yleislinja": true
   },
   {
-    "koulu": "Virolahden lukio",
-    "linja": "Lukion ratsastuslinja",
-    "alinKeskiarvo": 14.75,
+    "kunta": "Forssa",
+    "koulu": "Forssan yhteislyseo",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Forssa",
+    "koulu": "Forssan yhteislyseo",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 7.33,
     "yleislinja": false
   },
   {
-    "koulu": "Virtain lukio",
+    "kunta": "Forssa",
+    "koulu": "Forssan yhteislyseo",
+    "linja": "Lukion kuvataide- ja designlinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Haapajärvi",
+    "koulu": "Haapajärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Haapavesi",
+    "koulu": "Haapaveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hamina",
+    "koulu": "Haminan lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.08,
     "yleislinja": true
   },
   {
-    "koulu": "Virtain lukio",
-    "linja": "Lukion lääketieteellis- ja luonnontieteellinen linja",
-    "alinKeskiarvo": 8.83,
+    "kunta": "Hankasalmi",
+    "koulu": "Hankasalmen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.23,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hankasalmi",
+    "koulu": "Hankasalmen lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.33,
     "yleislinja": false
   },
   {
+    "kunta": "Hanko",
+    "koulu": "Hangö gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hanko",
+    "koulu": "Hangö gymnasium",
+    "linja": "Gymnasiets ridlinje",
+    "alinKeskiarvo": 8.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Hanko",
+    "koulu": "Hangö gymnasium",
+    "linja": "Gymnasiets tennislinje",
+    "alinKeskiarvo": 8.38,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Hanko",
+    "koulu": "Hankoniemen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hanko",
+    "koulu": "Hankoniemen lukio",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 7.85,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Harjavalta",
+    "koulu": "Harjavallan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hattula",
+    "koulu": "Parolan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hausjärvi",
+    "koulu": "Hausjärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Heinola",
+    "koulu": "Heinolan lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Heinola",
+    "koulu": "Heinolan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Heinola",
+    "koulu": "Heinolan lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Heinävesi",
+    "koulu": "Heinäveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Alppilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Apollon yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.38,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Brändö gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Brändö gymnasium",
+    "linja": "Gymnasiets idrottslinje (särskild utbildningsuppgift)",
+    "alinKeskiarvo": 15.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Englantilainen koulu",
+    "linja": "Lukion englannin ja suomen kielen ja kulttuurin linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Etu-Töölön lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Gymnasiet Lärkan",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 8.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Ranskalais-Suomalainen koulu",
+    "linja": "Lukion A-ranskan kielen linja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Ranskalais-Suomalainen koulu",
+    "linja": "Lukion A-ranskan kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 17.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Rudolf Steiner -koulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.4,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Rudolf Steiner -koulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Rudolf Steiner -koulu",
+    "linja": "Lukion esittävän taiteen linja",
+    "alinKeskiarvo": 12.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Suomalainen Yhteiskoulu",
+    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Suomalainen Yhteiskoulu",
+    "linja": "Lukion A-saksan kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.31,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Suomalainen Yhteiskoulu",
+    "linja": "Lukion A-ranskan kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.38,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Suomalainen Yhteiskoulu",
+    "linja": "Lukion lyhyiden vieraiden kielten linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Suomalainen Yhteiskoulu",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 12.595,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Uusi yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.77,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin Uusi yhteiskoulu",
+    "linja": "Lukion kuvataidelinja",
+    "alinKeskiarvo": 9.19,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin kielilukio",
+    "linja": "Lukion englannin- ja suomenkielinen linja",
+    "alinKeskiarvo": 8.14,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin kielilukio",
+    "linja": "Lukion kielet ja kansainvälisyys linja",
+    "alinKeskiarvo": 8.23,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin kielilukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.38,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin kuvataidelukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin kuvataidelukio",
+    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.58,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin luonnontiedelukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin luonnontiedelukio",
+    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.3,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin medialukio",
+    "linja": "Lukion yhteiskunta- ja medialinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin medialukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin normaalilyseo",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin yhteislyseo",
+    "linja": "Lukion skeittilinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin yhteislyseo",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin yhteislyseo",
+    "linja": "Lukion taito- ja taidelinja",
+    "alinKeskiarvo": 13.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Helsingin yliopiston Viikin normaalikoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Herttoniemen yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Kallion lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Kallion lukio",
+    "linja": "Lukion ilmaisutaitolinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.12,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Konepajan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Kulosaaren yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Kulosaaren yhteiskoulu",
+    "linja": "Lukion tiede- ja teknologialinja",
+    "alinKeskiarvo": 10.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Kulosaaren yhteiskoulu",
+    "linja": "Lukion yhteiskunta- ja talouslinja",
+    "alinKeskiarvo": 11.63,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Kulosaaren yhteiskoulu",
+    "linja": "Lukion englanninkielinen linja",
+    "alinKeskiarvo": 12.36,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Lauttasaaren yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Lauttasaaren yhteiskoulu",
+    "linja": "Lukion yrittäjyyden ja kansainvälisen liiketoiminnan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Maunulan yhteiskoulu - Helsingin matematiikkalukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Maunulan yhteiskoulu - Helsingin matematiikkalukio",
+    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 11.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Munkkiniemen yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Munkkiniemen yhteiskoulu",
+    "linja": "Lukion luonnontiedelinja",
+    "alinKeskiarvo": 14.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Munkkiniemen yhteiskoulu",
+    "linja": "Lukion koripallolinja",
+    "alinKeskiarvo": 15.21,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Munkkiniemen yhteiskoulu",
+    "linja": "Lukion yhteiskunta- ja talouslinja",
+    "alinKeskiarvo": 15.55,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Mäkelänrinteen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Mäkelänrinteen lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.65,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Oulunkylän yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.62,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Oulunkylän yhteiskoulu",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 10.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Oulunkylän yhteiskoulu",
+    "linja": "Lukion luonnontiedelinja",
+    "alinKeskiarvo": 10.73,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Pohjois-Haagan yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Pohjois-Haagan yhteiskoulu",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 14.2,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Ressun lukio",
+    "linja": "IB-programme (special educational mission)",
+    "alinKeskiarvo": 9.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Ressun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Rudolf Steinerskolan i Helsingfors",
+    "linja": "Gymnasiets linje för steinerpedagogik (särskild utbildningsuppgift)",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Sibelius-lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Sibelius-lukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.54,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Sibelius-lukio",
+    "linja": "Lukion tanssilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 16.7,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Suomalais-venäläinen koulu",
+    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Suomalais-venäläinen koulu",
+    "linja": "Lukion B3-venäjän kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Tölö gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Tölö gymnasium",
+    "linja": "Gymnasiets bildkonstlinje (särskild utbildningsuppgift)",
+    "alinKeskiarvo": 15.96,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Tölö gymnasium",
+    "linja": "Gymnasiets humanekologilinje (särskild utbildningsuppgift)",
+    "alinKeskiarvo": 16.62,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Tölö gymnasium",
+    "linja": "Gymnasiets musiklinje (särskild utbildningsuppgift)",
+    "alinKeskiarvo": 17.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
+    "koulu": "Töölön yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Helsinki",
     "koulu": "Vuosaaren lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.5,
     "yleislinja": true
   },
   {
+    "kunta": "Helsinki",
     "koulu": "Vuosaaren lukio",
     "linja": "Lukion teknologialinja",
     "alinKeskiarvo": 8.42,
     "yleislinja": false
   },
   {
+    "kunta": "Helsinki",
     "koulu": "Vuosaaren lukio",
     "linja": "Lukion musiikkilinja",
     "alinKeskiarvo": 11.83,
     "yleislinja": false
   },
   {
-    "koulu": "Väinö Linnan lukio",
+    "kunta": "Huittinen",
+    "koulu": "Lauttakylän lukio",
     "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 6.92,
+    "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
-    "koulu": "Vääksyn Yhteiskoulu, VYK lukio",
+    "kunta": "Hyvinkää",
+    "koulu": "Hyvinkään lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hyvinkää",
+    "koulu": "Hyvinkään lukio",
+    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Hämeenkyrö",
+    "koulu": "F.E. Sillanpään lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hämeenlinna",
+    "koulu": "Hämeenlinnan lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Hämeenlinna",
+    "koulu": "Hämeenlinnan lyseon lukio",
+    "linja": "Lukion yrittäjyyslinja",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Hämeenlinna",
+    "koulu": "Hämeenlinnan lyseon lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 14.39,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Hämeenlinna",
+    "koulu": "Kaurialan lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.25,
     "yleislinja": true
   },
   {
-    "koulu": "Vääksyn Yhteiskoulu, VYK lukio",
-    "linja": "Lukion liikuntalinja",
-    "alinKeskiarvo": 14.25,
+    "kunta": "Hämeenlinna",
+    "koulu": "Kaurialan lukio",
+    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.05,
     "yleislinja": false
   },
   {
-    "koulu": "Vääksyn Yhteiskoulu, VYK lukio",
-    "linja": "Lukion ilmailulinja",
-    "alinKeskiarvo": 17.08,
+    "kunta": "Hämeenlinna",
+    "koulu": "Kaurialan lukio",
+    "linja": "Lukion taidelinja",
+    "alinKeskiarvo": 17.75,
     "yleislinja": false
   },
   {
-    "koulu": "Vörå samgymnasium",
-    "linja": "Gymnasiets allmänna linje",
-    "alinKeskiarvo": 6.77,
+    "kunta": "Hämeenlinna",
+    "koulu": "Lammin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
-    "koulu": "Vörå samgymnasium, idrottsgymnasium",
-    "linja": "Gymnasiets idrottslinje (särskild utbildningsuppgift)",
-    "alinKeskiarvo": 13.9,
+    "kunta": "Ii",
+    "koulu": "Iin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Iisalmi",
+    "koulu": "Iisalmen lyseo",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Iitti",
+    "koulu": "Iitin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Ikaalinen",
+    "koulu": "Ikaalisten lukio",
+    "linja": "Lukion arkkitehtuurilinja",
+    "alinKeskiarvo": 7.17,
     "yleislinja": false
   },
   {
+    "kunta": "Ikaalinen",
+    "koulu": "Ikaalisten lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Ilmajoki",
+    "koulu": "Ilmajoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Ilomantsi",
+    "koulu": "Ilomantsin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.23,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Imatra",
+    "koulu": "Imatran yhteislukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Imatra",
+    "koulu": "Imatran yhteislukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Imatra",
+    "koulu": "Itä-Suomen suomalais-venäläinen koulu",
+    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 14.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Inari",
+    "koulu": "Ivalon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Isokyrö",
+    "koulu": "Kyrönmaan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Janakkala",
+    "koulu": "Janakkalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Janakkala",
+    "koulu": "Janakkalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Janakkala",
+    "koulu": "Janakkalan lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 17.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Janakkala",
+    "koulu": "Janakkalan lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 18.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Itä-Suomen suomalais-venäläinen koulu",
+    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Joensuun lyseon lukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Joensuun lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.38,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Joensuun yhteiskoulun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Joensuun yhteiskoulun lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.71,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Joensuun yhteiskoulun lukio",
+    "linja": "Lukion musiikin ja ilmaisun linja",
+    "alinKeskiarvo": 15.77,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Pyhäselän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Tulliportin normaalikoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Joensuu",
+    "koulu": "Tulliportin normaalikoulu",
+    "linja": "Lukion matemaattis-luonnontieteellinen linja",
+    "alinKeskiarvo": 8.15,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Joroinen",
+    "koulu": "Joroisten lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Joutsa",
+    "koulu": "Joutsan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Juuka",
+    "koulu": "Juuan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Juuka",
+    "koulu": "Juuan lukio",
+    "linja": "Lukion salibandylinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Juva",
+    "koulu": "Juvan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.45,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Jyväskylän Lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Jyväskylän Lyseon lukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Jyväskylän Lyseon lukio",
+    "linja": "Lukion it-linja",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Jyväskylän normaalikoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Jyväskylän normaalikoulu",
+    "linja": "Lukion liikuntalinja",
+    "alinKeskiarvo": 12.44,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Schildtin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Schildtin lukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 11.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Jyväskylä",
+    "koulu": "Schildtin lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.8,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Jämsä",
+    "koulu": "Jämsän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Järvenpää",
+    "koulu": "Järvenpään lukio",
+    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.09,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Järvenpää",
+    "koulu": "Järvenpään lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Järvenpää",
+    "koulu": "Järvenpään lukio",
+    "linja": "Lukion kuva- ja mediataidelinja",
+    "alinKeskiarvo": 9.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Järvenpää",
+    "koulu": "Järvenpään lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 10.23,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Järvenpää",
+    "koulu": "Järvenpään lukio",
+    "linja": "Lukion musiikki- ja tanssilinja",
+    "alinKeskiarvo": 11.5,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Järvenpää",
+    "koulu": "Järvenpään lukio",
+    "linja": "Lukion draama- ja teatterilinja",
+    "alinKeskiarvo": 12.15,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kaarina",
+    "koulu": "Kaarinan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kaarina",
+    "koulu": "Suomen kristillinen yhteiskoulu",
+    "linja": "Lukion kristillinen linja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kajaani",
+    "koulu": "Kajaanin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kajaani",
+    "koulu": "Kajaanin lukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 11.8,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kalajoki",
+    "koulu": "Kalajoen lukio",
+    "linja": "Lukion kuvataidelinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kalajoki",
+    "koulu": "Kalajoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kalajoki",
+    "koulu": "Kalajoen lukio",
+    "linja": "Lukion kansainvälinen linja",
+    "alinKeskiarvo": 7.75,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kalajoki",
+    "koulu": "Kalajoen lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 8.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kangasala",
+    "koulu": "Kangasalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kangasala",
+    "koulu": "Kangasalan lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 16.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kangasniemi",
+    "koulu": "Kangasniemen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kankaanpää",
+    "koulu": "Honkajoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kankaanpää",
+    "koulu": "Kankaanpään Yhteislyseo",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.54,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kankaanpää",
+    "koulu": "Kankaanpään Yhteislyseo",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kannus",
+    "koulu": "Kannuksen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kannus",
+    "koulu": "Kannuksen lukio",
+    "linja": "Lukion eläinlääketieteellinen linja",
+    "alinKeskiarvo": 8.06,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kannus",
+    "koulu": "Kannuksen lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 13.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Karkkila",
+    "koulu": "Karkkilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Karstula",
+    "koulu": "Karstulan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kauhajoki",
+    "koulu": "Kauhajoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kauhava",
+    "koulu": "Härmän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kauhava",
+    "koulu": "Kauhavan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kauniainen",
+    "koulu": "Gymnasiet Grankulla samskola",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 8.54,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kauniainen",
+    "koulu": "Kauniaisten lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kauniainen",
+    "koulu": "Kauniaisten lukio",
+    "linja": "Lukion bisneslinja",
+    "alinKeskiarvo": 8.94,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kaustinen",
+    "koulu": "Kaustisen musiikkilukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kaustinen",
+    "koulu": "Kaustisen musiikkilukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 10.62,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kemi",
+    "koulu": "Kemin lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.79,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kemijärvi",
+    "koulu": "Kemijärven lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kemijärvi",
+    "koulu": "Kemijärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.23,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Keminmaa",
+    "koulu": "Keminmaan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kemiönsaari",
+    "koulu": "Kimitoöns gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kemiönsaari",
+    "koulu": "Kimitoöns gymnasium",
+    "linja": "Gymnasiets marina linje",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kempele",
+    "koulu": "Kempeleen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kerava",
+    "koulu": "Keravan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Keuruu",
+    "koulu": "Keuruun yhteiskoulun lukio",
+    "linja": "Lukion liikuntalinja",
+    "alinKeskiarvo": 6.5,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Keuruu",
+    "koulu": "Keuruun yhteiskoulun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Keuruu",
+    "koulu": "Keuruun yhteiskoulun lukio",
+    "linja": "Lukion yrittäjyyslinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kinnula",
+    "koulu": "Kinnulan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kirkkonummi",
+    "koulu": "Kyrkslätts gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.54,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kirkkonummi",
+    "koulu": "Kyrkslätts gymnasium",
+    "linja": "Gymnasiets företagarlinje",
+    "alinKeskiarvo": 8.19,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kirkkonummi",
+    "koulu": "Porkkalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kitee",
+    "koulu": "Kiteen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.31,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kiuruvesi",
+    "koulu": "Kiuruveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kiuruvesi",
+    "koulu": "Kiuruveden lukio",
+    "linja": "Lukion esittävän taiteen linja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kiuruvesi",
+    "koulu": "Kiuruveden lukio",
+    "linja": "Lukion luonnontieteellis-matemaattinen linja",
+    "alinKeskiarvo": 7.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kiuruvesi",
+    "koulu": "Kiuruveden lukio",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 8.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kokemäki",
+    "koulu": "Kokemäen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kokkola",
+    "koulu": "Karleby svenska gymnasium",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kokkola",
+    "koulu": "Karleby svenska gymnasium",
+    "linja": "Lukion liikuntalinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kokkola",
+    "koulu": "Kokkolan suomalainen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kokkola",
+    "koulu": "Kokkolan suomalainen lukio",
+    "linja": "Lukion luonnontiede- ja teknologialinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kolari",
+    "koulu": "Kolarin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Konnevesi",
+    "koulu": "Konneveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.46,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kontiolahti",
+    "koulu": "Kontiolahden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Koski Tl",
+    "koulu": "Kosken lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kotka",
+    "koulu": "Karhulan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kotka",
+    "koulu": "Karhulan lukio",
+    "linja": "Lukion bisneslinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kotka",
+    "koulu": "Karhulan lukio",
+    "linja": "Lukion matemaattis-teknologinen linja",
+    "alinKeskiarvo": 9.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kotka",
+    "koulu": "Kotka Svenska Samskola",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 6.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kotka",
+    "koulu": "Kotkan lyseo",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kouvola",
+    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kouvola",
+    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
+    "linja": "Lukion Studies in English -linja",
+    "alinKeskiarvo": 8.54,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kouvola",
+    "koulu": "Kouvolan Yhteislyseo, Kouvolan toimipiste",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 11.2,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kouvola",
+    "koulu": "Kouvolan Yhteislyseo, Kuusankosken toimipiste",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kristiinankaupunki",
+    "koulu": "Kristiinankaupungin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kristiinankaupunki",
+    "koulu": "Kristiinankaupungin lukio",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 14.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kristiinankaupunki",
+    "koulu": "Kristinestads gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 6.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kristiinankaupunki",
+    "koulu": "Kristinestads gymnasium",
+    "linja": "Gymnasiets ridlinje",
+    "alinKeskiarvo": 14.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kruunupyy",
+    "koulu": "Kronoby gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kruunupyy",
+    "koulu": "Kronoby gymnasium",
+    "linja": "Gymnasiets jakt- och naturlinje",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kruunupyy",
+    "koulu": "Kronoby gymnasium",
+    "linja": "Gymnasiets flyglinje",
+    "alinKeskiarvo": 8.69,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuhmo",
+    "koulu": "Kuhmon yhteislukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuhmo",
+    "koulu": "Kuhmon yhteislukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 8.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuhmoinen",
+    "koulu": "Kuhmoisten yhtenäiskoulu",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuhmoinen",
+    "koulu": "Kuhmoisten yhtenäiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.15,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Juankosken lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kallaveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kallaveden lukio",
+    "linja": "Lukion bisneslinja",
+    "alinKeskiarvo": 16.94,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion Lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion Lyseon lukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.85,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion klassillinen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion klassillinen lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.73,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion taidelukio Lumit",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion taidelukio Lumit",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.7925,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion taidelukio Lumit",
+    "linja": "Lukion tanssilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 14.38,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Kuopion taidelukio Lumit",
+    "linja": "Lukion ilmaisutaitolinja",
+    "alinKeskiarvo": 17.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuopio",
+    "koulu": "Nilsiän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuortane",
+    "koulu": "Kuortaneen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuortane",
+    "koulu": "Kuortaneen lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.85,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kurikka",
+    "koulu": "Jalasjärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kurikka",
+    "koulu": "Kurikan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.64,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuusamo",
+    "koulu": "Kuusamon lukio",
+    "linja": "Lukion bisneslinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuusamo",
+    "koulu": "Kuusamon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kuusamo",
+    "koulu": "Kuusamon lukio",
+    "linja": "Lukion urheiluvalmennuslinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kuusamo",
+    "koulu": "Kuusamon lukio",
+    "linja": "Lukion luonto- ja ympäristölinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Kärsämäki",
+    "koulu": "Kärsämäen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Kärsämäki",
+    "koulu": "Kärsämäen lukio",
+    "linja": "Lukion taidelinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden Rudolf Steiner-koulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.53,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden lukio Gaudia",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden lukio Gaudia",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden lukio Gaudia",
+    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.07,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden lukio Gaudia",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.75,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden lyseo",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.46,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden lyseo",
+    "linja": "Lukion luonnontiede- ja teknologialinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.39,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden lyseo",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.38,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lahti",
+    "koulu": "Lahden yhteiskoulu",
+    "linja": "Lukion yhteiskunta- ja talouslinja",
+    "alinKeskiarvo": 12.44,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Laihia",
+    "koulu": "Laihian lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Laitila",
+    "koulu": "Laitilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lapinlahti",
+    "koulu": "Lapinlahden Lukio ja Kuvataidelukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.15,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lapinlahti",
+    "koulu": "Lapinlahden Lukio ja Kuvataidelukio",
+    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lappajärvi",
+    "koulu": "Lappajärven Geolukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lappeenranta",
+    "koulu": "Itä-Suomen suomalais-venäläinen koulu",
+    "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lappeenranta",
+    "koulu": "Lappeenrannan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lappeenranta",
+    "koulu": "Lappeenrannan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lappeenranta",
+    "koulu": "Lappeenrannan lukio",
+    "linja": "Lukion yhteiskunta- ja talouslinja",
+    "alinKeskiarvo": 8.11,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lappeenranta",
+    "koulu": "Lappeenrannan lukio",
+    "linja": "Lukion luonnontieteellis-matemaattinen linja",
+    "alinKeskiarvo": 8.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lapua",
+    "koulu": "Lapuan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Laukaa",
+    "koulu": "Laukaan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.45,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lempäälä",
+    "koulu": "Lempäälän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Leppävirta",
+    "koulu": "Leppävirran lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lieksa",
+    "koulu": "Lieksan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lieto",
+    "koulu": "Liedon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lieto",
+    "koulu": "Liedon lukio",
+    "linja": "Lukion kansainvälinen linja",
+    "alinKeskiarvo": 13.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Liminka",
+    "koulu": "Limingan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Liminka",
+    "koulu": "Limingan lukio",
+    "linja": "Lukion englannin- ja suomenkielinen linja",
+    "alinKeskiarvo": 11.88,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Lohja",
+    "koulu": "Lohjan Yhteislyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lohja",
+    "koulu": "Virkby gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Loimaa",
+    "koulu": "Novida - Ammattiopisto ja lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Loimaa",
+    "koulu": "Novida - Ammattiopisto ja lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 17.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Loppi",
+    "koulu": "Lopen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Loviisa",
+    "koulu": "Loviisan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Loviisa",
+    "koulu": "Lovisa Gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Luumäki",
+    "koulu": "Taavetin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.38,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Maalahti",
+    "koulu": "Gymnasiet i Petalax",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Maalahti",
+    "koulu": "Gymnasiet i Petalax",
+    "linja": "Gymnasiets tvärvetenskapliga linje",
+    "alinKeskiarvo": 7.15,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Merikarvia",
+    "koulu": "Merikarvian lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Mikkeli",
+    "koulu": "Mikkelin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.62,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Muhos",
+    "koulu": "Muhoksen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Muonio",
+    "koulu": "Muonion lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Mustasaari",
+    "koulu": "Korsholms gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.09,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Muurame",
+    "koulu": "Muuramen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Mynämäki",
+    "koulu": "Mynämäen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Mynämäki",
+    "koulu": "Mynämäen lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Mäntsälä",
+    "koulu": "Mäntsälän lukio",
+    "linja": "Lukion yhteiskunta- ja talouslinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Mäntsälä",
+    "koulu": "Mäntsälän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Mänttä-Vilppula",
+    "koulu": "Mäntän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Mänttä-Vilppula",
+    "koulu": "Mäntän lukio",
+    "linja": "Lukion lääketieteellis- ja luonnontieteellinen linja",
+    "alinKeskiarvo": 8.42,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Mäntyharju",
+    "koulu": "Mäntyharjun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Naantali",
+    "koulu": "Naantalin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nakkila",
+    "koulu": "Nakkilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nivala",
+    "koulu": "Nivalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nokia",
+    "koulu": "Nokian lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nousiainen",
+    "koulu": "Nousiaisten lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nurmes",
+    "koulu": "Nurmeksen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nurmijärvi",
+    "koulu": "Arkadian yhteislyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nurmijärvi",
+    "koulu": "Nurmijärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Nurmijärvi",
+    "koulu": "Nurmijärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Närpiö",
+    "koulu": "Närpes gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 6.85,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Närpiö",
+    "koulu": "Närpes gymnasium",
+    "linja": "Gymnasiets fotbollslinje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Närpiö",
+    "koulu": "Närpes gymnasium",
+    "linja": "Gymnasiets musiklinje",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Närpiö",
+    "koulu": "Närpes gymnasium",
+    "linja": "Gymnasiets matematisk-naturvetenskapliga linje",
+    "alinKeskiarvo": 7.31,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Närpiö",
+    "koulu": "Närpes gymnasium",
+    "linja": "Gymnasiets danslinje",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Närpiö",
+    "koulu": "Närpes gymnasium",
+    "linja": "Gymnasiets idrottslinje",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Orimattila",
+    "koulu": "Erkon yhteiskoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Orimattila",
+    "koulu": "Erkon yhteiskoulu",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.93,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Orivesi",
+    "koulu": "Oriveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Orivesi",
+    "koulu": "Oriveden lukio",
+    "linja": "Lukion lentopallo- ja urheilulinja",
+    "alinKeskiarvo": 13.73,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Orivesi",
+    "koulu": "Oriveden lukio",
+    "linja": "Lukion kirjoittajalinja",
+    "alinKeskiarvo": 15.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Oulainen",
+    "koulu": "Oulaisten lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Haukiputaan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Kastellin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Kastellin lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Kiimingin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Laanilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Madetojan musiikkilukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 10.85,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Oulun Lyseon lukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.6,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Oulun Lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Oulun Suomalaisen Yhteiskoulun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Oulun normaalikoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Oulunsalon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Raksilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Svenska privatskolan i Uleåborg",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Oulu",
+    "koulu": "Tampereen steinerkoulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.03,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Outokumpu",
+    "koulu": "Outokummun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.55,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Padasjoki",
+    "koulu": "Padasjoen lukio",
+    "linja": "Lukion veneilylinja",
+    "alinKeskiarvo": 8.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Padasjoki",
+    "koulu": "Padasjoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.31,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Paimio",
+    "koulu": "Paimion lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Paltamo",
+    "koulu": "Paltamon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Parainen",
+    "koulu": "Paraisten lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Parainen",
+    "koulu": "Pargas svenska gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Parikkala",
+    "koulu": "Parikkalan lukio",
+    "linja": "Lukion eläinlääketieteellinen linja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Parikkala",
+    "koulu": "Parikkalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pedersören kunta",
+    "koulu": "Pedersöre gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pedersören kunta",
+    "koulu": "Pedersöre gymnasium",
+    "linja": "Gymnasiets idrottslinje",
+    "alinKeskiarvo": 8.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pello",
+    "koulu": "Pellon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Perho",
+    "koulu": "Perhon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Petäjävesi",
+    "koulu": "Petäjäveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Petäjävesi",
+    "koulu": "Petäjäveden lukio",
+    "linja": "Lukion tieto- ja ohjelmistotekniikan DI-linja",
+    "alinKeskiarvo": 9.42,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pieksämäki",
+    "koulu": "Pieksämäen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pielavesi",
+    "koulu": "Pielaveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pietarsaari",
+    "koulu": "Jakobstads gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pietarsaari",
+    "koulu": "Jakobstads gymnasium",
+    "linja": "Gymnasiets bildkonstlinje",
+    "alinKeskiarvo": 8.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pietarsaari",
+    "koulu": "Jakobstads gymnasium",
+    "linja": "Gymnasiets musiklinje",
+    "alinKeskiarvo": 8.14,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pietarsaari",
+    "koulu": "Jakobstads gymnasium",
+    "linja": "Gymnasiets idrottslinje",
+    "alinKeskiarvo": 12.2,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pietarsaari",
+    "koulu": "Pietarsaaren lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pietarsaari",
+    "koulu": "Pietarsaaren lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pihtipudas",
+    "koulu": "Pihtiputaan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pihtipudas",
+    "koulu": "Pihtiputaan lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 6.58,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pihtipudas",
+    "koulu": "Pihtiputaan lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 6.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pihtipudas",
+    "koulu": "Pihtiputaan lukio",
+    "linja": "Lukion partio- ja johtajalinja",
+    "alinKeskiarvo": 6.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pihtipudas",
+    "koulu": "Pihtiputaan lukio",
+    "linja": "Lukion lentopallolinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pihtipudas",
+    "koulu": "Pihtiputaan lukio",
+    "linja": "Lukion kyberturvallisuuslinja",
+    "alinKeskiarvo": 9.58,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pirkkala",
+    "koulu": "Pirkkalan yhteislukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Polvijärvi",
+    "koulu": "Polvijärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pomarkku",
+    "koulu": "Pomarkun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pori",
+    "koulu": "Björneborgs svenska samskola",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.23,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pori",
+    "koulu": "Björneborgs svenska samskola",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.64,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pori",
+    "koulu": "Porin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pori",
+    "koulu": "Porin lukio",
+    "linja": "Lukion ilmaisutaitolinja",
+    "alinKeskiarvo": 8.9,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pori",
+    "koulu": "Porin lukio",
+    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.47,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pori",
+    "koulu": "Porin lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.41,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Porvoo",
+    "koulu": "Borgå Gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Porvoo",
+    "koulu": "Linnankosken lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Posio",
+    "koulu": "Posion lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.38,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pudasjärvi",
+    "koulu": "Pudasjärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pudasjärvi",
+    "koulu": "Pudasjärven lukio",
+    "linja": "Lukion ilmailulinja",
+    "alinKeskiarvo": 15.3,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Punkalaidun",
+    "koulu": "Punkalaitumen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Puolanka",
+    "koulu": "Puolangan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.82,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pyhäjoki",
+    "koulu": "Pyhäjoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.31,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pyhäjärvi",
+    "koulu": "Pyhäjärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pälkäne",
+    "koulu": "Pälkäneen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Pälkäne",
+    "koulu": "Pälkäneen lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Pöytyä",
+    "koulu": "Elisenvaaran lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Raahe",
+    "koulu": "Raahen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Raasepori",
+    "koulu": "Ekenäs gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Raasepori",
+    "koulu": "Karis-Billnäs gymnasium",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.15,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Raasepori",
+    "koulu": "Karjaan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Raisio",
+    "koulu": "Raision lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rantasalmi",
+    "koulu": "Rantasalmen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rantasalmi",
+    "koulu": "Rantasalmen lukio",
+    "linja": "Lukion musiikkiteatterilinja",
+    "alinKeskiarvo": 9.23,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Rantasalmi",
+    "koulu": "Rantasalmen lukio",
+    "linja": "Lukion studiotekniikkalinja",
+    "alinKeskiarvo": 9.23,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Ranua",
+    "koulu": "Ranuan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rauma",
+    "koulu": "Rauman Lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rautalampi",
+    "koulu": "Rautalammin lukio",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Rautalampi",
+    "koulu": "Rautalammin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rautavaara",
+    "koulu": "Rautavaaran lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rautjärvi",
+    "koulu": "Rautjärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rautjärvi",
+    "koulu": "Rautjärven lukio",
+    "linja": "Lukion oikeustieteellinen linja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Reisjärvi",
+    "koulu": "Reisjärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Riihimäki",
+    "koulu": "Riihimäen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rovaniemi",
+    "koulu": "Lyseonpuiston lukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.6,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Rovaniemi",
+    "koulu": "Lyseonpuiston lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rovaniemi",
+    "koulu": "Lyseonpuiston lukio",
+    "linja": "Lukion kuvataidelinja",
+    "alinKeskiarvo": 11.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Rovaniemi",
+    "koulu": "Lyseonpuiston lukio",
+    "linja": "Lukion musiikki- ja tanssilinja",
+    "alinKeskiarvo": 12.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Rovaniemi",
+    "koulu": "Ounasvaaran lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Rovaniemi",
+    "koulu": "Ounasvaaran lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 12.49,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Ruovesi",
+    "koulu": "Ruoveden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Ruovesi",
+    "koulu": "Ruoveden lukio",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 8.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Ruovesi",
+    "koulu": "Ruoveden lukio",
+    "linja": "Lukion eläinlääketieteellinen linja",
+    "alinKeskiarvo": 11.85,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Saarijärvi",
+    "koulu": "Saarijärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Salla",
+    "koulu": "Sallan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Salo",
+    "koulu": "Halikon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Salo",
+    "koulu": "Perniön lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Salo",
+    "koulu": "Salon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sastamala",
+    "koulu": "Vammalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sastamala",
+    "koulu": "Vammalan lukio",
+    "linja": "Lukion lentopallo- ja urheilulinja",
+    "alinKeskiarvo": 10.5,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Savitaipale",
+    "koulu": "Savitaipaleen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Savitaipale",
+    "koulu": "Savitaipaleen lukio",
+    "linja": "Lukion tennislinja",
+    "alinKeskiarvo": 9.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Savonlinna",
+    "koulu": "Savonlinnan Taidelukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 11.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Savonlinna",
+    "koulu": "Savonlinnan Taidelukio",
+    "linja": "Lukion kuvataidelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 11.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Savonlinna",
+    "koulu": "Savonlinnan lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Savonlinna",
+    "koulu": "Savonlinnan lyseon lukio",
+    "linja": "Lukion it-linja",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Savonlinna",
+    "koulu": "Savonlinnan lyseon lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 12.11,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Savukoski",
+    "koulu": "Savukosken lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Seinäjoki",
+    "koulu": "Nurmon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Seinäjoki",
+    "koulu": "Nurmon lukio",
+    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.24,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Seinäjoki",
+    "koulu": "Seinäjoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Seinäjoki",
     "koulu": "Ylistaron lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 6.42,
     "yleislinja": true
   },
   {
+    "kunta": "Sievi",
+    "koulu": "Sievin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Siikajoki",
+    "koulu": "Siikajoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Siikajoki",
+    "koulu": "Siikajoen lukio",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 7.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Siikalatva",
+    "koulu": "Siikalatvan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Siilinjärvi",
+    "koulu": "Siilinjärven lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Siilinjärvi",
+    "koulu": "Siilinjärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Simo",
+    "koulu": "Simon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sipoo",
+    "koulu": "Sibbo gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sipoo",
+    "koulu": "Sipoon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sipoo",
+    "koulu": "Sipoon lukio",
+    "linja": "Lukion luonnontieteellis-matemaattinen linja",
+    "alinKeskiarvo": 8.03,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Sodankylä",
+    "koulu": "Sodankylän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Somero",
+    "koulu": "Someron lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sonkajärvi",
+    "koulu": "Sonkajärven  lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sotkamo",
+    "koulu": "Sotkamon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sotkamo",
+    "koulu": "Sotkamon lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 12.62,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Sulkava",
+    "koulu": "Sulkavan lukio",
+    "linja": "Lukion yrittäjyyslinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Sulkava",
+    "koulu": "Sulkavan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Suomussalmi",
+    "koulu": "Suomussalmen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Suonenjoki",
+    "koulu": "Suonenjoen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Sysmä",
+    "koulu": "Sysmän Lukio",
+    "linja": "Lukion eSport-linja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Sysmä",
+    "koulu": "Sysmän Lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Säkylä",
+    "koulu": "Säkylän seudun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Taivalkoski",
+    "koulu": "Taivalkosken lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Kalevan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Kalevan lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 10.12,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Pyynikin lukio",
+    "linja": "Lukion englannin- ja suomenkielinen linja",
+    "alinKeskiarvo": 7.94,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Pyynikin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.42,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Pyynikin lukio",
+    "linja": "Lukion musiikki - ja musiikkiteatterilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Sammon keskuslukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Sammon keskuslukio",
+    "linja": "Lukion viestintälinja",
+    "alinKeskiarvo": 14.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Sammon keskuslukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 15.54,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Svenska samskolan i Tammerfors",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tammerkosken lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tammerkosken lukio",
+    "linja": "Lukion kuvataide- ja designlinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 14.34,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen klassillinen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen klassillinen lukio",
+    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.31,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen lyseon lukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.85,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen lyseon lukio",
+    "linja": "Lukion yhteiskuntatiedelinja",
+    "alinKeskiarvo": 8.94,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen steinerkoulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.42,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen teknillinen lukio",
+    "linja": "Lukion matemaattis-teknologinen linja",
+    "alinKeskiarvo": 7.64,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen teknillinen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen yhteiskoulun lukio",
+    "linja": "Lukion ilmaisutaitolinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen yliopiston normaalikoulu",
+    "linja": "Lukion talous- ja elinkeinoelämä -linja",
+    "alinKeskiarvo": 9.06,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen yliopiston normaalikoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tampere",
+    "koulu": "Tampereen yliopiston normaalikoulu",
+    "linja": "Lukion sirkustaiteen linja",
+    "alinKeskiarvo": 16.13,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tervola",
+    "koulu": "Tervolan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.85,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Teuva",
+    "koulu": "Teuvan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tohmajärvi",
+    "koulu": "Tohmajärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Toholampi",
+    "koulu": "Toholammin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tornio",
+    "koulu": "Tornion Yhteislyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Katedralskolan i Åbo",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Katedralskolan i Åbo",
+    "linja": "Gymnasiets idrottslinje",
+    "alinKeskiarvo": 11.53,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Kerttulin lukio",
+    "linja": "Lukion ICT-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.18,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Kerttulin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 9.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Kerttulin lukio",
+    "linja": "Lukion urheilulinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 14.89,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Lahden Rudolf Steiner-koulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Luostarivuoren Lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Puolalanmäen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Puolalanmäen lukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun Suomalaisen Yhteiskoulun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun Suomalaisen Yhteiskoulun lukio",
+    "linja": "Lukion merilinja",
+    "alinKeskiarvo": 9.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun Suomalaisen Yhteiskoulun lukio",
+    "linja": "Lukion luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.24,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun klassillinen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun klassillinen lukio",
+    "linja": "Lukion ilmaisutaitolinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 13.88,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun normaalikoulu",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.64,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun normaalikoulu",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 8.53,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tuusniemi",
+    "koulu": "Tuusniemen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 11.17,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio",
+    "linja": "Lukion kuvataidelinja",
+    "alinKeskiarvo": 12.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 13.77,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Tyrnävä",
+    "koulu": "Oulun Lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Ulvila",
+    "koulu": "Ulvilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Ulvila",
+    "koulu": "Ulvilan lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 11.08,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Urjala",
+    "koulu": "Väinö Linnan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Utajärvi",
+    "koulu": "Utajärven lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Utsjoki",
+    "koulu": "Utsjoen saamelaislukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Uusikaarlepyy",
+    "koulu": "Topeliusgymnasiet i Nykarleby",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 6.25,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Uusikaarlepyy",
+    "koulu": "Topeliusgymnasiet i Nykarleby",
+    "linja": "Gymnasiets innebandylinje",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Uusikaupunki",
+    "koulu": "Uudenkaupungin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vaala",
+    "koulu": "Vaalan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 5.75,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vaasan lyseon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vaasan lyseon lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 13.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vasa gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vasa gymnasium",
+    "linja": "Gymnasiets idrottslinje",
+    "alinKeskiarvo": 11.48,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vasa övningsskola",
+    "linja": "IB-programme (special educational mission)",
+    "alinKeskiarvo": 7.29,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vasa övningsskola",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 8.92,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vasa övningsskola",
+    "linja": "Gymnasiets musiklinje",
+    "alinKeskiarvo": 10.85,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vaasa",
+    "koulu": "Vasa övningsskola",
+    "linja": "Gymnasiets bildkonstlinje",
+    "alinKeskiarvo": 14.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Valkeakoski",
+    "koulu": "Valkeakosken Tietotien lukio",
+    "linja": "Lukion bisneslinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Valkeakoski",
+    "koulu": "Valkeakosken Tietotien lukio",
+    "linja": "Lukion matematiikka/tietotekniikkalinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Valkeakoski",
+    "koulu": "Valkeakosken Tietotien lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Aviapoliksen lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Helsinge gymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 7.58,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Helsingin Rudolf Steiner -koulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Helsingin Rudolf Steiner -koulu",
+    "linja": "Lukion historian ja yhteiskuntatieteiden linja",
+    "alinKeskiarvo": 7.29,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Lumon lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Martinlaakson lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Martinlaakson lukio",
+    "linja": "Lukion matematiikka- ja luonnontiedelinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 9.37,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Sotungin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.6,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Sotungin lukio",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 11.21,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Tikkurilan lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.67,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Tikkurilan lukio",
+    "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 11.05,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Vaskivuoren lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.83,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Vaskivuoren lukio",
+    "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 17.46,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Vaskivuoren lukio",
+    "linja": "Lukion tanssilinja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 18.33,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Varkaus",
+    "koulu": "Varkauden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vesanto",
+    "koulu": "Vesannon yhtenäiskoulun lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.17,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Veteli",
+    "koulu": "Vetelin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vieremä",
+    "koulu": "Vieremän lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.33,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vihti",
+    "koulu": "Vihdin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.54,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Viitasaari",
+    "koulu": "Viitasaaren lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 6.45,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Viitasaari",
+    "koulu": "Viitasaaren lukio",
+    "linja": "Lukion musiikkilinja",
+    "alinKeskiarvo": 7.92,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Viitasaari",
+    "koulu": "Viitasaaren lukio",
+    "linja": "Lukion pelastus- ja turvallisuuslinja",
+    "alinKeskiarvo": 8.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vimpeli",
+    "koulu": "Vimpelin lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Virolahti",
+    "koulu": "Virolahden lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 8.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Virolahti",
+    "koulu": "Virolahden lukio",
+    "linja": "Lukion ratsastuslinja",
+    "alinKeskiarvo": 14.75,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Virrat",
+    "koulu": "Virtain lukio",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Virrat",
+    "koulu": "Virtain lukio",
+    "linja": "Lukion lääketieteellis- ja luonnontieteellinen linja",
+    "alinKeskiarvo": 8.83,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vöyri",
+    "koulu": "Vörå samgymnasium",
+    "linja": "Gymnasiets allmänna linje",
+    "alinKeskiarvo": 6.77,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Vöyri",
+    "koulu": "Vörå samgymnasium",
+    "linja": "Gymnasiets idrottslinje (särskild utbildningsuppgift)",
+    "alinKeskiarvo": 13.9,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Ylitornio",
     "koulu": "Ylitornion yhteiskoulun lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 6.42,
     "yleislinja": true
   },
   {
+    "kunta": "Ylivieska",
     "koulu": "Ylivieskan lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
+    "kunta": "Ylivieska",
     "koulu": "Ylivieskan lukio",
     "linja": "Lukion urheilulinja",
     "alinKeskiarvo": 7.33,
     "yleislinja": false
   },
   {
+    "kunta": "Ylivieska",
     "koulu": "Ylivieskan lukio",
     "linja": "Lukion musiikkilinja",
     "alinKeskiarvo": 7.58,
     "yleislinja": false
   },
   {
+    "kunta": "Ylivieska",
     "koulu": "Ylivieskan lukio",
     "linja": "Lukion kuvataidelinja",
     "alinKeskiarvo": 8.92,
     "yleislinja": false
   },
   {
+    "kunta": "Ylöjärvi",
     "koulu": "Ylöjärven lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.5,
     "yleislinja": true
   },
   {
+    "kunta": "Ylöjärvi",
     "koulu": "Ylöjärven lukio",
     "linja": "Lukion teknologialinja",
     "alinKeskiarvo": 8.0,
     "yleislinja": false
   },
   {
+    "kunta": "Ylöjärvi",
     "koulu": "Ylöjärven lukio",
     "linja": "Lukion yrittäjyyslinja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 10.42,
     "yleislinja": false
   },
   {
+    "kunta": "Ähtäri",
     "koulu": "Ähtärin lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 6.67,
     "yleislinja": true
   },
   {
+    "kunta": "Äänekoski",
     "koulu": "Äänekosken lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.25,
