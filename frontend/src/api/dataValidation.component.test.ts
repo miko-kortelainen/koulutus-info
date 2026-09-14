@@ -132,6 +132,7 @@ test("rejects malformed nested cutoff data", () => {
 });
 
 const lukioKeskiarvo = {
+  kunta: "Akaa",
   koulu: "Akaan lukio",
   linja: "Lukion yleislinja",
   alinKeskiarvo: 7,
@@ -143,6 +144,9 @@ test("accepts valid lukio keskiarvot", () => {
 });
 
 test("rejects malformed lukio keskiarvot", () => {
+  expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, kunta: "" }], "lukio-keskiarvot.json")).toThrow(
+    "Invalid data in lukio-keskiarvot.json",
+  );
   expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, koulu: "" }], "lukio-keskiarvot.json")).toThrow(
     "Invalid data in lukio-keskiarvot.json",
   );
