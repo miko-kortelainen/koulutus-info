@@ -117,6 +117,24 @@ test("accepts meta.json and rejects malformed meta", () => {
     statisticsUpdatedAt: "2026-08-08T14:38:02.955Z",
   };
   expect(parseMeta(meta, "meta.json")).toEqual(meta);
+  expect(
+    parseMeta(
+      {
+        ...meta,
+        programmesHaut: [
+          { id: "2027_kevat_1", oid: "oid-1" },
+          { id: "2027_kevat_2", oid: "oid-2" },
+        ],
+      },
+      "meta.json",
+    ),
+  ).toEqual({
+    ...meta,
+    programmesHaut: [
+      { id: "2027_kevat_1", oid: "oid-1" },
+      { id: "2027_kevat_2", oid: "oid-2" },
+    ],
+  });
   expect(() => parseMeta({ ...meta, statisticsRounds: "2026_kevat" }, "meta.json")).toThrow(
     "Invalid data in meta.json",
   );
@@ -150,9 +168,9 @@ test("rejects malformed lukio keskiarvot", () => {
   expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, koulu: "" }], "lukio-keskiarvot.json")).toThrow(
     "Invalid data in lukio-keskiarvot.json",
   );
-  expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, alinKeskiarvo: Number.NaN }], "lukio-keskiarvot.json")).toThrow(
-    "Invalid data in lukio-keskiarvot.json",
-  );
+  expect(() =>
+    parseLukioKeskiarvot([{ ...lukioKeskiarvo, alinKeskiarvo: Number.NaN }], "lukio-keskiarvot.json"),
+  ).toThrow("Invalid data in lukio-keskiarvot.json");
   expect(() => parseLukioKeskiarvot([{ ...lukioKeskiarvo, yleislinja: "true" }], "lukio-keskiarvot.json")).toThrow(
     "Invalid data in lukio-keskiarvot.json",
   );

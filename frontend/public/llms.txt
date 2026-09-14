@@ -41,7 +41,8 @@ Tietojen tulkinta:
 ## JSON-aineistot
 
 - [Aineiston metadata](https://yhteishaku.app/data/meta.json): Tarkista ensin; sisältää kentän `currentStatisticsRound` ja päivitysajankohdat. Alla olevat vuosikohtaiset linkit viittaavat nimettyyn ajanjaksoon, eivät automaattisesti uusimpaan aineistoon
-- [Nykyisen yhteishaun koulutukset](https://yhteishaku.app/data/current_programs.json): Koulutusten toteutustiedot
+- [Kevään 2027 ensimmäisen yhteishaun koulutukset](https://yhteishaku.app/data/current_programs-2027-kevat-1.json): Koulutusten toteutustiedot; kierros `2027_kevat_1`
+- [Kevään 2027 toisen yhteishaun koulutukset](https://yhteishaku.app/data/current_programs-2027-kevat-2.json): Koulutusten toteutustiedot; kierros `2027_kevat_2`
 - [Korkeakoulut](https://yhteishaku.app/data/schools.json): Oppilaitosluettelo
 - [Hakijamäärät, kevät 2026](https://yhteishaku.app/data/hakijamäärät/hakijamaarat-2026-kevat.json): Hakijamäärien aineisto; tilastokierros `2026_kevat`
 - [Hakijamäärät, syksy 2026](https://yhteishaku.app/data/hakijamäärät/hakijamaarat-2026-syksy.json): Hakijamäärien aineisto; tilastokierros `2026_syksy`
@@ -56,7 +57,7 @@ Tietojen tulkinta:
 ## WebMCP työkalut
 
 - [calculate_todistuspisteet](https://yhteishaku.app/pistelaskuri/): Todistusvalintapisteiden laskenta. `valintatapa`: `yo` tai `amm`; YO-aineiden koodeja esimerkiksi `ai_fi`, `maa` ja `fy`; valinnainen `kierros` esimerkiksi `2026-kevat`. WebMCP-työkalu rekisteröidään sivun ollessa auki sitä tukevassa selaimessa. Tarkista täydellinen parametriskeema rekisteröidystä työkalusta
-- [search_koulutukset](https://yhteishaku.app/koulutukset/): Koulutusten haku; palauttaa kaikki osumat. Sektori: `yo` tai `amk`; koulutusaste: `alempi` tai `ylempi`. WebMCP-työkalu edellyttää sivun avaamista ja selaintukea; tarkista parametriskeema työkalusta
+- [search_koulutukset](https://yhteishaku.app/koulutukset/): Koulutusten haku; palauttaa kaikki osumat. Sektori: `yo` tai `amk`; koulutusaste: `alempi` tai `ylempi`; yhteishaku esimerkiksi `2027_kevat_1`. WebMCP-työkalu edellyttää sivun avaamista ja selaintukea; tarkista parametriskeema työkalusta
 - [search_hakijamaarat](https://yhteishaku.app/hakijamaarat/): Hakijamäärien haku; palauttaa kaikki osumat. Sektori: `Yliopistokoulutus` tai `Ammattikorkeakoulukoulutus`; vuosi esimerkiksi `2026_kevat`. Peitetyistä luvuista laskettavat suhdeluvut jäävät tyhjiksi. WebMCP-työkalu edellyttää sivun avaamista ja selaintukea; tarkista parametriskeema työkalusta
 
 ## Viralliset lähteet

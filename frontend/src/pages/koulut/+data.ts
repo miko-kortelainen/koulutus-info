@@ -1,6 +1,6 @@
 import type { FeedbackMaxScore } from "@/api/dataValidation";
 import {
-  readCurrentPrograms,
+  readAllPrograms,
   readCurrentYearStatistics,
   readStatistics,
   readStudentFeedback,
@@ -24,7 +24,7 @@ export interface SchoolListItem {
 
 export const data = (): SchoolListItem[] => {
   const statistics = readCurrentYearStatistics();
-  const programs = readCurrentPrograms();
+  const programs = readAllPrograms();
   const feedback = readStudentFeedback();
   const toteutukset = programs.flatMap((k) => k.toteutukset);
   // Autumn current rounds omit most universities; sector still comes from earlier statistics.

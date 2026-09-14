@@ -408,6 +408,20 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
 });
 
+test("/koulutukset: joint application switcher shows the other wave", async ({ page }) => {
+  await page.goto("/koulutukset/");
+  await expect(
+    page.getByText("Korkeakoulujen kevään 2027 ensimmäisessä yhteishaussa olevat toteutukset."),
+  ).toBeVisible();
+  await expectSelectedOption(page, "Yhteishaku", "Kevään 1. yhteishaku 2027");
+
+  await selectOption(page, "Yhteishaku", "Kevään 2. yhteishaku 2027");
+  await expect(
+    page.getByText("Korkeakoulujen kevään 2027 toisessa yhteishaussa olevat toteutukset."),
+  ).toBeVisible();
+  await expect(page.getByText("Hae opintopolussa").first()).toBeVisible();
+});
+
 test("/hakijamaarat: joint application switcher fetches different data", async ({ page }) => {
   await page.goto("/hakijamaarat/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
@@ -498,11 +512,11 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
 test("/koulutukset: card link opens ala-filtered pisterajat history", async ({ page }) => {
   await page.goto("/koulutukset/");
   const search = page.getByPlaceholder("Etsi koulutuksia");
-  // hevosalan liiketoiminta belongs to "Kauppa, hallinto ja oikeustieteet" — an ala whose
+  // Aviation Business belongs to "Kauppa, hallinto ja oikeustieteet" — an ala whose
   // name contains a comma, which the ?ala= param must survive
-  await search.fill("hevosalan liiketoiminta");
+  await search.fill("Aviation Business");
   // every card shows the same link text, so wait for the filtered card before clicking
-  const card = page.getByRole("listitem").filter({ hasText: "hevosalan liiketoiminta" });
+  const card = page.getByRole("listitem").filter({ hasText: "Aviation Business" });
   await expect(card.getByText("Katso alan pisterajat")).toBeVisible({ timeout: 10000 });
 
   await card.getByText("Katso alan pisterajat").click();
