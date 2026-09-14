@@ -1,7 +1,8 @@
 import { Accordion, Box, Checkbox, Heading, Input, Stack, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { HiCheckCircle } from "react-icons/hi";
 import { useData } from "vike-react/useData";
+import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
@@ -12,6 +13,7 @@ import type { LukiotPageData } from "@/pages/lukiot/+data";
 import LukioSchoolCard from "@/pages/lukiot/components/LukioSchoolCard";
 import SortControl from "@/pages/lukiot/components/SortControl";
 import useFilteredLukioSchools from "@/pages/lukiot/hooks/useFilteredLukioKeskiarvot";
+import { LUKIO_KUNTA_ALL, uniqueLukioKunnat } from "@/pages/lukiot/lib/lukioKunnat";
 import { type LukioSortOption, parseOmaKeskiarvo } from "@/pages/lukiot/lib/sortLukioKeskiarvot";
 import { COLORS } from "@/theme";
 
@@ -24,10 +26,12 @@ export default function LukiotPage() {
   const [omaKeskiarvoInput, setOmaKeskiarvoInput] = useState("");
   const [showErityislinjat, setShowErityislinjat] = useState(true);
   const [sortOrder, setSortOrder] = useState<LukioSortOption>("school_asc");
+  const [kunta, setKunta] = useState(LUKIO_KUNTA_ALL);
   const debouncedSearch = useDebounce(searchTerm, 200);
   const debouncedKeskiarvo = useDebounce(omaKeskiarvoInput, 200);
   const omaKeskiarvo = parseOmaKeskiarvo(debouncedKeskiarvo);
-  const schools = useFilteredLukioSchools(entries, debouncedSearch, omaKeskiarvo, showErityislinjat, sortOrder);
+  const kunnat = useMemo(() => uniqueLukioKunnat(entries), [entries]);
+  const schools = useFilteredLukioSchools(entries, debouncedSearch, omaKeskiarvo, showErityislinjat, sortOrder, kunta);
   const paginated = schools.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   const controls = (
@@ -51,6 +55,20 @@ export default function LukiotPage() {
         }}
         placeholder="Hae lukiota tai linjaa"
         value={searchTerm}
+      />
+      <OptionSelect
+        ariaLabel="Kunta"
+        items={[
+          { label: "Kaikki kunnat", value: LUKIO_KUNTA_ALL },
+          ...kunnat.map((kunta) => ({ label: kunta, value: kunta })),
+        ]}
+        onChange={(value) => {
+          setKunta(value);
+          setPage(1);
+        }}
+        placeholder="Valitse kunta"
+        size="sm"
+        value={kunta}
       />
       <SortControl
         onChange={(value) => {

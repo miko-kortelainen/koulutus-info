@@ -2,6 +2,7 @@ import Fuse from "fuse.js";
 import { useMemo } from "react";
 import type { LukioKeskiarvoEntry } from "@/api/dataValidation";
 import { slugify } from "@/lib/slug";
+import { LUKIO_KUNTA_ALL } from "@/pages/lukiot/lib/lukioKunnat";
 import {
   type LukioSortOption,
   sortLukioLinjat,
@@ -33,9 +34,11 @@ export function filterLukioSchools(
   omaKeskiarvo: number | null,
   showErityislinjat: boolean,
   sortOrder: LukioSortOption,
+  kunta: string = LUKIO_KUNTA_ALL,
 ): LukioSchoolGroup[] {
   // Off → only yleislinjat; schools with no yleislinja drop out of the list.
-  const scoped = showErityislinjat ? entries : entries.filter((entry) => entry.yleislinja);
+  const byLinja = showErityislinjat ? entries : entries.filter((entry) => entry.yleislinja);
+  const scoped = kunta === LUKIO_KUNTA_ALL ? byLinja : byLinja.filter((entry) => entry.kunta === kunta);
   const normalizedSearch = searchTerm.trim();
   const filtered = normalizedSearch
     ? new Fuse(scoped, FUSE_OPTIONS).search(normalizedSearch).map((result) => result.item)
@@ -70,9 +73,10 @@ export default function useFilteredLukioSchools(
   omaKeskiarvo: number | null,
   showErityislinjat: boolean,
   sortOrder: LukioSortOption,
+  kunta: string,
 ) {
   return useMemo(
-    () => filterLukioSchools(entries, searchTerm, omaKeskiarvo, showErityislinjat, sortOrder),
-    [entries, searchTerm, omaKeskiarvo, showErityislinjat, sortOrder],
+    () => filterLukioSchools(entries, searchTerm, omaKeskiarvo, showErityislinjat, sortOrder, kunta),
+    [entries, searchTerm, omaKeskiarvo, showErityislinjat, sortOrder, kunta],
   );
 }
