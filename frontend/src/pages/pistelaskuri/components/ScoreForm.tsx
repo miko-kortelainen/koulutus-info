@@ -174,11 +174,7 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
 
   return (
     <form onSubmit={handleSubmit}>
-      <Tabs.Root
-        onValueChange={({ value }) => handleModeChange(value)}
-        size="sm"
-        value={SCORE_TYPE_TAB_ID[mode]}
-      >
+      <Tabs.Root onValueChange={({ value }) => handleModeChange(value)} size="sm" value={SCORE_TYPE_TAB_ID[mode]}>
         <Stack>
           <Text fontSize="sm" fontWeight="medium">
             Valintatapa
