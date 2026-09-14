@@ -13,7 +13,7 @@ import {
   type YoFormErrors,
   type YoFormState,
 } from "@/pages/pistelaskuri/lib/yoForm";
-import { isScoreType, type ScoreType } from "@/pages/pistelaskuri/scoreTypes";
+import type { ScoreType } from "@/pages/pistelaskuri/scoreTypes";
 import AmmForm, {
   type AmmFormErrors,
   type AmmFormState,
@@ -37,6 +37,16 @@ interface StoredForms {
 }
 
 const STORAGE_KEY = "yhteishaku:pistelaskuri";
+
+const SCORE_TYPE_TABS = [
+  { id: "yo", label: "YO", value: "Todistusvalinta (YO)" },
+  { id: "amm", label: "AMM", value: "Todistusvalinta (AMM)" },
+] as const;
+
+const SCORE_TYPE_TAB_ID = {
+  "Todistusvalinta (YO)": "yo",
+  "Todistusvalinta (AMM)": "amm",
+} as const satisfies Record<ScoreType, (typeof SCORE_TYPE_TABS)[number]["id"]>;
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -101,13 +111,14 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
   }, [applied]);
 
   const handleModeChange = (value: string) => {
-    if (isCalculating || !isScoreType(value)) return;
+    const next = SCORE_TYPE_TABS.find((tab) => tab.id === value)?.value;
+    if (isCalculating || !next) return;
 
-    setMode(value);
+    setMode(next);
     setYoErrors({});
     setAmmErrors({});
     setCalcError(undefined);
-    onModeChange(value);
+    onModeChange(next);
   };
 
   const runCalculation = async (build: () => Promise<Calculation>) => {
@@ -163,19 +174,18 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
 
   return (
     <form onSubmit={handleSubmit}>
-      <Tabs.Root onValueChange={({ value }) => handleModeChange(value)} size="sm" value={mode}>
+      <Tabs.Root
+        onValueChange={({ value }) => handleModeChange(value)}
+        size="sm"
+        value={SCORE_TYPE_TAB_ID[mode]}
+      >
         <Stack>
           <Text fontSize="sm" fontWeight="medium">
             Valintatapa
           </Text>
           <Tabs.List aria-label="Valintatapa" borderRadius="md" borderWidth="1px" width="full">
-            {(
-              [
-                ["Todistusvalinta (YO)", "YO"],
-                ["Todistusvalinta (AMM)", "AMM"],
-              ] as const
-            ).map(([value, label]) => (
-              <Tabs.Trigger flex="1" fontSize="xs" justifyContent="center" key={value} value={value}>
+            {SCORE_TYPE_TABS.map(({ id, label }) => (
+              <Tabs.Trigger flex="1" fontSize="xs" justifyContent="center" key={id} value={id}>
                 {label}
               </Tabs.Trigger>
             ))}
@@ -183,7 +193,7 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
         </Stack>
 
         <Box mt={6}>
-          <Tabs.Content p={0} value="Todistusvalinta (YO)">
+          <Tabs.Content p={0} value={SCORE_TYPE_TAB_ID["Todistusvalinta (YO)"]}>
             <YoForm
               errors={yoErrors}
               onChange={(state) => {
@@ -194,7 +204,7 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
               value={yoState}
             />
           </Tabs.Content>
-          <Tabs.Content p={0} value="Todistusvalinta (AMM)">
+          <Tabs.Content p={0} value={SCORE_TYPE_TAB_ID["Todistusvalinta (AMM)"]}>
             <AmmForm
               errors={ammErrors}
               onChange={(state) => {
