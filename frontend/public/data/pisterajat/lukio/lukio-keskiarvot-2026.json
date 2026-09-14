@@ -92,6 +92,20 @@
   },
   {
     "kunta": "Espoo",
+    "koulu": "Espoon Steinerkoulun lukio",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.47,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Espoo",
+    "koulu": "Espoon Steinerkoulun lukio",
+    "linja": "Lukion elokuvailmaisun linja",
+    "alinKeskiarvo": 11.53,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Espoo",
     "koulu": "Espoon yhteislyseo",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.5,
@@ -130,20 +144,6 @@
     "koulu": "Haukilahden lukio",
     "linja": "Lukion urheilulinja",
     "alinKeskiarvo": 15.08,
-    "yleislinja": false
-  },
-  {
-    "kunta": "Espoo",
-    "koulu": "Helsingin Rudolf Steiner -koulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.47,
-    "yleislinja": false
-  },
-  {
-    "kunta": "Espoo",
-    "koulu": "Helsingin Rudolf Steiner -koulu",
-    "linja": "Lukion elokuvailmaisun linja",
-    "alinKeskiarvo": 11.53,
     "yleislinja": false
   },
   {
@@ -442,6 +442,13 @@
   },
   {
     "kunta": "Helsinki",
+    "koulu": "Elias-koulun lukio",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.4,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Helsinki",
     "koulu": "Englantilainen koulu",
     "linja": "Lukion englannin ja suomen kielen ja kulttuurin linja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 8.0,
@@ -473,13 +480,6 @@
     "koulu": "Helsingin Ranskalais-Suomalainen koulu",
     "linja": "Lukion A-ranskan kielen linja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 17.0,
-    "yleislinja": false
-  },
-  {
-    "kunta": "Helsinki",
-    "koulu": "Helsingin Rudolf Steiner -koulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.4,
     "yleislinja": false
   },
   {
@@ -1058,7 +1058,7 @@
   },
   {
     "kunta": "Imatra",
-    "koulu": "Itä-Suomen suomalais-venäläinen koulu",
+    "koulu": "Itä-Suomen suomalais-venäläinen koulu, Imatra",
     "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 14.08,
     "yleislinja": false
@@ -1079,35 +1079,35 @@
   },
   {
     "kunta": "Janakkala",
-    "koulu": "Janakkalan lukio",
+    "koulu": "Janakkalan lukio, Tervakosken toimipiste",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
     "kunta": "Janakkala",
-    "koulu": "Janakkalan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "kunta": "Janakkala",
-    "koulu": "Janakkalan lukio",
-    "linja": "Lukion urheilulinja",
-    "alinKeskiarvo": 17.17,
-    "yleislinja": false
-  },
-  {
-    "kunta": "Janakkala",
-    "koulu": "Janakkalan lukio",
+    "koulu": "Janakkalan lukio, Tervakosken toimipiste",
     "linja": "Lukion urheilulinja",
     "alinKeskiarvo": 18.08,
     "yleislinja": false
   },
   {
+    "kunta": "Janakkala",
+    "koulu": "Janakkalan lukio, Turengin toimipiste",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Janakkala",
+    "koulu": "Janakkalan lukio, Turengin toimipiste",
+    "linja": "Lukion urheilulinja",
+    "alinKeskiarvo": 17.17,
+    "yleislinja": false
+  },
+  {
     "kunta": "Joensuu",
-    "koulu": "Itä-Suomen suomalais-venäläinen koulu",
+    "koulu": "Itä-Suomen suomalais-venäläinen koulu, Joensuu",
     "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 15.0,
     "yleislinja": false
@@ -2101,35 +2101,35 @@
   },
   {
     "kunta": "Lappeenranta",
-    "koulu": "Itä-Suomen suomalais-venäläinen koulu",
+    "koulu": "Itä-Suomen suomalais-venäläinen koulu, Lappeenranta",
     "linja": "Lukion A-venäjän kielen linja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 13.25,
     "yleislinja": false
   },
   {
     "kunta": "Lappeenranta",
-    "koulu": "Lappeenrannan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.5,
-    "yleislinja": true
-  },
-  {
-    "kunta": "Lappeenranta",
-    "koulu": "Lappeenrannan lukio",
+    "koulu": "Lappeenrannan lukio, Kimpisen toimipiste",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.83,
     "yleislinja": true
   },
   {
     "kunta": "Lappeenranta",
-    "koulu": "Lappeenrannan lukio",
+    "koulu": "Lappeenrannan lukio, Kimpisen toimipiste",
     "linja": "Lukion yhteiskunta- ja talouslinja",
     "alinKeskiarvo": 8.11,
     "yleislinja": false
   },
   {
     "kunta": "Lappeenranta",
-    "koulu": "Lappeenrannan lukio",
+    "koulu": "Lappeenrannan lukio, Lyseon toimipiste",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.5,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Lappeenranta",
+    "koulu": "Lappeenrannan lukio, Lyseon toimipiste",
     "linja": "Lukion luonnontieteellis-matemaattinen linja",
     "alinKeskiarvo": 8.67,
     "yleislinja": false
@@ -2409,14 +2409,14 @@
   },
   {
     "kunta": "Nurmijärvi",
-    "koulu": "Nurmijärven lukio",
+    "koulu": "Nurmijärven lukio, Kirkonkylän toimipiste",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
     "yleislinja": true
   },
   {
     "kunta": "Nurmijärvi",
-    "koulu": "Nurmijärven lukio",
+    "koulu": "Nurmijärven lukio, Rajamäen toimipiste",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
     "yleislinja": true
@@ -2577,6 +2577,13 @@
   },
   {
     "kunta": "Oulu",
+    "koulu": "Oulun steinerkoulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.03,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Oulu",
     "koulu": "Oulunsalon lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.08,
@@ -2595,13 +2602,6 @@
     "linja": "Gymnasiets allmänna linje",
     "alinKeskiarvo": 7.58,
     "yleislinja": true
-  },
-  {
-    "kunta": "Oulu",
-    "koulu": "Tampereen steinerkoulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.03,
-    "yleislinja": false
   },
   {
     "kunta": "Outokumpu",
@@ -3662,13 +3662,6 @@
   },
   {
     "kunta": "Turku",
-    "koulu": "Lahden Rudolf Steiner-koulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.25,
-    "yleislinja": false
-  },
-  {
-    "kunta": "Turku",
     "koulu": "Luostarivuoren Lyseon lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.08,
@@ -3686,6 +3679,13 @@
     "koulu": "Puolalanmäen lukio",
     "linja": "Lukion musiikkilinja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 13.25,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Turku",
+    "koulu": "Turun Steiner-koulu",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.25,
     "yleislinja": false
   },
   {
@@ -3746,49 +3746,49 @@
   },
   {
     "kunta": "Tuusula",
-    "koulu": "Tuusulan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": true
-  },
-  {
-    "kunta": "Tuusula",
-    "koulu": "Tuusulan lukio",
-    "linja": "Lukion yleislinja",
-    "alinKeskiarvo": 7.08,
-    "yleislinja": true
-  },
-  {
-    "kunta": "Tuusula",
-    "koulu": "Tuusulan lukio",
+    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 8.33,
     "yleislinja": true
   },
   {
     "kunta": "Tuusula",
-    "koulu": "Tuusulan lukio",
+    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
     "linja": "Lukion musiikkilinja",
     "alinKeskiarvo": 11.17,
     "yleislinja": false
   },
   {
     "kunta": "Tuusula",
-    "koulu": "Tuusulan lukio",
+    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
     "linja": "Lukion kuvataidelinja",
     "alinKeskiarvo": 12.67,
     "yleislinja": false
   },
   {
     "kunta": "Tuusula",
-    "koulu": "Tuusulan lukio",
+    "koulu": "Tuusulan lukio, Hyrylän toimipiste",
     "linja": "Lukion urheilulinja",
     "alinKeskiarvo": 13.77,
     "yleislinja": false
   },
   {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio, Jokelan toimipiste",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": true
+  },
+  {
+    "kunta": "Tuusula",
+    "koulu": "Tuusulan lukio, Kellokosken toimipiste",
+    "linja": "Lukion yleislinja",
+    "alinKeskiarvo": 7.08,
+    "yleislinja": true
+  },
+  {
     "kunta": "Tyrnävä",
-    "koulu": "Oulun Lyseon lukio",
+    "koulu": "Oulun Lyseon lukio, Tyrnävä",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 6.17,
     "yleislinja": true
@@ -3949,20 +3949,6 @@
   },
   {
     "kunta": "Vantaa",
-    "koulu": "Helsingin Rudolf Steiner -koulu",
-    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
-    "alinKeskiarvo": 7.0,
-    "yleislinja": false
-  },
-  {
-    "kunta": "Vantaa",
-    "koulu": "Helsingin Rudolf Steiner -koulu",
-    "linja": "Lukion historian ja yhteiskuntatieteiden linja",
-    "alinKeskiarvo": 7.29,
-    "yleislinja": false
-  },
-  {
-    "kunta": "Vantaa",
     "koulu": "Lumon lukio",
     "linja": "Lukion yleislinja",
     "alinKeskiarvo": 7.0,
@@ -4008,6 +3994,20 @@
     "koulu": "Tikkurilan lukio",
     "linja": "Lukion IB-linja (erityinen koulutustehtävä)",
     "alinKeskiarvo": 11.05,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Vantaan seudun steinerkoulun lukio",
+    "linja": "Lukion steinerpedagogiikan linja (erityinen koulutustehtävä)",
+    "alinKeskiarvo": 7.0,
+    "yleislinja": false
+  },
+  {
+    "kunta": "Vantaa",
+    "koulu": "Vantaan seudun steinerkoulun lukio",
+    "linja": "Lukion historian ja yhteiskuntatieteiden linja",
+    "alinKeskiarvo": 7.29,
     "yleislinja": false
   },
   {
