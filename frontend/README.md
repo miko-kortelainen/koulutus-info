@@ -37,9 +37,9 @@ The lukio averages are a separate manual dataset at
 
 ### WebMCP
 
-`useWebMCP` from `use-webmcp-tool` registers one tool on each of `/pistelaskuri/`, `/koulutukset/` and `/hakijamaarat/`. The hook no-ops where `document.modelContext` is missing. Call sites live in those route `+Page.tsx` files.
+`useWebMCP` from `use-webmcp-tool` registers `calculate_todistuspisteet` on `/pistelaskuri/`. The hook no-ops where `document.modelContext` is missing. The call site lives in that route `+Page.tsx` file.
 
-Each `execute` handler computes with a named function (`recalculateFromGrades`, `filterDegrees`, `filterStatistics`), then `setState` so the UI matches. Search tools return the full filtered list plus `total`. They do not read `filteredData` after `setState` (search debounce is 300 ms). Hakijamäärät loads the requested year with `queryClient.ensureQueryData` before filtering. Drop the package if the pages stop exposing tools, or if the WebMCP spec lands and the hook lags.
+The `execute` handler computes with `recalculateFromGrades`, then `setState` so the UI matches. Drop the package if the page stops exposing the tool, or if the WebMCP spec lands and the hook lags.
 
 See [`../backend/README.md`](../backend/README.md) for the data update commands.
 
@@ -88,8 +88,8 @@ flowchart LR
 flowchart TB
   subgraph discovery["Browse and analyse"]
     home["/<br/>LandingPage"] --> homeParts["QuickLinkCard · useCountdown"]
-    degrees["/koulutukset/<br/>SchoolsListPage"] --> degreeParts["SearchInput · FilterItem · useFilteredDegrees<br/>SchoolCard · Pagination · search_koulutukset"]
-    stats["/hakijamaarat/<br/>StatsListPage"] --> statsParts["Search and filters · YearControl · useFilteredStatistics<br/>DegreeStatsCard · CompareBar · Pagination · search_hakijamaarat"]
+    degrees["/koulutukset/<br/>SchoolsListPage"] --> degreeParts["SearchInput · FilterItem · useFilteredDegrees<br/>SchoolCard · Pagination"]
+    stats["/hakijamaarat/<br/>StatsListPage"] --> statsParts["Search and filters · YearControl · useFilteredStatistics<br/>DegreeStatsCard · CompareBar · Pagination"]
     stats --> compare["/vertaile/<br/>ComparePage"] --> compareParts["ComparisonTable · ShareButton"]
     trends["/trendit/<br/>TrendsPage"] --> trendParts["YearControl · useTrendsData · TrendCard<br/>TopBarList · ApplicantTotalsChart"]
   end
