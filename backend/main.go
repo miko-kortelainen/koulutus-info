@@ -74,8 +74,22 @@ type refreshOptions struct {
 	opintopolku models.OpintopolkuConfig
 }
 
+func programmeFilename(id string) string {
+	return "current_programs-" + strings.ReplaceAll(id, "_", "-") + ".json"
+}
+
 func programsOutputPath(id string) string {
-	return dataOutputDir + "/current_programs-" + strings.ReplaceAll(id, "_", "-") + ".json"
+	return filepath.Join(dataOutputDir, programmeFilename(id))
+}
+
+func hautWithProgrammeFiles(dir string, haut []models.OpintopolkuHaku) []models.OpintopolkuHaku {
+	existing := make([]models.OpintopolkuHaku, 0, len(haut))
+	for _, haku := range haut {
+		if _, err := os.Stat(filepath.Join(dir, programmeFilename(haku.ID))); err == nil {
+			existing = append(existing, haku)
+		}
+	}
+	return existing
 }
 
 func validateHaut(haut []models.OpintopolkuHaku) error {
@@ -114,12 +128,10 @@ func filterHautByOID(haut []models.OpintopolkuHaku, oid string) ([]models.Opinto
 }
 
 func programmeFilesOnDisk(haut []models.OpintopolkuHaku) []string {
-	paths := make([]string, 0, len(haut))
-	for _, haku := range haut {
-		path := programsOutputPath(haku.ID)
-		if _, err := os.Stat(path); err == nil {
-			paths = append(paths, path)
-		}
+	existing := hautWithProgrammeFiles(dataOutputDir, haut)
+	paths := make([]string, 0, len(existing))
+	for _, haku := range existing {
+		paths = append(paths, programsOutputPath(haku.ID))
 	}
 	return paths
 }
@@ -167,13 +179,17 @@ func run(args []string) error {
 		if err != nil {
 			return err
 		}
-		if changed || !slices.Equal(meta.ProgrammesHaut, options.opintopolku.Haut) {
+		programmesHaut := hautWithProgrammeFiles(dataOutputDir, options.opintopolku.Haut)
+		if len(programmesHaut) == 0 {
+			return errors.New("no programme files were generated")
+		}
+		if changed || !slices.Equal(meta.ProgrammesHaut, programmesHaut) {
 			meta.ProgrammesUpdatedAt = &now
 			dataChanged = true
 		}
-	}
-	if options.programmes || len(meta.ProgrammesHaut) == 0 {
-		meta.ProgrammesHaut = options.opintopolku.Haut
+		meta.ProgrammesHaut = programmesHaut
+	} else if existing := hautWithProgrammeFiles(dataOutputDir, options.opintopolku.Haut); len(existing) > 0 {
+		meta.ProgrammesHaut = existing
 	}
 
 	statisticsRounds, err := availableStatisticsRounds(statisticsOutputDir)

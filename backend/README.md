@@ -36,6 +36,8 @@ Refresh one configured wave:
 go run . --programmes --yhteishaku-oid 1.2.246.562.29.00000000000000092075
 ```
 
+`PROGRAMME_ROUNDS` lists configured haut that already have a `current_programs-*.json` file, in config order. A targeted refresh does not advertise ungenerated waves.
+
 The generator writes one statistics file per joint application under `frontend/public/data/hakijamäärät/`. An autumn 2026 programme start is written to `hakijamaarat-2026-kevat.json`, and a spring 2026 programme start is written to `hakijamaarat-2025-syksy.json`. It also writes one `current_programs-<round>.json` file per configured haku, regenerates `schools.json` (institution catalog from all programme files ∪ all statistics rounds), and `meta.json`. `meta.json` records the available and current statistics rounds, source-specific refresh dates, and the programme haut. The generated `frontend/src/generated/dataManifest.ts` keeps the frontend joint-application selectors in sync. Existing `vipunen`, `opintopolku`, `catalog`, and `all` commands remain supported.
 
 Before replacing an existing dataset, the generator rejects a result with less than half of the previous record count. Review the generated files before deploying the frontend.
