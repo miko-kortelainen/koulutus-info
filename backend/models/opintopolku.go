@@ -35,9 +35,9 @@ type LanguageStrings struct {
 	En string `json:"en,omitempty"`
 }
 
-// --- Optimized output format for current_programs.json ---
+// --- Optimized output format for current_programs-<round>.json ---
 
-// CurrentProgramsResponse is current_programs.json:
+// CurrentProgramsResponse is one joint-application programme file:
 // a flat array of koulutus entries, each with its name (fi + en) and toteutukset.
 type CurrentProgramsResponse []KoulutusEntry
 

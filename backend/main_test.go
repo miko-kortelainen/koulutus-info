@@ -11,7 +11,10 @@ func testConfig() models.Config {
 	return models.Config{
 		Vipunen: models.VipunenConfig{TilastoVuosi: 2026},
 		Opintopolku: models.OpintopolkuConfig{
-			YhteishakuOID:     "configured-oid",
+			Haut: []models.OpintopolkuHaku{
+				{ID: "2026_kevat_1", OID: "configured-oid"},
+				{ID: "2026_kevat_2", OID: "configured-oid-2"},
+			},
 			Alkamisajankohdat: []string{"2026-kevat", "2026-syksy"},
 		},
 	}
@@ -39,10 +42,15 @@ func TestParseRefreshOptions(t *testing.T) {
 			wantErr: true,
 		},
 		{
+			name:    "unknown oid is rejected",
+			args:    []string{"--programmes", "--yhteishaku-oid", "missing-oid"},
+			wantErr: true,
+		},
+		{
 			name: "manual oid selects programmes for another year",
-			args: []string{"--year", "2027", "--programmes", "--yhteishaku-oid", "manual-oid"},
+			args: []string{"--year", "2027", "--programmes", "--yhteishaku-oid", "configured-oid"},
 			check: func(t *testing.T, options refreshOptions) {
-				if !options.programmes || options.statistics || options.yhteishakuOID != "manual-oid" {
+				if !options.programmes || options.statistics || len(options.haut) != 1 || options.haut[0].OID != "configured-oid" {
 					t.Fatalf("unexpected options: %+v", options)
 				}
 			},
@@ -51,7 +59,7 @@ func TestParseRefreshOptions(t *testing.T) {
 			name: "legacy all command remains supported",
 			args: []string{"all"},
 			check: func(t *testing.T, options refreshOptions) {
-				if !options.programmes || !options.statistics || options.catalog || options.yhteishakuOID != "configured-oid" {
+				if !options.programmes || !options.statistics || options.catalog || len(options.haut) != 2 {
 					t.Fatalf("unexpected options: %+v", options)
 				}
 			},
@@ -109,7 +117,7 @@ func TestAvailableStatisticsRounds(t *testing.T) {
 		"hakijamaarat-2026-kevat.json",
 		"2026_kevat.json",
 		"statistics-2025.json",
-		"current_programs.json",
+		"current_programs-2027-kevat-1.json",
 	} {
 		if err := os.WriteFile(filepath.Join(directory, name), []byte("[]"), 0644); err != nil {
 			t.Fatal(err)
@@ -165,5 +173,62 @@ func TestJSONChanged(t *testing.T) {
 	}
 	if !changed {
 		t.Fatal("expected different JSON to be changed")
+	}
+}
+
+func TestValidateHaut(t *testing.T) {
+	if err := validateHaut(nil); err == nil {
+		t.Fatal("expected empty haut to fail")
+	}
+	if err := validateHaut([]models.OpintopolkuHaku{{ID: "bad", OID: "oid"}}); err == nil {
+		t.Fatal("expected invalid id to fail")
+	}
+	haut := []models.OpintopolkuHaku{
+		{ID: "2027_kevat_1", OID: "oid-1"},
+		{ID: "2027_kevat_2", OID: "oid-2"},
+	}
+	if err := validateHaut(haut); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestHautWithProgrammeFilesKeepsConfigOrderForExistingFiles(t *testing.T) {
+	directory := t.TempDir()
+	haut := []models.OpintopolkuHaku{
+		{ID: "2027_kevat_1", OID: "oid-1"},
+		{ID: "2027_kevat_2", OID: "oid-2"},
+		{ID: "2027_syksy", OID: "oid-3"},
+	}
+	if err := os.WriteFile(filepath.Join(directory, "current_programs-2027-kevat-2.json"), []byte("[]"), 0644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(directory, "current_programs-2027-syksy.json"), []byte("[]"), 0644); err != nil {
+		t.Fatal(err)
+	}
+
+	existing := hautWithProgrammeFiles(directory, haut)
+	if len(existing) != 2 || existing[0].ID != "2027_kevat_2" || existing[1].ID != "2027_syksy" {
+		t.Fatalf("existing = %+v", existing)
+	}
+
+	if got := hautWithProgrammeFiles(directory, haut[:1]); len(got) != 0 {
+		t.Fatalf("missing file should be omitted, got %+v", got)
+	}
+}
+
+func TestFilterHautByOID(t *testing.T) {
+	haut := []models.OpintopolkuHaku{
+		{ID: "2027_kevat_1", OID: "oid-1"},
+		{ID: "2027_kevat_2", OID: "oid-2"},
+	}
+	filtered, err := filterHautByOID(haut, "oid-2")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(filtered) != 1 || filtered[0].ID != "2027_kevat_2" {
+		t.Fatalf("filtered = %+v", filtered)
+	}
+	if _, err := filterHautByOID(haut, "missing"); err == nil {
+		t.Fatal("expected missing oid to fail")
 	}
 }

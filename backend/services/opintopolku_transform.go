@@ -6,7 +6,7 @@ import (
 	"school-api/models"
 )
 
-// TransformOpintopolkuData converts raw Opintopolku data into current_programs.json:
+// TransformOpintopolkuData converts raw Opintopolku data into current_programs-<round>.json:
 // a flat array of koulutus entries. koulutusalat maps koulutus oid -> OKM
 // ohjauksen ala names (see FetchKoulutusalat); the names are duplicated onto
 // every toteutus for direct use in flat toteutus lists and localStorage favorites.

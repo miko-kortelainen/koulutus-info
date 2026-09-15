@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2026-08-08T14:38:02.955894733Z",
+  "generatedAt": "2026-09-14T22:14:35.344534843Z",
   "statisticsRounds": [
+    "2026_syksy",
     "2026_kevat",
     "2025_syksy",
     "2025_kevat",
@@ -14,8 +15,17 @@
     "2021_kevat",
     "2020_syksy"
   ],
-  "currentStatisticsRound": "2026_kevat",
-  "statisticsUpdatedAt": "2026-08-08T14:38:02.955894733Z",
-  "programmesUpdatedAt": "2026-08-06T15:54:39.646438475Z",
-  "programmesYhteishakuOid": "1.2.246.562.29.00000000000000087775"
+  "currentStatisticsRound": "2026_syksy",
+  "statisticsUpdatedAt": "2026-09-14T20:37:00Z",
+  "programmesUpdatedAt": "2026-09-14T22:14:35.344534843Z",
+  "programmesHaut": [
+    {
+      "id": "2027_kevat_1",
+      "oid": "1.2.246.562.29.00000000000000092075"
+    },
+    {
+      "id": "2027_kevat_2",
+      "oid": "1.2.246.562.29.00000000000000092098"
+    }
+  ]
 }

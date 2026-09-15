@@ -1,5 +1,12 @@
 import type { FeedbackMaxScore } from "@/api/dataValidation";
-import { readCurrentPrograms, readCurrentYearStatistics, readStudentFeedback, schoolNames } from "@/api/serverData";
+import {
+  readAllPrograms,
+  readCurrentYearStatistics,
+  readStatistics,
+  readStudentFeedback,
+  schoolNames,
+} from "@/api/serverData";
+import { YEAR_OPTIONS } from "@/config/yearOptions";
 import { slugify } from "@/lib/slug";
 
 export interface SchoolListItem {
@@ -17,16 +24,20 @@ export interface SchoolListItem {
 
 export const data = (): SchoolListItem[] => {
   const statistics = readCurrentYearStatistics();
-  const programs = readCurrentPrograms();
+  const programs = readAllPrograms();
   const feedback = readStudentFeedback();
   const toteutukset = programs.flatMap((k) => k.toteutukset);
+  // Autumn current rounds omit most universities; sector still comes from earlier statistics.
+  const sektori = new Map(
+    YEAR_OPTIONS.flatMap(({ value }) => readStatistics(value).map((r) => [r.korkeakoulu, r.sektori] as const)),
+  );
   return schoolNames().map((name) => {
     const rows = statistics.filter((s) => s.korkeakoulu === name);
     const schoolFeedback = feedback[name];
     return {
       name,
       slug: slugify(name),
-      sektori: rows[0]?.sektori ?? "",
+      sektori: sektori.get(name) ?? "",
       koulutuksia: toteutukset.filter((t) => t.oppilaitosNimi.fi === name).length,
       kaikkiHakijat: rows.reduce((sum, r) => sum + r.kaikkiHakijatLkm, 0),
       valitut: rows.reduce((sum, r) => sum + r.valitutLkm, 0),

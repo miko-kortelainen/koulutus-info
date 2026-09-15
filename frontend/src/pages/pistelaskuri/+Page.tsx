@@ -22,12 +22,7 @@ import {
   type UniversityProgramsResponse,
 } from "@/pages/pistelaskuri/lib/todistusvalinta/index";
 import { COLORS } from "@/theme";
-import {
-  AMM_GRADES,
-  type AmmFormState,
-  type AmmGrade,
-  parseAmmForm,
-} from "@/pages/pistelaskuri/components/AmmForm";
+import { AMM_GRADES, type AmmFormState, type AmmGrade, parseAmmForm } from "@/pages/pistelaskuri/components/AmmForm";
 import ResultSelect from "@/pages/pistelaskuri/components/ResultSelect";
 import ScoreForm from "@/pages/pistelaskuri/components/ScoreForm";
 import ScoreResultList from "@/pages/pistelaskuri/components/ScoreResultList";
@@ -40,7 +35,13 @@ import {
   selectApplicantResults,
   toCompactQualified,
 } from "@/pages/pistelaskuri/lib/scoreResults";
-import { SUBJECT_OPTIONS, parseYoForm, toUniversityGrades, yoFormFromExamGrades, type YoFormState } from "@/pages/pistelaskuri/lib/yoForm";
+import {
+  SUBJECT_OPTIONS,
+  parseYoForm,
+  toUniversityGrades,
+  yoFormFromExamGrades,
+  type YoFormState,
+} from "@/pages/pistelaskuri/lib/yoForm";
 import { YO_GRADES, type YoGrade } from "@/pages/pistelaskuri/lib/yoScoring";
 import type { ScoreType } from "@/pages/pistelaskuri/scoreTypes";
 
@@ -141,7 +142,11 @@ function parseAmmAgentForm(args: Record<string, unknown>): AmmFormState | string
   const scale = args.asteikko === "1-3" || args.asteikko === "1-5" ? args.asteikko : null;
   if (!scale) return "Valitse asteikko 1-5 tai 1-3.";
   const grades = [args.viestinta, args.matemaattinen, args.yhteiskunta];
-  if (!grades.every((grade): grade is AmmGrade => typeof grade === "number" && AMM_GRADES[scale].includes(grade as AmmGrade))) {
+  if (
+    !grades.every(
+      (grade): grade is AmmGrade => typeof grade === "number" && AMM_GRADES[scale].includes(grade as AmmGrade),
+    )
+  ) {
     return "Anna arvosana kaikille kolmelle osa-alueelle.";
   }
   const keskiarvoInput =
@@ -251,7 +256,11 @@ export default function ScoreCalculatorPage() {
     inputSchema: {
       type: "object",
       properties: {
-        valintatapa: { type: "string", enum: ["yo", "amm"], description: "YO-todistus tai ammatillinen perustutkinto." },
+        valintatapa: {
+          type: "string",
+          enum: ["yo", "amm"],
+          description: "YO-todistus tai ammatillinen perustutkinto.",
+        },
         aineet: {
           type: "array",
           description: "YO-aineet koodeina, esimerkiksi ai_fi, maa, fy, ena.",
@@ -269,7 +278,11 @@ export default function ScoreCalculatorPage() {
         matemaattinen: { type: "number", description: "Matemaattis-luonnontieteellinen osaaminen." },
         yhteiskunta: { type: "number", description: "Yhteiskunta- ja työelämäosaaminen." },
         keskiarvo: { description: "Painotettu keskiarvo, myös 3,5." },
-        kierros: { type: "string", enum: [...CALCULATOR_CUTOFF_ROUNDS], description: "Pisterajakierros, esimerkiksi 2026-kevat." },
+        kierros: {
+          type: "string",
+          enum: [...CALCULATOR_CUTOFF_ROUNDS],
+          description: "Pisterajakierros, esimerkiksi 2026-kevat.",
+        },
         ensikertalainen: { type: "boolean", description: "Onko hakija ensikertalainen." },
       },
       required: ["valintatapa"],
@@ -313,7 +326,8 @@ export default function ScoreCalculatorPage() {
       const amm = parseAmmAgentForm(args);
       if (typeof amm === "string") return amm;
       const parsed = parseAmmForm(amm);
-      if (!("input" in parsed)) return parsed.errors.grades ?? parsed.errors.keskiarvo ?? "AMM-todistus on puutteellinen.";
+      if (!("input" in parsed))
+        return parsed.errors.grades ?? parsed.errors.keskiarvo ?? "AMM-todistus on puutteellinen.";
       const selectionMethod = "Todistusvalinta (AMM)" as const;
       const scored = await recalculateFromGrades({ selectionMethod, ammGrades: parsed.input }, round);
       const next: Calculation = { ...scored, selectionMethod, ammGrades: parsed.input, university: undefined };

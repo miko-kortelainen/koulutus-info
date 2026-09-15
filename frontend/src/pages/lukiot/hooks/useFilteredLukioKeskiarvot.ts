@@ -3,11 +3,7 @@ import { useMemo } from "react";
 import type { LukioKeskiarvoEntry } from "@/api/dataValidation";
 import { slugify } from "@/lib/slug";
 import { LUKIO_KUNTA_ALL } from "@/pages/lukiot/lib/lukioKunnat";
-import {
-  type LukioSortOption,
-  sortLukioLinjat,
-  sortLukioSchoolGroups,
-} from "@/pages/lukiot/lib/sortLukioKeskiarvot";
+import { type LukioSortOption, sortLukioLinjat, sortLukioSchoolGroups } from "@/pages/lukiot/lib/sortLukioKeskiarvot";
 
 export interface LukioSchoolGroup {
   koulu: string;

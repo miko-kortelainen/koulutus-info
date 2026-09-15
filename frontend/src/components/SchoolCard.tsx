@@ -2,6 +2,7 @@ import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text, VStack }
 import { HiChevronDown, HiChevronUp, HiHeart, HiLocationMarker, HiOutlineHeart } from "react-icons/hi";
 import useFavorites from "@/hooks/useFavorites";
 import { alaSlugParam } from "@/lib/cutoffs";
+import { localizedText } from "@/lib/localizedText";
 import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 import type { ToteutusEntry } from "@/types.gen";
@@ -17,10 +18,8 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorited = isFavorite(toteutus.toteutusOid);
   const toteutusURL = `https://opintopolku.fi/konfo/fi/toteutus/${toteutus.toteutusOid}`;
-  const schoolName =
-    toteutus.oppilaitosNimi.fi || toteutus.oppilaitosNimi.en || toteutus.oppilaitosNimi.sv || "virheellinen nimi";
-  const degreeName =
-    toteutus.toteutusNimi.fi || toteutus.toteutusNimi.en || toteutus.toteutusNimi.sv || "virheellinen nimi";
+  const schoolName = localizedText(toteutus.oppilaitosNimi);
+  const degreeName = localizedText(toteutus.toteutusNimi);
 
   const schoolBadge = (
     <Badge

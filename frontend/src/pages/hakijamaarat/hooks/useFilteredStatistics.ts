@@ -1,6 +1,12 @@
 import Fuse from "fuse.js";
 import { useMemo } from "react";
-import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getSisaanpaasyprosentti, ratioFormat } from "@/lib/statistics";
+import {
+  formatCount,
+  formatSisaanpaasyprosentti,
+  getHakijapaine,
+  getSisaanpaasyprosentti,
+  ratioFormat,
+} from "@/lib/statistics";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 import { type SortOption, sortStatistics } from "@/pages/hakijamaarat/lib/sortStatistics";
 
@@ -50,7 +56,8 @@ export function toCompactStatistics(entry: StatisticsEntry) {
     kaikkiHakijat: formatCount(entry.kaikkiHakijatLkm),
     ensisijaiset: formatCount(entry.ensisijaisetHakijatLkm),
     aloituspaikat: formatCount(entry.aloituspaikatLkm),
-    sisaanpaasyprosentti: sisaanpaasy == null ? null : formatSisaanpaasyprosentti(entry.valitutLkm, entry.kaikkiHakijatLkm),
+    sisaanpaasyprosentti:
+      sisaanpaasy == null ? null : formatSisaanpaasyprosentti(entry.valitutLkm, entry.kaikkiHakijatLkm),
     hakijapaine: paine == null ? null : ratioFormat.format(paine),
   };
 }

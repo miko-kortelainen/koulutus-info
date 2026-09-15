@@ -2,7 +2,7 @@ import type { PageContextServer } from "vike/types";
 import {
   cutoffSchoolNames,
   feedbackSchoolNames,
-  readCurrentProgramsWithAvailableCutoffs,
+  readAllProgramsWithAvailableCutoffs,
   readCurrentYearStatistics,
   resolveSchool,
 } from "@/api/serverData";
@@ -18,7 +18,7 @@ export interface SchoolPageData {
 
 export const data = (pageContext: PageContextServer): SchoolPageData => {
   const schoolName = resolveSchool(pageContext.routeParams.slug)?.name ?? "";
-  const programs = readCurrentProgramsWithAvailableCutoffs();
+  const programs = readAllProgramsWithAvailableCutoffs();
   const statistics = readCurrentYearStatistics();
   const hasCutoffs = cutoffSchoolNames().includes(schoolName);
   return {
