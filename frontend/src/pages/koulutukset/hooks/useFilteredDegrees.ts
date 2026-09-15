@@ -36,7 +36,9 @@ export function filterDegrees(
       (!selectedKoulutusalat.size || t.koulutusalat?.some((a) => selectedKoulutusalat.has(a))),
   );
   const normalizedSearch = searchTerm.trim();
-  return normalizedSearch ? new Fuse(byFilters, FUSE_OPTIONS).search(normalizedSearch).map((result) => result.item) : byFilters;
+  return normalizedSearch
+    ? new Fuse(byFilters, FUSE_OPTIONS).search(normalizedSearch).map((result) => result.item)
+    : byFilters;
 }
 
 export default function useFilteredDegrees(
@@ -50,7 +52,15 @@ export default function useFilteredDegrees(
 ) {
   return useMemo(
     () =>
-      filterDegrees(data, searchTerm, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat),
+      filterDegrees(
+        data,
+        searchTerm,
+        selectedSektorit,
+        selectedKunnat,
+        selectedSchools,
+        selectedTasot,
+        selectedKoulutusalat,
+      ),
     [data, searchTerm, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat],
   );
 }

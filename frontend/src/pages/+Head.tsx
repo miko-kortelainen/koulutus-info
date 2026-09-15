@@ -4,6 +4,7 @@ export function Head() {
       <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       <link href="/images/180x180.png" rel="apple-touch-icon" sizes="180x180" />
       <link href="/manifest.webmanifest" rel="manifest" />
+      <link href="https://yhteishaku.app/llms.txt" rel="describedby" />
       <style>{`
         @font-face {
           font-display: swap;

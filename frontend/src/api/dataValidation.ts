@@ -172,6 +172,11 @@ function parseArray<T>(value: unknown, isItem: (item: unknown) => boolean, sourc
 export const parseStatistics = (value: unknown, source: string): StatisticsResponse =>
   parseArray(value, isStatisticsEntry, source);
 
+const isProgrammeHaku = (value: unknown) => isRecord(value) && isString(value.id) && isString(value.oid);
+
+const isOptionalProgrammeHaut = (value: unknown) =>
+  value === undefined || (Array.isArray(value) && value.every(isProgrammeHaku));
+
 const isMeta = (value: unknown): value is Meta =>
   isRecord(value) &&
   isString(value.generatedAt) &&
@@ -179,7 +184,7 @@ const isMeta = (value: unknown): value is Meta =>
   isString(value.currentStatisticsRound) &&
   isOptionalString(value.statisticsUpdatedAt) &&
   isOptionalString(value.programmesUpdatedAt) &&
-  isOptionalString(value.programmesYhteishakuOid);
+  isOptionalProgrammeHaut(value.programmesHaut);
 
 export const parseMeta = (value: unknown, source: string): Meta => {
   if (!isMeta(value)) throw new Error(`Invalid data in ${source}`);

@@ -5,7 +5,16 @@
     "hakutapa": "Yhteishaku"
   },
   "opintopolku": {
-    "yhteishakuOid": "1.2.246.562.29.00000000000000087775",
-    "alkamisajankohdat": ["2026-kevat", "2026-syksy"]
+    "haut": [
+      {
+        "id": "2027_kevat_1",
+        "oid": "1.2.246.562.29.00000000000000092075"
+      },
+      {
+        "id": "2027_kevat_2",
+        "oid": "1.2.246.562.29.00000000000000092098"
+      }
+    ],
+    "alkamisajankohdat": ["2027-kevat"]
   }
 }

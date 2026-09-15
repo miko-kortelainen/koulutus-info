@@ -16,6 +16,7 @@ import {
   type StudentFeedback,
 } from "@/api/dataValidation";
 import { LUKIO_KESKIARVOT_DATA_PATH } from "@/config/lukioKeskiarvot";
+import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import {
   type CutoffRound,
   compareCutoffRounds,
@@ -23,7 +24,7 @@ import {
   DEFAULT_CUTOFF_ROUND,
 } from "@/config/cutoffRounds";
 import type { HakijaprofiiliRound } from "@/config/hakijaprofiiliRounds";
-import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
+import { PROGRAMME_ROUNDS, type ProgrammeRound } from "@/config/programmeRounds";
 import { filterUnavailableCutoffAlat } from "@/lib/cutoffs";
 import { slugify } from "@/lib/slug";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
@@ -64,12 +65,24 @@ export const readStatistics = (round: YearOption): StatisticsResponse =>
 
 export const readCurrentYearStatistics = (): StatisticsResponse => readStatistics(CURRENT_YEAR);
 
+export const programmeDataFile = (round: ProgrammeRound) => `current_programs-${round.replaceAll("_", "-")}.json`;
+
+export const readPrograms = (round: ProgrammeRound): CurrentProgramsResponse =>
+  readPublicData(programmeDataFile(round), parseCurrentPrograms);
+
+export const readAllPrograms = (): CurrentProgramsResponse => PROGRAMME_ROUNDS.flatMap((round) => readPrograms(round));
+
 export const readMeta = (): Meta => readPublicData("meta.json", parseMeta);
 
 const readSchools = (): SchoolCatalog => readPublicData("schools.json", parseSchoolCatalog);
 
-export const readCurrentPrograms = (): CurrentProgramsResponse =>
-  readPublicData("current_programs.json", parseCurrentPrograms);
+const allCutoffSchools = () => availableCutoffRounds().flatMap((round) => readCutoffSchools(round));
+
+export const readProgramsWithAvailableCutoffs = (round: ProgrammeRound): CurrentProgramsResponse =>
+  filterUnavailableCutoffAlat(readPrograms(round), allCutoffSchools());
+
+export const readAllProgramsWithAvailableCutoffs = (): CurrentProgramsResponse =>
+  filterUnavailableCutoffAlat(readAllPrograms(), allCutoffSchools());
 
 export const availableCutoffRounds = (): CutoffRound[] =>
   [
@@ -86,12 +99,6 @@ const cutoffSectors = ["amk", "yliopisto"] as const;
 export const readCutoffSchools = (round: CutoffRound = DEFAULT_CUTOFF_ROUND): CutoffSchool[] =>
   cutoffSectors.flatMap((sector) =>
     readPublicData(`pisterajat/pisterajat-${round}-${sector}.json`, parseCutoffSchools),
-  );
-
-export const readCurrentProgramsWithAvailableCutoffs = (): CurrentProgramsResponse =>
-  filterUnavailableCutoffAlat(
-    readCurrentPrograms(),
-    availableCutoffRounds().flatMap((round) => readCutoffSchools(round)),
   );
 
 export const cutoffSchoolNames = (): string[] => {

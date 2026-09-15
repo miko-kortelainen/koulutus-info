@@ -12,6 +12,7 @@ import (
 	"regexp"
 	"school-api/models"
 	"school-api/services"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -23,11 +24,12 @@ const (
 	dataOutputDir           = "../frontend/public/data"
 	statisticsOutputDir     = dataOutputDir + "/hakijamäärät"
 	hakijaprofiiliOutputDir = dataOutputDir + "/hakijaprofiili"
-	programsOutputPath      = dataOutputDir + "/current_programs.json"
 	schoolsCatalogPath      = dataOutputDir + "/schools.json"
 	metaOutputPath          = dataOutputDir + "/meta.json"
 	manifestModulePath      = "../frontend/src/generated/dataManifest.ts"
 )
+
+var hakuIDPattern = regexp.MustCompile(`^\d{4}_(kevat|syksy)(_[1-9]\d*)?$`)
 
 // Institution short names for schools.json display. Finnish universities without
 // an established short stay name-only.
@@ -64,12 +66,74 @@ var (
 )
 
 type refreshOptions struct {
-	statistics    bool
-	programmes    bool
-	catalog       bool // offline schools.json rebuild; requires on-disk programmes + stats
-	yhteishakuOID string
-	vipunen       models.VipunenConfig
-	opintopolku   models.OpintopolkuConfig
+	statistics  bool
+	programmes  bool
+	catalog     bool // offline schools.json rebuild; requires on-disk programmes + stats
+	haut        []models.OpintopolkuHaku
+	vipunen     models.VipunenConfig
+	opintopolku models.OpintopolkuConfig
+}
+
+func programmeFilename(id string) string {
+	return "current_programs-" + strings.ReplaceAll(id, "_", "-") + ".json"
+}
+
+func programsOutputPath(id string) string {
+	return filepath.Join(dataOutputDir, programmeFilename(id))
+}
+
+func hautWithProgrammeFiles(dir string, haut []models.OpintopolkuHaku) []models.OpintopolkuHaku {
+	existing := make([]models.OpintopolkuHaku, 0, len(haut))
+	for _, haku := range haut {
+		if _, err := os.Stat(filepath.Join(dir, programmeFilename(haku.ID))); err == nil {
+			existing = append(existing, haku)
+		}
+	}
+	return existing
+}
+
+func validateHaut(haut []models.OpintopolkuHaku) error {
+	if len(haut) == 0 {
+		return errors.New("opintopolku.haut must contain at least one haku")
+	}
+	seenID := make(map[string]struct{}, len(haut))
+	seenOID := make(map[string]struct{}, len(haut))
+	for _, haku := range haut {
+		id := strings.TrimSpace(haku.ID)
+		oid := strings.TrimSpace(haku.OID)
+		if id == "" || oid == "" {
+			return errors.New("opintopolku.haut entries require id and oid")
+		}
+		if !hakuIDPattern.MatchString(id) {
+			return fmt.Errorf("invalid haku id %q; use YYYY_kevat_N or YYYY_syksy", id)
+		}
+		if _, exists := seenID[id]; exists {
+			return fmt.Errorf("duplicate haku id %q", id)
+		}
+		if _, exists := seenOID[oid]; exists {
+			return fmt.Errorf("duplicate haku oid %q", oid)
+		}
+		seenID[id] = struct{}{}
+		seenOID[oid] = struct{}{}
+	}
+	return nil
+}
+
+func filterHautByOID(haut []models.OpintopolkuHaku, oid string) ([]models.OpintopolkuHaku, error) {
+	i := slices.IndexFunc(haut, func(haku models.OpintopolkuHaku) bool { return haku.OID == oid })
+	if i < 0 {
+		return nil, fmt.Errorf("yhteishaku oid %q is not in opintopolku.haut", oid)
+	}
+	return haut[i : i+1], nil
+}
+
+func programmeFilesOnDisk(haut []models.OpintopolkuHaku) []string {
+	existing := hautWithProgrammeFiles(dataOutputDir, haut)
+	paths := make([]string, 0, len(existing))
+	for _, haku := range existing {
+		paths = append(paths, programsOutputPath(haku.ID))
+	}
+	return paths
 }
 
 func main() {
@@ -108,15 +172,24 @@ func run(args []string) error {
 		}
 	}
 	if options.programmes {
-		changed, err := generateOpintopolku(options.opintopolku)
+		if err := validateHaut(options.opintopolku.Haut); err != nil {
+			return err
+		}
+		changed, err := generateOpintopolku(options.haut, options.opintopolku.Alkamisajankohdat)
 		if err != nil {
 			return err
 		}
-		if changed || meta.ProgrammesYhteishakuOID != options.yhteishakuOID {
+		programmesHaut := hautWithProgrammeFiles(dataOutputDir, options.opintopolku.Haut)
+		if len(programmesHaut) == 0 {
+			return errors.New("no programme files were generated")
+		}
+		if changed || !slices.Equal(meta.ProgrammesHaut, programmesHaut) {
 			meta.ProgrammesUpdatedAt = &now
-			meta.ProgrammesYhteishakuOID = options.yhteishakuOID
 			dataChanged = true
 		}
+		meta.ProgrammesHaut = programmesHaut
+	} else if existing := hautWithProgrammeFiles(dataOutputDir, options.opintopolku.Haut); len(existing) > 0 {
+		meta.ProgrammesHaut = existing
 	}
 
 	statisticsRounds, err := availableStatisticsRounds(statisticsOutputDir)
@@ -139,7 +212,7 @@ func run(args []string) error {
 		return err
 	}
 
-	if err := maybeRebuildSchoolCatalog(meta.CurrentStatisticsRound, options.catalog); err != nil {
+	if err := maybeRebuildSchoolCatalog(meta.CurrentStatisticsRound, programmeFilesOnDisk(options.opintopolku.Haut), options.catalog); err != nil {
 		return err
 	}
 
@@ -157,9 +230,9 @@ func parseRefreshOptions(args []string, cfg models.Config) (refreshOptions, erro
 		case "vipunen":
 			return refreshOptions{statistics: true, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
 		case "opintopolku":
-			return refreshOptions{programmes: true, yhteishakuOID: cfg.Opintopolku.YhteishakuOID, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
+			return refreshOptions{programmes: true, haut: cfg.Opintopolku.Haut, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
 		case "all":
-			return refreshOptions{statistics: true, programmes: true, yhteishakuOID: cfg.Opintopolku.YhteishakuOID, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
+			return refreshOptions{statistics: true, programmes: true, haut: cfg.Opintopolku.Haut, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
 		case "catalog":
 			// Offline rebuild of schools.json from on-disk programmes + current stats round.
 			return refreshOptions{catalog: true, vipunen: cfg.Vipunen, opintopolku: cfg.Opintopolku}, nil
@@ -171,7 +244,7 @@ func parseRefreshOptions(args []string, cfg models.Config) (refreshOptions, erro
 	year := flags.Int("year", cfg.Vipunen.TilastoVuosi, "programme start year")
 	statistics := flags.Bool("statistics", false, "refresh Vipunen statistics")
 	programmes := flags.Bool("programmes", false, "refresh Opintopolku programmes")
-	yhteishakuOID := flags.String("yhteishaku-oid", "", "manually sourced Opintopolku joint-application OID")
+	yhteishakuOID := flags.String("yhteishaku-oid", "", "refresh only this configured joint-application OID")
 	if err := flags.Parse(args); err != nil {
 		return refreshOptions{}, fmt.Errorf("parse arguments: %w", err)
 	}
@@ -188,20 +261,27 @@ func parseRefreshOptions(args []string, cfg models.Config) (refreshOptions, erro
 
 	configuredYear := cfg.Vipunen.TilastoVuosi
 	cfg.Vipunen.TilastoVuosi = *year
+	haut := cfg.Opintopolku.Haut
 	oid := strings.TrimSpace(*yhteishakuOID)
-	if oid != "" {
-		cfg.Opintopolku.YhteishakuOID = oid
-	}
-	if *programmes && oid == "" && *year != configuredYear {
-		return refreshOptions{}, fmt.Errorf("--programmes for %d requires --yhteishaku-oid because the joint-application OID is sourced manually", *year)
+	if *programmes {
+		if oid == "" && *year != configuredYear {
+			return refreshOptions{}, fmt.Errorf("--programmes for %d requires --yhteishaku-oid because the joint-application OID is sourced manually", *year)
+		}
+		if oid != "" {
+			filtered, err := filterHautByOID(cfg.Opintopolku.Haut, oid)
+			if err != nil {
+				return refreshOptions{}, err
+			}
+			haut = filtered
+		}
 	}
 
 	return refreshOptions{
-		statistics:    *statistics,
-		programmes:    *programmes,
-		yhteishakuOID: cfg.Opintopolku.YhteishakuOID,
-		vipunen:       cfg.Vipunen,
-		opintopolku:   cfg.Opintopolku,
+		statistics:  *statistics,
+		programmes:  *programmes,
+		haut:        haut,
+		vipunen:     cfg.Vipunen,
+		opintopolku: cfg.Opintopolku,
 	}, nil
 }
 
@@ -280,95 +360,111 @@ func generateVipunen(cfg models.VipunenConfig) (bool, error) {
 	return changedAny, nil
 }
 
-func generateOpintopolku(cfg models.OpintopolkuConfig) (bool, error) {
-	apiURL, selection, err := services.BuildOpintopolkuURL(cfg.YhteishakuOID, cfg.Alkamisajankohdat)
+func generateOpintopolku(haut []models.OpintopolkuHaku, alkamisajankohdat []string) (bool, error) {
+	changedAny := false
+	for _, haku := range haut {
+		changed, err := generateOneHaku(haku, alkamisajankohdat)
+		if err != nil {
+			return false, err
+		}
+		changedAny = changedAny || changed
+	}
+	return changedAny, nil
+}
+
+func generateOneHaku(haku models.OpintopolkuHaku, alkamisajankohdat []string) (bool, error) {
+	apiURL, selection, err := services.BuildOpintopolkuURL(haku.OID, alkamisajankohdat)
 	if err != nil {
-		return false, fmt.Errorf("invalid Opintopolku configuration: %w", err)
+		return false, fmt.Errorf("invalid Opintopolku configuration for %s: %w", haku.ID, err)
 	}
 
 	fetched, err := services.FetchOpintopolkuData(apiURL)
 	if err != nil {
-		return false, err
+		return false, fmt.Errorf("%s: %w", haku.ID, err)
 	}
 	if fetched == nil || len(fetched.Hits) == 0 {
-		return false, errors.New("Opintopolku returned no records")
+		return false, fmt.Errorf("Opintopolku returned no records for %s", haku.ID)
 	}
 
 	koulutusalat, err := services.FetchKoulutusalat(fetched.Hits)
 	if err != nil {
-		return false, err
+		return false, fmt.Errorf("%s: %w", haku.ID, err)
 	}
 
 	programs := services.TransformOpintopolkuData(fetched, koulutusalat)
 	if len(programs) == 0 {
-		return false, errors.New("Opintopolku produced no programmes after cleanup")
+		return false, fmt.Errorf("Opintopolku produced no programmes after cleanup for %s", haku.ID)
 	}
-	if err := validateRecordCount(programsOutputPath, len(programs), "Opintopolku programmes"); err != nil {
+	outputPath := programsOutputPath(haku.ID)
+	if err := validateRecordCount(outputPath, len(programs), "Opintopolku programmes "+haku.ID); err != nil {
 		return false, err
 	}
-	changed, err := jsonChanged(programsOutputPath, programs)
+	changed, err := jsonChanged(outputPath, programs)
 	if err != nil {
 		return false, err
 	}
 
-	if err := writeJSON(programsOutputPath, programs); err != nil {
+	if err := writeJSON(outputPath, programs); err != nil {
 		return false, err
 	}
 
-	fmt.Printf("Opintopolku: selection=%s fetched=%d generated=%d changed=%t output=%s\n", selection, len(fetched.Hits), len(programs), changed, programsOutputPath)
+	fmt.Printf("Opintopolku: id=%s selection=%s fetched=%d generated=%d changed=%t output=%s\n", haku.ID, selection, len(fetched.Hits), len(programs), changed, outputPath)
 	return changed, nil
 }
 
-// maybeRebuildSchoolCatalog rebuilds schools.json when programmes exist on disk.
-// Partial refreshes (e.g. vipunen alone on a fresh install) skip the catalog
-// until current_programs.json is available; the catalog command still requires it.
-func maybeRebuildSchoolCatalog(currentRound string, catalogRequired bool) error {
-	if _, err := os.Stat(programsOutputPath); errors.Is(err, os.ErrNotExist) {
+func maybeRebuildSchoolCatalog(currentRound string, programPaths []string, catalogRequired bool) error {
+	if len(programPaths) == 0 {
 		if catalogRequired {
-			return fmt.Errorf("school catalog requires %s", programsOutputPath)
+			return errors.New("school catalog requires current_programs-*.json")
 		}
-		fmt.Printf("School catalog: skipped (missing %s); run opintopolku or catalog after programmes exist\n", programsOutputPath)
+		fmt.Printf("School catalog: skipped (missing programme files); run opintopolku or catalog after programmes exist\n")
 		return nil
-	} else if err != nil {
-		return fmt.Errorf("stat %s: %w", programsOutputPath, err)
 	}
-	return rebuildSchoolCatalog(currentRound)
+	return rebuildSchoolCatalog(currentRound, programPaths)
 }
 
-func rebuildSchoolCatalog(currentRound string) error {
-	if currentRound == "" {
+func rebuildSchoolCatalog(currentRound string, programPaths []string) error {
+	statsRounds, err := availableStatisticsRounds(statisticsOutputDir)
+	if err != nil {
+		return err
+	}
+	if currentRound == "" || len(statsRounds) == 0 {
 		return errors.New("school catalog requires currentStatisticsRound")
-	}
-	programsData, err := os.ReadFile(programsOutputPath)
-	if err != nil {
-		return fmt.Errorf("school catalog requires %s: %w", programsOutputPath, err)
-	}
-	var programs models.CurrentProgramsResponse
-	if err := json.Unmarshal(programsData, &programs); err != nil {
-		return fmt.Errorf("decode %s: %w", programsOutputPath, err)
-	}
-
-	statsPath := filepath.Join(statisticsOutputDir, "hakijamaarat-"+strings.ReplaceAll(currentRound, "_", "-")+".json")
-	statsData, err := os.ReadFile(statsPath)
-	if err != nil {
-		return fmt.Errorf("school catalog requires %s: %w", statsPath, err)
-	}
-	var statistics models.StatisticsResponse
-	if err := json.Unmarshal(statsData, &statistics); err != nil {
-		return fmt.Errorf("decode %s: %w", statsPath, err)
 	}
 
 	names := make(map[string]struct{})
-	for _, programme := range programs {
-		for _, toteutus := range programme.Toteutukset {
-			if name := strings.TrimSpace(toteutus.OppilaitosNimi.Fi); name != "" {
-				names[name] = struct{}{}
+	for _, path := range programPaths {
+		programsData, err := os.ReadFile(path)
+		if err != nil {
+			return fmt.Errorf("school catalog requires %s: %w", path, err)
+		}
+		var programs models.CurrentProgramsResponse
+		if err := json.Unmarshal(programsData, &programs); err != nil {
+			return fmt.Errorf("decode %s: %w", path, err)
+		}
+		for _, programme := range programs {
+			for _, toteutus := range programme.Toteutukset {
+				if name := strings.TrimSpace(toteutus.OppilaitosNimi.Fi); name != "" {
+					names[name] = struct{}{}
+				}
 			}
 		}
 	}
-	for _, row := range statistics {
-		if name := strings.TrimSpace(row.Korkeakoulu); name != "" {
-			names[name] = struct{}{}
+
+	for _, round := range statsRounds {
+		statsPath := filepath.Join(statisticsOutputDir, "hakijamaarat-"+strings.ReplaceAll(round, "_", "-")+".json")
+		statsData, err := os.ReadFile(statsPath)
+		if err != nil {
+			return fmt.Errorf("school catalog requires %s: %w", statsPath, err)
+		}
+		var statistics models.StatisticsResponse
+		if err := json.Unmarshal(statsData, &statistics); err != nil {
+			return fmt.Errorf("decode %s: %w", statsPath, err)
+		}
+		for _, row := range statistics {
+			if name := strings.TrimSpace(row.Korkeakoulu); name != "" {
+				names[name] = struct{}{}
+			}
 		}
 	}
 	if len(names) == 0 {
@@ -494,11 +590,21 @@ func writeDataManifestModule(path string, meta models.Meta) error {
 	for i, round := range profiliRounds {
 		profiliQuoted[i] = strconv.Quote(round)
 	}
+	programmeQuoted := make([]string, len(meta.ProgrammesHaut))
+	for i, haku := range meta.ProgrammesHaut {
+		programmeQuoted[i] = strconv.Quote(haku.ID)
+	}
+	currentProgrammeRound := ""
+	if len(meta.ProgrammesHaut) > 0 {
+		currentProgrammeRound = meta.ProgrammesHaut[0].ID
+	}
 	content := fmt.Sprintf(
-		"// Generated by the data generator. Do not edit manually.\nexport const STATISTICS_ROUNDS = [%s] as const;\nexport const CURRENT_STATISTICS_ROUND = %q;\nexport const HAKIJAPROFIILI_ROUNDS = [%s] as const;\n",
+		"// Generated by the data generator. Do not edit manually.\nexport const STATISTICS_ROUNDS = [%s] as const;\nexport const CURRENT_STATISTICS_ROUND = %q;\nexport const HAKIJAPROFIILI_ROUNDS = [%s] as const;\nexport const PROGRAMME_ROUNDS = [%s] as const;\nexport const CURRENT_PROGRAMME_ROUND = %q;\n",
 		strings.Join(rounds, ", "),
 		meta.CurrentStatisticsRound,
 		strings.Join(profiliQuoted, ", "),
+		strings.Join(programmeQuoted, ", "),
+		currentProgrammeRound,
 	)
 
 	directory := filepath.Dir(path)

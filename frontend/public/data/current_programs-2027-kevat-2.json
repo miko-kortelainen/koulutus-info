@@ -1,0 +1,608 @@
+[
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000021616",
+        "toteutusNimi": {
+          "fi": "Hiilineutraali yhteiskunta (tradenomi ylempi AMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK),Energia- ja Ympäristötekniikka",
+      "sv": "Ingenjör (YH), Energi- och Miljöteknik",
+      "en": "Bachelor of Engineering (UAS), Energy and Enviromental Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003029",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), energia- ja ympäristötekniikka, monimuotototeutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), energiatekniikka",
+      "sv": "Ingenjör (YH), energiteknik",
+      "en": "Bachelor of Engineering (UAS), Energy Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003580",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), energiatekniikka, päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), konetekniikka",
+      "sv": "Ingenjör (YH), maskinteknik",
+      "en": "Bachelor of Engineering (UAS), Mechanical Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002138",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), konetekniikka, päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003528",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), konetekniikka, monimuotototeutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), sähkötekniikka",
+      "sv": "Ingenjör (YH), elektroteknik",
+      "en": "Bachelor of Engineering (UAS), Electrical Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002439",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), sähkö- ja automaatiotekniikka, päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tietotekniikka",
+      "sv": "Ingenjör (YH), datateknik",
+      "en": "BEng (UAS), IT"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000040652",
+        "toteutusNimi": {
+          "fi": "Älykkään liiketoiminnan ja tekoälyn johtaminen, insinööri (YAMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002425",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tietotekniikka, päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tuotantotalous",
+      "sv": "Ingenjör (YH), produktionsekonomi",
+      "en": "Bachelor of Engineering (UAS), Industrial Management"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000035682",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), tuotantotalous, päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), ympäristötekniikka",
+      "sv": "Ingenjör (YH), miljöteknik",
+      "en": "Bachelor of Engineering (UAS), Environmental Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003592",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), ympäristöteknologia, päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000669",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), monimuotototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003085",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosiaali- ja terveysalan AMK-jatkotutkinto, muu tai tuntematon ala",
+      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område",
+      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000007883",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK ), Hyvinvoinnin asiantuntija, verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosiaali- ja terveysalan AMK-jatkotutkinto, muu tai tuntematon ala",
+      "sv": "Social- och hälsovårdsbranschen, påbyggnadsexamen vid YH: annat eller okänt område",
+      "en": "Postgraduate Polytechnic Degree in Health Care, Other or Unknown Field"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000000890",
+        "toteutusNimi": {
+          "fi": "Erillishaku: Sosiaali- ja terveysala ylempi AMK, kehittäminen ja johtaminen, VAMK "
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosionomi (AMK), sosiaaliala",
+      "sv": "Socionom (YH), socialbranschen",
+      "en": "Bachelor of Social Services (UAS), Social Services"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000023178",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002391",
+        "toteutusNimi": {
+          "fi": "Sosionomi (AMK), päivätoteutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Valtiot. maist., taloustieteet",
+      "sv": "Pol. mag., ekonomivetenskaper",
+      "en": "Master of Social Sciences, Economics"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003005",
+        "toteutusNimi": {
+          "fi": "Taloustieteen tutkinto-ohjelma, valtiotieteiden maisteri (2 v)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
+        },
+        "kunnat": [
+          "Turku"
+        ],
+        "koulutusalat": [
+          "Yhteiskunnalliset alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Terveydenhoitaja (AMK)",
+      "sv": "Hälsovårdare (YH)",
+      "en": "Bachelor of Health Care (UAS), Public Health Nurse"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002156",
+        "toteutusNimi": {
+          "fi": "Terveydenhoitaja (AMK), päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., tietojenkäsittelytiede",
+      "sv": "Fil. mag., datavetenskap",
+      "en": "Master of Science, Computer Science"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003050",
+        "toteutusNimi": {
+          "fi": "Tietojärjestelmätiede, filosofian maisteri (2 v)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
+        },
+        "kunnat": [
+          "Turku"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000002608",
+        "toteutusNimi": {
+          "fi": "Tradenomi AMK, liiketalous, päivätoteutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000010189",
+        "toteutusNimi": {
+          "fi": "Tradenomi AMK, kansainvälinen kauppa, verkkototeutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), tietojenkäsittely",
+      "sv": "Tradenom (YH), databehandling",
+      "en": "Bachelor of Business Administration (UAS), Data Processing"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003258",
+        "toteutusNimi": {
+          "fi": "Tradenomi AMK, tietojenkäsittely, verkkototeutus, VAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000040655",
+        "toteutusNimi": {
+          "fi": "Älykkään liiketoiminnan ja tekoälyn johtaminen, tradenomi (YAMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000020505",
+        "toteutusNimi": {
+          "fi": "Digitalisaation kehittäminen ja  johtaminen, tradenomi (YAMK), verkkototeutus"
+        },
+        "oppilaitosNimi": {
+          "fi": "Vaasan ammattikorkeakoulu",
+          "sv": "Vaasan ammattikorkeakoulu",
+          "en": "Vaasa University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vaasa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  }
+]

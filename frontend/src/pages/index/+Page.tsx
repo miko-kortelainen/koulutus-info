@@ -147,7 +147,7 @@ export default function LandingPage() {
       transition={{ duration: 0.6, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }} letterSpacing="wide">
-        {timeLeft.label} alkuun
+        {timeLeft.label}
       </Text>
       <SimpleGrid columns={3} gap={6} textAlign="center" width="100%">
         {countdownTiles.map(({ value, label }, index) => (

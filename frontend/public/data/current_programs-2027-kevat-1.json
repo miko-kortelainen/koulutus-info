@@ -1,0 +1,1693 @@
+[
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon prosessi- ja materiaalitekniikan insinööri (AMK)",
+      "sv": "Annan eller okänd ingenjör (YH) inom process -och materialteknik",
+      "en": "Other or Unknown Bachelor of Engineering (UAS) in Process and Materials Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000020761",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Chemical Engineering, daytime studies / Kokkola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fysioterapeutti (AMK)",
+      "sv": "Fysioterapeut (YH)",
+      "en": "Bachelor of Health Care (UAS), Physiotherapist"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042567",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Physiotherapy"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
+        },
+        "kunnat": [
+          "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), automaatiotekniikka",
+      "sv": "Ingenjör (YH), automationsteknik",
+      "en": "Bachelor of Engineering (UAS), Automation Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037405",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Automation and Robotics, englanninkielinen päivätoteutus, elokuussa 2027 alkava koulutus",
+          "en": "Bachelor of Engineering, Automation and Robotics, full-time studies, starting in August 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK),Energia- ja Ympäristötekniikka",
+      "sv": "Ingenjör (YH), Energi- och Miljöteknik",
+      "en": "Bachelor of Engineering (UAS), Energy and Enviromental Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001482",
+        "toteutusNimi": {
+          "en": "Bachelor's Degree in Environmental Engineering and Green Transition"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000040184",
+        "toteutusNimi": {
+          "fi": "Bachelor of Engineering, Future Energy and Hybrid Intelligence, päivätoteutus",
+          "en": "Bachelor of Engineering, Future Energy and Hybrid Intelligence, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), konetekniikka",
+      "sv": "Ingenjör (YH), maskinteknik",
+      "en": "Bachelor of Engineering (UAS), Mechanical Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001575",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Industrial Management, päivätoteutus",
+          "en": "Bachelor of Engineering, Industrial Management, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), logistiikka",
+      "sv": "Ingenjör (YH), logistik",
+      "en": "Bachelor of Engineering (UAS), Logistics"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037660",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Purchasing and Logistics Engineering, englanninkielinen päivätoteutus, elokuussa 2027 alkava koulutus",
+          "en": "Bachelor of Engineering, Purchasing and Logistics Engineering, full-time studies, starting in August 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tietotekniikka",
+      "sv": "Ingenjör (YH), datateknik",
+      "en": "BEng (UAS), IT"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000038754",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Information Technology, Smart Devices and Solutions"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kokkola"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039097",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Information Technology, Sustainable Software Engineering "
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
+        },
+        "kunnat": [
+          "Pietarsaari"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037407",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Information and Communication Technology, englanninkielinen päivätoteutus, elokuussa 2027 alkava koulutus",
+          "en": "Bachelor of Engineering, Information and Communication Technology, full-time studies, starting in August 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001543",
+        "toteutusNimi": {
+          "en": "Bachelor's Degree in Software Engineering"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001467",
+        "toteutusNimi": {
+          "fi": "Bachelor of Engineering, Information Technology (Internet of Things), päivätoteutus",
+          "en": "Bachelor of Engineering, Information Technology (Internet of Things), full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kuvataiteen maisteri: kuvataideakatemian loppututkinto",
+      "sv": "Magister i bildkonst: slutexamen vid bildkonstakademin",
+      "en": "Master of Fine Arts"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000010053",
+        "toteutusNimi": {
+          "fi": "Kuvataiteen kandidaatti ja maisteri (3,5 + 2 vuotta)",
+          "sv": "Kandidat och magister i bildkonst (3,5 + 2 år)",
+          "en": "Bachelor and Master of Fine Arts (3,5 + 2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Taideyliopisto",
+          "sv": "Konstuniversitetet",
+          "en": "University of the Arts Helsinki"
+        },
+        "kunnat": [
+          "Helsinki"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Medianomi (AMK)",
+      "sv": "Medianom (YH)",
+      "en": "Bachelor of Culture and Arts (UAS), Media"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001484",
+        "toteutusNimi": {
+          "en": "Bachelor's Degree in Media and Arts"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Taiteet ja kulttuurialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (AMK), liikkeenjohto",
+      "sv": "Restonom (YH), affärsledning",
+      "en": "Bachelor of Hospitality Management (UAS), Business Management"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042353",
+        "toteutusNimi": {
+          "en": "Bachelor of Hospitality Management, Degree programme in Service Experience Management"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Espoo"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (AMK), majoitus- ja ravitsemisala",
+      "sv": "Restonom (YH), inkvarterings- och kosthållsbranschen",
+      "en": "Bachelor of Hospitality Management (UAS), Hotel and Restaurant"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000021169",
+        "toteutusNimi": {
+          "fi": "Bachelor of Hospitality Management, Tourism and Hospitality Management, päivätoteutus",
+          "en": "Bachelor of Hospitality Management, Tourism and Hospitality Management, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (AMK), majoitus- ja ravitsemisala",
+      "sv": "Restonom (YH), inkvarterings- och kosthållsbranschen",
+      "en": "Bachelor of Hospitality Management (UAS), Hotel and Restaurant"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000040325",
+        "toteutusNimi": {
+          "en": "Bachelor of Hospitality Management, International Tourism Management, full-time studies, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Pori"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037462",
+        "toteutusNimi": {
+          "fi": "Restonomi (AMK), Tourism Management, englanninkielinen päivätoteutus, elokuussa 2027 alkava koulutus",
+          "en": "Bachelor of Hospitality Management, Tourism Management, full-time studies, starting in August 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037580",
+        "toteutusNimi": {
+          "en": "Bachelor of Hospitality Management, Hospitality and Tourism Experience Management, Pasila, Finland"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000004950",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Nursing, daytime studies / Kokkola"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kokkola"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037382",
+        "toteutusNimi": {
+          "fi": "Sairaanhoitaja (AMK), Nursing, englanninkielinen päivätoteutus, elokuussa 2027 alkava koulutus",
+          "en": "Bachelor of Health Care, Nursing, full-time studies, starting in August 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001584",
+        "toteutusNimi": {
+          "en": "Bilingual Degree Programme in Nursing"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001541",
+        "toteutusNimi": {
+          "fi": "Bachelor of Health Care, Registered Nurse, päivätoteutus",
+          "en": "Bachelor of Health Care, Registered Nurse, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000020580",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Nursing, full-time studies, Savonlinna"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
+        },
+        "kunnat": [
+          "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sosionomi (AMK), sosiaaliala",
+      "sv": "Socionom (YH), socialbranschen",
+      "en": "Bachelor of Social Services (UAS), Social Services"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042385",
+        "toteutusNimi": {
+          "en": "Bachelor of Social Services, Degree programme in Social Services, blended learning studies 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039627",
+        "toteutusNimi": {
+          "en": "Bachelor of Social Services, Early Childhood Education and Care"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kauppat. maist., liiketaloustieteet",
+      "sv": "Ekon. mag., företagsekonomi",
+      "en": "Master of Science (Economics and Business Administration), Business Economics"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000033021",
+        "toteutusNimi": {
+          "en": "Accounting and Finance, Kuopio, Master of Science (Economics and Business Administration)(2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042647",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Degree Programme in Business Management, daytime studies 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Espoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039106",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Business Analytics"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kokkola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039109",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Business Management and Marketing"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kokkola"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003779",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Business, blended learning / Pietarsaari"
+        },
+        "oppilaitosNimi": {
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
+        },
+        "kunnat": [
+          "Pietarsaari"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037409",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), International Business, englanninkielinen päivätoteutus, elokuussa 2027 alkava koulutus",
+          "en": "Bachelor of Business Administration, International Business, full-time studies, starting in August 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001616",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Business, Full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039440",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Business in Finland"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000009871",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Business"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000010027",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Aviation Business"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Porvoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000009874",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Digital Business Innovations"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Porvoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000001591",
+        "toteutusNimi": {
+          "fi": "Bachelor of Business Administration, International Business, päivätoteutus",
+          "en": "Bachelor of Business Administration, International Business, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Karelia-ammattikorkeakoulu",
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000041844",
+        "toteutusNimi": {
+          "fi": "Bachelor of Business Administration, International Business and Growth Management, päivätoteutus",
+          "en": "Bachelor of Business Administration, International Business and Growth Management, full-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), tietojenkäsittely",
+      "sv": "Tradenom (YH), databehandling",
+      "en": "Bachelor of Business Administration (UAS), Data Processing"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042381",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Degree programme in Business Information Technology, Developing Digital Services, online studies 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042422",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Degree programme in Business Information Technology, Cyber Security, online studies 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vantaa"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000037408",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), Business Information Technology, Game Production, englanninkielinen päivätoteutus, elokuussa 2027 alkava koulutus",
+          "en": "Bachelor of Business Administration, Business Information Technology, Game Production, full-time studies, starting in August 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000009206",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Business Information Technology"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Helsinki"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000008528",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, Team Entrepreneurship"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (YH), ekonomi, förvaltning och marknadsföring",
+      "en": "Bachelor of Business Administration (UAS), Economics, Administration and Marketing"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000005793",
+        "toteutusNimi": {
+          "en": "Bachelor of Business Administration, International Business, full-time studies, Rauma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Rauma"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), robotiikka ja tekoäly",
+      "sv": "Ingenjör (YH), robotteknik och artificiell intelligens",
+      "en": "Bachelor of Engineering (UAS), robotisation and artificial intelligence"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000017738",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Artificial Intelligence (Data Engineering), full time studies, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Pori"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), konetekniikka",
+      "sv": "Ingenjör (YH), maskinteknik",
+      "en": "Bachelor of Engineering (UAS), Mechanical Engineering"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000027368",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Mechanical Engineering, full-time studies, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Pori"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tekstiili- ja vaatetustekniikka",
+      "sv": "Ingenjör (YH), textil- och beklädnadsteknik",
+      "en": "Bachelor of Engineering (UAS), Textiles and Clothing Technology"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000006523",
+        "toteutusNimi": {
+          "en": "Bachelor's Degree in Textile and Material Engineering"
+        },
+        "oppilaitosNimi": {
+          "fi": "Tampereen ammattikorkeakoulu",
+          "sv": "Tampereen ammattikorkeakoulu",
+          "en": "Tampere University of Applied Sciences"
+        },
+        "kunnat": [
+          "Tampere"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), robotiikka ja tekoäly",
+      "sv": "Ingenjör (YH), robotteknik och artificiell intelligens",
+      "en": "Bachelor of Engineering (UAS), robotisation and artificial intelligence"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000039300",
+        "toteutusNimi": {
+          "en": "Bachelor of Engineering, Robotics, full-time studies, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Pori"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042342",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Degree programme in Nursing, daytime studies 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Sairaanhoitaja (AMK)",
+      "sv": "Sjukskötare (YH)",
+      "en": "Bachelor of Health Care (UAS), Registered Nurse"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042053",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Nursing, TopUp, spring joint application 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Yrkeshögskolan Arcada",
+          "sv": "Yrkeshögskolan Arcada",
+          "en": "Arcada University of Applied Sciences"
+        },
+        "kunnat": [
+          "Helsinki"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Liikunnanohjaaja (AMK)",
+      "sv": "Idrottsinstruktör (YH)",
+      "en": "Bachelor of Sports Studies, Sports Instructor (UAS)"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000009839",
+        "toteutusNimi": {
+          "en": "Bachelor of Sport Studies, Sports Coaching and Management"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Heinola"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kauppat. maist., liiketaloustieteet",
+      "sv": "Ekon. mag., företagsekonomi",
+      "en": "Master of Science (Economics and Business Administration), Business Economics"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000033022",
+        "toteutusNimi": {
+          "en": "Digital Marketing and Analytics, Master of Science (Economics and Business Administration)(2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu",
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kasvatust. maist., kasvatustiede",
+      "sv": "Ped. mag., pedagogik",
+      "en": "Master of Arts (Education), Educational Science"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026498",
+        "toteutusNimi": {
+          "en": "Early Language Education for Intercultural Communication, Joensuu, Master of Arts (Education) (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Teologian maisteri",
+      "sv": "Teologie magister",
+      "en": "Master of Theology"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000033736",
+        "toteutusNimi": {
+          "en": "Faith, Crises and Existential Wellbeing, Master of Theology (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Humanistiset alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Maat. ja metsät. maist., metsätalous",
+      "sv": "Agr. o. forstmag., skogsbruk",
+      "en": "Master of Science (Agriculture and Forestry), Forestry"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026504",
+        "toteutusNimi": {
+          "en": "Forestry (MDP FOR and TransFor-M), Joensuu, Master of Science (Forestry) (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Maa- ja metsätalousalat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Terveystieteiden kandidaatti (alempi)",
+      "sv": "Kandidat i hälsovetenskaper (lägre)",
+      "en": "Bachelor of Health Sciences"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000033254",
+        "toteutusNimi": {
+          "en": "Human and Planetary Health, Kuopio, Bachelor of Health Sciences (3 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kauppat. maist., liiketaloustieteet",
+      "sv": "Ekon. mag., företagsekonomi",
+      "en": "Master of Science (Economics and Business Administration), Business Economics"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000033023",
+        "toteutusNimi": {
+          "en": "International Business and Sales Management, Kuopio, Master of Science (Economics and Business Administration) (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kasvatust. kand. (alempi), kasvatustiede",
+      "sv": "Ped. kand. (lägre), pedagogik",
+      "en": "Bachelor of Arts (Education), Educational Science"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026496",
+        "toteutusNimi": {
+          "en": "Lifelong Learning and Sustainable Development, Joensuu, Bachelor of Arts (Education) (3 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042568",
+        "toteutusNimi": {
+          "en": "Master of Health Care, Sports Medicine and Exercise, part-time studies"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+          "sv": "Kaakkois-Suomen ammattikorkeakoulu",
+          "en": "South-Eastern Finland University of Applied Sciences Xamk"
+        },
+        "kunnat": [
+          "Savonlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Liikunnanohjaaja (ylempi AMK)",
+      "sv": "Idrottsinstruktör (högre YH)",
+      "en": "Master of Sports Studies (UAS), Sports Instructor"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000041913",
+        "toteutusNimi": {
+          "en": "Master of Sport Studies, Sports Coaching"
+        },
+        "oppilaitosNimi": {
+          "fi": "Haaga-Helia ammattikorkeakoulu",
+          "sv": "Haaga-Helia yrkeshögskola",
+          "en": "Haaga-Helia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Helsinki"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fysioterapeutti (ylempi AMK)",
+      "sv": "Fysioterapeut (högre YH)",
+      "en": "Master of Health Care (UAS), Physiotherapist"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042453",
+        "toteutusNimi": {
+          "en": "Master's degree programme in Global Health, Crisis and Disaster Management, Master of Health Care"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vantaa"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), muu tai tuntematon ala",
+      "sv": "Tradenom (högre YH), annat eller okänt område",
+      "en": "Master of Business Administration (UAS), Other or Unknown Field"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042481",
+        "toteutusNimi": {
+          "en": "Master's degree programme in Service Innovation and Design, Master of Business Administration 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Espoo"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042646",
+        "toteutusNimi": {
+          "en": "Master's degree programme in Technology Law, Master of Business Administration, online studies 2027"
+        },
+        "oppilaitosNimi": {
+          "fi": "Laurea-ammattikorkeakoulu",
+          "sv": "Laurea-ammattikorkeakoulu",
+          "en": "Laurea University of Applied Sciences"
+        },
+        "kunnat": [
+          "Vantaa"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kasvatust. maist., kasvatustiede",
+      "sv": "Ped. mag., pedagogik",
+      "en": "Master of Arts (Education), Educational Science"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026500",
+        "toteutusNimi": {
+          "en": "Pedagogy and Teaching for Sustainability, Joensuu, Master of Arts (Education) (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Dipl.ins., muu tai tuntematon tekniikka",
+      "sv": "Dipl.ing., annat eller okänt tekniskt område",
+      "en": "Master of Science (Technology), Other or Unknown Technology"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026505",
+        "toteutusNimi": {
+          "en": "Photonics, Joensuu, Master of Science (Technology) (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., kemia",
+      "sv": "Fil. mag., kemi",
+      "en": "Master of Science, Chemistry"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026506",
+        "toteutusNimi": {
+          "en": "Research Chemists, Joensuu, Master of Science (Chemistry) (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Luonnontieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kauppat. maist., liiketaloustieteet",
+      "sv": "Ekon. mag., företagsekonomi",
+      "en": "Master of Science (Economics and Business Administration), Business Economics"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000041471",
+        "toteutusNimi": {
+          "en": "Sustainable Business Leadership, Kuopio, Master of Science (Economics and Business Administration)(2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Kauppat. maist., liiketaloustieteet",
+      "sv": "Ekon. mag., företagsekonomi",
+      "en": "Master of Science (Economics and Business Administration), Business Economics"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000033024",
+        "toteutusNimi": {
+          "en": "Tourism Marketing and Management, Joensuu, Master of Science (Economics and Business Administration)(2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., muu tai tuntematon luonnontieteellinen ala",
+      "sv": "Fil. mag., annat eller okänt naturvetenskapligt specialområde",
+      "en": "Master of Science, Other or Unknown Field"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000026438",
+        "toteutusNimi": {
+          "en": "Toxicology, Kuopio, Master of Science (2 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Luonnontieteet"
+        ]
+      }
+    ]
+  }
+]

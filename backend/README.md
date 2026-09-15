@@ -4,15 +4,15 @@ The Go application fetches and prepares static frontend datasets from Vipunen an
 
 ## Configuration
 
-`config.json` holds the programme start year used for Vipunen statistics and the current manually sourced joint-application OID:
+`config.json` holds the programme start year used for Vipunen statistics and the current manually sourced joint-application haut:
 
 - `vipunen.aineistoUrl`: Vipunen dataset endpoint.
 - `vipunen.tilastoVuosi`: programme start year. The generator fetches both start seasons for this year.
 - `vipunen.hakutapa`: application method included in the statistics, normally `Yhteishaku`.
-- `opintopolku.yhteishakuOid`: preferred joint-application OID.
-- `opintopolku.alkamisajankohdat`: fallback start terms used only when `yhteishakuOid` is empty.
+- `opintopolku.haut`: current joint-application waves. Each entry has `id` (`YYYY_kevat_N` or `YYYY_syksy`) and `oid`. The first entry is the default `/koulutukset` wave.
+- `opintopolku.alkamisajankohdat`: fallback start terms used only when a haku has an empty OID.
 
-The joint-application OID is updated manually. Opintopolku does not expose a suitable endpoint for discovering the correct OID automatically.
+Joint-application OIDs are updated manually. Opintopolku does not expose a suitable endpoint for discovering the correct OID automatically.
 
 ## Commands
 
@@ -30,13 +30,15 @@ Select a programme start year without changing configuration:
 go run . --year 2027 --statistics
 ```
 
-For programmes for a different year, provide the manually sourced OID explicitly:
+Refresh one configured wave:
 
 ```sh
-go run . --year 2027 --programmes --yhteishaku-oid 1.2.246.562.29.00000000000000000000
+go run . --programmes --yhteishaku-oid 1.2.246.562.29.00000000000000092075
 ```
 
-The generator writes one statistics file per joint application under `frontend/public/data/hakijamäärät/`. An autumn 2026 programme start is written to `hakijamaarat-2026-kevat.json`, and a spring 2026 programme start is written to `hakijamaarat-2025-syksy.json`. It also writes `current_programs.json`, regenerates `schools.json` (institution catalog from programmes ∪ the current statistics round), and `meta.json`. `meta.json` records the available and current statistics rounds, source-specific refresh dates, and the programme selection OID. The generated `frontend/src/generated/dataManifest.ts` keeps the frontend joint-application selector in sync. Existing `vipunen`, `opintopolku`, `catalog`, and `all` commands remain supported.
+`PROGRAMME_ROUNDS` lists configured haut that already have a `current_programs-*.json` file, in config order. A targeted refresh does not advertise ungenerated waves.
+
+The generator writes one statistics file per joint application under `frontend/public/data/hakijamäärät/`. An autumn 2026 programme start is written to `hakijamaarat-2026-kevat.json`, and a spring 2026 programme start is written to `hakijamaarat-2025-syksy.json`. It also writes one `current_programs-<round>.json` file per configured haku, regenerates `schools.json` (institution catalog from all programme files ∪ all statistics rounds), and `meta.json`. `meta.json` records the available and current statistics rounds, source-specific refresh dates, and the programme haut. The generated `frontend/src/generated/dataManifest.ts` keeps the frontend joint-application selectors in sync. Existing `vipunen`, `opintopolku`, `catalog`, and `all` commands remain supported.
 
 Before replacing an existing dataset, the generator rejects a result with less than half of the previous record count. Review the generated files before deploying the frontend.
 

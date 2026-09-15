@@ -1,0 +1,71 @@
+# Yhteishaku.app
+
+> Suomenkielinen tietopalvelu korkeakoulujen yhteishaun koulutuksista, hakijamääristä, pisterajoista ja todistusvalintapisteistä sekä toisen asteen yhteishaun lukioiden keskiarvorajoista.
+
+Yhteishaku.app on yksityishenkilön ylläpitämä sivusto. Se ei ole Opetushallituksen, Opintopolun tai muun viranomaisen palvelu. Koulutuksiin hakeminen tapahtuu Opintopolussa.
+
+Hakijamäärät ja pisterajat perustuvat opetushallituksen tilastopalvelu Vipusen aineistoihin, koulutustiedot Opintopolkuun.
+
+Tietojen tulkinta:
+
+- Ilmoita tilastotiedon yhteydessä vuosi ja hakukierros. Tarkista aineistokohtainen päivitysajankohta ennen kuin kuvaat tietoja uusimmiksi.
+- Aiempi pisteraja ei takaa hyväksymistä tulevassa haussa. Pistelaskurin tulos auttaa vertaamaan pisteitä aiempiin pisterajoihin; lisäksi on tarkistettava hakukohteen valintaperusteet, vähimmäispisteet ja kynnysehdot.
+- Hakijapaine = ensisijaiset hakijat / aloituspaikat.
+- Sisäänpääsyprosentti = valitut / kaikki hakijat × 100. Se kuvaa tilastoitua osuutta, ei yksittäisen hakijan sisäänpääsytodennäköisyyttä.
+- Pienet lukumäärät voidaan näyttää muodossa `alle 5`, sukupuolijakaumassa muodossa `1-4 hakijaa`. Älä päättele tarkkaa lukua tai laske peitetyistä arvoista suhdelukuja, trendejä tai vertailuja.
+- Puuttuva tai peitetty arvo ei tarkoita nollaa. Älä laske suhdelukua, jos nimittäjä on nolla, puuttuu tai on peitetty.
+- Vertaa vain tietoja, joiden hakukierros, valintatapa ja muut rajaukset ovat vertailukelpoisia.
+- Valintatavat erotellaan toisistaan: YO-todistus, ammatillinen perustutkinto, AMK-valintakoe ja yliopistojen valintakoe.
+- Tilastokierroksen tunniste on esimerkiksi `2026_kevat`. Hakijamäärä- ja hakijaprofiilitiedostojen nimissä sekä pisterajakierroksissa käytetään muotoa `2026-kevat`.
+- Käytä aineistoista tai sivuston linkeistä löytyviä tarkkoja osoitteita ja tunnisteita. Älä oleta, että jokaiselle vuodelle, kierrokselle tai nimestä muodostetulle slugille on olemassa sivu tai tiedosto.
+
+## Keskeiset sivut
+
+- [Pistelaskuri](https://yhteishaku.app/pistelaskuri/): Todistusvalintapisteiden laskeminen YO-todistuksesta tai ammatillisesta perustutkinnosta ja vertailu aiempiin pisterajoihin
+- [Koulutukset](https://yhteishaku.app/koulutukset/):  Nykyisessä tai seuraavassa yhteishaussa olevat yliopisto- ja AMK-koulutukset
+- [Hakijamäärät](https://yhteishaku.app/hakijamaarat/): Hakijat, aloituspaikat, sisäänpääsyprosentit ja hakijapaine hakukohteittain
+- [Pisterajat](https://yhteishaku.app/pisterajat/): AMK- ja yliopistokoulutusten alimmat hyväksytyt pisteet valintatavoittain
+- [Korkeakoulut](https://yhteishaku.app/koulut/): Yliopistot ja ammattikorkeakoulut sekä linkit koulukohtaisiin pisterajoihin ja opiskelijapalautteisiin
+- [Lukiot](https://yhteishaku.app/lukiot/): Lukioiden alimmat hyväksytyt keskiarvot toisen asteen yhteishaussa
+- [Trendit](https://yhteishaku.app/trendit/): Hakijamäärien vertailu vuosien välillä sekä suosituimmat alat, koulut ja sektorit
+- [Hakijaprofiili](https://yhteishaku.app/hakijaprofiili/): Sukupuoli- ja ikäjakaumat korkeakouluittain, aloittain ja tutkintonimikkeittäin
+- [Ennakointi](https://yhteishaku.app/ennakointi/): Alojen koulutustarve ja tutkintotuotos vuoteen 2045; ennakointia, ei toteutuneita hakutilastoja
+- [UKK](https://yhteishaku.app/ukk/): Aineistojen lähteet, päivitystahti ja tilastokäsitteiden selitykset
+- [Etusivu](https://yhteishaku.app/): Hakuajat ja palvelun keskeiset toiminnot
+
+## Todistusvalinnan oppaat
+
+- [Ammattikorkeakoulujen todistusvalinta](https://yhteishaku.app/oppaat/ammattikorkeakoulujen-todistusvalinta/): YO-todistuksen ja ammatillisen perustutkinnon pisteytys, valintajonot, vähimmäispisteet ja kynnysehdot
+- [Yliopistojen todistusvalinta](https://yhteishaku.app/oppaat/yliopistojen-todistusvalinta/): YO-todistuksen pisteytystaulukot, kynnysehdot ja vähimmäispisteet vuodesta 2026
+
+## JSON-aineistot
+
+- [Aineiston metadata](https://yhteishaku.app/data/meta.json): Tarkista ensin; sisältää kentän `currentStatisticsRound` ja päivitysajankohdat. Alla olevat vuosikohtaiset linkit viittaavat nimettyyn ajanjaksoon, eivät automaattisesti uusimpaan aineistoon
+- [Kevään 2027 ensimmäisen yhteishaun koulutukset](https://yhteishaku.app/data/current_programs-2027-kevat-1.json): Koulutusten toteutustiedot; kierros `2027_kevat_1`
+- [Kevään 2027 toisen yhteishaun koulutukset](https://yhteishaku.app/data/current_programs-2027-kevat-2.json): Koulutusten toteutustiedot; kierros `2027_kevat_2`
+- [Korkeakoulut](https://yhteishaku.app/data/schools.json): Oppilaitosluettelo
+- [Hakijamäärät, kevät 2026](https://yhteishaku.app/data/hakijamäärät/hakijamaarat-2026-kevat.json): Hakijamäärien aineisto; tilastokierros `2026_kevat`
+- [Hakijamäärät, syksy 2026](https://yhteishaku.app/data/hakijamäärät/hakijamaarat-2026-syksy.json): Hakijamäärien aineisto; tilastokierros `2026_syksy`
+- [AMK-pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/pisterajat-2026-kevat-amk.json): Ammattikorkeakoulujen alimmat hyväksytyt pisteet valintatavoittain
+- [Yliopistojen pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/pisterajat-2026-kevat-yliopisto.json): Yliopistojen alimmat hyväksytyt pisteet valintatavoittain
+- [Lukioiden keskiarvorajat 2026](https://yhteishaku.app/data/pisterajat/lukio/lukio-keskiarvot-2026.json): Lukioiden alimmat hyväksytyt keskiarvot
+- [Hakijaprofiili, kevät 2026](https://yhteishaku.app/data/hakijaprofiili/hakijaprofiili-2026-kevat.json): Sukupuoli- ja ikäjakaumat
+- [AMK-opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/amk-palaute.json): AVOP-palautteen keskiarvot
+- [Yliopistojen opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/yliopisto-palaute.json): Kandipalaute
+- [Koulutustarpeet](https://yhteishaku.app/data/ennakointi/koulutustarpeet.json): Ennakoinnin lähdeaineisto
+
+## WebMCP työkalut
+
+- [calculate_todistuspisteet](https://yhteishaku.app/pistelaskuri/): Todistusvalintapisteiden laskenta. `valintatapa`: `yo` tai `amm`; YO-aineiden koodeja esimerkiksi `ai_fi`, `maa` ja `fy`; valinnainen `kierros` esimerkiksi `2026-kevat`. WebMCP-työkalu rekisteröidään sivun ollessa auki sitä tukevassa selaimessa. Tarkista täydellinen parametriskeema rekisteröidystä työkalusta
+
+## Viralliset lähteet
+
+- [Opintopolku](https://opintopolku.fi): Virallinen koulutustarjonta, hakukohteiden valintaperusteet ja hakeminen
+- [Vipunen](https://vipunen.fi): Opetushallinnon tilastopalvelu; sivuston hakijamäärien ja pisterajojen lähde
+
+## Optional
+
+- [Oma hakulista](https://yhteishaku.app/oma-hakulista/): Käyttäjän selaimeen tallennetut koulutukset; sisältö riippuu selaimen paikallisista tiedoista
+- [Vertailu](https://yhteishaku.app/vertaile/): Kahden hakukohteen rinnakkainen vertailu
+- [Palaute](https://yhteishaku.app/palaute/): Sivuston palautelomake
+- [Tietosuojaseloste](https://yhteishaku.app/tietosuojaseloste/): Rekisterinpitäjä, analytiikka ja palautelomake

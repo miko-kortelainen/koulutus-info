@@ -1,6 +1,6 @@
 import type { Config } from "vike/types";
-import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
+import { CURRENT_PROGRAMME_ROUND, programmeRoundLabel } from "@/config/programmeRounds";
 
 export default {
-  title: `Korkeakoulujen yhteishaun koulutustarjonta – syksy ${DEFAULT_CUTOFF_YEAR}`,
+  title: `Korkeakoulujen yhteishaun koulutustarjonta – ${programmeRoundLabel(CURRENT_PROGRAMME_ROUND)}`,
 } satisfies Config;
