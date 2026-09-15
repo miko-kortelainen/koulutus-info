@@ -57,8 +57,6 @@ Tietojen tulkinta:
 ## WebMCP työkalut
 
 - [calculate_todistuspisteet](https://yhteishaku.app/pistelaskuri/): Todistusvalintapisteiden laskenta. `valintatapa`: `yo` tai `amm`; YO-aineiden koodeja esimerkiksi `ai_fi`, `maa` ja `fy`; valinnainen `kierros` esimerkiksi `2026-kevat`. WebMCP-työkalu rekisteröidään sivun ollessa auki sitä tukevassa selaimessa. Tarkista täydellinen parametriskeema rekisteröidystä työkalusta
-- [search_koulutukset](https://yhteishaku.app/koulutukset/): Koulutusten haku; palauttaa kaikki osumat. Sektori: `yo` tai `amk`; koulutusaste: `alempi` tai `ylempi`; yhteishaku esimerkiksi `2027_kevat_1`. WebMCP-työkalu edellyttää sivun avaamista ja selaintukea; tarkista parametriskeema työkalusta
-- [search_hakijamaarat](https://yhteishaku.app/hakijamaarat/): Hakijamäärien haku; palauttaa kaikki osumat. Sektori: `Yliopistokoulutus` tai `Ammattikorkeakoulukoulutus`; vuosi esimerkiksi `2026_kevat`. Peitetyistä luvuista laskettavat suhdeluvut jäävät tyhjiksi. WebMCP-työkalu edellyttää sivun avaamista ja selaintukea; tarkista parametriskeema työkalusta
 
 ## Viralliset lähteet
 
