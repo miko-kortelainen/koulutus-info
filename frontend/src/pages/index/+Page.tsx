@@ -1,5 +1,5 @@
 import { Box, Button, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion } from "motion/react";
 import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "react-icons/hi";
 import { HEADER_HEIGHT } from "@/layout/Header";
 import PageContainer from "@/layout/PageContainer";
@@ -10,7 +10,6 @@ import { quickLinks } from "@/pages/index/components/quickLinks";
 import useCountdown from "@/pages/index/hooks/useCountdown";
 import { COLORS } from "@/theme";
 
-const MotionDiv = motion.div;
 const MotionVStack = motion.create(VStack);
 
 const heroLinks = [
@@ -61,23 +60,18 @@ function HeroButtons() {
 }
 
 function LandingBackground() {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 150]);
-
   return (
     <Box aria-hidden="true" inset={0} overflow="hidden" pointerEvents="none" position="absolute" zIndex={0}>
-      <MotionDiv aria-hidden="true" style={{ y }}>
-        <Image
-          alt=""
-          fetchPriority="high"
-          height={{ base: "100vh", md: "100%" }}
-          loading="eager"
-          objectFit="cover"
-          objectPosition="center"
-          src="/images/nature.jpg"
-          width="100%"
-        />
-      </MotionDiv>
+      <Image
+        alt=""
+        fetchPriority="high"
+        height="100%"
+        loading="eager"
+        objectFit="cover"
+        objectPosition="center"
+        src="/images/nature.jpg"
+        width="100%"
+      />
       <Box
         backgroundImage={{
           _light: `linear-gradient(to bottom, color-mix(in srgb, ${COLORS.bg} 8%, transparent) 70%, ${COLORS.bg})`,
