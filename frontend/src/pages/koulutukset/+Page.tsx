@@ -17,6 +17,7 @@ import {
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
+import { localizedText } from "@/lib/localizedText";
 import useFilteredDegrees, { filterDegrees } from "@/pages/koulutukset/hooks/useFilteredDegrees";
 import type { KoulutuksetPageData } from "@/pages/koulutukset/+data";
 import type { CurrentProgramsResponse } from "@/types.gen";
@@ -136,8 +137,8 @@ export default function SchoolsListPage() {
       return {
         total: items.length,
         items: items.map((t) => ({
-          nimi: t.toteutusNimi.fi ?? "",
-          koulu: t.oppilaitosNimi.fi ?? "",
+          nimi: localizedText(t.toteutusNimi),
+          koulu: localizedText(t.oppilaitosNimi),
           kunta: t.kunnat,
           oid: t.toteutusOid,
         })),

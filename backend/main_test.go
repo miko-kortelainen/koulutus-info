@@ -192,6 +192,30 @@ func TestValidateHaut(t *testing.T) {
 	}
 }
 
+func TestHautWithProgrammeFilesKeepsConfigOrderForExistingFiles(t *testing.T) {
+	directory := t.TempDir()
+	haut := []models.OpintopolkuHaku{
+		{ID: "2027_kevat_1", OID: "oid-1"},
+		{ID: "2027_kevat_2", OID: "oid-2"},
+		{ID: "2027_syksy", OID: "oid-3"},
+	}
+	if err := os.WriteFile(filepath.Join(directory, "current_programs-2027-kevat-2.json"), []byte("[]"), 0644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(directory, "current_programs-2027-syksy.json"), []byte("[]"), 0644); err != nil {
+		t.Fatal(err)
+	}
+
+	existing := hautWithProgrammeFiles(directory, haut)
+	if len(existing) != 2 || existing[0].ID != "2027_kevat_2" || existing[1].ID != "2027_syksy" {
+		t.Fatalf("existing = %+v", existing)
+	}
+
+	if got := hautWithProgrammeFiles(directory, haut[:1]); len(got) != 0 {
+		t.Fatalf("missing file should be omitted, got %+v", got)
+	}
+}
+
 func TestFilterHautByOID(t *testing.T) {
 	haut := []models.OpintopolkuHaku{
 		{ID: "2027_kevat_1", OID: "oid-1"},
