@@ -601,6 +601,35 @@ test("/oma-hakulista: reordering moves a card and persists after reload", async 
   await expect(cards.first()).toContainText("Kauppatieteet");
 });
 
+test("/oma-hakulista: sharing downloads an image of the list", async ({ page }) => {
+  await page.addInitScript(() => {
+    if (sessionStorage.getItem("favorites-storage-initialized")) return;
+
+    sessionStorage.setItem("favorites-storage-initialized", "true");
+    localStorage.setItem(
+      "yhteishaku:tallennetut",
+      JSON.stringify([
+        {
+          toteutusOid: "1.2.246.562.20.00000000000000001",
+          oppilaitosNimi: { fi: "Esimerkkikoulu" },
+          toteutusNimi: { fi: "Tietojenkäsittelytiede" },
+          kunnat: ["Helsinki"],
+          koulutusalat: [],
+        },
+      ]),
+    );
+  });
+  await page.goto("/oma-hakulista/");
+  await expect(page.getByText("Tietojenkäsittelytiede")).toBeVisible();
+
+  // headless chromium has no navigator.share, so the image is downloaded instead
+  const downloadPromise = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Jaa tämä hakulista" }).click();
+  const download = await downloadPromise;
+  expect(download.suggestedFilename()).toBe("oma-hakulista.jpg");
+  await expect(page.getByRole("button", { name: "Kuva ladattu" })).toBeVisible();
+});
+
 test("/palaute: submits feedback and shows thank you message", async ({ page }) => {
   // formsubmit.co is a third-party form backend — stub it so its downtime can't fail this suite
   await page.route("https://formsubmit.co/**", (route) =>

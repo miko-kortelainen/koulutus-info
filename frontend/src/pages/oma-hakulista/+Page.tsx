@@ -2,9 +2,11 @@ import { Stack, Text } from "@chakra-ui/react";
 import { flushSync } from "react-dom";
 import { HiOutlineHeart } from "react-icons/hi";
 import SchoolCard from "@/components/SchoolCard";
+import ShareButton from "@/components/ShareButton";
 import useFavorites from "@/hooks/useFavorites";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
+import { createHakulistaImageFile } from "@/pages/oma-hakulista/lib/hakulistaImage";
 
 export default function SavedListPage() {
   const { favorites, moveFavorite } = useFavorites();
@@ -33,16 +35,23 @@ export default function SavedListPage() {
             </Text>
           </Stack>
         ) : (
-          <Stack as="ul" direction="column" gap={4} listStyleType="none">
-            {favorites.map((t, i) => (
-              <SchoolCard
-                index={i + 1}
-                key={t.toteutusOid}
-                onMoveDown={i < favorites.length - 1 ? () => move(t.toteutusOid, 1) : undefined}
-                onMoveUp={i > 0 ? () => move(t.toteutusOid, -1) : undefined}
-                toteutus={t}
-              />
-            ))}
+          <Stack align="flex-start" gap={4}>
+            <Stack as="ul" direction="column" gap={4} listStyleType="none">
+              {favorites.map((t, i) => (
+                <SchoolCard
+                  index={i + 1}
+                  key={t.toteutusOid}
+                  onMoveDown={i < favorites.length - 1 ? () => move(t.toteutusOid, 1) : undefined}
+                  onMoveUp={i > 0 ? () => move(t.toteutusOid, -1) : undefined}
+                  toteutus={t}
+                />
+              ))}
+            </Stack>
+            <ShareButton
+              getShareFile={() => createHakulistaImageFile(favorites)}
+              label="Jaa tämä hakulista"
+              onShared={() => window.sa_event?.("share_hakulista")}
+            />
           </Stack>
         )}
 
