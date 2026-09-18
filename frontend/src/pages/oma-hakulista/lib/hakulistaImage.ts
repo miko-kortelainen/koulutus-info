@@ -117,7 +117,7 @@ async function renderHakulistaImage(items: HakulistaShareItem[]): Promise<Blob> 
   ctx.fillText("Oma hakulista", OUTER, OUTER);
 
   for (const [index, item] of items.entries()) {
-    drawItem(ctx, item, index + 1, OUTER, itemTops[index], textWidth);
+    drawItem(ctx, item, index + 1, itemTops[index], textWidth);
   }
 
   return canvasToJpeg(canvas);
@@ -135,15 +135,14 @@ function drawItem(
   ctx: CanvasRenderingContext2D,
   item: HakulistaShareItem,
   index: number,
-  x: number,
   y: number,
   textWidth: number,
-): number {
+) {
   ctx.fillStyle = COLOR.number;
   ctx.font = `700 ${PROGRAM_SIZE}px ${FONT}`;
-  ctx.fillText(`${index}.`, x, y);
+  ctx.fillText(`${index}.`, OUTER, y);
 
-  const textX = x + NUMBER_WIDTH;
+  const textX = OUTER + NUMBER_WIDTH;
   ctx.fillStyle = COLOR.program;
   ctx.font = `700 ${PROGRAM_SIZE}px ${FONT}`;
   let cursor = y;
@@ -159,7 +158,6 @@ function drawItem(
     ctx.fillText(line, textX, cursor);
     cursor += SCHOOL_LINE;
   }
-  return cursor;
 }
 
 function drawBackground(ctx: CanvasRenderingContext2D, photo: HTMLImageElement | null) {
