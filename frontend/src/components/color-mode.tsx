@@ -4,15 +4,40 @@ import type { ThemeProviderProps } from "next-themes";
 import { useEffect, useState } from "react";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
 
-import { COLORS } from "@/theme";
+import { COLORS, THEME_COLOR } from "@/theme";
 
 export const APPEARANCE_STORAGE_KEY = "yhteishaku:appearance";
 
 /** Ignore further toggles until the theme has settled. */
 const TOGGLE_COOLDOWN_MS = 400;
 
-export function ColorModeProvider(props: ThemeProviderProps) {
-  return <ThemeProvider attribute="class" disableTransitionOnChange storageKey={APPEARANCE_STORAGE_KEY} {...props} />;
+export function ColorModeProvider({ children, ...props }: ThemeProviderProps) {
+  return (
+    <ThemeProvider attribute="class" disableTransitionOnChange storageKey={APPEARANCE_STORAGE_KEY} {...props}>
+      <ThemeColorSync />
+      {children}
+    </ThemeProvider>
+  );
+}
+
+function ThemeColorSync() {
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    if (resolvedTheme !== "light" && resolvedTheme !== "dark") return;
+
+    const color = resolvedTheme === "dark" ? THEME_COLOR.dark : THEME_COLOR.light;
+    let meta = document.querySelector("meta[name='theme-color'][data-appearance]");
+    if (!(meta instanceof HTMLMetaElement)) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "theme-color");
+      meta.setAttribute("data-appearance", "");
+      document.head.insertBefore(meta, document.head.firstChild);
+    }
+    meta.setAttribute("content", color);
+  }, [resolvedTheme]);
+
+  return null;
 }
 
 export function ColorModeButton() {

@@ -24,7 +24,6 @@ export default function SortControl({ value, onChange }: SortControlProps) {
       items={SORT_OPTIONS}
       onChange={onChange}
       placeholder="Valitse järjestys"
-      pt={3}
       size="sm"
       value={value}
     />

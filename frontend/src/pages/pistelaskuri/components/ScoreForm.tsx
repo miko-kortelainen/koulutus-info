@@ -216,7 +216,7 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
               color={COLORS.onAccent}
               loading={isCalculating}
               mt={6}
-              size="xs"
+              size="md"
               type="submit"
               variant="solid"
               width={{ base: "full", md: "auto" }}

@@ -1,48 +1,35 @@
 import type { FeedbackMaxScore } from "@/api/dataValidation";
-import {
-  readAllPrograms,
-  readCurrentYearStatistics,
-  readStatistics,
-  readStudentFeedback,
-  schoolNames,
-} from "@/api/serverData";
+import { readCurrentYearStatistics, readStatistics, readStudentFeedback, schoolNames } from "@/api/serverData";
 import { YEAR_OPTIONS } from "@/config/yearOptions";
 import { slugify } from "@/lib/slug";
+import { schoolStatisticTotals } from "@/pages/koulut/lib/applyYearStatistics";
 
 export interface SchoolListItem {
   name: string;
   slug: string;
   sektori: string;
-  koulutuksia: number;
-  kaikkiHakijat: number;
-  valitut: number;
-  ensisijaisetHakijat: number;
-  aloituspaikat: number;
+  kaikkiHakijat: number | null;
+  valitut: number | null;
+  ensisijaisetHakijat: number | null;
+  aloituspaikat: number | null;
   feedbackAverage: number | null;
   feedbackMaxScore: FeedbackMaxScore | null;
 }
 
 export const data = (): SchoolListItem[] => {
   const statistics = readCurrentYearStatistics();
-  const programs = readAllPrograms();
   const feedback = readStudentFeedback();
-  const toteutukset = programs.flatMap((k) => k.toteutukset);
   // Autumn current rounds omit most universities; sector still comes from earlier statistics.
   const sektori = new Map(
     YEAR_OPTIONS.flatMap(({ value }) => readStatistics(value).map((r) => [r.korkeakoulu, r.sektori] as const)),
   );
   return schoolNames().map((name) => {
-    const rows = statistics.filter((s) => s.korkeakoulu === name);
     const schoolFeedback = feedback[name];
     return {
       name,
       slug: slugify(name),
       sektori: sektori.get(name) ?? "",
-      koulutuksia: toteutukset.filter((t) => t.oppilaitosNimi.fi === name).length,
-      kaikkiHakijat: rows.reduce((sum, r) => sum + r.kaikkiHakijatLkm, 0),
-      valitut: rows.reduce((sum, r) => sum + r.valitutLkm, 0),
-      ensisijaisetHakijat: rows.reduce((sum, r) => sum + r.ensisijaisetHakijatLkm, 0),
-      aloituspaikat: rows.reduce((sum, r) => sum + r.aloituspaikatLkm, 0),
+      ...schoolStatisticTotals(statistics.filter((s) => s.korkeakoulu === name)),
       feedbackAverage: schoolFeedback?.feedback.tilastot.keskiarvo ?? null,
       feedbackMaxScore: schoolFeedback?.maxScore ?? null,
     };
