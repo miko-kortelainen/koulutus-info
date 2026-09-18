@@ -116,7 +116,7 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
           {errors.aineet}
         </Text>
       ) : null}
-      <Box>
+      <Box >
         <Button
           borderColor={COLORS.accentFg}
           onClick={addAine}
