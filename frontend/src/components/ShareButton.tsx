@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HiOutlineShare } from "react-icons/hi";
 
 interface ShareButtonProps {
@@ -11,6 +11,11 @@ interface ShareButtonProps {
 export default function ShareButton({ label, onShared, getShareFile }: ShareButtonProps) {
   const [copied, setCopied] = useState(false);
   const inFlight = useRef(false);
+  const preparedFile = useRef<Promise<File> | null>(null);
+
+  useEffect(() => {
+    preparedFile.current = getShareFile ? getShareFile() : null;
+  }, [getShareFile]);
 
   const share = async () => {
     if (inFlight.current) return;
@@ -18,7 +23,7 @@ export default function ShareButton({ label, onShared, getShareFile }: ShareButt
 
     try {
       if (getShareFile) {
-        await shareFile(getShareFile, onShared, setCopied);
+        await shareFile(() => preparedFile.current ?? getShareFile(), onShared, setCopied);
         return;
       }
       await shareUrl(onShared, setCopied);
@@ -63,12 +68,15 @@ async function shareFile(
     return;
   }
 
-  if (canShareFiles(file)) {
+  // Safari's canShare() often rejects canvas Files even when share() would open the iOS share sheet.
+  if (typeof navigator.share === "function") {
     try {
       await navigator.share({ files: [file], title: "Oma hakulista" });
       onShared();
-    } catch {}
-    return;
+      return;
+    } catch (error) {
+      if (isShareCancellation(error)) return;
+    }
   }
 
   downloadFile(file);
@@ -76,13 +84,8 @@ async function shareFile(
   flashCopied(setCopied);
 }
 
-function canShareFiles(file: File) {
-  if (typeof navigator.canShare !== "function") return false;
-  try {
-    return navigator.canShare({ files: [file] });
-  } catch {
-    return false;
-  }
+function isShareCancellation(error: unknown) {
+  return typeof error === "object" && error !== null && "name" in error && error.name === "AbortError";
 }
 
 function downloadFile(file: File) {

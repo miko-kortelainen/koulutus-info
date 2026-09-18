@@ -1,4 +1,5 @@
 import { Stack, Text } from "@chakra-ui/react";
+import { useCallback } from "react";
 import { flushSync } from "react-dom";
 import { HiOutlineHeart } from "react-icons/hi";
 import SchoolCard from "@/components/SchoolCard";
@@ -10,6 +11,7 @@ import { createHakulistaImageFile } from "@/pages/oma-hakulista/lib/hakulistaIma
 
 export default function SavedListPage() {
   const { favorites, moveFavorite } = useFavorites();
+  const getShareFile = useCallback(() => createHakulistaImageFile(favorites), [favorites]);
 
   const move = (oid: string, direction: -1 | 1) => {
     if (typeof document.startViewTransition !== "function") {
@@ -48,7 +50,7 @@ export default function SavedListPage() {
               ))}
             </Stack>
             <ShareButton
-              getShareFile={() => createHakulistaImageFile(favorites)}
+              getShareFile={getShareFile}
               label="Jaa tämä hakulista"
               onShared={() => window.sa_event?.("share_hakulista")}
             />

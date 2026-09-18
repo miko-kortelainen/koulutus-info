@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import type { ToteutusEntry } from "@/types.gen";
-import { hakulistaShareItems, hakulistaShareSlotTop, wrapCanvasText } from "@/pages/oma-hakulista/lib/hakulistaImage";
+import { hakulistaShareItems, hakulistaShareItemTops, wrapCanvasText } from "@/pages/oma-hakulista/lib/hakulistaImage";
 
 const entries: ToteutusEntry[] = [
   {
@@ -24,7 +24,7 @@ test("share image lines are school and program names in list order", () => {
   ]);
 });
 
-test("share image keeps the first six entries and spaces six slots to the logo", () => {
+test("share image keeps the first six entries and spaces items through the list area", () => {
   const extra: ToteutusEntry = {
     toteutusOid: "3",
     toteutusNimi: { fi: "Hoitotyö" },
@@ -32,8 +32,9 @@ test("share image keeps the first six entries and spaces six slots to the logo",
     kunnat: ["Helsinki"],
   };
   expect(hakulistaShareItems([...entries, extra, extra, extra, extra, extra])).toHaveLength(6);
-  expect(hakulistaShareSlotTop(0, 164, 1700)).toBe(164);
-  expect(hakulistaShareSlotTop(5, 164, 1700)).toBe(1700 - (1700 - 164) / 6);
+  expect(hakulistaShareItemTops([200], 100, 1100)).toEqual([500]);
+  expect(hakulistaShareItemTops([100, 100, 100], 164, 1700)).toEqual([562, 882, 1202]);
+  expect(hakulistaShareItemTops([240, 240], 0, 500)).toEqual([0, 312]);
 });
 
 test("wraps words to the measured width and keeps ÅÄÖ", () => {
