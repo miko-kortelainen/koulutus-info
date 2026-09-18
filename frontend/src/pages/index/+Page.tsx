@@ -5,8 +5,7 @@ import PageContainer from "@/layout/PageContainer";
 import HeroButtons from "@/pages/index/components/HeroButtons";
 import IosInstallTip from "@/pages/index/components/IosInstallTip";
 import LandingHeadline from "@/pages/index/components/LandingHeadline";
-import QuickLinkCard from "@/pages/index/components/QuickLinkCard";
-import { quickLinks } from "@/pages/index/components/quickLinks";
+import QuickLinkTabs from "@/pages/index/components/QuickLinkTabs";
 import useCountdown from "@/pages/index/hooks/useCountdown";
 import { COLORS } from "@/theme";
 
@@ -129,14 +128,6 @@ export default function LandingPage() {
     </MotionVStack>
   );
 
-  const quickLinksSection = (
-    <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} width="100%">
-      {quickLinks.map((link) => (
-        <QuickLinkCard key={link.href} {...link} />
-      ))}
-    </SimpleGrid>
-  );
-
   return (
     <>
       {hero}
@@ -153,7 +144,7 @@ export default function LandingPage() {
             </Stack>
             {countdown}
             <IosInstallTip />
-            {quickLinksSection}
+            <QuickLinkTabs />
           </VStack>
         </PageContainer>
       </Box>
