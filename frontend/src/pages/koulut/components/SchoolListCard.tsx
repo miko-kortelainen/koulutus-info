@@ -1,8 +1,8 @@
 import { Badge, Card, HStack, Separator, SimpleGrid, Stack, Stat, Text } from "@chakra-ui/react";
 import { HiOutlineAcademicCap } from "react-icons/hi";
 import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier, ratioFormat } from "@/lib/statistics";
-import { COLORS } from "@/theme";
 import type { SchoolListItem } from "@/pages/koulut/+data";
+import { COLORS } from "@/theme";
 
 interface SchoolListCardProps {
   school: SchoolListItem;
@@ -90,23 +90,17 @@ export default function SchoolListCard({ school }: SchoolListCardProps) {
   );
 
   const footer = (
-    <HStack flexWrap="wrap" gap={4} justify="space-between">
-      <Badge
-        bg={tier?.bg}
-        color={tier?.color}
-        fontWeight="semibold"
-        height={6}
-        rounded="sm"
-        size={{ base: "sm", md: "md" }}
-      >
-        {tier ? `${tier.label} hakijapaine` : "Määrittämätön hakijapaine"}
-      </Badge>
-      {school.koulutuksia > 0 ? (
-        <Badge bg={COLORS.accent} color={COLORS.onAccent} fontWeight="semibold" height={6} rounded="sm" size="sm">
-          Mukana syksyn yhteishaussa!
-        </Badge>
-      ) : null}
-    </HStack>
+    <Badge
+      alignSelf="flex-start"
+      bg={tier?.bg}
+      color={tier?.color}
+      fontWeight="semibold"
+      height={6}
+      rounded="sm"
+      size={{ base: "sm", md: "md" }}
+    >
+      {tier ? `${tier.label} hakijapaine` : "Määrittämätön hakijapaine"}
+    </Badge>
   );
 
   return (

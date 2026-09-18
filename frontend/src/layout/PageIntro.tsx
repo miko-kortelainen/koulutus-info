@@ -33,7 +33,7 @@ export default function PageIntro({ title, description }: PageIntroProps) {
         >
           {title}
         </Heading>
-        <Text color="fg.muted" fontSize={{ base: "14px", md: "18px" }} lineHeight="27px" textWrap="pretty" width={"100%"}>
+        <Text color="fg.muted" fontSize={{ base: "14px", md: "18px" }} lineHeight="27px" textWrap="pretty" width="100%">
           {description}
         </Text>
       </Stack>
