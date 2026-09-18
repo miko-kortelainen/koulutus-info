@@ -104,15 +104,23 @@ test("homepage quick links point to their pages", async ({ page }) => {
   );
   await expect(page.getByText("Kevään 2027 ensimmäiseen yhteishakuun")).toBeVisible();
 
+  await expect(page.getByRole("tabpanel").getByRole("link", { name: /^lukiot(\s|$)/ })).toHaveAttribute(
+    "href",
+    "/lukiot/",
+  );
+
+  await page.getByRole("tab", { name: "Korkeakoulutus" }).click();
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/"],
     ["koulutukset", "/koulutukset/"],
     ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
-    ["oma hakulista", "/oma-hakulista/"],
     ["trendit", "/trendit/"],
   ] as const) {
-    await expect(page.getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) })).toHaveAttribute("href", url);
+    await expect(page.getByRole("tabpanel").getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) })).toHaveAttribute(
+      "href",
+      url,
+    );
   }
 });
 
