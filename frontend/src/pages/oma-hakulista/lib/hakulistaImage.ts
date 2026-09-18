@@ -9,16 +9,18 @@ const WIDTH = 1080;
 const HEIGHT = 1920;
 const SCALE = 2;
 const OUTER = 72;
-const TITLE_SIZE = 64;
-const PROGRAM_SIZE = 48;
-const SCHOOL_SIZE = 36;
-const PROGRAM_LINE = 60;
-const SCHOOL_LINE = 44;
-const AFTER_PROGRAM = 10;
-const NUMBER_WIDTH = 80;
+const TITLE_SIZE = 48;
+const PROGRAM_SIZE = 36;
+const SCHOOL_SIZE = 28;
+const PROGRAM_LINE = 46;
+const SCHOOL_LINE = 34;
+const AFTER_PROGRAM = 20;
+const NUMBER_WIDTH = 64;
 const LOGO_SAFE = 220;
 const SHARE_SLOTS = 6;
-const TITLE_GAP = 48;
+const TITLE_GAP = 64;
+const ITEM_GAP = 72;
+const MAX_GAP = 220;
 const JPEG_QUALITY = 0.92;
 
 const COLOR = {
@@ -41,8 +43,23 @@ export function hakulistaShareItems(entries: ToteutusEntry[]): HakulistaShareIte
   }));
 }
 
-export function hakulistaShareSlotTop(index: number, listTop: number, listBottom: number): number {
-  return listTop + index * ((listBottom - listTop) / SHARE_SLOTS);
+export function hakulistaShareItemTops(itemHeights: number[], listTop: number, listBottom: number): number[] {
+  if (itemHeights.length === 0) return [];
+
+  const available = listBottom - listTop;
+  const totalHeight = itemHeights.reduce((sum, height) => sum + height, 0);
+  if (itemHeights.length === 1) {
+    return [listTop + Math.max(0, (available - totalHeight) / 2)];
+  }
+
+  const gap = Math.min(MAX_GAP, Math.max(ITEM_GAP, (available - totalHeight) / (itemHeights.length - 1)));
+  const used = totalHeight + gap * (itemHeights.length - 1);
+  let y = listTop + Math.max(0, (available - used) / 2);
+  return itemHeights.map((height) => {
+    const top = y;
+    y += height + gap;
+    return top;
+  });
 }
 
 export function wrapCanvasText(text: string, maxWidth: number, measure: (value: string) => number): string[] {
@@ -66,7 +83,11 @@ export function wrapCanvasText(text: string, maxWidth: number, measure: (value: 
 
 export async function createHakulistaImageFile(entries: ToteutusEntry[]): Promise<File> {
   const blob = await renderHakulistaImage(hakulistaShareItems(entries));
-  return new File([blob], HAKULISTA_SHARE_FILENAME, { lastModified: Date.now(), type: "image/jpeg" });
+  const buffer = await blob.arrayBuffer();
+  return new File([buffer], HAKULISTA_SHARE_FILENAME, {
+    lastModified: Date.now(),
+    type: blob.type || "image/jpeg",
+  });
 }
 
 async function renderHakulistaImage(items: HakulistaShareItem[]): Promise<Blob> {
@@ -88,17 +109,15 @@ async function renderHakulistaImage(items: HakulistaShareItem[]): Promise<Blob> 
   const textWidth = WIDTH - OUTER * 2 - NUMBER_WIDTH;
   const listTop = OUTER + TITLE_SIZE + TITLE_GAP;
   const listBottom = HEIGHT - LOGO_SAFE;
-  const slotHeight = (listBottom - listTop) / SHARE_SLOTS;
+  const itemHeights = items.map((item) => measureItem(ctx, item, textWidth));
+  const itemTops = hakulistaShareItemTops(itemHeights, listTop, listBottom);
 
   ctx.fillStyle = COLOR.title;
   ctx.font = `700 ${TITLE_SIZE}px ${FONT}`;
   ctx.fillText("Oma hakulista", OUTER, OUTER);
 
   for (const [index, item] of items.entries()) {
-    const slotTop = hakulistaShareSlotTop(index, listTop, listBottom);
-    const itemHeight = measureItem(ctx, item, textWidth);
-    const y = slotTop + Math.max(0, (slotHeight - itemHeight) / 2);
-    drawItem(ctx, item, index + 1, OUTER, y, textWidth);
+    drawItem(ctx, item, index + 1, OUTER, itemTops[index], textWidth);
   }
 
   return canvasToJpeg(canvas);
