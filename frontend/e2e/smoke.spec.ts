@@ -2,6 +2,7 @@ import { expect, type Page, test } from "@playwright/test";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
 import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS } from "@/config/yearOptions";
+import { numberFormat } from "@/lib/statistics";
 
 test.describe.configure({ mode: "parallel" });
 
@@ -306,14 +307,16 @@ test("/pistelaskuri: sorts grouped results", async ({ page }) => {
 test("/pistelaskuri: switches selection methods", async ({ page }) => {
   await openCalculator(page);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
-  await expect(tekniikkaAccordion.getByText("Todistusvalinta (YO), ensikertalaiset", { exact: true }).first()).toBeVisible();
+  await expect(
+    tekniikkaAccordion.getByText("Todistusvalinta (YO), ensikertalaiset", { exact: true }).first(),
+  ).toBeVisible();
   await page.getByRole("tab", { name: "AMM" }).click();
   await expect(
     page.getByRole("article").getByText("Todistusvalinta (AMM), ensikertalaiset", { exact: true }).first(),
   ).toBeVisible();
-  await expect(page.getByRole("article").getByText("Todistusvalinta (YO), ensikertalaiset", { exact: true })).toHaveCount(
-    0,
-  );
+  await expect(
+    page.getByRole("article").getByText("Todistusvalinta (YO), ensikertalaiset", { exact: true }),
+  ).toHaveCount(0);
 });
 
 test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
@@ -416,9 +419,7 @@ test("/koulutukset: joint application switcher shows the other wave", async ({ p
   await expectSelectedOption(page, "Yhteishaku", "Kevään 1. yhteishaku 2027");
 
   await selectOption(page, "Yhteishaku", "Kevään 2. yhteishaku 2027");
-  await expect(
-    page.getByText("Korkeakoulujen kevään 2027 toisessa yhteishaussa olevat toteutukset."),
-  ).toBeVisible();
+  await expect(page.getByText("Korkeakoulujen kevään 2027 toisessa yhteishaussa olevat toteutukset.")).toBeVisible();
   await expect(page.getByText("Hae opintopolussa").first()).toBeVisible();
 });
 
@@ -670,6 +671,23 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await expect(page.getByRole("button", { name: "Linkki kopioitu" })).toBeVisible();
 });
 
+test("/koulut: switches which yhteishaku hakijamäärät are shown", async ({ page }) => {
+  await page.goto("/koulut/");
+  const aalto = page.getByRole("tabpanel").getByRole("link", { name: /^Aalto-yliopisto(\s|$)/ });
+  await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Syksyn yhteishaku 2026");
+  await expect(aalto).toHaveAccessibleName(/Hakijat – Ensisijaiset hakijat –/);
+  await expect(aalto.getByText("alle 5")).toHaveCount(0);
+
+  await page.getByRole("combobox", { name: "Yhteishaku" }).click();
+  await Promise.all([
+    page.waitForResponse((response) => response.url().includes("hakijamaarat-2026-kevat.json")),
+    page.getByRole("option", { name: "Kevään yhteishaku 2026", exact: true }).click(),
+  ]);
+
+  await expect(aalto.getByText(numberFormat.format(23476))).toBeVisible();
+  await expect(aalto.getByText(numberFormat.format(9742))).toBeVisible();
+});
+
 test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
   await page.goto("/koulut/");
   await expect(page.getByRole("heading", { name: "Koulut" })).toBeVisible();
@@ -730,9 +748,26 @@ test("/koulut/:slug/opiskelijapalautteet: opens AMK feedback", async ({ page }) 
   await expect(page.getByText("5,40 / 7", { exact: true })).toBeVisible();
 });
 
+test("/koulut/:slug: switches which yhteishaku hakijamäärät are shown", async ({ page }) => {
+  await page.goto("/koulut/centria-ammattikorkeakoulu/");
+  await page.getByRole("tab", { name: "Hakijamäärät" }).click();
+
+  await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Syksyn yhteishaku 2026");
+  await expect(page.getByRole("tabpanel").getByText("Sosionomi (AMK), monimuotototeutus / Kokkola")).toBeVisible();
+
+  await page.getByRole("combobox", { name: "Yhteishaku" }).click();
+  await Promise.all([
+    page.waitForResponse((response) => response.url().includes("hakijamaarat-2026-kevat.json")),
+    page.getByRole("option", { name: "Kevään yhteishaku 2026", exact: true }).click(),
+  ]);
+
+  await expect(page.getByRole("tabpanel").getByText("Sosionomi (AMK), monimuotototeutus / Ylivieska")).toBeVisible();
+  await expect(page.getByRole("tabpanel").getByText("Sosionomi (AMK), monimuotototeutus / Kokkola")).toHaveCount(0);
+});
+
 test("/koulut/:slug: switches detail tab and opens feedback", async ({ page }) => {
   await page.goto("/koulut/jyvaskylan-yliopisto/");
-  const statisticsTab = page.getByRole("tab", { name: /Hakijamäärät/ });
+  const statisticsTab = page.getByRole("tab", { name: "Hakijamäärät" });
 
   await statisticsTab.click();
 
@@ -764,8 +799,7 @@ test("/koulut/:slug/pisterajat: shows complete current-round programme cutoff ca
   await expect(page.getByRole("button", { name: "Tekniikan alat" })).toBeVisible();
 
   await page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" }).click();
-  const bba =
-    "Bachelor of Business Administration (BBA), Business Management, blended learning / Kokkola";
+  const bba = "Bachelor of Business Administration (BBA), Business Management, blended learning / Kokkola";
   await expect(page.getByRole("heading", { name: bba })).toBeVisible();
   await expect(page.getByText("AMK-Valintakoe").first()).toBeVisible();
   await expect(page.getByText("25,7")).toBeVisible();
@@ -829,7 +863,9 @@ test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) =>
 
 test("/lukiot: search expands school keskiarvot accordion", async ({ page }) => {
   await page.goto("/lukiot/");
-  await expect(page.getByRole("heading", { level: 1, name: `Lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}` })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { level: 1, name: `Lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}` }),
+  ).toBeVisible();
 
   await page.getByRole("textbox", { name: "Hae lukiota tai linjaa" }).fill("Akaan lukio");
   await page.getByRole("button", { name: "Akaan lukio" }).click();
@@ -844,7 +880,9 @@ test("/lukiot: search expands school keskiarvot accordion", async ({ page }) => 
 
 test("/lukiot: kunta filter shows that municipality's lukiot", async ({ page }) => {
   await page.goto("/lukiot/");
-  await expect(page.getByRole("heading", { level: 1, name: `Lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}` })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { level: 1, name: `Lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}` }),
+  ).toBeVisible();
 
   await selectOption(page, "Kunta", "Akaa");
   await page.getByRole("button", { name: "Akaan lukio" }).click();
