@@ -12,6 +12,18 @@ import { COLORS } from "@/theme";
 
 const MotionVStack = motion.create(VStack);
 
+function landingOverlay(headerMix: number, midMix: number, midUntil: string): string {
+  const wash = (mix: number, stop: string) => `color-mix(in srgb, ${COLORS.bg} ${mix}%, transparent) ${stop}`;
+
+  return [
+    `linear-gradient(to bottom, ${COLORS.bg}`,
+    wash(headerMix, HEADER_HEIGHT),
+    wash(midMix, `calc(${HEADER_HEIGHT} + 4.5rem)`),
+    wash(midMix, midUntil),
+    `${COLORS.bg})`,
+  ].join(", ");
+}
+
 function LandingBackground() {
   return (
     <Box aria-hidden="true" inset={0} overflow="hidden" pointerEvents="none" position="absolute" zIndex={0}>
@@ -27,8 +39,8 @@ function LandingBackground() {
       />
       <Box
         backgroundImage={{
-          _light: `linear-gradient(to bottom, color-mix(in srgb, ${COLORS.bg} 8%, transparent) 70%, ${COLORS.bg})`,
-          _dark: `linear-gradient(to bottom, color-mix(in srgb, ${COLORS.bg} 42%, transparent) 60%, ${COLORS.bg})`,
+          _light: landingOverlay(55, 8, "70%"),
+          _dark: landingOverlay(75, 42, "60%"),
         }}
         inset={0}
         position="absolute"

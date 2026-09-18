@@ -3,6 +3,11 @@ import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import { APPEARANCE_STORAGE_KEY, ColorModeButton } from "@/components/color-mode";
 import { renderWithChakra } from "@/test/render";
+import { THEME_COLOR } from "@/theme";
+
+function appearanceThemeColor() {
+  return document.querySelector("meta[name='theme-color'][data-appearance]");
+}
 
 test("toggles appearance and persists the choice", async () => {
   const user = userEvent.setup();
@@ -16,12 +21,14 @@ test("toggles appearance and persists the choice", async () => {
   });
   expect(toggle).toHaveAttribute("aria-pressed", "false");
   expect(toggle).toHaveTextContent("Vaihda tummaan ulkoasuun");
+  expect(appearanceThemeColor()).toHaveAttribute("content", THEME_COLOR.light);
 
   await user.click(toggle);
 
   expect(screen.getByRole("button", { name: /vaalea teema/i })).toHaveAttribute("aria-pressed", "true");
   expect(localStorage.getItem(APPEARANCE_STORAGE_KEY)).toBe("dark");
   expect(document.documentElement.classList.contains("dark")).toBe(true);
+  expect(appearanceThemeColor()).toHaveAttribute("content", THEME_COLOR.dark);
 
   await waitFor(() => {
     expect(screen.getByRole("button", { name: /vaalea teema/i })).toBeEnabled();
@@ -33,6 +40,7 @@ test("toggles appearance and persists the choice", async () => {
   });
   expect(localStorage.getItem(APPEARANCE_STORAGE_KEY)).toBe("light");
   expect(document.documentElement.classList.contains("dark")).toBe(false);
+  expect(appearanceThemeColor()).toHaveAttribute("content", THEME_COLOR.light);
 });
 
 test("ignores rapid repeat clicks during cooldown", async () => {
