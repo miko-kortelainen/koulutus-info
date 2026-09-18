@@ -1,47 +1,59 @@
 import {
   HiOutlineAcademicCap,
-  HiOutlineBookmark,
   HiOutlineCalculator,
   HiOutlineChartBar,
   HiOutlineLibrary,
+  HiOutlineOfficeBuilding,
   HiOutlineTrendingUp,
 } from "react-icons/hi";
 
-export const quickLinks = [
+export const quickLinkSections = [
   {
-    href: "/pistelaskuri/",
-    label: "pistelaskuri",
-    description: "Laske yhteishaun todistusvalintapisteesi",
-    icon: HiOutlineCalculator,
+    heading: "Toinen aste",
+    id: "toinen-aste",
+    links: [
+      {
+        href: "/lukiot/",
+        label: "lukiot",
+        description: "Katso lukioiden keskiarvorajat",
+        icon: HiOutlineOfficeBuilding,
+      },
+    ],
   },
   {
-    href: "/koulutukset/",
-    label: "koulutukset",
-    description: "Katso yhteishaussa olevat koulutukset",
-    icon: HiOutlineAcademicCap,
-  },
-  {
-    href: "/oma-hakulista/",
-    label: "oma hakulista",
-    description: "Valitse yhteishaun hakukohteesi",
-    icon: HiOutlineBookmark,
-  },
-  {
-    href: "/hakijamaarat/",
-    label: "hakijamäärät",
-    description: "Katso yhteishakujen hakijamääriä",
-    icon: HiOutlineChartBar,
-  },
-  {
-    href: "/koulut/",
-    label: "koulut",
-    description: "Katso koulujen pisterajat ja hakijamäärät",
-    icon: HiOutlineLibrary,
-  },
-  {
-    href: "/trendit/",
-    label: "trendit",
-    description: "Katso suosituimmat alat ja koulut",
-    icon: HiOutlineTrendingUp,
+    heading: "Korkeakoulutus",
+    id: "korkeakoulutus",
+    links: [
+      {
+        href: "/pistelaskuri/",
+        label: "pistelaskuri",
+        description: "Laske yhteishaun todistusvalintapisteesi",
+        icon: HiOutlineCalculator,
+      },
+      {
+        href: "/koulutukset/",
+        label: "koulutukset",
+        description: "Katso yhteishaussa olevat koulutukset",
+        icon: HiOutlineAcademicCap,
+      },
+      {
+        href: "/hakijamaarat/",
+        label: "hakijamäärät",
+        description: "Katso yhteishakujen hakijamääriä",
+        icon: HiOutlineChartBar,
+      },
+      {
+        href: "/koulut/",
+        label: "koulut",
+        description: "Katso koulujen pisterajat ja hakijamäärät",
+        icon: HiOutlineLibrary,
+      },
+      {
+        href: "/trendit/",
+        label: "trendit",
+        description: "Katso suosituimmat alat ja koulut",
+        icon: HiOutlineTrendingUp,
+      },
+    ],
   },
 ];
