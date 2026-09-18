@@ -1,8 +1,8 @@
-import { Box, Button, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import { motion } from "motion/react";
-import { HiOutlineArrowRight, HiOutlineCalculator, HiOutlineChartBar } from "react-icons/hi";
 import { HEADER_HEIGHT } from "@/layout/Header";
 import PageContainer from "@/layout/PageContainer";
+import HeroButtons from "@/pages/index/components/HeroButtons";
 import IosInstallTip from "@/pages/index/components/IosInstallTip";
 import LandingHeadline from "@/pages/index/components/LandingHeadline";
 import QuickLinkCard from "@/pages/index/components/QuickLinkCard";
@@ -11,53 +11,6 @@ import useCountdown from "@/pages/index/hooks/useCountdown";
 import { COLORS } from "@/theme";
 
 const MotionVStack = motion.create(VStack);
-
-const heroLinks = [
-  { href: "/pistelaskuri/", icon: HiOutlineCalculator, label: "Laske todistuspisteeni" },
-  { href: "/hakijamaarat/", icon: HiOutlineChartBar, label: "Näytä hakijamäärät" },
-];
-
-function HeroButtons() {
-  return (
-    <Stack
-      direction={{ base: "column", lg: "row" }}
-      gap={{ base: 3, md: 4, lg: 8 }}
-      width={{ base: "100%", lg: "auto" }}
-    >
-      {heroLinks.map(({ href, icon: Icon, label }, index) => (
-        <motion.div
-          animate={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 8 }}
-          key={href}
-          transition={{ duration: 0.5, delay: 0.4 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <Button
-            _active={{ transform: "scale(0.96)" }}
-            _hover={{ bg: "accentFg", color: "bg" }}
-            asChild
-            bg="accent"
-            color="onAccent"
-            transitionDuration="0.15s"
-            transitionProperty="transform, background-color, color"
-            transitionTimingFunction="ease-out"
-            variant="solid"
-            width={{ base: "100%", lg: "236px" }}
-          >
-            <a href={href}>
-              <HStack gap={2} width="13rem">
-                <Icon aria-hidden="true" />
-                <Text as="span" flex={1} textAlign="left">
-                  {label}
-                </Text>
-                <HiOutlineArrowRight aria-hidden="true" />
-              </HStack>
-            </a>
-          </Button>
-        </motion.div>
-      ))}
-    </Stack>
-  );
-}
 
 function LandingBackground() {
   return (
