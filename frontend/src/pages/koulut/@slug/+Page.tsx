@@ -3,20 +3,18 @@ import { useState } from "react";
 import { HiOutlineChatAlt2, HiOutlineSparkles } from "react-icons/hi";
 import { useData } from "vike-react/useData";
 import BackLink from "@/components/BackLink";
-import DegreeStatsCard from "@/components/DegreeStatsCard";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
-import { CURRENT_YEAR, statisticsRoundShortLabel } from "@/config/yearOptions";
 import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
-import { COLORS } from "@/theme";
 import type { SchoolPageData } from "@/pages/koulut/@slug/+data";
+import SchoolStatistics from "@/pages/koulut/@slug/components/SchoolStatistics";
+import { COLORS } from "@/theme";
 
 export default function SchoolPage() {
-  const { schoolName, hasCutoffs, hasFeedback, toteutukset, statistics } = useData<SchoolPageData>();
+  const { schoolName, hasCutoffs, hasFeedback, toteutukset, statistics, statisticsYear } = useData<SchoolPageData>();
   const pageSize = 5;
   const [programPage, setProgramPage] = useState(1);
-  const [statsPage, setStatsPage] = useState(1);
 
   const header = (
     <Stack gap={1}>
@@ -27,7 +25,7 @@ export default function SchoolPage() {
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
         {toteutukset.length > 0
           ? "Yhteishaun pisterajat, hakijamäärät ja toteutukset."
-          : `Yhteishaun ${statisticsRoundShortLabel(CURRENT_YEAR)} pisterajat ja hakijamäärät.`}
+          : "Yhteishaun pisterajat ja hakijamäärät."}
       </Text>
       {hasCutoffs || hasFeedback ? (
         <HStack align="flex-start" flexWrap="wrap" gap={{ base: 2, md: 4 }}>
@@ -79,18 +77,6 @@ export default function SchoolPage() {
     </Stack>
   );
 
-  const paginatedStatsList = statistics.slice((statsPage - 1) * pageSize, statsPage * pageSize);
-  const statsList = (
-    <Stack gap={4}>
-      <Stack as="ul" gap={4} listStyleType="none">
-        {paginatedStatsList.map((d) => (
-          <DegreeStatsCard degree={d} key={d.kooditHakukohde} />
-        ))}
-      </Stack>
-      <Pagination count={statistics.length} onPageChange={setStatsPage} page={statsPage} pageSize={pageSize} />
-    </Stack>
-  );
-
   const tabs = [
     {
       value: "koulutukset",
@@ -100,8 +86,10 @@ export default function SchoolPage() {
     },
     {
       value: "hakijamaarat",
-      label: `Hakijamäärät, ${statisticsRoundShortLabel(CURRENT_YEAR)}`,
-      content: statsList,
+      label: "Hakijamäärät",
+      content: (
+        <SchoolStatistics initialStatistics={statistics} schoolName={schoolName} statisticsYear={statisticsYear} />
+      ),
       visible: statistics.length > 0,
     },
   ].filter((t) => t.visible);

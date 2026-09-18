@@ -27,6 +27,12 @@ const DARK = {
   onAccent: "oklch(0.22 0.008 17.636)", // stays dark on mid-green accent fills
 } as const;
 
+/** sRGB of LIGHT.bg / DARK.bg. Safari theme-color cannot use oklch or CSS variables. */
+export const THEME_COLOR = {
+  light: "#fbffff",
+  dark: "#0e1313",
+} as const;
+
 /** CSS variables that track the active appearance (prefer these over hardcoded oklch). */
 export const COLORS = {
   bg: "var(--chakra-colors-bg)",
@@ -42,6 +48,7 @@ export const COLORS = {
 const config = defineConfig({
   globalCss: {
     html: {
+      backgroundColor: "bg",
       colorScheme: "light dark",
     },
     body: {

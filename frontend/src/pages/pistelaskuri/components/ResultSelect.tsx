@@ -34,7 +34,7 @@ export default function ResultSelect<T extends string>({
           const nextValue = event.value[0];
           if (nextValue) onChange(nextValue as T);
         }}
-        size="xs"
+        size="md"
         value={[value]}
         width="full"
       >

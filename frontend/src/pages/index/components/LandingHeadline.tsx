@@ -56,7 +56,7 @@ export default function LandingHeadline() {
       animate={{ opacity: 1, transform: "translateY(0)" }}
       as="h1"
       fontSize={{ base: "4xl", md: "5xl", lg: "56px" }}
-      fontWeight="semibold"
+      fontWeight="medium"
       initial={{ opacity: 0, transform: "translateY(30px)" }}
       lineHeight={1.25}
       textWrap="balance"

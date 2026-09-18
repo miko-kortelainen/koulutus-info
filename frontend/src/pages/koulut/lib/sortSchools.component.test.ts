@@ -7,7 +7,6 @@ const schools: SchoolListItem[] = [
     name: "Alpha",
     slug: "alpha",
     sektori: "Yliopistokoulutus",
-    koulutuksia: 1,
     kaikkiHakijat: 100,
     valitut: 20,
     ensisijaisetHakijat: 30,
@@ -19,7 +18,6 @@ const schools: SchoolListItem[] = [
     name: "Beta",
     slug: "beta",
     sektori: "Yliopistokoulutus",
-    koulutuksia: 1,
     kaikkiHakijat: 300,
     valitut: 30,
     ensisijaisetHakijat: 10,
@@ -31,7 +29,6 @@ const schools: SchoolListItem[] = [
     name: "Gamma",
     slug: "gamma",
     sektori: "Yliopistokoulutus",
-    koulutuksia: 1,
     kaikkiHakijat: 200,
     valitut: 40,
     ensisijaisetHakijat: 20,
@@ -39,22 +36,33 @@ const schools: SchoolListItem[] = [
     feedbackAverage: null,
     feedbackMaxScore: null,
   },
+  {
+    name: "Delta",
+    slug: "delta",
+    sektori: "Yliopistokoulutus",
+    kaikkiHakijat: null,
+    valitut: null,
+    ensisijaisetHakijat: null,
+    aloituspaikat: null,
+    feedbackAverage: 4.9,
+    feedbackMaxScore: 5,
+  },
 ];
 
 const names = (items: SchoolListItem[]) => items.map((item) => item.name);
 
 test.each<[SortOption, string[]]>([
-  ["asc", ["Alpha", "Beta", "Gamma"]],
-  ["desc", ["Gamma", "Beta", "Alpha"]],
-  ["most_popular", ["Beta", "Gamma", "Alpha"]],
-  ["least_popular", ["Alpha", "Gamma", "Beta"]],
-  ["most_first_choice", ["Alpha", "Gamma", "Beta"]],
-  ["least_first_choice", ["Beta", "Gamma", "Alpha"]],
-  ["highest_feedback", ["Alpha", "Beta", "Gamma"]],
-  ["lowest_feedback", ["Beta", "Alpha", "Gamma"]],
+  ["asc", ["Alpha", "Beta", "Delta", "Gamma"]],
+  ["desc", ["Gamma", "Delta", "Beta", "Alpha"]],
+  ["most_popular", ["Beta", "Gamma", "Alpha", "Delta"]],
+  ["least_popular", ["Alpha", "Gamma", "Beta", "Delta"]],
+  ["most_first_choice", ["Alpha", "Gamma", "Beta", "Delta"]],
+  ["least_first_choice", ["Beta", "Gamma", "Alpha", "Delta"]],
+  ["highest_feedback", ["Delta", "Alpha", "Beta", "Gamma"]],
+  ["lowest_feedback", ["Beta", "Alpha", "Delta", "Gamma"]],
 ])("sorts schools with %s without mutating the source", (sortOrder, expected) => {
   expect(names(sortSchools(schools, sortOrder))).toEqual(expected);
-  expect(names(schools)).toEqual(["Alpha", "Beta", "Gamma"]);
+  expect(names(schools)).toEqual(["Alpha", "Beta", "Gamma", "Delta"]);
 });
 
 test("uses Finnish alphabetical order", () => {

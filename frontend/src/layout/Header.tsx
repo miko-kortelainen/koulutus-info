@@ -96,7 +96,7 @@ export default function Header() {
           <Portal>
             <Drawer.Backdrop />
             <Drawer.Positioner>
-              <Drawer.Content>
+              <Drawer.Content bg="bg">
                 <Drawer.Header>
                   <Drawer.Title fontWeight="bold" letterSpacing="widest">
                     yhteishaku
