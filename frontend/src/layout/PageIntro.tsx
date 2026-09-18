@@ -14,7 +14,7 @@ export default function PageIntro({ title, description }: PageIntroProps) {
     <Flex
       alignItems="center"
       as="header"
-      backgroundImage={`linear-gradient(to bottom, color-mix(in srgb, ${COLORS.accent} 16%, ${COLORS.bg}), ${COLORS.bg})`}
+      backgroundImage={`linear-gradient(to top, color-mix(in srgb, ${COLORS.accent} 16%, ${COLORS.bg}), ${COLORS.bg})`}
       justifyContent="center"
       mb={{ base: 6, md: 10 }}
       minH={{ base: `calc(184px + ${HEADER_HEIGHT})`, md: `calc(192px + ${HEADER_HEIGHT})` }}
