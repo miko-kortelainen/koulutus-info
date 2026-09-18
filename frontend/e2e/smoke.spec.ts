@@ -604,9 +604,6 @@ test("/oma-hakulista: reordering moves a card and persists after reload", async 
 
 test("/oma-hakulista: sharing downloads an image of the list", async ({ page }) => {
   await page.addInitScript(() => {
-    if (sessionStorage.getItem("favorites-storage-initialized")) return;
-
-    sessionStorage.setItem("favorites-storage-initialized", "true");
     localStorage.setItem(
       "yhteishaku:tallennetut",
       JSON.stringify([
@@ -678,11 +675,7 @@ test("/koulut: switches which yhteishaku hakijamäärät are shown", async ({ pa
   await expect(aalto).toHaveAccessibleName(/Hakijat – Ensisijaiset hakijat –/);
   await expect(aalto.getByText("alle 5")).toHaveCount(0);
 
-  await page.getByRole("combobox", { name: "Yhteishaku" }).click();
-  await Promise.all([
-    page.waitForResponse((response) => response.url().includes("hakijamaarat-2026-kevat.json")),
-    page.getByRole("option", { name: "Kevään yhteishaku 2026", exact: true }).click(),
-  ]);
+  await selectOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
 
   await expect(aalto.getByText(numberFormat.format(23476))).toBeVisible();
   await expect(aalto.getByText(numberFormat.format(9742))).toBeVisible();
@@ -755,11 +748,7 @@ test("/koulut/:slug: switches which yhteishaku hakijamäärät are shown", async
   await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Syksyn yhteishaku 2026");
   await expect(page.getByRole("tabpanel").getByText("Sosionomi (AMK), monimuotototeutus / Kokkola")).toBeVisible();
 
-  await page.getByRole("combobox", { name: "Yhteishaku" }).click();
-  await Promise.all([
-    page.waitForResponse((response) => response.url().includes("hakijamaarat-2026-kevat.json")),
-    page.getByRole("option", { name: "Kevään yhteishaku 2026", exact: true }).click(),
-  ]);
+  await selectOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
 
   await expect(page.getByRole("tabpanel").getByText("Sosionomi (AMK), monimuotototeutus / Ylivieska")).toBeVisible();
   await expect(page.getByRole("tabpanel").getByText("Sosionomi (AMK), monimuotototeutus / Kokkola")).toHaveCount(0);
