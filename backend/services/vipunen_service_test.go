@@ -49,6 +49,26 @@ func TestMergeRecordsKeepsMetadataAndAggregatesCounts(t *testing.T) {
 	}
 }
 
+func TestDropConflictingEmptyDuplicates(t *testing.T) {
+	records := []models.StatisticsEntry{
+		{KooditHakukohde: "empty-bachelor", Hakukohde: "A", Korkeakoulu: "X", KoulutusAste: "Alempi", AloituspaikatLkm: 15},
+		{KooditHakukohde: "live-master", Hakukohde: "A", Korkeakoulu: "X", KoulutusAste: "Ylempi", KaikkiHakijatLkm: 37},
+		{KooditHakukohde: "empty-same-level", Hakukohde: "B", Korkeakoulu: "Y", KoulutusAste: "Ylempi"},
+		{KooditHakukohde: "live-same-level", Hakukohde: "B", Korkeakoulu: "Y", KoulutusAste: "Ylempi", KaikkiHakijatLkm: 32},
+		{KooditHakukohde: "other-school", Hakukohde: "A", Korkeakoulu: "Z", KoulutusAste: "Alempi"},
+	}
+
+	filtered := DropConflictingEmptyDuplicates(records)
+	if len(filtered) != 4 {
+		t.Fatalf("len(DropConflictingEmptyDuplicates()) = %d, want 4", len(filtered))
+	}
+	for _, record := range filtered {
+		if record.KooditHakukohde == "empty-bachelor" {
+			t.Fatalf("conflicting empty duplicate was kept: %#v", record)
+		}
+	}
+}
+
 func TestGroupStatisticsByRound(t *testing.T) {
 	grouped, err := GroupStatisticsByRound([]VipunenRow{
 		{
