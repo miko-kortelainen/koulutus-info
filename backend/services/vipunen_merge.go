@@ -65,3 +65,42 @@ func MergeRecords(records []models.StatisticsEntry) []models.StatisticsEntry {
 	})
 	return result
 }
+
+type hakukohdeNameKey struct {
+	name   string
+	school string
+}
+
+func hasApplicants(record models.StatisticsEntry) bool {
+	return record.KaikkiHakijatLkm > 0 || record.EnsisijaisetHakijatLkm > 0 || record.ValitutLkm > 0
+}
+
+// DropConflictingEmptyDuplicates removes an applicantless hakukohde when the
+// same institution already has that name with applicants at a different degree
+// level. Vipunen can keep a replaced hakukohde code that has only starting
+// places and the wrong koulutusaste, so a master's programme shows up as alempi.
+func DropConflictingEmptyDuplicates(records []models.StatisticsEntry) []models.StatisticsEntry {
+	liveLevels := make(map[hakukohdeNameKey]map[string]struct{})
+	for _, record := range records {
+		if !hasApplicants(record) {
+			continue
+		}
+		key := hakukohdeNameKey{record.Hakukohde, record.Korkeakoulu}
+		if liveLevels[key] == nil {
+			liveLevels[key] = make(map[string]struct{})
+		}
+		liveLevels[key][record.KoulutusAste] = struct{}{}
+	}
+
+	filtered := make([]models.StatisticsEntry, 0, len(records))
+	for _, record := range records {
+		if !hasApplicants(record) {
+			levels := liveLevels[hakukohdeNameKey{record.Hakukohde, record.Korkeakoulu}]
+			if _, sameLevel := levels[record.KoulutusAste]; len(levels) > 0 && !sameLevel {
+				continue
+			}
+		}
+		filtered = append(filtered, record)
+	}
+	return filtered
+}
