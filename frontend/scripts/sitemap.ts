@@ -23,10 +23,14 @@ const cutoffFiles = readdirSync("public/data/pisterajat")
 const lukioKeskiarvotFiles = readdirSync("public/data/pisterajat/lukio")
   .filter((file) => file.endsWith(".json"))
   .map((file) => `pisterajat/lukio/${file}`);
+const yoPisterajatFiles = readdirSync("public/data/pisterajat/yo-kirjotukset")
+  .filter((file) => file.endsWith(".json"))
+  .map((file) => `pisterajat/yo-kirjotukset/${file}`);
 const currentStatisticsFile = `hakijamäärät/hakijamaarat-${CURRENT_YEAR.replace("_", "-")}.json`;
 const feedbackFiles = ["opiskelijapalaute/amk-palaute.json", "opiskelijapalaute/yliopisto-palaute.json"];
 const cutoffsLastmod = latestModifiedDate(cutoffFiles);
 const lukioKeskiarvotLastmod = latestModifiedDate(lukioKeskiarvotFiles);
+const yoPisterajatLastmod = latestModifiedDate(yoPisterajatFiles);
 const feedbackLastmod = latestModifiedDate(feedbackFiles);
 const statisticsLastmod = latestModifiedDate([currentStatisticsFile]);
 const profiliLastmod = latestModifiedDate(
@@ -48,6 +52,7 @@ const hubPaths = new Set([
   "/pistelaskuri/",
   "/pisterajat/",
   "/lukiot/",
+  "/yo-pisterajat/",
   "/hakijamaarat/",
   "/koulutukset/",
   "/oppaat/",
@@ -79,6 +84,7 @@ const lastmodFor = (path: string) => {
     return cutoffsLastmod;
   }
   if (path === "/lukiot/" || path.startsWith("/lukiot/")) return lukioKeskiarvotLastmod;
+  if (path === "/yo-pisterajat/") return yoPisterajatLastmod;
   if (path === "/koulut/" || path.startsWith("/koulut/")) return schoolsLastmod;
   if (path === "/ennakointi/") {
     return latestModifiedDate(["ennakointi/koulutustarpeet.json"]);
@@ -97,6 +103,7 @@ const paths = [
   ...cutoffAlaNames().map((name) => `/pisterajat/${slugify(name)}/`),
   "/lukiot/",
   ...lukioSchoolNames().map((name) => `/lukiot/${slugify(name)}/`),
+  "/yo-pisterajat/",
   "/oppaat/",
   ...guides.map((guide) => `/oppaat/${guide.slug}/`),
   "/koulut/",

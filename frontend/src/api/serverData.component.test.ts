@@ -22,6 +22,7 @@ import {
   readLukioKeskiarvotForSchool,
   readMeta,
   readStudentFeedback,
+  readYoPisterajat,
   resolveLukioSchool,
   resolveSchool,
   schoolNames,
@@ -41,11 +42,12 @@ function useDataFiles(files: Record<string, unknown>) {
     if (!(file in files)) throw new Error(`Missing test data: ${file}`);
     return JSON.stringify(files[file]);
   });
-  fsMock.readdirSync.mockReturnValue(
-    Object.keys(files)
-      .filter((file) => file.startsWith("pisterajat/") && !file.slice("pisterajat/".length).includes("/"))
-      .map((file) => file.slice("pisterajat/".length)),
-  );
+  fsMock.readdirSync.mockImplementation((path) => {
+    const dir = fileFromPath(path);
+    return Object.keys(files)
+      .filter((file) => file.startsWith(`${dir}/`) && !file.slice(dir.length + 1).includes("/"))
+      .map((file) => file.slice(dir.length + 1));
+  });
   fsMock.statSync.mockImplementation((path) => {
     const file = fileFromPath(path);
     if (!(file in files)) throw new Error(`Missing test data: ${file}`);
@@ -93,9 +95,7 @@ test("formats school names from the catalog", () => {
   expect(formatSchoolName("Åbo Akademi")).toBe("Åbo Akademi (ÅA)");
   expect(formatSchoolName("Svenska handelshögskolan")).toBe("Svenska handelshögskolan (Hanken)");
   expect(formatSchoolName("Helsingin yliopisto")).toBe("Helsingin yliopisto");
-  expect(formatSchoolName("Tampereen ammattikorkeakoulu")).toBe(
-    "Tampereen ammattikorkeakoulu (TAMK)",
-  );
+  expect(formatSchoolName("Tampereen ammattikorkeakoulu")).toBe("Tampereen ammattikorkeakoulu (TAMK)");
 });
 
 test("caches parsed files until their modification time changes", () => {
@@ -189,6 +189,26 @@ test("sorts and resolves lukio averages", () => {
   expect(lukioSchoolNames()).toEqual(["Akaan lukio", "Äänekosken lukio"]);
   expect(resolveLukioSchool("aanekosken-lukio")).toBe("Äänekosken lukio");
   expect(readLukioKeskiarvotForSchool("Äänekosken lukio")).toEqual([aLukio[1], aLukio[0]]);
+});
+
+test("reads YO pisterajat newest round first", () => {
+  const aine = (score: number) => [{ nimi: "Kemia", rajat: { A: score, L: score } }];
+  useDataFiles({
+    "pisterajat/yo-kirjotukset/yo-pisterajat-2025-syksy.json": {
+      aineet: aine(20),
+      arvosanat: ["L", "A"],
+      kausi: "syksy",
+      vuosi: 2025,
+    },
+    "pisterajat/yo-kirjotukset/yo-pisterajat-2026-kevat.json": {
+      aineet: aine(14),
+      arvosanat: ["L", "A"],
+      kausi: "kevat",
+      vuosi: 2026,
+    },
+  });
+
+  expect(readYoPisterajat().map((round) => `${round.vuosi}-${round.kausi}`)).toEqual(["2026-kevat", "2025-syksy"]);
 });
 
 test("loads round-specific datasets through their public paths", () => {

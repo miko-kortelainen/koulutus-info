@@ -106,6 +106,7 @@ flowchart TB
     fieldCutoffs --> schoolCutoffs
     lukioIndex["/lukiot/<br/>LukiotPage"] --> lukioIndexParts["SearchInput · SortControl · LukioSchoolCard · Pagination"]
     lukioIndex -. prerendered SEO pages .-> lukioSchool["/lukiot/:slug/<br/>LukioSchoolPage"]
+    yoCutoffs["/yo-pisterajat/<br/>YoPisterajatPage"] --> yoCutoffParts["SearchInput · OptionSelect · YoPisterajatTable"]
     lukioSchool --> lukioSchoolParts["Admission cutoff table"]
   end
 

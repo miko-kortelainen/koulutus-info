@@ -117,10 +117,9 @@ test("homepage quick links point to their pages", async ({ page }) => {
     ["koulut", "/koulut/"],
     ["trendit", "/trendit/"],
   ] as const) {
-    await expect(page.getByRole("tabpanel").getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) })).toHaveAttribute(
-      "href",
-      url,
-    );
+    await expect(
+      page.getByRole("tabpanel").getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) }),
+    ).toHaveAttribute("href", url);
   }
 });
 
@@ -856,6 +855,21 @@ test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) =>
   const schoolAccordion = page.getByRole("region", { name: "Turun yliopisto" });
   await expect(schoolAccordion.getByRole("article").first()).toBeVisible();
   await expect(schoolAccordion.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
+});
+
+test("/yo-pisterajat: switches kirjoituskerta and shows that round's cutoff", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/yo-pisterajat/");
+  await expect(page.getByRole("heading", { exact: true, level: 1, name: "YO pisterajat 2026" })).toBeVisible();
+  expect(await page.evaluate<number>("document.documentElement.scrollWidth")).toBeLessThanOrEqual(390);
+
+  const kemia = () =>
+    page.getByRole("listitem").filter({ has: page.getByRole("heading", { exact: true, level: 2, name: "Kemia" }) });
+  await expect(kemia().getByText("101", { exact: true })).toBeVisible();
+
+  await selectOption(page, "Kirjoituskerta", "Syksy 2025");
+
+  await expect(kemia().getByText("105", { exact: true })).toBeVisible();
 });
 
 test("/lukiot: search expands school keskiarvot accordion", async ({ page }) => {
