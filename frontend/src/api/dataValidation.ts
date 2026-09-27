@@ -1,3 +1,4 @@
+import { YO_GRADES, type YoGrade, type YoKausi } from "@/config/yoPisterajat";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
 import type { CurrentProgramsResponse, Meta, SchoolCatalog, StatisticsResponse } from "@/types.gen";
 
@@ -287,6 +288,77 @@ const isHakijaprofiiliEntity = (value: unknown): value is HakijaprofiiliEntity =
   value.sukupuoli.every(isHakijaprofiiliCount) &&
   Array.isArray(value.ikaryhmat) &&
   value.ikaryhmat.every(isHakijaprofiiliCount);
+
+export interface YoPisterajatAine {
+  nimi: string;
+  rajat: Partial<Record<YoGrade, number>>;
+}
+
+export interface YoPisterajatRound {
+  vuosi: number;
+  kausi: YoKausi;
+  arvosanat: YoGrade[];
+  aineet: YoPisterajatAine[];
+}
+
+const isYoGrade = (value: unknown): value is YoGrade =>
+  typeof value === "string" && (YO_GRADES as readonly string[]).includes(value);
+
+const isYoKausi = (value: unknown): value is YoKausi => value === "kevat" || value === "syksy";
+
+const isCanonicalGradeList = (value: unknown): value is YoGrade[] => {
+  if (!Array.isArray(value) || value.length === 0 || !value.every(isYoGrade)) return false;
+  const indexes = value.map((grade) => YO_GRADES.indexOf(grade));
+  return indexes.every((index, position) => position === 0 || index > indexes[position - 1]);
+};
+
+const gradeKeysMatch = (rajat: Record<string, unknown>, arvosanat: YoGrade[]) => {
+  const keys = Object.keys(rajat);
+  return keys.length === arvosanat.length && arvosanat.every((grade) => keys.includes(grade));
+};
+
+const isYoPisterajatAine = (value: unknown, arvosanat: YoGrade[]): value is YoPisterajatAine => {
+  if (!isRecord(value) || !isNonEmptyString(value.nimi) || !isRecord(value.rajat)) return false;
+  const rajat = value.rajat;
+  return gradeKeysMatch(rajat, arvosanat) && arvosanat.every((grade) => isNonNegativeInteger(rajat[grade]));
+};
+
+const filenameRound = (source: string) => {
+  const match = /yo-pisterajat-(\d{4})-(kevat|syksy)\.json$/.exec(source);
+  return match ? { vuosi: Number(match[1]), kausi: match[2] } : null;
+};
+
+export const parseYoPisterajat = (value: unknown, source: string): YoPisterajatRound => {
+  if (
+    !isRecord(value) ||
+    !isNumber(value.vuosi) ||
+    !Number.isSafeInteger(value.vuosi) ||
+    value.vuosi < 0 ||
+    !isYoKausi(value.kausi)
+  ) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+  const { vuosi, kausi } = value;
+  if (!isCanonicalGradeList(value.arvosanat) || !Array.isArray(value.aineet)) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+  const arvosanat = value.arvosanat;
+  const aineet = value.aineet.filter((aine): aine is YoPisterajatAine => isYoPisterajatAine(aine, arvosanat));
+  if (aineet.length !== value.aineet.length) throw new Error(`Invalid data in ${source}`);
+
+  const fromName = filenameRound(source);
+  if (fromName && (fromName.vuosi !== vuosi || fromName.kausi !== kausi)) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+
+  const names = new Set<string>();
+  for (const aine of aineet) {
+    if (names.has(aine.nimi)) throw new Error(`Invalid data in ${source}`);
+    names.add(aine.nimi);
+  }
+
+  return { aineet, arvosanat, kausi, vuosi };
+};
 
 export const parseHakijaprofiili = (value: unknown, source: string): HakijaprofiiliResponse => {
   if (!Array.isArray(value) || !value.every(isHakijaprofiiliEntity)) {
