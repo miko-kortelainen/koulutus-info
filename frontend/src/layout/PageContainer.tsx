@@ -9,7 +9,8 @@ interface PageContainerProps {
 export default function PageContainer({ children, align = "center" }: PageContainerProps) {
   return (
     <Flex align={align} flex={1} justify="center" px={{ base: 4, md: 6 }}>
-      <Stack direction="column" gap={4} height="100%" py={2} width={{ base: "100%", md: "60rem" }}>
+      {/* minW 0 lets a wide child scroll instead of stretching the viewport */}
+      <Stack direction="column" gap={4} height="100%" minW={0} py={2} width={{ base: "100%", md: "60rem" }}>
         {children}
       </Stack>
     </Flex>

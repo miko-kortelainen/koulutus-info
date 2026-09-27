@@ -1,7 +1,8 @@
+import { readdirSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import {
-  parseCutoffSchools,
   parseCurrentPrograms,
+  parseCutoffSchools,
   parseHakijaprofiili,
   parseKoulutustarpeet,
   parseLukioKeskiarvot,
@@ -9,6 +10,7 @@ import {
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
+  parseYoPisterajat,
 } from "@/api/dataValidation";
 
 const statistics = {
@@ -159,6 +161,53 @@ const lukioKeskiarvo = {
 
 test("accepts valid lukio keskiarvot", () => {
   expect(parseLukioKeskiarvot([lukioKeskiarvo], "lukio-keskiarvot.json")).toEqual([lukioKeskiarvo]);
+});
+
+const yoRound = {
+  aineet: [{ nimi: "Kemia", rajat: { A: 14, B: 24, C: 40, E: 81, L: 101, M: 61 } }],
+  arvosanat: ["L", "E", "M", "C", "B", "A"],
+  kausi: "kevat",
+  vuosi: 2026,
+};
+
+test("accepts YO pisterajat that match the filename", () => {
+  expect(parseYoPisterajat(yoRound, "pisterajat/yo-kirjotukset/yo-pisterajat-2026-kevat.json")).toEqual(yoRound);
+});
+
+test("rejects malformed YO pisterajat", () => {
+  const source = "pisterajat/yo-kirjotukset/yo-pisterajat-2026-kevat.json";
+  expect(() => parseYoPisterajat({ ...yoRound, vuosi: 2025 }, source)).toThrow(`Invalid data in ${source}`);
+  expect(() => parseYoPisterajat({ ...yoRound, arvosanat: ["A", "L"] }, source)).toThrow(`Invalid data in ${source}`);
+  for (const grade of ["i+", "i", "i-"]) {
+    expect(() => parseYoPisterajat({ ...yoRound, arvosanat: [...yoRound.arvosanat, grade] }, source)).toThrow(
+      `Invalid data in ${source}`,
+    );
+  }
+  expect(() =>
+    parseYoPisterajat({ ...yoRound, aineet: [yoRound.aineet[0], { ...yoRound.aineet[0] }] }, source),
+  ).toThrow(`Invalid data in ${source}`);
+  expect(() =>
+    parseYoPisterajat(
+      { ...yoRound, aineet: [{ nimi: "Kemia", rajat: { ...yoRound.aineet[0].rajat, L: 1.5 } }] },
+      source,
+    ),
+  ).toThrow(`Invalid data in ${source}`);
+});
+
+test("parses the committed YO pisterajat files", () => {
+  const directory = "public/data/pisterajat/yo-kirjotukset";
+  const files = readdirSync(directory).filter((file) => file.endsWith(".json"));
+  const rounds = files.map((file) =>
+    parseYoPisterajat(JSON.parse(readFileSync(`${directory}/${file}`, "utf8")), `pisterajat/yo-kirjotukset/${file}`),
+  );
+  expect(rounds).toHaveLength(7);
+  for (const round of rounds) expect(round.arvosanat).toEqual(["L", "E", "M", "C", "B", "A"]);
+  expect(rounds.find((round) => round.vuosi === 2026 && round.kausi === "kevat")?.aineet.find(
+    (aine) => aine.nimi === "Kemia",
+  )?.rajat.L).toBe(101);
+  expect(rounds.find((round) => round.vuosi === 2024 && round.kausi === "syksy")?.aineet.find(
+    (aine) => aine.nimi === "Kemia",
+  )?.rajat.A).toBe(22);
 });
 
 test("rejects malformed lukio keskiarvot", () => {
