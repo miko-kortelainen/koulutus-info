@@ -32,6 +32,10 @@ export default function CutoffIndexPage() {
           <Link href="/pistelaskuri/" textDecoration="underline">
             todistusvalintalaskurilla
           </Link>
+          . Ylioppilaskokeiden pisterajat ovat sivulla{" "}
+          <Link href="/yo-pisterajat/" textDecoration="underline">
+            YO-pisterajat
+          </Link>
           .
         </Text>
         <Stack gap={2} width="full">

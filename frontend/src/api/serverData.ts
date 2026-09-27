@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import {
-  type FeedbackMaxScore,
   type EnnakointiKoulutustarpeet,
+  type FeedbackMaxScore,
   type HakijaprofiiliResponse,
   type LukioKeskiarvoEntry,
-  parseCutoffSchools,
   parseCurrentPrograms,
+  parseCutoffSchools,
   parseHakijaprofiili,
   parseKoulutustarpeet,
   parseLukioKeskiarvot,
@@ -13,10 +13,10 @@ import {
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
+  parseYoPisterajat,
   type StudentFeedback,
+  type YoPisterajatRound,
 } from "@/api/dataValidation";
-import { LUKIO_KESKIARVOT_DATA_PATH } from "@/config/lukioKeskiarvot";
-import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
 import {
   type CutoffRound,
   compareCutoffRounds,
@@ -24,7 +24,10 @@ import {
   DEFAULT_CUTOFF_ROUND,
 } from "@/config/cutoffRounds";
 import type { HakijaprofiiliRound } from "@/config/hakijaprofiiliRounds";
+import { LUKIO_KESKIARVOT_DATA_PATH } from "@/config/lukioKeskiarvot";
 import { PROGRAMME_ROUNDS, type ProgrammeRound } from "@/config/programmeRounds";
+import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
+import { compareYoRounds, yoRoundId } from "@/config/yoPisterajat";
 import { filterUnavailableCutoffAlat } from "@/lib/cutoffs";
 import { slugify } from "@/lib/slug";
 import type { School as CutoffSchool } from "@/types/pisterajat.gen";
@@ -187,6 +190,18 @@ export const readKoulutustarpeet = (): EnnakointiKoulutustarpeet =>
 
 export const readHakijaprofiili = (round: HakijaprofiiliRound): HakijaprofiiliResponse =>
   readPublicData(`hakijaprofiili/hakijaprofiili-${round.replace("_", "-")}.json`, parseHakijaprofiili);
+
+const yoPisterajatFilename = /^yo-pisterajat-\d{4}-(?:kevat|syksy)\.json$/;
+
+export const readYoPisterajat = (): YoPisterajatRound[] => {
+  const directory = `${process.cwd()}/public/data/pisterajat/yo-kirjotukset`;
+  const rounds = fs
+    .readdirSync(directory)
+    .filter((filename) => yoPisterajatFilename.test(filename))
+    .map((filename) => readPublicData(`pisterajat/yo-kirjotukset/${filename}`, parseYoPisterajat));
+  if (rounds.length === 0) throw new Error("No YO pisterajat files in pisterajat/yo-kirjotukset");
+  return rounds.sort((a, b) => compareYoRounds(yoRoundId(a.vuosi, a.kausi), yoRoundId(b.vuosi, b.kausi)));
+};
 
 export const readLukioKeskiarvot = (): LukioKeskiarvoEntry[] =>
   readPublicData(LUKIO_KESKIARVOT_DATA_PATH, parseLukioKeskiarvot);

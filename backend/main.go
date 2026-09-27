@@ -329,7 +329,7 @@ func generateVipunen(cfg models.VipunenConfig) (bool, error) {
 
 	changedAny := false
 	for _, round := range rounds {
-		statistics := services.MergeRecords(recordsByRound[round])
+		statistics := services.DropConflictingEmptyDuplicates(services.MergeRecords(recordsByRound[round]))
 		if len(statistics) == 0 {
 			return false, fmt.Errorf("Vipunen produced no statistics for %s after cleanup", round)
 		}

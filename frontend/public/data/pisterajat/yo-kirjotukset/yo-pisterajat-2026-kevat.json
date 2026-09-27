@@ -1,0 +1,454 @@
+{
+  "vuosi": 2026,
+  "kausi": "kevat",
+  "arvosanat": [
+    "L",
+    "E",
+    "M",
+    "C",
+    "B",
+    "A"
+  ],
+  "aineet": [
+    {
+      "nimi": "Äidinkieli ja kirjallisuus, suomi",
+      "rajat": {
+        "L": 88,
+        "E": 73,
+        "M": 62,
+        "C": 51,
+        "B": 41,
+        "A": 30
+      }
+    },
+    {
+      "nimi": "Äidinkieli ja kirjallisuus, ruotsi",
+      "rajat": {
+        "L": 87,
+        "E": 73,
+        "M": 62,
+        "C": 50,
+        "B": 40,
+        "A": 30
+      }
+    },
+    {
+      "nimi": "Äidinkieli ja kirjallisuus, pohjoissaame",
+      "rajat": {
+        "L": 55,
+        "E": 50,
+        "M": 40,
+        "C": 30,
+        "B": 20,
+        "A": 10
+      }
+    },
+    {
+      "nimi": "Äidinkieli ja kirjallisuus, inarinsaame",
+      "rajat": {
+        "L": 55,
+        "E": 50,
+        "M": 40,
+        "C": 30,
+        "B": 20,
+        "A": 10
+      }
+    },
+    {
+      "nimi": "Suomi toisena kielenä",
+      "rajat": {
+        "L": 199,
+        "E": 178,
+        "M": 163,
+        "C": 144,
+        "B": 120,
+        "A": 100
+      }
+    },
+    {
+      "nimi": "Ruotsi toisena kielenä",
+      "rajat": {
+        "L": 199,
+        "E": 178,
+        "M": 163,
+        "C": 144,
+        "B": 120,
+        "A": 100
+      }
+    },
+    {
+      "nimi": "Ruotsi, pitkä oppimäärä",
+      "rajat": {
+        "L": 265,
+        "E": 238,
+        "M": 210,
+        "C": 171,
+        "B": 119,
+        "A": 90
+      }
+    },
+    {
+      "nimi": "Ruotsi, keskipitkä oppimäärä",
+      "rajat": {
+        "L": 248,
+        "E": 214,
+        "M": 177,
+        "C": 139,
+        "B": 111,
+        "A": 90
+      }
+    },
+    {
+      "nimi": "Suomi, pitkä oppimäärä",
+      "rajat": {
+        "L": 270,
+        "E": 254,
+        "M": 238,
+        "C": 220,
+        "B": 180,
+        "A": 139
+      }
+    },
+    {
+      "nimi": "Suomi, keskipitkä oppimäärä",
+      "rajat": {
+        "L": 265,
+        "E": 247,
+        "M": 220,
+        "C": 184,
+        "B": 142,
+        "A": 110
+      }
+    },
+    {
+      "nimi": "Englanti, pitkä oppimäärä",
+      "rajat": {
+        "L": 267,
+        "E": 248,
+        "M": 225,
+        "C": 197,
+        "B": 160,
+        "A": 126
+      }
+    },
+    {
+      "nimi": "Saksa, pitkä oppimäärä",
+      "rajat": {
+        "L": 274,
+        "E": 235,
+        "M": 194,
+        "C": 161,
+        "B": 143,
+        "A": 114
+      }
+    },
+    {
+      "nimi": "Ranska, pitkä oppimäärä",
+      "rajat": {
+        "L": 269,
+        "E": 237,
+        "M": 212,
+        "C": 180,
+        "B": 141,
+        "A": 118
+      }
+    },
+    {
+      "nimi": "Venäjä, pitkä oppimäärä",
+      "rajat": {
+        "L": 268,
+        "E": 238,
+        "M": 207,
+        "C": 175,
+        "B": 147,
+        "A": 112
+      }
+    },
+    {
+      "nimi": "Espanja, pitkä oppimäärä",
+      "rajat": {
+        "L": 271,
+        "E": 250,
+        "M": 213,
+        "C": 178,
+        "B": 154,
+        "A": 120
+      }
+    },
+    {
+      "nimi": "Saksa, lyhyt oppimäärä",
+      "rajat": {
+        "L": 276,
+        "E": 250,
+        "M": 215,
+        "C": 173,
+        "B": 135,
+        "A": 108
+      }
+    },
+    {
+      "nimi": "Englanti, lyhyt oppimäärä",
+      "rajat": {
+        "L": 265,
+        "E": 245,
+        "M": 225,
+        "C": 202,
+        "B": 165,
+        "A": 132
+      }
+    },
+    {
+      "nimi": "Ranska, lyhyt oppimäärä",
+      "rajat": {
+        "L": 260,
+        "E": 226,
+        "M": 189,
+        "C": 152,
+        "B": 122,
+        "A": 110
+      }
+    },
+    {
+      "nimi": "Venäjä, lyhyt oppimäärä",
+      "rajat": {
+        "L": 265,
+        "E": 226,
+        "M": 198,
+        "C": 167,
+        "B": 136,
+        "A": 107
+      }
+    },
+    {
+      "nimi": "Espanja, lyhyt oppimäärä",
+      "rajat": {
+        "L": 273,
+        "E": 252,
+        "M": 221,
+        "C": 184,
+        "B": 151,
+        "A": 120
+      }
+    },
+    {
+      "nimi": "Italia, lyhyt oppimäärä",
+      "rajat": {
+        "L": 271,
+        "E": 250,
+        "M": 235,
+        "C": 200,
+        "B": 170,
+        "A": 125
+      }
+    },
+    {
+      "nimi": "Latina, lyhyt oppimäärä",
+      "rajat": {
+        "L": 195,
+        "E": 180,
+        "M": 160,
+        "C": 140,
+        "B": 120,
+        "A": 100
+      }
+    },
+    {
+      "nimi": "Pohjoissaame, lyhyt oppimäärä",
+      "rajat": {
+        "L": 192,
+        "E": 176,
+        "M": 158,
+        "C": 134,
+        "B": 114,
+        "A": 94
+      }
+    },
+    {
+      "nimi": "Inarinsaame, lyhyt oppimäärä",
+      "rajat": {
+        "L": 192,
+        "E": 176,
+        "M": 158,
+        "C": 134,
+        "B": 114,
+        "A": 94
+      }
+    },
+    {
+      "nimi": "Koltansaame, lyhyt oppimäärä",
+      "rajat": {
+        "L": 192,
+        "E": 176,
+        "M": 158,
+        "C": 134,
+        "B": 114,
+        "A": 94
+      }
+    },
+    {
+      "nimi": "Portugali, lyhyt oppimäärä",
+      "rajat": {
+        "L": 190,
+        "E": 175,
+        "M": 160,
+        "C": 140,
+        "B": 120,
+        "A": 100
+      }
+    },
+    {
+      "nimi": "Matematiikka, pitkä oppimäärä",
+      "rajat": {
+        "L": 95,
+        "E": 74,
+        "M": 59,
+        "C": 44,
+        "B": 30,
+        "A": 19
+      }
+    },
+    {
+      "nimi": "Matematiikka, lyhyt oppimäärä",
+      "rajat": {
+        "L": 92,
+        "E": 77,
+        "M": 64,
+        "C": 48,
+        "B": 31,
+        "A": 17
+      }
+    },
+    {
+      "nimi": "Uskonto, evankelis-luterilainen",
+      "rajat": {
+        "L": 99,
+        "E": 87,
+        "M": 74,
+        "C": 59,
+        "B": 42,
+        "A": 30
+      }
+    },
+    {
+      "nimi": "Uskonto, ortodoksinen",
+      "rajat": {
+        "L": 99,
+        "E": 87,
+        "M": 74,
+        "C": 59,
+        "B": 42,
+        "A": 30
+      }
+    },
+    {
+      "nimi": "Elämänkatsomustieto",
+      "rajat": {
+        "L": 90,
+        "E": 79,
+        "M": 66,
+        "C": 54,
+        "B": 39,
+        "A": 25
+      }
+    },
+    {
+      "nimi": "Filosofia",
+      "rajat": {
+        "L": 84,
+        "E": 68,
+        "M": 55,
+        "C": 41,
+        "B": 29,
+        "A": 19
+      }
+    },
+    {
+      "nimi": "Psykologia",
+      "rajat": {
+        "L": 96,
+        "E": 78,
+        "M": 63,
+        "C": 48,
+        "B": 35,
+        "A": 24
+      }
+    },
+    {
+      "nimi": "Historia",
+      "rajat": {
+        "L": 90,
+        "E": 72,
+        "M": 55,
+        "C": 40,
+        "B": 28,
+        "A": 18
+      }
+    },
+    {
+      "nimi": "Yhteiskuntaoppi",
+      "rajat": {
+        "L": 88,
+        "E": 75,
+        "M": 64,
+        "C": 50,
+        "B": 37,
+        "A": 24
+      }
+    },
+    {
+      "nimi": "Fysiikka",
+      "rajat": {
+        "L": 91,
+        "E": 71,
+        "M": 54,
+        "C": 40,
+        "B": 29,
+        "A": 20
+      }
+    },
+    {
+      "nimi": "Kemia",
+      "rajat": {
+        "L": 101,
+        "E": 81,
+        "M": 61,
+        "C": 40,
+        "B": 24,
+        "A": 14
+      }
+    },
+    {
+      "nimi": "Biologia",
+      "rajat": {
+        "L": 100,
+        "E": 82,
+        "M": 67,
+        "C": 52,
+        "B": 38,
+        "A": 27
+      }
+    },
+    {
+      "nimi": "Maantiede",
+      "rajat": {
+        "L": 90,
+        "E": 78,
+        "M": 64,
+        "C": 52,
+        "B": 40,
+        "A": 29
+      }
+    },
+    {
+      "nimi": "Terveystieto",
+      "rajat": {
+        "L": 85,
+        "E": 70,
+        "M": 58,
+        "C": 45,
+        "B": 33,
+        "A": 20
+      }
+    }
+  ]
+}
