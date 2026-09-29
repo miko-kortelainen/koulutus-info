@@ -47,7 +47,7 @@ const statistics: StatisticsResponse = [
     koulutusalaTaso1: "Tekniikka",
     aloituspaikatLkm: 20,
     kaikkiHakijatLkm: 200,
-    ensisijaisetHakijatLkm: 75,
+    ensisijaisetHakijatLkm: 150,
     valitutLkm: 25,
   },
 ];
@@ -147,6 +147,8 @@ test.each<[SortOption, string[]]>([
   ["desc", ["gamma", "beta", "alpha"]],
   ["most_popular", ["beta", "gamma", "alpha"]],
   ["least_popular", ["alpha", "gamma", "beta"]],
+  ["most_first_choice", ["gamma", "beta", "alpha"]],
+  ["least_first_choice", ["alpha", "beta", "gamma"]],
   ["most_spots", ["alpha", "gamma", "beta"]],
   ["least_spots", ["beta", "gamma", "alpha"]],
   ["highest_acceptance_rate", ["alpha", "gamma", "beta"]],

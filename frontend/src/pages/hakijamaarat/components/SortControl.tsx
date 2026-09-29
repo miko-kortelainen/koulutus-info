@@ -6,6 +6,8 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Ö-A", value: "desc" },
   { label: "Eniten hakijoita", value: "most_popular" },
   { label: "Vähiten hakijoita", value: "least_popular" },
+  { label: "Eniten ensisijaisia hakijoita", value: "most_first_choice" },
+  { label: "Vähiten ensisijaisia hakijoita", value: "least_first_choice" },
   { label: "Eniten paikkoja", value: "most_spots" },
   { label: "Vähiten paikkoja", value: "least_spots" },
   { label: "Korkein sisäänpääsyprosentti", value: "highest_acceptance_rate" },
