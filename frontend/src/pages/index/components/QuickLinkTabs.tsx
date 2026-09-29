@@ -4,18 +4,13 @@ import { quickLinkSections } from "@/pages/index/components/quickLinks";
 import { COLORS } from "@/theme";
 
 interface QuickLinkTabsProps {
-  value?: string;
-  onValueChange?: (value: string) => void;
+  value: string;
+  onValueChange: (value: string) => void;
 }
 
 export default function QuickLinkTabs({ value, onValueChange }: QuickLinkTabsProps) {
   return (
-    <Tabs.Root
-      onValueChange={(details) => onValueChange?.(details.value)}
-      size="sm"
-      width="100%"
-      {...(value == null ? { defaultValue: quickLinkSections[0].id } : { value })}
-    >
+    <Tabs.Root onValueChange={(details) => onValueChange(details.value)} size="sm" value={value} width="100%">
       <Tabs.List aria-label="Pikalinkit koulutusasteittain">
         {quickLinkSections.map(({ heading, id }) => (
           <Tabs.Trigger
