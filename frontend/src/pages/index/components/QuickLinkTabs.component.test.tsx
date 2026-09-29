@@ -1,8 +1,14 @@
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { useState } from "react";
 import { expect, test, vi } from "vitest";
 import QuickLinkTabs from "@/pages/index/components/QuickLinkTabs";
 import { renderWithChakra } from "@/test/render";
+
+function ControlledQuickLinkTabs() {
+  const [value, setValue] = useState("toinen-aste");
+  return <QuickLinkTabs onValueChange={setValue} value={value} />;
+}
 
 function stubResizeObserver() {
   vi.stubGlobal(
@@ -17,7 +23,7 @@ function stubResizeObserver() {
 
 test("shows toinen aste quick links by default", () => {
   stubResizeObserver();
-  renderWithChakra(<QuickLinkTabs />);
+  renderWithChakra(<ControlledQuickLinkTabs />);
 
   expect(screen.getByRole("tablist", { name: "Pikalinkit koulutusasteittain" })).toBeInTheDocument();
   const toinenAste = screen.getByRole("tab", { name: "Toinen aste" });
@@ -37,7 +43,7 @@ test("shows toinen aste quick links by default", () => {
 test("switches to korkeakoulutus quick links", async () => {
   stubResizeObserver();
   const user = userEvent.setup();
-  renderWithChakra(<QuickLinkTabs />);
+  renderWithChakra(<ControlledQuickLinkTabs />);
 
   await user.click(screen.getByRole("tab", { name: "Korkeakoulutus" }));
 
