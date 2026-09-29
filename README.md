@@ -13,13 +13,6 @@ site includes:
 - Degree programmes
 - Trends
 - A certificate-based admission score calculator
-- A browser agent tool on the calculator page (WebMCP)
-
-### Browser agent tools (WebMCP)
-
-`/pistelaskuri/` registers the [WebMCP](https://github.com/webmachinelearning/webmcp) tool `calculate_todistuspisteet` while the page is on screen. A browser agent can run the same YO or AMM todistusvalinta scoring as the UI, then see programmes the points reach. YO subjects use exam codes (`ai_fi`, `maa`, `fy`). Optional cutoff round is `2026-kevat`. Chrome WebMCP is experimental. Enable `chrome://flags/#enable-webmcp-testing` to try it. There is no "agent tools ready" banner.
-
-The tool runs in the page. It does not add a third-party network request.
 
 ### Development tools
 
@@ -48,19 +41,6 @@ pnpm run dev
 Open `http://localhost:3000`.
 
 See the [frontend README](./frontend/README.md) for the full command list.
-
-### Updating data
-
-Run the required commands in `/backend` to update applicant numbers and degree programmes. The Go CLI fetches data from the Opintopolku and Vipunen APIs, cleans it and writes JSON files to `/frontend/public/data/`.
-
-The generator updates `current_programs-<round>.json` files, `schools.json` (institution catalog), joint-application applicant files under `frontend/public/data/hakijamäärät/` such as `hakijamaarat-2026-kevat.json` and `hakijamaarat-2025-syksy.json`, `meta.json` and `frontend/src/generated/dataManifest.ts`.
-
-Download admission cutoffs from Vipunen's public cutoff report and use Excel to convert the read-only pivot table into the CSV format required by the backend. Run the cutoff CLI to generate one file per joint application in `/frontend/public/data/`, such as `pisterajat-2026-kevat.json`.
-
-The 2026 upper secondary school averages are a separate, manually imported dataset at
-`frontend/public/data/pisterajat/lukio/lukio-keskiarvot-2026.json`. No backend command generates it.
-
-See the [backend README](./backend/README.md) for the data update commands and CSV format.
 
 ### Tests
 

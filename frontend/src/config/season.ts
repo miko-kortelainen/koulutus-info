@@ -26,13 +26,22 @@ export const YHTEISHAKU_ROUNDS: YhteishakuRound[] = [
   },
 ];
 
+export const TOINEN_ASTE_ROUNDS: YhteishakuRound[] = [
+  {
+    title: "Kevään 2027 perusopetuksen jälkeisen koulutuksen yhteishaku",
+    untilLabel: "2027 toisen asteen yhteishakuun",
+    start: "2027-02-16T08:00:00+02:00",
+    end: "2027-03-16T15:00:00+02:00",
+  },
+];
+
 export interface CountdownTarget {
   at: string;
   caption: string;
 }
 
-export function nextCountdownTarget(now: number): CountdownTarget | undefined {
-  for (const round of YHTEISHAKU_ROUNDS) {
+export function nextCountdownTarget(now: number, rounds: readonly YhteishakuRound[]): CountdownTarget | undefined {
+  for (const round of rounds) {
     if (now < Date.parse(round.start)) return { at: round.start, caption: round.untilLabel };
     if (now < Date.parse(round.end)) return { at: round.end, caption: `${round.title} päättyy` };
   }
