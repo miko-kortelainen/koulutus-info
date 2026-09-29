@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { nextCountdownTarget } from "@/config/season";
+import { type YhteishakuRound, nextCountdownTarget } from "@/config/season";
 
 interface TimeLeft {
   days: number;
@@ -8,8 +8,8 @@ interface TimeLeft {
   label: string;
 }
 
-function computeTimeLeft(now = Date.now()): TimeLeft | undefined {
-  const target = nextCountdownTarget(now);
+function computeTimeLeft(now: number, rounds: readonly YhteishakuRound[]): TimeLeft | undefined {
+  const target = nextCountdownTarget(now, rounds);
   if (!target) return undefined;
 
   const diffMs = Date.parse(target.at) - now;
@@ -21,15 +21,15 @@ function computeTimeLeft(now = Date.now()): TimeLeft | undefined {
   };
 }
 
-export default function useCountdown() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>();
+export default function useCountdown(rounds: readonly YhteishakuRound[]) {
+  const [now, setNow] = useState<number>();
 
   useEffect(() => {
-    const tick = () => setTimeLeft(computeTimeLeft());
+    const tick = () => setNow(Date.now());
     tick();
     const id = setInterval(tick, 60_000);
     return () => clearInterval(id);
   }, []);
 
-  return timeLeft;
+  return now == null ? undefined : computeTimeLeft(now, rounds);
 }

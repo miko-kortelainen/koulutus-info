@@ -1,12 +1,14 @@
 import { act, renderHook } from "@testing-library/react";
 import { expect, test, vi } from "vitest";
-import { YHTEISHAKU_ROUNDS } from "@/config/season";
+import { TOINEN_ASTE_ROUNDS, YHTEISHAKU_ROUNDS } from "@/config/season";
 import useCountdown from "@/pages/index/hooks/useCountdown";
 
 test("stores application starts as absolute Finland instants", () => {
   expect(Date.parse(YHTEISHAKU_ROUNDS[0].start)).toBe(Date.UTC(2027, 0, 7, 6));
   expect(Date.parse(YHTEISHAKU_ROUNDS[0].end)).toBe(Date.UTC(2027, 0, 21, 13));
   expect(Date.parse(YHTEISHAKU_ROUNDS[2].start)).toBe(Date.UTC(2027, 7, 30, 5));
+  expect(Date.parse(TOINEN_ASTE_ROUNDS[0].start)).toBe(Date.UTC(2027, 1, 16, 6));
+  expect(Date.parse(TOINEN_ASTE_ROUNDS[0].end)).toBe(Date.UTC(2027, 2, 16, 13));
 });
 
 test("counts down to the next configured application start", () => {
@@ -15,7 +17,7 @@ test("counts down to the next configured application start", () => {
   const start = Date.parse(nextRound.start);
   vi.setSystemTime(start - (24 * 60 + 2 * 60 + 3) * 60_000);
 
-  const { result } = renderHook(() => useCountdown());
+  const { result } = renderHook(() => useCountdown(YHTEISHAKU_ROUNDS));
 
   expect(result.current).toEqual({
     days: 1,
@@ -33,7 +35,7 @@ test("counts down to the current application end after it has opened", () => {
   const round = YHTEISHAKU_ROUNDS[0];
   vi.setSystemTime(Date.parse(round.start) + 60_000);
 
-  const { result } = renderHook(() => useCountdown());
+  const { result } = renderHook(() => useCountdown(YHTEISHAKU_ROUNDS));
 
   expect(result.current?.label).toBe(`${round.title} päättyy`);
 });
@@ -43,7 +45,7 @@ test("moves to the next round after the current application ends", () => {
   const first = YHTEISHAKU_ROUNDS[0];
   vi.setSystemTime(Date.parse(first.end) + 1);
 
-  const { result } = renderHook(() => useCountdown());
+  const { result } = renderHook(() => useCountdown(YHTEISHAKU_ROUNDS));
 
   expect(result.current?.label).toBe("Kevään 2027 toiseen yhteishakuun");
 });
@@ -53,7 +55,23 @@ test("returns no countdown after the final configured round", () => {
   const finalEnd = Math.max(...YHTEISHAKU_ROUNDS.map((round) => Date.parse(round.end)));
   vi.setSystemTime(finalEnd + 1);
 
-  const { result } = renderHook(() => useCountdown());
+  const { result } = renderHook(() => useCountdown(YHTEISHAKU_ROUNDS));
 
   expect(result.current).toBeUndefined();
+});
+
+test("hides the toisen asteen countdown after it ends and can switch to an open higher-education round", () => {
+  vi.useFakeTimers();
+  const round = TOINEN_ASTE_ROUNDS[0];
+  vi.setSystemTime(Date.parse(round.end) + 1);
+
+  const { result, rerender } = renderHook(({ rounds }) => useCountdown(rounds), {
+    initialProps: { rounds: TOINEN_ASTE_ROUNDS },
+  });
+
+  expect(result.current).toBeUndefined();
+
+  rerender({ rounds: YHTEISHAKU_ROUNDS });
+
+  expect(result.current?.label).toBe("Kevään 2027 toinen yhteishaku päättyy");
 });

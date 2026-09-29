@@ -1,3 +1,4 @@
+import { TOINEN_ASTE_ROUNDS, YHTEISHAKU_ROUNDS } from "@/config/season";
 import {
   HiOutlineAcademicCap,
   HiOutlineCalculator,
@@ -12,6 +13,7 @@ export const quickLinkSections = [
   {
     heading: "Toinen aste",
     id: "toinen-aste",
+    rounds: TOINEN_ASTE_ROUNDS,
     links: [
       {
         href: "/lukiot/",
@@ -30,6 +32,7 @@ export const quickLinkSections = [
   {
     heading: "Korkeakoulutus",
     id: "korkeakoulutus",
+    rounds: YHTEISHAKU_ROUNDS,
     links: [
       {
         href: "/pistelaskuri/",
