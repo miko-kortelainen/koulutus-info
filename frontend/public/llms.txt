@@ -1,6 +1,6 @@
 # Yhteishaku.app
 
-> Suomenkielinen tietopalvelu korkeakoulujen yhteishaun koulutuksista, hakijamääristä, pisterajoista ja todistusvalintapisteistä sekä toisen asteen yhteishaun lukioiden keskiarvorajoista.
+> Suomenkielinen tietopalvelu korkeakoulujen yhteishaun koulutuksista, hakijamääristä, pisterajoista ja todistusvalintapisteistä sekä toisen asteen yhteishaun lukioiden keskiarvorajoista ja ylioppilaskokeiden pisterajoista.
 
 Yhteishaku.app on yksityishenkilön ylläpitämä sivusto. Se ei ole Opetushallituksen, Opintopolun tai muun viranomaisen palvelu. Koulutuksiin hakeminen tapahtuu Opintopolussa.
 
@@ -25,6 +25,7 @@ Tietojen tulkinta:
 - [Koulutukset](https://yhteishaku.app/koulutukset/):  Nykyisessä tai seuraavassa yhteishaussa olevat yliopisto- ja AMK-koulutukset
 - [Hakijamäärät](https://yhteishaku.app/hakijamaarat/): Hakijat, aloituspaikat, sisäänpääsyprosentit ja hakijapaine hakukohteittain
 - [Pisterajat](https://yhteishaku.app/pisterajat/): AMK- ja yliopistokoulutusten alimmat hyväksytyt pisteet valintatavoittain
+- [YO-pisterajat](https://yhteishaku.app/yo-pisterajat/): Ylioppilaskokeiden alimmat pistemäärät, joilla arvosanan saa
 - [Korkeakoulut](https://yhteishaku.app/koulut/): Yliopistot ja ammattikorkeakoulut sekä linkit koulukohtaisiin pisterajoihin ja opiskelijapalautteisiin
 - [Lukiot](https://yhteishaku.app/lukiot/): Lukioiden alimmat hyväksytyt keskiarvot toisen asteen yhteishaussa
 - [Trendit](https://yhteishaku.app/trendit/): Hakijamäärien vertailu vuosien välillä sekä suosituimmat alat, koulut ja sektorit
@@ -49,6 +50,7 @@ Tietojen tulkinta:
 - [AMK-pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/pisterajat-2026-kevat-amk.json): Ammattikorkeakoulujen alimmat hyväksytyt pisteet valintatavoittain
 - [Yliopistojen pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/pisterajat-2026-kevat-yliopisto.json): Yliopistojen alimmat hyväksytyt pisteet valintatavoittain
 - [Lukioiden keskiarvorajat 2026](https://yhteishaku.app/data/pisterajat/lukio/lukio-keskiarvot-2026.json): Lukioiden alimmat hyväksytyt keskiarvot
+- [YO-pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/yo-kirjotukset/yo-pisterajat-2026-kevat.json): Ylioppilaskokeiden alimmat pistemäärät arvosanoittain
 - [Hakijaprofiili, kevät 2026](https://yhteishaku.app/data/hakijaprofiili/hakijaprofiili-2026-kevat.json): Sukupuoli- ja ikäjakaumat
 - [AMK-opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/amk-palaute.json): AVOP-palautteen keskiarvot
 - [Yliopistojen opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/yliopisto-palaute.json): Kandipalaute

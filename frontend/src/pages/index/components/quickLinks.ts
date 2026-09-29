@@ -1,9 +1,11 @@
+import { TOINEN_ASTE_ROUNDS, YHTEISHAKU_ROUNDS } from "@/config/season";
 import {
   HiOutlineAcademicCap,
   HiOutlineCalculator,
   HiOutlineChartBar,
   HiOutlineLibrary,
   HiOutlineOfficeBuilding,
+  HiOutlineSparkles,
   HiOutlineTrendingUp,
 } from "react-icons/hi";
 
@@ -11,6 +13,7 @@ export const quickLinkSections = [
   {
     heading: "Toinen aste",
     id: "toinen-aste",
+    rounds: TOINEN_ASTE_ROUNDS,
     links: [
       {
         href: "/lukiot/",
@@ -18,11 +21,18 @@ export const quickLinkSections = [
         description: "Katso lukioiden keskiarvorajat",
         icon: HiOutlineOfficeBuilding,
       },
+      {
+        href: "/yo-pisterajat/",
+        label: "yo-kokeiden pisterajat",
+        description: "Katso ylioppilaskokeiden pisterajat",
+        icon: HiOutlineSparkles,
+      },
     ],
   },
   {
     heading: "Korkeakoulutus",
     id: "korkeakoulutus",
+    rounds: YHTEISHAKU_ROUNDS,
     links: [
       {
         href: "/pistelaskuri/",
