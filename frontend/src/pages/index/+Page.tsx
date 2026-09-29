@@ -1,10 +1,12 @@
 import { Box, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import { motion } from "motion/react";
+import { useState } from "react";
 import { HEADER_HEIGHT } from "@/layout/Header";
 import PageContainer from "@/layout/PageContainer";
 import HeroButtons from "@/pages/index/components/HeroButtons";
 import IosInstallTip from "@/pages/index/components/IosInstallTip";
 import LandingHeadline from "@/pages/index/components/LandingHeadline";
+import { quickLinkSections } from "@/pages/index/components/quickLinks";
 import QuickLinkTabs from "@/pages/index/components/QuickLinkTabs";
 import useCountdown from "@/pages/index/hooks/useCountdown";
 import { COLORS } from "@/theme";
@@ -49,7 +51,9 @@ function LandingBackground() {
 }
 
 export default function LandingPage() {
-  const timeLeft = useCountdown();
+  const [sectionId, setSectionId] = useState(quickLinkSections[0].id);
+  const section = quickLinkSections.find((item) => item.id === sectionId) ?? quickLinkSections[0];
+  const timeLeft = useCountdown(section.rounds);
 
   const countdownTiles = timeLeft
     ? [
@@ -144,7 +148,7 @@ export default function LandingPage() {
             </Stack>
             {countdown}
             <IosInstallTip />
-            <QuickLinkTabs />
+            <QuickLinkTabs onValueChange={setSectionId} value={sectionId} />
           </VStack>
         </PageContainer>
       </Box>

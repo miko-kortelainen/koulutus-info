@@ -3,9 +3,19 @@ import QuickLinkCard from "@/pages/index/components/QuickLinkCard";
 import { quickLinkSections } from "@/pages/index/components/quickLinks";
 import { COLORS } from "@/theme";
 
-export default function QuickLinkTabs() {
+interface QuickLinkTabsProps {
+  value?: string;
+  onValueChange?: (value: string) => void;
+}
+
+export default function QuickLinkTabs({ value, onValueChange }: QuickLinkTabsProps) {
   return (
-    <Tabs.Root defaultValue={quickLinkSections[0].id} size="sm" width="100%">
+    <Tabs.Root
+      onValueChange={(details) => onValueChange?.(details.value)}
+      size="sm"
+      width="100%"
+      {...(value == null ? { defaultValue: quickLinkSections[0].id } : { value })}
+    >
       <Tabs.List aria-label="Pikalinkit koulutusasteittain">
         {quickLinkSections.map(({ heading, id }) => (
           <Tabs.Trigger
