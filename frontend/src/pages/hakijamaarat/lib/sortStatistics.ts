@@ -6,6 +6,8 @@ export type SortOption =
   | "desc"
   | "most_popular"
   | "least_popular"
+  | "most_first_choice"
+  | "least_first_choice"
   | "most_spots"
   | "least_spots"
   | "highest_acceptance_rate"
@@ -20,6 +22,10 @@ export function sortStatistics<T extends StatisticsEntry>(statistics: T[], order
         return b.kaikkiHakijatLkm - a.kaikkiHakijatLkm;
       case "least_popular":
         return a.kaikkiHakijatLkm - b.kaikkiHakijatLkm;
+      case "most_first_choice":
+        return b.ensisijaisetHakijatLkm - a.ensisijaisetHakijatLkm;
+      case "least_first_choice":
+        return a.ensisijaisetHakijatLkm - b.ensisijaisetHakijatLkm;
       case "most_spots":
         return b.aloituspaikatLkm - a.aloituspaikatLkm;
       case "least_spots":

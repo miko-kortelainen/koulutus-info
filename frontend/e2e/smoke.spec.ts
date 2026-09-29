@@ -108,6 +108,10 @@ test("homepage quick links point to their pages", async ({ page }) => {
     "href",
     "/lukiot/",
   );
+  await expect(page.getByRole("tabpanel").getByRole("link", { name: /^yo-kokeiden pisterajat(\s|$)/ })).toHaveAttribute(
+    "href",
+    "/yo-pisterajat/",
+  );
 
   await page.getByRole("tab", { name: "Korkeakoulutus" }).click();
   for (const [label, url] of [

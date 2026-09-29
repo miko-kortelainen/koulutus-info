@@ -4,6 +4,7 @@ import {
   HiOutlineChartBar,
   HiOutlineLibrary,
   HiOutlineOfficeBuilding,
+  HiOutlineSparkles,
   HiOutlineTrendingUp,
 } from "react-icons/hi";
 
@@ -17,6 +18,12 @@ export const quickLinkSections = [
         label: "lukiot",
         description: "Katso lukioiden keskiarvorajat",
         icon: HiOutlineOfficeBuilding,
+      },
+      {
+        href: "/yo-pisterajat/",
+        label: "yo-kokeiden pisterajat",
+        description: "Katso ylioppilaskokeiden pisterajat",
+        icon: HiOutlineSparkles,
       },
     ],
   },
