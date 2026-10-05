@@ -28,8 +28,8 @@ export default function YoPisterajatPage() {
   return (
     <>
       <PageIntro
-        description="Kevään ja syksyn ylioppilaskokeiden pisterajat."
-        title="YO pisterajat 2026"
+        description={`Kevään ja syksyn ylioppilaskokeiden pisterajat aineittain. Uusin kirjoituskerta: ${yoRoundLabel(yoRoundId(rounds[0].vuosi, rounds[0].kausi)).toLocaleLowerCase("fi-FI")}.`}
+        title={`YO-pisterajat ${rounds[rounds.length - 1].vuosi}–${rounds[0].vuosi}`}
       />
       <PageContainer align="flex-start">
         <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
@@ -46,6 +46,9 @@ export default function YoPisterajatPage() {
           />
           <SearchInput onChange={setSearchTerm} placeholder="Hae ainetta" value={searchTerm} />
         </Stack>
+        <Text color="fg.muted" fontSize="sm">
+          Pisteraja on alin pistemäärä, jolla saa arvosanan L, E, M, C, B tai A.
+        </Text>
         {aineet.length === 0 ? (
           <Text>Ei tuloksia haulle.</Text>
         ) : (
