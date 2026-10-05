@@ -1,6 +1,7 @@
 import { Card, Heading, Separator, SimpleGrid, Stack, Stat } from "@chakra-ui/react";
 import type { YoPisterajatAine } from "@/api/dataValidation";
 import type { YoGrade } from "@/config/yoPisterajat";
+import { slugify } from "@/lib/slug";
 import { numberFormat } from "@/lib/statistics";
 
 interface YoPisterajatTableProps {
@@ -15,7 +16,15 @@ export default function YoPisterajatTable({ aineet, arvosanat, label }: YoPister
       {aineet.map((aine) => (
         <Card.Root as="li" key={aine.nimi} size="md" width="full" zIndex={1}>
           <Card.Header pb={4}>
-            <Heading as="h2" fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" textWrap="pretty">
+            <Heading
+              as="h2"
+              fontSize={{ base: "sm", md: "lg" }}
+              fontWeight="semibold"
+              id={`yo-${slugify(aine.nimi)}`}
+              scrollMarginTop={6}
+              tabIndex={-1}
+              textWrap="pretty"
+            >
               {aine.nimi}
             </Heading>
           </Card.Header>

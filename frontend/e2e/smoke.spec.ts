@@ -867,7 +867,7 @@ test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) =>
 test("/yo-pisterajat: switches kirjoituskerta and shows that round's cutoff", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/yo-pisterajat/");
-  await expect(page.getByRole("heading", { exact: true, level: 1, name: "YO pisterajat 2026" })).toBeVisible();
+  await expect(page.getByRole("heading", { exact: true, level: 1, name: "YO-pisterajat 2023–2026" })).toBeVisible();
   expect(await page.evaluate<number>("document.documentElement.scrollWidth")).toBeLessThanOrEqual(390);
 
   const kemia = () =>
