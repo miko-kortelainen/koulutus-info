@@ -139,6 +139,7 @@ export default function CutoffPage() {
   return (
     <PageContainer align="flex-start">
       {header}
+      <PistelaskuriCta />
       <VStack align="flex-start" flex={1} width="full" zIndex={10}>
         <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta" value={searchTerm} />
         <SortControl onChange={setSortOrder} value={sortOrder} />
@@ -155,7 +156,6 @@ export default function CutoffPage() {
         {alaFilter}
       </VStack>
       {programList}
-      <PistelaskuriCta />
     </PageContainer>
   );
 }

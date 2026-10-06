@@ -1,5 +1,6 @@
 import { Heading, Link, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
+import PistelaskuriCta from "@/components/PistelaskuriCta";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
@@ -28,16 +29,13 @@ export default function CutoffIndexPage() {
       />
       <PageContainer align="flex-start">
         <Text fontSize="sm">
-          Arvioi ensin omat pisteesi{" "}
-          <Link href="/pistelaskuri/" textDecoration="underline">
-            todistusvalintalaskurilla
-          </Link>
-          . Ylioppilaskokeiden pisterajat ovat sivulla{" "}
+          Ylioppilaskokeiden pisterajat ovat sivulla{" "}
           <Link href="/yo-pisterajat/" textDecoration="underline">
             YO-pisterajat
           </Link>
           .
         </Text>
+        <PistelaskuriCta />
         <Stack gap={2} width="full">
           <Heading as="h2" size="md">
             Koulutusalat
