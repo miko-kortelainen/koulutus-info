@@ -4,6 +4,9 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
+import { thresholdPassed } from "@/pages/pistelaskuri/lib/todistusvalinta/thresholds";
+import { isYoFormState, parseYoForm, toUniversityGrades, yoFormFromExamGrades } from "@/pages/pistelaskuri/lib/yoForm";
+import { YO_GRADES } from "@/pages/pistelaskuri/lib/yoScoring";
 import { listUniversityPrograms, calculateUniversityPrograms } from "@/pages/pistelaskuri/lib/todistusvalinta/programs";
 import {
   averageToHundredths,
@@ -81,6 +84,35 @@ assert.equal(
 const thresholds = JSON.parse(
   readFileSync(join(root, "data/todistusvalinta/threshold-rules-2026.json"), "utf8"),
 ) as ThresholdCatalog;
+
+for (const exam of ["s2", "r2"] as const) {
+  for (const grade of YO_GRADES) {
+    const grades = { [exam]: grade, ena: "E", maa: "E", te: "B", hi: "E" } as const;
+    const form = yoFormFromExamGrades(grades);
+    assert.equal(form.aineet.length, 5);
+    assert.equal(isYoFormState(form), true);
+    const parsed = parseYoForm(form);
+    assert.ok("input" in parsed);
+    assert.equal(parsed.input.aidinkieli, grade);
+    assert.deepEqual(toUniversityGrades(form), grades);
+    for (const modelId of Object.keys(scoring.models)) {
+      assert.equal(
+        scoreModel(modelId, toUniversityGrades(form), scoring).score,
+        scoreModel(modelId, { ...GRADES, ai_fi: grade }, scoring).score,
+      );
+    }
+    assert.equal(
+      thresholdPassed("mother-tongue-m", grades, thresholds.rules, scoring.exams)?.passed,
+      ["L", "E", "M"].includes(grade),
+    );
+    assert.equal(thresholdPassed("hy-finnish-mother-only", grades, thresholds.rules, scoring.exams)?.passed, false);
+    assert.equal(
+      thresholdPassed("hy-finnish-culture", grades, thresholds.rules, scoring.exams)?.passed,
+      exam === "s2" && ["L", "E", "M"].includes(grade),
+    );
+  }
+}
+
 const crosswalk = JSON.parse(
   readFileSync(join(root, "data/todistusvalinta/program-crosswalk-2026.json"), "utf8"),
 ) as ProgramCrosswalk;
