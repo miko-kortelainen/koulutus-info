@@ -16,8 +16,8 @@ export default function TietosuojaselostePage() {
           <Text>Yhteishaku.app on yksityishenkilön ylläpitämä verkkopalvelu.</Text>
           <Text>
             Yhteystiedot:{" "}
-            <Link color="fg.accent" href="mailto:miko.kortelainen@proton.me">
-              miko.kortelainen@proton.me
+            <Link color="fg.accent" href="mailto:miko@kortelainen.dev">
+              miko@kortelainen.dev
             </Link>
           </Text>
         </Stack>
