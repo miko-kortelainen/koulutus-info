@@ -104,7 +104,7 @@
     },
     {
       "id": "math-long-c-or-short-e",
-      "label": "Pitkä matematiikka vähintään C tai lyhyt matematiikka vähintään E",
+      "label": "MAA: C tai MAB: E",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
       "expression": {
         "any": [
@@ -265,7 +265,7 @@
     },
     {
       "id": "chemistry-math",
-      "label": "Pitkä matematiikka vähintään B tai lyhyt matematiikka vähintään M",
+      "label": "MAA: B tai MAB: M",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
       "expression": {
         "any": [
