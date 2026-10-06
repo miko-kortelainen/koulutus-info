@@ -38,7 +38,7 @@
     },
     {
       "id": "nanoscience",
-      "label": "Matematiikan ja luonnontieteen kynnysehto nanotieteeseen",
+      "label": "(MAA: B tai MAB: E) ja (FY: C tai KE: C tai BI: C).",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/biotieteet-farmasia-geotieteet-elintarviketieteet-maatalous-ja-metsatieteet",
       "expression": {
         "all": [
