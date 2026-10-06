@@ -9,7 +9,7 @@ export default function UKKPage() {
         Usein kysytyt kysymykset
       </Heading>
       <Stack gap={6} py={2}>
-        <Accordion.Root collapsible>
+        <Accordion.Root collapsible display="flex" flexDirection="column" gap={3}>
           {QUESTIONS.map(({ question, answer }) => (
             <Accordion.Item key={question} value={question}>
               <Accordion.ItemTrigger>
