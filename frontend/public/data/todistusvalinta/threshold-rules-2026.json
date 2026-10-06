@@ -276,7 +276,7 @@
     },
     {
       "id": "technology",
-      "label": "Pitkä matematiikka ja fysiikka tai kemia hyväksytysti sekä vähintään yksi niistä vähintään C",
+      "label": "MAA hyväksytty ja (FY tai KE) hyväksytty. Vähintään yhdestä näistä C.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
       "expression": {
         "all": [
