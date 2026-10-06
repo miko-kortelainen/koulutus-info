@@ -2,6 +2,27 @@ import { Link, Text } from "@chakra-ui/react";
 
 export const QUESTIONS = [
   {
+    question: "Kuka on tehnyt yhteishaku.app-sivun?",
+    answerText:
+      "Moi, mä oon Miko, tämän sivuston kehittäjä. Tein tämän sivuston harrasteprojektina helpottamaan yhteishaun tilastojen, kuten hakijamäärien ja pisterajojen lukemista ja mahdollisesti auttamaan kartoittamaan sulle sopivia opiskelupaikkoja. Ota huomioon, että Yhteishaku.app ei ole Opetushallituksen, Opintopolun tai muun viranomaisen ylläpitämä virallinen palvelu.",
+    answer: (
+      <>
+        Moi, mä oon Miko, tämän sivuston kehittäjä.
+        <br />
+        <br />
+        Tein tämän sivuston harrasteprojektina helpottamaan yhteishaun tilastojen, kuten hakijamäärien ja pisterajojen
+        lukemista ja mahdollisesti auttamaan kartoittamaan sulle sopivia opiskelupaikkoja.
+        <br />
+        <br />
+        Ota huomioon, että Yhteishaku.app{" "}
+        <Text as="span" fontWeight="bold">
+          ei ole
+        </Text>{" "}
+        Opetushallituksen, Opintopolun tai muun viranomaisen ylläpitämä virallinen palvelu.
+      </>
+    ),
+  },
+  {
     question: "Mistä sivulla näytettävä data on peräisin?",
     answerText:
       "Data haetaan kolmannen osapuolen avoimista rajapinnoista. Hakijamäärät ovat peräisin Opetushallituksen tilastopalvelu Vipunen.fi:stä ja koulutukset Opintopolku.fi:stä.",
@@ -72,35 +93,6 @@ export const QUESTIONS = [
         .<br />
         Esimerkiksi 10 % tarkoittaa, että hakukohteeseen valittiin noin yksi opiskelija kymmentä hakijaa kohden. Luku
         perustuu kyseisen vuoden toteutuneisiin valintoihin.
-      </>
-    ),
-  },
-  {
-    question: "Kuka on tehnyt yhteishaku.app-sivun?",
-    answerText:
-      "Sivua kehittää ja ylläpitää yksi henkilö harrastusprojektina. Yhteishaku.app ei ole Opetushallituksen, Opintopolun tai muun viranomaisen ylläpitämä palvelu. Sivuston lähdekoodi löytyy GitHubista.",
-    answer: (
-      <>
-        Sivua kehittää ja ylläpitää yksi henkilö harrastusprojektina.
-        <br />
-        <br />
-        Yhteishaku.app{" "}
-        <Text as="span" fontWeight="bold">
-          ei ole
-        </Text>{" "}
-        Opetushallituksen, Opintopolun tai muun viranomaisen ylläpitämä palvelu.
-        <br />
-        <br />
-        Sivuston lähdekoodi löytyy avoimena{" "}
-        <Link
-          color="fg.accent"
-          href="https://github.com/miko-kortelainen/koulutus-info"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          GitHubista
-        </Link>
-        .
       </>
     ),
   },

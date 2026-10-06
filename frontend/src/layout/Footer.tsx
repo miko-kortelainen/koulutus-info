@@ -30,7 +30,7 @@ export default function Footer() {
             </Text>
           </HStack>
           <Text color="fg.muted" fontSize="sm">
-            Korkeakouluun pyrkivän paras työkalu!
+            Kouluun hakevan paras työkalu!
           </Text>
         </VStack>
         <SimpleGrid aria-label="Alatunnisteen navigointi" as="nav" columnGap={7} columns={2} rowGap={7}>

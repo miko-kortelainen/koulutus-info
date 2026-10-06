@@ -38,7 +38,7 @@
     },
     {
       "id": "nanoscience",
-      "label": "Matematiikan ja luonnontieteen kynnysehto nanotieteeseen",
+      "label": "(MAA: B tai MAB: E) ja (FY: C tai KE: C tai BI: C).",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/biotieteet-farmasia-geotieteet-elintarviketieteet-maatalous-ja-metsatieteet",
       "expression": {
         "all": [
@@ -104,7 +104,7 @@
     },
     {
       "id": "math-long-c-or-short-e",
-      "label": "Pitkä matematiikka vähintään C tai lyhyt matematiikka vähintään E",
+      "label": "MAA: C tai MAB: E",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
       "expression": {
         "any": [
@@ -115,7 +115,7 @@
     },
     {
       "id": "finnish-general",
-      "label": "Suomen kielen yleinen kynnysehto",
+      "label": "ÄI (suomi): M tai S2: M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
       "expression": {
         "any": [
@@ -127,7 +127,7 @@
     },
     {
       "id": "swedish-mother-level-general",
-      "label": "Ruotsia äidinkielen tasolla opiskeltavan hakukohteen yleinen kynnysehto",
+      "label": "ÄI (ruotsi): M tai R2: M tai RUA: E tai RUB: E.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
       "expression": {
         "any": [
@@ -140,7 +140,7 @@
     },
     {
       "id": "swedish-second-level-general",
-      "label": "Ruotsia toisena kotimaisena opiskeltavan hakukohteen yleinen kynnysehto",
+      "label": "ÄI (ruotsi): C tai R2: C tai RUA: M tai RUB: M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
       "expression": {
         "any": [
@@ -265,7 +265,7 @@
     },
     {
       "id": "chemistry-math",
-      "label": "Pitkä matematiikka vähintään B tai lyhyt matematiikka vähintään M",
+      "label": "MAA: B tai MAB: M",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
       "expression": {
         "any": [
@@ -276,7 +276,7 @@
     },
     {
       "id": "technology",
-      "label": "Pitkä matematiikka ja fysiikka tai kemia hyväksytysti sekä vähintään yksi niistä vähintään C",
+      "label": "MAA hyväksytty ja (FY tai KE) hyväksytty. Vähintään yhdestä näistä C.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/fysiikka-kemia-matemaattisten-alojen-opettajankoulutukset-tekniikka",
       "expression": {
         "all": [
@@ -299,7 +299,7 @@
     },
     {
       "id": "hy-swedish-mother-only",
-      "label": "Helsingin yliopisto: ruotsi äidinkielen tasolla",
+      "label": "ÄI (ruotsi): M tai R2: M. RUA/RUB eivät käy.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {
         "any": [
@@ -310,7 +310,7 @@
     },
     {
       "id": "hy-swedish-second-only",
-      "label": "Helsingin yliopisto: ruotsi toisena kotimaisena",
+      "label": "RUA: M tai RUB: M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {
         "any": [
@@ -321,13 +321,13 @@
     },
     {
       "id": "hy-finnish-mother-only",
-      "label": "Helsingin yliopisto: suomen kieli äidinkielenä",
+      "label": "Vain ÄI (suomi): M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {"exam": "ai_fi", "minGrade": "M"}
     },
     {
       "id": "hy-finnish-culture",
-      "label": "Helsingin yliopisto: suomen kieli ja kulttuuri, hakijan ensikieli muu kuin suomi",
+      "label": "S2: M",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {
         "any": [

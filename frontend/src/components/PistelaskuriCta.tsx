@@ -10,6 +10,7 @@ export default function PistelaskuriCta() {
       asChild
       bg="accent"
       color="onAccent"
+      size="sm"
       transitionDuration="0.15s"
       transitionProperty="transform, background-color, color"
       transitionTimingFunction="ease-out"

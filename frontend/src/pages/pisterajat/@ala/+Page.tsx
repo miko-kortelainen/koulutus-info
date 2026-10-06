@@ -49,8 +49,8 @@ export default function AlaCutoffPage() {
   return (
     <PageContainer align="flex-start">
       {header}
-      {schoolAccordions}
       <PistelaskuriCta />
+      {schoolAccordions}
     </PageContainer>
   );
 }
