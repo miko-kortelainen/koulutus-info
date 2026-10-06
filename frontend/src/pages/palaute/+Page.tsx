@@ -1,4 +1,4 @@
-import { Button, Heading, Stack, Text, Textarea } from "@chakra-ui/react";
+import { Button, Heading, Link, Stack, Text, Textarea } from "@chakra-ui/react";
 import { type SubmitEvent, useState } from "react";
 import PageContainer from "@/layout/PageContainer";
 import { COLORS } from "@/theme";
@@ -36,7 +36,11 @@ export default function PalautePage() {
         Palaute
       </Heading>
       <Text color="fg.muted" textWrap="pretty" textWrapMode="wrap">
-        Huomasitko bugin tai keksitkö kehitysidean? Kerro siitä alla.
+        Huomasitko virheen tai keksitkö kehitysidean? Kerro siitä alla tai laita sähköpostia{" "}
+        <Link color="fg.accent" href="mailto:miko@kortelainen.dev">
+          miko@kortelainen.dev
+        </Link>
+        .
       </Text>
     </Stack>
   );
