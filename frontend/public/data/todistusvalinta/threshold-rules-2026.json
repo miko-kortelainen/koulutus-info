@@ -115,7 +115,7 @@
     },
     {
       "id": "finnish-general",
-      "label": "Suomen kielen yleinen kynnysehto",
+      "label": "Suomi äidinkielenä: M tai S2: M tai FIA (pitkä suomi): E.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
       "expression": {
         "any": [
@@ -127,7 +127,7 @@
     },
     {
       "id": "swedish-mother-level-general",
-      "label": "Ruotsia äidinkielen tasolla opiskeltavan hakukohteen yleinen kynnysehto",
+      "label": "ÄI (ruotsi): M tai R2: M tai RUA: E tai RUB: E.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
       "expression": {
         "any": [
@@ -140,7 +140,7 @@
     },
     {
       "id": "swedish-second-level-general",
-      "label": "Ruotsia toisena kotimaisena opiskeltavan hakukohteen yleinen kynnysehto",
+      "label": "ÄI (ruotsi): C tai R2: C tai RUA: M tai RUB: M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
       "expression": {
         "any": [
@@ -299,7 +299,7 @@
     },
     {
       "id": "hy-swedish-mother-only",
-      "label": "Helsingin yliopisto: ruotsi äidinkielen tasolla",
+      "label": "ÄI (ruotsi): M tai R2: M. RUA/RUB eivät käy.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {
         "any": [
@@ -310,7 +310,7 @@
     },
     {
       "id": "hy-swedish-second-only",
-      "label": "Helsingin yliopisto: ruotsi toisena kotimaisena",
+      "label": "RUA: M tai RUB: M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {
         "any": [
@@ -321,13 +321,13 @@
     },
     {
       "id": "hy-finnish-mother-only",
-      "label": "Helsingin yliopisto: suomen kieli äidinkielenä",
+      "label": "Vain suomi äidinkielenä: vähintään M. S2 ja FIA eivät käy.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {"exam": "ai_fi", "minGrade": "M"}
     },
     {
       "id": "hy-finnish-culture",
-      "label": "Helsingin yliopisto: suomen kieli ja kulttuuri, hakijan ensikieli muu kuin suomi",
+      "label": "S2: M tai FIA (pitkä suomi): E. Äidinkielen suomi ei käy.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {
         "any": [
