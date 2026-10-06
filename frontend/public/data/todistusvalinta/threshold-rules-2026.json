@@ -115,7 +115,7 @@
     },
     {
       "id": "finnish-general",
-      "label": "Suomi äidinkielenä: M tai S2: M tai FIA (pitkä suomi): E.",
+      "label": "ÄI (suomi): M tai S2: M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026/kielet-kulttuurit-taiteiden-tutkimus-oikeustiede-yhteiskuntatieteet",
       "expression": {
         "any": [
@@ -321,13 +321,13 @@
     },
     {
       "id": "hy-finnish-mother-only",
-      "label": "Vain suomi äidinkielenä: vähintään M. S2 ja FIA eivät käy.",
+      "label": "Vain ÄI (suomi): M.",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {"exam": "ai_fi", "minGrade": "M"}
     },
     {
       "id": "hy-finnish-culture",
-      "label": "S2: M tai FIA (pitkä suomi): E. Äidinkielen suomi ei käy.",
+      "label": "S2: M",
       "sourceUrl": "https://yliopistovalinnat.fi/todistusvalinnan-pisteytykset-vuodesta-2026",
       "expression": {
         "any": [
