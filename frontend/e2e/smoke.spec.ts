@@ -360,6 +360,26 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
   ).toBeVisible();
 });
 
+for (const subject of ["Suomi toisena kielenä ja kirjallisuus (S2)", "Ruotsi toisena kielenä ja kirjallisuus (R2)"]) {
+  test(`/pistelaskuri: calculates and restores ${subject}`, async ({ page }) => {
+    await openCalculator(page);
+    await selectOption(page, "Aine 1", subject);
+    await selectOption(page, "Aineen 1 arvosana", "M");
+    for (let row = 5; row > 1; row -= 1) {
+      await page.getByRole("button", { name: `Poista aine ${row}` }).click();
+    }
+    await page.getByRole("button", { name: "Laske pisteet / näytä koulutukset" }).click();
+    await expect(page.getByText(/~34 \/ 198 pistettä/)).toBeVisible();
+
+    await page.reload();
+    await waitForCalculatorHydration(page);
+    await expectSelectedOption(page, "Aine 1", subject);
+    await expectSelectedOption(page, "Aineen 1 arvosana", "M");
+    await page.getByRole("button", { name: "Laske pisteet / näytä koulutukset" }).click();
+    await expect(page.getByText(/~34 \/ 198 pistettä/)).toBeVisible();
+  });
+}
+
 test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
   await page.addInitScript(() => {
     if (sessionStorage.getItem("pistelaskuri-storage-initialized")) return;

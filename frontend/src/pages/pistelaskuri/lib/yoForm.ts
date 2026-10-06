@@ -195,6 +195,8 @@ const MOTHER_TONGUE_OPTIONS = [
   { exam: "ai_fi", kind: "aidinkieli", label: "Suomi äidinkielenä", value: "ai_fi" },
   { exam: "ai_sv", kind: "aidinkieli", label: "Ruotsi äidinkielenä", value: "ai_sv" },
   { exam: "ai_smi", kind: "aidinkieli", label: "Saame äidinkielenä", value: "ai_smi" },
+  { exam: "s2", kind: "aidinkieli", label: "Suomi toisena kielenä ja kirjallisuus (S2)", value: "s2" },
+  { exam: "r2", kind: "aidinkieli", label: "Ruotsi toisena kielenä ja kirjallisuus (R2)", value: "r2" },
 ] as const satisfies readonly MotherTongueOption[];
 
 const MATH_OPTIONS = [
