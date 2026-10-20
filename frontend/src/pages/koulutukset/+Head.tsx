@@ -1,5 +1,7 @@
-const description =
-  "Yhteishaun yliopisto- ja AMK-koulutukset: hakukohteet, paikkakunnat, koulutusasteet ja tallennus omalle hakulistalle.";
+import { CURRENT_PROGRAMME_ROUND, programmeRoundLabel } from "@/config/programmeRounds";
+
+const roundLabel = programmeRoundLabel(CURRENT_PROGRAMME_ROUND).toLocaleLowerCase("fi-FI");
+const description = `Korkeakoulujen yhteishaun (${roundLabel}) yliopisto- ja AMK-koulutukset: hakukohteet, paikkakunnat, koulutusasteet ja tallennus omalle hakulistalle.`;
 
 export function Head() {
   return (
