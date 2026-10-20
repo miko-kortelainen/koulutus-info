@@ -18,7 +18,7 @@ export default function AlaCutoffPage() {
         {alaName} pisterajat {DEFAULT_CUTOFF_YEAR}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        {alaMetaDescription(alaName, DEFAULT_CUTOFF_YEAR)}
+        {alaMetaDescription(alaName, DEFAULT_CUTOFF_YEAR).split(". ")[1]}
       </Text>
       <Separator mt={2} />
     </Stack>

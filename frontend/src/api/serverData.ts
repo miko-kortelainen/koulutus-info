@@ -79,7 +79,7 @@ export const readMeta = (): Meta => readPublicData("meta.json", parseMeta);
 
 const readSchools = (): SchoolCatalog => readPublicData("schools.json", parseSchoolCatalog);
 
-const allCutoffSchools = () => availableCutoffRounds().flatMap((round) => readCutoffSchools(round));
+export const allCutoffSchools = () => availableCutoffRounds().flatMap((round) => readCutoffSchools(round));
 
 export const readProgramsWithAvailableCutoffs = (round: ProgrammeRound): CurrentProgramsResponse =>
   filterUnavailableCutoffAlat(readPrograms(round), allCutoffSchools());
