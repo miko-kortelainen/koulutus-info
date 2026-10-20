@@ -1,0 +1,40 @@
+name: Update Vipunen Statistics
+on:
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: vipunen-update
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: backend/go.mod
+          cache-dependency-path: backend/go.mod
+      - name: Refresh Vipunen statistics
+        run: go run . vipunen
+        working-directory: backend
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          branch: automated/vipunen-statistics
+          commit-message: Update Vipunen hakijamäärät
+          title: Update Vipunen hakijamäärät
+          body: |
+            Refresh Vipunen hakijamäärät for the programme start year in backend/config.json.
+
+            Generated with `go run . vipunen`. No frontend install or build is run by this workflow.
+            Smoke tests do not run automatically for pull requests created with GITHUB_TOKEN.
+          add-paths: |
+            frontend/public/data/hakijamäärät/
+            frontend/public/data/meta.json
+            frontend/public/data/schools.json
+            frontend/src/generated/dataManifest.ts
