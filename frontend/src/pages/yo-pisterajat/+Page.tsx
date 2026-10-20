@@ -1,4 +1,4 @@
-import { Stack, Text } from "@chakra-ui/react";
+import { Link, Stack, Text } from "@chakra-ui/react";
 import Fuse from "fuse.js";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
@@ -58,6 +58,12 @@ export default function YoPisterajatPage() {
             label={`Ylioppilaskokeiden pisterajat, ${label.toLocaleLowerCase("fi-FI")}`}
           />
         )}
+        <Text color="fg.muted" fontSize="xs">
+          Lähde:{" "}
+          <Link href="https://www.ylioppilastutkinto.fi" textDecoration="underline">
+            Ylioppilastutkintolautakunta
+          </Link>
+        </Text>
       </PageContainer>
     </>
   );
