@@ -3,6 +3,7 @@ import Fuse from "fuse.js";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
 import OptionSelect from "@/components/OptionSelect";
+import PistelaskuriCta from "@/components/PistelaskuriCta";
 import SearchInput from "@/components/SearchInput";
 import { type YoPisterajaRoundId, yoRoundId, yoRoundLabel } from "@/config/yoPisterajat";
 import useDebounce from "@/hooks/useDebounce";
@@ -24,14 +25,24 @@ export default function YoPisterajatPage() {
         .map(({ item }) => item)
     : round.aineet;
   const label = yoRoundLabel(roundId);
+  const newestYear = rounds[0].vuosi;
+  const oldestYear = rounds[rounds.length - 1].vuosi;
 
   return (
     <>
       <PageIntro
-        description={`Kevään ja syksyn ylioppilaskokeiden pisterajat aineittain. Uusin kirjoituskerta: ${yoRoundLabel(yoRoundId(rounds[0].vuosi, rounds[0].kausi)).toLocaleLowerCase("fi-FI")}.`}
-        title={`YO-pisterajat ${rounds[rounds.length - 1].vuosi}–${rounds[0].vuosi}`}
+        description={`Ylioppilaskirjoitusten (YTL) kevään ja syksyn pisterajat aineittain ${oldestYear}–${newestYear}. Uusin kirjoituskerta: ${yoRoundLabel(yoRoundId(rounds[0].vuosi, rounds[0].kausi)).toLocaleLowerCase("fi-FI")}.`}
+        title={`YO-pisterajat ${newestYear}`}
       />
       <PageContainer align="flex-start">
+        <Text fontSize="sm">
+          Korkeakoulujen yhteishaun pisterajat ovat sivulla{" "}
+          <Link href="/pisterajat/" textDecoration="underline">
+            korkeakoulujen pisterajat
+          </Link>
+          .
+        </Text>
+        <PistelaskuriCta />
         <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
           <OptionSelect
             ariaLabel="Kirjoituskerta"
