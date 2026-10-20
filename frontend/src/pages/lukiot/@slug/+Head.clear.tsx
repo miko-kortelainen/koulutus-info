@@ -5,9 +5,11 @@ import { Head as GlobalHead } from "@/pages/+Head";
 import type { LukioSchoolPageData } from "@/pages/lukiot/@slug/+data";
 
 export function Head() {
-  const { schoolName } = useData<LukioSchoolPageData>();
+  const { schoolName, entries } = useData<LukioSchoolPageData>();
   const url = `https://yhteishaku.app/lukiot/${slugify(schoolName)}/`;
-  const description = `${schoolName}: vuoden ${LUKIO_KESKIARVOT_YEAR} yhteishaun alin hyväksytty keskiarvo ja linjakohtaiset pisterajat.`;
+  const kunta = entries[0]?.kunta;
+  const location = kunta ? ` (${kunta})` : "";
+  const description = `${schoolName}${location}: vuoden ${LUKIO_KESKIARVOT_YEAR} yhteishaun alin hyväksytty keskiarvo, keskiarvorajat ja linjakohtaiset pisterajat.`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
