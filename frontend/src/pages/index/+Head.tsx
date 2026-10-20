@@ -1,9 +1,10 @@
+import { CURRENT_PROGRAMME_ROUND } from "@/config/programmeRounds";
 import { CURRENT_YEAR } from "@/config/yearOptions";
 
-const description = `Korkeakoulujen yhteishaku ${CURRENT_YEAR.slice(
-  0,
-  4,
-)}: hakuajat, koulutukset, hakijamäärät, pisterajat ja todistusvalintalaskuri.`;
+const statsYear = CURRENT_YEAR.slice(0, 4);
+const programmeYear = CURRENT_PROGRAMME_ROUND.slice(0, 4);
+const yearLabel = statsYear === programmeYear ? statsYear : `${statsYear}–${programmeYear}`;
+const description = `Korkeakoulujen yhteishaku ${yearLabel}: hakuajat, koulutukset, hakijamäärät, pisterajat ja todistusvalintalaskuri.`;
 
 const jsonLd = {
   "@context": "https://schema.org",
