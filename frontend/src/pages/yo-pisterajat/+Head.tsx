@@ -3,7 +3,9 @@ import type { YoPisterajatPageData } from "@/pages/yo-pisterajat/+data";
 
 export function Head() {
   const rounds = useData<YoPisterajatPageData>();
-  const description = `Kevään ja syksyn YO-pisterajat ${rounds[rounds.length - 1].vuosi}–${rounds[0].vuosi}: äidinkieli, matematiikka, kielet ja reaaliaineet. Katso rajat arvosanoille L, E, M, C, B ja A.`;
+  const newestYear = rounds[0].vuosi;
+  const oldestYear = rounds[rounds.length - 1].vuosi;
+  const description = `Kevään ja syksyn YO-pisterajat ${newestYear} (${oldestYear}–${newestYear}): ylioppilaskirjoitusten (YTL) pisterajat äidinkieleen, matematiikkaan, kieliin ja reaaliaineisiin arvosanoille L, E, M, C, B ja A.`;
 
   return (
     <>
