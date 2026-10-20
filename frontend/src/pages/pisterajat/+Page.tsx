@@ -10,7 +10,7 @@ export default function CutoffIndexPage() {
   const { alat, schools } = useData<CutoffIndexData>();
 
   const linkList = (items: { name: string; slug: string }[], href: (slug: string) => string) => (
-    <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={4} listStyleType="none">
+    <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={6} listStyleType="none">
       {items.map(({ name, slug }) => (
         <li key={slug}>
           <Link href={href(slug)} textDecoration="underline" textDecorationStyle="dotted">
@@ -42,12 +42,20 @@ export default function CutoffIndexPage() {
           </Heading>
           {linkList(alat, (slug) => `/pisterajat/${slug}/`)}
         </Stack>
-        <Stack gap={2} width="full">
-          <Heading as="h2" size="md">
-            Koulut
-          </Heading>
-          {linkList(schools, (slug) => `/koulut/${slug}/pisterajat/`)}
-        </Stack>
+        {[
+          { sector: "Yliopistokoulutus", label: "Yliopistot" },
+          { sector: "Ammattikorkeakoulukoulutus", label: "Ammattikorkeakoulut" },
+        ].map(({ sector, label }) => (
+          <Stack gap={2} key={sector} width="full">
+            <Heading as="h2" size="md">
+              {label}
+            </Heading>
+            {linkList(
+              schools.filter((school) => school.sector === sector),
+              (slug) => `/koulut/${slug}/pisterajat/`,
+            )}
+          </Stack>
+        ))}
       </PageContainer>
     </>
   );

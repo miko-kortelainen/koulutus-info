@@ -7,16 +7,12 @@ import LukioSchoolCard from "@/pages/lukiot/components/LukioSchoolCard";
 
 export default function LukioSchoolPage() {
   const { schoolName, entries } = useData<LukioSchoolPageData>();
-  const kunta = entries[0]?.kunta;
 
   return (
     <>
       <PageIntro
         description={
           <>
-            {schoolName}
-            {kunta ? ` (${kunta})` : ""} – yhteishaun keskiarvorajat ja pisterajat {LUKIO_KESKIARVOT_YEAR}.
-            <br />
             Yleislinjan pisteraja vastaa lukuaineiden keskiarvoa.
             <br />
             Erityislinjojen pisteytyksessä on yleensä mukana myös lisänäyttö, pääsykoe tai painotettu arvosana.

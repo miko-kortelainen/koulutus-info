@@ -3,7 +3,6 @@ import Fuse from "fuse.js";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
 import OptionSelect from "@/components/OptionSelect";
-import PistelaskuriCta from "@/components/PistelaskuriCta";
 import SearchInput from "@/components/SearchInput";
 import { type YoPisterajaRoundId, yoRoundId, yoRoundLabel } from "@/config/yoPisterajat";
 import useDebounce from "@/hooks/useDebounce";
@@ -42,7 +41,6 @@ export default function YoPisterajatPage() {
           </Link>
           .
         </Text>
-        <PistelaskuriCta />
         <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
           <OptionSelect
             ariaLabel="Kirjoituskerta"

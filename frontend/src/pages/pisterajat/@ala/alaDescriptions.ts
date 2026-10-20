@@ -9,7 +9,7 @@ const ALA_META_DESCRIPTIONS: Record<string, (year: string) => string> = {
   Luonnontieteet: (year) =>
     `Luonnontieteiden yhteishaun pisterajat ${year}. Katso biologian, fysiikan, kemian, maantieteen ja matematiikan pisterajat.`,
   Lääketieteet: (year) =>
-    `Lääketieteiden yhteishaun pisterajat ${year}. Katso lääketieteen, hammaslääketieteen, eläinlääketieteen ja lääkiksen pisterajat.`,
+    `Lääketieteiden yhteishaun pisterajat ${year}. Katso lääkiksen, hammaslääketieteen ja eläinlääketieteen pisterajat.`,
   "Maa- ja metsätalousalat": (year) =>
     `Maa- ja metsätalousalojen yhteishaun pisterajat ${year}. Katso agrologin, metsätalouden ja puutarha-alan pisterajat.`,
   Palvelualat: (year) =>
