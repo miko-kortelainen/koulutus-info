@@ -123,7 +123,7 @@ export default function LukiotPage() {
           </Heading>
           <Accordion.ItemContent>
             <Accordion.ItemBody pb={6}>
-              <LukioSchoolCard entries={school.entries} koulu={school.koulu} />
+              <LukioSchoolCard entries={school.entries} koulu={school.koulu} schoolHref={`/lukiot/${school.slug}/`} />
             </Accordion.ItemBody>
           </Accordion.ItemContent>
         </Accordion.Item>
