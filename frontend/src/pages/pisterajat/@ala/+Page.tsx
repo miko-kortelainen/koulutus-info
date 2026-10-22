@@ -5,6 +5,7 @@ import PistelaskuriCta from "@/components/PistelaskuriCta";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
+import { alaMetaDescription } from "@/pages/pisterajat/@ala/alaDescriptions";
 import SchoolProgrammeList from "@/pages/pisterajat/@ala/components/SchoolProgrammeList";
 
 export default function AlaCutoffPage() {
@@ -17,7 +18,7 @@ export default function AlaCutoffPage() {
         {alaName} pisterajat {DEFAULT_CUTOFF_YEAR}
       </Heading>
       <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Koulutusalan pisterajat kouluittain eri hakukierroksilta.
+        {alaMetaDescription(alaName, DEFAULT_CUTOFF_YEAR).split(". ")[1]}
       </Text>
       <Separator mt={2} />
     </Stack>

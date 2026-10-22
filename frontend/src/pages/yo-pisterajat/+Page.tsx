@@ -1,4 +1,4 @@
-import { Stack, Text } from "@chakra-ui/react";
+import { Link, Stack, Text } from "@chakra-ui/react";
 import Fuse from "fuse.js";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
@@ -24,14 +24,23 @@ export default function YoPisterajatPage() {
         .map(({ item }) => item)
     : round.aineet;
   const label = yoRoundLabel(roundId);
+  const newestYear = rounds[0].vuosi;
+  const oldestYear = rounds[rounds.length - 1].vuosi;
 
   return (
     <>
       <PageIntro
-        description={`Kevään ja syksyn ylioppilaskokeiden pisterajat aineittain. Uusin kirjoituskerta: ${yoRoundLabel(yoRoundId(rounds[0].vuosi, rounds[0].kausi)).toLocaleLowerCase("fi-FI")}.`}
-        title={`YO-pisterajat ${rounds[rounds.length - 1].vuosi}–${rounds[0].vuosi}`}
+        description={`Ylioppilaskirjoitusten (YTL) kevään ja syksyn pisterajat aineittain ${oldestYear}–${newestYear}. Uusin kirjoituskerta: ${yoRoundLabel(yoRoundId(rounds[0].vuosi, rounds[0].kausi)).toLocaleLowerCase("fi-FI")}.`}
+        title={`YO-pisterajat ${newestYear}`}
       />
       <PageContainer align="flex-start">
+        <Text fontSize="sm">
+          Korkeakoulujen yhteishaun pisterajat ovat sivulla{" "}
+          <Link href="/pisterajat/" textDecoration="underline">
+            korkeakoulujen pisterajat
+          </Link>
+          .
+        </Text>
         <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
           <OptionSelect
             ariaLabel="Kirjoituskerta"
@@ -58,6 +67,12 @@ export default function YoPisterajatPage() {
             label={`Ylioppilaskokeiden pisterajat, ${label.toLocaleLowerCase("fi-FI")}`}
           />
         )}
+        <Text color="fg.muted" fontSize="xs">
+          Lähde:{" "}
+          <Link href="https://www.ylioppilastutkinto.fi" textDecoration="underline">
+            Ylioppilastutkintolautakunta
+          </Link>
+        </Text>
       </PageContainer>
     </>
   );

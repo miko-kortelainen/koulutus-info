@@ -1,6 +1,6 @@
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
 
-const description = `Toisen asteen yhteishaun ${LUKIO_KESKIARVOT_YEAR} lukioiden pisterajat. Yleislinjan pisteraja vastaa lukuaineiden keskiarvoa. Erityislinjojen pisteytyksessä on yleensä mukana myös lisänäyttö, pääsykoe tai painotettu arvosana.`;
+const description = `Toisen asteen yhteishaun ${LUKIO_KESKIARVOT_YEAR} lukioiden keskiarvorajat, pääsyrajat ja pisterajat kunnittain. Yleislinjan pisteraja vastaa lukuaineiden keskiarvoa. Erityislinjojen pisteytyksessä on yleensä mukana myös lisänäyttö, pääsykoe tai painotettu arvosana.`;
 
 export function Head() {
   return (

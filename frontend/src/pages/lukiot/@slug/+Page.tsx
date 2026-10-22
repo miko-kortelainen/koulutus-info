@@ -13,8 +13,6 @@ export default function LukioSchoolPage() {
       <PageIntro
         description={
           <>
-            {schoolName} yhteishaun pisterajat {LUKIO_KESKIARVOT_YEAR}.
-            <br />
             Yleislinjan pisteraja vastaa lukuaineiden keskiarvoa.
             <br />
             Erityislinjojen pisteytyksessä on yleensä mukana myös lisänäyttö, pääsykoe tai painotettu arvosana.

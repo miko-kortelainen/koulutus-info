@@ -1,4 +1,4 @@
-import { Card, HStack, Stack, Text } from "@chakra-ui/react";
+import { Card, HStack, Link, Stack, Text } from "@chakra-ui/react";
 import type { LukioKeskiarvoEntry } from "@/api/dataValidation";
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
 import { keskiarvoFormat } from "@/pages/lukiot/lib/formatKeskiarvo";
@@ -7,6 +7,7 @@ import { COLORS } from "@/theme";
 interface LukioSchoolCardProps {
   koulu: string;
   entries: LukioKeskiarvoEntry[];
+  schoolHref?: string;
 }
 
 interface LinjaRowProps {
@@ -38,7 +39,7 @@ function LinjaRow({ entry }: LinjaRowProps) {
   );
 }
 
-export default function LukioSchoolCard({ koulu, entries }: LukioSchoolCardProps) {
+export default function LukioSchoolCard({ koulu, entries, schoolHref }: LukioSchoolCardProps) {
   return (
     <Card.Root aria-label={`${koulu} keskiarvot ${LUKIO_KESKIARVOT_YEAR}`} as="article" size="md">
       <Card.Body>
@@ -46,6 +47,11 @@ export default function LukioSchoolCard({ koulu, entries }: LukioSchoolCardProps
           {entries.map((entry) => (
             <LinjaRow entry={entry} key={entry.linja} />
           ))}
+          {schoolHref ? (
+            <Link fontSize="xs" href={schoolHref} mt={2} textDecoration="underline">
+              {koulu}: keskiarvorajat ja linjat
+            </Link>
+          ) : null}
         </Stack>
       </Card.Body>
     </Card.Root>

@@ -1,6 +1,6 @@
 import type { Config } from "vike/types";
-import { CURRENT_PROGRAMME_ROUND, programmeRoundLabel } from "@/config/programmeRounds";
+import { CURRENT_PROGRAMME_ROUND } from "@/config/programmeRounds";
 
 export default {
-  title: `Korkeakoulujen yhteishaun koulutustarjonta – ${programmeRoundLabel(CURRENT_PROGRAMME_ROUND)}`,
+  title: `Korkeakoulujen yhteishaku ${CURRENT_PROGRAMME_ROUND.slice(0, 4)} – koulutukset ja hakukohteet`,
 } satisfies Config;
