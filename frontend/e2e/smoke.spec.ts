@@ -94,13 +94,13 @@ test("homepage quick links point to their pages", async ({ page }) => {
   await page.goto("/");
 
   await expect(page.getByRole("complementary", { name: "Yhteishaku kotinäytöllä" })).toHaveCount(0);
-  await expect(page.getByRole("link", { exact: true, name: "Laske todistuspisteeni" })).toHaveAttribute(
+  await expect(page.getByRole("link", { exact: true, name: "Katso hakijan työkalut" })).toHaveAttribute(
     "href",
-    "/pistelaskuri/",
+    "/hakijalle/",
   );
-  await expect(page.getByRole("link", { exact: true, name: "Näytä hakijamäärät" })).toHaveAttribute(
+  await expect(page.getByRole("link", { exact: true, name: "olen opinto-ohjaaja" })).toHaveAttribute(
     "href",
-    "/hakijamaarat/",
+    "/opolle/",
   );
   await expect(page.getByText("2027 toisen asteen yhteishakuun")).toBeVisible();
   await expect(page.getByText("Kevään 2027 ensimmäiseen yhteishakuun")).toHaveCount(0);
@@ -129,6 +129,29 @@ test("homepage quick links point to their pages", async ({ page }) => {
     ).toHaveAttribute("href", url);
   }
 });
+
+for (const [link, heading] of [
+  ["Katso hakijan työkalut", "Hakijalle"],
+  ["olen opinto-ohjaaja", "Opolle"],
+] as const) {
+  test(`${heading} tools are grouped by education level`, async ({ page }) => {
+    await page.goto("/");
+    await page.getByRole("link", { name: link, exact: true }).click();
+    await expect(page.getByRole("heading", { name: heading, level: 1 })).toBeVisible();
+    await expect(
+      page.getByRole("tabpanel", { name: "Toinen aste" }).getByRole("link", { name: /^lukiot/ }),
+    ).toBeVisible();
+    const tab = page.getByRole("tab", { name: "Korkeakoulutus" });
+    // Tab selection is idempotent, so retry if the first click precedes hydration.
+    await expect(async () => {
+      await tab.click();
+      await expect(tab).toHaveAttribute("aria-selected", "true", { timeout: 1000 });
+    }).toPass();
+    await expect(
+      page.getByRole("tabpanel", { name: "Korkeakoulutus" }).getByRole("link", { name: /^pistelaskuri/ }),
+    ).toHaveAttribute("href", "/pistelaskuri/");
+  });
+}
 
 test("iPhone Safari users can dismiss the install tip and still find the guide in UKK", async ({ page }) => {
   await page.addInitScript(() => {
@@ -935,7 +958,9 @@ test("/lukiot/kaupungit: searches for a municipality", async ({ page }) => {
   await page.goto("/lukiot/kaupungit/");
   await expect(page).toHaveTitle(`Lukiot kunnittain – keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}`);
   await expect(page.getByRole("heading", { level: 1, name: "Lukiot kunnittain", exact: true })).toBeVisible();
-  await expect(page.getByText(`Valitse kunta ja katso lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}.`)).toBeVisible();
+  await expect(
+    page.getByText(`Valitse kunta ja katso lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}.`),
+  ).toBeVisible();
   await page.getByRole("textbox", { name: "Hae kuntaa" }).fill("Akaa");
 
   const list = page.getByRole("main").getByRole("list");

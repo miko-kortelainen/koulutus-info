@@ -2,7 +2,7 @@ import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { expect, test, vi } from "vitest";
-import QuickLinkTabs from "@/pages/index/components/QuickLinkTabs";
+import QuickLinkTabs from "@/components/quickLinks/QuickLinkTabs";
 import { renderWithChakra } from "@/test/render";
 
 function ControlledQuickLinkTabs() {
