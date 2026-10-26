@@ -7,11 +7,12 @@
 Yhteishaku.app helps you explore Finnish joint application data for higher education and upper secondary schools. The
 site includes:
 
-- Applicant numbers
-- Admission cutoffs
+- Applicant numbers and applicant profiles
+- Admission cutoffs and matriculation exam grade boundaries
 - Upper secondary school admission averages
 - Degree programmes
-- Trends
+- Trends and education-need forecasts
+- Student feedback
 - A certificate-based admission score calculator
 
 ### Development tools

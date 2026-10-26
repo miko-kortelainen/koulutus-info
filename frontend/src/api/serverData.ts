@@ -206,6 +206,14 @@ export const readYoPisterajat = (): YoPisterajatRound[] => {
 export const readLukioKeskiarvot = (): LukioKeskiarvoEntry[] =>
   readPublicData(LUKIO_KESKIARVOT_DATA_PATH, parseLukioKeskiarvot);
 
+export const lukioKuntaNames = (): string[] => {
+  const names = [...new Set(readLukioKeskiarvot().map((entry) => entry.kunta))].sort((a, b) =>
+    a.localeCompare(b, "fi"),
+  );
+  assertNoSlugCollisions(names, "Lukio kunta");
+  return names;
+};
+
 export const lukioSchoolNames = (): string[] => {
   const names = [...new Set(readLukioKeskiarvot().map((entry) => entry.koulu))].sort((a, b) =>
     a.localeCompare(b, "fi"),
