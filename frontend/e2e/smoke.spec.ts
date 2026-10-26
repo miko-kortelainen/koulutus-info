@@ -931,6 +931,58 @@ test("/lukiot: kunta filter shows that municipality's lukiot", async ({ page }) 
   await expect(card.getByText("7,00")).toBeVisible();
 });
 
+test("/lukiot/kaupungit: searches for a municipality", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/lukiot/kaupungit/");
+  await expect(page).toHaveTitle(`Lukiot kunnittain – keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}`);
+  await expect(page.getByRole("heading", { level: 1, name: "Lukiot kunnittain", exact: true })).toBeVisible();
+  await expect(page.getByText(`Valitse kunta ja katso lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}.`)).toBeVisible();
+  await page.getByRole("textbox", { name: "Hae kuntaa" }).fill("Akaa");
+
+  const list = page.getByRole("main").getByRole("list");
+  await expect(list.getByRole("link")).toHaveCount(1);
+  const kunta = list.getByRole("link", { name: "Akaa", exact: true });
+  await expect(kunta).toBeVisible();
+  await expect(kunta.getByText("1 lukio")).toBeVisible();
+  await kunta.click();
+  await expect(page).toHaveURL(/\/lukiot\/kaupungit\/akaa\/$/);
+});
+
+test("/lukiot/kaupungit: paginates municipalities", async ({ page }) => {
+  await page.goto("/lukiot/kaupungit/");
+  const list = page.getByRole("main").getByRole("list");
+  await expect(list.getByRole("link")).toHaveCount(20);
+  await expect(list.getByRole("link", { name: "Akaa", exact: true })).toBeVisible();
+
+  await page.getByRole("button", { name: "Seuraava sivu" }).click();
+  await expect(list.getByRole("link", { name: "Akaa", exact: true })).toHaveCount(0);
+  await expect(list.getByRole("link")).toHaveCount(20);
+
+  await page.getByRole("button", { name: "Edellinen sivu" }).click();
+  await expect(list.getByRole("link", { name: "Akaa", exact: true })).toBeVisible();
+});
+
+test("/lukiot/kaupungit: opens a municipality and its school", async ({ page }) => {
+  await page.goto("/lukiot/");
+  await page.getByRole("link", { name: "Katso lukiot kunnittain" }).click();
+  await expect(page).toHaveURL(/\/lukiot\/kaupungit\/$/);
+  await page.getByRole("link", { name: "Akaa", exact: true }).click();
+
+  await expect(page).toHaveURL(/\/lukiot\/kaupungit\/akaa\/$/);
+  await expect(page).toHaveTitle(`Akaan lukiot keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}`);
+  await expect(
+    page.getByRole("heading", { level: 1, name: `Akaan lukiot keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}` }),
+  ).toBeVisible();
+  const card = page.getByRole("article", { name: `Akaan lukio keskiarvot ${LUKIO_KESKIARVOT_YEAR}` });
+  await expect(card.getByText("Lukion yleislinja")).toBeVisible();
+  await expect(card.getByText("7,00")).toBeVisible();
+  await card.getByRole("link", { name: "Akaan lukio: keskiarvorajat ja linjat" }).click();
+  await expect(page).toHaveURL(/\/lukiot\/akaan-lukio\/$/);
+  await expect(
+    page.getByRole("heading", { level: 1, name: `Akaan lukio keskiarvot ${LUKIO_KESKIARVOT_YEAR}` }),
+  ).toBeVisible();
+});
+
 test("/trendit: loads trend cards", async ({ page }) => {
   await page.goto("/trendit/");
   await expect(page.getByRole("heading", { name: "Suosituimmat koulutusalat" })).toBeVisible();
