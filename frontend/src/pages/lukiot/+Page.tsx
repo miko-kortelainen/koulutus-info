@@ -1,4 +1,4 @@
-import { Accordion, Box, Checkbox, Heading, Input, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Box, Checkbox, Heading, Input, Link, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { HiCheckCircle } from "react-icons/hi";
 import { useData } from "vike-react/useData";
@@ -147,6 +147,9 @@ export default function LukiotPage() {
       />
       <PageContainer align="flex-start">
         {controls}
+        <Link href="/lukiot/kaupungit/" textDecoration="underline">
+          Lukiot kunnittain
+        </Link>
         {schoolAccordions}
         <Pagination count={schools.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
       </PageContainer>
