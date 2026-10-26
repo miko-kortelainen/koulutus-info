@@ -146,10 +146,10 @@ export default function LukiotPage() {
         title={`Lukioiden keskiarvorajat ${LUKIO_KESKIARVOT_YEAR}`}
       />
       <PageContainer align="flex-start">
-        {controls}
-        <Link href="/lukiot/kaupungit/" textDecoration="underline">
-          Lukiot kunnittain
+        <Link fontSize={{ base: "sm", md: "inherit" }} href="/lukiot/kaupungit/" textDecoration="underline">
+          Katso lukiot kunnittain
         </Link>
+        {controls}
         {schoolAccordions}
         <Pagination count={schools.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
       </PageContainer>
