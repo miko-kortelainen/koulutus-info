@@ -14,9 +14,8 @@ test("shows tools for the selected education level", async () => {
     },
   );
   const user = userEvent.setup();
-  renderWithChakra(<ToolsPage title="Hakijalle" />);
+  renderWithChakra(<ToolsPage />);
 
-  expect(screen.getByRole("heading", { name: "Hakijalle" })).toBeInTheDocument();
   expect(
     within(screen.getByRole("tabpanel", { name: "Toinen aste" })).getByRole("link", { name: /^lukiot/ }),
   ).toHaveAttribute("href", "/lukiot/");

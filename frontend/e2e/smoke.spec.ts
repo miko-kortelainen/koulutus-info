@@ -153,6 +153,20 @@ for (const [link, heading] of [
   });
 }
 
+test("opolle page links to site information and contact", async ({ page }) => {
+  await page.goto("/opolle/");
+  await expect(page.getByRole("heading", { name: "Tietoa tästä sivustosta" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /^anna palautetta/ })).toHaveAttribute("href", "/palaute/");
+  await expect(page.getByRole("link", { name: /^ota yhteyttä/ })).toHaveAttribute(
+    "href",
+    "mailto:miko@kortelainen.dev",
+  );
+  await page.getByRole("link", { name: /^usein kysytyt kysymykset/ }).click();
+  await expect(page).toHaveURL(/\/ukk\/$/);
+  await expect(page.getByRole("button", { name: "Mistä sivulla näytettävä data on peräisin?" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Kuinka usein tiedot päivittyvät?" })).toBeVisible();
+});
+
 test("iPhone Safari users can dismiss the install tip and still find the guide in UKK", async ({ page }) => {
   await page.addInitScript(() => {
     Object.defineProperties(navigator, {

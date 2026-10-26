@@ -1,4 +1,3 @@
-import { Heading, Stack } from "@chakra-ui/react";
 import { useState } from "react";
 import { HiOutlineBookOpen, HiOutlineChartBar, HiOutlineClipboardList, HiOutlineTrendingUp } from "react-icons/hi";
 import { quickLinkSections } from "@/components/quickLinks/quickLinks";
@@ -39,19 +38,8 @@ const sections = [
   },
 ];
 
-interface ToolsPageProps {
-  title: string;
-}
-
-export default function ToolsPage({ title }: ToolsPageProps) {
+export default function ToolsPage() {
   const [section, setSection] = useState(sections[0].id);
 
-  return (
-    <Stack gap={6} width="100%">
-      <Heading as="h1" size="lg">
-        {title}
-      </Heading>
-      <QuickLinkTabs onValueChange={setSection} sections={sections} value={section} />
-    </Stack>
-  );
+  return <QuickLinkTabs onValueChange={setSection} sections={sections} value={section} />;
 }
