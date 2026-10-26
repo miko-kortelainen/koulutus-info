@@ -96,6 +96,8 @@ const lastmodFor = (path: string) => {
 const paths = [
   "/",
   "/asenna/",
+  "/hakijalle/",
+  "/opolle/",
   "/hakijamaarat/",
   "/hakijaprofiili/",
   "/koulutukset/",
