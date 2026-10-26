@@ -201,7 +201,6 @@ test("nav links navigate to all pages", async ({ page }) => {
     ["pisterajat", "/pisterajat/", `Pisterajat ${DEFAULT_CUTOFF_YEAR}`],
     ["koulut", "/koulut/", "Koulut"],
     ["oma hakulista", "/oma-hakulista/", "Oma hakulista"],
-    ["trendit", "/trendit/", "Trendit"],
     ["palaute", "/palaute/", "Palaute"],
     ["ukk", "/ukk/", "Usein kysytyt kysymykset"],
   ] as const) {

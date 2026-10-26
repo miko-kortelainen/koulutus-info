@@ -9,7 +9,6 @@ import {
   HiOutlineLibrary,
   HiOutlineQuestionMarkCircle,
   HiOutlineSparkles,
-  HiOutlineTrendingUp,
 } from "react-icons/hi";
 import { ColorModeButton } from "@/components/color-mode";
 import { COLORS } from "@/theme";
@@ -50,12 +49,6 @@ const links = [
     label: "oma hakulista",
     description: "Katso tallentamasi koulutukset",
     icon: HiOutlineHeart,
-  },
-  {
-    href: "/trendit/",
-    label: "trendit",
-    description: "Vertaa alojen ja koulujen hakijamääriä",
-    icon: HiOutlineTrendingUp,
   },
   { href: "/ukk/", label: "ukk", description: "Usein kysytyt kysymykset", icon: HiOutlineQuestionMarkCircle },
   { href: "/palaute/", label: "palaute", description: "Anna palautetta tai kehitysehdotus", icon: HiOutlineChatAlt2 },
