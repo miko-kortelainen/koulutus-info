@@ -14,6 +14,7 @@ import {
   cutoffSchoolNames,
   feedbackSchoolNames,
   formatSchoolName,
+  lukioKuntaNames,
   lukioSchoolNames,
   readAllPrograms,
   readCurrentYearStatistics,
@@ -187,8 +188,19 @@ test("sorts and resolves lukio averages", () => {
   useDataFiles({ "pisterajat/lukio/lukio-keskiarvot-2026.json": aLukio });
 
   expect(lukioSchoolNames()).toEqual(["Akaan lukio", "Äänekosken lukio"]);
+  expect(lukioKuntaNames()).toEqual(["Akaa", "Äänekoski"]);
   expect(resolveLukioSchool("aanekosken-lukio")).toBe("Äänekosken lukio");
   expect(readLukioKeskiarvotForSchool("Äänekosken lukio")).toEqual([aLukio[1], aLukio[0]]);
+});
+
+test("rejects colliding lukio municipality slugs", () => {
+  useDataFiles({
+    "pisterajat/lukio/lukio-keskiarvot-2026.json": [
+      { alinKeskiarvo: 7, koulu: "Lukio", kunta: "Ääni", linja: "Yleislinja", yleislinja: true },
+      { alinKeskiarvo: 7, koulu: "Toinen lukio", kunta: "Aani", linja: "Yleislinja", yleislinja: true },
+    ],
+  });
+  expect(() => lukioKuntaNames()).toThrow("slug collision");
 });
 
 test("reads YO pisterajat newest round first", () => {
