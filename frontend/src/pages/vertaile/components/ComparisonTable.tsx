@@ -119,6 +119,17 @@ function paineBadge(paine: number | null) {
   ) : null;
 }
 
+function roundHeading(entry: StatisticsEntry, year: YearOption) {
+  return (
+    <>
+      <Heading as="h2" size="sm" textWrap="pretty">
+        {entry.hakukohde}
+      </Heading>
+      <Text fontWeight="normal">{statisticsRoundShortLabel(year)}</Text>
+    </>
+  );
+}
+
 export default function ComparisonTable({ a, b, yearA, yearB }: ComparisonTableProps) {
   const sisaanpaasyprosenttiA = getSisaanpaasyprosentti(a.valitutLkm, a.kaikkiHakijatLkm);
   const sisaanpaasyprosenttiB = getSisaanpaasyprosentti(b.valitutLkm, b.kaikkiHakijatLkm);
@@ -128,25 +139,7 @@ export default function ComparisonTable({ a, b, yearA, yearB }: ComparisonTableP
   return (
     <Table.Root aria-label="Hakukohteiden vertailu" tableLayout="fixed" variant="line">
       <Table.Header>
-        <PairRow
-          header
-          left={
-            <>
-              <Heading as="h2" size="sm" textWrap="pretty">
-                {a.hakukohde}
-              </Heading>
-              <Text fontWeight="normal">{statisticsRoundShortLabel(yearA)}</Text>
-            </>
-          }
-          right={
-            <>
-              <Heading as="h2" size="sm" textWrap="pretty">
-                {b.hakukohde}
-              </Heading>
-              <Text fontWeight="normal">{statisticsRoundShortLabel(yearB)}</Text>
-            </>
-          }
-        />
+        <PairRow header left={roundHeading(a, yearA)} right={roundHeading(b, yearB)} />
       </Table.Header>
       <Table.Body>
         <PairRow
