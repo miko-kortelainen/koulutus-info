@@ -875,6 +875,14 @@ test("/koulut/:slug/pisterajat: shows complete current-round programme cutoff ca
       name: `Centria-ammattikorkeakoulu pisterajat ${DEFAULT_CUTOFF_YEAR}`,
     }),
   ).toBeVisible();
+  await expect(
+    page.getByText("Yhteishaun valintakokeiden ja todistusvalinnan alimmat hyväksytyt pisteet aloittain."),
+  ).toBeVisible();
+  await expect(page.getByRole("combobox", { name: "Järjestys" })).toHaveCount(0);
+  const search = page.getByRole("textbox", { name: "Hae toteutusta" });
+  const round = page.getByRole("combobox", { name: "Hakukierros" });
+  await expect(round).toBeVisible();
+  expect((await round.boundingBox())?.height).toBe((await search.boundingBox())?.height);
   await expect(page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Tekniikan alat" })).toBeVisible();
 
