@@ -725,7 +725,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   }).toPass({ timeout: 10000 });
 
   await page.getByRole("link", { name: "Vertaile" }).click();
-  await expect(page).toHaveURL(new RegExp(`/vertaile/\\?a=.+&b=.+&vuosi=${CURRENT_YEAR}$`));
+  await expect(page).toHaveURL(new RegExp(`/vertaile/\\?a=.+&b=.+&vuosi=${CURRENT_YEAR}&vuosi_b=${CURRENT_YEAR}$`));
   await page.reload();
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
@@ -736,6 +736,27 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await page.getByRole("button", { name: "Jaa tämä vertailu" }).click();
   // the label flips only after clipboard writeText resolves, so this asserts the copy succeeded
   await expect(page.getByRole("button", { name: "Linkki kopioitu" })).toBeVisible();
+});
+
+test("/vertaile: compares hakukohteet from different yhteishaku rounds", async ({ page }) => {
+  await page.goto("/hakijamaarat/");
+  await expect(async () => {
+    await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+    await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(1, { timeout: 500 });
+  }).toPass({ timeout: 10000 });
+  await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
+  await expect(page.getByRole("button", { name: "Vertaile", exact: true }).first()).toBeVisible();
+  await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+  await page.getByRole("link", { name: "Vertaile" }).click();
+  await expect(page).toHaveURL(/vuosi=2026_syksy&vuosi_b=2025_syksy$/);
+  await expect(page.getByRole("table", { name: "Hakukohteiden vertailu" })).toBeVisible();
+  await expect(page.getByText("syksy 2026", { exact: true })).toBeVisible();
+  await expect(page.getByText("syksy 2025", { exact: true })).toBeVisible();
+  const oldLink = new URL(page.url());
+  oldLink.searchParams.set("b", oldLink.searchParams.get("a") ?? "");
+  oldLink.searchParams.delete("vuosi_b");
+  await page.goto(oldLink.toString());
+  await expect(page.getByText("syksy 2026", { exact: true })).toHaveCount(2);
 });
 
 test("/koulut: switches which yhteishaku hakijamäärät are shown", async ({ page }) => {

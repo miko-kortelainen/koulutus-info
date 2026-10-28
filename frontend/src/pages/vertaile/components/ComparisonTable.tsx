@@ -1,4 +1,4 @@
-import { Badge, Card, Heading, HStack, Stat, Table } from "@chakra-ui/react";
+import { Badge, Card, Heading, HStack, Stat, Table, Text } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 import { HiOutlineArrowCircleDown, HiOutlineArrowCircleUp } from "react-icons/hi";
 import {
@@ -10,10 +10,13 @@ import {
   ratioFormat,
 } from "@/lib/statistics";
 import type { StatisticsEntry } from "@/types.gen";
+import { statisticsRoundShortLabel, type YearOption } from "@/config/yearOptions";
 
 interface ComparisonTableProps {
   a: StatisticsEntry;
   b: StatisticsEntry;
+  yearA: YearOption;
+  yearB: YearOption;
 }
 
 type Trend = "up" | "down" | undefined;
@@ -116,7 +119,7 @@ function paineBadge(paine: number | null) {
   ) : null;
 }
 
-export default function ComparisonTable({ a, b }: ComparisonTableProps) {
+export default function ComparisonTable({ a, b, yearA, yearB }: ComparisonTableProps) {
   const sisaanpaasyprosenttiA = getSisaanpaasyprosentti(a.valitutLkm, a.kaikkiHakijatLkm);
   const sisaanpaasyprosenttiB = getSisaanpaasyprosentti(b.valitutLkm, b.kaikkiHakijatLkm);
   const paineA = getHakijapaine(a);
@@ -128,14 +131,20 @@ export default function ComparisonTable({ a, b }: ComparisonTableProps) {
         <PairRow
           header
           left={
-            <Heading as="h2" size="sm" textWrap="pretty">
-              {a.hakukohde}
-            </Heading>
+            <>
+              <Heading as="h2" size="sm" textWrap="pretty">
+                {a.hakukohde}
+              </Heading>
+              <Text fontWeight="normal">{statisticsRoundShortLabel(yearA)}</Text>
+            </>
           }
           right={
-            <Heading as="h2" size="sm" textWrap="pretty">
-              {b.hakukohde}
-            </Heading>
+            <>
+              <Heading as="h2" size="sm" textWrap="pretty">
+                {b.hakukohde}
+              </Heading>
+              <Text fontWeight="normal">{statisticsRoundShortLabel(yearB)}</Text>
+            </>
           }
         />
       </Table.Header>
