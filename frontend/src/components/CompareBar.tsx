@@ -1,17 +1,22 @@
 import { ActionBar, Button, HStack, Portal, Tag } from "@chakra-ui/react";
 import { COLORS } from "@/theme";
+import { statisticsRoundShortLabel, type YearOption } from "@/config/yearOptions";
 import type { StatisticsEntry } from "@/types.gen";
 
-interface CompareBarProps {
-  selected: StatisticsEntry[];
-  year: string;
-  onRemove: (degree: StatisticsEntry) => void;
+export interface CompareSelection {
+  degree: StatisticsEntry;
+  year: YearOption;
 }
 
-export default function CompareBar({ selected, year, onRemove }: CompareBarProps) {
+interface CompareBarProps {
+  selected: CompareSelection[];
+  onRemove: (selection: CompareSelection) => void;
+}
+
+export default function CompareBar({ selected, onRemove }: CompareBarProps) {
   const compareHref =
     selected.length === 2
-      ? `/vertaile/?a=${encodeURIComponent(selected[0].kooditHakukohde)}&b=${encodeURIComponent(selected[1].kooditHakukohde)}&vuosi=${year}`
+      ? `/vertaile/?a=${encodeURIComponent(selected[0].degree.kooditHakukohde)}&b=${encodeURIComponent(selected[1].degree.kooditHakukohde)}&vuosi=${selected[0].year}&vuosi_b=${selected[1].year}`
       : undefined;
 
   return (
@@ -24,11 +29,21 @@ export default function CompareBar({ selected, year, onRemove }: CompareBarProps
             w={{ base: "90%", md: "65rem" }}
           >
             <HStack flex={1} gap={2} minW={0}>
-              {selected.map((degree) => (
-                <Tag.Root flex={1} key={degree.kooditHakukohde} minW={0} size={{ base: "lg", md: "xl" }}>
-                  <Tag.Label truncate>{degree.hakukohde}</Tag.Label>
+              {selected.map((selection) => (
+                <Tag.Root
+                  flex={1}
+                  key={`${selection.year}-${selection.degree.kooditHakukohde}`}
+                  minW={0}
+                  size={{ base: "lg", md: "xl" }}
+                >
+                  <Tag.Label truncate>
+                    {selection.degree.hakukohde} ({statisticsRoundShortLabel(selection.year)})
+                  </Tag.Label>
                   <Tag.EndElement>
-                    <Tag.CloseTrigger aria-label={`Poista ${degree.hakukohde}`} onClick={() => onRemove(degree)} />
+                    <Tag.CloseTrigger
+                      aria-label={`Poista ${selection.degree.hakukohde}, ${statisticsRoundShortLabel(selection.year)}`}
+                      onClick={() => onRemove(selection)}
+                    />
                   </Tag.EndElement>
                 </Tag.Root>
               ))}
