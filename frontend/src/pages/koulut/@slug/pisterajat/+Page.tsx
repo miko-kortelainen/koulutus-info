@@ -1,4 +1,4 @@
-import { Accordion, Box, Heading, Separator, Stack, Tag, Text, VStack } from "@chakra-ui/react";
+import { Accordion, Box, Heading, Stack, Tag, Text, VStack } from "@chakra-ui/react";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
@@ -10,10 +10,10 @@ import SearchInput from "@/components/SearchInput";
 import { type CutoffRound, compareCutoffRounds, cutoffRoundLabel, cutoffRoundYear } from "@/config/cutoffRounds";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import { alaNamesForAlaParam, filterProgrammesByAlaParam, newestCutoffRoundForAlaParam } from "@/lib/cutoffs";
 import type { CutoffPageData } from "@/pages/koulut/@slug/pisterajat/+data";
-import SortControl from "@/pages/koulut/@slug/pisterajat/components/SortControl";
-import useFilteredProgrammes, { type SortOption } from "@/pages/koulut/@slug/pisterajat/hooks/useFilteredProgrammes";
+import useFilteredProgrammes from "@/pages/koulut/@slug/pisterajat/hooks/useFilteredProgrammes";
 
 const collator = new Intl.Collator("fi");
 
@@ -34,7 +34,6 @@ export default function CutoffPage() {
   );
   const roundItems = useMemo(() => rounds.map((round) => ({ label: cutoffRoundLabel(round), value: round })), [rounds]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [alaDismissed, setAlaDismissed] = useState(false);
   const [selectedRound, setSelectedRound] = useState<CutoffRound>();
   const alaParam = mounted && !alaDismissed ? urlParsed.search.ala : undefined;
@@ -56,7 +55,7 @@ export default function CutoffPage() {
       .filter((p) => p.cutoffs.length > 0);
   }, [programmes, scopedAlaParam, activeRound]);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
-  const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, sortOrder);
+  const filteredProgrammes = useFilteredProgrammes(scopedProgrammes, debouncedSearchTerm, "asc");
   const programmesByAla = useMemo(() => {
     const byAla = new Map<string, typeof filteredProgrammes>();
     for (const programme of filteredProgrammes) {
@@ -66,19 +65,6 @@ export default function CutoffPage() {
     }
     return [...byAla.entries()].sort(([a], [b]) => collator.compare(a, b));
   }, [filteredProgrammes]);
-
-  const header = (
-    <Stack gap={1}>
-      <BackLink href="../" />
-      <Heading as="h1" size="md">
-        {schoolName} pisterajat {cutoffRoundYear(activeRound)}
-      </Heading>
-      <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        Yhteishaun alimmat hyväksytyt pisteet aloittain.
-      </Text>
-      <Separator mt={2} />
-    </Stack>
-  );
 
   const alaFilter =
     selectedAlat.length > 0 ? (
@@ -137,25 +123,30 @@ export default function CutoffPage() {
   );
 
   return (
-    <PageContainer align="flex-start">
-      {header}
-      <PistelaskuriCta />
-      <VStack align="flex-start" flex={1} width="full" zIndex={10}>
-        <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta" value={searchTerm} />
-        <SortControl onChange={setSortOrder} value={sortOrder} />
-        {rounds.length > 1 ? (
-          <OptionSelect
-            ariaLabel="Hakukierros"
-            items={roundItems}
-            onChange={setSelectedRound}
-            placeholder="Valitse hakukierros"
-            size="xs"
-            value={activeRound}
-          />
-        ) : null}
-        {alaFilter}
-      </VStack>
-      {programList}
-    </PageContainer>
+    <>
+      <PageIntro
+        description="Yhteishaun valintakokeiden ja todistusvalinnan alimmat hyväksytyt pisteet aloittain."
+        title={`${schoolName} pisterajat ${cutoffRoundYear(activeRound)}`}
+      />
+      <PageContainer align="flex-start">
+        <BackLink href="../" />
+        <PistelaskuriCta />
+        <VStack align="flex-start" flex={1} width="full" zIndex={10}>
+          <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta" value={searchTerm} />
+          {rounds.length > 1 ? (
+            <OptionSelect
+              ariaLabel="Hakukierros"
+              items={roundItems}
+              onChange={setSelectedRound}
+              placeholder="Valitse hakukierros"
+              size="sm"
+              value={activeRound}
+            />
+          ) : null}
+          {alaFilter}
+        </VStack>
+        {programList}
+      </PageContainer>
+    </>
   );
 }
