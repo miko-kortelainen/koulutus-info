@@ -73,7 +73,7 @@ export default function ComparePage() {
 
   return (
     <>
-      <PageIntro description={<>Vertaa kahta hakukohdetta rinnakkain.</>} title="Vertailu" />
+      <PageIntro description="Vertaa kahta hakukohdetta rinnakkain." title="Vertailu" />
       <PageContainer align="flex-start">{body}</PageContainer>
     </>
   );
