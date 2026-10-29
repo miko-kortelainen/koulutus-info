@@ -476,6 +476,7 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("0 tulosta", { exact: true })).toBeVisible();
 
   await search.clear();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
@@ -556,6 +557,8 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   await page.goto("/koulutukset/");
   await expect(page.getByText("Hae opintopolussa").first()).toBeVisible({ timeout: 10000 });
   const cards = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Tallenna" }) });
+  const resultCount = page.getByText(/^\d[\d\s]* tulos(?:ta)?$/);
+  const initialCount = await resultCount.textContent();
   const initialCards = await cards.allTextContents();
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
@@ -569,6 +572,7 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
 
   const schoolLinks = cards.getByRole("link", { name: schoolName, exact: true });
   await setFilterOption(page, "Koulu", schoolName, true);
+  await expect(resultCount).not.toHaveText(initialCount ?? "");
   await expect
     .poll(async () => {
       const cardCount = await cards.count();
@@ -577,6 +581,7 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
     .toBe(true);
 
   await setFilterOption(page, "Koulu", schoolName, false);
+  await expect(resultCount).toHaveText(initialCount ?? "");
   await expect(schoolLinks).toHaveCount(0);
 });
 
