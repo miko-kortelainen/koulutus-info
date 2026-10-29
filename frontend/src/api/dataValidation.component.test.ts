@@ -12,6 +12,7 @@ import {
   parseStudentFeedback,
   parseYoPisterajat,
 } from "@/api/dataValidation";
+import { PROGRAMME_ROUNDS } from "@/config/programmeRounds";
 
 const statistics = {
   kooditHakukohde: "1.2.246.562.20.00000000001",
@@ -102,6 +103,23 @@ test("rejects malformed nested programme data", () => {
   expect(() => parseCurrentPrograms([{ ...school, toteutukset: [toteutus] }], "current_programs.json")).toThrow(
     "Invalid data in current_programs.json",
   );
+});
+
+test("accepts a programme without koulutusalat and rejects malformed koulutusalat", () => {
+  const toteutus = { ...school.toteutukset[0], koulutusalat: undefined };
+  const programme = { ...school, toteutukset: [toteutus] };
+
+  expect(parseCurrentPrograms([programme], "current_programs.json")).toEqual([programme]);
+  expect(() =>
+    parseCurrentPrograms([{ ...school, toteutukset: [{ ...toteutus, koulutusalat: [1] }] }], "current_programs.json"),
+  ).toThrow("Invalid data in current_programs.json");
+});
+
+test("parses the configured programme datasets", () => {
+  for (const round of PROGRAMME_ROUNDS) {
+    const file = `current_programs-${round.replaceAll("_", "-")}.json`;
+    expect(() => parseCurrentPrograms(JSON.parse(readFileSync(`public/data/${file}`, "utf8")), file)).not.toThrow();
+  }
 });
 
 test("rejects malformed school catalog entries", () => {

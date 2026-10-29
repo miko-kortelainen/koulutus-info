@@ -134,9 +134,6 @@ func alaNamesFromKoodiUrit(detail *koulutusDetail) ([]string, error) {
 			}
 		}
 	}
-	if len(names) == 0 {
-		return nil, fmt.Errorf("no OKM ohjauksen ala codes in koulutus detail")
-	}
 	sort.Strings(names)
 	return names, nil
 }

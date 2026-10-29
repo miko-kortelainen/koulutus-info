@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T13:30:58.496128355Z",
+  "generatedAt": "2026-10-29T13:41:43.629144905Z",
   "statisticsRounds": [
     "2026_syksy",
     "2026_kevat",
@@ -17,7 +17,7 @@
   ],
   "currentStatisticsRound": "2026_syksy",
   "statisticsUpdatedAt": "2026-10-20T13:30:58.496128355Z",
-  "programmesUpdatedAt": "2026-09-14T22:14:35.344534843Z",
+  "programmesUpdatedAt": "2026-10-29T13:41:43.629144905Z",
   "programmesHaut": [
     {
       "id": "2027_kevat_1",
