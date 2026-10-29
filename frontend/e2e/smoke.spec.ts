@@ -266,6 +266,18 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
   await expect(page.getByText("Hakijat").first()).toBeVisible();
 });
 
+test("/hakijamaarat: shows the update date and source below pagination", async ({ page }) => {
+  await page.goto("/hakijamaarat/");
+  const source = page.getByText(/^Tiedot päivitetty: \d{1,2}\.\d{1,2}\.\d{4}\s*Lähde: Opetushallinnon tilastopalvelu Vipunen$/);
+  await expect(source).toBeVisible();
+  const pagination = await page.getByRole("navigation", { name: "Sivutus" }).boundingBox();
+  const details = await source.boundingBox();
+  const footer = await page.getByRole("contentinfo").boundingBox();
+  if (!pagination || !details || !footer) throw new Error("Expected pagination, source and footer to be visible");
+  expect(details.y).toBeGreaterThanOrEqual(pagination.y + pagination.height);
+  expect(footer.y).toBeGreaterThanOrEqual(details.y + details.height);
+});
+
 test("/pistelaskuri: searches active cutoffs", async ({ page }) => {
   await openCalculator(page);
   await expect(page.getByText(/Pisteesi riittää arviolta – \/ \d+ toteutukseen/)).toBeVisible();
