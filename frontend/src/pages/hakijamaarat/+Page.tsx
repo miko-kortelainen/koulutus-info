@@ -204,20 +204,7 @@ export default function StatsListPage() {
 
   return (
     <>
-      <PageIntro
-        description={
-          <>
-            Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.
-            {ssrData.statisticsUpdatedAt ? (
-              <>
-                <br />
-                Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)} (seuraava 20.11.2026)
-              </>
-            ) : null}
-          </>
-        }
-        title="Hakijamäärät"
-      />
+      <PageIntro description="Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain." title="Hakijamäärät" />
       <PageContainer align="flex-start">
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
           {sidebar}
@@ -234,6 +221,15 @@ export default function StatsListPage() {
           </Stack>
         </Stack>
 
+        <Text color="fg.muted" fontSize="sm">
+          {ssrData.statisticsUpdatedAt ? (
+            <>
+              Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)}
+              <br />
+            </>
+          ) : null}
+          Lähde: Opetushallinnon tilastopalvelu Vipunen
+        </Text>
         {compareSelection.length > 0 ? <Box h="72px" /> : null}
       </PageContainer>
       <CompareBar onRemove={({ degree, year }) => toggleCompare(degree, year)} selected={compareSelection} />
