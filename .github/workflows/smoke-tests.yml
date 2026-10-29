@@ -6,6 +6,8 @@ on:
     paths:
       - frontend/**
       - .github/workflows/smoke-tests.yml
+permissions:
+  contents: read
 jobs:
   smoke:
     runs-on: ubuntu-latest
