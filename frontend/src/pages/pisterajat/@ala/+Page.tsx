@@ -1,28 +1,16 @@
-import { Accordion, Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Heading, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
 import BackLink from "@/components/BackLink";
 import PistelaskuriCta from "@/components/PistelaskuriCta";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
 import { alaMetaDescription } from "@/pages/pisterajat/@ala/alaDescriptions";
 import SchoolProgrammeList from "@/pages/pisterajat/@ala/components/SchoolProgrammeList";
 
 export default function AlaCutoffPage() {
   const { alaName, schools } = useData<AlaPageData>();
-
-  const header = (
-    <Stack gap={1}>
-      <BackLink href="/pisterajat/" />
-      <Heading as="h1" size="md">
-        {alaName} pisterajat {DEFAULT_CUTOFF_YEAR}
-      </Heading>
-      <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-        {alaMetaDescription(alaName, DEFAULT_CUTOFF_YEAR).split(". ")[1]}
-      </Text>
-      <Separator mt={2} />
-    </Stack>
-  );
 
   const schoolAccordions = (
     <Accordion.Root as="ul" collapsible listStyleType="none" multiple width="full">
@@ -48,10 +36,16 @@ export default function AlaCutoffPage() {
   );
 
   return (
-    <PageContainer align="flex-start">
-      {header}
-      <PistelaskuriCta />
-      {schoolAccordions}
-    </PageContainer>
+    <>
+      <PageIntro
+        description={alaMetaDescription(alaName, DEFAULT_CUTOFF_YEAR).split(". ")[1]}
+        title={`${alaName} pisterajat ${DEFAULT_CUTOFF_YEAR}`}
+      />
+      <PageContainer align="flex-start">
+        <BackLink href="/pisterajat/" />
+        <PistelaskuriCta />
+        {schoolAccordions}
+      </PageContainer>
+    </>
   );
 }

@@ -25,8 +25,8 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSa
   const schoolBadge = (
     <Badge
       asChild
-      bg={COLORS.accent}
-      color={COLORS.onAccent}
+      bg="accent"
+      color="onAccent"
       fontWeight="semibold"
       letterSpacing="wide"
       mb={2}
@@ -34,7 +34,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSa
       width="fit"
     >
       <a href={`/koulut/${slugify(schoolName)}/`}>
-        <HiLocationMarker /> {schoolName}
+        <HiLocationMarker aria-hidden="true" /> {schoolName}
       </a>
     </Badge>
   );
@@ -55,7 +55,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSa
             rel="noopener noreferrer"
             target="_blank"
             textDecoration="underline"
-            textDecorationColor={COLORS.accentFg}
+            textDecorationColor="fg.accent"
             textDecorationStyle="dotted"
           >
             Hae opintopolussa
@@ -67,7 +67,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSa
             href={pisterajatURL}
             letterSpacing="wide"
             textDecoration="underline"
-            textDecorationColor={COLORS.accentFg}
+            textDecorationColor="fg.accent"
             textDecorationStyle="dotted"
           >
             Katso alan pisterajat
@@ -95,7 +95,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSa
   return (
     <Card.Root
       as="li"
-      borderColor={favorited ? COLORS.accentFg : undefined}
+      borderColor={favorited ? "fg.accent" : undefined}
       size="md"
       style={index !== undefined ? { viewTransitionName: `oma-hakulista-${toteutus.toteutusOid}` } : undefined}
     >

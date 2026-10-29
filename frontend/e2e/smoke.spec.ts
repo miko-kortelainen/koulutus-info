@@ -1123,7 +1123,7 @@ test("/ennakointi: shows ranked vaje list and filters by sektori", async ({ page
   await expect(page.getByRole("heading", { exact: true, level: 1, name: "Ennakointi" })).toBeVisible();
   await expect(page.getByText("Hoitotyö", { exact: true })).toBeVisible();
 
-  await page.getByLabel("Sektori").selectOption("Yliopisto");
+  await selectOption(page, "Sektori", "Yliopisto");
   await expect(page.getByText("Hoitotyö", { exact: true })).toHaveCount(0);
   await expect(page.getByText("Sosiaalitieteet", { exact: true })).toBeVisible();
 });

@@ -17,7 +17,7 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
 function KynnysehtoBadge({ passed }: { passed?: boolean }) {
   if (passed === true) {
     return (
-      <Badge alignSelf="flex-start" bg={COLORS.accent} color={COLORS.onAccent} size="sm">
+      <Badge alignSelf="flex-start" bg="accent" color="onAccent" size="sm">
         Kynnysehto täyttyy.
       </Badge>
     );
@@ -143,7 +143,7 @@ export default function ScoreResultCard({
                 {result.koulutusala}
               </Text>
             ) : null}
-            <Badge alignSelf="flex-start" border="1px solid" borderColor={COLORS.accentFg} size="sm" variant="surface">
+            <Badge alignSelf="flex-start" border="1px solid" borderColor="fg.accent" size="sm" variant="surface">
               {result.selectionMethod}
             </Badge>
           </Stack>

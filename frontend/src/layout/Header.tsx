@@ -114,7 +114,7 @@ export default function Header() {
                                 color="fg.muted"
                                 fontSize="sm"
                                 textDecor="underline"
-                                textDecorationColor={COLORS.accentFg}
+                                textDecorationColor="fg.accent"
                                 textDecorationStyle="dotted"
                                 textDecorationThickness={2}
                               >

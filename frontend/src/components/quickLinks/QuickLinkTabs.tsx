@@ -1,7 +1,6 @@
 import { SimpleGrid, Tabs } from "@chakra-ui/react";
 import QuickLinkCard from "@/components/quickLinks/QuickLinkCard";
 import { quickLinkSections } from "@/components/quickLinks/quickLinks";
-import { COLORS } from "@/theme";
 
 interface QuickLinkTabsProps {
   sections?: typeof quickLinkSections;
@@ -18,7 +17,7 @@ export default function QuickLinkTabs({ value, onValueChange, sections = quickLi
             {heading}
           </Tabs.Trigger>
         ))}
-        <Tabs.Indicator bg={COLORS.surfaceMuted} />
+        <Tabs.Indicator bg="bg.muted" />
       </Tabs.List>
       {sections.map(({ id, links }) => (
         <Tabs.Content key={id} pt={6} px={0} value={id}>

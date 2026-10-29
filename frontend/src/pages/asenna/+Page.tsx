@@ -1,5 +1,6 @@
 import { Heading, Image, Stack, Text } from "@chakra-ui/react";
 import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 
 const steps = [
   {
@@ -30,40 +31,37 @@ const steps = [
 
 export default function InstallGuidePage() {
   return (
-    <PageContainer align="flex-start">
-      <Stack gap={2}>
-        <Heading as="h1" size="lg">
-          Lisää yhteishaku.app iPhonesi kotinäytölle.
-        </Heading>
-        <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-          Kotinäytöltä sivu löytyy nopeasti ja avautuu oman sovelluksen tapaan.
-        </Text>
-      </Stack>
-
-      <Stack as="ol" gap={12} listStyleType="none" m={0} maxW="2xl" p={0}>
-        {steps.map((step, index) => (
-          <Stack as="li" gap={4} key={step.image}>
-            <Stack gap={1}>
-              <Heading as="h2" size="md">
-                {index + 1}. {step.title}
-              </Heading>
-              <Text color="fg.muted" fontSize="sm" textWrap="pretty">
-                {step.description}
-              </Text>
+    <>
+      <PageIntro
+        description="Kotinäytöltä sivu löytyy nopeasti ja avautuu oman sovelluksen tapaan."
+        title="Lisää yhteishaku.app iPhonesi kotinäytölle."
+      />
+      <PageContainer align="flex-start">
+        <Stack as="ol" gap={8} listStyleType="none" m={0} maxW="2xl" p={0}>
+          {steps.map((step, index) => (
+            <Stack as="li" gap={4} key={step.image}>
+              <Stack gap={1}>
+                <Heading as="h2" size="md">
+                  {index + 1}. {step.title}
+                </Heading>
+                <Text color="fg.muted" fontSize="sm" textWrap="pretty">
+                  {step.description}
+                </Text>
+              </Stack>
+              <Image
+                alt={step.alt}
+                borderColor="border"
+                borderRadius="xl"
+                borderWidth="1px"
+                loading="lazy"
+                maxW="24rem"
+                src={step.image}
+                width="100%"
+              />
             </Stack>
-            <Image
-              alt={step.alt}
-              borderColor="border"
-              borderRadius="xl"
-              borderWidth="1px"
-              loading="lazy"
-              maxW="24rem"
-              src={step.image}
-              width="100%"
-            />
-          </Stack>
-        ))}
-      </Stack>
-    </PageContainer>
+          ))}
+        </Stack>
+      </PageContainer>
+    </>
   );
 }
