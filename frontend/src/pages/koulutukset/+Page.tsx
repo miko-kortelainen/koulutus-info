@@ -1,4 +1,4 @@
-import { Accordion, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Link, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
@@ -6,6 +6,7 @@ import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
 import SearchInput from "@/components/SearchInput";
+import { toaster } from "@/components/Toaster";
 import {
   CURRENT_PROGRAMME_ROUND,
   PROGRAMME_ROUND_OPTIONS,
@@ -155,7 +156,17 @@ export default function SchoolsListPage() {
     <Stack as="ul" direction="column" gap={4} listStyleType="none">
       {paginated.length === 0 ? <Text as="li">Ei tuloksia hakusanoilla.</Text> : null}
       {paginated.map((t) => (
-        <SchoolCard key={t.toteutusOid} toteutus={t} />
+        <SchoolCard
+          key={t.toteutusOid}
+          onSaved={() =>
+            toaster.create({
+              title: "Koulutus lisätty omalle hakulistalle.",
+              description: <Link color="toastFg" href="/oma-hakulista/" textDecoration="underline">Näytä</Link>,
+              type: "success",
+            })
+          }
+          toteutus={t}
+        />
       ))}
     </Stack>
   );

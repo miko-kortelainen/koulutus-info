@@ -12,9 +12,10 @@ interface SchoolCardProps {
   index?: number;
   onMoveUp?: () => void;
   onMoveDown?: () => void;
+  onSaved?: () => void;
 }
 
-export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: SchoolCardProps) {
+export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSaved }: SchoolCardProps) {
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorited = isFavorite(toteutus.toteutusOid);
   const toteutusURL = `https://opintopolku.fi/konfo/fi/toteutus/${toteutus.toteutusOid}`;
@@ -78,7 +79,10 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
         height="fit"
         onClick={() => {
           toggleFavorite(toteutus);
-          if (!favorited) window.sa_event?.("save_degree");
+          if (!favorited) {
+            window.sa_event?.("save_degree");
+            onSaved?.();
+          }
         }}
         size="xl"
         variant="ghost"
