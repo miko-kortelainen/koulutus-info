@@ -630,7 +630,9 @@ test("/koulutukset: saving a card lists it on /oma-hakulista and unsaving clears
     await expect(removeFavorite).toBeVisible({ timeout: 1000 });
   }).toPass();
 
-  await page.goto("/oma-hakulista/");
+  await expect(page.getByText("Koulutus lisätty omalle hakulistalle.", { exact: true })).toBeVisible();
+  await page.getByRole("link", { name: "Näytä", exact: true }).click();
+  await expect(page).toHaveURL(/\/oma-hakulista\/$/);
   await expect(page.getByText("Ei vielä tallennettuja koulutuksia.")).not.toBeVisible();
   await expect(page.getByRole("button", { name: "Poista tallennetuista" })).toHaveCount(1);
 

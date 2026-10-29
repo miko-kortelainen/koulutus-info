@@ -1,6 +1,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ColorModeProvider } from "@/components/color-mode";
+import Toaster from "@/components/Toaster";
 import { system } from "@/theme";
 
 let browserQueryClient: QueryClient | undefined;
@@ -17,7 +18,10 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider value={system}>
-        <ColorModeProvider>{children}</ColorModeProvider>
+        <ColorModeProvider>
+          {children}
+          <Toaster />
+        </ColorModeProvider>
       </ChakraProvider>
     </QueryClientProvider>
   );
