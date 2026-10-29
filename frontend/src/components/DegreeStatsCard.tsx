@@ -3,7 +3,6 @@ import { memo } from "react";
 import { HiLocationMarker, HiPlus } from "react-icons/hi";
 import { slugify } from "@/lib/slug";
 import { formatCount, formatSisaanpaasyprosentti, getHakijapaine, getTier } from "@/lib/statistics";
-import { COLORS } from "@/theme";
 import type { StatisticsEntry } from "@/types.gen";
 
 interface DegreeStatsCardProps {
@@ -121,9 +120,9 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
       </Badge>
       {onToggleCompare ? (
         <Button
-          bg={isSelected ? COLORS.accent : undefined}
+          bg={isSelected ? "accent" : undefined}
           borderColor="accent"
-          color={isSelected ? COLORS.onAccent : "fg.accent"}
+          color={isSelected ? "onAccent" : "fg.accent"}
           disabled={!isSelected && selectionFull}
           height={6}
           onClick={() => onToggleCompare(degree)}

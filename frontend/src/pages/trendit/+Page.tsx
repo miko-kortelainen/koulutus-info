@@ -1,6 +1,7 @@
-import { Alert, Box, createListCollection, Select, Stack, Text, VisuallyHidden } from "@chakra-ui/react";
+import { Alert, Stack, VisuallyHidden } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
+import OptionSelect from "@/components/OptionSelect";
 import YearControl from "@/components/YearControl";
 import { CURRENT_YEAR, statisticsRoundShortLabel, YEAR_OPTIONS, type YearOption } from "@/config/yearOptions";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
@@ -18,11 +19,8 @@ export default function TrendsPage() {
   const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
   const [compareYear, setCompareYear] = useState<YearOption | "">("");
 
-  const compareCollection = useMemo(
-    () =>
-      createListCollection({
-        items: [{ label: "Ei vertailua", value: "" }, ...YEAR_OPTIONS.filter((y) => y.value !== selectedYear)],
-      }),
+  const compareItems = useMemo(
+    () => [{ label: "Ei vertailua", value: "" as const }, ...YEAR_OPTIONS.filter((y) => y.value !== selectedYear)],
     [selectedYear],
   );
 
@@ -54,51 +52,25 @@ export default function TrendsPage() {
   );
 
   const comparator = (
-    <Box flex={1}>
-      <Text color="fg.muted" fontSize="xs" mb={1}>
-        Yhteishaku
-      </Text>
-      <YearControl
-        onChange={(y) => {
-          setSelectedYear(y);
-          if (compareYear === y) setCompareYear("");
-        }}
-        value={selectedYear}
-      />
-    </Box>
+    <YearControl
+      label="Yhteishaku"
+      onChange={(y) => {
+        setSelectedYear(y);
+        if (compareYear === y) setCompareYear("");
+      }}
+      value={selectedYear}
+    />
   );
 
   const comparand = (
-    <Box flex={1}>
-      <Text color="fg.muted" fontSize="xs" mb={1}>
-        Vertailukohde
-      </Text>
-      <Select.Root
-        collection={compareCollection}
-        onValueChange={(e) => setCompareYear(e.value[0] as YearOption | "")}
-        size="sm"
-        value={[compareYear]}
-      >
-        <Select.HiddenSelect aria-label="Vertailuyhteishaku" />
-        <Select.Control>
-          <Select.Trigger aria-label="Vertailuyhteishaku">
-            <Select.ValueText placeholder="Vertaa yhteishakuun..." />
-          </Select.Trigger>
-          <Select.IndicatorGroup>
-            <Select.Indicator />
-          </Select.IndicatorGroup>
-        </Select.Control>
-        <Select.Positioner>
-          <Select.Content>
-            {compareCollection.items.map((option) => (
-              <Select.Item item={option} key={option.value}>
-                {option.label}
-              </Select.Item>
-            ))}
-          </Select.Content>
-        </Select.Positioner>
-      </Select.Root>
-    </Box>
+    <OptionSelect<YearOption | "">
+      ariaLabel="Vertailuyhteishaku"
+      items={compareItems}
+      label="Vertailukohde"
+      onChange={setCompareYear}
+      placeholder="Vertaa yhteishakuun..."
+      value={compareYear}
+    />
   );
 
   const applicantsByField = (

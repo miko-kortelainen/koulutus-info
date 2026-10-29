@@ -1,4 +1,5 @@
 import { useData } from "vike-react/useData";
+import BackLink from "@/components/BackLink";
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
@@ -21,6 +22,7 @@ export default function LukioSchoolPage() {
         title={`${schoolName} keskiarvot ${LUKIO_KESKIARVOT_YEAR}`}
       />
       <PageContainer align="flex-start">
+        <BackLink href="/lukiot/" />
         <LukioSchoolCard entries={entries} koulu={schoolName} />
       </PageContainer>
     </>

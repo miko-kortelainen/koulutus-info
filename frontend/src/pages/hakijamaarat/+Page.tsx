@@ -93,7 +93,7 @@ export default function StatsListPage() {
   );
 
   const sidebar = (
-    <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
+    <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
       <SearchInput
         onChange={(value) => {
           setSearchTerm(value);
@@ -150,7 +150,7 @@ export default function StatsListPage() {
   );
 
   const sortYearControls = (
-    <Group flex={1} gap={6} zIndex={10}>
+    <Group gap={6} width="full" zIndex={10}>
       <SortControl
         onChange={(value) => {
           setSortOrder(value);
@@ -206,13 +206,13 @@ export default function StatsListPage() {
     <>
       <PageIntro description="Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain." title="Hakijamäärät" />
       <PageContainer align="flex-start">
-        <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
+        <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
           {sidebar}
 
-          <Stack flex={1} gap={4} width="100%">
+          <Stack flex={1} gap={4} minW={0} width="100%">
             {sortYearControls}
             {!query.isPending && !query.isError ? (
-              <Text color="fg.muted" fontSize="xs" ml="auto" mt={-3}>
+              <Text aria-live="polite" color="fg.muted" fontSize="xs" ml="auto" mt={-3}>
                 {filteredData.length} {filteredData.length === 1 ? "hakutulos" : "hakutulosta"}
               </Text>
             ) : null}
@@ -221,7 +221,7 @@ export default function StatsListPage() {
           </Stack>
         </Stack>
 
-        <Text color="fg.muted" fontSize="sm">
+        <Text color="fg.muted" fontSize="xs">
           {ssrData.statisticsUpdatedAt ? (
             <>
               Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)}

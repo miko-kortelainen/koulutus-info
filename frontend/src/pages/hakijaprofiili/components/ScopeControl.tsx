@@ -1,6 +1,5 @@
 import { Tabs } from "@chakra-ui/react";
 import type { HakijaprofiiliKohdeTyyppi } from "@/api/dataValidation";
-import { COLORS } from "@/theme";
 
 const SCOPES: { value: HakijaprofiiliKohdeTyyppi; label: string }[] = [
   { value: "koulu", label: "Korkeakoulu" },
@@ -30,7 +29,7 @@ export default function ScopeControl({ value, onChange }: ScopeControlProps) {
             {label}
           </Tabs.Trigger>
         ))}
-        <Tabs.Indicator bg={COLORS.surfaceMuted} />
+        <Tabs.Indicator bg="bg.muted" />
       </Tabs.List>
     </Tabs.Root>
   );

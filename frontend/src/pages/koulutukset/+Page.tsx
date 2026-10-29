@@ -86,7 +86,7 @@ export default function SchoolsListPage() {
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   const sortControls = (
-    <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
+    <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
       <OptionSelect
         ariaLabel="Yhteishaku"
         items={PROGRAMME_ROUND_OPTIONS}
@@ -112,7 +112,7 @@ export default function SchoolsListPage() {
         value={searchTerm}
       />
 
-      <Accordion.Root multiple>
+      <Accordion.Root multiple size="sm">
         <FilterItem
           collection={sektoriCollection}
           label="Sektori"
@@ -175,10 +175,10 @@ export default function SchoolsListPage() {
     <>
       <PageIntro description={programmeRoundIntro(selectedRound)} title="Koulutukset" />
       <PageContainer align="flex-start">
-        <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
+        <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
           {sortControls}
 
-          <Stack flex={1} gap={4} position="relative" width="100%">
+          <Stack flex={1} gap={4} minW={0} position="relative" width="100%">
             <Text aria-live="polite" color="fg.muted" fontSize="xs" position="absolute" right={0} bottom="100%">
               {new Intl.NumberFormat("fi-FI").format(filteredData.length)}{" "}
               {filteredData.length === 1 ? "tulos" : "tulosta"}

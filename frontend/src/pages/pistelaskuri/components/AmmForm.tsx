@@ -1,6 +1,5 @@
 import { Box, Input, Separator, Stack, Text, VStack } from "@chakra-ui/react";
 import type { AmkAmmGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/index";
-import { COLORS } from "@/theme";
 import FormSelect from "@/pages/pistelaskuri/components/FormSelect";
 
 type AmmScale = "1-5" | "1-3";
@@ -183,9 +182,9 @@ export default function AmmForm({ errors, onChange, value }: AmmFormProps) {
   return (
     <Stack gap={4}>
       {scaleField}
-      <Separator bg={COLORS.accentFg} />
+      <Separator bg="fg.accent" />
       {gradesField}
-      <Separator bg={COLORS.accentFg} />
+      <Separator bg="fg.accent" />
       {keskiarvoField}
     </Stack>
   );
