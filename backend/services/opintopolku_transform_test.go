@@ -100,8 +100,10 @@ func TestAlaNamesFromKoodiUrit(t *testing.T) {
 		t.Error("expected error for unmapped code")
 	}
 
-	empty := &koulutusDetail{}
-	if _, err := alaNamesFromKoodiUrit(empty); err == nil {
-		t.Error("expected error for missing codes")
+	empty := &koulutusDetail{KoulutuskoodienAlatJaAsteet: []koulutusalaEntry{
+		{KoulutusalaKoodiUrit: []string{"kansallinenkoulutusluokitus2016koulutusalataso1_99"}},
+	}}
+	if names, err := alaNamesFromKoodiUrit(empty); err != nil || len(names) != 0 {
+		t.Errorf("missing OKM code: names = %v, error = %v; want no names and no error", names, err)
 	}
 }

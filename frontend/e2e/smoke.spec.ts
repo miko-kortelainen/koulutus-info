@@ -476,6 +476,7 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("0 tulosta", { exact: true })).toBeVisible();
 
   await search.clear();
   await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
@@ -556,6 +557,8 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   await page.goto("/koulutukset/");
   await expect(page.getByText("Hae opintopolussa").first()).toBeVisible({ timeout: 10000 });
   const cards = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Tallenna" }) });
+  const resultCount = page.getByText(/^\d[\d\s]* tulos(?:ta)?$/);
+  const initialCount = await resultCount.textContent();
   const initialCards = await cards.allTextContents();
 
   // filters live inside collapsed accordion sections — open "Koulu" to reach the school listbox
@@ -569,6 +572,7 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
 
   const schoolLinks = cards.getByRole("link", { name: schoolName, exact: true });
   await setFilterOption(page, "Koulu", schoolName, true);
+  await expect(resultCount).not.toHaveText(initialCount ?? "");
   await expect
     .poll(async () => {
       const cardCount = await cards.count();
@@ -577,6 +581,7 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
     .toBe(true);
 
   await setFilterOption(page, "Koulu", schoolName, false);
+  await expect(resultCount).toHaveText(initialCount ?? "");
   await expect(schoolLinks).toHaveCount(0);
 });
 
@@ -725,7 +730,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   }).toPass({ timeout: 10000 });
 
   await page.getByRole("link", { name: "Vertaile" }).click();
-  await expect(page).toHaveURL(new RegExp(`/vertaile/\\?a=.+&b=.+&vuosi=${CURRENT_YEAR}$`));
+  await expect(page).toHaveURL(new RegExp(`/vertaile/\\?a=.+&b=.+&vuosi=${CURRENT_YEAR}&vuosi_b=${CURRENT_YEAR}$`));
   await page.reload();
   await expect(page.getByRole("heading", { name: "Vertailu" })).toBeVisible();
   await expect(page.getByText("Hakijapaine", { exact: true }).first()).toBeVisible({ timeout: 10000 });
@@ -736,6 +741,27 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
   await page.getByRole("button", { name: "Jaa tämä vertailu" }).click();
   // the label flips only after clipboard writeText resolves, so this asserts the copy succeeded
   await expect(page.getByRole("button", { name: "Linkki kopioitu" })).toBeVisible();
+});
+
+test("/vertaile: compares hakukohteet from different yhteishaku rounds", async ({ page }) => {
+  await page.goto("/hakijamaarat/");
+  await expect(async () => {
+    await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+    await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(1, { timeout: 500 });
+  }).toPass({ timeout: 10000 });
+  await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2025");
+  await expect(page.getByRole("button", { name: "Vertaile", exact: true }).first()).toBeVisible();
+  await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
+  await page.getByRole("link", { name: "Vertaile" }).click();
+  await expect(page).toHaveURL(/vuosi=2026_syksy&vuosi_b=2025_syksy$/);
+  await expect(page.getByRole("table", { name: "Hakukohteiden vertailu" })).toBeVisible();
+  await expect(page.getByText("syksy 2026", { exact: true })).toBeVisible();
+  await expect(page.getByText("syksy 2025", { exact: true })).toBeVisible();
+  const oldLink = new URL(page.url());
+  oldLink.searchParams.set("b", oldLink.searchParams.get("a") ?? "");
+  oldLink.searchParams.delete("vuosi_b");
+  await page.goto(oldLink.toString());
+  await expect(page.getByText("syksy 2026", { exact: true })).toHaveCount(2);
 });
 
 test("/koulut: switches which yhteishaku hakijamäärät are shown", async ({ page }) => {
@@ -854,6 +880,14 @@ test("/koulut/:slug/pisterajat: shows complete current-round programme cutoff ca
       name: `Centria-ammattikorkeakoulu pisterajat ${DEFAULT_CUTOFF_YEAR}`,
     }),
   ).toBeVisible();
+  await expect(
+    page.getByText("Yhteishaun valintakokeiden ja todistusvalinnan alimmat hyväksytyt pisteet aloittain."),
+  ).toBeVisible();
+  await expect(page.getByRole("combobox", { name: "Järjestys" })).toHaveCount(0);
+  const search = page.getByRole("textbox", { name: "Hae toteutusta" });
+  const round = page.getByRole("combobox", { name: "Hakukierros" });
+  await expect(round).toBeVisible();
+  expect((await round.boundingBox())?.height).toBe((await search.boundingBox())?.height);
   await expect(page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Tekniikan alat" })).toBeVisible();
 
