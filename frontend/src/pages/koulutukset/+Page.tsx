@@ -167,7 +167,11 @@ export default function SchoolsListPage() {
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
           {sortControls}
 
-          <Stack flex={1} gap={4} width="100%">
+          <Stack flex={1} gap={4} position="relative" width="100%">
+            <Text aria-live="polite" color="fg.muted" fontSize="xs" position="absolute" right={0} bottom="100%">
+              {new Intl.NumberFormat("fi-FI").format(filteredData.length)}{" "}
+              {filteredData.length === 1 ? "tulos" : "tulosta"}
+            </Text>
             {cardList}
             <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
           </Stack>

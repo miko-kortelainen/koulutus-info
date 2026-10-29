@@ -17,6 +17,8 @@ const entry = (overrides: Partial<StatisticsEntry>): StatisticsEntry => ({
 test("masks small counts and omits trends for masked, equal, and unavailable values", () => {
   renderWithChakra(
     <ComparisonTable
+      yearA="2026_kevat"
+      yearB="2025_syksy"
       a={entry({
         kooditHakukohde: "a",
         hakukohde: "Kohde A",
@@ -48,6 +50,8 @@ test("masks small counts and omits trends for masked, equal, and unavailable val
 test("renders accessible trends, pressure values, and pressure tiers", () => {
   renderWithChakra(
     <ComparisonTable
+      yearA="2026_kevat"
+      yearB="2025_syksy"
       a={entry({
         kooditHakukohde: "a",
         hakukohde: "Kohde A",
@@ -66,6 +70,8 @@ test("renders accessible trends, pressure values, and pressure tiers", () => {
   );
 
   expect(screen.getByRole("table", { name: "Hakukohteiden vertailu" })).toBeInTheDocument();
+  expect(screen.getByText("kevät 2026")).toBeInTheDocument();
+  expect(screen.getByText("syksy 2025")).toBeInTheDocument();
   expect(screen.getAllByRole("columnheader")).toHaveLength(2);
   expect(screen.getAllByText("Valitut")).toHaveLength(2);
   expect(screen.getAllByRole("img", { name: "Suurempi arvo" })).toHaveLength(5);

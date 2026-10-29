@@ -1,7 +1,7 @@
 import { Accordion, Alert, Box, Group, Stack, Text } from "@chakra-ui/react";
 import { useCallback, useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
-import CompareBar from "@/components/CompareBar";
+import CompareBar, { type CompareSelection } from "@/components/CompareBar";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
@@ -33,7 +33,7 @@ export default function StatsListPage() {
   const [sortOrder, setSortOrder] = useState<SortOption>("asc");
   const [selectedYear, setSelectedYear] = useState<YearOption>(CURRENT_YEAR);
   const [searchTerm, setSearchTerm] = useState("");
-  const [compareSelection, setCompareSelection] = useState<StatisticsEntry[]>([]);
+  const [compareSelection, setCompareSelection] = useState<CompareSelection[]>([]);
   const [selectedSektorit, setSelectedSektorit] = useState<Set<string>>(new Set());
   const [selectedKoulutusasteet, setSelectedKoulutusasteet] = useState<Set<string>>(new Set());
   const [selectedKoulutusalat, setSelectedKoulutusalat] = useState<Set<string>>(new Set());
@@ -42,12 +42,12 @@ export default function StatsListPage() {
   const [selectedSchools, setSelectedSchools] = useState<Set<string>>(new Set());
   const query = useStatisticsQuery(selectedYear, selectedYear === CURRENT_YEAR ? ssrData.statistics : undefined);
 
-  const toggleCompare = useCallback((degree: StatisticsEntry) => {
+  const toggleCompare = useCallback((degree: StatisticsEntry, year: YearOption) => {
     setCompareSelection((prev) =>
-      prev.some((d) => d.kooditHakukohde === degree.kooditHakukohde)
-        ? prev.filter((d) => d.kooditHakukohde !== degree.kooditHakukohde)
+      prev.some((d) => d.year === year && d.degree.kooditHakukohde === degree.kooditHakukohde)
+        ? prev.filter((d) => d.year !== year || d.degree.kooditHakukohde !== degree.kooditHakukohde)
         : prev.length < 2
-          ? [...prev, degree]
+          ? [...prev, { degree, year }]
           : prev,
     );
   }, []);
@@ -162,7 +162,6 @@ export default function StatsListPage() {
         onChange={(value) => {
           setSelectedYear(value);
           setPage(1);
-          setCompareSelection([]);
           setSelectedSektorit(new Set());
           setSelectedKoulutusasteet(new Set());
           setSelectedKoulutusalat(new Set());
@@ -192,9 +191,11 @@ export default function StatsListPage() {
       {paginated.map((d) => (
         <DegreeStatsCard
           degree={d}
-          isSelected={compareSelection.some((s) => s.kooditHakukohde === d.kooditHakukohde)}
+          isSelected={compareSelection.some(
+            (s) => s.year === selectedYear && s.degree.kooditHakukohde === d.kooditHakukohde,
+          )}
           key={d.kooditHakukohde}
-          onToggleCompare={toggleCompare}
+          onToggleCompare={(degree) => toggleCompare(degree, selectedYear)}
           selectionFull={compareSelection.length === 2}
         />
       ))}
@@ -235,7 +236,7 @@ export default function StatsListPage() {
 
         {compareSelection.length > 0 ? <Box h="72px" /> : null}
       </PageContainer>
-      <CompareBar onRemove={toggleCompare} selected={compareSelection} year={selectedYear} />
+      <CompareBar onRemove={({ degree, year }) => toggleCompare(degree, year)} selected={compareSelection} />
     </>
   );
 }
