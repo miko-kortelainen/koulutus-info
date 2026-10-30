@@ -13,6 +13,7 @@ import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import type { StatisticsEntry } from "@/types.gen";
 import DegreeStatsCardSkeleton from "@/pages/hakijamaarat/components/DegreeStatsCardSkeleton";
+import ResultCount from "@/pages/hakijamaarat/components/ResultCount";
 import SortControl from "@/pages/hakijamaarat/components/SortControl";
 import useFilteredStatistics from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
 import type { HakijamaaratPageData } from "@/pages/hakijamaarat/+data";
@@ -208,11 +209,7 @@ export default function StatsListPage() {
 
           <Stack flex={1} gap={4} minW={0} width="100%">
             {sortYearControls}
-            {!query.isPending && !query.isError ? (
-              <Text aria-live="polite" color="fg.muted" fontSize="xs" ml="auto" mt={-3}>
-                {filteredData.length} {filteredData.length === 1 ? "hakutulos" : "hakutulosta"}
-              </Text>
-            ) : null}
+            <ResultCount count={filteredData.length} error={query.isError} loading={query.isPending} />
             {cardList}
             <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
           </Stack>

@@ -10,9 +10,16 @@ interface DegreeStatsCardProps {
   isSelected?: boolean;
   selectionFull?: boolean;
   onToggleCompare?: (degree: StatisticsEntry) => void;
+  schoolLink?: boolean;
 }
 
-function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }: DegreeStatsCardProps) {
+function DegreeStatsCard({
+  degree,
+  isSelected,
+  selectionFull,
+  onToggleCompare,
+  schoolLink = true,
+}: DegreeStatsCardProps) {
   const hakijapaine = getHakijapaine(degree);
   const tier = hakijapaine != null ? getTier(hakijapaine) : null;
 
@@ -89,17 +96,23 @@ function DegreeStatsCard({ degree, isSelected, selectionFull, onToggleCompare }:
 
   const header = (
     <Stack gap={2}>
-      <Link
-        alignSelf="flex-start"
-        fontSize={{ base: "xs", md: "sm" }}
-        fontWeight="semibold"
-        href={`/koulut/${slugify(degree.korkeakoulu ?? "")}/`}
-        textDecor="none"
-      >
-        <Badge bg="accent" color="onAccent" size="sm">
+      {schoolLink ? (
+        <Link
+          alignSelf="flex-start"
+          fontSize={{ base: "xs", md: "sm" }}
+          fontWeight="semibold"
+          href={`/koulut/${slugify(degree.korkeakoulu ?? "")}/`}
+          textDecor="none"
+        >
+          <Badge bg="accent" color="onAccent" size="sm">
+            <HiLocationMarker aria-hidden="true" /> {degree.korkeakoulu}
+          </Badge>
+        </Link>
+      ) : (
+        <Badge alignSelf="flex-start" bg="accent" color="onAccent" size="sm">
           <HiLocationMarker aria-hidden="true" /> {degree.korkeakoulu}
         </Badge>
-      </Link>
+      )}
       <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="semibold" textWrap="pretty">
         {degree.hakukohde}
       </Text>

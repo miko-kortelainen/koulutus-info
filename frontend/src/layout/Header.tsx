@@ -21,6 +21,12 @@ const links = [
     icon: HiOutlineChartBar,
   },
   {
+    href: "/toinen-aste-hakijamaarat/",
+    label: "toisen asteen hakijamäärät",
+    description: "Selaa toisen asteen yhteishaun hakijamääriä",
+    icon: HiOutlineChartBar,
+  },
+  {
     href: "/koulutukset/",
     label: "koulutukset",
     description: "Selaa yhteishaussa olevia koulutuksia",

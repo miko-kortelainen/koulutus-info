@@ -149,3 +149,6 @@ flowchart TB
     errorPage["_error<br/>ErrorPage"]
   end
 ```
+
+Second-degree joint-application applicant statistics are refreshed by the Go
+data generator in `backend/` alongside the other Vipunen statistics.
