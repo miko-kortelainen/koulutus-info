@@ -1,11 +1,11 @@
 import { Accordion, Link, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
+import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
-import SearchInput from "@/components/SearchInput";
 import { toaster } from "@/components/Toaster";
 import {
   CURRENT_PROGRAMME_ROUND,
@@ -13,7 +13,6 @@ import {
   programmeRoundIntro,
   type ProgrammeRound,
 } from "@/config/programmeRounds";
-import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import useFilteredDegrees from "@/pages/koulutukset/hooks/useFilteredDegrees";
@@ -72,10 +71,9 @@ export default function SchoolsListPage() {
     () => toCollection(toteutukset.flatMap((t) => t.koulutusalat ?? [])),
     [toteutukset],
   );
-  const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredDegrees(
     toteutukset,
-    debouncedSearchTerm,
+    searchTerm,
     selectedSektorit,
     selectedKunnat,
     selectedSchools,
@@ -103,13 +101,12 @@ export default function SchoolsListPage() {
         size="sm"
         value={selectedRound}
       />
-      <SearchInput
-        onChange={(value) => {
-          setSearchTerm(value);
-          setPage(1);
+      <DebouncedSearchInput
+        onChange={setSearchTerm}
+        onInput={() => {
+          if (page !== 1) setPage(1);
         }}
         placeholder="Etsi koulutuksia"
-        value={searchTerm}
       />
 
       <Accordion.Root multiple size="sm">
