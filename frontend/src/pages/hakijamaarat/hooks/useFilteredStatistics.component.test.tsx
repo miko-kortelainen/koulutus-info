@@ -1,5 +1,6 @@
 import { renderHook } from "@testing-library/react";
-import { expect, test } from "vitest";
+import Fuse from "fuse.js";
+import { expect, test, vi } from "vitest";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 import type { SortOption } from "@/pages/hakijamaarat/lib/sortStatistics";
 import useFilteredStatistics, { toCompactStatistics } from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
@@ -140,6 +141,50 @@ test("combines the new filters with OR within groups and AND between groups", ()
     languages: new Set(["vain suomi", "vain englanti"]),
   });
   expect(ids(result.current)).toEqual(["gamma"]);
+});
+
+test("reuses search results when only sorting or surrounding whitespace changes", () => {
+  const search = vi.spyOn(Fuse.prototype, "search");
+  const empty = new Set<string>();
+  try {
+    const { result, rerender } = renderHook(
+      ({ term, order }) => useFilteredStatistics(statistics, term, order, empty, empty, empty, empty, empty, empty),
+      { initialProps: { term: "'Alpha | 'Beta | 'Gamma", order: "asc" as SortOption } },
+    );
+    expect(ids(result.current)).toEqual(["alpha", "beta", "gamma"]);
+    expect(search).toHaveBeenCalledTimes(1);
+
+    rerender({ term: "  'Alpha | 'Beta | 'Gamma  ", order: "desc" });
+    expect(ids(result.current)).toEqual(["gamma", "beta", "alpha"]);
+    expect(search).toHaveBeenCalledTimes(1);
+
+    rerender({ term: "Metropolia", order: "desc" });
+    expect(ids(result.current)).toEqual(["beta"]);
+    expect(search).toHaveBeenCalledTimes(2);
+  } finally {
+    search.mockRestore();
+  }
+});
+
+test("updates filtered search on filter and data changes and retains relevance for sort ties", () => {
+  const empty = new Set<string>();
+  const alphabet = { ...statistics[0], kooditHakukohde: "alphabet", hakukohde: "Alphabet" };
+  const data = [alphabet, statistics[0], statistics[1]];
+  const { result, rerender } = renderHook(
+    ({ rows, term, schools }) =>
+      useFilteredStatistics(rows, term, "most_spots", empty, empty, empty, empty, empty, schools),
+    { initialProps: { rows: data, term: "Alpha", schools: empty } },
+  );
+  expect(ids(result.current)).toEqual(["alpha", "alphabet"]);
+
+  rerender({ rows: data, term: "'Alpha", schools: new Set(["Metropolia"]) });
+  expect(ids(result.current)).toEqual([]);
+
+  rerender({ rows: [statistics[1]], term: "'Metropolia", schools: empty });
+  expect(ids(result.current)).toEqual(["beta"]);
+
+  rerender({ rows: data, term: "   ", schools: empty });
+  expect(ids(result.current)).toEqual(["alphabet", "alpha", "beta"]);
 });
 
 test.each<[SortOption, string[]]>([

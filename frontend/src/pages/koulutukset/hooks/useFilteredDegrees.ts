@@ -18,16 +18,15 @@ const FUSE_OPTIONS = {
   useExtendedSearch: true,
 };
 
-export function filterDegrees(
+function filterDegrees(
   data: ToteutusWithSektori[] | undefined,
-  searchTerm: string,
   selectedSektorit: Set<string>,
   selectedKunnat: Set<string>,
   selectedSchools: Set<string>,
   selectedTasot: Set<string>,
   selectedKoulutusalat: Set<string>,
 ) {
-  const byFilters = (data ?? []).filter(
+  return (data ?? []).filter(
     (t) =>
       (!selectedSektorit.size || selectedSektorit.has(t.sektori)) &&
       (!selectedKunnat.size || t.kunnat.some((k) => selectedKunnat.has(k))) &&
@@ -35,10 +34,6 @@ export function filterDegrees(
       (!selectedTasot.size || selectedTasot.has(t.tutkintotaso)) &&
       (!selectedKoulutusalat.size || t.koulutusalat?.some((a) => selectedKoulutusalat.has(a))),
   );
-  const normalizedSearch = searchTerm.trim();
-  return normalizedSearch
-    ? new Fuse(byFilters, FUSE_OPTIONS).search(normalizedSearch).map((result) => result.item)
-    : byFilters;
 }
 
 export default function useFilteredDegrees(
@@ -50,17 +45,14 @@ export default function useFilteredDegrees(
   selectedTasot: Set<string>,
   selectedKoulutusalat: Set<string>,
 ) {
+  const byFilters = useMemo(
+    () => filterDegrees(data, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat),
+    [data, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat],
+  );
+  const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
+  const normalizedSearch = searchTerm.trim();
   return useMemo(
-    () =>
-      filterDegrees(
-        data,
-        searchTerm,
-        selectedSektorit,
-        selectedKunnat,
-        selectedSchools,
-        selectedTasot,
-        selectedKoulutusalat,
-      ),
-    [data, searchTerm, selectedSektorit, selectedKunnat, selectedSchools, selectedTasot, selectedKoulutusalat],
+    () => (normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : byFilters),
+    [byFilters, fuse, normalizedSearch],
   );
 }

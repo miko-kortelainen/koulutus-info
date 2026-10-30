@@ -2,13 +2,12 @@ import { Accordion, Alert, Box, Group, Stack, Text } from "@chakra-ui/react";
 import { useCallback, useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import CompareBar, { type CompareSelection } from "@/components/CompareBar";
+import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
-import SearchInput from "@/components/SearchInput";
 import YearControl from "@/components/YearControl";
 import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
-import useDebounce from "@/hooks/useDebounce";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
@@ -66,10 +65,9 @@ export default function StatsListPage() {
   const koulutusalaCollection = useMemo(() => toCollection(query.data?.map((d) => d.okmOhjauksenAla)), [query.data]);
   const kieliCollection = useMemo(() => toCollection(query.data?.map((d) => d.koulutuksenKieli)), [query.data]);
 
-  const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredStatistics(
     query.data,
-    debouncedSearchTerm,
+    searchTerm,
     sortOrder,
     selectedSektorit,
     selectedKoulutusasteet,
@@ -94,13 +92,12 @@ export default function StatsListPage() {
 
   const sidebar = (
     <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
-      <SearchInput
-        onChange={(value) => {
-          setSearchTerm(value);
-          setPage(1);
+      <DebouncedSearchInput
+        onChange={setSearchTerm}
+        onInput={() => {
+          if (page !== 1) setPage(1);
         }}
         placeholder="Hae koulua tai linjaa"
-        value={searchTerm}
       />
       <Accordion.Root multiple size="sm">
         <FilterItem
