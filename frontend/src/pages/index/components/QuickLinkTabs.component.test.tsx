@@ -32,6 +32,10 @@ test("shows toinen aste quick links by default", () => {
   expect(toinenAste.getAttribute("aria-controls")).toMatch(/^\S+$/);
 
   const panel = screen.getByRole("tabpanel", { name: "Toinen aste" });
+  expect(within(panel).getAllByRole("link").slice(0, 2).map((link) => link.getAttribute("href"))).toEqual([
+    "/lukiot/",
+    "/hakijamaarat/toinen-aste/",
+  ]);
   expect(within(panel).getByRole("link", { name: /^lukiot(\s|$)/ })).toHaveAttribute("href", "/lukiot/");
   expect(within(panel).getByRole("link", { name: /^yo-kokeiden pisterajat(\s|$)/ })).toHaveAttribute(
     "href",
