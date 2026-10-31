@@ -1,7 +1,9 @@
-import { Accordion, Box, Field, Flex, Heading, Input, Link, Stack, Text, chakra } from "@chakra-ui/react";
+import { Accordion, Box, Flex, Heading, Link, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
+import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
+import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
@@ -16,16 +18,19 @@ const BAR_H = "8";
 const YLITUOTOS_BAR = "var(--chakra-colors-viz-ylituotos)";
 /** Full-width bar track — follows appearance via bg.muted */
 const BAR_TRACK = "bg.muted";
-const selectProps = {
-  bg: "bg",
-  borderColor: "border",
-  borderRadius: "md",
-  borderWidth: "1px",
-  fontSize: "sm",
-  px: 3,
-  py: 2,
-  width: "full",
-} as const;
+
+const SEKTORI_OPTIONS: { label: string; value: SektoriFilter }[] = [
+  { label: "Kaikki korkeakoulut", value: "kaikki" },
+  { label: "Ammattikorkeakoulu", value: "Ammattikorkeakoulu" },
+  { label: "Yliopisto", value: "Yliopisto" },
+];
+
+const SORT_OPTIONS: { label: string; value: VajeSort }[] = [
+  { label: "Isoin pula", value: "isoin-vaje" },
+  { label: "Pienin pula", value: "pienin-vaje" },
+  { label: "A-Ö", value: "a-o" },
+  { label: "Ö-A", value: "o-a" },
+];
 
 export default function EnnakointiPage() {
   const { koulutustarpeet } = useData<EnnakointiPageData>();
@@ -103,63 +108,41 @@ export default function EnnakointiPage() {
           </Accordion.Root>
 
           <Stack aria-label="Koulutustarpeet" as="section" gap={6}>
-            <Flex direction={{ base: "column", md: "row" }} gap={6}>
-              <Field.Root flex="1" gap={1}>
-                <Field.Label color="fg.muted" fontSize="xs">
-                  Haku
-                </Field.Label>
-                <Input
-                  aria-label="Haku"
-                  fontSize="sm"
-                  minHeight={9}
-                  onChange={(e) => {
-                    setSearch(e.target.value);
+            <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
+              <Box flex={1}>
+                <SearchInput
+                  label="Haku"
+                  onChange={(value) => {
+                    setSearch(value);
                     setPage(1);
                   }}
                   placeholder="Esim. hoitotyö"
-                  size="sm"
-                  type="search"
                   value={search}
                 />
-              </Field.Root>
-              <Field.Root flex="1" gap={1} maxW={{ md: "16rem" }}>
-                <Field.Label color="fg.muted" fontSize="xs">
-                  Sektori
-                </Field.Label>
-                <chakra.select
-                  {...selectProps}
-                  aria-label="Sektori"
-                  onChange={(e) => {
-                    setSektori(e.target.value as SektoriFilter);
+              </Box>
+              <Box flex={1} maxW={{ md: "16rem" }}>
+                <OptionSelect<SektoriFilter>
+                  items={SEKTORI_OPTIONS}
+                  label="Sektori"
+                  onChange={(value) => {
+                    setSektori(value);
                     setPage(1);
                   }}
                   value={sektori}
-                >
-                  <option value="kaikki">Kaikki korkeakoulut</option>
-                  <option value="Ammattikorkeakoulu">Ammattikorkeakoulu</option>
-                  <option value="Yliopisto">Yliopisto</option>
-                </chakra.select>
-              </Field.Root>
-              <Field.Root flex="1" gap={1} maxW={{ md: "16rem" }}>
-                <Field.Label color="fg.muted" fontSize="xs">
-                  Järjestys
-                </Field.Label>
-                <chakra.select
-                  {...selectProps}
-                  aria-label="Järjestys"
-                  onChange={(e) => {
-                    setSort(e.target.value as VajeSort);
+                />
+              </Box>
+              <Box flex={1} maxW={{ md: "16rem" }}>
+                <OptionSelect<VajeSort>
+                  items={SORT_OPTIONS}
+                  label="Järjestys"
+                  onChange={(value) => {
+                    setSort(value);
                     setPage(1);
                   }}
                   value={sort}
-                >
-                  <option value="isoin-vaje">Isoin pula</option>
-                  <option value="pienin-vaje">Pienin pula</option>
-                  <option value="a-o">A-Ö</option>
-                  <option value="o-a">Ö-A</option>
-                </chakra.select>
-              </Field.Root>
-            </Flex>
+                />
+              </Box>
+            </Stack>
 
             <Text color="fg.muted" fontSize="sm" role="status">
               {rows.length === 0

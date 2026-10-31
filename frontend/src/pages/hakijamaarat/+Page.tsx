@@ -2,23 +2,23 @@ import { Accordion, Alert, Box, Group, Stack, Text } from "@chakra-ui/react";
 import { useCallback, useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import CompareBar, { type CompareSelection } from "@/components/CompareBar";
+import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
-import SearchInput from "@/components/SearchInput";
 import YearControl from "@/components/YearControl";
 import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
-import useDebounce from "@/hooks/useDebounce";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import type { StatisticsEntry } from "@/types.gen";
-import DegreeStatsCardSkeleton from "@/pages/hakijamaarat/components/DegreeStatsCardSkeleton";
-import SortControl from "@/pages/hakijamaarat/components/SortControl";
-import useFilteredStatistics from "@/pages/hakijamaarat/hooks/useFilteredStatistics";
+import DegreeStatsCardSkeleton from "@/components/DegreeStatsCardSkeleton";
+import ResultCount from "@/components/ResultCount";
+import SortControl from "@/components/StatisticsSortControl";
+import useFilteredStatistics from "@/hooks/useFilteredStatistics";
 import type { HakijamaaratPageData } from "@/pages/hakijamaarat/+data";
 import { formatStatisticsUpdatedAt } from "@/pages/hakijamaarat/lib/formatStatisticsUpdatedAt";
-import type { SortOption } from "@/pages/hakijamaarat/lib/sortStatistics";
+import type { SortOption } from "@/lib/sortStatistics";
 
 const PAGE_SIZE = 10;
 
@@ -66,10 +66,9 @@ export default function StatsListPage() {
   const koulutusalaCollection = useMemo(() => toCollection(query.data?.map((d) => d.okmOhjauksenAla)), [query.data]);
   const kieliCollection = useMemo(() => toCollection(query.data?.map((d) => d.koulutuksenKieli)), [query.data]);
 
-  const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredStatistics(
     query.data,
-    debouncedSearchTerm,
+    searchTerm,
     sortOrder,
     selectedSektorit,
     selectedKoulutusasteet,
@@ -93,14 +92,13 @@ export default function StatsListPage() {
   );
 
   const sidebar = (
-    <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
-      <SearchInput
-        onChange={(value) => {
-          setSearchTerm(value);
-          setPage(1);
+    <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
+      <DebouncedSearchInput
+        onChange={setSearchTerm}
+        onInput={() => {
+          if (page !== 1) setPage(1);
         }}
         placeholder="Hae koulua tai linjaa"
-        value={searchTerm}
       />
       <Accordion.Root multiple size="sm">
         <FilterItem
@@ -150,7 +148,7 @@ export default function StatsListPage() {
   );
 
   const sortYearControls = (
-    <Group flex={1} gap={6} zIndex={10}>
+    <Group gap={6} width="full" zIndex={10}>
       <SortControl
         onChange={(value) => {
           setSortOrder(value);
@@ -205,35 +203,30 @@ export default function StatsListPage() {
   return (
     <>
       <PageIntro
-        description={
-          <>
-            Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain.
-            {ssrData.statisticsUpdatedAt ? (
-              <>
-                <br />
-                Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)} (seuraava 20.11.2026)
-              </>
-            ) : null}
-          </>
-        }
-        title="Hakijamäärät"
+        description="Selaa yliopistojen ja ammattikorkeakoulujen yhteishaun hakijamääriä koulutuksittain."
+        title="Korkeakoulujen hakijamäärät"
       />
       <PageContainer align="flex-start">
-        <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
+        <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
           {sidebar}
 
-          <Stack flex={1} gap={4} width="100%">
+          <Stack flex={1} gap={4} minW={0} width="100%">
             {sortYearControls}
-            {!query.isPending && !query.isError ? (
-              <Text color="fg.muted" fontSize="xs" ml="auto" mt={-3}>
-                {filteredData.length} {filteredData.length === 1 ? "hakutulos" : "hakutulosta"}
-              </Text>
-            ) : null}
+            <ResultCount count={filteredData.length} error={query.isError} loading={query.isPending} />
             {cardList}
             <Pagination count={filteredData.length} onPageChange={setPage} page={page} pageSize={PAGE_SIZE} />
           </Stack>
         </Stack>
 
+        <Text color="fg.muted" fontSize="xs">
+          {ssrData.statisticsUpdatedAt ? (
+            <>
+              Tiedot päivitetty: {formatStatisticsUpdatedAt(ssrData.statisticsUpdatedAt)}
+              <br />
+            </>
+          ) : null}
+          Lähde: Opetushallinnon tilastopalvelu Vipunen
+        </Text>
         {compareSelection.length > 0 ? <Box h="72px" /> : null}
       </PageContainer>
       <CompareBar onRemove={({ degree, year }) => toggleCompare(degree, year)} selected={compareSelection} />

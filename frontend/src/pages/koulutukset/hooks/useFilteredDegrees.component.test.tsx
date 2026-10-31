@@ -92,8 +92,20 @@ test("combines filter groups including koulutusala", () => {
   expect(result.current).toEqual([]);
 });
 
-test("trims search terms and searches translated names", () => {
-  const { result } = renderHook(() => useFilteredDegrees(degrees, "  Law  ", none(), none(), none(), none(), none()));
+test("searches filtered degrees and updates when the search, filters or data change", () => {
+  const empty = none();
+  const { result, rerender } = renderHook(
+    ({ data, search, sectors }) => useFilteredDegrees(data, search, sectors, empty, empty, empty, empty),
+    { initialProps: { data: degrees, search: "  Law  ", sectors: empty } },
+  );
 
   expect(ids(result.current)).toEqual(["yo-law"]);
+  rerender({ data: degrees, search: "TAMK", sectors: empty });
+  expect(ids(result.current)).toEqual(["amk-engineering", "amk-master"]);
+  rerender({ data: degrees, search: "TAMK", sectors: new Set(["yo"]) });
+  expect(ids(result.current)).toEqual([]);
+  rerender({ data: degrees, search: " ", sectors: empty });
+  expect(ids(result.current)).toEqual(["yo-law", "amk-design", "amk-engineering", "amk-master"]);
+  rerender({ data: degrees.slice(0, 1), search: "TAMK", sectors: empty });
+  expect(ids(result.current)).toEqual([]);
 });

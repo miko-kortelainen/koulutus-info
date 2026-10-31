@@ -105,20 +105,15 @@ export default function HakijaprofiiliPage() {
           }}
           value={scope}
         />
-        {/* Box keeps SearchInput/OptionSelect flex={1} off the column flex axis (natural height). */}
-        <Box flexShrink={0} width="100%">
-          <SearchInput onChange={setSearchTerm} placeholder={SEARCH_PLACEHOLDER[scope]} value={searchTerm} />
-        </Box>
-        <Box flexShrink={0} width="100%">
-          <OptionSelect
-            ariaLabel="Järjestä"
-            items={SORT_OPTIONS}
-            onChange={setSortOrder}
-            placeholder="A–Ö"
-            size="sm"
-            value={sortOrder}
-          />
-        </Box>
+        <SearchInput onChange={setSearchTerm} placeholder={SEARCH_PLACEHOLDER[scope]} value={searchTerm} />
+        <OptionSelect
+          ariaLabel="Järjestä"
+          items={SORT_OPTIONS}
+          onChange={setSortOrder}
+          placeholder="A–Ö"
+          size="sm"
+          value={sortOrder}
+        />
         <EntityList
           busy={query.isPlaceholderData}
           entities={entities}
@@ -153,7 +148,7 @@ export default function HakijaprofiiliPage() {
         {status}
         {browse}
         <Text color="fg.muted" fontSize="xs">
-          Lähde: Opetushallituksen tilastopalvelu Vipunen
+          Lähde: Opetushallinnon tilastopalvelu Vipunen
         </Text>
       </PageContainer>
     </>

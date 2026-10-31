@@ -76,6 +76,8 @@ const config = defineConfig({
         borderColor: { value: { _light: LIGHT.border, _dark: DARK.border } },
         surfaceMuted: { value: { _light: LIGHT.surfaceMuted, _dark: DARK.surfaceMuted } },
         onAccent: { value: { _light: LIGHT.onAccent, _dark: DARK.onAccent } },
+        toastBg: { value: LIGHT.accentFg },
+        toastFg: { value: "#fff" },
         border: {
           // Keep Chakra's default border (gray.200 / gray.800) for Select, Input, and other outline controls.
           subtle: { value: { _light: LIGHT.borderSubtle, _dark: DARK.borderSubtle } },

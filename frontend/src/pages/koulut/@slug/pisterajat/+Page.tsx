@@ -1,4 +1,4 @@
-import { Accordion, Box, Heading, Stack, Tag, Text, VStack } from "@chakra-ui/react";
+import { Accordion, Box, Heading, Stack, Tag, Text } from "@chakra-ui/react";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useData } from "vike-react/useData";
 import { usePageContext } from "vike-react/usePageContext";
@@ -131,7 +131,7 @@ export default function CutoffPage() {
       <PageContainer align="flex-start">
         <BackLink href="../" />
         <PistelaskuriCta />
-        <VStack align="flex-start" flex={1} width="full" zIndex={10}>
+        <Stack align="flex-start" gap={4} width="full" zIndex={10}>
           <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta" value={searchTerm} />
           {rounds.length > 1 ? (
             <OptionSelect
@@ -144,7 +144,7 @@ export default function CutoffPage() {
             />
           ) : null}
           {alaFilter}
-        </VStack>
+        </Stack>
         {programList}
       </PageContainer>
     </>

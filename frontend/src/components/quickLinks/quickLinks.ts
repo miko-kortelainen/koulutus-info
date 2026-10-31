@@ -22,6 +22,12 @@ export const quickLinkSections = [
         icon: HiOutlineOfficeBuilding,
       },
       {
+        href: "/hakijamaarat/toinen-aste/",
+        label: "hakijamäärät",
+        description: "Katso toisen asteen yhteishaun hakijamääriä",
+        icon: HiOutlineChartBar,
+      },
+      {
         href: "/yo-pisterajat/",
         label: "yo-kokeiden pisterajat",
         description: "Katso ylioppilaskokeiden pisterajat",
@@ -47,7 +53,7 @@ export const quickLinkSections = [
         icon: HiOutlineAcademicCap,
       },
       {
-        href: "/hakijamaarat/",
+        href: "/hakijamaarat/korkeakoulut/",
         label: "hakijamäärät",
         description: "Katso yhteishakujen hakijamääriä",
         icon: HiOutlineChartBar,

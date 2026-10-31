@@ -1,7 +1,6 @@
 import { Box, Button, Flex, IconButton, Stack, Text } from "@chakra-ui/react";
 import { useRef } from "react";
 import { HiOutlineTrash } from "react-icons/hi";
-import { COLORS } from "@/theme";
 import { SUBJECT_OPTIONS, type YoAineRow, type YoFormErrors, type YoFormState } from "@/pages/pistelaskuri/lib/yoForm";
 import { YO_GRADES } from "@/pages/pistelaskuri/lib/yoScoring";
 import FormSelect from "@/pages/pistelaskuri/components/FormSelect";
@@ -116,15 +115,15 @@ export default function YoForm({ errors, onChange, value }: YoFormProps) {
           {errors.aineet}
         </Text>
       ) : null}
-      <Box >
+      <Box>
         <Button
-          borderColor={COLORS.accentFg}
+          borderColor="fg.accent"
+          mt={2}
           onClick={addAine}
           size="xs"
           type="button"
           variant="outline"
           w={{ base: "100%", md: "8rem" }}
-          mt={2}
         >
           + Lisää aine
         </Button>

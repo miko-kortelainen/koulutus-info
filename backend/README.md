@@ -42,6 +42,12 @@ The generator writes one statistics file per joint application under `frontend/p
 
 Before replacing an existing dataset, the generator rejects a result with less than half of the previous record count. Review the generated files before deploying the frontend.
 
+The Vipunen statistics refresh also updates the second-degree joint-application
+statistics for the configured start year in `frontend/public/data/toinen-aste/`
+and regenerates the page's year selector. Years without published applicant
+counts are skipped. Use `go run . --statistics --year 2025` to refresh an
+individual historical year alongside the corresponding higher-education data.
+
 Generate frontend TypeScript types after changing exported data models:
 
 ```sh

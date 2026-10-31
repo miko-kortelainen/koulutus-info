@@ -9,7 +9,6 @@ import SchoolListCard from "@/pages/koulut/components/SchoolListCard";
 import SortControl from "@/pages/koulut/components/SortControl";
 import useSchoolListStatistics from "@/pages/koulut/hooks/useSchoolListStatistics";
 import sortSchools, { type SortOption } from "@/pages/koulut/lib/sortSchools";
-import { COLORS } from "@/theme";
 
 const SECTIONS = [
   { sektori: "Yliopistokoulutus", heading: "Yliopistot" },
@@ -37,7 +36,7 @@ export default function SchoolIndexPage() {
           {heading}
         </Tabs.Trigger>
       ))}
-      <Tabs.Indicator bg={COLORS.surfaceMuted} />
+      <Tabs.Indicator bg="bg.muted" />
     </Tabs.List>
   );
 

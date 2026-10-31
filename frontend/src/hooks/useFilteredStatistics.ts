@@ -8,7 +8,7 @@ import {
   ratioFormat,
 } from "@/lib/statistics";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
-import { type SortOption, sortStatistics } from "@/pages/hakijamaarat/lib/sortStatistics";
+import { type SortOption, sortStatistics } from "@/lib/sortStatistics";
 
 const FUSE_OPTIONS = {
   keys: [{ name: "hakukohde", weight: 3 }, { name: "korkeakoulu", weight: 2 }, "sektori", "koulutusalaTaso1"],
@@ -18,10 +18,8 @@ const FUSE_OPTIONS = {
   useExtendedSearch: true,
 };
 
-export function filterStatistics(
+function filterStatistics(
   data: StatisticsResponse | undefined,
-  searchTerm: string,
-  sortOrder: SortOption,
   selectedSektorit: Set<string>,
   selectedKoulutusasteet: Set<string>,
   selectedKoulutusalat: Set<string>,
@@ -29,7 +27,7 @@ export function filterStatistics(
   selectedKunnat: Set<string>,
   selectedSchools: Set<string>,
 ) {
-  const byFilters = (data ?? []).filter(
+  return (data ?? []).filter(
     (d) =>
       (!selectedSektorit.size || selectedSektorit.has(d.sektori ?? "")) &&
       (!selectedKoulutusasteet.size || selectedKoulutusasteet.has(d.koulutusasteTaso1 ?? "")) &&
@@ -38,11 +36,6 @@ export function filterStatistics(
       (!selectedKunnat.size || selectedKunnat.has(d.kuntaHakukohde ?? "")) &&
       (!selectedSchools.size || selectedSchools.has(d.korkeakoulu ?? "")),
   );
-  const normalizedSearch = searchTerm.trim();
-  const filtered = normalizedSearch
-    ? new Fuse(byFilters, FUSE_OPTIONS).search(normalizedSearch).map((result) => result.item)
-    : byFilters;
-  return sortStatistics(filtered, sortOrder);
 }
 
 export function toCompactStatistics(entry: StatisticsEntry) {
@@ -73,12 +66,10 @@ export default function useFilteredStatistics(
   selectedKunnat: Set<string>,
   selectedSchools: Set<string>,
 ) {
-  return useMemo(
+  const byFilters = useMemo(
     () =>
       filterStatistics(
         data,
-        searchTerm,
-        sortOrder,
         selectedSektorit,
         selectedKoulutusasteet,
         selectedKoulutusalat,
@@ -88,8 +79,6 @@ export default function useFilteredStatistics(
       ),
     [
       data,
-      searchTerm,
-      sortOrder,
       selectedSektorit,
       selectedKoulutusasteet,
       selectedKoulutusalat,
@@ -98,4 +87,11 @@ export default function useFilteredStatistics(
       selectedSchools,
     ],
   );
+  const fuse = useMemo(() => new Fuse(byFilters, FUSE_OPTIONS), [byFilters]);
+  const normalizedSearch = searchTerm.trim();
+  const searchResults = useMemo(
+    () => (normalizedSearch ? fuse.search(normalizedSearch).map((result) => result.item) : byFilters),
+    [byFilters, fuse, normalizedSearch],
+  );
+  return useMemo(() => sortStatistics(searchResults, sortOrder), [searchResults, sortOrder]);
 }

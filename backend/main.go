@@ -166,6 +166,9 @@ func run(args []string) error {
 		if err != nil {
 			return err
 		}
+		if err := generateToinenAste(options.vipunen.TilastoVuosi); err != nil {
+			return err
+		}
 		if changed {
 			meta.StatisticsUpdatedAt = &now
 			dataChanged = true
