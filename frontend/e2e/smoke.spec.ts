@@ -118,7 +118,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
   await expect(page.getByText("Kevään 2027 ensimmäiseen yhteishakuun")).toBeVisible();
   await expect(page.getByText("2027 toisen asteen yhteishakuun")).toHaveCount(0);
   for (const [label, url] of [
-    ["hakijamäärät", "/hakijamaarat/"],
+    ["hakijamäärät", "/hakijamaarat/korkeakoulut/"],
     ["koulutukset", "/koulutukset/"],
     ["pistelaskuri", "/pistelaskuri/"],
     ["koulut", "/koulut/"],
@@ -232,7 +232,7 @@ test("nav links navigate to all pages", async ({ page }) => {
   const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
 
   for (const [label, url, heading] of [
-    ["hakijamäärät", "/hakijamaarat/", "Hakijamäärät"],
+    ["hakijamäärät", "/hakijamaarat/korkeakoulut/", "Korkeakoulujen hakijamäärät"],
     ["koulutukset", "/koulutukset/", "Koulutukset"],
     ["pistelaskuri", "/pistelaskuri/", `Todistusvalintalaskuri ${DEFAULT_CUTOFF_YEAR}`],
     ["pisterajat", "/pisterajat/", `Pisterajat ${DEFAULT_CUTOFF_YEAR}`],
@@ -254,7 +254,7 @@ test("nav links navigate to all pages", async ({ page }) => {
 
 test("/hakijamaarat: loads data and search filters results", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/hakijamaarat/");
+  await page.goto("/hakijamaarat/korkeakoulut/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
   expect(await page.evaluate<number>("document.documentElement.scrollWidth")).toBeLessThanOrEqual(390);
 
@@ -267,7 +267,7 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 });
 
 test("/hakijamaarat: shows the update date and source below pagination", async ({ page }) => {
-  await page.goto("/hakijamaarat/");
+  await page.goto("/hakijamaarat/korkeakoulut/");
   const source = page.getByText(/^Tiedot päivitetty: \d{1,2}\.\d{1,2}\.\d{4}\s*Lähde: Opetushallinnon tilastopalvelu Vipunen$/);
   await expect(source).toBeVisible();
   const pagination = await page.getByRole("navigation", { name: "Sivutus" }).boundingBox();
@@ -507,7 +507,7 @@ test("/koulutukset: joint application switcher shows the other wave", async ({ p
 });
 
 test("/hakijamaarat: joint application switcher fetches different data", async ({ page }) => {
-  await page.goto("/hakijamaarat/");
+  await page.goto("/hakijamaarat/korkeakoulut/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   await page.getByRole("button", { name: "Kunta" }).click();
@@ -525,7 +525,7 @@ test("/hakijamaarat: joint application switcher fetches different data", async (
 });
 
 test("/hakijamaarat: koulutusala filter narrows results", async ({ page }) => {
-  await page.goto("/hakijamaarat/");
+  await page.goto("/hakijamaarat/korkeakoulut/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
   const resultCount = page.getByText(/^\d+ hakutulos(?:ta)?$/);
   const getResultCount = async () => Number.parseInt((await resultCount.textContent()) ?? "", 10);
@@ -548,7 +548,7 @@ test("/hakijamaarat: koulutusala filter narrows results", async ({ page }) => {
 });
 
 test("/hakijamaarat: sorts results by acceptance rate", async ({ page }) => {
-  await page.goto("/hakijamaarat/");
+  await page.goto("/hakijamaarat/korkeakoulut/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
   await page.getByRole("combobox", { name: "Yhteishaku" }).click();
   await Promise.all([
@@ -732,7 +732,7 @@ test("/palaute: submits feedback and shows thank you message", async ({ page }) 
 });
 
 test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side comparison", async ({ page }) => {
-  await page.goto("/hakijamaarat/");
+  await page.goto("/hakijamaarat/korkeakoulut/");
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
 
   // prerendered HTML ignores clicks until React hydrates, so early clicks can be lost; retry until both register
@@ -758,7 +758,7 @@ test("/vertaile: selecting two hakukohde on /hakijamaarat opens side-by-side com
 });
 
 test("/vertaile: compares hakukohteet from different yhteishaku rounds", async ({ page }) => {
-  await page.goto("/hakijamaarat/");
+  await page.goto("/hakijamaarat/korkeakoulut/");
   await expect(async () => {
     await page.getByRole("button", { name: "Vertaile", exact: true }).first().click();
     await expect(page.getByRole("button", { name: "Valittu ✓" })).toHaveCount(1, { timeout: 500 });

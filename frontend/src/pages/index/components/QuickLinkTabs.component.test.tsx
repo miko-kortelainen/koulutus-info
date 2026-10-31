@@ -45,6 +45,9 @@ test("switches to korkeakoulutus quick links", async () => {
   const user = userEvent.setup();
   renderWithChakra(<ControlledQuickLinkTabs />);
 
+  expect(
+    within(screen.getByRole("tabpanel", { name: "Toinen aste" })).getByRole("link", { name: /^hakijamäärät/ }),
+  ).toHaveAttribute("href", "/hakijamaarat/toinen-aste/");
   await user.click(screen.getByRole("tab", { name: "Korkeakoulutus" }));
 
   expect(screen.getByRole("tab", { name: "Korkeakoulutus" })).toHaveAttribute("aria-selected", "true");

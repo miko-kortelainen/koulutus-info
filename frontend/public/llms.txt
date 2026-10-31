@@ -23,7 +23,7 @@ Tietojen tulkinta:
 
 - [Pistelaskuri](https://yhteishaku.app/pistelaskuri/): Todistusvalintapisteiden laskeminen YO-todistuksesta tai ammatillisesta perustutkinnosta ja vertailu aiempiin pisterajoihin
 - [Koulutukset](https://yhteishaku.app/koulutukset/):  Nykyisessä tai seuraavassa yhteishaussa olevat yliopisto- ja AMK-koulutukset
-- [Hakijamäärät](https://yhteishaku.app/hakijamaarat/): Hakijat, aloituspaikat, sisäänpääsyprosentit ja hakijapaine hakukohteittain
+- [Hakijamäärät](https://yhteishaku.app/hakijamaarat/korkeakoulut/): Hakijat, aloituspaikat, sisäänpääsyprosentit ja hakijapaine hakukohteittain
 - [Pisterajat](https://yhteishaku.app/pisterajat/): AMK- ja yliopistokoulutusten alimmat hyväksytyt pisteet valintatavoittain
 - [YO-pisterajat](https://yhteishaku.app/yo-pisterajat/): Ylioppilaskokeiden alimmat pistemäärät, joilla arvosanan saa
 - [Korkeakoulut](https://yhteishaku.app/koulut/): Yliopistot ja ammattikorkeakoulut sekä linkit koulukohtaisiin pisterajoihin ja opiskelijapalautteisiin

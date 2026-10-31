@@ -19,6 +19,9 @@ test("shows tools for the selected education level", async () => {
   expect(
     within(screen.getByRole("tabpanel", { name: "Toinen aste" })).getByRole("link", { name: /^lukiot/ }),
   ).toHaveAttribute("href", "/lukiot/");
+  expect(
+    within(screen.getByRole("tabpanel", { name: "Toinen aste" })).getByRole("link", { name: /^hakijamäärät/ }),
+  ).toHaveAttribute("href", "/hakijamaarat/toinen-aste/");
   await user.click(screen.getByRole("tab", { name: "Korkeakoulutus" }));
   const panel = screen.getByRole("tabpanel", { name: "Korkeakoulutus" });
   expect(within(panel).getByRole("link", { name: /^pisterajat/ })).toHaveAttribute("href", "/pisterajat/");

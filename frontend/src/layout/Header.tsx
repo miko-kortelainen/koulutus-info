@@ -15,13 +15,13 @@ import { COLORS } from "@/theme";
 
 const links = [
   {
-    href: "/hakijamaarat/",
+    href: "/hakijamaarat/korkeakoulut/",
     label: "hakijamäärät",
     description: "Katso hakijamäärät koulutuksittain",
     icon: HiOutlineChartBar,
   },
   {
-    href: "/toinen-aste-hakijamaarat/",
+    href: "/hakijamaarat/toinen-aste/",
     label: "toisen asteen hakijamäärät",
     description: "Selaa toisen asteen yhteishaun hakijamääriä",
     icon: HiOutlineChartBar,

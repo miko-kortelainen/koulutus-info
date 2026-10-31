@@ -21,8 +21,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yhteishaku.app/hakijamaarat/</loc>
+    <loc>https://yhteishaku.app/hakijamaarat/korkeakoulut/</loc>
     <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yhteishaku.app/hakijamaarat/toinen-aste/</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

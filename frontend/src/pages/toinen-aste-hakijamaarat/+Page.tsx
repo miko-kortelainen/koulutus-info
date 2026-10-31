@@ -77,7 +77,7 @@ export default function ToinenAsteHakijamaarat() {
     <>
       <PageIntro
         title="Toisen asteen hakijamäärät"
-        description="Selaa perusopetuksen jälkeisen yhteishaun hakijamääriä hakukohteittain."
+        description="Selaa toisen asteen yhteishaun lukioiden ja ammattikoulujen hakijamääriä koulutuksittain."
       />
       <PageContainer align="flex-start">
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
