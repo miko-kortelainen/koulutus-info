@@ -7,7 +7,7 @@ export default function HakijallePage() {
     <>
       <PageIntro description="Työkaluja toisen asteen ja korkeakoulutuksen hakijalle." title="Hakijalle" />
       <PageContainer align="flex-start">
-        <ToolsPage />
+        <ToolsPage rememberSelection />
       </PageContainer>
     </>
   );

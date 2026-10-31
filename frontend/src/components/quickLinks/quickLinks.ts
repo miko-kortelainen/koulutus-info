@@ -16,16 +16,16 @@ export const quickLinkSections = [
     rounds: TOINEN_ASTE_ROUNDS,
     links: [
       {
-        href: "/hakijamaarat/toinen-aste/",
-        label: "hakijamäärät",
-        description: "Katso toisen asteen yhteishaun hakijamääriä",
-        icon: HiOutlineChartBar,
-      },
-      {
         href: "/lukiot/",
         label: "lukiot",
         description: "Katso lukioiden keskiarvorajat",
         icon: HiOutlineOfficeBuilding,
+      },
+      {
+        href: "/hakijamaarat/toinen-aste/",
+        label: "hakijamäärät",
+        description: "Katso toisen asteen yhteishaun hakijamääriä",
+        icon: HiOutlineChartBar,
       },
       {
         href: "/yo-pisterajat/",
