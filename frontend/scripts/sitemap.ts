@@ -54,7 +54,8 @@ const hubPaths = new Set([
   "/pisterajat/",
   "/lukiot/",
   "/yo-pisterajat/",
-  "/hakijamaarat/",
+  "/hakijamaarat/korkeakoulut/",
+  "/hakijamaarat/toinen-aste/",
   "/koulutukset/",
   "/oppaat/",
 ]);
@@ -77,7 +78,14 @@ const priorityFor = (path: string) => {
 };
 
 const lastmodFor = (path: string) => {
-  if (path === "/hakijamaarat/" || path === "/trendit/") return statisticsLastmod;
+  if (path === "/hakijamaarat/korkeakoulut/" || path === "/trendit/") return statisticsLastmod;
+  if (path === "/hakijamaarat/toinen-aste/") {
+    return latestModifiedDate(
+      readdirSync("public/data/toinen-aste")
+        .filter((file) => file.endsWith(".json"))
+        .map((file) => `toinen-aste/${file}`),
+    );
+  }
   if (path === "/hakijaprofiili/") return profiliLastmod ?? statisticsLastmod;
   if (path === "/koulutukset/") return programmesLastmod;
   if (path.endsWith("/opiskelijapalautteet/")) return feedbackLastmod;
@@ -98,7 +106,8 @@ const paths = [
   "/asenna/",
   "/hakijalle/",
   "/opolle/",
-  "/hakijamaarat/",
+  "/hakijamaarat/korkeakoulut/",
+  "/hakijamaarat/toinen-aste/",
   "/hakijaprofiili/",
   "/koulutukset/",
   "/pistelaskuri/",

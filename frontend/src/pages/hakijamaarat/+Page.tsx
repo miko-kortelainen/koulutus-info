@@ -202,7 +202,10 @@ export default function StatsListPage() {
 
   return (
     <>
-      <PageIntro description="Selaa korkeakoulujen yhteishaun hakijamääriä hakukohteittain." title="Hakijamäärät" />
+      <PageIntro
+        description="Selaa yliopistojen ja ammattikorkeakoulujen yhteishaun hakijamääriä koulutuksittain."
+        title="Korkeakoulujen hakijamäärät"
+      />
       <PageContainer align="flex-start">
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
           {sidebar}

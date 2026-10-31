@@ -29,7 +29,7 @@ const defaultRelated = [
     description: "Selaa korkeakoulujen pisterajoja eri hakukierroksilta.",
   },
   {
-    href: "/hakijamaarat/",
+    href: "/hakijamaarat/korkeakoulut/",
     label: "Hakijamäärät",
     description: "Katso hakijamäärät ja hakupaine koulutuksittain.",
   },

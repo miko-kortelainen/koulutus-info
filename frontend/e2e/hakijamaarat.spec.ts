@@ -2,9 +2,9 @@ import { expect, test } from "@playwright/test";
 import { TOINEN_ASTE_YEARS } from "../src/generated/toinenAsteYears";
 
 const pages = [
-  { path: "/hakijamaarat/", option: "Syksyn yhteishaku 2025", data: "hakijamaarat-2025-syksy.json" },
+  { path: "/hakijamaarat/korkeakoulut/", option: "Syksyn yhteishaku 2025", data: "hakijamaarat-2025-syksy.json" },
   {
-    path: "/toinen-aste-hakijamaarat/",
+    path: "/hakijamaarat/toinen-aste/",
     option: `Yhteishaku ${TOINEN_ASTE_YEARS[1]}`,
     data: `hakijamaarat-${TOINEN_ASTE_YEARS[1]}.json`,
   },
@@ -54,7 +54,7 @@ for (const { path, option, data } of pages) {
 
 test("toisen asteen hakijamäärät: searches, filters and switches year", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/toinen-aste-hakijamaarat/");
+  await page.goto("/hakijamaarat/toinen-aste/");
   const count = page.locator('[aria-live="polite"]').filter({ hasText: /hakutulos/ });
   await expect(count).toContainText(/^(?!0000 )\d+ hakutulos/);
   expect(await page.evaluate<number>("document.documentElement.scrollWidth")).toBeLessThanOrEqual(390);

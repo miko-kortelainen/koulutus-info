@@ -41,7 +41,7 @@ Kun käyttäjä on hierarkkisella alasivulla (esim. `/koulut/@slug/`, `/koulut/@
 Valitse sivulle jokin näistä kolmesta asettelusta sen sijaan, että keksit uuden sijoittelun:
 
 #### Tyyppi A: Sivupalkki + tuloslista (monisuodatinhaku)
-Käyttökohteet: `/koulutukset/`, `/hakijamaarat/`.
+Käyttökohteet: `/koulutukset/`, `/hakijamaarat/korkeakoulut/`.
 
 ```tsx
 <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
@@ -146,7 +146,7 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
 - Vakioitu ulkoasu: `size="sm"`, `width="full"`.
 - **Näkyvä otsikko (`label?: string`):**
   - Kun valitsin tarvitsee näkyvän yläotsikon (esim. `/pistelaskuri/`, `/trendit/`, `/ennakointi/`), anna `label`-prop: `<OptionSelect label="Järjestys" ... />`.
-  - Kun valitsimen arvo on itsessään selkeä ilman yläotsikkoa (esim. `/koulutukset/`, `/hakijamaarat/`, `/lukiot/`), jätä `label` pois ja anna kuvaava `ariaLabel`.
+  - Kun valitsimen arvo on itsessään selkeä ilman yläotsikkoa (esim. `/koulutukset/`, `/hakijamaarat/korkeakoulut/`, `/lukiot/`), jätä `label` pois ja anna kuvaava `ariaLabel`.
 
 ### 5.3 Sivupalkin suodatinhaitari (`FilterAccordion`)
 - Käytä `@/components/FilterAccordion` ([src/components/FilterAccordion.tsx](src/components/FilterAccordion.tsx)) `FilterItem`-, `toCollection`- ja `selectFilter`-osia.
