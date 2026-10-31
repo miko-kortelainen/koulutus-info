@@ -1,6 +1,5 @@
 import { Link } from "@chakra-ui/react";
 import type { MouseEvent } from "react";
-import { COLORS } from "@/theme";
 
 interface BackLinkProps {
   href: string;
@@ -20,7 +19,7 @@ export default function BackLink({ href }: BackLinkProps) {
       href={href}
       onClick={handleClick}
       textDecoration="underline"
-      textDecorationColor={COLORS.accentFg}
+      textDecorationColor="fg.accent"
       textDecorationStyle="dotted"
     >
       ← Takaisin

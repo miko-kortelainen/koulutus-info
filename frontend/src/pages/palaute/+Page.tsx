@@ -1,7 +1,7 @@
-import { Button, Heading, Link, Stack, Text, Textarea } from "@chakra-ui/react";
+import { Button, Link, Stack, Text, Textarea } from "@chakra-ui/react";
 import { type SubmitEvent, useState } from "react";
 import PageContainer from "@/layout/PageContainer";
-import { COLORS } from "@/theme";
+import PageIntro from "@/layout/PageIntro";
 
 const FORMSUBMIT_URL = "https://formsubmit.co/834cceb5eea9f272c02b5e0b16c11f18";
 
@@ -30,28 +30,13 @@ export default function PalautePage() {
     }
   }
 
-  const header = (
-    <Stack gap={1}>
-      <Heading as="h1" size="lg">
-        Palaute
-      </Heading>
-      <Text color="fg.muted" textWrap="pretty" textWrapMode="wrap">
-        Huomasitko virheen tai keksitkö kehitysidean? Kerro siitä alla tai laita sähköpostia{" "}
-        <Link color="fg.accent" href="mailto:miko@kortelainen.dev">
-          miko@kortelainen.dev
-        </Link>
-        .
-      </Text>
-    </Stack>
-  );
-
   const form =
     status === "sent" ? (
       <Text color="fg.muted" role="status">
         Kiitos palautteesta!
       </Text>
     ) : (
-      <Stack as="form" gap={2} onSubmit={handleSubmit}>
+      <Stack as="form" gap={4} onSubmit={handleSubmit} width="full">
         <Textarea
           aria-label="Palaute"
           minH="10rem"
@@ -64,8 +49,8 @@ export default function PalautePage() {
 
         <Button
           alignSelf="flex-end"
-          bg={COLORS.accent}
-          color={COLORS.onAccent}
+          bg="accent"
+          color="onAccent"
           loading={status === "sending"}
           size="sm"
           type="submit"
@@ -82,9 +67,20 @@ export default function PalautePage() {
     );
 
   return (
-    <PageContainer align="flex-start">
-      {header}
-      {form}
-    </PageContainer>
+    <>
+      <PageIntro
+        description={
+          <>
+            Huomasitko virheen tai keksitkö kehitysidean? Kerro siitä alla tai laita sähköpostia{" "}
+            <Link color="fg.accent" href="mailto:miko@kortelainen.dev" textDecoration="underline">
+              miko@kortelainen.dev
+            </Link>
+            .
+          </>
+        }
+        title="Palaute"
+      />
+      <PageContainer align="flex-start">{form}</PageContainer>
+    </>
   );
 }

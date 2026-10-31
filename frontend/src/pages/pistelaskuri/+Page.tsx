@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
 import { useWebMCP } from "use-webmcp-tool";
+import OptionSelect from "@/components/OptionSelect";
 import SearchInput from "@/components/SearchInput";
 import {
   CALCULATOR_CUTOFF_ROUNDS,
@@ -23,7 +24,6 @@ import {
 } from "@/pages/pistelaskuri/lib/todistusvalinta/index";
 import { COLORS } from "@/theme";
 import { AMM_GRADES, type AmmFormState, type AmmGrade, parseAmmForm } from "@/pages/pistelaskuri/components/AmmForm";
-import ResultSelect from "@/pages/pistelaskuri/components/ResultSelect";
 import ScoreForm from "@/pages/pistelaskuri/components/ScoreForm";
 import ScoreResultList from "@/pages/pistelaskuri/components/ScoreResultList";
 import {
@@ -431,7 +431,7 @@ export default function ScoreCalculatorPage() {
     </Alert.Root>
   ) : filteredResults.length === 0 ? (
     <Text color="fg.muted" fontSize="sm" textAlign="center">
-      Ei toteutuksia valituilla rajauksilla :(
+      Ei toteutuksia valituilla rajauksilla.
     </Text>
   ) : normalizedSearchTerm ? (
     searchResultContent
@@ -467,16 +467,16 @@ export default function ScoreCalculatorPage() {
       </Stack>
 
       <HStack id="vertaa-pisterajoihin">
-        <Separator bg={COLORS.accentFg} flex={1} size="md" />
+        <Separator bg="fg.accent" flex={1} size="md" />
         <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" textAlign="center">
           Vertaa pisterajoihin
         </Text>
-        <Separator bg={COLORS.accentFg} flex={1} size="md" />
+        <Separator bg="fg.accent" flex={1} size="md" />
       </HStack>
 
-      <Stack direction={{ base: "column", lg: "row" }} gap={4} width="full">
+      <Stack direction={{ base: "column", lg: "row" }} gap={6} width="full">
         <Box flex={1}>
-          <ResultSelect<CutoffRound>
+          <OptionSelect<CutoffRound>
             items={ROUND_OPTIONS}
             label="Yhteishaku"
             onChange={handleRoundChange}
@@ -484,7 +484,7 @@ export default function ScoreCalculatorPage() {
           />
         </Box>
         <Box flex={1}>
-          <ResultSelect<SectorFilter>
+          <OptionSelect<SectorFilter>
             items={SECTOR_OPTIONS}
             label="Korkeakoulutyyppi"
             onChange={setSectorFilter}
@@ -492,7 +492,7 @@ export default function ScoreCalculatorPage() {
           />
         </Box>
         <Box flex={1}>
-          <ResultSelect<SortOption>
+          <OptionSelect<SortOption>
             ariaLabel="Järjestys"
             items={SORT_OPTIONS}
             label="Järjestysperuste"

@@ -15,7 +15,6 @@ import SortControl from "@/pages/lukiot/components/SortControl";
 import useFilteredLukioSchools from "@/pages/lukiot/hooks/useFilteredLukioKeskiarvot";
 import { LUKIO_KUNTA_ALL, uniqueLukioKunnat } from "@/pages/lukiot/lib/lukioKunnat";
 import { type LukioSortOption, parseOmaKeskiarvo } from "@/pages/lukiot/lib/sortLukioKeskiarvot";
-import { COLORS } from "@/theme";
 
 const PAGE_SIZE = 10;
 
@@ -35,7 +34,7 @@ export default function LukiotPage() {
   const paginated = schools.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   const controls = (
-    <Stack gap={3} width="full" zIndex={10}>
+    <Stack gap={4} width="full" zIndex={10}>
       <Input
         aria-label="Oma keskiarvo"
         inputMode="decimal"
@@ -108,7 +107,7 @@ export default function LukiotPage() {
                 <Box
                   aria-label={school.reachable ? "Keskiarvo riittää yleislinjalle" : "Keskiarvo ei riitä yleislinjalle"}
                   as="span"
-                  color={school.reachable ? COLORS.accentFg : "fg.muted"}
+                  color={school.reachable ? "fg.accent" : "fg.muted"}
                   display="inline-flex"
                   flexShrink={0}
                   fontSize="xl"

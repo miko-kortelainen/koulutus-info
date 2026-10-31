@@ -13,7 +13,7 @@ interface QuickLinkCardProps {
 
 export default function QuickLinkCard({ href, label, description, icon: Icon }: QuickLinkCardProps) {
   return (
-    <Card.Root alignItems="start" asChild borderColor={COLORS.accentFg} size="sm">
+    <Card.Root alignItems="start" asChild borderColor="fg.accent" size="sm">
       <Link _hover={{ textDecoration: "none" }} href={href}>
         <Card.Body alignItems="center" flexDirection="row" gap={4} justifyContent="space-between" width="100%">
           <Stack alignItems="start" gap={0}>
@@ -27,7 +27,7 @@ export default function QuickLinkCard({ href, label, description, icon: Icon }: 
               color="fg.muted"
               fontSize="sm"
               textDecor="underline"
-              textDecorationColor={COLORS.accentFg}
+              textDecorationColor="fg.accent"
               textDecorationStyle="dotted"
             >
               {description}

@@ -2,7 +2,6 @@ import { Box, Button, Stack, Tabs, Text } from "@chakra-ui/react";
 import { type SubmitEvent, useEffect, useRef, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import type { CutoffRound } from "@/config/cutoffRounds";
-import { COLORS } from "@/theme";
 import type { Calculation } from "@/pages/pistelaskuri/lib/scoreResults";
 import { recalculateFromGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/index";
 import {
@@ -212,8 +211,8 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
           </Tabs.Content>
           <Box display="flex" justifyContent="flex-end">
             <Button
-              bg={COLORS.accent}
-              color={COLORS.onAccent}
+              bg="accent"
+              color="onAccent"
               loading={isCalculating}
               mt={6}
               size="md"

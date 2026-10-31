@@ -6,8 +6,8 @@ export function Head() {
   return (
     <>
       <meta content={description} name="description" />
-      <link href="https://yhteishaku.app/hakijamaarat/" rel="canonical" />
-      <meta content="https://yhteishaku.app/hakijamaarat/" property="og:url" />
+      <link href="https://yhteishaku.app/hakijamaarat/korkeakoulut/" rel="canonical" />
+      <meta content="https://yhteishaku.app/hakijamaarat/korkeakoulut/" property="og:url" />
       <meta content={description} property="og:description" />
     </>
   );

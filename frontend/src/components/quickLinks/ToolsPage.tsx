@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { HiOutlineBookOpen, HiOutlineChartBar, HiOutlineClipboardList, HiOutlineTrendingUp } from "react-icons/hi";
-import { quickLinkSections } from "@/components/quickLinks/quickLinks";
 import QuickLinkTabs from "@/components/quickLinks/QuickLinkTabs";
+import { quickLinkSections } from "@/components/quickLinks/quickLinks";
+import useEducationLevel from "@/components/quickLinks/useEducationLevel";
 
 const sections = [
   quickLinkSections[0],
@@ -38,8 +38,8 @@ const sections = [
   },
 ];
 
-export default function ToolsPage() {
-  const [section, setSection] = useState(sections[0].id);
+export default function ToolsPage({ rememberSelection = false }: { rememberSelection?: boolean }) {
+  const [section, selectSection] = useEducationLevel(rememberSelection);
 
-  return <QuickLinkTabs onValueChange={setSection} sections={sections} value={section} />;
+  return <QuickLinkTabs onValueChange={selectSection} sections={sections} value={section} />;
 }

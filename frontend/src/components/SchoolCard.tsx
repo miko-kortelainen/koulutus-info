@@ -12,9 +12,10 @@ interface SchoolCardProps {
   index?: number;
   onMoveUp?: () => void;
   onMoveDown?: () => void;
+  onSaved?: () => void;
 }
 
-export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: SchoolCardProps) {
+export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSaved }: SchoolCardProps) {
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorited = isFavorite(toteutus.toteutusOid);
   const toteutusURL = `https://opintopolku.fi/konfo/fi/toteutus/${toteutus.toteutusOid}`;
@@ -24,8 +25,8 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
   const schoolBadge = (
     <Badge
       asChild
-      bg={COLORS.accent}
-      color={COLORS.onAccent}
+      bg="accent"
+      color="onAccent"
       fontWeight="semibold"
       letterSpacing="wide"
       mb={2}
@@ -33,7 +34,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
       width="fit"
     >
       <a href={`/koulut/${slugify(schoolName)}/`}>
-        <HiLocationMarker /> {schoolName}
+        <HiLocationMarker aria-hidden="true" /> {schoolName}
       </a>
     </Badge>
   );
@@ -54,7 +55,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
             rel="noopener noreferrer"
             target="_blank"
             textDecoration="underline"
-            textDecorationColor={COLORS.accentFg}
+            textDecorationColor="fg.accent"
             textDecorationStyle="dotted"
           >
             Hae opintopolussa
@@ -66,7 +67,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
             href={pisterajatURL}
             letterSpacing="wide"
             textDecoration="underline"
-            textDecorationColor={COLORS.accentFg}
+            textDecorationColor="fg.accent"
             textDecorationStyle="dotted"
           >
             Katso alan pisterajat
@@ -78,7 +79,10 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
         height="fit"
         onClick={() => {
           toggleFavorite(toteutus);
-          if (!favorited) window.sa_event?.("save_degree");
+          if (!favorited) {
+            window.sa_event?.("save_degree");
+            onSaved?.();
+          }
         }}
         size="xl"
         variant="ghost"
@@ -91,7 +95,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown }: Sc
   return (
     <Card.Root
       as="li"
-      borderColor={favorited ? COLORS.accentFg : undefined}
+      borderColor={favorited ? "fg.accent" : undefined}
       size="md"
       style={index !== undefined ? { viewTransitionName: `oma-hakulista-${toteutus.toteutusOid}` } : undefined}
     >

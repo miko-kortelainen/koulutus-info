@@ -1,18 +1,18 @@
-import { Accordion, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Link, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
+import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
-import SearchInput from "@/components/SearchInput";
+import { toaster } from "@/components/Toaster";
 import {
   CURRENT_PROGRAMME_ROUND,
   PROGRAMME_ROUND_OPTIONS,
   programmeRoundIntro,
   type ProgrammeRound,
 } from "@/config/programmeRounds";
-import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import useFilteredDegrees from "@/pages/koulutukset/hooks/useFilteredDegrees";
@@ -71,10 +71,9 @@ export default function SchoolsListPage() {
     () => toCollection(toteutukset.flatMap((t) => t.koulutusalat ?? [])),
     [toteutukset],
   );
-  const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const filteredData = useFilteredDegrees(
     toteutukset,
-    debouncedSearchTerm,
+    searchTerm,
     selectedSektorit,
     selectedKunnat,
     selectedSchools,
@@ -85,7 +84,7 @@ export default function SchoolsListPage() {
   const paginated = filteredData.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   const sortControls = (
-    <Stack position={{ md: "sticky" }} width={{ base: "100%", md: "80" }}>
+    <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
       <OptionSelect
         ariaLabel="Yhteishaku"
         items={PROGRAMME_ROUND_OPTIONS}
@@ -102,16 +101,15 @@ export default function SchoolsListPage() {
         size="sm"
         value={selectedRound}
       />
-      <SearchInput
-        onChange={(value) => {
-          setSearchTerm(value);
-          setPage(1);
+      <DebouncedSearchInput
+        onChange={setSearchTerm}
+        onInput={() => {
+          if (page !== 1) setPage(1);
         }}
         placeholder="Etsi koulutuksia"
-        value={searchTerm}
       />
 
-      <Accordion.Root multiple>
+      <Accordion.Root multiple size="sm">
         <FilterItem
           collection={sektoriCollection}
           label="Sektori"
@@ -155,7 +153,17 @@ export default function SchoolsListPage() {
     <Stack as="ul" direction="column" gap={4} listStyleType="none">
       {paginated.length === 0 ? <Text as="li">Ei tuloksia hakusanoilla.</Text> : null}
       {paginated.map((t) => (
-        <SchoolCard key={t.toteutusOid} toteutus={t} />
+        <SchoolCard
+          key={t.toteutusOid}
+          onSaved={() =>
+            toaster.create({
+              title: "Koulutus lisätty omalle hakulistalle.",
+              description: <Link color="toastFg" href="/oma-hakulista/" textDecoration="underline">Näytä</Link>,
+              type: "success",
+            })
+          }
+          toteutus={t}
+        />
       ))}
     </Stack>
   );
@@ -164,10 +172,10 @@ export default function SchoolsListPage() {
     <>
       <PageIntro description={programmeRoundIntro(selectedRound)} title="Koulutukset" />
       <PageContainer align="flex-start">
-        <Stack align="start" direction={{ base: "column", md: "row" }} gap={4}>
+        <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
           {sortControls}
 
-          <Stack flex={1} gap={4} position="relative" width="100%">
+          <Stack flex={1} gap={4} minW={0} position="relative" width="100%">
             <Text aria-live="polite" color="fg.muted" fontSize="xs" position="absolute" right={0} bottom="100%">
               {new Intl.NumberFormat("fi-FI").format(filteredData.length)}{" "}
               {filteredData.length === 1 ? "tulos" : "tulosta"}

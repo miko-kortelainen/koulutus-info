@@ -1,5 +1,4 @@
 import { ActionBar, Button, HStack, Portal, Tag } from "@chakra-ui/react";
-import { COLORS } from "@/theme";
 import { statisticsRoundShortLabel, type YearOption } from "@/config/yearOptions";
 import type { StatisticsEntry } from "@/types.gen";
 
@@ -24,7 +23,7 @@ export default function CompareBar({ selected, onRemove }: CompareBarProps) {
       <Portal>
         <ActionBar.Positioner zIndex="popover">
           <ActionBar.Content
-            bg={COLORS.surfaceMuted}
+            bg="bg.muted"
             minH={{ base: "3rem", md: "5rem" }}
             w={{ base: "90%", md: "65rem" }}
           >
@@ -51,8 +50,8 @@ export default function CompareBar({ selected, onRemove }: CompareBarProps) {
             <ActionBar.Separator />
             <Button
               asChild={!!compareHref}
-              bg={COLORS.accent}
-              color={COLORS.onAccent}
+              bg="accent"
+              color="onAccent"
               disabled={!compareHref}
               size={{ base: "xs", md: "sm" }}
               variant="solid"

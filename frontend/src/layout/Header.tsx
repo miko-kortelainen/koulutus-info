@@ -15,9 +15,15 @@ import { COLORS } from "@/theme";
 
 const links = [
   {
-    href: "/hakijamaarat/",
+    href: "/hakijamaarat/korkeakoulut/",
     label: "hakijamäärät",
     description: "Katso hakijamäärät koulutuksittain",
+    icon: HiOutlineChartBar,
+  },
+  {
+    href: "/hakijamaarat/toinen-aste/",
+    label: "toisen asteen hakijamäärät",
+    description: "Selaa toisen asteen yhteishaun hakijamääriä",
     icon: HiOutlineChartBar,
   },
   {
@@ -114,7 +120,7 @@ export default function Header() {
                                 color="fg.muted"
                                 fontSize="sm"
                                 textDecor="underline"
-                                textDecorationColor={COLORS.accentFg}
+                                textDecorationColor="fg.accent"
                                 textDecorationStyle="dotted"
                                 textDecorationThickness={2}
                               >

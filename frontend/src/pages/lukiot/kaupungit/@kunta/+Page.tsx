@@ -1,5 +1,6 @@
 import { Box, Heading, Stack } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
+import BackLink from "@/components/BackLink";
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
@@ -24,7 +25,8 @@ export default function LukioKuntaPage() {
         }
       />
       <PageContainer align="flex-start">
-        <Stack as="ul" gap={6} listStyleType="none">
+        <BackLink href="/lukiot/kaupungit/" />
+        <Stack as="ul" gap={6} listStyleType="none" width="full">
           {schools.map((school) => (
             <Box as="li" key={school.slug}>
               <Heading as="h2" mb={2} size="md">

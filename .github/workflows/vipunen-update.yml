@@ -35,6 +35,8 @@ jobs:
             Smoke tests do not run automatically for pull requests created with GITHUB_TOKEN.
           add-paths: |
             frontend/public/data/hakijamäärät/
+            frontend/public/data/toinen-aste/
             frontend/public/data/meta.json
             frontend/public/data/schools.json
             frontend/src/generated/dataManifest.ts
+            frontend/src/generated/toinenAsteYears.ts

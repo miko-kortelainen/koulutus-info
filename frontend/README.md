@@ -99,7 +99,7 @@ flowchart TB
   subgraph discovery["Browse and analyse"]
     home["/<br/>LandingPage"] --> homeParts["LandingHeadline · HeroButtons · useCountdown<br/>IosInstallTip · QuickLinkTabs · QuickLinkCard"]
     degrees["/koulutukset/<br/>SchoolsListPage"] --> degreeParts["OptionSelect · SearchInput · FilterItem<br/>useFilteredDegrees · SchoolCard · Pagination"]
-    stats["/hakijamaarat/<br/>StatsListPage"] --> statsParts["Search and filters · YearControl · SortControl<br/>useFilteredStatistics · DegreeStatsCard · CompareBar · Pagination"]
+    stats["/hakijamaarat/korkeakoulut/<br/>StatsListPage"] --> statsParts["Search and filters · YearControl · SortControl<br/>useFilteredStatistics · DegreeStatsCard · CompareBar · Pagination"]
     stats --> compare["/vertaile/<br/>ComparePage"] --> compareParts["ComparisonTable · ShareButton"]
     trends["/trendit/<br/>TrendsPage"] --> trendParts["YearControl · useTrendsData · TrendCard<br/>TopBarList · ApplicantTotalsChart"]
     profile["/hakijaprofiili/<br/>HakijaprofiiliPage"] --> profileParts["OptionSelect · ScopeControl · SearchInput<br/>useHakijaprofiiliQuery · useFilteredEntities<br/>EntityList · ProfiliDetail"]
@@ -149,3 +149,6 @@ flowchart TB
     errorPage["_error<br/>ErrorPage"]
   end
 ```
+
+Second-degree joint-application applicant statistics are refreshed by the Go
+data generator in `backend/` alongside the other Vipunen statistics.
