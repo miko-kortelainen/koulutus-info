@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { TOINEN_ASTE_YEARS } from "../src/generated/toinenAsteYears";
+import { TOINEN_ASTE_YEARS } from "@/config/toinenAsteYears";
 
 const pages = [
   { path: "/hakijamaarat/korkeakoulut/", option: "Syksyn yhteishaku 2025", data: "hakijamaarat-2025-syksy.json" },
