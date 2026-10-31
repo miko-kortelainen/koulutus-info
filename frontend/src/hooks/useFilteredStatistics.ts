@@ -8,7 +8,7 @@ import {
   ratioFormat,
 } from "@/lib/statistics";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
-import { type SortOption, sortStatistics } from "@/pages/hakijamaarat/lib/sortStatistics";
+import { type SortOption, sortStatistics } from "@/lib/sortStatistics";
 
 const FUSE_OPTIONS = {
   keys: [{ name: "hakukohde", weight: 3 }, { name: "korkeakoulu", weight: 2 }, "sektori", "koulutusalaTaso1"],
