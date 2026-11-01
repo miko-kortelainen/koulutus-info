@@ -1,9 +1,9 @@
 package services
 
 import (
+	"datagen/models"
 	"fmt"
 	"net/url"
-	"school-api/models"
 	"strconv"
 	"strings"
 )

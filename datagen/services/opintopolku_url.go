@@ -15,8 +15,8 @@ const (
 func BuildOpintopolkuURL(yhteishakuOID string, alkamisajankohdat []string) (string, string, error) {
 	u, _ := url.Parse(OpintopolkuBaseURL)
 	query := url.Values{
-		"size":               {"100"},
-		"lng":                {"fi"},
+		"size": {"100"},
+		"lng":  {"fi"},
 	}
 
 	trimmedOID := strings.TrimSpace(yhteishakuOID)

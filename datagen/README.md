@@ -2,6 +2,13 @@
 
 The Go application fetches and prepares static frontend datasets from Vipunen and Opintopolku. It is an offline update tool.
 
+The root package coordinates refreshes and output files: `refresh.go` runs the
+source refreshes, `toinen_aste.go` handles second-degree output, and the catalog,
+manifest, and file helpers have their own files. `services/` contains source
+fetching and transformations, including the Vipunen second-degree data. `models/`
+contains configuration, source, and output types; `cmd/pisterajat` is the
+separate CSV conversion command.
+
 ## Configuration
 
 `config.json` holds the programme start year used for Vipunen statistics and the current manually sourced joint-application haut:

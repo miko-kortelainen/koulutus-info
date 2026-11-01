@@ -1,9 +1,9 @@
 package main
 
 import (
+	"datagen/models"
 	"os"
 	"path/filepath"
-	"school-api/models"
 	"testing"
 )
 

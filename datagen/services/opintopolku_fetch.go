@@ -1,9 +1,9 @@
 package services
 
 import (
+	"datagen/models"
 	"fmt"
 	"net/url"
-	"school-api/models"
 	"sort"
 	"strconv"
 	"strings"
@@ -137,4 +137,3 @@ func alaNamesFromKoodiUrit(detail *koulutusDetail) ([]string, error) {
 	sort.Strings(names)
 	return names, nil
 }
-
