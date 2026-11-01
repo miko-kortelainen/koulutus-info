@@ -18,18 +18,18 @@ jobs:
           ref: main
       - uses: actions/setup-go@v7
         with:
-          go-version-file: backend/go.mod
-          cache-dependency-path: backend/go.mod
+          go-version-file: datagen/go.mod
+          cache-dependency-path: datagen/go.mod
       - name: Refresh Vipunen statistics
         run: go run . vipunen
-        working-directory: backend
+        working-directory: datagen
       - uses: peter-evans/create-pull-request@v8
         with:
           branch: automated/vipunen-statistics
           commit-message: Update Vipunen hakijamäärät
           title: Update Vipunen hakijamäärät
           body: |
-            Refresh Vipunen hakijamäärät for the programme start year in backend/config.json.
+            Refresh Vipunen hakijamäärät for the programme start year in datagen/config.json.
 
             Generated with `go run . vipunen`. No frontend install or build is run by this workflow.
             Smoke tests do not run automatically for pull requests created with GITHUB_TOKEN.
