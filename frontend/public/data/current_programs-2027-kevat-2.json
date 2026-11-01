@@ -8152,34 +8152,6 @@
     "tutkintotaso": "alempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000011540",
-        "toteutusNimi": {
-          "fi": "Insinööri (AMK), Tieto- ja viestintätekniikka, monimuotototeutus, Pori"
-        },
-        "oppilaitosNimi": {
-          "fi": "Satakunnan ammattikorkeakoulu",
-          "sv": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK"
-        },
-        "kunnat": [
-          "Pori"
-        ],
-        "koulutusalat": [
-          "Tietojenkäsittely ja tietoliikenne"
-        ]
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Insinööri (AMK), tietotekniikka",
-      "sv": "Ingenjör (YH), datateknik",
-      "en": "BEng (UAS), IT"
-    },
-    "sektori": "amk",
-    "tutkintotaso": "alempi",
-    "toteutukset": [
-      {
         "toteutusOid": "1.2.246.562.17.00000000000000003329",
         "toteutusNimi": {
           "fi": "Insinööri (AMK), tieto- ja viestintätekniikka, ohjelmistokehitys tai XR- ja pelikehitys, verkko-opetus, Rovaniemi"
@@ -8633,6 +8605,34 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tietotekniikka",
+      "sv": "Ingenjör (YH), datateknik",
+      "en": "BEng (UAS), IT"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000011540",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Tieto- ja viestintätekniikka, monimuotototeutus, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Pori"
         ],
         "koulutusalat": [
           "Tietojenkäsittely ja tietoliikenne"
@@ -9689,17 +9689,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000003304",
+        "toteutusOid": "1.2.246.562.17.00000000000000002734",
         "toteutusNimi": {
-          "fi": "Insinööri (ylempi AMK), teknologiaosaamisen johtaminen, verkkototeutus"
+          "fi": "Insinööri (ylempi AMK), Teknologiaosaamisen johtaminen, verkkototeutus"
         },
         "oppilaitosNimi": {
-          "fi": "Centria-ammattikorkeakoulu",
-          "sv": "Centria-ammattikorkeakoulu",
-          "en": "Centria University of Applied Sciences"
+          "fi": "Karelia-ammattikorkeakoulu",
+          "sv": "Karelia-ammattikorkeakoulu",
+          "en": "Karelia University of Applied Sciences"
         },
         "kunnat": [
-          "Kokkola"
+          "Joensuu"
         ],
         "koulutusalat": [
           "Tekniikan alat"
@@ -9717,17 +9717,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000002734",
+        "toteutusOid": "1.2.246.562.17.00000000000000003304",
         "toteutusNimi": {
-          "fi": "Insinööri (ylempi AMK), Teknologiaosaamisen johtaminen, verkkototeutus"
+          "fi": "Insinööri (ylempi AMK), teknologiaosaamisen johtaminen, verkkototeutus"
         },
         "oppilaitosNimi": {
-          "fi": "Karelia-ammattikorkeakoulu",
-          "sv": "Karelia-ammattikorkeakoulu",
-          "en": "Karelia University of Applied Sciences"
+          "fi": "Centria-ammattikorkeakoulu",
+          "sv": "Centria-ammattikorkeakoulu",
+          "en": "Centria University of Applied Sciences"
         },
         "kunnat": [
-          "Joensuu"
+          "Kokkola"
         ],
         "koulutusalat": [
           "Tekniikan alat"
@@ -11340,6 +11340,34 @@
   },
   {
     "nimi": {
+      "fi": "Fil. maist., kemia",
+      "sv": "Fil. mag., kemi",
+      "en": "Master of Science, Chemistry"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003001",
+        "toteutusNimi": {
+          "fi": "Kemia, kandidaatti ja maisteri (3 v + 2 v)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
+        },
+        "kunnat": [
+          "Turku"
+        ],
+        "koulutusalat": [
+          "Luonnontieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
       "fi": "Luonnont. kand., kemia",
       "sv": "Nat. kand., kemi",
       "en": "Bachelor of Science, Chemistry"
@@ -11360,34 +11388,6 @@
         },
         "kunnat": [
           "Helsinki"
-        ],
-        "koulutusalat": [
-          "Luonnontieteet"
-        ]
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Fil. maist., kemia",
-      "sv": "Fil. mag., kemi",
-      "en": "Master of Science, Chemistry"
-    },
-    "sektori": "yo",
-    "tutkintotaso": "ylempi",
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000003001",
-        "toteutusNimi": {
-          "fi": "Kemia, kandidaatti ja maisteri (3 v + 2 v)"
-        },
-        "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "sv": "Åbo universitet",
-          "en": "University of Turku"
-        },
-        "kunnat": [
-          "Turku"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -12634,17 +12634,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000003293",
+        "toteutusOid": "1.2.246.562.17.00000000000000002378",
         "toteutusNimi": {
-          "fi": "Maisterihaku, Konetekniikka, diplomi-insinööri (2 v)"
+          "fi": "Konetekniikka, diplomi-insinööri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Oulun yliopisto",
-          "sv": "Uleåborgs universitet",
-          "en": "University of Oulu"
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
         },
         "kunnat": [
-          "Oulu"
+          "Turku"
         ],
         "koulutusalat": [
           "Tekniikan alat"
@@ -12662,17 +12662,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000002378",
+        "toteutusOid": "1.2.246.562.17.00000000000000003293",
         "toteutusNimi": {
-          "fi": "Konetekniikka, diplomi-insinööri (2 v)"
+          "fi": "Maisterihaku, Konetekniikka, diplomi-insinööri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "sv": "Åbo universitet",
-          "en": "University of Turku"
+          "fi": "Oulun yliopisto",
+          "sv": "Uleåborgs universitet",
+          "en": "University of Oulu"
         },
         "kunnat": [
-          "Turku"
+          "Oulu"
         ],
         "koulutusalat": [
           "Tekniikan alat"
@@ -16585,17 +16585,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000028058",
+        "toteutusOid": "1.2.246.562.17.00000000000000043491",
         "toteutusNimi": {
-          "fi": "Matematiikka, Joensuu, filosofian maisteri (2 v)"
+          "fi": "Matematiikan maisteriohjelma, filosofian maisteri (2 v), syksy 2027"
         },
         "oppilaitosNimi": {
-          "fi": "Itä-Suomen yliopisto",
-          "sv": "Östra Finlands Universitet",
-          "en": "University of Eastern Finland"
+          "fi": "Jyväskylän yliopisto",
+          "sv": "Jyväskylä universitet",
+          "en": "University of Jyväskylä"
         },
         "kunnat": [
-          "Joensuu"
+          "Jyväskylä"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -16613,17 +16613,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000043491",
+        "toteutusOid": "1.2.246.562.17.00000000000000028058",
         "toteutusNimi": {
-          "fi": "Matematiikan maisteriohjelma, filosofian maisteri (2 v), syksy 2027"
+          "fi": "Matematiikka, Joensuu, filosofian maisteri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Jyväskylän yliopisto",
-          "sv": "Jyväskylä universitet",
-          "en": "University of Jyväskylä"
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
         },
         "kunnat": [
-          "Jyväskylä"
+          "Joensuu"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -21283,6 +21283,34 @@
         },
         "kunnat": [
           "Kotka"
+        ],
+        "koulutusalat": [
+          "Palvelualat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Restonomi (ylempi AMK), majoitus- ja ravitsemisala",
+      "sv": "Restonom (högre YH), inkvarterings- och kosthållsbranschen",
+      "en": "Master of Hospitality Management (UAS), Hotel and Restaurant"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000043895",
+        "toteutusNimi": {
+          "fi": "Restonomi (ylempi AMK), vastuullisuuden ja palveluiden johtaminen, kevään 2027 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
         ],
         "koulutusalat": [
           "Palvelualat"
@@ -30952,6 +30980,23 @@
         ]
       },
       {
+        "toteutusOid": "1.2.246.562.17.00000000000000002985",
+        "toteutusNimi": {
+          "fi": "Tradenomi (AMK), Tietojenkäsittely, Peliala, päiväopinnot, Kajaani"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kajaani"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      },
+      {
         "toteutusOid": "1.2.246.562.17.00000000000000000787",
         "toteutusNimi": {
           "fi": "Tradenomi (AMK), tietojenkäsittely, verkkototeutus"
@@ -31604,6 +31649,34 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
+        "toteutusOid": "1.2.246.562.17.00000000000000043893",
+        "toteutusNimi": {
+          "fi": "Tradenomi (ylempi AMK), organisaation ja talouden johtaminen, kevään 2027 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Tradenomi (ylempi AMK), talous, hallinto ja markkinointi",
+      "sv": "Tradenom (högre YH), ekonomi, förvaltning och marknadsföring",
+      "en": "MBA (UAS), Econ., Adm., Mark."
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
         "toteutusOid": "1.2.246.562.17.00000000000000043888",
         "toteutusNimi": {
           "fi": "Tradenomi (ylempi AMK), palvelu- ja liiketoimintamuotoilu"
@@ -32139,6 +32212,34 @@
         ],
         "koulutusalat": [
           "Kauppa, hallinto ja oikeustieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000043894",
+        "toteutusNimi": {
+          "fi": "Tulevaisuuskestävä sosiaali- ja terveysalan johtaminen, ylempi AMK, kevään 2027 haku"
+        },
+        "oppilaitosNimi": {
+          "fi": "Jyväskylän ammattikorkeakoulu",
+          "sv": "Jyväskylän ammattikorkeakoulu",
+          "en": "Jamk University of Applied Sciences"
+        },
+        "kunnat": [
+          "Jyväskylä"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
         ]
       }
     ]
@@ -33602,17 +33703,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000043683",
+        "toteutusOid": "1.2.246.562.17.00000000000000027904",
         "toteutusNimi": {
-          "fi": "Varhaiskasvatuksen maisteriohjelma, kasvatustieteen maisteri (2 v), syksy 2027"
+          "fi": "Varhaiskasvatus, Joensuu, kasvatustieteen maisteri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Jyväskylän yliopisto",
-          "sv": "Jyväskylä universitet",
-          "en": "University of Jyväskylä"
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
         },
         "kunnat": [
-          "Jyväskylä"
+          "Joensuu"
         ],
         "koulutusalat": [
           "Kasvatusalat"
@@ -33630,17 +33731,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000027904",
+        "toteutusOid": "1.2.246.562.17.00000000000000043683",
         "toteutusNimi": {
-          "fi": "Varhaiskasvatus, Joensuu, kasvatustieteen maisteri (2 v)"
+          "fi": "Varhaiskasvatuksen maisteriohjelma, kasvatustieteen maisteri (2 v), syksy 2027"
         },
         "oppilaitosNimi": {
-          "fi": "Itä-Suomen yliopisto",
-          "sv": "Östra Finlands Universitet",
-          "en": "University of Eastern Finland"
+          "fi": "Jyväskylän yliopisto",
+          "sv": "Jyväskylä universitet",
+          "en": "University of Jyväskylä"
         },
         "kunnat": [
-          "Joensuu"
+          "Jyväskylä"
         ],
         "koulutusalat": [
           "Kasvatusalat"

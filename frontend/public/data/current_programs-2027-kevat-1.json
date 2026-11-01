@@ -2821,6 +2821,23 @@
         ]
       },
       {
+        "toteutusOid": "1.2.246.562.17.00000000000000041683",
+        "toteutusNimi": {
+          "en": "Bachelor of Health Care, Nursing, (Blended studies) KAMK"
+        },
+        "oppilaitosNimi": {
+          "fi": "Kajaanin ammattikorkeakoulu",
+          "sv": "Kajaanin ammattikorkeakoulu",
+          "en": "Kajaani University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kajaani"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      },
+      {
         "toteutusOid": "1.2.246.562.17.00000000000000026366",
         "toteutusNimi": {
           "en": "Bachelor of Health Care, Nursing, KAMK"
@@ -5037,34 +5054,6 @@
   },
   {
     "nimi": {
-      "fi": "Yhteiskuntat. kand. (alempi), alue- ja ympäristötieteet",
-      "sv": "Samh. kand. (lägre), regional- och miljövetenskaper",
-      "en": "Bachelor of Social Sciences, Regional and Environmental Studies"
-    },
-    "sektori": "yo",
-    "tutkintotaso": "alempi",
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000036463",
-        "toteutusNimi": {
-          "en": "Bachelor's degree programme in Urban Sustainability Studies (3 years)"
-        },
-        "oppilaitosNimi": {
-          "fi": "Itä-Suomen yliopisto",
-          "sv": "Östra Finlands Universitet",
-          "en": "University of Eastern Finland"
-        },
-        "kunnat": [
-          "Joensuu"
-        ],
-        "koulutusalat": [
-          "Yhteiskunnalliset alat"
-        ]
-      }
-    ]
-  },
-  {
-    "nimi": {
       "fi": "Bioanalyytikko (AMK): laboratoriohoitaja (AMK)",
       "sv": "Bioanalytiker (YH): laboratorieskötare (YH)",
       "en": "Bachelor of Health Care (UAS), Biomedical Laboratory Technologist (Polytechnic)"
@@ -5977,7 +5966,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000040121",
         "toteutusNimi": {
-          "en": "East Slavic Societes and Religion, Joensuu, Bachelor of Arts (3 years)"
+          "en": "East Slavic Societes and Religion, Joensuu, Bachelor of Arts / Bachelor of Theology (3 years)"
         },
         "oppilaitosNimi": {
           "fi": "Itä-Suomen yliopisto",
@@ -7704,35 +7693,6 @@
           "Pietarsaari"
         ],
         "koulutusalat": [
-          "Taiteet ja kulttuurialat"
-        ]
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Musiikkipedagogi (ylempi AMK)",
-      "sv": "Musikpedagog (högre YH)",
-      "en": "Master of Culture and Arts (UAS), Music Educator"
-    },
-    "sektori": "amk",
-    "tutkintotaso": "ylempi",
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000042066",
-        "toteutusNimi": {
-          "en": "Master of Culture and Arts, Music Leadership and Artistic Direction "
-        },
-        "oppilaitosNimi": {
-          "fi": "Metropolia Ammattikorkeakoulu",
-          "sv": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences"
-        },
-        "kunnat": [
-          "Helsinki"
-        ],
-        "koulutusalat": [
-          "Kasvatusalat",
           "Taiteet ja kulttuurialat"
         ]
       }
@@ -9506,6 +9466,35 @@
   },
   {
     "nimi": {
+      "fi": "Musiikkipedagogi (ylempi AMK)",
+      "sv": "Musikpedagog (högre YH)",
+      "en": "Master of Culture and Arts (UAS), Music Educator"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000042066",
+        "toteutusNimi": {
+          "en": "Master of Culture and Arts, Leadership and Artistic Direction in Music "
+        },
+        "oppilaitosNimi": {
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Helsinki"
+        ],
+        "koulutusalat": [
+          "Kasvatusalat",
+          "Taiteet ja kulttuurialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
       "fi": "Muu tai tuntematon terveys- ja sosiaalialan koulutus, ylempi korkeakouluaste",
       "sv": "Annan eller okänd utbildning inom hälso- och socialvård på högre högskolenivå",
       "en": "Other Ed. in Health, Level 7"
@@ -10513,6 +10502,34 @@
         ],
         "koulutusalat": [
           "Luonnontieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Yhteiskuntat. kand. (alempi), alue- ja ympäristötieteet",
+      "sv": "Samh. kand. (lägre), regional- och miljövetenskaper",
+      "en": "Bachelor of Social Sciences, Regional and Environmental Studies"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000036463",
+        "toteutusNimi": {
+          "en": "Urban Sustainability Studies, Joensuu, Bachelor of Social Sciences (3 years)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Itä-Suomen yliopisto",
+          "sv": "Östra Finlands Universitet",
+          "en": "University of Eastern Finland"
+        },
+        "kunnat": [
+          "Joensuu"
+        ],
+        "koulutusalat": [
+          "Yhteiskunnalliset alat"
         ]
       }
     ]
