@@ -1,0 +1,75 @@
+{
+  "vuosi": 2024,
+  "items": [
+    {
+      "ala": "Kasvatusalat",
+      "amk": 82,
+      "alempi": 87,
+      "ylempi": 91,
+      "yamk": 96
+    },
+    {
+      "ala": "Humanistiset ja taidealat",
+      "amk": 70,
+      "alempi": 70,
+      "ylempi": 83,
+      "yamk": 90
+    },
+    {
+      "ala": "Yhteiskunnalliset alat",
+      "amk": 79,
+      "alempi": 83,
+      "ylempi": 92,
+      "yamk": null
+    },
+    {
+      "ala": "Kauppa, hallinto ja oikeustieteet",
+      "amk": 87,
+      "alempi": 87,
+      "ylempi": 94,
+      "yamk": 95
+    },
+    {
+      "ala": "Luonnontieteet",
+      "amk": 85,
+      "alempi": 76,
+      "ylempi": 89,
+      "yamk": null
+    },
+    {
+      "ala": "Tietojenkäsittely ja tietoliikenne",
+      "amk": 86,
+      "alempi": 84,
+      "ylempi": 91,
+      "yamk": 95
+    },
+    {
+      "ala": "Tekniikan alat",
+      "amk": 89,
+      "alempi": 84,
+      "ylempi": 92,
+      "yamk": 96
+    },
+    {
+      "ala": "Maa- ja metsätalousalat",
+      "amk": 89,
+      "alempi": 86,
+      "ylempi": 88,
+      "yamk": 92
+    },
+    {
+      "ala": "Terveys- ja hyvinvointialat",
+      "amk": 93,
+      "alempi": 90,
+      "ylempi": 96,
+      "yamk": 97
+    },
+    {
+      "ala": "Palvelualat",
+      "amk": 90,
+      "alempi": 93,
+      "ylempi": 94,
+      "yamk": 96
+    }
+  ]
+}

@@ -33,7 +33,7 @@ const links = [
     icon: HiOutlineAcademicCap,
   },
   {
-    href: "/pistelaskuri/",
+    href: "/todistusvalintalaskuri/",
     label: "pistelaskuri",
     description: "Arvioi yhteishaun pistemääräsi",
     icon: HiOutlineCalculator,

@@ -62,7 +62,7 @@ async function waitForCalculatorHydration(page: Page) {
 
 async function openCalculator(page: Page) {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/pistelaskuri/");
+  await page.goto("/todistusvalintalaskuri/");
   await expect(page.getByRole("heading", { name: `Todistusvalintalaskuri ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
   await waitForCalculatorHydration(page);
   await expect(page.getByText("Pisterajoja ladataan…")).toHaveCount(0, { timeout: 30_000 });
@@ -120,7 +120,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/korkeakoulut/"],
     ["koulutukset", "/koulutukset/"],
-    ["pistelaskuri", "/pistelaskuri/"],
+    ["todistusvalintalaskuri", "/todistusvalintalaskuri/"],
     ["koulut", "/koulut/"],
     ["trendit", "/trendit/"],
   ] as const) {
@@ -148,8 +148,8 @@ for (const [link, heading] of [
       await expect(tab).toHaveAttribute("aria-selected", "true", { timeout: 1000 });
     }).toPass();
     await expect(
-      page.getByRole("tabpanel", { name: "Korkeakoulutus" }).getByRole("link", { name: /^pistelaskuri/ }),
-    ).toHaveAttribute("href", "/pistelaskuri/");
+      page.getByRole("tabpanel", { name: "Korkeakoulutus" }).getByRole("link", { name: /^todistusvalintalaskuri/ }),
+    ).toHaveAttribute("href", "/todistusvalintalaskuri/");
   });
 }
 
@@ -234,7 +234,7 @@ test("nav links navigate to all pages", async ({ page }) => {
   for (const [label, url, heading] of [
     ["hakijamäärät", "/hakijamaarat/korkeakoulut/", "Korkeakoulujen hakijamäärät"],
     ["koulutukset", "/koulutukset/", "Koulutukset"],
-    ["pistelaskuri", "/pistelaskuri/", `Todistusvalintalaskuri ${DEFAULT_CUTOFF_YEAR}`],
+    ["pistelaskuri", "/todistusvalintalaskuri/", `Todistusvalintalaskuri ${DEFAULT_CUTOFF_YEAR}`],
     ["pisterajat", "/pisterajat/", `Pisterajat ${DEFAULT_CUTOFF_YEAR}`],
     ["koulut", "/koulut/", "Koulut"],
     ["oma hakulista", "/oma-hakulista/", "Oma hakulista"],
@@ -278,7 +278,7 @@ test("/hakijamaarat: shows the update date and source below pagination", async (
   expect(footer.y).toBeGreaterThanOrEqual(details.y + details.height);
 });
 
-test("/pistelaskuri: searches active cutoffs", async ({ page }) => {
+test("/todistusvalintalaskuri: searches active cutoffs", async ({ page }) => {
   await openCalculator(page);
   await expect(page.getByText(/Pisteesi riittää arviolta – \/ \d+ toteutukseen/)).toBeVisible();
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
@@ -298,7 +298,7 @@ test("/pistelaskuri: searches active cutoffs", async ({ page }) => {
   await expect(page.getByRole("article").getByText("Todistusvalinta, ensikertalaiset", { exact: true })).toBeVisible();
 });
 
-test("/pistelaskuri: switches to first-time applicant cutoffs", async ({ page }) => {
+test("/todistusvalintalaskuri: switches to first-time applicant cutoffs", async ({ page }) => {
   await openCalculator(page);
   const firstTimeApplicantCheckbox = page.getByRole("checkbox", {
     name: "Olen ensikertalainen",
@@ -314,7 +314,7 @@ test("/pistelaskuri: switches to first-time applicant cutoffs", async ({ page })
   await expect(page.getByRole("article").getByText("Todistusvalinta", { exact: true })).toBeVisible();
 });
 
-test("/pistelaskuri: filters university results and paginates a group", async ({ page }) => {
+test("/todistusvalintalaskuri: filters university results and paginates a group", async ({ page }) => {
   await openCalculator(page);
   await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
   const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset alat/);
@@ -331,7 +331,7 @@ test("/pistelaskuri: filters university results and paginates a group", async ({
   await expect(humanistisetAccordion.getByRole("article").getByText("AMK-valintakoe", { exact: true })).toHaveCount(0);
 });
 
-test("/pistelaskuri: sorts grouped results", async ({ page }) => {
+test("/todistusvalintalaskuri: sorts grouped results", async ({ page }) => {
   await openCalculator(page);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await selectOption(page, "Järjestys", "Korkein pisteraja");
@@ -366,7 +366,7 @@ test("/pistelaskuri: sorts grouped results", async ({ page }) => {
     .toBe(true);
 });
 
-test("/pistelaskuri: switches selection methods", async ({ page }) => {
+test("/todistusvalintalaskuri: switches selection methods", async ({ page }) => {
   await openCalculator(page);
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await expect(
@@ -381,7 +381,7 @@ test("/pistelaskuri: switches selection methods", async ({ page }) => {
   ).toHaveCount(0);
 });
 
-test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
+test("/todistusvalintalaskuri: compares calculated YO points with cutoffs", async ({ page }) => {
   await openCalculator(page);
   await selectOption(page, "Aine 1", "Suomi äidinkielenä");
   await selectOption(page, "Aineen 1 arvosana", "M");
@@ -409,7 +409,7 @@ test("/pistelaskuri: compares calculated YO points with cutoffs", async ({ page 
 });
 
 for (const subject of ["Suomi toisena kielenä ja kirjallisuus (S2)", "Ruotsi toisena kielenä ja kirjallisuus (R2)"]) {
-  test(`/pistelaskuri: calculates and restores ${subject}`, async ({ page }) => {
+  test(`/todistusvalintalaskuri: calculates and restores ${subject}`, async ({ page }) => {
     await openCalculator(page);
     await selectOption(page, "Aine 1", subject);
     await selectOption(page, "Aineen 1 arvosana", "M");
@@ -428,7 +428,7 @@ for (const subject of ["Suomi toisena kielenä ja kirjallisuus (S2)", "Ruotsi to
   });
 }
 
-test("/pistelaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
+test("/todistusvalintalaskuri: restores only successfully submitted YO and AMM forms", async ({ page }) => {
   await page.addInitScript(() => {
     if (sessionStorage.getItem("pistelaskuri-storage-initialized")) return;
 
@@ -438,7 +438,7 @@ test("/pistelaskuri: restores only successfully submitted YO and AMM forms", asy
       JSON.stringify({ version: 1, amm: { scale: "bogus", grades: [1, 1, 1], keskiarvoInput: "2" } }),
     );
   });
-  await page.goto("/pistelaskuri/");
+  await page.goto("/todistusvalintalaskuri/");
   await waitForCalculatorHydration(page);
 
   await selectOption(page, "Aine 1", "Suomi äidinkielenä");

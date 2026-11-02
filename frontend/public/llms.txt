@@ -21,7 +21,7 @@ Tietojen tulkinta:
 
 ## Keskeiset sivut
 
-- [Pistelaskuri](https://yhteishaku.app/pistelaskuri/): Todistusvalintapisteiden laskeminen YO-todistuksesta tai ammatillisesta perustutkinnosta ja vertailu aiempiin pisterajoihin
+- [Pistelaskuri](https://yhteishaku.app/todistusvalintalaskuri/): Todistusvalintapisteiden laskeminen YO-todistuksesta tai ammatillisesta perustutkinnosta ja vertailu aiempiin pisterajoihin
 - [Koulutukset](https://yhteishaku.app/koulutukset/):  Nykyisessä tai seuraavassa yhteishaussa olevat yliopisto- ja AMK-koulutukset
 - [Hakijamäärät](https://yhteishaku.app/hakijamaarat/korkeakoulut/): Hakijat, aloituspaikat, sisäänpääsyprosentit ja hakijapaine hakukohteittain
 - [Pisterajat](https://yhteishaku.app/pisterajat/): AMK- ja yliopistokoulutusten alimmat hyväksytyt pisteet valintatavoittain
@@ -58,7 +58,7 @@ Tietojen tulkinta:
 
 ## WebMCP työkalut
 
-- [calculate_todistuspisteet](https://yhteishaku.app/pistelaskuri/): Todistusvalintapisteiden laskenta. `valintatapa`: `yo` tai `amm`; YO-aineiden koodeja esimerkiksi `ai_fi`, `maa` ja `fy`; valinnainen `kierros` esimerkiksi `2026-kevat`. WebMCP-työkalu rekisteröidään sivun ollessa auki sitä tukevassa selaimessa. Tarkista täydellinen parametriskeema rekisteröidystä työkalusta
+- [calculate_todistuspisteet](https://yhteishaku.app/todistusvalintalaskuri/): Todistusvalintapisteiden laskenta. `valintatapa`: `yo` tai `amm`; YO-aineiden koodeja esimerkiksi `ai_fi`, `maa` ja `fy`; valinnainen `kierros` esimerkiksi `2026-kevat`. WebMCP-työkalu rekisteröidään sivun ollessa auki sitä tukevassa selaimessa. Tarkista täydellinen parametriskeema rekisteröidystä työkalusta
 
 ## Viralliset lähteet
 

@@ -21,11 +21,11 @@ import {
   recalculateFromGrades,
   type AmkProgramsResponse,
   type UniversityProgramsResponse,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/index";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/index";
 import { COLORS } from "@/theme";
-import { AMM_GRADES, type AmmFormState, type AmmGrade, parseAmmForm } from "@/pages/pistelaskuri/components/AmmForm";
-import ScoreForm from "@/pages/pistelaskuri/components/ScoreForm";
-import ScoreResultList from "@/pages/pistelaskuri/components/ScoreResultList";
+import { AMM_GRADES, type AmmFormState, type AmmGrade, parseAmmForm } from "@/pages/todistusvalintalaskuri/components/AmmForm";
+import ScoreForm from "@/pages/todistusvalintalaskuri/components/ScoreForm";
+import ScoreResultList from "@/pages/todistusvalintalaskuri/components/ScoreResultList";
 import {
   type Calculation,
   flattenAmkPrograms,
@@ -34,16 +34,16 @@ import {
   type ScoreResult,
   selectApplicantResults,
   toCompactQualified,
-} from "@/pages/pistelaskuri/lib/scoreResults";
+} from "@/pages/todistusvalintalaskuri/lib/scoreResults";
 import {
   SUBJECT_OPTIONS,
   parseYoForm,
   toUniversityGrades,
   yoFormFromExamGrades,
   type YoFormState,
-} from "@/pages/pistelaskuri/lib/yoForm";
-import { YO_GRADES, type YoGrade } from "@/pages/pistelaskuri/lib/yoScoring";
-import type { ScoreType } from "@/pages/pistelaskuri/scoreTypes";
+} from "@/pages/todistusvalintalaskuri/lib/yoForm";
+import { YO_GRADES, type YoGrade } from "@/pages/todistusvalintalaskuri/lib/yoScoring";
+import type { ScoreType } from "@/pages/todistusvalintalaskuri/scoreTypes";
 
 type SectorFilter = "all" | "university" | "amk";
 type SortOption = "lowest_cutoff" | "highest_cutoff" | "name_asc" | "name_desc";

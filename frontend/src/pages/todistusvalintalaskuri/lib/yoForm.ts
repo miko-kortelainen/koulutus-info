@@ -7,7 +7,7 @@ import {
   YO_GRADES,
   type YoGrade,
   type YoInput,
-} from "@/pages/pistelaskuri/lib/yoScoring";
+} from "@/pages/todistusvalintalaskuri/lib/yoScoring";
 
 interface LanguageOption {
   exam: string;

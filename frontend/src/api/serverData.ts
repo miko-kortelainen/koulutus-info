@@ -13,8 +13,10 @@ import {
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
+  parseTyollistyminen,
   parseYoPisterajat,
   type StudentFeedback,
+  type TyollistyminenData,
   type YoPisterajatRound,
 } from "@/api/dataValidation";
 import {
@@ -187,6 +189,9 @@ export const feedbackSchoolNames = (): string[] =>
 
 export const readKoulutustarpeet = (): EnnakointiKoulutustarpeet =>
   readPublicData("ennakointi/koulutustarpeet.json", parseKoulutustarpeet);
+
+export const readTyollistyminen = (): TyollistyminenData =>
+  readPublicData("tyollistyminen/tyollistyminen-2024.json", parseTyollistyminen);
 
 export const readHakijaprofiili = (round: HakijaprofiiliRound): HakijaprofiiliResponse =>
   readPublicData(`hakijaprofiili/hakijaprofiili-${round.replace("_", "-")}.json`, parseHakijaprofiili);

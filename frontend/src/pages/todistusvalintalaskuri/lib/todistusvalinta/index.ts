@@ -1,18 +1,18 @@
 import type { CutoffRound } from "@/config/cutoffRounds";
-import { ensureCatalogs, loadCutoffSchools } from "@/pages/pistelaskuri/lib/todistusvalinta/loadCatalogs";
+import { ensureCatalogs, loadCutoffSchools } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/loadCatalogs";
 import {
   calculateAmkPrograms,
   calculateUniversityPrograms,
   listAmkPrograms,
   listPublicUniversityPrograms,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/programs";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/programs";
 import type {
   AmkAmmGrades,
   AmkMethod,
   AmkProgramsResponse,
   UniversityGrade,
   UniversityProgramsResponse,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";
 
 export type {
   AmkAmmGrades,

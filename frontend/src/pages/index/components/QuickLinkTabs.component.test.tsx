@@ -41,7 +41,7 @@ test("shows toinen aste quick links by default", () => {
     "href",
     "/yo-pisterajat/",
   );
-  expect(within(panel).queryByRole("link", { name: /^pistelaskuri(\s|$)/ })).not.toBeInTheDocument();
+  expect(within(panel).queryByRole("link", { name: /^todistusvalintalaskuri(\s|$)/ })).not.toBeInTheDocument();
 });
 
 test("switches to korkeakoulutus quick links", async () => {
@@ -57,7 +57,7 @@ test("switches to korkeakoulutus quick links", async () => {
   expect(screen.getByRole("tab", { name: "Korkeakoulutus" })).toHaveAttribute("aria-selected", "true");
 
   const panel = screen.getByRole("tabpanel", { name: "Korkeakoulutus" });
-  expect(within(panel).getByRole("link", { name: /^pistelaskuri(\s|$)/ })).toHaveAttribute("href", "/pistelaskuri/");
+  expect(within(panel).getByRole("link", { name: /^todistusvalintalaskuri(\s|$)/ })).toHaveAttribute("href", "/todistusvalintalaskuri/");
   expect(within(panel).queryByRole("link", { name: /^lukiot(\s|$)/ })).not.toBeInTheDocument();
   expect(within(panel).queryByRole("link", { name: /^yo-kokeiden pisterajat(\s|$)/ })).not.toBeInTheDocument();
 });

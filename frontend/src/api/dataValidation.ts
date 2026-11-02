@@ -233,6 +233,43 @@ export const parseStudentFeedback = (
   return value as StudentFeedbackDataset;
 };
 
+export interface TyollistyminenItem {
+  ala: string;
+  amk: number;
+  alempi: number;
+  ylempi: number;
+  /** Ylempi AMK; null when Tilastokeskus has no figure. */
+  yamk: number | null;
+}
+
+export interface TyollistyminenData {
+  vuosi: number;
+  items: TyollistyminenItem[];
+}
+
+const isPercent = (value: unknown) => isNumber(value) && value >= 0 && value <= 100;
+
+const isTyollistyminenItem = (value: unknown) =>
+  isRecord(value) &&
+  isString(value.ala) &&
+  value.ala !== "" &&
+  isPercent(value.amk) &&
+  isPercent(value.alempi) &&
+  isPercent(value.ylempi) &&
+  (value.yamk === null || isPercent(value.yamk));
+
+export const parseTyollistyminen = (value: unknown, source: string): TyollistyminenData => {
+  if (
+    !isRecord(value) ||
+    !isNonNegativeInteger(value.vuosi) ||
+    !Array.isArray(value.items) ||
+    !value.items.every(isTyollistyminenItem)
+  ) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+  return value as unknown as TyollistyminenData;
+};
+
 const isEnnakointiSektori = (value: unknown): value is EnnakointiSektori =>
   value === "Ammattikorkeakoulu" || value === "Yliopisto";
 

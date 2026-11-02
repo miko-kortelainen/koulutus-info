@@ -1,7 +1,7 @@
 import { Box, Flex, HStack, Image, Link, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 
 const FOOTER_LINKS = [
-  ["Pistelaskuri", "/pistelaskuri/"],
+  ["Pistelaskuri", "/todistusvalintalaskuri/"],
   ["Pisterajat", "/pisterajat/"],
   ["YO-pisterajat", "/yo-pisterajat/"],
   ["Lukiot", "/lukiot/"],
