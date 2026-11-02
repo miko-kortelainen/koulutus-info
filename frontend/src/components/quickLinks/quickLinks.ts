@@ -42,7 +42,7 @@ export const quickLinkSections = [
     links: [
       {
         href: "/todistusvalintalaskuri/",
-        label: "pistelaskuri",
+        label: "todistusvalintalaskuri",
         description: "Laske yhteishaun todistusvalintapisteesi",
         icon: HiOutlineCalculator,
       },

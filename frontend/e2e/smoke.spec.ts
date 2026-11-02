@@ -120,7 +120,7 @@ test("homepage quick links point to their pages", async ({ page }) => {
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/korkeakoulut/"],
     ["koulutukset", "/koulutukset/"],
-    ["pistelaskuri", "/todistusvalintalaskuri/"],
+    ["todistusvalintalaskuri", "/todistusvalintalaskuri/"],
     ["koulut", "/koulut/"],
     ["trendit", "/trendit/"],
   ] as const) {
@@ -148,7 +148,7 @@ for (const [link, heading] of [
       await expect(tab).toHaveAttribute("aria-selected", "true", { timeout: 1000 });
     }).toPass();
     await expect(
-      page.getByRole("tabpanel", { name: "Korkeakoulutus" }).getByRole("link", { name: /^pistelaskuri/ }),
+      page.getByRole("tabpanel", { name: "Korkeakoulutus" }).getByRole("link", { name: /^todistusvalintalaskuri/ }),
     ).toHaveAttribute("href", "/todistusvalintalaskuri/");
   });
 }
