@@ -33,7 +33,7 @@ pnpm run deslop:fix              # Fix auto-fixable Deslop findings and format s
 pnpm run deslop:baseline         # Update the Deslop baseline
 ```
 
-The backend tools write the generated frontend datasets into `public/data/`. Tygo generates `src/types.gen.ts` and `src/types/pisterajat.gen.ts`, while the data generator updates `src/generated/dataManifest.ts`. Do not edit these files by hand.
+The data generation tools in `datagen/` write the generated frontend datasets into `public/data/`. Tygo generates `src/types.gen.ts` and `src/types/pisterajat.gen.ts`, while the data generator updates `src/generated/dataManifest.ts`. Do not edit these files by hand.
 
 Additional static datasets in `public/data/` are maintained separately from the main Vipunen/Opintopolku generator:
 - `pisterajat/pisterajat-<year>-<season>-<sector>.json` – higher-education admission cutoffs (`amk` and `yliopisto`)
@@ -50,7 +50,7 @@ Additional static datasets in `public/data/` are maintained separately from the 
 
 The `execute` handler computes with `recalculateFromGrades`, then `setState` so the UI matches. Drop the package if the page stops exposing the tool, or if the WebMCP spec lands and the hook lags.
 
-See [`../backend/README.md`](../backend/README.md) for the data update commands.
+See [`../datagen/README.md`](../datagen/README.md) for the data update commands.
 
 ### Architecture
 
@@ -151,4 +151,4 @@ flowchart TB
 ```
 
 Second-degree joint-application applicant statistics are refreshed by the Go
-data generator in `backend/` alongside the other Vipunen statistics.
+data generator in `datagen/` alongside the other Vipunen statistics.

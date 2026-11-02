@@ -1,7 +1,7 @@
 package services
 
 import (
-	"school-api/models"
+	"datagen/models"
 	"testing"
 )
 

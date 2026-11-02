@@ -2,8 +2,8 @@ package services
 
 import (
 	"cmp"
+	"datagen/models"
 	"fmt"
-	"school-api/models"
 	"slices"
 )
 

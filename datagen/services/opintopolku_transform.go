@@ -3,7 +3,7 @@ package services
 import (
 	"strings"
 
-	"school-api/models"
+	"datagen/models"
 )
 
 // TransformOpintopolkuData converts raw Opintopolku data into current_programs-<round>.json:

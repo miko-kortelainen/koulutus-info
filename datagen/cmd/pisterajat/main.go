@@ -2,6 +2,7 @@
 package main
 
 import (
+	"datagen/internal/pisterajat"
 	"encoding/json"
 	"errors"
 	"flag"
@@ -9,7 +10,6 @@ import (
 	"io"
 	"os"
 	"path/filepath"
-	"school-api/internal/pisterajat"
 	"sort"
 	"strconv"
 	"strings"

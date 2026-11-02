@@ -2,36 +2,35 @@
 <img src="./docs/banner.png" alt="yhteishaku.app banner">
 </div>
 
-### About
+### Tietoa projektista
 
-Yhteishaku.app helps you explore Finnish joint application data for higher education and upper secondary schools. The
-site includes:
+Yhteishaku.app auttaa tutustumaan korkeakoulujen ja lukioiden yhteishaun tilastoihin. Sivusto sisältää:
 
-- Applicant numbers and applicant profiles
-- Admission cutoffs and matriculation exam grade boundaries
-- Upper secondary school admission averages
-- Degree programmes
-- Trends and education-need forecasts
-- Student feedback
-- A certificate-based admission score calculator
+- Hakijamäärät ja hakijaprofiilit
+- Valintojen pisterajat sekä ylioppilaskokeiden pisterajat
+- Lukioiden sisäänpääsyn keskiarvorajat
+- Koulutusohjelmat
+- Trendit ja koulutustarve-ennusteet
+- Opiskelijapalautteen
+- Todistusvalinnan pistelaskurin
 
-### Development tools
+### Kehitystyökalut
 
 - TypeScript
 - React
-- Vike for prerendering the static site
-- _pnpm_ as the package manager
-- Playwright for end-to-end smoke tests
-- Go for converting statistics, programme and admission cutoff data into frontend datasets
+- Vike staattisen sivuston esirenderöintiin
+- _pnpm_-paketinhallinta
+- Playwright end-to-end-savutesteihin
+- Go tilasto-, koulutusohjelma- ja pisterajadatan muuntamiseen frontendin aineistoiksi
 
-### Repository structure
+### Projektin rakenne
 
-- `/backend` contains the local Go CLI for generating and cleaning data and types.
-- `/frontend` contains the website pages, components and hooks.
+- `/datagen` sisältää paikallisen Go-komentorivityökalun datan ja tyyppien generointiin sekä siivoamiseen.
+- `/frontend` sisältää verkkosivuston sivut, komponentit ja hookit.
 
-### Run locally
+### Paikallinen kehitys
 
-Install Node.js and pnpm 11, then run:
+Asenna Node.js ja pnpm 11, ja aja sen jälkeen:
 
 ```sh
 cd frontend
@@ -39,19 +38,19 @@ pnpm install
 pnpm run dev
 ```
 
-Open `http://localhost:3000`.
+Avaa selaimessa `http://localhost:3000`.
 
-See the [frontend README](./frontend/README.md) for the full command list.
+Kaikki komennot löytyy [frontendin README-tiedostosta](./frontend/README.md).
 
-### Tests
+### Testit
 
-Run backend tests from `/backend`:
+Aja datageneraattorin testit `/datagen`-hakemistossa:
 
 ```sh
 go test ./...
 ```
 
-Run frontend checks from `/frontend`:
+Aja frontendin tarkistukset `/frontend`-hakemistossa:
 
 ```sh
 pnpm run lint
@@ -59,7 +58,7 @@ pnpm run test:component
 pnpm run test:e2e
 ```
 
-### Data sources
+### Käytetyt tietolähteet
 
 - [Opintopolku.fi](https://opintopolku.fi)
 - [Vipunen](https://vipunen.fi)

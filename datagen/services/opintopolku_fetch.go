@@ -1,9 +1,9 @@
 package services
 
 import (
+	"datagen/models"
 	"fmt"
 	"net/url"
-	"school-api/models"
 	"sort"
 	"strconv"
 	"strings"
@@ -110,7 +110,7 @@ func FetchKoulutusalat(hits []models.School) (map[string][]string, error) {
 		if (i+1)%20 == 0 {
 			fmt.Printf("fetched koulutusalat: %d/%d\n", i+1, len(hits))
 		}
-		time.Sleep(1 * time.Second)
+		time.Sleep(200 * time.Millisecond)
 	}
 	return alat, nil
 }
@@ -137,4 +137,3 @@ func alaNamesFromKoodiUrit(detail *koulutusDetail) ([]string, error) {
 	sort.Strings(names)
 	return names, nil
 }
-

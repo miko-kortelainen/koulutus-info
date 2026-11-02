@@ -1,8 +1,8 @@
 package services
 
 import (
+	"datagen/models"
 	"net/url"
-	"school-api/models"
 	"strings"
 	"testing"
 )

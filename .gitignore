@@ -152,8 +152,8 @@ vite.config.ts.timestamp-*
 .vscode/launch.json
 CLAUDE.md
 ideat.txt
-backend/pisterajat.csv
-backend/excel_prompt.txt
+datagen/pisterajat.csv
+datagen/excel_prompt.txt
 frontend/src/pages/pistelaskuri/SCORE_CALCULATION.md
 */.codex
 */.agents
@@ -161,8 +161,8 @@ frontend/src/pages/pistelaskuri/SCORE_CALCULATION.md
 .claude
 AGENTS.md
 ideat.md
-backend/amk-palaute.csv
-backend/yliopisto-palaute.csv
+datagen/amk-palaute.csv
+datagen/yliopisto-palaute.csv
 frontend/.config/opencode/opencode.jsonc
 yhteishaku-workspace.code-workspace
 frontend/src/pages/pistelaskuri/koulutus-info.code-workspace

@@ -1,5 +1,5 @@
 packages:
-  - path: "school-api/models"
+  - path: "datagen/models"
     output_path: "../frontend/src/types.gen.ts"
     type_mappings:
       time.Time: "string /* RFC3339 */"
@@ -7,5 +7,5 @@ packages:
       null.Bool: "null | boolean"
       uuid.UUID: "string /* uuid */"
       uuid.NullUUID: "null | string /* uuid */"
-  - path: "school-api/internal/pisterajat"
+  - path: "datagen/internal/pisterajat"
     output_path: "../frontend/src/types/pisterajat.gen.ts"
