@@ -5,6 +5,7 @@ import {
   parseCutoffSchools,
   parseHakijaprofiili,
   parseKoulutustarpeet,
+  parseTyollistyminen,
   parseLukioKeskiarvot,
   parseMeta,
   parseSchoolCatalog,
@@ -307,6 +308,21 @@ test("rejects duplicate koulutustarve keys", () => {
   expect(() =>
     parseKoulutustarpeet({ items: [koulutustarveItem, { ...koulutustarveItem }] }, "ennakointi/koulutustarpeet.json"),
   ).toThrow("duplicate");
+});
+
+const tyollistyminenItem = { ala: "Tekniikan alat", amk: 89, alempi: 84, ylempi: 92, yamk: null };
+
+test("accepts valid tyollistyminen", () => {
+  const data = { vuosi: 2024, items: [tyollistyminenItem] };
+  expect(parseTyollistyminen(data, "tyollistyminen/x.json")).toEqual(data);
+});
+
+test("rejects tyollistyminen percent above 100 or empty ala", () => {
+  for (const item of [{ ...tyollistyminenItem, amk: 120 }, { ...tyollistyminenItem, ala: "" }]) {
+    expect(() => parseTyollistyminen({ vuosi: 2024, items: [item] }, "tyollistyminen/x.json")).toThrow(
+      "Invalid data in tyollistyminen/x.json",
+    );
+  }
 });
 
 const hakijaprofiiliEntity = {

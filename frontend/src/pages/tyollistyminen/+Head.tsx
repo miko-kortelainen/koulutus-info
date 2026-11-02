@@ -1,5 +1,5 @@
 const description =
-  "Katso kuinka moni valmistunut työllistyy vuoden ja kolmen vuoden kuluttua valmistumisesta koulutusaloittain: AMK, alempi ja ylempi korkeakoulututkinto.";
+  "Katso kuinka moni valmistunut on töissä kolmen vuoden kuluttua valmistumisesta koulutusaloittain: AMK, YAMK, kandi ja maisteri.";
 
 export function Head() {
   return (
