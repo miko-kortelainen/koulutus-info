@@ -1,27 +1,27 @@
-// Run with: pnpm exec tsx src/pages/pistelaskuri/lib/todistusvalinta/todistusvalinta.test.ts
+// Run with: pnpm exec tsx src/pages/todistusvalintalaskuri/lib/todistusvalinta/todistusvalinta.test.ts
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
-import { thresholdPassed } from "@/pages/pistelaskuri/lib/todistusvalinta/thresholds";
-import { isYoFormState, parseYoForm, toUniversityGrades, yoFormFromExamGrades } from "@/pages/pistelaskuri/lib/yoForm";
-import { YO_GRADES } from "@/pages/pistelaskuri/lib/yoScoring";
-import { listUniversityPrograms, calculateUniversityPrograms } from "@/pages/pistelaskuri/lib/todistusvalinta/programs";
+import { normalizeGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/grades";
+import { thresholdPassed } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/thresholds";
+import { isYoFormState, parseYoForm, toUniversityGrades, yoFormFromExamGrades } from "@/pages/todistusvalintalaskuri/lib/yoForm";
+import { YO_GRADES } from "@/pages/todistusvalintalaskuri/lib/yoScoring";
+import { listUniversityPrograms, calculateUniversityPrograms } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/programs";
 import {
   averageToHundredths,
   buildScoreBreakdown,
   scoreAmkAmm,
   scoreAmkYo,
   scoreModel,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/scoring";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/scoring";
 import type {
   CutoffSchool,
   ProgramCrosswalk,
   ScoringCatalog,
   ThresholdCatalog,
   TodistusvalintaCatalogs,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../../../../../public");
 const scoring = JSON.parse(

@@ -1,11 +1,11 @@
-// Run with: pnpm exec tsx src/pages/pistelaskuri/lib/calculator.test.ts
+// Run with: pnpm exec tsx src/pages/todistusvalintalaskuri/lib/calculator.test.ts
 import assert from "node:assert/strict";
 import {
   type AmmFormState,
   emptyAmmFormState,
   isAmmFormState,
   parseAmmForm,
-} from "@/pages/pistelaskuri/components/AmmForm";
+} from "@/pages/todistusvalintalaskuri/components/AmmForm";
 import {
   flattenAmkPrograms,
   flattenUniversityPrograms,
@@ -13,14 +13,14 @@ import {
   qualifies,
   type ScoreResult,
   selectApplicantResults,
-} from "@/pages/pistelaskuri/lib/scoreResults";
+} from "@/pages/todistusvalintalaskuri/lib/scoreResults";
 import {
   emptyYoFormState,
   isYoFormState,
   parseYoForm,
   toUniversityGrades,
   yoFormFromExamGrades,
-} from "@/pages/pistelaskuri/lib/yoForm";
+} from "@/pages/todistusvalintalaskuri/lib/yoForm";
 
 const completeYoForm = {
   aineet: [

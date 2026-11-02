@@ -1,11 +1,11 @@
-import { AMM_AVERAGE_THRESHOLDS, AMM_SECTION_POINTS } from "@/pages/pistelaskuri/lib/todistusvalinta/constants";
-import { type GradeInput, normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
+import { AMM_AVERAGE_THRESHOLDS, AMM_SECTION_POINTS } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/constants";
+import { type GradeInput, normalizeGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/grades";
 import type {
   ScoreAssignment,
   ScoreBreakdown,
   ScoringCatalog,
   ScoringModel,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";
 
 function expandedSlots(model: ScoringModel): [string, string][] {
   const slots: [string, string][] = [];

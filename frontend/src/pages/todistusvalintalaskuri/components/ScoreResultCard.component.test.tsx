@@ -2,8 +2,8 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import { renderWithChakra } from "@/test/render";
-import type { ScoreResult } from "@/pages/pistelaskuri/lib/scoreResults";
-import ScoreResultCard from "@/pages/pistelaskuri/components/ScoreResultCard";
+import type { ScoreResult } from "@/pages/todistusvalintalaskuri/lib/scoreResults";
+import ScoreResultCard from "@/pages/todistusvalintalaskuri/components/ScoreResultCard";
 
 const result = (overrides: Partial<ScoreResult>): ScoreResult => ({
   id: "k1",

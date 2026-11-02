@@ -12,7 +12,7 @@ test("links to pistelaskuri and tracks the click", async () => {
   renderWithChakra(<PistelaskuriCta />);
 
   const link = screen.getByRole("link", { name: "Laske todistusvalintapisteesi" });
-  expect(link).toHaveAttribute("href", "/pistelaskuri/");
+  expect(link).toHaveAttribute("href", "/todistusvalintalaskuri/");
 
   link.addEventListener("click", (click) => click.preventDefault());
   await user.click(link);

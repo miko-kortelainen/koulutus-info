@@ -1,5 +1,5 @@
-import { GRADE_RANK } from "@/pages/pistelaskuri/lib/todistusvalinta/constants";
-import type { ExamInfo } from "@/pages/pistelaskuri/lib/todistusvalinta/types";
+import { GRADE_RANK } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/constants";
+import type { ExamInfo } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";
 
 export type GradeInput = Record<string, string>;
 

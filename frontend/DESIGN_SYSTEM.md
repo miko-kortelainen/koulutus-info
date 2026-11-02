@@ -58,7 +58,7 @@ Käyttökohteet: `/koulutukset/`, `/hakijamaarat/korkeakoulut/`.
 ```
 
 #### Tyyppi B: Yläsuodattimet + tuloslista, haitari tai taulukko
-Käyttökohteet: `/lukiot/`, `/lukiot/kaupungit/`, `/koulut/`, `/koulut/@slug/pisterajat/`, `/yo-pisterajat/`, `/ennakointi/`, `/pistelaskuri/` (tulososio).
+Käyttökohteet: `/lukiot/`, `/lukiot/kaupungit/`, `/koulut/`, `/koulut/@slug/pisterajat/`, `/yo-pisterajat/`, `/ennakointi/`, `/todistusvalintalaskuri/` (tulososio).
 
 - Suodatinrivi sijoitetaan tuloslistan yläpuolelle:
   - Vierekkäiset kentät (`md`+): `<Stack direction={{ base: "column", md: "row" }} gap={6} width="full">`
@@ -145,7 +145,7 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
 - Älä käytä natiivia `<chakra.select>`-elementtiä tai sivukohtaisia kopioita (kuten erillistä `ResultSelect`-komponenttia suodatusrivillä).
 - Vakioitu ulkoasu: `size="sm"`, `width="full"`.
 - **Näkyvä otsikko (`label?: string`):**
-  - Kun valitsin tarvitsee näkyvän yläotsikon (esim. `/pistelaskuri/`, `/trendit/`, `/ennakointi/`), anna `label`-prop: `<OptionSelect label="Järjestys" ... />`.
+  - Kun valitsin tarvitsee näkyvän yläotsikon (esim. `/todistusvalintalaskuri/`, `/trendit/`, `/ennakointi/`), anna `label`-prop: `<OptionSelect label="Järjestys" ... />`.
   - Kun valitsimen arvo on itsessään selkeä ilman yläotsikkoa (esim. `/koulutukset/`, `/hakijamaarat/korkeakoulut/`, `/lukiot/`), jätä `label` pois ja anna kuvaava `ariaLabel`.
 
 ### 5.3 Sivupalkin suodatinhaitari (`FilterAccordion`)
@@ -162,7 +162,7 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
   - Käytä `<Card.Root size="md">` (kompakteissa kuntakorteissa `size="sm"`).
   - Kun kortti on osa tuloslistaa (`<Stack as="ul">`), kortin juuri on `as="li"` (tai kääritty `<li>`-elementtiin).
   - Korkeakoulun nimi merkitään yhtenäisellä badgella: `<Badge bg="accent" color="onAccent">` ja `<HiLocationMarker aria-hidden="true" />`.
-- **Sivun pääsisällön haitarilistat** (`/lukiot/`, `/pisterajat/@ala/`, `/koulut/@slug/pisterajat/`, `/pistelaskuri/`, `/ukk/`):
+- **Sivun pääsisällön haitarilistat** (`/lukiot/`, `/pisterajat/@ala/`, `/koulut/@slug/pisterajat/`, `/todistusvalintalaskuri/`, `/ukk/`):
   - Jokainen `Accordion.ItemTrigger` kääritään semanttiseen otsikkoon (`<Heading as="h2" size="sm">` tai `as="h3"`).
   - Triggerin pystytäyte on `py={4}` ja avautuvan `Accordion.ItemBody`n alatäyte `pb={6}`.
 

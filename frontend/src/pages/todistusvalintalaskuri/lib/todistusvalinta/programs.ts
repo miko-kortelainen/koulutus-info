@@ -1,13 +1,13 @@
 import type { CutoffRound } from "@/config/cutoffRounds";
-import { AMK_METHODS, CERTIFICATE_METHODS } from "@/pages/pistelaskuri/lib/todistusvalinta/constants";
-import { type GradeInput, normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
+import { AMK_METHODS, CERTIFICATE_METHODS } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/constants";
+import { type GradeInput, normalizeGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/grades";
 import {
   buildScoreBreakdown,
   scoreAmkAmm,
   scoreAmkYo,
   scoreModel,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/scoring";
-import { thresholdPassed } from "@/pages/pistelaskuri/lib/todistusvalinta/thresholds";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/scoring";
+import { thresholdPassed } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/thresholds";
 import type {
   AmkAmmGrades,
   AmkMethod,
@@ -21,7 +21,7 @@ import type {
   ScorableUniversityProgram,
   TodistusvalintaCatalogs,
   UniversityProgram,
-} from "@/pages/pistelaskuri/lib/todistusvalinta/types";
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";
 
 function programKey(university: string, program: string): string {
   return `${university}\0${program}`;

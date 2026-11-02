@@ -154,7 +154,7 @@ CLAUDE.md
 ideat.txt
 datagen/pisterajat.csv
 datagen/excel_prompt.txt
-frontend/src/pages/pistelaskuri/SCORE_CALCULATION.md
+frontend/src/pages/todistusvalintalaskuri/SCORE_CALCULATION.md
 */.codex
 */.agents
 */.claude
@@ -165,6 +165,6 @@ datagen/amk-palaute.csv
 datagen/yliopisto-palaute.csv
 frontend/.config/opencode/opencode.jsonc
 yhteishaku-workspace.code-workspace
-frontend/src/pages/pistelaskuri/koulutus-info.code-workspace
+frontend/src/pages/todistusvalintalaskuri/koulutus-info.code-workspace
 notes_for_future.md
 päivitykset.md

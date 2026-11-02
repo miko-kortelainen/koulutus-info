@@ -19,7 +19,7 @@ interface GuideHeading {
 
 const defaultRelated = [
   {
-    href: "/pistelaskuri/",
+    href: "/todistusvalintalaskuri/",
     label: "Pistelaskuri",
     description: "Arvioi yhteishaun pistemääräsi omilla arvosanoillasi.",
   },

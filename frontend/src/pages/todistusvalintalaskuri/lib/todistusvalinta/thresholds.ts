@@ -1,6 +1,6 @@
-import { GRADE_RANK } from "@/pages/pistelaskuri/lib/todistusvalinta/constants";
-import { type GradeInput, normalizeGrades } from "@/pages/pistelaskuri/lib/todistusvalinta/grades";
-import type { ExamInfo, ThresholdExpression, ThresholdRule } from "@/pages/pistelaskuri/lib/todistusvalinta/types";
+import { GRADE_RANK } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/constants";
+import { type GradeInput, normalizeGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/grades";
+import type { ExamInfo, ThresholdExpression, ThresholdRule } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";
 
 function expressionPasses(expression: ThresholdExpression, grades: Record<string, string>): boolean {
   if ("exam" in expression) {

@@ -50,7 +50,7 @@ const schoolsLastmod = latestModifiedDate([
 ]);
 
 const hubPaths = new Set([
-  "/pistelaskuri/",
+  "/todistusvalintalaskuri/",
   "/pisterajat/",
   "/lukiot/",
   "/yo-pisterajat/",
@@ -89,7 +89,7 @@ const lastmodFor = (path: string) => {
   if (path === "/hakijaprofiili/") return profiliLastmod ?? statisticsLastmod;
   if (path === "/koulutukset/") return programmesLastmod;
   if (path.endsWith("/opiskelijapalautteet/")) return feedbackLastmod;
-  if (path === "/pistelaskuri/" || path.startsWith("/pisterajat/") || path.endsWith("/pisterajat/")) {
+  if (path === "/todistusvalintalaskuri/" || path.startsWith("/pisterajat/") || path.endsWith("/pisterajat/")) {
     return cutoffsLastmod;
   }
   if (path === "/lukiot/" || path.startsWith("/lukiot/")) return lukioKeskiarvotLastmod;
@@ -110,7 +110,7 @@ const paths = [
   "/hakijamaarat/toinen-aste/",
   "/hakijaprofiili/",
   "/koulutukset/",
-  "/pistelaskuri/",
+  "/todistusvalintalaskuri/",
   "/pisterajat/",
   ...cutoffAlaNames().map((name) => `/pisterajat/${slugify(name)}/`),
   "/lukiot/",

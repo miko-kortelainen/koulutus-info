@@ -39,14 +39,14 @@ Additional static datasets in `public/data/` are maintained separately from the 
 - `pisterajat/pisterajat-<year>-<season>-<sector>.json` – higher-education admission cutoffs (`amk` and `yliopisto`)
 - `pisterajat/lukio/lukio-keskiarvot-2026.json` – upper secondary school admission averages
 - `pisterajat/yo-kirjotukset/yo-pisterajat-*.json` – matriculation exam grade boundaries
-- `todistusvalinta/*-2026.json` – scoring models, threshold rules and programme crosswalk for `/pistelaskuri/`
+- `todistusvalinta/*-2026.json` – scoring models, threshold rules and programme crosswalk for `/todistusvalintalaskuri/`
 - `hakijaprofiili/hakijaprofiili-*.json` – applicant age and gender distributions
 - `ennakointi/koulutustarpeet.json` – education-need forecasts
 - `opiskelijapalaute/{yliopisto,amk}-palaute.json` – Kandipalaute and AVOP survey summaries
 
 ### WebMCP
 
-`useWebMCP` from `use-webmcp-tool` registers `calculate_todistuspisteet` on `/pistelaskuri/`. The hook no-ops where `document.modelContext` is missing. The call site lives in that route `+Page.tsx` file.
+`useWebMCP` from `use-webmcp-tool` registers `calculate_todistuspisteet` on `/todistusvalintalaskuri/`. The hook no-ops where `document.modelContext` is missing. The call site lives in that route `+Page.tsx` file.
 
 The `execute` handler computes with `recalculateFromGrades`, then `setState` so the UI matches. Drop the package if the page stops exposing the tool, or if the WebMCP spec lands and the hook lags.
 
@@ -125,7 +125,7 @@ flowchart TB
   end
 
   subgraph calculator["Score calculator"]
-    scorePage["/pistelaskuri/<br/>ScoreCalculatorPage"] --> scoreForm["ScoreForm · calculate_todistuspisteet"]
+    scorePage["/todistusvalintalaskuri/<br/>ScoreCalculatorPage"] --> scoreForm["ScoreForm · calculate_todistuspisteet"]
     scoreForm --> amm["AmmForm · todistusvalinta"]
     scoreForm --> yo["YoForm · yoForm · yoScoring · todistusvalinta"]
     scorePage --> scoreResults["ResultSelect · SearchInput<br/>ScoreResultList · ScoreResultCard"]

@@ -1,7 +1,7 @@
 import { Box, Button, Stack, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import type { ScoreResult } from "@/pages/pistelaskuri/lib/scoreResults";
-import ScoreResultCard from "@/pages/pistelaskuri/components/ScoreResultCard";
+import type { ScoreResult } from "@/pages/todistusvalintalaskuri/lib/scoreResults";
+import ScoreResultCard from "@/pages/todistusvalintalaskuri/components/ScoreResultCard";
 
 const BATCH_SIZE = 20;
 

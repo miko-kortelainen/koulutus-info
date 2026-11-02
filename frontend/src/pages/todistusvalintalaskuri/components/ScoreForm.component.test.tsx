@@ -2,8 +2,8 @@ import { fireEvent, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
-import ScoreForm from "@/pages/pistelaskuri/components/ScoreForm";
-import type { YoFormState } from "@/pages/pistelaskuri/lib/yoForm";
+import ScoreForm from "@/pages/todistusvalintalaskuri/components/ScoreForm";
+import type { YoFormState } from "@/pages/todistusvalintalaskuri/lib/yoForm";
 
 vi.mock("../lib/todistusvalinta", () => ({
   recalculateFromGrades: vi.fn(async () => ({
@@ -18,7 +18,7 @@ vi.mock("../lib/todistusvalinta", () => ({
 }));
 
 test("submits YO grades to local calculators and tracks success", async () => {
-  const { recalculateFromGrades } = await import("@/pages/pistelaskuri/lib/todistusvalinta/index");
+  const { recalculateFromGrades } = await import("@/pages/todistusvalintalaskuri/lib/todistusvalinta/index");
   const event = vi.fn();
   const onSubmit = vi.fn();
   const user = userEvent.setup();
@@ -163,7 +163,7 @@ test("adds and removes YO subject rows", async () => {
 });
 
 test("submits applied AMM grades and an edited weighted average", async () => {
-  const { recalculateFromGrades } = await import("@/pages/pistelaskuri/lib/todistusvalinta/index");
+  const { recalculateFromGrades } = await import("@/pages/todistusvalintalaskuri/lib/todistusvalinta/index");
   vi.mocked(recalculateFromGrades).mockClear();
   const onSubmit = vi.fn();
   const user = userEvent.setup();

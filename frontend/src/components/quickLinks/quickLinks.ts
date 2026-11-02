@@ -41,7 +41,7 @@ export const quickLinkSections = [
     rounds: YHTEISHAKU_ROUNDS,
     links: [
       {
-        href: "/pistelaskuri/",
+        href: "/todistusvalintalaskuri/",
         label: "pistelaskuri",
         description: "Laske yhteishaun todistusvalintapisteesi",
         icon: HiOutlineCalculator,
