@@ -1172,6 +1172,8 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001970",
         "toteutusNimi": {
+          "fi": "International Strategy and Sustainability, Master of Science (Economics and Business Administration) (2 yrs)",
+          "sv": "International Strategy and Sustainability, Master of Science (Economics and Business Administration) (2 yrs)",
           "en": "International Strategy and Sustainability, Master of Science (Economics and Business Administration) (2 yrs)"
         },
         "oppilaitosNimi": {
@@ -1190,6 +1192,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042566",
         "toteutusNimi": {
+          "fi": "Marketing and Management/Marknadsföring och företagsledning, Master of Science (Economics and Business Administration) (2 yrs)",
           "sv": "Marknadsföring och företagsledning, ekonomie magister (2 år)",
           "en": "Marketing and Management, Master of Science (Economics and Business Administration) (2 yrs)"
         },
@@ -1209,6 +1212,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042595",
         "toteutusNimi": {
+          "fi": "Economics/Nationalekonomi, Master of Science (Economics and Business Administration) (2 yrs)",
           "sv": "Nationalekonomi, ekonomie magister (2 år)",
           "en": "Economics, Master of Science (Economics and Business Administration) (2 yrs)"
         },
@@ -1228,6 +1232,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042598",
         "toteutusNimi": {
+          "fi": "Finance/Finansiell ekonomi, Master of Science (Economics and Business Administration) (2 yrs)",
           "sv": "Finansiell ekonomi, ekonomie magister (2 år)",
           "en": "Finance, Master of Science (Economics and Business Administration) (2 yrs)"
         },
@@ -1247,6 +1252,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042600",
         "toteutusNimi": {
+          "fi": "Marketing/Marknadsföring, Master of Science (Economics and Business Administration) (2 yrs)",
           "sv": "Marknadsföring, ekonomie magister (2 år)",
           "en": "Marketing, Master of Science (Economics and Business Administration) (2 yrs)"
         },
@@ -1266,6 +1272,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042627",
         "toteutusNimi": {
+          "fi": "Supply Chain Management/Styrning av försörjningskedjor, Master of Science (Economics and Business Administration) (2 yrs)",
           "sv": "Styrning av försörjningskedjor (Supply Chain Management), ekonomie magister (2 år)",
           "en": "Supply Chain Management, Master of Science (Economics and Business Administration) (2 yrs)"
         },
@@ -1285,6 +1292,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042630",
         "toteutusNimi": {
+          "fi": "Intellectual Property and Business Law/Immaterialrätt och affärsjuridik, Master of Science (Economics and Business Administration) (2 yrs)",
           "sv": "Immaterialrätt och affärsjuridik, ekonomie magister (2 år)",
           "en": "Intellectual Property and Business Law, Master of Science (Economics and Business Administration) (2 yrs)"
         },
@@ -1304,6 +1312,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042675",
         "toteutusNimi": {
+          "fi": "Entrepreneurship and Management/Entreprenörskap och företagsledning, Master of Science (Economics and Business Administration) (2 yrs)",
           "sv": "Entreprenörskap och företagsledning, ekonomie magister (2 år)",
           "en": "Entrepreneurship and Management, Master of Science (Economics and Business Administration) (2 yrs)"
         },
@@ -1323,7 +1332,9 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000001973",
         "toteutusNimi": {
-          "en": " Accounting, Master of Science (Economics and Business Administration) (2 yrs)"
+          "fi": "Accounting/Redovisning, Master of Science (Economics and Business Administration) (2 yrs)",
+          "sv": "Redovisning, ekonomie magister (2 år)",
+          "en": "Accounting, Master of Science (Economics and Business Administration) (2 yrs)"
         },
         "oppilaitosNimi": {
           "fi": "Svenska handelshögskolan",
@@ -4726,17 +4737,17 @@
     "tutkintotaso": "alempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000032510",
+        "toteutusOid": "1.2.246.562.17.00000000000000039300",
         "toteutusNimi": {
-          "en": "Bachelor of Engineering, Robotics, blended studies"
+          "en": "Bachelor of Engineering, Robotics, full-time studies, Pori"
         },
         "oppilaitosNimi": {
-          "fi": "Metropolia Ammattikorkeakoulu",
-          "sv": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences"
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         },
         "kunnat": [
-          "Vantaa"
+          "Pori"
         ],
         "koulutusalat": [
           "Tietojenkäsittely ja tietoliikenne"
@@ -4754,17 +4765,17 @@
     "tutkintotaso": "alempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000039300",
+        "toteutusOid": "1.2.246.562.17.00000000000000032510",
         "toteutusNimi": {
-          "en": "Bachelor of Engineering, Robotics, full-time studies, Pori"
+          "en": "Bachelor of Engineering, Robotics, blended studies"
         },
         "oppilaitosNimi": {
-          "fi": "Satakunnan ammattikorkeakoulu",
-          "sv": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK"
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         },
         "kunnat": [
-          "Pori"
+          "Vantaa"
         ],
         "koulutusalat": [
           "Tietojenkäsittely ja tietoliikenne"
@@ -7281,9 +7292,9 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000001461",
+        "toteutusOid": "1.2.246.562.17.00000000000000021922",
         "toteutusNimi": {
-          "en": "Master of Business Administration, Digital Business and Management, Vaasa, part-time studies"
+          "en": "Master of Business Administration, Digital Business and Management, Vaasa, full-time studies"
         },
         "oppilaitosNimi": {
           "fi": "Yrkeshögskolan Novia",
@@ -7298,9 +7309,9 @@
         ]
       },
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000021922",
+        "toteutusOid": "1.2.246.562.17.00000000000000001461",
         "toteutusNimi": {
-          "en": "Master of Business Administration, Digital Business and Management, Vaasa, full-time studies"
+          "en": "Master of Business Administration, Digital Business and Management, Vaasa, part-time studies"
         },
         "oppilaitosNimi": {
           "fi": "Yrkeshögskolan Novia",
