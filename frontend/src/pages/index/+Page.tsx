@@ -35,7 +35,7 @@ function LandingBackground() {
         loading="eager"
         objectFit="cover"
         objectPosition="center"
-        src="/images/nature.jpg"
+        src="/images/nature.avif"
         width="100%"
       />
       <Box
