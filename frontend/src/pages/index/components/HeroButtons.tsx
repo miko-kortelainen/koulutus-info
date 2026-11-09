@@ -1,5 +1,4 @@
 import { Button, HStack, Link, Spinner, Stack, Text } from "@chakra-ui/react";
-import { motion } from "motion/react";
 import { type MouseEvent, useState } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { PiStudent } from "react-icons/pi";
@@ -13,12 +12,7 @@ export default function HeroButtons() {
 
   return (
     <Stack align="center" gap={8} maxW={{ md: "28rem" }} width="100%">
-      <motion.div
-        animate={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: 8 }}
-        style={{ width: "100%" }}
-        transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      >
+      <div style={{ width: "100%" }}>
         <Button
           _active={{ transform: "scale(0.96)" }}
           _hover={{ bg: "accentFg", color: "bg" }}
@@ -55,7 +49,7 @@ export default function HeroButtons() {
             </HStack>
           </a>
         </Button>
-      </motion.div>
+      </div>
       <Link color="fg.muted" fontSize="xs" href="/opolle/" textDecoration="underline">
         olen opinto-ohjaaja
       </Link>

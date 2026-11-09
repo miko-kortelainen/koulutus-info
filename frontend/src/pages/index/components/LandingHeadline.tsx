@@ -2,8 +2,6 @@ import { Box, Heading, VisuallyHidden } from "@chakra-ui/react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useState } from "react";
 
-const MotionHeading = motion.create(Heading);
-
 const HERO_TOPICS = ["hakijamäärät", "pisterajat", "koulutukset", "koulut"] as const;
 
 export const HERO_HEADING_NAME = "Katso yhteishaun hakijamäärät, pisterajat, koulutukset, koulut ja trendit.";
@@ -52,15 +50,12 @@ function TopicSwap() {
 
 export default function LandingHeadline() {
   return (
-    <MotionHeading
-      animate={{ opacity: 1, transform: "translateY(0)" }}
+    <Heading
       as="h1"
       fontSize={{ base: "4xl", md: "5xl", lg: "56px" }}
       fontWeight="medium"
-      initial={{ opacity: 0, transform: "translateY(30px)" }}
       lineHeight={1.25}
       textWrap="balance"
-      transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
     >
       <VisuallyHidden>{HERO_HEADING_NAME}</VisuallyHidden>
       <Box aria-hidden="true" as="span">
@@ -69,6 +64,6 @@ export default function LandingHeadline() {
         </Box>
         <TopicSwap />
       </Box>
-    </MotionHeading>
+    </Heading>
   );
 }

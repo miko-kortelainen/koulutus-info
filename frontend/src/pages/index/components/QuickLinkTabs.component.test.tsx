@@ -32,10 +32,12 @@ test("shows toinen aste quick links by default", () => {
   expect(toinenAste.getAttribute("aria-controls")).toMatch(/^\S+$/);
 
   const panel = screen.getByRole("tabpanel", { name: "Toinen aste" });
-  expect(within(panel).getAllByRole("link").slice(0, 2).map((link) => link.getAttribute("href"))).toEqual([
-    "/lukiot/",
-    "/hakijamaarat/toinen-aste/",
-  ]);
+  expect(
+    within(panel)
+      .getAllByRole("link")
+      .slice(0, 2)
+      .map((link) => link.getAttribute("href")),
+  ).toEqual(["/lukiot/", "/hakijamaarat/toinen-aste/"]);
   expect(within(panel).getByRole("link", { name: /^lukiot(\s|$)/ })).toHaveAttribute("href", "/lukiot/");
   expect(within(panel).getByRole("link", { name: /^yo-kokeiden pisterajat(\s|$)/ })).toHaveAttribute(
     "href",
@@ -57,7 +59,10 @@ test("switches to korkeakoulutus quick links", async () => {
   expect(screen.getByRole("tab", { name: "Korkeakoulutus" })).toHaveAttribute("aria-selected", "true");
 
   const panel = screen.getByRole("tabpanel", { name: "Korkeakoulutus" });
-  expect(within(panel).getByRole("link", { name: /^todistusvalintalaskuri(\s|$)/ })).toHaveAttribute("href", "/todistusvalintalaskuri/");
+  expect(within(panel).getByRole("link", { name: /^todistusvalintalaskuri(\s|$)/ })).toHaveAttribute(
+    "href",
+    "/todistusvalintalaskuri/",
+  );
   expect(within(panel).queryByRole("link", { name: /^lukiot(\s|$)/ })).not.toBeInTheDocument();
   expect(within(panel).queryByRole("link", { name: /^yo-kokeiden pisterajat(\s|$)/ })).not.toBeInTheDocument();
 });
