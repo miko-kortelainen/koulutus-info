@@ -34,6 +34,11 @@ test("lists the newest round and filters subjects", async () => {
   expect(screen.getByRole("heading", { level: 1, name: "YO-pisterajat 2026" })).toBeInTheDocument();
   expect(screen.getByText(/aineittain 2025–2026\. Uusin kirjoituskerta: kevät 2026/)).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "korkeakoulujen pisterajat" })).toHaveAttribute("href", "/pisterajat/");
+  expect(screen.getByText("Korkeakouluun?")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Laske todistusvalintapisteesi" })).toHaveAttribute(
+    "href",
+    "/todistusvalintalaskuri/",
+  );
   const list = screen.getByRole("list", { name: "Ylioppilaskokeiden pisterajat, kevät 2026" });
   expect(list).toHaveTextContent("101");
   expect(screen.getByRole("heading", { level: 2, name: "Äidinkieli ja kirjallisuus, suomi" })).toBeInTheDocument();

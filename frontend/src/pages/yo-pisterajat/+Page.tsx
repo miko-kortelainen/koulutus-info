@@ -1,8 +1,9 @@
-import { Link, Stack, Text } from "@chakra-ui/react";
+import { Link, Separator, Stack, Text } from "@chakra-ui/react";
 import Fuse from "fuse.js";
 import { useState } from "react";
 import { useData } from "vike-react/useData";
 import OptionSelect from "@/components/OptionSelect";
+import PistelaskuriCta from "@/components/PistelaskuriCta";
 import SearchInput from "@/components/SearchInput";
 import { type YoPisterajaRoundId, yoRoundId, yoRoundLabel } from "@/config/yoPisterajat";
 import useDebounce from "@/hooks/useDebounce";
@@ -34,14 +35,14 @@ export default function YoPisterajatPage() {
         title={`YO-pisterajat ${newestYear}`}
       />
       <PageContainer align="flex-start">
-        <Text fontSize="sm">
-          Korkeakoulujen yhteishaun pisterajat ovat sivulla{" "}
-          <Link href="/pisterajat/" textDecoration="underline">
-            korkeakoulujen pisterajat
-          </Link>
-          .
-        </Text>
-        <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
+        <Stack gap={2} width="full">
+          <Text fontSize={{ base: "sm", md: "md" }} fontWeight="semibold">
+            Korkeakouluun?
+          </Text>
+          <PistelaskuriCta />
+        </Stack>
+        <Separator width="full" />
+        <Stack direction={{ base: "column", md: "row" }} gap={4} width="full">
           <OptionSelect
             ariaLabel="Kirjoituskerta"
             items={rounds.map((item) => {
@@ -55,7 +56,7 @@ export default function YoPisterajatPage() {
           />
           <SearchInput onChange={setSearchTerm} placeholder="Hae ainetta" value={searchTerm} />
         </Stack>
-        <Text color="fg.muted" fontSize="sm">
+        <Text color="fg.muted" fontSize={{ base: "xs", md: "sm" }}>
           Pisteraja on alin pistemäärä, jolla saa arvosanan L, E, M, C, B tai A.
         </Text>
         {aineet.length === 0 ? (
@@ -72,6 +73,13 @@ export default function YoPisterajatPage() {
           <Link href="https://www.ylioppilastutkinto.fi" textDecoration="underline">
             Ylioppilastutkintolautakunta
           </Link>
+        </Text>
+        <Text fontSize="sm">
+          Korkeakoulujen yhteishaun pisterajat ovat sivulla{" "}
+          <Link href="/pisterajat/" textDecoration="underline">
+            korkeakoulujen pisterajat
+          </Link>
+          .
         </Text>
       </PageContainer>
     </>
