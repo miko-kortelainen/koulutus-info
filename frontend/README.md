@@ -120,7 +120,7 @@ flowchart TB
     lukioIndex -. prerendered SEO pages .-> lukioSchool["/lukiot/:slug/<br/>LukioSchoolPage"]
     lukioIndex --> lukioCities["/lukiot/kaupungit/<br/>LukiotKaupungitPage"] --> lukioCity["/lukiot/kaupungit/:kunta/<br/>LukioKuntaPage"]
     lukioCity --> lukioSchool
-    yoCutoffs["/yo-pisterajat/<br/>YoPisterajatPage"] --> yoCutoffParts["SearchInput · OptionSelect · YoPisterajatTable"]
+    yoCutoffs["/yo-pisterajat/<br/>YoPisterajatPage"] --> yoCutoffParts["PistelaskuriCta · SearchInput · OptionSelect · YoPisterajatTable"]
     lukioSchool --> lukioSchoolParts["LukioSchoolCard"]
   end
 
