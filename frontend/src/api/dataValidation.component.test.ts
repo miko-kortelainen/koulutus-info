@@ -219,7 +219,7 @@ test("parses the committed YO pisterajat files", () => {
   const rounds = files.map((file) =>
     parseYoPisterajat(JSON.parse(readFileSync(`${directory}/${file}`, "utf8")), `pisterajat/yo-kirjotukset/${file}`),
   );
-  expect(rounds).toHaveLength(7);
+  expect(rounds).toHaveLength(8);
   for (const round of rounds) expect(round.arvosanat).toEqual(["L", "E", "M", "C", "B", "A"]);
   expect(rounds.find((round) => round.vuosi === 2026 && round.kausi === "kevat")?.aineet.find(
     (aine) => aine.nimi === "Kemia",

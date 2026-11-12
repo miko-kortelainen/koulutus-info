@@ -51,6 +51,7 @@ Tietojen tulkinta:
 - [Yliopistojen pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/pisterajat-2026-kevat-yliopisto.json): Yliopistojen alimmat hyväksytyt pisteet valintatavoittain
 - [Lukioiden keskiarvorajat 2026](https://yhteishaku.app/data/pisterajat/lukio/lukio-keskiarvot-2026.json): Lukioiden alimmat hyväksytyt keskiarvot
 - [YO-pisterajat, kevät 2026](https://yhteishaku.app/data/pisterajat/yo-kirjotukset/yo-pisterajat-2026-kevat.json): Ylioppilaskokeiden alimmat pistemäärät arvosanoittain
+- [YO-pisterajat, syksy 2026](https://yhteishaku.app/data/pisterajat/yo-kirjotukset/yo-pisterajat-2026-syksy.json): Ylioppilaskokeiden alimmat pistemäärät arvosanoittain
 - [Hakijaprofiili, kevät 2026](https://yhteishaku.app/data/hakijaprofiili/hakijaprofiili-2026-kevat.json): Sukupuoli- ja ikäjakaumat
 - [AMK-opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/amk-palaute.json): AVOP-palautteen keskiarvot
 - [Yliopistojen opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/yliopisto-palaute.json): Kandipalaute
