@@ -17,12 +17,15 @@ import {
   lukioKuntaNames,
   lukioSchoolNames,
   readAllPrograms,
+  readAmmattienPalkat,
   readCurrentYearStatistics,
   readHakijaprofiili,
+  readKoulutusalaPalkat,
   readKoulutustarpeet,
   readLukioKeskiarvotForSchool,
   readMeta,
   readStudentFeedback,
+  readTyollistyminen,
   readYoPisterajat,
   resolveLukioSchool,
   resolveSchool,
@@ -244,16 +247,57 @@ test("loads round-specific datasets through their public paths", () => {
     items: [{ ala: "Tekniikka", koodi: "tek", sektori: "Yliopisto", tarve2045: 100, tuotosNuoret: 80 }],
   };
   const profile = [{ ikaryhmat: [], kohdeNimi: "Aalto", kohdeTyyppi: "koulu", sukupuoli: [] }];
+  const employment = {
+    vuosi: 2024,
+    items: [
+      {
+        ala: "Tekniikan alat",
+        amk: {
+          paatoimisetTyolliset: 73,
+          tyollisetOpiskelijat: 16,
+          paatoimisetOpiskelijat: 2,
+          tyottomat: 7,
+          muut: 2,
+        },
+        alempi: null,
+        ylempi: null,
+        yamk: null,
+      },
+    ],
+  };
+  const fieldSalaries = {
+    vuosi: 2024,
+    items: [{ ala: "Tekniikan alat", toinenAste: 3376, alempiKorkeakoulu: 4652, ylempiKorkeakoulu: 5584 }],
+  };
+  const occupationSalaries = {
+    vuosi: 2024,
+    items: [
+      {
+        koodi: "2514",
+        nimi: "Sovellusohjelmoijat",
+        paaryhma: "Erityisasiantuntijat",
+        ylaryhma: "Systeemityön erityisasiantuntijat",
+        mediaaniPalkka: 4571,
+        onRyhma: false,
+      },
+    ],
+  };
   useDataFiles({
     "current_programs-2027-kevat-1.json": [programme],
     "current_programs-2027-kevat-2.json": [programme],
     "ennakointi/koulutustarpeet.json": needs,
     "hakijamäärät/hakijamaarat-2026-syksy.json": statistics,
     "hakijaprofiili/hakijaprofiili-2025-syksy.json": profile,
+    "tyollistyminen/tyollistyminen-2024.json": employment,
+    "tyollistyminen/koulutusalojen-palkat-2024.json": fieldSalaries,
+    "tyollistyminen/ammattien-palkat-2024.json": occupationSalaries,
   });
 
   expect(readCurrentYearStatistics()).toEqual(statistics);
   expect(readAllPrograms()).toEqual([programme, programme]);
   expect(readKoulutustarpeet()).toEqual(needs);
   expect(readHakijaprofiili("2025_syksy")).toEqual(profile);
+  expect(readTyollistyminen()).toEqual(employment);
+  expect(readKoulutusalaPalkat()).toEqual(fieldSalaries);
+  expect(readAmmattienPalkat()).toEqual(occupationSalaries);
 });

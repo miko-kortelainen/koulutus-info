@@ -9,6 +9,7 @@ const FOOTER_LINKS = [
   ["Oppaat", "/oppaat/"],
   ["UKK", "/ukk/"],
   ["Ennakointi", "/ennakointi/"],
+  ["Työllistyminen ja palkat", "/tyollistyminen/"],
   ["Hakijaprofiili", "/hakijaprofiili/"],
   ["Tietosuojaseloste", "/tietosuojaseloste/"],
   ["Koulut", "/koulut/"],

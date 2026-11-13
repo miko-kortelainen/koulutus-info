@@ -1,4 +1,10 @@
-import { HiOutlineBookOpen, HiOutlineChartBar, HiOutlineClipboardList, HiOutlineTrendingUp } from "react-icons/hi";
+import {
+  HiOutlineBookOpen,
+  HiOutlineBriefcase,
+  HiOutlineChartBar,
+  HiOutlineClipboardList,
+  HiOutlineTrendingUp,
+} from "react-icons/hi";
 import QuickLinkTabs from "@/components/quickLinks/QuickLinkTabs";
 import { quickLinkSections } from "@/components/quickLinks/quickLinks";
 import useEducationLevel from "@/components/quickLinks/useEducationLevel";
@@ -33,6 +39,12 @@ const sections = [
         label: "ennakointi",
         description: "Tutki tulevaisuuden koulutustarpeita",
         icon: HiOutlineTrendingUp,
+      },
+      {
+        href: "/tyollistyminen/",
+        label: "työllistyminen ja palkat",
+        description: "Katso työllistyminen ja palkat aloittain ja ammateittain",
+        icon: HiOutlineBriefcase,
       },
     ],
   },

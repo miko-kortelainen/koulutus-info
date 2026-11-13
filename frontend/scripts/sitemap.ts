@@ -66,7 +66,7 @@ const priorityFor = (path: string) => {
   if (path === "/") return "1.0";
   if (hubPaths.has(path)) return "0.9";
   if (utilityPaths.has(path)) return "0.4";
-  if (path === "/ukk/" || path === "/ennakointi/") return "0.6";
+  if (path === "/ukk/" || path === "/ennakointi/" || path === "/tyollistyminen/") return "0.6";
   if (
     (path.startsWith("/koulut/") && path !== "/koulut/") ||
     path.startsWith("/pisterajat/") ||
@@ -98,6 +98,13 @@ const lastmodFor = (path: string) => {
   if (path === "/ennakointi/") {
     return latestModifiedDate(["ennakointi/koulutustarpeet.json"]);
   }
+  if (path === "/tyollistyminen/") {
+    return latestModifiedDate([
+      "tyollistyminen/tyollistyminen-2024.json",
+      "tyollistyminen/koulutusalojen-palkat-2024.json",
+      "tyollistyminen/ammattien-palkat-2024.json",
+    ]);
+  }
   return guideLastmods.get(path);
 };
 
@@ -124,6 +131,7 @@ const paths = [
   "/trendit/",
   "/ukk/",
   "/ennakointi/",
+  "/tyollistyminen/",
   "/tietosuojaseloste/",
   ...schoolNames().map((name) => `/koulut/${slugify(name)}/`),
   ...cutoffSchoolNames().map((name) => `/koulut/${slugify(name)}/pisterajat/`),

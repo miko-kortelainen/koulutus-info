@@ -3,73 +3,301 @@
   "items": [
     {
       "ala": "Kasvatusalat",
-      "amk": 82,
-      "alempi": 87,
-      "ylempi": 91,
-      "yamk": 96
+      "amk": {
+        "paatoimisetTyolliset": 57,
+        "tyollisetOpiskelijat": 26,
+        "paatoimisetOpiskelijat": 7,
+        "tyottomat": 8,
+        "muut": 3
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 73,
+        "tyollisetOpiskelijat": 14,
+        "paatoimisetOpiskelijat": 6,
+        "tyottomat": 5,
+        "muut": 2
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 82,
+        "tyollisetOpiskelijat": 9,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 4,
+        "muut": 3
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 79,
+        "tyollisetOpiskelijat": 16,
+        "paatoimisetOpiskelijat": null,
+        "tyottomat": 4,
+        "muut": null
+      }
     },
     {
       "ala": "Humanistiset ja taidealat",
-      "amk": 70,
-      "alempi": 70,
-      "ylempi": 83,
-      "yamk": 90
+      "amk": {
+        "paatoimisetTyolliset": 57,
+        "tyollisetOpiskelijat": 13,
+        "paatoimisetOpiskelijat": 7,
+        "tyottomat": 18,
+        "muut": 5
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 46,
+        "tyollisetOpiskelijat": 24,
+        "paatoimisetOpiskelijat": 13,
+        "tyottomat": 13,
+        "muut": 4
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 69,
+        "tyollisetOpiskelijat": 15,
+        "paatoimisetOpiskelijat": 3,
+        "tyottomat": 8,
+        "muut": 5
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 80,
+        "tyollisetOpiskelijat": 9,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 8,
+        "muut": 2
+      }
     },
     {
       "ala": "Yhteiskunnalliset alat",
-      "amk": 79,
-      "alempi": 83,
-      "ylempi": 92,
+      "amk": {
+        "paatoimisetTyolliset": 64,
+        "tyollisetOpiskelijat": 14,
+        "paatoimisetOpiskelijat": 7,
+        "tyottomat": 14,
+        "muut": null
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 57,
+        "tyollisetOpiskelijat": 26,
+        "paatoimisetOpiskelijat": 9,
+        "tyottomat": 7,
+        "muut": 2
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 77,
+        "tyollisetOpiskelijat": 15,
+        "paatoimisetOpiskelijat": 2,
+        "tyottomat": 4,
+        "muut": 2
+      },
       "yamk": null
     },
     {
       "ala": "Kauppa, hallinto ja oikeustieteet",
-      "amk": 87,
-      "alempi": 87,
-      "ylempi": 94,
-      "yamk": 95
+      "amk": {
+        "paatoimisetTyolliset": 71,
+        "tyollisetOpiskelijat": 17,
+        "paatoimisetOpiskelijat": 3,
+        "tyottomat": 6,
+        "muut": 3
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 67,
+        "tyollisetOpiskelijat": 20,
+        "paatoimisetOpiskelijat": 6,
+        "tyottomat": 5,
+        "muut": 2
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 84,
+        "tyollisetOpiskelijat": 10,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 3,
+        "muut": 2
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 87,
+        "tyollisetOpiskelijat": 8,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 3,
+        "muut": 1
+      }
     },
     {
       "ala": "Luonnontieteet",
-      "amk": 85,
-      "alempi": 76,
-      "ylempi": 89,
+      "amk": {
+        "paatoimisetTyolliset": 67,
+        "tyollisetOpiskelijat": 18,
+        "paatoimisetOpiskelijat": 5,
+        "tyottomat": 8,
+        "muut": 3
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 45,
+        "tyollisetOpiskelijat": 31,
+        "paatoimisetOpiskelijat": 13,
+        "tyottomat": 9,
+        "muut": 3
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 57,
+        "tyollisetOpiskelijat": 32,
+        "paatoimisetOpiskelijat": 3,
+        "tyottomat": 4,
+        "muut": 5
+      },
       "yamk": null
     },
     {
       "ala": "Tietojenkäsittely ja tietoliikenne",
-      "amk": 86,
-      "alempi": 84,
-      "ylempi": 91,
-      "yamk": 95
+      "amk": {
+        "paatoimisetTyolliset": 73,
+        "tyollisetOpiskelijat": 13,
+        "paatoimisetOpiskelijat": 3,
+        "tyottomat": 8,
+        "muut": 3
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 54,
+        "tyollisetOpiskelijat": 30,
+        "paatoimisetOpiskelijat": 8,
+        "tyottomat": 6,
+        "muut": 2
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 78,
+        "tyollisetOpiskelijat": 13,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 4,
+        "muut": 4
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 87,
+        "tyollisetOpiskelijat": 8,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 2,
+        "muut": 2
+      }
     },
     {
       "ala": "Tekniikan alat",
-      "amk": 89,
-      "alempi": 84,
-      "ylempi": 92,
-      "yamk": 96
+      "amk": {
+        "paatoimisetTyolliset": 73,
+        "tyollisetOpiskelijat": 16,
+        "paatoimisetOpiskelijat": 2,
+        "tyottomat": 7,
+        "muut": 2
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 61,
+        "tyollisetOpiskelijat": 24,
+        "paatoimisetOpiskelijat": 8,
+        "tyottomat": 7,
+        "muut": 1
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 77,
+        "tyollisetOpiskelijat": 15,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 5,
+        "muut": 3
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 88,
+        "tyollisetOpiskelijat": 8,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 3,
+        "muut": 1
+      }
     },
     {
       "ala": "Maa- ja metsätalousalat",
-      "amk": 89,
-      "alempi": 86,
-      "ylempi": 88,
-      "yamk": 92
+      "amk": {
+        "paatoimisetTyolliset": 67,
+        "tyollisetOpiskelijat": 22,
+        "paatoimisetOpiskelijat": 2,
+        "tyottomat": 7,
+        "muut": 2
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 60,
+        "tyollisetOpiskelijat": 27,
+        "paatoimisetOpiskelijat": 9,
+        "tyottomat": 4,
+        "muut": 0
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 71,
+        "tyollisetOpiskelijat": 16,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 5,
+        "muut": 6
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 73,
+        "tyollisetOpiskelijat": 18,
+        "paatoimisetOpiskelijat": 4,
+        "tyottomat": 2,
+        "muut": 2
+      }
     },
     {
       "ala": "Terveys- ja hyvinvointialat",
-      "amk": 93,
-      "alempi": 90,
-      "ylempi": 96,
-      "yamk": 97
+      "amk": {
+        "paatoimisetTyolliset": 79,
+        "tyollisetOpiskelijat": 15,
+        "paatoimisetOpiskelijat": 2,
+        "tyottomat": 3,
+        "muut": 2
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 62,
+        "tyollisetOpiskelijat": 29,
+        "paatoimisetOpiskelijat": 6,
+        "tyottomat": 2,
+        "muut": 2
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 80,
+        "tyollisetOpiskelijat": 15,
+        "paatoimisetOpiskelijat": 2,
+        "tyottomat": 1,
+        "muut": 1
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 83,
+        "tyollisetOpiskelijat": 14,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 2,
+        "muut": 1
+      }
     },
     {
       "ala": "Palvelualat",
-      "amk": 90,
-      "alempi": 93,
-      "ylempi": 94,
-      "yamk": 96
+      "amk": {
+        "paatoimisetTyolliset": 74,
+        "tyollisetOpiskelijat": 16,
+        "paatoimisetOpiskelijat": 4,
+        "tyottomat": 4,
+        "muut": 2
+      },
+      "alempi": {
+        "paatoimisetTyolliset": 72,
+        "tyollisetOpiskelijat": 20,
+        "paatoimisetOpiskelijat": 4,
+        "tyottomat": 2,
+        "muut": 1
+      },
+      "ylempi": {
+        "paatoimisetTyolliset": 84,
+        "tyollisetOpiskelijat": 10,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 3,
+        "muut": 2
+      },
+      "yamk": {
+        "paatoimisetTyolliset": 86,
+        "tyollisetOpiskelijat": 9,
+        "paatoimisetOpiskelijat": 1,
+        "tyottomat": 2,
+        "muut": 2
+      }
     }
   ]
 }

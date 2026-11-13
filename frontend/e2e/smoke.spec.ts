@@ -1129,3 +1129,28 @@ test("/ennakointi: shows ranked vaje list and filters by sektori", async ({ page
   await expect(page.getByText("Hoitotyö", { exact: true })).toHaveCount(0);
   await expect(page.getByText("Sosiaalitieteet", { exact: true })).toBeVisible();
 });
+
+test("/tyollistyminen: shows study field employment, salaries, and occupation search", async ({ page }) => {
+  await page.goto("/tyollistyminen/");
+  await expect(page.getByRole("heading", { exact: true, level: 1, name: "Työllistyminen ja palkat" })).toBeVisible();
+  await expect(page.getByRole("tab", { name: "Koulutusalat" })).toHaveAttribute("aria-selected", "true");
+
+  const tekniikkaTrigger = page.getByRole("button", { name: /Tekniikan alat/ });
+  await tekniikkaTrigger.click();
+  const tekniikkaItem = page.getByRole("listitem").filter({ has: tekniikkaTrigger });
+  await expect(tekniikkaItem.getByText("Työllistyminen 3 v valmistumisesta")).toBeVisible();
+  await expect(tekniikkaItem.getByText("Alan ammatit ja mediaanipalkat")).toBeVisible();
+  await expect(tekniikkaItem.getByText("5 584 €/kk", { exact: true })).toBeVisible();
+
+  await page.getByRole("textbox", { name: "Haku" }).fill("ylilääkäri");
+  await expect(page.getByRole("heading", { level: 2, name: "Ammatit ja palkat" })).toBeVisible();
+  await expect(page.getByRole("meter", { name: "Ylilääkärit: 10 795 €/kk" })).toBeVisible();
+  await expect(page.getByRole("button", { name: /Tekniikan alat/ })).toHaveCount(0);
+
+  await page.getByRole("tab", { name: "Ammatit" }).click();
+  await expect(page.getByRole("tab", { name: "Ammatit" })).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("heading", { level: 2, name: "Ammatit ja palkat" })).toBeVisible();
+  await expect(page.getByText("Toimitusjohtajat ja pääjohtajat", { exact: true })).toBeVisible();
+  await page.getByRole("textbox", { name: "Haku" }).fill("sairaanhoitaja");
+  await expect(page.getByText("Sairaanhoitajat", { exact: true })).toBeVisible();
+});
