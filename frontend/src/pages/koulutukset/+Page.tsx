@@ -151,14 +151,22 @@ export default function SchoolsListPage() {
 
   const cardList = (
     <Stack as="ul" direction="column" gap={4} listStyleType="none">
-      {paginated.length === 0 ? <Text as="li">Ei tuloksia hakusanoilla.</Text> : null}
+      {paginated.length === 0 ? (
+        <Text as="li" color="fg.muted" fontSize="sm">
+          Ei tuloksia valituilla hakuehdoilla.
+        </Text>
+      ) : null}
       {paginated.map((t) => (
         <SchoolCard
           key={t.toteutusOid}
           onSaved={() =>
             toaster.create({
               title: "Koulutus lisätty omalle hakulistalle.",
-              description: <Link color="toastFg" href="/oma-hakulista/" textDecoration="underline">Näytä</Link>,
+              description: (
+                <Link color="toastFg" href="/oma-hakulista/" textDecoration="underline">
+                  Näytä
+                </Link>
+              ),
               type: "success",
             })
           }

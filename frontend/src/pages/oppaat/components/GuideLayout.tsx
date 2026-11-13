@@ -256,6 +256,7 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
                   borderColor={primary ? "accent" : "border"}
                   borderRadius="lg"
                   borderWidth="1px"
+                  color={primary ? "onAccent" : undefined}
                   display="block"
                   flex={1}
                   href={item.href}
@@ -269,7 +270,7 @@ export default function GuideLayout({ slug, Content, source }: GuideLayoutProps)
                       →
                     </Text>
                   </Text>
-                  <Text color="fg.muted" fontSize="sm" mt={1}>
+                  <Text color={primary ? "onAccent" : "fg.muted"} fontSize="sm" mt={1}>
                     {item.description}
                   </Text>
                 </Link>

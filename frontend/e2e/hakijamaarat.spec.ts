@@ -70,5 +70,5 @@ test("toisen asteen hakijamäärät: searches, filters and switches year", async
   await expect(count).toContainText(/^(?!0000 )\d+ hakutulos/);
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).toBeVisible();
 });

@@ -2,6 +2,7 @@ import { Box, Card, Link, Stack, Text } from "@chakra-ui/react";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
+import BackLink from "@/components/BackLink";
 import Pagination from "@/components/Pagination";
 import SearchInput from "@/components/SearchInput";
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
@@ -35,6 +36,7 @@ export default function LukiotKaupungitPage() {
         title="Lukiot kunnittain"
       />
       <PageContainer align="flex-start">
+        <BackLink href="/lukiot/" />
         <SearchInput
           onChange={(value) => {
             setSearchTerm(value);
@@ -44,7 +46,11 @@ export default function LukiotKaupungitPage() {
           value={searchTerm}
         />
         <Stack as="ul" gap={2} listStyleType="none" width="full">
-          {paginated.length === 0 ? <Text as="li">Ei tuloksia haulle.</Text> : null}
+          {paginated.length === 0 ? (
+            <Text as="li" color="fg.muted" fontSize="sm">
+              Ei tuloksia valituilla hakuehdoilla.
+            </Text>
+          ) : null}
           {paginated.map((kunta) => (
             <Box as="li" key={kunta.nimi}>
               <Card.Root asChild size="sm">
@@ -57,7 +63,7 @@ export default function LukiotKaupungitPage() {
                     <Text fontSize="md" fontWeight="semibold">
                       {kunta.nimi}
                     </Text>
-                    <Text color="fg.muted">
+                    <Text color="fg.muted" fontSize="sm">
                       {kunta.lukioidenMaara} {kunta.lukioidenMaara === 1 ? "lukio" : "lukiota"}
                     </Text>
                   </Card.Body>

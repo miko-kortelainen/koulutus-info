@@ -13,8 +13,21 @@ export default function AlaCutoffPage() {
   const { alaName, schools } = useData<AlaPageData>();
 
   const schoolAccordions = (
-    <Accordion.Root as="ul" collapsible listStyleType="none" multiple width="full">
-      {schools.length === 0 ? <Text as="li">Ei pisterajoja tälle koulutusalalle.</Text> : null}
+    <Accordion.Root
+      as="ul"
+      collapsible
+      display="flex"
+      flexDirection="column"
+      gap={3}
+      listStyleType="none"
+      multiple
+      width="full"
+    >
+      {schools.length === 0 ? (
+        <Text as="li" color="fg.muted" fontSize="sm">
+          Ei pisterajoja tälle koulutusalalle.
+        </Text>
+      ) : null}
       {schools.map((school) => (
         <Accordion.Item as="li" key={school.slug} value={school.slug}>
           <Heading as="h2" size="sm">

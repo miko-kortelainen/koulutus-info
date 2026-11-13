@@ -41,7 +41,16 @@ export default function TyollistyminenPage() {
       />
       <PageContainer align="flex-start">
         <Stack as="section" gap={4} width="full">
-          <Accordion.Root as="ul" collapsible listStyleType="none" multiple width="full">
+          <Accordion.Root
+            as="ul"
+            collapsible
+            display="flex"
+            flexDirection="column"
+            gap={3}
+            listStyleType="none"
+            multiple
+            width="full"
+          >
             {alat.map((employment) => (
               <Accordion.Item as="li" key={employment.ala} value={employment.ala}>
                 <Heading as="h2" size="sm">

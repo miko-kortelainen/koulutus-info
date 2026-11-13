@@ -29,7 +29,7 @@ export default function ComparePage() {
   const entryB = queryB.data?.find((e) => e.kooditHakukohde === b);
 
   const backLink = (
-    <Text>
+    <Text color="fg.muted" fontSize="sm">
       Valitse vertailtavat hakukohteet{" "}
       <Link href="/hakijamaarat/korkeakoulut/" textDecoration="underline">
         hakijamäärät-sivulta
@@ -57,7 +57,9 @@ export default function ComparePage() {
   } else if (query.isSuccess && queryB.isSuccess && (!entryA || !entryB)) {
     body = (
       <Stack gap={2}>
-        <Text>Hakukohteita ei löytynyt valitusta yhteishausta.</Text>
+        <Text color="fg.muted" fontSize="sm">
+          Hakukohteita ei löytynyt valitusta yhteishausta.
+        </Text>
         {backLink}
       </Stack>
     );

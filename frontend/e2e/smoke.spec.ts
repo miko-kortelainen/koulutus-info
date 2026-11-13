@@ -260,7 +260,7 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).toBeVisible();
 
   await search.clear();
   await expect(page.getByText("Hakijat").first()).toBeVisible();
@@ -268,7 +268,9 @@ test("/hakijamaarat: loads data and search filters results", async ({ page }) =>
 
 test("/hakijamaarat: shows the update date and source below pagination", async ({ page }) => {
   await page.goto("/hakijamaarat/korkeakoulut/");
-  const source = page.getByText(/^Tiedot päivitetty: \d{1,2}\.\d{1,2}\.\d{4}\s*Lähde: Opetushallinnon tilastopalvelu Vipunen$/);
+  const source = page.getByText(
+    /^Tiedot päivitetty: \d{1,2}\.\d{1,2}\.\d{4}\s*Lähde: Opetushallinnon tilastopalvelu Vipunen$/,
+  );
   await expect(source).toBeVisible();
   const pagination = await page.getByRole("navigation", { name: "Sivutus" }).boundingBox();
   const details = await source.boundingBox();
@@ -487,11 +489,11 @@ test("/koulutukset: loads data and search filters results", async ({ page }) => 
 
   const search = page.getByPlaceholder("Etsi koulutuksia");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).toBeVisible({ timeout: 10000 });
   await expect(page.getByText("0 tulosta", { exact: true })).toBeVisible();
 
   await search.clear();
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).not.toBeVisible();
 });
 
 test("/koulutukset: joint application switcher shows the other wave", async ({ page }) => {
@@ -521,7 +523,7 @@ test("/hakijamaarat: joint application switcher fetches different data", async (
   expect(response.status()).toBe(200);
   await expect(page.getByText("Hakijat").first()).toBeVisible({ timeout: 10000 });
   await expect(page.getByRole("button", { name: "Kunta", exact: true })).toBeVisible();
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).not.toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).not.toBeVisible();
 });
 
 test("/hakijamaarat: koulutusala filter narrows results", async ({ page }) => {
@@ -930,10 +932,10 @@ test("/koulut/:slug/pisterajat: search filters programmes", async ({ page }) => 
 
   const search = page.getByPlaceholder("Hae toteutusta");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia valituilla rajauksilla.")).toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).toBeVisible();
 
   await search.clear();
-  await expect(page.getByText("Ei tuloksia valituilla rajauksilla.")).not.toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).not.toBeVisible();
 });
 
 test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ page }) => {

@@ -99,6 +99,13 @@ const config = defineConfig({
           trend: { value: { _light: "oklch(0.55 0.098 101)", _dark: "oklch(0.75 0.098 101)" } },
           ylituotos: { value: { _light: "oklch(0.55 0.14 55)", _dark: "oklch(0.75 0.14 55)" } },
         },
+        // Application pressure tier badge tokens.
+        tier: {
+          lowBg: { value: "oklch(0.376 0.077 159.44)" },
+          mediumBg: { value: "oklch(0.476 0.128 39.44)" },
+          highBg: { value: "oklch(0.376 0.113 13.636)" },
+          fg: { value: "oklch(1 0 0)" },
+        },
       },
     },
   },

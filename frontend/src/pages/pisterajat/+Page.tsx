@@ -13,7 +13,12 @@ export default function CutoffIndexPage() {
     <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={6} listStyleType="none">
       {items.map(({ name, slug }) => (
         <li key={slug}>
-          <Link href={href(slug)} textDecoration="underline" textDecorationStyle="dotted">
+          <Link
+            href={href(slug)}
+            textDecoration="underline"
+            textDecorationColor="fg.accent"
+            textDecorationStyle="dotted"
+          >
             {name}
           </Link>
         </li>
@@ -36,7 +41,7 @@ export default function CutoffIndexPage() {
           .
         </Text>
         <PistelaskuriCta />
-        <Stack gap={2} width="full">
+        <Stack as="section" gap={2} width="full">
           <Heading as="h2" size="md">
             Koulutusalat
           </Heading>
@@ -46,7 +51,7 @@ export default function CutoffIndexPage() {
           { sector: "Yliopistokoulutus", label: "Yliopistot" },
           { sector: "Ammattikorkeakoulukoulutus", label: "Ammattikorkeakoulut" },
         ].map(({ sector, label }) => (
-          <Stack gap={2} key={sector} width="full">
+          <Stack as="section" gap={2} key={sector} width="full">
             <Heading as="h2" size="md">
               {label}
             </Heading>

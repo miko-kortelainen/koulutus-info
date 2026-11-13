@@ -27,10 +27,10 @@ export default function SavedListPage() {
       <PageContainer align="flex-start">
         {favorites.length === 0 ? (
           <Stack align="center" gap={1}>
-            <Text color="fg.muted" fontSize="xs" letterSpacing="wide" textAlign="center">
+            <Text color="fg.muted" fontSize="sm" letterSpacing="wide" textAlign="center">
               Ei vielä tallennettuja koulutuksia.
             </Text>
-            <Text color="fg.muted" fontSize="xs" textAlign="center">
+            <Text color="fg.muted" fontSize="sm" textAlign="center">
               Voit tallentaa koulutuksia painamalla koulutukset- sivulla koulutuskortin{" "}
               <HiOutlineHeart style={{ display: "inline", marginBottom: 3 }} />
               -kuvaketta.

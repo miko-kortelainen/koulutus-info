@@ -22,8 +22,12 @@ import {
   type AmkProgramsResponse,
   type UniversityProgramsResponse,
 } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/index";
-import { COLORS } from "@/theme";
-import { AMM_GRADES, type AmmFormState, type AmmGrade, parseAmmForm } from "@/pages/todistusvalintalaskuri/components/AmmForm";
+import {
+  AMM_GRADES,
+  type AmmFormState,
+  type AmmGrade,
+  parseAmmForm,
+} from "@/pages/todistusvalintalaskuri/components/AmmForm";
 import ScoreForm from "@/pages/todistusvalintalaskuri/components/ScoreForm";
 import ScoreResultList from "@/pages/todistusvalintalaskuri/components/ScoreResultList";
 import {
@@ -366,7 +370,7 @@ export default function ScoreCalculatorPage() {
       {groups.map((group) => (
         <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
           <Heading as="h3" size="xs">
-            <Accordion.ItemTrigger>
+            <Accordion.ItemTrigger py={4}>
               <HStack gap={0} width="100%">
                 <Text flex={{ base: 4.5, md: 10 }} fontWeight="semibold" textAlign="start">
                   {group.koulutusala}
@@ -389,7 +393,7 @@ export default function ScoreCalculatorPage() {
             </Accordion.ItemTrigger>
           </Heading>
           <Accordion.ItemContent>
-            <Accordion.ItemBody aria-label={group.koulutusala} maxH="60vh" overflowY="auto" role="region">
+            <Accordion.ItemBody aria-label={group.koulutusala} maxH="60vh" overflowY="auto" pb={6} role="region">
               <ScoreResultList
                 headingLevel="h4"
                 key={`${resultListKey}:${group.koulutusala}`}
@@ -442,7 +446,7 @@ export default function ScoreCalculatorPage() {
   const resultList = (
     <Stack aria-busy={resultsPending} gap={4} mt={{ base: 6, md: 10 }}>
       <Stack aria-live="polite" gap={1}>
-        <Box border={`1px solid ${COLORS.accentFg}`} borderRadius={8} mb={{ base: 6, md: 10 }} p={4}>
+        <Box borderColor="fg.accent" borderRadius={8} borderWidth="1px" mb={{ base: 6, md: 10 }} p={4}>
           <Heading as="h2" size="lg" textAlign="center">
             {calculation?.amk.score !== undefined ? (
               <>
@@ -551,9 +555,9 @@ export default function ScoreCalculatorPage() {
           koulutuspaikka ei ole taattu.
           <br />
           <br />
-          Pisterajojen tiedot ovat peräisin Opetushallituksen{" "}
+          Pisterajojen tiedot ovat peräisin Opetushallinnon tilastopalvelu{" "}
           <Link href="https://vipunen.fi/fi-fi/" rel="noopener noreferrer" target="_blank" textDecoration="underline">
-            Vipunen-palvelusta
+            Vipusesta
           </Link>
           .
         </Text>
