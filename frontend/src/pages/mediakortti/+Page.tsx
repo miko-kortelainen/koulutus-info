@@ -59,6 +59,21 @@ export default function MediakorttiPage() {
               .
             </Text>
           </Stack>
+
+          <Stack as="section" gap={2} width="full">
+            <Heading as="h2" size="md">
+              Ladattava materiaali
+            </Heading>
+            <Link
+              color="fg.accent"
+              download="yhteishaku-app-banneri-1200x630.png"
+              href="/images/og-img.png"
+              textDecoration="underline"
+              width="fit-content"
+            >
+              yhteishaku.app banneri (1200x630)
+            </Link>
+          </Stack>
         </Stack>
       </PageContainer>
     </>
