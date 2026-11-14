@@ -1,4 +1,4 @@
-import { Box, Heading, Stack } from "@chakra-ui/react";
+import { Heading, Stack } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
 import BackLink from "@/components/BackLink";
 import { LUKIO_KESKIARVOT_YEAR } from "@/config/lukioKeskiarvot";
@@ -28,8 +28,8 @@ export default function LukioKuntaPage() {
         <BackLink href="/lukiot/kaupungit/" />
         <Stack as="ul" gap={6} listStyleType="none" width="full">
           {schools.map((school) => (
-            <Box as="li" key={school.slug}>
-              <Heading as="h2" mb={2} size="md">
+            <Stack as="li" gap={2} key={school.slug}>
+              <Heading as="h2" size="md">
                 {school.koulu}
               </Heading>
               <LukioSchoolCard
@@ -37,7 +37,7 @@ export default function LukioKuntaPage() {
                 koulu={school.koulu}
                 schoolHref={`/lukiot/${slugify(school.koulu)}/`}
               />
-            </Box>
+            </Stack>
           ))}
         </Stack>
       </PageContainer>

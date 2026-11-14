@@ -42,7 +42,7 @@ export default function YoPisterajatPage() {
           <PistelaskuriCta />
         </Stack>
         <Separator width="full" />
-        <Stack direction={{ base: "column", md: "row" }} gap={4} width="full">
+        <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
           <OptionSelect
             ariaLabel="Kirjoituskerta"
             items={rounds.map((item) => {
@@ -60,7 +60,9 @@ export default function YoPisterajatPage() {
           Pisteraja on alin pistemäärä, jolla saa arvosanan L, E, M, C, B tai A.
         </Text>
         {aineet.length === 0 ? (
-          <Text>Ei tuloksia haulle.</Text>
+          <Text color="fg.muted" fontSize="sm">
+            Ei tuloksia valituilla hakuehdoilla.
+          </Text>
         ) : (
           <YoPisterajatTable
             aineet={aineet}
@@ -70,7 +72,12 @@ export default function YoPisterajatPage() {
         )}
         <Text color="fg.muted" fontSize="xs">
           Lähde:{" "}
-          <Link href="https://www.ylioppilastutkinto.fi" textDecoration="underline">
+          <Link
+            href="https://www.ylioppilastutkinto.fi"
+            rel="noopener noreferrer"
+            target="_blank"
+            textDecoration="underline"
+          >
             Ylioppilastutkintolautakunta
           </Link>
         </Text>

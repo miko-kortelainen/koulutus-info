@@ -25,7 +25,7 @@ export const QUESTIONS = [
   {
     question: "Mistä sivulla näytettävä data on peräisin?",
     answerText:
-      "Data haetaan kolmannen osapuolen avoimista rajapinnoista. Hakijamäärät ovat peräisin Opetushallituksen tilastopalvelu Vipunen.fi:stä ja koulutukset Opintopolku.fi:stä.",
+      "Data haetaan kolmannen osapuolen avoimista rajapinnoista. Hakijamäärät ovat peräisin Opetushallinnon tilastopalvelu Vipunen.fi:stä ja koulutukset Opintopolku.fi:stä.",
     answer: (
       <>
         Data haetaan kolmannen osapuolen avoimista rajapinnoista.
@@ -33,7 +33,7 @@ export const QUESTIONS = [
         <Text as="span" fontWeight="semibold">
           Hakijamäärät:
         </Text>{" "}
-        Opetushallituksen tilastopalvelu Vipunen.fi
+        Opetushallinnon tilastopalvelu Vipunen.fi
         <br />
         <Text as="span" fontWeight="semibold">
           Koulutukset:
@@ -55,6 +55,7 @@ export const QUESTIONS = [
           href="https://vipunen.fi/fi-fi/yhteiset/Sivut/Tietojen-p%C3%A4ivittymisen-aikataulu---haku-ja-valinta.aspx"
           rel="noopener noreferrer"
           target="_blank"
+          textDecoration="underline"
         >
           Vipunen.fi
         </Link>{" "}
@@ -103,7 +104,7 @@ export const QUESTIONS = [
       <>
         Se onnistuu Safarissa muutamalla painalluksella. <br />
         Katso{" "}
-        <Link color="fg.accent" href="/asenna/">
+        <Link color="fg.accent" href="/asenna/" textDecoration="underline">
           lyhyet ohjeet
         </Link>
         .

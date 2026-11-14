@@ -219,7 +219,15 @@ export default function StudentFeedback({ feedback, maxScore, survey }: StudentF
         </Stat.Root>
       </SimpleGrid>
 
-      <Accordion.Root aria-label="Opiskelijapalaute koulutusaloittain" collapsible lazyMount>
+      <Accordion.Root
+        aria-label="Opiskelijapalaute koulutusaloittain"
+        collapsible
+        display="flex"
+        flexDirection="column"
+        gap={3}
+        lazyMount
+        width="full"
+      >
         {fields.map(([fieldName, field]) => (
           <Accordion.Item key={fieldName} value={fieldName}>
             <Heading as="h2" size="sm">
@@ -266,13 +274,15 @@ export default function StudentFeedback({ feedback, maxScore, survey }: StudentF
             : "Keskiarvot perustuvat valtakunnalliseen kandipalautekyselyyn, jossa valmistuvat opiskelijat arvioivat koulutustaan."}
         </Text>
         <Text color="fg.muted" fontSize="xs">
-          Lähde: Opetushallituksen tilastopalvelu{" "}
+          Lähde: Opetushallinnon tilastopalvelu{" "}
           <Link
             href={
               isAvop
                 ? "https://vipunen.fi/fi-fi/amk/Sivut/Opiskelijapalaute.aspx"
                 : "https://vipunen.fi/fi-fi/yliopisto/Sivut/Opiskelijapalaute.aspx"
             }
+            rel="noopener noreferrer"
+            target="_blank"
             textDecoration="underline"
           >
             Vipunen.fi

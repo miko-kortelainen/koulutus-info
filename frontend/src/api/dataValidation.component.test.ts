@@ -1,9 +1,11 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import {
+  parseAmmattienPalkat,
   parseCurrentPrograms,
   parseCutoffSchools,
   parseHakijaprofiili,
+  parseKoulutusalaPalkat,
   parseKoulutustarpeet,
   parseTyollistyminen,
   parseLukioKeskiarvot,
@@ -221,12 +223,16 @@ test("parses the committed YO pisterajat files", () => {
   );
   expect(rounds).toHaveLength(8);
   for (const round of rounds) expect(round.arvosanat).toEqual(["L", "E", "M", "C", "B", "A"]);
-  expect(rounds.find((round) => round.vuosi === 2026 && round.kausi === "kevat")?.aineet.find(
-    (aine) => aine.nimi === "Kemia",
-  )?.rajat.L).toBe(101);
-  expect(rounds.find((round) => round.vuosi === 2024 && round.kausi === "syksy")?.aineet.find(
-    (aine) => aine.nimi === "Kemia",
-  )?.rajat.A).toBe(22);
+  expect(
+    rounds
+      .find((round) => round.vuosi === 2026 && round.kausi === "kevat")
+      ?.aineet.find((aine) => aine.nimi === "Kemia")?.rajat.L,
+  ).toBe(101);
+  expect(
+    rounds
+      .find((round) => round.vuosi === 2024 && round.kausi === "syksy")
+      ?.aineet.find((aine) => aine.nimi === "Kemia")?.rajat.A,
+  ).toBe(22);
 });
 
 test("rejects malformed lukio keskiarvot", () => {
@@ -310,7 +316,21 @@ test("rejects duplicate koulutustarve keys", () => {
   ).toThrow("duplicate");
 });
 
-const tyollistyminenItem = { ala: "Tekniikan alat", amk: 89, alempi: 84, ylempi: 92, yamk: null };
+const tyollistyminenBreakdown = {
+  paatoimisetTyolliset: 73,
+  tyollisetOpiskelijat: 16,
+  paatoimisetOpiskelijat: 2,
+  tyottomat: 7,
+  muut: 2,
+};
+
+const tyollistyminenItem = {
+  ala: "Tekniikan alat",
+  amk: tyollistyminenBreakdown,
+  alempi: tyollistyminenBreakdown,
+  ylempi: tyollistyminenBreakdown,
+  yamk: null,
+};
 
 test("accepts valid tyollistyminen", () => {
   const data = { vuosi: 2024, items: [tyollistyminenItem] };
@@ -318,11 +338,47 @@ test("accepts valid tyollistyminen", () => {
 });
 
 test("rejects tyollistyminen percent above 100 or empty ala", () => {
-  for (const item of [{ ...tyollistyminenItem, amk: 120 }, { ...tyollistyminenItem, ala: "" }]) {
+  for (const item of [
+    { ...tyollistyminenItem, amk: { ...tyollistyminenBreakdown, paatoimisetTyolliset: 120 } },
+    { ...tyollistyminenItem, ala: "" },
+  ]) {
     expect(() => parseTyollistyminen({ vuosi: 2024, items: [item] }, "tyollistyminen/x.json")).toThrow(
       "Invalid data in tyollistyminen/x.json",
     );
   }
+});
+
+test("validates shipping tyollistyminen and salary datasets", () => {
+  const tyollistyminen = JSON.parse(readFileSync("public/data/tyollistyminen/tyollistyminen-2024.json", "utf-8"));
+  const alaPalkat = JSON.parse(readFileSync("public/data/tyollistyminen/koulutusalojen-palkat-2024.json", "utf-8"));
+  const ammattiPalkat = JSON.parse(readFileSync("public/data/tyollistyminen/ammattien-palkat-2024.json", "utf-8"));
+
+  expect(parseTyollistyminen(tyollistyminen, "tyollistyminen/tyollistyminen-2024.json").items).toHaveLength(10);
+  expect(parseKoulutusalaPalkat(alaPalkat, "tyollistyminen/koulutusalojen-palkat-2024.json").items).toHaveLength(10);
+  expect(parseAmmattienPalkat(ammattiPalkat, "tyollistyminen/ammattien-palkat-2024.json").items.length).toBeGreaterThan(
+    500,
+  );
+});
+
+test("rejects invalid salary payloads", () => {
+  expect(() =>
+    parseKoulutusalaPalkat(
+      {
+        vuosi: 2024,
+        items: [{ ala: "Tekniikan alat", toinenAste: -1, alempiKorkeakoulu: 4000, ylempiKorkeakoulu: 5000 }],
+      },
+      "tyollistyminen/koulutusalojen-palkat-2024.json",
+    ),
+  ).toThrow("Invalid data in tyollistyminen/koulutusalojen-palkat-2024.json");
+  expect(() =>
+    parseAmmattienPalkat(
+      {
+        vuosi: 2024,
+        items: [{ koodi: "1", nimi: "", paaryhma: "Johtajat", ylaryhma: null, mediaaniPalkka: 5000, onRyhma: true }],
+      },
+      "tyollistyminen/ammattien-palkat-2024.json",
+    ),
+  ).toThrow("Invalid data in tyollistyminen/ammattien-palkat-2024.json");
 });
 
 const hakijaprofiiliEntity = {

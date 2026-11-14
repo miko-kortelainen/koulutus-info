@@ -1,0 +1,65 @@
+{
+  "vuosi": 2024,
+  "items": [
+    {
+      "ala": "Kasvatusalat",
+      "toinenAste": null,
+      "alempiKorkeakoulu": 3360,
+      "ylempiKorkeakoulu": 4308
+    },
+    {
+      "ala": "Humanistiset ja taidealat",
+      "toinenAste": 3052,
+      "alempiKorkeakoulu": 3470,
+      "ylempiKorkeakoulu": 4228
+    },
+    {
+      "ala": "Yhteiskunnalliset alat",
+      "toinenAste": null,
+      "alempiKorkeakoulu": 3564,
+      "ylempiKorkeakoulu": 4665
+    },
+    {
+      "ala": "Kauppa, hallinto ja oikeustieteet",
+      "toinenAste": 3108,
+      "alempiKorkeakoulu": 3774,
+      "ylempiKorkeakoulu": 5620
+    },
+    {
+      "ala": "Luonnontieteet",
+      "toinenAste": null,
+      "alempiKorkeakoulu": 3500,
+      "ylempiKorkeakoulu": 4586
+    },
+    {
+      "ala": "Tietojenkäsittely ja tietoliikenne",
+      "toinenAste": 3572,
+      "alempiKorkeakoulu": 4748,
+      "ylempiKorkeakoulu": 5645
+    },
+    {
+      "ala": "Tekniikan alat",
+      "toinenAste": 3376,
+      "alempiKorkeakoulu": 4652,
+      "ylempiKorkeakoulu": 5584
+    },
+    {
+      "ala": "Maa- ja metsätalousalat",
+      "toinenAste": 2906,
+      "alempiKorkeakoulu": 3736,
+      "ylempiKorkeakoulu": 4983
+    },
+    {
+      "ala": "Terveys- ja hyvinvointialat",
+      "toinenAste": 3002,
+      "alempiKorkeakoulu": 3425,
+      "ylempiKorkeakoulu": 4950
+    },
+    {
+      "ala": "Palvelualat",
+      "toinenAste": 2853,
+      "alempiKorkeakoulu": 3628,
+      "ylempiKorkeakoulu": 5094
+    }
+  ]
+}

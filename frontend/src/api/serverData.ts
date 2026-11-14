@@ -1,12 +1,16 @@
 import fs from "node:fs";
 import {
+  type AmmattienPalkatData,
   type EnnakointiKoulutustarpeet,
   type FeedbackMaxScore,
   type HakijaprofiiliResponse,
+  type KoulutusalaPalkatData,
   type LukioKeskiarvoEntry,
+  parseAmmattienPalkat,
   parseCurrentPrograms,
   parseCutoffSchools,
   parseHakijaprofiili,
+  parseKoulutusalaPalkat,
   parseKoulutustarpeet,
   parseLukioKeskiarvot,
   parseMeta,
@@ -192,6 +196,12 @@ export const readKoulutustarpeet = (): EnnakointiKoulutustarpeet =>
 
 export const readTyollistyminen = (): TyollistyminenData =>
   readPublicData("tyollistyminen/tyollistyminen-2024.json", parseTyollistyminen);
+
+export const readKoulutusalaPalkat = (): KoulutusalaPalkatData =>
+  readPublicData("tyollistyminen/koulutusalojen-palkat-2024.json", parseKoulutusalaPalkat);
+
+export const readAmmattienPalkat = (): AmmattienPalkatData =>
+  readPublicData("tyollistyminen/ammattien-palkat-2024.json", parseAmmattienPalkat);
 
 export const readHakijaprofiili = (round: HakijaprofiiliRound): HakijaprofiiliResponse =>
   readPublicData(`hakijaprofiili/hakijaprofiili-${round.replace("_", "-")}.json`, parseHakijaprofiili);

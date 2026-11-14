@@ -184,7 +184,9 @@ export default function StatsListPage() {
       {query.isPending ? degreeSkeletonList : null}
       {query.isError ? <Box as="li">{errorAlert}</Box> : null}
       {!query.isPending && !query.isError && paginated.length === 0 ? (
-        <Text as="li">Ei tuloksia hakusanoilla.</Text>
+        <Text as="li" color="fg.muted" fontSize="sm">
+          Ei tuloksia valituilla hakuehdoilla.
+        </Text>
       ) : null}
       {paginated.map((d) => (
         <DegreeStatsCard

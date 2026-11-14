@@ -151,7 +151,11 @@ export default function ToinenAsteHakijamaarat() {
                   </Alert.Root>
                 </Box>
               ) : null}
-              {entries && filtered.length === 0 ? <Text as="li">Ei tuloksia hakusanoilla.</Text> : null}
+              {entries && filtered.length === 0 ? (
+                <Text as="li" color="fg.muted" fontSize="sm">
+                  Ei tuloksia valituilla hakuehdoilla.
+                </Text>
+              ) : null}
               {filtered.slice((page - 1) * 10, page * 10).map((entry) => (
                 <DegreeStatsCard key={entry.kooditHakukohde} degree={entry} schoolLink={false} />
               ))}

@@ -61,7 +61,9 @@ export default function SchoolStatistics({ initialStatistics, schoolName, statis
       opacity={isUpdating && dataReady ? 0.5 : 1}
     >
       {dataReady && !showError && paginated.length === 0 ? (
-        <Text as="li">Ei hakijamääriä tälle yhteishaulle.</Text>
+        <Text as="li" color="fg.muted" fontSize="sm">
+          Ei hakijamääriä tälle yhteishaulle.
+        </Text>
       ) : null}
       {dataReady && !showError
         ? paginated.map((degree) => <DegreeStatsCard degree={degree} key={degree.kooditHakukohde} />)

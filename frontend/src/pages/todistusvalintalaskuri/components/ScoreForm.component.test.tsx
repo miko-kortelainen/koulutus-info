@@ -1,9 +1,20 @@
 import { fireEvent, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { expect, test, vi } from "vitest";
+import { beforeEach, expect, test, vi } from "vitest";
 import { renderWithChakra } from "@/test/render";
 import ScoreForm from "@/pages/todistusvalintalaskuri/components/ScoreForm";
 import type { YoFormState } from "@/pages/todistusvalintalaskuri/lib/yoForm";
+
+beforeEach(() => {
+  vi.stubGlobal(
+    "ResizeObserver",
+    class {
+      observe() {}
+      unobserve() {}
+      disconnect() {}
+    },
+  );
+});
 
 vi.mock("../lib/todistusvalinta", () => ({
   recalculateFromGrades: vi.fn(async () => ({
@@ -135,7 +146,9 @@ test.each(yoValidationCases)("shows the YO validation error for $name", async ({
     />,
   );
 
-  await waitFor(() => expect(screen.getAllByRole("combobox", { name: /^Aine \d+$/ })).toHaveLength(state.aineet.length));
+  await waitFor(() =>
+    expect(screen.getAllByRole("combobox", { name: /^Aine \d+$/ })).toHaveLength(state.aineet.length),
+  );
   await user.click(screen.getByRole("button", { name: "Laske pisteet / näytä koulutukset" }));
 
   expect(await screen.findByText(message)).toBeVisible();

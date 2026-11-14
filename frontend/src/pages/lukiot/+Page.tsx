@@ -94,8 +94,21 @@ export default function LukiotPage() {
   );
 
   const schoolAccordions = (
-    <Accordion.Root as="ul" collapsible listStyleType="none" multiple width="full">
-      {paginated.length === 0 ? <Text as="li">Ei tuloksia haulle.</Text> : null}
+    <Accordion.Root
+      as="ul"
+      collapsible
+      display="flex"
+      flexDirection="column"
+      gap={3}
+      listStyleType="none"
+      multiple
+      width="full"
+    >
+      {paginated.length === 0 ? (
+        <Text as="li" color="fg.muted" fontSize="sm">
+          Ei tuloksia valituilla hakuehdoilla.
+        </Text>
+      ) : null}
       {paginated.map((school) => (
         <Accordion.Item as="li" key={school.slug} value={school.slug}>
           <Heading as="h2" size="sm">

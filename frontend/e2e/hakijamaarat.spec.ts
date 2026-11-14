@@ -31,8 +31,13 @@ for (const { path, option, data } of pages) {
       await route.continue();
     });
     try {
-      await page.getByRole("combobox", { name: "Yhteishaku" }).click();
-      await page.getByRole("option", { name: option, exact: true }).click();
+      // the click can land before hydration, so retry until the listbox opens
+      const optionLocator = page.getByRole("option", { name: option, exact: true });
+      await expect(async () => {
+        await page.getByRole("combobox", { name: "Yhteishaku" }).click();
+        await expect(optionLocator).toBeVisible({ timeout: 1000 });
+      }).toPass();
+      await optionLocator.click();
       await requestStarted;
       const placeholder = page.locator('[aria-live="polite"]').filter({ hasText: "0000 hakutulosta" });
       await expect(placeholder).toBeVisible();
@@ -70,5 +75,5 @@ test("toisen asteen hakijamäärät: searches, filters and switches year", async
   await expect(count).toContainText(/^(?!0000 )\d+ hakutulos/);
   const search = page.getByPlaceholder("Hae koulua tai linjaa");
   await search.fill("xxxnotexist");
-  await expect(page.getByText("Ei tuloksia hakusanoilla.")).toBeVisible();
+  await expect(page.getByText("Ei tuloksia valituilla hakuehdoilla.")).toBeVisible();
 });

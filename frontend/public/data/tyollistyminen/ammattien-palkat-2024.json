@@ -1,0 +1,4781 @@
+{
+  "vuosi": 2024,
+  "items": [
+    {
+      "koodi": "0",
+      "nimi": "Sotilaat",
+      "paaryhma": "Sotilaat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4874,
+      "onRyhma": true
+    },
+    {
+      "koodi": "0110",
+      "nimi": "Upseerit",
+      "paaryhma": "Sotilaat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 5534,
+      "onRyhma": false
+    },
+    {
+      "koodi": "0210",
+      "nimi": "Aliupseerit",
+      "paaryhma": "Sotilaat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4253,
+      "onRyhma": false
+    },
+    {
+      "koodi": "0310",
+      "nimi": "Sotilasammattihenkilöstö",
+      "paaryhma": "Sotilaat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2718,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1",
+      "nimi": "Johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 7481,
+      "onRyhma": true
+    },
+    {
+      "koodi": "11",
+      "nimi": "Johtajat, ylimmät virkamiehet ja järjestöjen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 8817,
+      "onRyhma": true
+    },
+    {
+      "koodi": "111",
+      "nimi": "Ylimmät virkamiehet ja järjestöjen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Johtajat, ylimmät virkamiehet ja järjestöjen johtajat",
+      "mediaaniPalkka": 7286,
+      "onRyhma": true
+    },
+    {
+      "koodi": "1111",
+      "nimi": "Lainsäätäjät",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Ylimmät virkamiehet ja järjestöjen johtajat",
+      "mediaaniPalkka": 7332,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1112",
+      "nimi": "Julkishallinnon ylimmät virkamiehet",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Ylimmät virkamiehet ja järjestöjen johtajat",
+      "mediaaniPalkka": 8002,
+      "onRyhma": true
+    },
+    {
+      "koodi": "11121",
+      "nimi": "Valtion keskushallinnon johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Julkishallinnon ylimmät virkamiehet",
+      "mediaaniPalkka": 7813,
+      "onRyhma": false
+    },
+    {
+      "koodi": "11122",
+      "nimi": "Alue- ja paikallishallinnon johtajat ja ylimmät virkamiehet",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Julkishallinnon ylimmät virkamiehet",
+      "mediaaniPalkka": 8387,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1114",
+      "nimi": "Järjestöjen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Ylimmät virkamiehet ja järjestöjen johtajat",
+      "mediaaniPalkka": 5599,
+      "onRyhma": true
+    },
+    {
+      "koodi": "11141",
+      "nimi": "Työmarkkina- ja elinkeinoelämän järjestöjen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Järjestöjen johtajat",
+      "mediaaniPalkka": 8984,
+      "onRyhma": false
+    },
+    {
+      "koodi": "11142",
+      "nimi": "Muiden järjestöjen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Järjestöjen johtajat",
+      "mediaaniPalkka": 4740,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1120",
+      "nimi": "Toimitusjohtajat ja pääjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Johtajat, ylimmät virkamiehet ja järjestöjen johtajat",
+      "mediaaniPalkka": 12520,
+      "onRyhma": false
+    },
+    {
+      "koodi": "12",
+      "nimi": "Hallintojohtajat ja kaupalliset johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 7854,
+      "onRyhma": true
+    },
+    {
+      "koodi": "121",
+      "nimi": "Liiketoiminta- ja hallintojohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Hallintojohtajat ja kaupalliset johtajat",
+      "mediaaniPalkka": 8096,
+      "onRyhma": true
+    },
+    {
+      "koodi": "1211",
+      "nimi": "Talousjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Liiketoiminta- ja hallintojohtajat",
+      "mediaaniPalkka": 8189,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1212",
+      "nimi": "Henkilöstöjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Liiketoiminta- ja hallintojohtajat",
+      "mediaaniPalkka": 8228,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1213",
+      "nimi": "Politiikka- ja suunnittelujohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Liiketoiminta- ja hallintojohtajat",
+      "mediaaniPalkka": 8098,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1219",
+      "nimi": "Muut hallintojohtajat ja kaupalliset johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Liiketoiminta- ja hallintojohtajat",
+      "mediaaniPalkka": 7961,
+      "onRyhma": false
+    },
+    {
+      "koodi": "122",
+      "nimi": "Myynti-, markkinointi- ja kehitysjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Hallintojohtajat ja kaupalliset johtajat",
+      "mediaaniPalkka": 7656,
+      "onRyhma": true
+    },
+    {
+      "koodi": "1221",
+      "nimi": "Myynti- ja markkinointijohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Myynti-, markkinointi- ja kehitysjohtajat",
+      "mediaaniPalkka": 7598,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1222",
+      "nimi": "Mainos- ja tiedotusjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Myynti-, markkinointi- ja kehitysjohtajat",
+      "mediaaniPalkka": 7520,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1223",
+      "nimi": "Tutkimus- ja kehitysjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Myynti-, markkinointi- ja kehitysjohtajat",
+      "mediaaniPalkka": 7768,
+      "onRyhma": false
+    },
+    {
+      "koodi": "13",
+      "nimi": "Tuotantotoiminnan ja yhteiskunnan peruspalvelujen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 6842,
+      "onRyhma": true
+    },
+    {
+      "koodi": "131",
+      "nimi": "Maa-, metsä- ja kalatalouden johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Tuotantotoiminnan ja yhteiskunnan peruspalvelujen johtajat",
+      "mediaaniPalkka": 7342,
+      "onRyhma": false
+    },
+    {
+      "koodi": "132",
+      "nimi": "Teollisuuden tuotantojohtajat sekä kaivos-, rakennus- ja jakelujohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Tuotantotoiminnan ja yhteiskunnan peruspalvelujen johtajat",
+      "mediaaniPalkka": 7766,
+      "onRyhma": true
+    },
+    {
+      "koodi": "1321",
+      "nimi": "Teollisuuden tuotantojohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Teollisuuden tuotantojohtajat sekä kaivos-, rakennus- ja jakelujohtajat",
+      "mediaaniPalkka": 8000,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1322",
+      "nimi": "Kaivostoiminnan tuotantojohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Teollisuuden tuotantojohtajat sekä kaivos-, rakennus- ja jakelujohtajat",
+      "mediaaniPalkka": 8750,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1323",
+      "nimi": "Rakennustoiminnan tuotantojohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Teollisuuden tuotantojohtajat sekä kaivos-, rakennus- ja jakelujohtajat",
+      "mediaaniPalkka": 7367,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1324",
+      "nimi": "Hankinta- ja jakelujohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Teollisuuden tuotantojohtajat sekä kaivos-, rakennus- ja jakelujohtajat",
+      "mediaaniPalkka": 7776,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1330",
+      "nimi": "Tieto- ja viestintäteknologiajohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Tuotantotoiminnan ja yhteiskunnan peruspalvelujen johtajat",
+      "mediaaniPalkka": 8333,
+      "onRyhma": false
+    },
+    {
+      "koodi": "134",
+      "nimi": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Tuotantotoiminnan ja yhteiskunnan peruspalvelujen johtajat",
+      "mediaaniPalkka": 5955,
+      "onRyhma": true
+    },
+    {
+      "koodi": "1341",
+      "nimi": "Lastenhoidon johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "mediaaniPalkka": 4184,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1342",
+      "nimi": "Terveydenhuollon johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "mediaaniPalkka": 7732,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1343",
+      "nimi": "Vanhustenhuollon johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "mediaaniPalkka": 4285,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1344",
+      "nimi": "Sosiaalihuollon johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "mediaaniPalkka": 4608,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1345",
+      "nimi": "Opetusalan johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "mediaaniPalkka": 6486,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1346",
+      "nimi": "Rahoitus- ja vakuutuspalvelujen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "mediaaniPalkka": 9641,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1349",
+      "nimi": "Muut yhteiskunnan palvelujen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Yhteiskunnan peruspalvelujen sekä rahoitus- ja vakuutuspalvelujen johtajat",
+      "mediaaniPalkka": 6504,
+      "onRyhma": false
+    },
+    {
+      "koodi": "14",
+      "nimi": "Hotelli- ja ravintola-alan, vähittäiskaupan ja muiden palvelualojen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 6820,
+      "onRyhma": true
+    },
+    {
+      "koodi": "141",
+      "nimi": "Hotellin- ja ravintolanjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Hotelli- ja ravintola-alan, vähittäiskaupan ja muiden palvelualojen johtajat",
+      "mediaaniPalkka": 4874,
+      "onRyhma": true
+    },
+    {
+      "koodi": "1411",
+      "nimi": "Hotellinjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Hotellin- ja ravintolanjohtajat",
+      "mediaaniPalkka": 5646,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1412",
+      "nimi": "Ravintolanjohtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Hotellin- ja ravintolanjohtajat",
+      "mediaaniPalkka": 4583,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1420",
+      "nimi": "Vähittäis- ja tukkukaupan johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Hotelli- ja ravintola-alan, vähittäiskaupan ja muiden palvelualojen johtajat",
+      "mediaaniPalkka": 8398,
+      "onRyhma": false
+    },
+    {
+      "koodi": "143",
+      "nimi": "Muiden palvelualojen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Hotelli- ja ravintola-alan, vähittäiskaupan ja muiden palvelualojen johtajat",
+      "mediaaniPalkka": 6722,
+      "onRyhma": true
+    },
+    {
+      "koodi": "1431",
+      "nimi": "Urheilu-, vapaa-aika- ja kulttuurikeskusten johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Muiden palvelualojen johtajat",
+      "mediaaniPalkka": 5471,
+      "onRyhma": false
+    },
+    {
+      "koodi": "1439",
+      "nimi": "Muut palvelualojen johtajat",
+      "paaryhma": "Johtajat",
+      "ylaryhma": "Muiden palvelualojen johtajat",
+      "mediaaniPalkka": 7261,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2",
+      "nimi": "Erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4667,
+      "onRyhma": true
+    },
+    {
+      "koodi": "21",
+      "nimi": "Luonnontieteiden ja tekniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4814,
+      "onRyhma": true
+    },
+    {
+      "koodi": "211",
+      "nimi": "Luonnon- ja geotieteen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan erityisasiantuntijat",
+      "mediaaniPalkka": 4447,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2111",
+      "nimi": "Fyysikot ja astronomit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnon- ja geotieteen erityisasiantuntijat",
+      "mediaaniPalkka": 4190,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2113",
+      "nimi": "Kemistit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnon- ja geotieteen erityisasiantuntijat",
+      "mediaaniPalkka": 4535,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2120",
+      "nimi": "Matemaatikot, aktuaarit ja tilastotieteilijät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan erityisasiantuntijat",
+      "mediaaniPalkka": 4893,
+      "onRyhma": false
+    },
+    {
+      "koodi": "213",
+      "nimi": "Biotieteiden erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan erityisasiantuntijat",
+      "mediaaniPalkka": 4208,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2131",
+      "nimi": "Biologit, kasvi- ja eläintieteilijät ym. erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Biotieteiden erityisasiantuntijat",
+      "mediaaniPalkka": 4215,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2132",
+      "nimi": "Maa-, metsä- ja kalatalouden erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Biotieteiden erityisasiantuntijat",
+      "mediaaniPalkka": 3952,
+      "onRyhma": true
+    },
+    {
+      "koodi": "21321",
+      "nimi": "Maa- ja kalatalouden erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Maa-, metsä- ja kalatalouden erityisasiantuntijat",
+      "mediaaniPalkka": 4119,
+      "onRyhma": false
+    },
+    {
+      "koodi": "21322",
+      "nimi": "Metsätalouden erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Maa-, metsä- ja kalatalouden erityisasiantuntijat",
+      "mediaaniPalkka": 3917,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2133",
+      "nimi": "Ympäristön- ja luonnonsuojelun erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Biotieteiden erityisasiantuntijat",
+      "mediaaniPalkka": 4550,
+      "onRyhma": false
+    },
+    {
+      "koodi": "214",
+      "nimi": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan erityisasiantuntijat",
+      "mediaaniPalkka": 4947,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2141",
+      "nimi": "Teollisen valmistuksen ja tuotantotekniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "mediaaniPalkka": 5120,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2142",
+      "nimi": "Maa- ja vesirakentamisen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "mediaaniPalkka": 4943,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2143",
+      "nimi": "Ympäristötekniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "mediaaniPalkka": 4296,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2144",
+      "nimi": "Konetekniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "mediaaniPalkka": 4702,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2145",
+      "nimi": "Puunjalostuksen ja kemian prosessitekniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "mediaaniPalkka": 5329,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2146",
+      "nimi": "Kaivosteollisuuden, metallurgian ym. erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "mediaaniPalkka": 5253,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2149",
+      "nimi": "Muut tekniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tekniikan erityisasiantuntijat (pl. sähköteknologia)",
+      "mediaaniPalkka": 5070,
+      "onRyhma": false
+    },
+    {
+      "koodi": "215",
+      "nimi": "Sähköteknologian erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan erityisasiantuntijat",
+      "mediaaniPalkka": 5020,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2151",
+      "nimi": "Sähkötekniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Sähköteknologian erityisasiantuntijat",
+      "mediaaniPalkka": 4820,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2152",
+      "nimi": "Elektroniikan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Sähköteknologian erityisasiantuntijat",
+      "mediaaniPalkka": 5215,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2153",
+      "nimi": "ICT-alan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Sähköteknologian erityisasiantuntijat",
+      "mediaaniPalkka": 5251,
+      "onRyhma": true
+    },
+    {
+      "koodi": "21531",
+      "nimi": "Tietoliikenneteknologian tutkijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "ICT-alan erityisasiantuntijat",
+      "mediaaniPalkka": 5594,
+      "onRyhma": false
+    },
+    {
+      "koodi": "21532",
+      "nimi": "Tietotekniikka-alan tutkijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "ICT-alan erityisasiantuntijat",
+      "mediaaniPalkka": 3997,
+      "onRyhma": false
+    },
+    {
+      "koodi": "216",
+      "nimi": "Arkkitehdit, suunnittelijat ja maanmittaajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan erityisasiantuntijat",
+      "mediaaniPalkka": 4376,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2161",
+      "nimi": "Talonrakennuksen arkkitehdit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkkitehdit, suunnittelijat ja maanmittaajat",
+      "mediaaniPalkka": 4666,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2162",
+      "nimi": "Maisema-arkkitehdit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkkitehdit, suunnittelijat ja maanmittaajat",
+      "mediaaniPalkka": 4399,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2163",
+      "nimi": "Tuote- ja vaatesuunnittelijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkkitehdit, suunnittelijat ja maanmittaajat",
+      "mediaaniPalkka": 4020,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2164",
+      "nimi": "Yhdyskunta- ja liikennesuunnittelijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkkitehdit, suunnittelijat ja maanmittaajat",
+      "mediaaniPalkka": 4738,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2165",
+      "nimi": "Kartoituksen ja maanmittauksen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkkitehdit, suunnittelijat ja maanmittaajat",
+      "mediaaniPalkka": 4173,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2166",
+      "nimi": "Graafiset ja multimediasuunnittelijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkkitehdit, suunnittelijat ja maanmittaajat",
+      "mediaaniPalkka": 3823,
+      "onRyhma": false
+    },
+    {
+      "koodi": "22",
+      "nimi": "Terveydenhuollon erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 6146,
+      "onRyhma": true
+    },
+    {
+      "koodi": "221",
+      "nimi": "Lääkärit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 8670,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2211",
+      "nimi": "Yleislääkärit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lääkärit",
+      "mediaaniPalkka": 8067,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2212",
+      "nimi": "Ylilääkärit ja erikoislääkärit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lääkärit",
+      "mediaaniPalkka": 8958,
+      "onRyhma": true
+    },
+    {
+      "koodi": "22121",
+      "nimi": "Ylilääkärit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Ylilääkärit ja erikoislääkärit",
+      "mediaaniPalkka": 10795,
+      "onRyhma": false
+    },
+    {
+      "koodi": "22122",
+      "nimi": "Erikoislääkärit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Ylilääkärit ja erikoislääkärit",
+      "mediaaniPalkka": 8104,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2221",
+      "nimi": "Ylihoitajat ja osastonhoitajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 4198,
+      "onRyhma": true
+    },
+    {
+      "koodi": "22211",
+      "nimi": "Ylihoitajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Ylihoitajat ja osastonhoitajat",
+      "mediaaniPalkka": 5728,
+      "onRyhma": false
+    },
+    {
+      "koodi": "22212",
+      "nimi": "Osastonhoitajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Ylihoitajat ja osastonhoitajat",
+      "mediaaniPalkka": 4151,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2250",
+      "nimi": "Eläinlääkärit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 6027,
+      "onRyhma": false
+    },
+    {
+      "koodi": "226",
+      "nimi": "Muut terveydenhuollon erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 4945,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2261",
+      "nimi": "Hammaslääkärit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 7221,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2262",
+      "nimi": "Proviisorit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 5045,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2263",
+      "nimi": "Ympäristöterveyden ja työsuojelun erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 5158,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2265",
+      "nimi": "Ravitsemusalan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 4022,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2266",
+      "nimi": "Kuulontutkijat ja puheterapeutit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 4147,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2269",
+      "nimi": "Muut muualla luokittelemattomat terveydenhuollon erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon erityisasiantuntijat",
+      "mediaaniPalkka": 4616,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23",
+      "nimi": "Opettajat ja muut opetusalan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4152,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2310",
+      "nimi": "Yliopistojen ja ammattikorkeakoulujen opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Opettajat ja muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 5147,
+      "onRyhma": true
+    },
+    {
+      "koodi": "23101",
+      "nimi": "Professorit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yliopistojen ja ammattikorkeakoulujen opettajat",
+      "mediaaniPalkka": 7354,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23102",
+      "nimi": "Lehtorit ja yliassistentit (yliopisto)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yliopistojen ja ammattikorkeakoulujen opettajat",
+      "mediaaniPalkka": 4609,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23103",
+      "nimi": "Assistentit ja tuntiopettajat (yliopisto)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yliopistojen ja ammattikorkeakoulujen opettajat",
+      "mediaaniPalkka": 3053,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23104",
+      "nimi": "Yliopettajat (AMK)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yliopistojen ja ammattikorkeakoulujen opettajat",
+      "mediaaniPalkka": 6387,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23105",
+      "nimi": "Lehtorit (AMK)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yliopistojen ja ammattikorkeakoulujen opettajat",
+      "mediaaniPalkka": 5392,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23106",
+      "nimi": "Tuntiopettajat ym. (AMK)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yliopistojen ja ammattikorkeakoulujen opettajat",
+      "mediaaniPalkka": 4669,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2320",
+      "nimi": "Ammatillisen koulutuksen opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Opettajat ja muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 4550,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2330",
+      "nimi": "Lukion ja peruskoulun yläluokkien opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Opettajat ja muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 4681,
+      "onRyhma": true
+    },
+    {
+      "koodi": "23301",
+      "nimi": "Matemaattisten aineiden opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lukion ja peruskoulun yläluokkien opettajat",
+      "mediaaniPalkka": 5005,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23302",
+      "nimi": "Äidinkielen ja kirjallisuuden opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lukion ja peruskoulun yläluokkien opettajat",
+      "mediaaniPalkka": 4765,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23303",
+      "nimi": "Taito- ja taideaineiden opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lukion ja peruskoulun yläluokkien opettajat",
+      "mediaaniPalkka": 4604,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23304",
+      "nimi": "Muut peruskoulun yläluokkien ja lukion opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lukion ja peruskoulun yläluokkien opettajat",
+      "mediaaniPalkka": 4674,
+      "onRyhma": false
+    },
+    {
+      "koodi": "234",
+      "nimi": "Peruskoulun alaluokkien opettajat ja lastentarhanopettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Opettajat ja muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 3580,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2341",
+      "nimi": "Peruskoulun alaluokkien opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Peruskoulun alaluokkien opettajat ja lastentarhanopettajat",
+      "mediaaniPalkka": 4175,
+      "onRyhma": true
+    },
+    {
+      "koodi": "23411",
+      "nimi": "Luokanopettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Peruskoulun alaluokkien opettajat",
+      "mediaaniPalkka": 4180,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23412",
+      "nimi": "Aineenopettajat (peruskoulun alaluokat)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Peruskoulun alaluokkien opettajat",
+      "mediaaniPalkka": 4140,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2342",
+      "nimi": "Lastentarhanopettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Peruskoulun alaluokkien opettajat ja lastentarhanopettajat",
+      "mediaaniPalkka": 3231,
+      "onRyhma": false
+    },
+    {
+      "koodi": "235",
+      "nimi": "Muut opetusalan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Opettajat ja muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 4050,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2351",
+      "nimi": "Opetusmenetelmien erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 4014,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2352",
+      "nimi": "Erityisopettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 4491,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2353",
+      "nimi": "Muut kieltenopettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 3700,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2354",
+      "nimi": "Muut musiikin opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 3526,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2355",
+      "nimi": "Muut taideaineiden opettajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 3000,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2356",
+      "nimi": "Muut tietotekniikan opettajat ja kouluttajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 4042,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2359",
+      "nimi": "Opinto-ohjaajat ja muut opetuksen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Muut opetusalan erityisasiantuntijat",
+      "mediaaniPalkka": 3605,
+      "onRyhma": true
+    },
+    {
+      "koodi": "23591",
+      "nimi": "Opinto-ohjaajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Opinto-ohjaajat ja muut opetuksen erityisasiantuntijat",
+      "mediaaniPalkka": 3274,
+      "onRyhma": false
+    },
+    {
+      "koodi": "23592",
+      "nimi": "Muut opetuksen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Opinto-ohjaajat ja muut opetuksen erityisasiantuntijat",
+      "mediaaniPalkka": 3791,
+      "onRyhma": false
+    },
+    {
+      "koodi": "24",
+      "nimi": "Liike-elämän ja hallinnon erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4911,
+      "onRyhma": true
+    },
+    {
+      "koodi": "241",
+      "nimi": "Rahoitusalan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon erityisasiantuntijat",
+      "mediaaniPalkka": 5100,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2411",
+      "nimi": "Laskentatoimen erityisasiantuntijat ja tilintarkastajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Rahoitusalan erityisasiantuntijat",
+      "mediaaniPalkka": 5020,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2412",
+      "nimi": "Rahoitus- ja sijoitusneuvojat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Rahoitusalan erityisasiantuntijat",
+      "mediaaniPalkka": 5411,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2413",
+      "nimi": "Rahoitusanalyytikot",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Rahoitusalan erityisasiantuntijat",
+      "mediaaniPalkka": 5505,
+      "onRyhma": false
+    },
+    {
+      "koodi": "242",
+      "nimi": "Hallinnon erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon erityisasiantuntijat",
+      "mediaaniPalkka": 4823,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2421",
+      "nimi": "Johtamisen ja organisaatioiden erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Hallinnon erityisasiantuntijat",
+      "mediaaniPalkka": 5608,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2422",
+      "nimi": "Hallinnon ja elinkeinojen kehittämisen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Hallinnon erityisasiantuntijat",
+      "mediaaniPalkka": 4666,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2423",
+      "nimi": "Henkilöstöhallinnon erityisasiantuntijat ja urasuunnittelijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Hallinnon erityisasiantuntijat",
+      "mediaaniPalkka": 4530,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2424",
+      "nimi": "Henkilöstön kehittämisen erityisasiantuntijat ja kouluttajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Hallinnon erityisasiantuntijat",
+      "mediaaniPalkka": 4365,
+      "onRyhma": false
+    },
+    {
+      "koodi": "243",
+      "nimi": "Myynnin, markkinoinnin ja tiedotuksen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon erityisasiantuntijat",
+      "mediaaniPalkka": 4915,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2431",
+      "nimi": "Mainonnan ja markkinoinnin erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Myynnin, markkinoinnin ja tiedotuksen erityisasiantuntijat",
+      "mediaaniPalkka": 4620,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2432",
+      "nimi": "Tiedottajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Myynnin, markkinoinnin ja tiedotuksen erityisasiantuntijat",
+      "mediaaniPalkka": 4338,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2433",
+      "nimi": "Myynti-insinöörit ja lääke-esittelijät (pl. tieto- ja viestintätekniikka)",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Myynnin, markkinoinnin ja tiedotuksen erityisasiantuntijat",
+      "mediaaniPalkka": 5640,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2434",
+      "nimi": "Tieto- ja viestintätekniikan myynnin erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Myynnin, markkinoinnin ja tiedotuksen erityisasiantuntijat",
+      "mediaaniPalkka": 5603,
+      "onRyhma": false
+    },
+    {
+      "koodi": "25",
+      "nimi": "Tieto- ja viestintäteknologian erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 5170,
+      "onRyhma": true
+    },
+    {
+      "koodi": "251",
+      "nimi": "Systeemityön erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tieto- ja viestintäteknologian erityisasiantuntijat",
+      "mediaaniPalkka": 5226,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2511",
+      "nimi": "Sovellusarkkitehdit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Systeemityön erityisasiantuntijat",
+      "mediaaniPalkka": 5596,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2512",
+      "nimi": "Sovellussuunnittelijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Systeemityön erityisasiantuntijat",
+      "mediaaniPalkka": 5020,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2513",
+      "nimi": "Web- ja multimediakehittäjät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Systeemityön erityisasiantuntijat",
+      "mediaaniPalkka": 5000,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2514",
+      "nimi": "Sovellusohjelmoijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Systeemityön erityisasiantuntijat",
+      "mediaaniPalkka": 4571,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2519",
+      "nimi": "Muut ohjelmisto- ja sovelluskehittäjät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Systeemityön erityisasiantuntijat",
+      "mediaaniPalkka": 5200,
+      "onRyhma": false
+    },
+    {
+      "koodi": "252",
+      "nimi": "Tietokantojen, verkkojen ja järjestelmäohjelmistojen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tieto- ja viestintäteknologian erityisasiantuntijat",
+      "mediaaniPalkka": 4812,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2521",
+      "nimi": "Tietokantasuunnittelijat ja -vastaavat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tietokantojen, verkkojen ja järjestelmäohjelmistojen erityisasiantuntijat",
+      "mediaaniPalkka": 3922,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2522",
+      "nimi": "Tietojärjestelmien ylläpitäjät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tietokantojen, verkkojen ja järjestelmäohjelmistojen erityisasiantuntijat",
+      "mediaaniPalkka": 4943,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2523",
+      "nimi": "Tietoverkkojen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tietokantojen, verkkojen ja järjestelmäohjelmistojen erityisasiantuntijat",
+      "mediaaniPalkka": 5500,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2529",
+      "nimi": "Muut tietokanta- ja tietoverkkojen erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Tietokantojen, verkkojen ja järjestelmäohjelmistojen erityisasiantuntijat",
+      "mediaaniPalkka": 5525,
+      "onRyhma": false
+    },
+    {
+      "koodi": "26",
+      "nimi": "Lainopilliset, sosiaalialan ja kulttuurialan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4315,
+      "onRyhma": true
+    },
+    {
+      "koodi": "261",
+      "nimi": "Lainopilliset erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lainopilliset, sosiaalialan ja kulttuurialan erityisasiantuntijat",
+      "mediaaniPalkka": 5957,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2611",
+      "nimi": "Asianajajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lainopilliset erityisasiantuntijat",
+      "mediaaniPalkka": 6000,
+      "onRyhma": false
+    },
+    {
+      "koodi": "262",
+      "nimi": "Kirjaston- ja arkistonhoitajat sekä museoalan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lainopilliset, sosiaalialan ja kulttuurialan erityisasiantuntijat",
+      "mediaaniPalkka": 3496,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2621",
+      "nimi": "Arkistonhoitajat ja museoalan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Kirjaston- ja arkistonhoitajat sekä museoalan erityisasiantuntijat",
+      "mediaaniPalkka": 3480,
+      "onRyhma": true
+    },
+    {
+      "koodi": "26211",
+      "nimi": "Arkistonhoitajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkistonhoitajat ja museoalan erityisasiantuntijat",
+      "mediaaniPalkka": 3559,
+      "onRyhma": false
+    },
+    {
+      "koodi": "26212",
+      "nimi": "Museoalan erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Arkistonhoitajat ja museoalan erityisasiantuntijat",
+      "mediaaniPalkka": 3426,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2622",
+      "nimi": "Kirjastonhoitajat, informaatikot ym.",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Kirjaston- ja arkistonhoitajat sekä museoalan erityisasiantuntijat",
+      "mediaaniPalkka": 3508,
+      "onRyhma": false
+    },
+    {
+      "koodi": "263",
+      "nimi": "Yhteiskunta- ja sosiaalialan sekä uskonnollisen elämän erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lainopilliset, sosiaalialan ja kulttuurialan erityisasiantuntijat",
+      "mediaaniPalkka": 4221,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2631",
+      "nimi": "Ekonomistit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yhteiskunta- ja sosiaalialan sekä uskonnollisen elämän erityisasiantuntijat",
+      "mediaaniPalkka": 4915,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2632",
+      "nimi": "Yhteiskunta- ja kulttuuritutkijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yhteiskunta- ja sosiaalialan sekä uskonnollisen elämän erityisasiantuntijat",
+      "mediaaniPalkka": 4006,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2633",
+      "nimi": "Historioitsijat, politiikan tutkijat ja filosofit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yhteiskunta- ja sosiaalialan sekä uskonnollisen elämän erityisasiantuntijat",
+      "mediaaniPalkka": 3810,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2634",
+      "nimi": "Psykologit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yhteiskunta- ja sosiaalialan sekä uskonnollisen elämän erityisasiantuntijat",
+      "mediaaniPalkka": 4453,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2635",
+      "nimi": "Sosiaalityön erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yhteiskunta- ja sosiaalialan sekä uskonnollisen elämän erityisasiantuntijat",
+      "mediaaniPalkka": 4158,
+      "onRyhma": true
+    },
+    {
+      "koodi": "26351",
+      "nimi": "Sosiaalityöntekijät ym.",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Sosiaalityön erityisasiantuntijat",
+      "mediaaniPalkka": 4242,
+      "onRyhma": false
+    },
+    {
+      "koodi": "26352",
+      "nimi": "Sosiaalialan suunnittelijat ym.",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Sosiaalityön erityisasiantuntijat",
+      "mediaaniPalkka": 3826,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2636",
+      "nimi": "Papit ym. uskonnollisen elämän erityisasiantuntijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Yhteiskunta- ja sosiaalialan sekä uskonnollisen elämän erityisasiantuntijat",
+      "mediaaniPalkka": 4226,
+      "onRyhma": false
+    },
+    {
+      "koodi": "264",
+      "nimi": "Toimittajat, kirjailijat ja kielitieteilijät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lainopilliset, sosiaalialan ja kulttuurialan erityisasiantuntijat",
+      "mediaaniPalkka": 4203,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2641",
+      "nimi": "Kirjailijat ym.",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Toimittajat, kirjailijat ja kielitieteilijät",
+      "mediaaniPalkka": 3778,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2642",
+      "nimi": "Toimittajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Toimittajat, kirjailijat ja kielitieteilijät",
+      "mediaaniPalkka": 4349,
+      "onRyhma": true
+    },
+    {
+      "koodi": "26421",
+      "nimi": "Toimituspäälliköt ja -sihteerit, ohjelmapäälliköt",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Toimittajat",
+      "mediaaniPalkka": 4931,
+      "onRyhma": false
+    },
+    {
+      "koodi": "26422",
+      "nimi": "Lehtien yms. toimittajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Toimittajat",
+      "mediaaniPalkka": 4120,
+      "onRyhma": false
+    },
+    {
+      "koodi": "26423",
+      "nimi": "Radio- ja tv-toimittajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Toimittajat",
+      "mediaaniPalkka": 4392,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2643",
+      "nimi": "Kääntäjät, tulkit ja muut kielitieteilijät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Toimittajat, kirjailijat ja kielitieteilijät",
+      "mediaaniPalkka": 3699,
+      "onRyhma": false
+    },
+    {
+      "koodi": "265",
+      "nimi": "Taiteilijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Lainopilliset, sosiaalialan ja kulttuurialan erityisasiantuntijat",
+      "mediaaniPalkka": 3680,
+      "onRyhma": true
+    },
+    {
+      "koodi": "2651",
+      "nimi": "Kuvataiteilijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Taiteilijat",
+      "mediaaniPalkka": 3302,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2652",
+      "nimi": "Muusikot, laulajat ja säveltäjät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Taiteilijat",
+      "mediaaniPalkka": 3600,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2653",
+      "nimi": "Tanssitaiteilijat ja koreografit",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Taiteilijat",
+      "mediaaniPalkka": 3406,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2654",
+      "nimi": "Ohjaajat ja tuottajat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Taiteilijat",
+      "mediaaniPalkka": 4120,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2655",
+      "nimi": "Näyttelijät",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Taiteilijat",
+      "mediaaniPalkka": 3502,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2656",
+      "nimi": "Juontajat, kuuluttajat ym.",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Taiteilijat",
+      "mediaaniPalkka": 4151,
+      "onRyhma": false
+    },
+    {
+      "koodi": "2659",
+      "nimi": "Muut taiteilijat",
+      "paaryhma": "Erityisasiantuntijat",
+      "ylaryhma": "Taiteilijat",
+      "mediaaniPalkka": 3311,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3",
+      "nimi": "Asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3711,
+      "onRyhma": true
+    },
+    {
+      "koodi": "31",
+      "nimi": "Luonnontieteiden ja tekniikan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4263,
+      "onRyhma": true
+    },
+    {
+      "koodi": "311",
+      "nimi": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan asiantuntijat",
+      "mediaaniPalkka": 4197,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3111",
+      "nimi": "Luonnontieteen tekniset asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 3217,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3112",
+      "nimi": "Rakentamisen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 4017,
+      "onRyhma": true
+    },
+    {
+      "koodi": "31121",
+      "nimi": "Talonrakentamisen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rakentamisen asiantuntijat",
+      "mediaaniPalkka": 4329,
+      "onRyhma": false
+    },
+    {
+      "koodi": "31122",
+      "nimi": "Maa- ja vesirakentamisen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rakentamisen asiantuntijat",
+      "mediaaniPalkka": 4076,
+      "onRyhma": false
+    },
+    {
+      "koodi": "31123",
+      "nimi": "Kartoituksen ja maanmittauksen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rakentamisen asiantuntijat",
+      "mediaaniPalkka": 3186,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3113",
+      "nimi": "Sähkötekniikan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 4454,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3114",
+      "nimi": "Elektroniikan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 4460,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3115",
+      "nimi": "Konetekniikan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 4398,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3116",
+      "nimi": "Kemian prosessitekniikan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 4237,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3117",
+      "nimi": "Kaivosteollisuuden ja metallurgian asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 4268,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3118",
+      "nimi": "Tekniset piirtäjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 3558,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3119",
+      "nimi": "Muut fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Fysiikan, kemian ja teknisten alojen asiantuntijat",
+      "mediaaniPalkka": 4031,
+      "onRyhma": false
+    },
+    {
+      "koodi": "312",
+      "nimi": "Työnjohtajat kaivos-, teollisuus- ja rakennustoiminnassa",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan asiantuntijat",
+      "mediaaniPalkka": 4479,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3121",
+      "nimi": "Kaivostyönjohtajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Työnjohtajat kaivos-, teollisuus- ja rakennustoiminnassa",
+      "mediaaniPalkka": 4823,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3122",
+      "nimi": "Teollisuuden työnjohtajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Työnjohtajat kaivos-, teollisuus- ja rakennustoiminnassa",
+      "mediaaniPalkka": 4259,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3123",
+      "nimi": "Rakennusalan työnjohtajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Työnjohtajat kaivos-, teollisuus- ja rakennustoiminnassa",
+      "mediaaniPalkka": 4633,
+      "onRyhma": false
+    },
+    {
+      "koodi": "313",
+      "nimi": "Prosessinvalvonnan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan asiantuntijat",
+      "mediaaniPalkka": 4390,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3131",
+      "nimi": "Voimalaitosten prosessinhoitajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Prosessinvalvonnan asiantuntijat",
+      "mediaaniPalkka": 5266,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3132",
+      "nimi": "Jätteenpoltto- ja vedenpuhdistuslaitosten prosessinhoitajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Prosessinvalvonnan asiantuntijat",
+      "mediaaniPalkka": 4021,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3133",
+      "nimi": "Kemianteollisuuden prosessinhoitajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Prosessinvalvonnan asiantuntijat",
+      "mediaaniPalkka": 4057,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3139",
+      "nimi": "Muut prosessinvalvonnan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Prosessinvalvonnan asiantuntijat",
+      "mediaaniPalkka": 4649,
+      "onRyhma": false
+    },
+    {
+      "koodi": "314",
+      "nimi": "Biotieteiden asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan asiantuntijat",
+      "mediaaniPalkka": 3341,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3141",
+      "nimi": "Laborantit ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Biotieteiden asiantuntijat",
+      "mediaaniPalkka": 3203,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3142",
+      "nimi": "Maa- ja kalatalousteknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Biotieteiden asiantuntijat",
+      "mediaaniPalkka": 3477,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3143",
+      "nimi": "Metsätalousteknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Biotieteiden asiantuntijat",
+      "mediaaniPalkka": 3814,
+      "onRyhma": false
+    },
+    {
+      "koodi": "315",
+      "nimi": "Laiva-, lento- ja satamaliikenteen päälliköt ja ohjaajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Luonnontieteiden ja tekniikan asiantuntijat",
+      "mediaaniPalkka": 6757,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3151",
+      "nimi": "Laivojen konepäälliköt ja -mestarit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Laiva-, lento- ja satamaliikenteen päälliköt ja ohjaajat",
+      "mediaaniPalkka": 6265,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3152",
+      "nimi": "Vesiliikenteen perämiehet ja päälliköt",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Laiva-, lento- ja satamaliikenteen päälliköt ja ohjaajat",
+      "mediaaniPalkka": 6026,
+      "onRyhma": true
+    },
+    {
+      "koodi": "31521",
+      "nimi": "Isojen alusten päälliköt ja perämiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Vesiliikenteen perämiehet ja päälliköt",
+      "mediaaniPalkka": 5939,
+      "onRyhma": false
+    },
+    {
+      "koodi": "31523",
+      "nimi": "Satamaliikenteen ohjaajat ja satamakapteenit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Vesiliikenteen perämiehet ja päälliköt",
+      "mediaaniPalkka": 6281,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3153",
+      "nimi": "Lentokapteenit ja -perämiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Laiva-, lento- ja satamaliikenteen päälliköt ja ohjaajat",
+      "mediaaniPalkka": 8054,
+      "onRyhma": false
+    },
+    {
+      "koodi": "32",
+      "nimi": "Terveydenhuollon asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3511,
+      "onRyhma": true
+    },
+    {
+      "koodi": "321",
+      "nimi": "Terveydenhuollon tekniset asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3492,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3211",
+      "nimi": "Lääketieteellisen kuvantamis- ja laitetekniikan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Terveydenhuollon tekniset asiantuntijat",
+      "mediaaniPalkka": 3557,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3212",
+      "nimi": "Bioanalyytikot (terveydenhuolto)",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Terveydenhuollon tekniset asiantuntijat",
+      "mediaaniPalkka": 3360,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3213",
+      "nimi": "Farmaseutit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Terveydenhuollon tekniset asiantuntijat",
+      "mediaaniPalkka": 3566,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3214",
+      "nimi": "Hammas- ja apuvälineteknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Terveydenhuollon tekniset asiantuntijat",
+      "mediaaniPalkka": 3238,
+      "onRyhma": true
+    },
+    {
+      "koodi": "32141",
+      "nimi": "Hammasteknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Hammas- ja apuvälineteknikot",
+      "mediaaniPalkka": 3113,
+      "onRyhma": false
+    },
+    {
+      "koodi": "32142",
+      "nimi": "Apuvälineteknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Hammas- ja apuvälineteknikot",
+      "mediaaniPalkka": 3301,
+      "onRyhma": false
+    },
+    {
+      "koodi": "322",
+      "nimi": "Sairaanhoitajat, kätilöt ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3548,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3221",
+      "nimi": "Sairaanhoitajat ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Sairaanhoitajat, kätilöt ym.",
+      "mediaaniPalkka": 3539,
+      "onRyhma": true
+    },
+    {
+      "koodi": "32211",
+      "nimi": "Sairaanhoitajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Sairaanhoitajat ym.",
+      "mediaaniPalkka": 3587,
+      "onRyhma": false
+    },
+    {
+      "koodi": "32212",
+      "nimi": "Terveydenhoitajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Sairaanhoitajat ym.",
+      "mediaaniPalkka": 3359,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3222",
+      "nimi": "Kätilöt",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Sairaanhoitajat, kätilöt ym.",
+      "mediaaniPalkka": 3947,
+      "onRyhma": false
+    },
+    {
+      "koodi": "325",
+      "nimi": "Muut terveydenhuollon asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3332,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3251",
+      "nimi": "Suuhygienistit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3218,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3254",
+      "nimi": "Optikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3754,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3255",
+      "nimi": "Fysioterapeutit ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3109,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3257",
+      "nimi": "Terveys- ja työsuojelutarkastajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 4150,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3258",
+      "nimi": "Sairaankuljetuksen ensihoitajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 4095,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3259",
+      "nimi": "Muut muualla luokittelemattomat terveydenhuollon asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3142,
+      "onRyhma": true
+    },
+    {
+      "koodi": "32591",
+      "nimi": "Toimintaterapeutit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut muualla luokittelemattomat terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3126,
+      "onRyhma": false
+    },
+    {
+      "koodi": "32592",
+      "nimi": "Muut terapeutit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut muualla luokittelemattomat terveydenhuollon asiantuntijat",
+      "mediaaniPalkka": 3608,
+      "onRyhma": false
+    },
+    {
+      "koodi": "33",
+      "nimi": "Liike-elämän ja hallinnon asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3853,
+      "onRyhma": true
+    },
+    {
+      "koodi": "331",
+      "nimi": "Rahoitus-, vakuutus- ja laskentatoimen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon asiantuntijat",
+      "mediaaniPalkka": 3660,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3311",
+      "nimi": "Arvopaperi- ja valuuttakauppiaat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rahoitus-, vakuutus- ja laskentatoimen asiantuntijat",
+      "mediaaniPalkka": 5384,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3312",
+      "nimi": "Luotto- ja laina-asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rahoitus-, vakuutus- ja laskentatoimen asiantuntijat",
+      "mediaaniPalkka": 4750,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3313",
+      "nimi": "Kirjanpidon ja laskentatoimen asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rahoitus-, vakuutus- ja laskentatoimen asiantuntijat",
+      "mediaaniPalkka": 3470,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3314",
+      "nimi": "Tilastointi- ja matematiikka-asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rahoitus-, vakuutus- ja laskentatoimen asiantuntijat",
+      "mediaaniPalkka": 2472,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3315",
+      "nimi": "Arvioitsijat ja vahinkotarkastajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Rahoitus-, vakuutus- ja laskentatoimen asiantuntijat",
+      "mediaaniPalkka": 4667,
+      "onRyhma": false
+    },
+    {
+      "koodi": "332",
+      "nimi": "Myynti- ja ostoagentit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon asiantuntijat",
+      "mediaaniPalkka": 4515,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3321",
+      "nimi": "Vakuutusalan palvelumyyjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Myynti- ja ostoagentit",
+      "mediaaniPalkka": 4452,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3322",
+      "nimi": "Myyntiedustajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Myynti- ja ostoagentit",
+      "mediaaniPalkka": 4600,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3323",
+      "nimi": "Sisäänostajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Myynti- ja ostoagentit",
+      "mediaaniPalkka": 4223,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3324",
+      "nimi": "Kaupanvälittäjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Myynti- ja ostoagentit",
+      "mediaaniPalkka": 4110,
+      "onRyhma": false
+    },
+    {
+      "koodi": "333",
+      "nimi": "Yrityspalveluiden välittäjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon asiantuntijat",
+      "mediaaniPalkka": 3602,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3331",
+      "nimi": "Huolitsijat, tulli- ja laivanselvittäjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Yrityspalveluiden välittäjät",
+      "mediaaniPalkka": 3748,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3332",
+      "nimi": "Konferenssi- ja tapahtumajärjestäjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Yrityspalveluiden välittäjät",
+      "mediaaniPalkka": 3450,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3333",
+      "nimi": "Työnvälittäjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Yrityspalveluiden välittäjät",
+      "mediaaniPalkka": 3282,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3334",
+      "nimi": "Kiinteistönvälittäjät ja isännöitsijät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Yrityspalveluiden välittäjät",
+      "mediaaniPalkka": 4062,
+      "onRyhma": true
+    },
+    {
+      "koodi": "33341",
+      "nimi": "Kiinteistönvälittäjät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Kiinteistönvälittäjät ja isännöitsijät",
+      "mediaaniPalkka": 4062,
+      "onRyhma": false
+    },
+    {
+      "koodi": "33342",
+      "nimi": "Isännöitsijät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Kiinteistönvälittäjät ja isännöitsijät",
+      "mediaaniPalkka": 4061,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3339",
+      "nimi": "Muut liike-elämän asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Yrityspalveluiden välittäjät",
+      "mediaaniPalkka": 4273,
+      "onRyhma": false
+    },
+    {
+      "koodi": "334",
+      "nimi": "Hallinnolliset ja erikoistuneet sihteerit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon asiantuntijat",
+      "mediaaniPalkka": 3226,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3341",
+      "nimi": "Toimistotyön esimiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Hallinnolliset ja erikoistuneet sihteerit",
+      "mediaaniPalkka": 4187,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3342",
+      "nimi": "Asianajosihteerit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Hallinnolliset ja erikoistuneet sihteerit",
+      "mediaaniPalkka": 3035,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3343",
+      "nimi": "Johdon sihteerit ja osastosihteerit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Hallinnolliset ja erikoistuneet sihteerit",
+      "mediaaniPalkka": 3408,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3344",
+      "nimi": "Toimistosihteerit (terveydenhuolto)",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Hallinnolliset ja erikoistuneet sihteerit",
+      "mediaaniPalkka": 2779,
+      "onRyhma": false
+    },
+    {
+      "koodi": "335",
+      "nimi": "Julkishallinnon valmistelu- ja valvontavirkamiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Liike-elämän ja hallinnon asiantuntijat",
+      "mediaaniPalkka": 3601,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3351",
+      "nimi": "Tulli- ja rajavirkamiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Julkishallinnon valmistelu- ja valvontavirkamiehet",
+      "mediaaniPalkka": 3878,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3353",
+      "nimi": "Sosiaaliturvaetuuksien käsittelijät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Julkishallinnon valmistelu- ja valvontavirkamiehet",
+      "mediaaniPalkka": 3206,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3354",
+      "nimi": "Lupavirkamiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Julkishallinnon valmistelu- ja valvontavirkamiehet",
+      "mediaaniPalkka": 3123,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3359",
+      "nimi": "Muut julkishallinnon valmistelu- ja valvontavirkamiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Julkishallinnon valmistelu- ja valvontavirkamiehet",
+      "mediaaniPalkka": 4352,
+      "onRyhma": false
+    },
+    {
+      "koodi": "34",
+      "nimi": "Lainopilliset avustajat sekä sosiaali- ja kulttuurialan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3239,
+      "onRyhma": true
+    },
+    {
+      "koodi": "341",
+      "nimi": "Lainopilliset asiantuntijat sekä sosiaalialan ja seurakunnan työntekijät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset avustajat sekä sosiaali- ja kulttuurialan asiantuntijat",
+      "mediaaniPalkka": 3248,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3411",
+      "nimi": "Lainopilliset avustajat ja järjestöalan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset asiantuntijat sekä sosiaalialan ja seurakunnan työntekijät",
+      "mediaaniPalkka": 3888,
+      "onRyhma": true
+    },
+    {
+      "koodi": "34111",
+      "nimi": "Oikeudenkäyntiasiamiehet ja ulosottomiehet",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset avustajat ja järjestöalan asiantuntijat",
+      "mediaaniPalkka": 3622,
+      "onRyhma": false
+    },
+    {
+      "koodi": "34112",
+      "nimi": "Asiamiehet, toimitsijat ym. järjestöalan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset avustajat ja järjestöalan asiantuntijat",
+      "mediaaniPalkka": 4164,
+      "onRyhma": false
+    },
+    {
+      "koodi": "34113",
+      "nimi": "Kuluttajaneuvojat ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset avustajat ja järjestöalan asiantuntijat",
+      "mediaaniPalkka": 3702,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3412",
+      "nimi": "Sosiaalialan ohjaajat ja neuvojat ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset asiantuntijat sekä sosiaalialan ja seurakunnan työntekijät",
+      "mediaaniPalkka": 3207,
+      "onRyhma": true
+    },
+    {
+      "koodi": "34121",
+      "nimi": "Sosiaalialan ohjaajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Sosiaalialan ohjaajat ja neuvojat ym.",
+      "mediaaniPalkka": 3296,
+      "onRyhma": false
+    },
+    {
+      "koodi": "34122",
+      "nimi": "Nuorisotyön ohjaajat (ei srk.)",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Sosiaalialan ohjaajat ja neuvojat ym.",
+      "mediaaniPalkka": 2840,
+      "onRyhma": false
+    },
+    {
+      "koodi": "34123",
+      "nimi": "Työn- ja askarteluohjaajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Sosiaalialan ohjaajat ja neuvojat ym.",
+      "mediaaniPalkka": 2881,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3413",
+      "nimi": "Seurakuntatyöntekijät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset asiantuntijat sekä sosiaalialan ja seurakunnan työntekijät",
+      "mediaaniPalkka": 3115,
+      "onRyhma": true
+    },
+    {
+      "koodi": "34131",
+      "nimi": "Diakonit ja diakonissat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Seurakuntatyöntekijät",
+      "mediaaniPalkka": 3244,
+      "onRyhma": false
+    },
+    {
+      "koodi": "34139",
+      "nimi": "Muut seurakuntatyöntekijät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Seurakuntatyöntekijät",
+      "mediaaniPalkka": 2970,
+      "onRyhma": false
+    },
+    {
+      "koodi": "342",
+      "nimi": "Urheilijat, urheiluvalmentajat, liikunnanohjaajat ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset avustajat sekä sosiaali- ja kulttuurialan asiantuntijat",
+      "mediaaniPalkka": 2985,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3422",
+      "nimi": "Urheiluvalmentajat ja toimitsijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Urheilijat, urheiluvalmentajat, liikunnanohjaajat ym.",
+      "mediaaniPalkka": 3045,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3423",
+      "nimi": "Liikunnan ja vapaa-ajan ohjaajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Urheilijat, urheiluvalmentajat, liikunnanohjaajat ym.",
+      "mediaaniPalkka": 2849,
+      "onRyhma": false
+    },
+    {
+      "koodi": "343",
+      "nimi": "Taide- ja kulttuurialan asiantuntijat sekä keittiöpäälliköt",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Lainopilliset avustajat sekä sosiaali- ja kulttuurialan asiantuntijat",
+      "mediaaniPalkka": 3400,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3431",
+      "nimi": "Valokuvaajat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Taide- ja kulttuurialan asiantuntijat sekä keittiöpäälliköt",
+      "mediaaniPalkka": 3982,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3432",
+      "nimi": "Sisustussuunnittelijat ym.",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Taide- ja kulttuurialan asiantuntijat sekä keittiöpäälliköt",
+      "mediaaniPalkka": 3057,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3433",
+      "nimi": "Gallerioiden, museoiden ja kirjastojen tekniset työntekijät",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Taide- ja kulttuurialan asiantuntijat sekä keittiöpäälliköt",
+      "mediaaniPalkka": 2930,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3434",
+      "nimi": "Keittiöpäälliköt",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Taide- ja kulttuurialan asiantuntijat sekä keittiöpäälliköt",
+      "mediaaniPalkka": 3520,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3435",
+      "nimi": "Muut taide- ja kulttuurialan asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Taide- ja kulttuurialan asiantuntijat sekä keittiöpäälliköt",
+      "mediaaniPalkka": 3376,
+      "onRyhma": true
+    },
+    {
+      "koodi": "34351",
+      "nimi": "Kuvaussihteerit ja muut näyttämötekniset asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut taide- ja kulttuurialan asiantuntijat",
+      "mediaaniPalkka": 3404,
+      "onRyhma": false
+    },
+    {
+      "koodi": "34359",
+      "nimi": "Muut taide- ja kulttuurialan tekniset asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Muut taide- ja kulttuurialan asiantuntijat",
+      "mediaaniPalkka": 3252,
+      "onRyhma": false
+    },
+    {
+      "koodi": "35",
+      "nimi": "Informaatio- ja tietoliikenneteknologian asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": null,
+      "mediaaniPalkka": 4023,
+      "onRyhma": true
+    },
+    {
+      "koodi": "351",
+      "nimi": "Informaatio- ja tietoliikenneteknologian teknikot sekä käyttäjätukihenkilöt",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Informaatio- ja tietoliikenneteknologian asiantuntijat",
+      "mediaaniPalkka": 3998,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3511",
+      "nimi": "Käytön operaattorit",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Informaatio- ja tietoliikenneteknologian teknikot sekä käyttäjätukihenkilöt",
+      "mediaaniPalkka": 4265,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3512",
+      "nimi": "Käytön tukihenkilöt",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Informaatio- ja tietoliikenneteknologian teknikot sekä käyttäjätukihenkilöt",
+      "mediaaniPalkka": 3799,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3513",
+      "nimi": "Tietoverkkoteknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Informaatio- ja tietoliikenneteknologian teknikot sekä käyttäjätukihenkilöt",
+      "mediaaniPalkka": 4565,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3514",
+      "nimi": "Webmasterit ja -teknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Informaatio- ja tietoliikenneteknologian teknikot sekä käyttäjätukihenkilöt",
+      "mediaaniPalkka": 4281,
+      "onRyhma": false
+    },
+    {
+      "koodi": "352",
+      "nimi": "Teleliikenne- sekä radio- ja tv-teknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Informaatio- ja tietoliikenneteknologian asiantuntijat",
+      "mediaaniPalkka": 4273,
+      "onRyhma": true
+    },
+    {
+      "koodi": "3521",
+      "nimi": "Lähetys- ja audiovisuaaliteknikot",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Teleliikenne- sekä radio- ja tv-teknikot",
+      "mediaaniPalkka": 3754,
+      "onRyhma": false
+    },
+    {
+      "koodi": "3522",
+      "nimi": "Televiestinnän tekniset asiantuntijat",
+      "paaryhma": "Asiantuntijat",
+      "ylaryhma": "Teleliikenne- sekä radio- ja tv-teknikot",
+      "mediaaniPalkka": 4854,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4",
+      "nimi": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3096,
+      "onRyhma": true
+    },
+    {
+      "koodi": "41",
+      "nimi": "Toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3090,
+      "onRyhma": true
+    },
+    {
+      "koodi": "4110",
+      "nimi": "Toimistoavustajat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Toimistotyöntekijät",
+      "mediaaniPalkka": 2974,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4120",
+      "nimi": "Yleissihteerit",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Toimistotyöntekijät",
+      "mediaaniPalkka": 3110,
+      "onRyhma": false
+    },
+    {
+      "koodi": "413",
+      "nimi": "Tekstinkäsittelijät ja tallentajat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Toimistotyöntekijät",
+      "mediaaniPalkka": 2779,
+      "onRyhma": true
+    },
+    {
+      "koodi": "4131",
+      "nimi": "Tekstinkäsittelijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Tekstinkäsittelijät ja tallentajat",
+      "mediaaniPalkka": 2779,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4132",
+      "nimi": "Tallentajat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Tekstinkäsittelijät ja tallentajat",
+      "mediaaniPalkka": 2805,
+      "onRyhma": false
+    },
+    {
+      "koodi": "42",
+      "nimi": "Asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3012,
+      "onRyhma": true
+    },
+    {
+      "koodi": "421",
+      "nimi": "Rahaliikenteen asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3260,
+      "onRyhma": true
+    },
+    {
+      "koodi": "4211",
+      "nimi": "Pankki- ym. toimihenkilöt",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Rahaliikenteen asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3323,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4212",
+      "nimi": "Vedonvälittäjät, bingo- ja kasinopelin hoitajat ym.",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Rahaliikenteen asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3432,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4213",
+      "nimi": "Panttilainaajat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Rahaliikenteen asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3110,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4214",
+      "nimi": "Maksujenperijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Rahaliikenteen asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2985,
+      "onRyhma": false
+    },
+    {
+      "koodi": "422",
+      "nimi": "Muut asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2910,
+      "onRyhma": true
+    },
+    {
+      "koodi": "4221",
+      "nimi": "Matkatoimistovirkailijat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3358,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4222",
+      "nimi": "Puhelinpalveluneuvojat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2747,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4223",
+      "nimi": "Puhelinvaihteenhoitajat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2778,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4224",
+      "nimi": "Hotellin vastaanottovirkailijat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2835,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4225",
+      "nimi": "Informaatiopisteen asiakasneuvojat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2900,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4226",
+      "nimi": "Vastaanoton ja neuvonnan hoitajat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2811,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4227",
+      "nimi": "Tutkimus- ja markkinatutkimushaastattelijat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2959,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4229",
+      "nimi": "Muualla luokittelemattomat asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3046,
+      "onRyhma": true
+    },
+    {
+      "koodi": "42291",
+      "nimi": "Hälytyspäivystäjät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muualla luokittelemattomat asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 4026,
+      "onRyhma": false
+    },
+    {
+      "koodi": "42299",
+      "nimi": "Muut muualla luokittelemattomat asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muualla luokittelemattomat asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3000,
+      "onRyhma": false
+    },
+    {
+      "koodi": "43",
+      "nimi": "Laskennan ja varastoinnin toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3328,
+      "onRyhma": true
+    },
+    {
+      "koodi": "431",
+      "nimi": "Palkanlaskijat, vakuutuskäsittelijät ym.",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Laskennan ja varastoinnin toimistotyöntekijät",
+      "mediaaniPalkka": 3205,
+      "onRyhma": true
+    },
+    {
+      "koodi": "4311",
+      "nimi": "Taloushallinnon toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Palkanlaskijat, vakuutuskäsittelijät ym.",
+      "mediaaniPalkka": 3151,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4312",
+      "nimi": "Tilasto-, rahoitus- ja vakuutusalan toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Palkanlaskijat, vakuutuskäsittelijät ym.",
+      "mediaaniPalkka": 3411,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4313",
+      "nimi": "Palkanlaskijat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Palkanlaskijat, vakuutuskäsittelijät ym.",
+      "mediaaniPalkka": 3129,
+      "onRyhma": false
+    },
+    {
+      "koodi": "432",
+      "nimi": "Kuljetuksen ja varastoinnin toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Laskennan ja varastoinnin toimistotyöntekijät",
+      "mediaaniPalkka": 3567,
+      "onRyhma": true
+    },
+    {
+      "koodi": "4321",
+      "nimi": "Varastonhoitajat ym.",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Kuljetuksen ja varastoinnin toimistotyöntekijät",
+      "mediaaniPalkka": 3465,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4322",
+      "nimi": "Tuotannon valmistelijat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Kuljetuksen ja varastoinnin toimistotyöntekijät",
+      "mediaaniPalkka": 3199,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4323",
+      "nimi": "Kuljetuksen toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Kuljetuksen ja varastoinnin toimistotyöntekijät",
+      "mediaaniPalkka": 3745,
+      "onRyhma": true
+    },
+    {
+      "koodi": "43231",
+      "nimi": "Raideliikenteen ohjaajat, ajojärjestelijät ym.",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Kuljetuksen toimistotyöntekijät",
+      "mediaaniPalkka": 4692,
+      "onRyhma": false
+    },
+    {
+      "koodi": "43239",
+      "nimi": "Muut kuljetuksen ja huolinnan toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Kuljetuksen toimistotyöntekijät",
+      "mediaaniPalkka": 3674,
+      "onRyhma": false
+    },
+    {
+      "koodi": "441",
+      "nimi": "Muut toimisto- ja asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2830,
+      "onRyhma": true
+    },
+    {
+      "koodi": "4411",
+      "nimi": "Kirjastotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut toimisto- ja asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2739,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4412",
+      "nimi": "Postinkantajat ja -lajittelijat",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut toimisto- ja asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2657,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4413",
+      "nimi": "Koodaajat, oikolukijat ym.",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut toimisto- ja asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3520,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4415",
+      "nimi": "Arkistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut toimisto- ja asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 2795,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4416",
+      "nimi": "Henkilöstöhallinnon avustavat toimistotyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut toimisto- ja asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3251,
+      "onRyhma": false
+    },
+    {
+      "koodi": "4419",
+      "nimi": "Muut muualla luokittelemattomat toimisto- ja asiakaspalvelutyöntekijät",
+      "paaryhma": "Toimisto- ja asiakaspalvelutyöntekijät",
+      "ylaryhma": "Muut toimisto- ja asiakaspalvelutyöntekijät",
+      "mediaaniPalkka": 3260,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5",
+      "nimi": "Palvelu- ja myyntityöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2919,
+      "onRyhma": true
+    },
+    {
+      "koodi": "51",
+      "nimi": "Palvelutyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2875,
+      "onRyhma": true
+    },
+    {
+      "koodi": "511",
+      "nimi": "Matkustuspalvelutyöntekijät, konduktöörit ja oppaat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Palvelutyöntekijät",
+      "mediaaniPalkka": 3352,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5113",
+      "nimi": "Matkaoppaat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Matkustuspalvelutyöntekijät, konduktöörit ja oppaat",
+      "mediaaniPalkka": 2855,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5120",
+      "nimi": "Ravintola- ja suurtaloustyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Palvelutyöntekijät",
+      "mediaaniPalkka": 2845,
+      "onRyhma": true
+    },
+    {
+      "koodi": "51201",
+      "nimi": "Kokit, keittäjät ja kylmäköt",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Ravintola- ja suurtaloustyöntekijät",
+      "mediaaniPalkka": 2698,
+      "onRyhma": false
+    },
+    {
+      "koodi": "51202",
+      "nimi": "Ravintolaesimiehet ja vuoropäälliköt",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Ravintola- ja suurtaloustyöntekijät",
+      "mediaaniPalkka": 3030,
+      "onRyhma": false
+    },
+    {
+      "koodi": "513",
+      "nimi": "Tarjoilutyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Palvelutyöntekijät",
+      "mediaaniPalkka": 2702,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5131",
+      "nimi": "Tarjoilijat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Tarjoilutyöntekijät",
+      "mediaaniPalkka": 2680,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5132",
+      "nimi": "Baarimestarit",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Tarjoilutyöntekijät",
+      "mediaaniPalkka": 3117,
+      "onRyhma": false
+    },
+    {
+      "koodi": "514",
+      "nimi": "Kampaajat, parturit, kosmetologit ym.",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Palvelutyöntekijät",
+      "mediaaniPalkka": 2371,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5141",
+      "nimi": "Kampaajat ja parturit",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Kampaajat, parturit, kosmetologit ym.",
+      "mediaaniPalkka": 2349,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5142",
+      "nimi": "Kosmetologit ym.",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Kampaajat, parturit, kosmetologit ym.",
+      "mediaaniPalkka": 2468,
+      "onRyhma": false
+    },
+    {
+      "koodi": "515",
+      "nimi": "Kiinteistöhuollon ja siivoustyön esimiehet",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Palvelutyöntekijät",
+      "mediaaniPalkka": 2972,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5153",
+      "nimi": "Kiinteistöhuollon työntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Kiinteistöhuollon ja siivoustyön esimiehet",
+      "mediaaniPalkka": 2929,
+      "onRyhma": false
+    },
+    {
+      "koodi": "516",
+      "nimi": "Muut henkilökohtaisen palvelun työntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Palvelutyöntekijät",
+      "mediaaniPalkka": 2697,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5163",
+      "nimi": "Hautauspalvelutyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut henkilökohtaisen palvelun työntekijät",
+      "mediaaniPalkka": 2955,
+      "onRyhma": true
+    },
+    {
+      "koodi": "51631",
+      "nimi": "Hautaustoimistonhoitajat ym.",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Hautauspalvelutyöntekijät",
+      "mediaaniPalkka": 2778,
+      "onRyhma": false
+    },
+    {
+      "koodi": "51632",
+      "nimi": "Muut hautaustyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Hautauspalvelutyöntekijät",
+      "mediaaniPalkka": 3173,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5164",
+      "nimi": "Eläintenhoitajat ja lemmikkieläinten trimmaajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut henkilökohtaisen palvelun työntekijät",
+      "mediaaniPalkka": 2514,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5165",
+      "nimi": "Ajo-opettajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut henkilökohtaisen palvelun työntekijät",
+      "mediaaniPalkka": 3260,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5169",
+      "nimi": "Muualla luokittelemattomat henkilökohtaisen palvelun työntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut henkilökohtaisen palvelun työntekijät",
+      "mediaaniPalkka": 2593,
+      "onRyhma": false
+    },
+    {
+      "koodi": "52",
+      "nimi": "Myyjät, kauppiaat ym.",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2870,
+      "onRyhma": true
+    },
+    {
+      "koodi": "521",
+      "nimi": "Katu- ja torikauppiaat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Myyjät, kauppiaat ym.",
+      "mediaaniPalkka": 2117,
+      "onRyhma": false
+    },
+    {
+      "koodi": "522",
+      "nimi": "Myyjät ja kauppiaat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Myyjät, kauppiaat ym.",
+      "mediaaniPalkka": 2913,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5221",
+      "nimi": "Kauppiaat (pienyrittäjät)",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Myyjät ja kauppiaat",
+      "mediaaniPalkka": 3847,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5222",
+      "nimi": "Myymäläesimiehet",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Myyjät ja kauppiaat",
+      "mediaaniPalkka": 3403,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5223",
+      "nimi": "Myyjät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Myyjät ja kauppiaat",
+      "mediaaniPalkka": 2805,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5230",
+      "nimi": "Kassanhoitajat ja lipunmyyjät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Myyjät, kauppiaat ym.",
+      "mediaaniPalkka": 2578,
+      "onRyhma": false
+    },
+    {
+      "koodi": "524",
+      "nimi": "Muut myyntityöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Myyjät, kauppiaat ym.",
+      "mediaaniPalkka": 2672,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5242",
+      "nimi": "Tuote-esittelijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut myyntityöntekijät",
+      "mediaaniPalkka": 3353,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5244",
+      "nimi": "Puhelin- ja asiakaspalvelukeskusten myyjät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut myyntityöntekijät",
+      "mediaaniPalkka": 2672,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5245",
+      "nimi": "Huoltamotyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut myyntityöntekijät",
+      "mediaaniPalkka": 2613,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5246",
+      "nimi": "Kahvila- ja baarimyyjät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut myyntityöntekijät",
+      "mediaaniPalkka": 2464,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5249",
+      "nimi": "Muut muualla luokittelemattomat myyntityöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut myyntityöntekijät",
+      "mediaaniPalkka": 3150,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53",
+      "nimi": "Hoivapalvelun ja terveydenhuollon työntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2926,
+      "onRyhma": true
+    },
+    {
+      "koodi": "531",
+      "nimi": "Lastenhoitajat ja koulunkäyntiavustajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Hoivapalvelun ja terveydenhuollon työntekijät",
+      "mediaaniPalkka": 2589,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5311",
+      "nimi": "Lastenhoitotyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lastenhoitajat ja koulunkäyntiavustajat",
+      "mediaaniPalkka": 2613,
+      "onRyhma": true
+    },
+    {
+      "koodi": "53111",
+      "nimi": "Päiväkotien ja muiden laitosten lastenhoitajat ym.",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lastenhoitotyöntekijät",
+      "mediaaniPalkka": 2630,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53112",
+      "nimi": "Perhepäivähoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lastenhoitotyöntekijät",
+      "mediaaniPalkka": 2381,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53113",
+      "nimi": "Lastenkerhojen ohjaajat ym.",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lastenhoitotyöntekijät",
+      "mediaaniPalkka": 2512,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5312",
+      "nimi": "Koulunkäyntiavustajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lastenhoitajat ja koulunkäyntiavustajat",
+      "mediaaniPalkka": 2482,
+      "onRyhma": false
+    },
+    {
+      "koodi": "532",
+      "nimi": "Lähihoitajat, muut terveydenhuollon työntekijät ja kodinhoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Hoivapalvelun ja terveydenhuollon työntekijät",
+      "mediaaniPalkka": 3172,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5321",
+      "nimi": "Lähihoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lähihoitajat, muut terveydenhuollon työntekijät ja kodinhoitajat",
+      "mediaaniPalkka": 3222,
+      "onRyhma": true
+    },
+    {
+      "koodi": "53211",
+      "nimi": "Mielenterveyshoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lähihoitajat",
+      "mediaaniPalkka": 3213,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53212",
+      "nimi": "Kehitysvammaisten hoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lähihoitajat",
+      "mediaaniPalkka": 3245,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53213",
+      "nimi": "Sosiaalialan hoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lähihoitajat",
+      "mediaaniPalkka": 3244,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53219",
+      "nimi": "Muut lähihoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lähihoitajat",
+      "mediaaniPalkka": 3154,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5322",
+      "nimi": "Kodinhoitajat (kotipalvelutoiminta)",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lähihoitajat, muut terveydenhuollon työntekijät ja kodinhoitajat",
+      "mediaaniPalkka": 3200,
+      "onRyhma": true
+    },
+    {
+      "koodi": "53221",
+      "nimi": "Kotityöpalvelutyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Kodinhoitajat (kotipalvelutoiminta)",
+      "mediaaniPalkka": 3255,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53222",
+      "nimi": "Henkilökohtaiset avustajat, omaishoitajat ym.",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Kodinhoitajat (kotipalvelutoiminta)",
+      "mediaaniPalkka": 2386,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5329",
+      "nimi": "Muut terveydenhuoltoalan työntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Lähihoitajat, muut terveydenhuollon työntekijät ja kodinhoitajat",
+      "mediaaniPalkka": 2686,
+      "onRyhma": true
+    },
+    {
+      "koodi": "53291",
+      "nimi": "Hammashoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut terveydenhuoltoalan työntekijät",
+      "mediaaniPalkka": 2770,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53292",
+      "nimi": "Välinehuoltajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut terveydenhuoltoalan työntekijät",
+      "mediaaniPalkka": 2625,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53293",
+      "nimi": "Apteekkien lääketyöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut terveydenhuoltoalan työntekijät",
+      "mediaaniPalkka": 2439,
+      "onRyhma": false
+    },
+    {
+      "koodi": "53294",
+      "nimi": "Hierojat ja kuntohoitajat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Muut terveydenhuoltoalan työntekijät",
+      "mediaaniPalkka": 2852,
+      "onRyhma": false
+    },
+    {
+      "koodi": "541",
+      "nimi": "Suojelu- ja vartiointityöntekijät",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3533,
+      "onRyhma": true
+    },
+    {
+      "koodi": "5411",
+      "nimi": "Palomiehet",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Suojelu- ja vartiointityöntekijät",
+      "mediaaniPalkka": 3965,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5413",
+      "nimi": "Vanginvartijat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Suojelu- ja vartiointityöntekijät",
+      "mediaaniPalkka": 3482,
+      "onRyhma": false
+    },
+    {
+      "koodi": "5414",
+      "nimi": "Vartijat",
+      "paaryhma": "Palvelu- ja myyntityöntekijät",
+      "ylaryhma": "Suojelu- ja vartiointityöntekijät",
+      "mediaaniPalkka": 2858,
+      "onRyhma": false
+    },
+    {
+      "koodi": "6",
+      "nimi": "Maanviljelijät, metsätyöntekijät ym.",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2561,
+      "onRyhma": true
+    },
+    {
+      "koodi": "61",
+      "nimi": "Maanviljelijät ja eläintenkasvattajat ym.",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2540,
+      "onRyhma": true
+    },
+    {
+      "koodi": "611",
+      "nimi": "Pelto- ja puutarhaviljelijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Maanviljelijät ja eläintenkasvattajat ym.",
+      "mediaaniPalkka": 2486,
+      "onRyhma": true
+    },
+    {
+      "koodi": "6111",
+      "nimi": "Pelto- ja avomaaviljelijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Pelto- ja puutarhaviljelijät",
+      "mediaaniPalkka": 2430,
+      "onRyhma": false
+    },
+    {
+      "koodi": "6113",
+      "nimi": "Puutarhurit, kasvihuoneviljelijät ja -työntekijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Pelto- ja puutarhaviljelijät",
+      "mediaaniPalkka": 2491,
+      "onRyhma": true
+    },
+    {
+      "koodi": "61131",
+      "nimi": "Puutarhurit ja kasvihuoneviljelijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Puutarhurit, kasvihuoneviljelijät ja -työntekijät",
+      "mediaaniPalkka": 2480,
+      "onRyhma": false
+    },
+    {
+      "koodi": "61132",
+      "nimi": "Puutarha- ja kasvihuonetyönjohtajat ja - työntekijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Puutarhurit, kasvihuoneviljelijät ja -työntekijät",
+      "mediaaniPalkka": 2492,
+      "onRyhma": false
+    },
+    {
+      "koodi": "612",
+      "nimi": "Eläintenkasvattajat",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Maanviljelijät ja eläintenkasvattajat ym.",
+      "mediaaniPalkka": 2680,
+      "onRyhma": true
+    },
+    {
+      "koodi": "6121",
+      "nimi": "Liha- ja lypsykarjan kasvattajat sekä muiden kotieläinten kasvattajat",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Eläintenkasvattajat",
+      "mediaaniPalkka": 2730,
+      "onRyhma": true
+    },
+    {
+      "koodi": "61212",
+      "nimi": "Karjanhoitajat ym.",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Liha- ja lypsykarjan kasvattajat sekä muiden kotieläinten kasvattajat",
+      "mediaaniPalkka": 2435,
+      "onRyhma": false
+    },
+    {
+      "koodi": "6122",
+      "nimi": "Siipikarjankasvattajat",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Eläintenkasvattajat",
+      "mediaaniPalkka": 2560,
+      "onRyhma": false
+    },
+    {
+      "koodi": "61291",
+      "nimi": "Turkiseläinten ja porojen kasvattajat",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Eläintenkasvattajat",
+      "mediaaniPalkka": 2500,
+      "onRyhma": false
+    },
+    {
+      "koodi": "6130",
+      "nimi": "Yhdistetyn maanviljelyn ja eläintenkasvatuksen harjoittajat",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Maanviljelijät ja eläintenkasvattajat ym.",
+      "mediaaniPalkka": 2500,
+      "onRyhma": false
+    },
+    {
+      "koodi": "62",
+      "nimi": "Metsä- ja kalatalouden työntekijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2695,
+      "onRyhma": true
+    },
+    {
+      "koodi": "6210",
+      "nimi": "Metsurit ja metsätyöntekijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Metsä- ja kalatalouden työntekijät",
+      "mediaaniPalkka": 2609,
+      "onRyhma": false
+    },
+    {
+      "koodi": "622",
+      "nimi": "Kalanviljelijät, kalastajat ja metsästäjät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Metsä- ja kalatalouden työntekijät",
+      "mediaaniPalkka": 3102,
+      "onRyhma": true
+    },
+    {
+      "koodi": "62212",
+      "nimi": "Kalanviljelytyönjohtajat ja -työntekijät",
+      "paaryhma": "Maanviljelijät, metsätyöntekijät ym.",
+      "ylaryhma": "Kalanviljelijät, kalastajat ja metsästäjät",
+      "mediaaniPalkka": 3061,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7",
+      "nimi": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3415,
+      "onRyhma": true
+    },
+    {
+      "koodi": "71",
+      "nimi": "Rakennustyöntekijät ym. (pl. sähköasentajat)",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3422,
+      "onRyhma": true
+    },
+    {
+      "koodi": "711",
+      "nimi": "Rakennustyöntekijät ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym. (pl. sähköasentajat)",
+      "mediaaniPalkka": 3344,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7111",
+      "nimi": "Talonrakentajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym.",
+      "mediaaniPalkka": 3282,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7112",
+      "nimi": "Muurarit ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym.",
+      "mediaaniPalkka": 3772,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7113",
+      "nimi": "Kivenhakkaajat ja -leikkaajat ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym.",
+      "mediaaniPalkka": 3257,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7114",
+      "nimi": "Betonirakentajat ja raudoittajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym.",
+      "mediaaniPalkka": 3709,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7115",
+      "nimi": "Kirvesmiehet ja rakennuspuusepät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym.",
+      "mediaaniPalkka": 3476,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7119",
+      "nimi": "Muut rakennustyöntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym.",
+      "mediaaniPalkka": 3227,
+      "onRyhma": false
+    },
+    {
+      "koodi": "712",
+      "nimi": "Rakennusten viimeistelytyöntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym. (pl. sähköasentajat)",
+      "mediaaniPalkka": 3638,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7121",
+      "nimi": "Kattoasentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennusten viimeistelytyöntekijät",
+      "mediaaniPalkka": 3551,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7122",
+      "nimi": "Lattianpäällystystyöntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennusten viimeistelytyöntekijät",
+      "mediaaniPalkka": 3781,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7123",
+      "nimi": "Rappaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennusten viimeistelytyöntekijät",
+      "mediaaniPalkka": 3551,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7124",
+      "nimi": "Eristäjät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennusten viimeistelytyöntekijät",
+      "mediaaniPalkka": 3459,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7125",
+      "nimi": "Lasinasentajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennusten viimeistelytyöntekijät",
+      "mediaaniPalkka": 3050,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7126",
+      "nimi": "Putkiasentajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennusten viimeistelytyöntekijät",
+      "mediaaniPalkka": 3700,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7127",
+      "nimi": "Ilmastointi- ja jäähdytyslaiteasentajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennusten viimeistelytyöntekijät",
+      "mediaaniPalkka": 3644,
+      "onRyhma": false
+    },
+    {
+      "koodi": "713",
+      "nimi": "Maalarit ja rakennuspuhdistajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Rakennustyöntekijät ym. (pl. sähköasentajat)",
+      "mediaaniPalkka": 3186,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7131",
+      "nimi": "Rakennusmaalarit ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Maalarit ja rakennuspuhdistajat",
+      "mediaaniPalkka": 3266,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7132",
+      "nimi": "Ruiskumaalaajat ja -lakkaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Maalarit ja rakennuspuhdistajat",
+      "mediaaniPalkka": 3069,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7133",
+      "nimi": "Rakennuspuhdistajat ja nuohoojat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Maalarit ja rakennuspuhdistajat",
+      "mediaaniPalkka": 3001,
+      "onRyhma": false
+    },
+    {
+      "koodi": "72",
+      "nimi": "Konepaja- ja valimotyöntekijät sekä asentajat ja korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3369,
+      "onRyhma": true
+    },
+    {
+      "koodi": "721",
+      "nimi": "Valimotyöntekijät, hitsaajat, levysepät ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Konepaja- ja valimotyöntekijät sekä asentajat ja korjaajat",
+      "mediaaniPalkka": 3325,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7211",
+      "nimi": "Muotin- ja keernantekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Valimotyöntekijät, hitsaajat, levysepät ym.",
+      "mediaaniPalkka": 3212,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7212",
+      "nimi": "Hitsaajat ja kaasuleikkaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Valimotyöntekijät, hitsaajat, levysepät ym.",
+      "mediaaniPalkka": 3313,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7213",
+      "nimi": "Ohutlevysepät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Valimotyöntekijät, hitsaajat, levysepät ym.",
+      "mediaaniPalkka": 3401,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7214",
+      "nimi": "Paksulevysepät ja rautarakennetyöntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Valimotyöntekijät, hitsaajat, levysepät ym.",
+      "mediaaniPalkka": 3337,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7215",
+      "nimi": "Kaapelin- ja köysienasentajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Valimotyöntekijät, hitsaajat, levysepät ym.",
+      "mediaaniPalkka": 2468,
+      "onRyhma": false
+    },
+    {
+      "koodi": "722",
+      "nimi": "Sepät, työkaluntekijät ja koneenasettajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Konepaja- ja valimotyöntekijät sekä asentajat ja korjaajat",
+      "mediaaniPalkka": 3304,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7221",
+      "nimi": "Sepät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sepät, työkaluntekijät ja koneenasettajat",
+      "mediaaniPalkka": 3393,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7222",
+      "nimi": "Työkaluntekijät ja lukkosepät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sepät, työkaluntekijät ja koneenasettajat",
+      "mediaaniPalkka": 3238,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7223",
+      "nimi": "Koneenasettajat ja koneistajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sepät, työkaluntekijät ja koneenasettajat",
+      "mediaaniPalkka": 3339,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7224",
+      "nimi": "Konehiojat, kiillottajat ja teroittajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sepät, työkaluntekijät ja koneenasettajat",
+      "mediaaniPalkka": 3148,
+      "onRyhma": false
+    },
+    {
+      "koodi": "723",
+      "nimi": "Koneasentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Konepaja- ja valimotyöntekijät sekä asentajat ja korjaajat",
+      "mediaaniPalkka": 3425,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7231",
+      "nimi": "Moottoriajoneuvojen asentajat ja korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Koneasentajat ja -korjaajat",
+      "mediaaniPalkka": 3236,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7232",
+      "nimi": "Lentokoneasentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Koneasentajat ja -korjaajat",
+      "mediaaniPalkka": 4100,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7233",
+      "nimi": "Maatalous- ja teollisuuskoneasentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Koneasentajat ja -korjaajat",
+      "mediaaniPalkka": 3588,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7234",
+      "nimi": "Polkupyöränkorjaajat ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Koneasentajat ja -korjaajat",
+      "mediaaniPalkka": 2579,
+      "onRyhma": false
+    },
+    {
+      "koodi": "73",
+      "nimi": "Käsityötuotteiden valmistajat, hienomekaanikot sekä painoalan työntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3021,
+      "onRyhma": true
+    },
+    {
+      "koodi": "731",
+      "nimi": "Käsityötuotteiden valmistajat ja hienomekaanikot",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat, hienomekaanikot sekä painoalan työntekijät",
+      "mediaaniPalkka": 2964,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7311",
+      "nimi": "Kellosepät ja muut hienomekaanisten instrumenttien tekijät ja korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat ja hienomekaanikot",
+      "mediaaniPalkka": 3190,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7313",
+      "nimi": "Koru-, kulta- ja hopeasepät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat ja hienomekaanikot",
+      "mediaaniPalkka": 2972,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7315",
+      "nimi": "Lasinpuhaltajat, -leikkaajat, -hiojat ja -viimeistelijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat ja hienomekaanikot",
+      "mediaaniPalkka": 2992,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7316",
+      "nimi": "Kaivertajat, etsaajat ja koristemaalarit",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat ja hienomekaanikot",
+      "mediaaniPalkka": 3052,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7318",
+      "nimi": "Tekstiili-, nahka- yms. käsityötuotteiden tekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat ja hienomekaanikot",
+      "mediaaniPalkka": 2483,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7319",
+      "nimi": "Muut käsityöntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat ja hienomekaanikot",
+      "mediaaniPalkka": 2494,
+      "onRyhma": false
+    },
+    {
+      "koodi": "732",
+      "nimi": "Painoalan työntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Käsityötuotteiden valmistajat, hienomekaanikot sekä painoalan työntekijät",
+      "mediaaniPalkka": 3041,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7321",
+      "nimi": "Painopinnanvalmistajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Painoalan työntekijät",
+      "mediaaniPalkka": 3010,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7322",
+      "nimi": "Painajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Painoalan työntekijät",
+      "mediaaniPalkka": 3159,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7323",
+      "nimi": "Jälkikäsittelijät ja sitomotyöntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Painoalan työntekijät",
+      "mediaaniPalkka": 2873,
+      "onRyhma": false
+    },
+    {
+      "koodi": "74",
+      "nimi": "Sähkö- ja elektroniikka-alan työntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3666,
+      "onRyhma": true
+    },
+    {
+      "koodi": "741",
+      "nimi": "Sähkölaitteiden asentajat ja korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sähkö- ja elektroniikka-alan työntekijät",
+      "mediaaniPalkka": 3702,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7411",
+      "nimi": "Rakennussähköasentajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sähkölaitteiden asentajat ja korjaajat",
+      "mediaaniPalkka": 3703,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7412",
+      "nimi": "Muut sähköasentajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sähkölaitteiden asentajat ja korjaajat",
+      "mediaaniPalkka": 3662,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7413",
+      "nimi": "Linja-asentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sähkölaitteiden asentajat ja korjaajat",
+      "mediaaniPalkka": 3866,
+      "onRyhma": false
+    },
+    {
+      "koodi": "742",
+      "nimi": "Elektroniikka- ja tietoliikenneasentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Sähkö- ja elektroniikka-alan työntekijät",
+      "mediaaniPalkka": 3543,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7421",
+      "nimi": "Elektroniikka- ja automaatiolaitteiden asentajat ja korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elektroniikka- ja tietoliikenneasentajat ja -korjaajat",
+      "mediaaniPalkka": 3449,
+      "onRyhma": true
+    },
+    {
+      "koodi": "74211",
+      "nimi": "Elektroniikka-asentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elektroniikka- ja automaatiolaitteiden asentajat ja korjaajat",
+      "mediaaniPalkka": 3171,
+      "onRyhma": false
+    },
+    {
+      "koodi": "74212",
+      "nimi": "Automaatioasentajat ja -korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elektroniikka- ja automaatiolaitteiden asentajat ja korjaajat",
+      "mediaaniPalkka": 3695,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7422",
+      "nimi": "Tieto- ja viestintäteknologian asentajat ja korjaajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elektroniikka- ja tietoliikenneasentajat ja -korjaajat",
+      "mediaaniPalkka": 3672,
+      "onRyhma": false
+    },
+    {
+      "koodi": "75",
+      "nimi": "Elintarvike-, puutyö- ja vaatetus- ja jalkinealan valmistustyöntekijät ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3021,
+      "onRyhma": true
+    },
+    {
+      "koodi": "751",
+      "nimi": "Lihanleikkaajat, leipurit, meijeristit ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elintarvike-, puutyö- ja vaatetus- ja jalkinealan valmistustyöntekijät ym.",
+      "mediaaniPalkka": 3255,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7511",
+      "nimi": "Lihanleikkaajat, kalankäsittelijät ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Lihanleikkaajat, leipurit, meijeristit ym.",
+      "mediaaniPalkka": 3761,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7512",
+      "nimi": "Leipurit ja kondiittorit",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Lihanleikkaajat, leipurit, meijeristit ym.",
+      "mediaaniPalkka": 2777,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7513",
+      "nimi": "Meijeristit, juustomestarit ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Lihanleikkaajat, leipurit, meijeristit ym.",
+      "mediaaniPalkka": 4078,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7514",
+      "nimi": "Hedelmä- ja vihannestuotteiden valmistajat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Lihanleikkaajat, leipurit, meijeristit ym.",
+      "mediaaniPalkka": 2647,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7515",
+      "nimi": "Ruokien ja juomien laaduntarkkailijat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Lihanleikkaajat, leipurit, meijeristit ym.",
+      "mediaaniPalkka": 3445,
+      "onRyhma": false
+    },
+    {
+      "koodi": "752",
+      "nimi": "Puutavaran käsittelijät, puusepät ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elintarvike-, puutyö- ja vaatetus- ja jalkinealan valmistustyöntekijät ym.",
+      "mediaaniPalkka": 2877,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7521",
+      "nimi": "Raakapuun käsittelijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Puutavaran käsittelijät, puusepät ym.",
+      "mediaaniPalkka": 3053,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7522",
+      "nimi": "Huonekalupuusepät ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Puutavaran käsittelijät, puusepät ym.",
+      "mediaaniPalkka": 2870,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7523",
+      "nimi": "Konepuusepät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Puutavaran käsittelijät, puusepät ym.",
+      "mediaaniPalkka": 2835,
+      "onRyhma": false
+    },
+    {
+      "koodi": "753",
+      "nimi": "Vaatetusalan työntekijät ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elintarvike-, puutyö- ja vaatetus- ja jalkinealan valmistustyöntekijät ym.",
+      "mediaaniPalkka": 2697,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7531",
+      "nimi": "Vaatturit, pukuompelijat, turkkurit ja hatuntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Vaatetusalan työntekijät ym.",
+      "mediaaniPalkka": 2814,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7533",
+      "nimi": "Koru- ja muut tekstiiliompelijat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Vaatetusalan työntekijät ym.",
+      "mediaaniPalkka": 2491,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7534",
+      "nimi": "Verhoilijat",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Vaatetusalan työntekijät ym.",
+      "mediaaniPalkka": 2677,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7536",
+      "nimi": "Suutarit ym.",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Vaatetusalan työntekijät ym.",
+      "mediaaniPalkka": 2844,
+      "onRyhma": false
+    },
+    {
+      "koodi": "754",
+      "nimi": "Muut pääluokkaan 7 luokiteltavat työntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Elintarvike-, puutyö- ja vaatetus- ja jalkinealan valmistustyöntekijät ym.",
+      "mediaaniPalkka": 3370,
+      "onRyhma": true
+    },
+    {
+      "koodi": "7542",
+      "nimi": "Panostajat ja räjäyttäjät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Muut pääluokkaan 7 luokiteltavat työntekijät",
+      "mediaaniPalkka": 4067,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7543",
+      "nimi": "Luokittelijat ja laaduntarkkailijat (pl. ruoat ja juomat)",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Muut pääluokkaan 7 luokiteltavat työntekijät",
+      "mediaaniPalkka": 3350,
+      "onRyhma": false
+    },
+    {
+      "koodi": "7549",
+      "nimi": "Muut pääluokkaan 7 muualla luokittelemattomat työntekijät",
+      "paaryhma": "Rakennus-, korjaus- ja valmistustyöntekijät",
+      "ylaryhma": "Muut pääluokkaan 7 luokiteltavat työntekijät",
+      "mediaaniPalkka": 3079,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8",
+      "nimi": "Prosessi- ja kuljetustyöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3381,
+      "onRyhma": true
+    },
+    {
+      "koodi": "81",
+      "nimi": "Prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3352,
+      "onRyhma": true
+    },
+    {
+      "koodi": "811",
+      "nimi": "Kaivos- ja louhintatyön koneenkäyttäjät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 3716,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8111",
+      "nimi": "Kaivos- ja louhostyöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kaivos- ja louhintatyön koneenkäyttäjät",
+      "mediaaniPalkka": 4174,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8112",
+      "nimi": "Rikastustyöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kaivos- ja louhintatyön koneenkäyttäjät",
+      "mediaaniPalkka": 4126,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8113",
+      "nimi": "Iskuporaajat ja syväkairaajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kaivos- ja louhintatyön koneenkäyttäjät",
+      "mediaaniPalkka": 4220,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8114",
+      "nimi": "Betonituote- ym. teollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kaivos- ja louhintatyön koneenkäyttäjät",
+      "mediaaniPalkka": 3484,
+      "onRyhma": false
+    },
+    {
+      "koodi": "812",
+      "nimi": "Metalliteollisuuden prosessityöntekijät ja viimeistelijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 3473,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8121",
+      "nimi": "Metalliteollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Metalliteollisuuden prosessityöntekijät ja viimeistelijät",
+      "mediaaniPalkka": 3662,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8122",
+      "nimi": "Metallien teolliset päällystäjät ja viimeistelijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Metalliteollisuuden prosessityöntekijät ja viimeistelijät",
+      "mediaaniPalkka": 3149,
+      "onRyhma": false
+    },
+    {
+      "koodi": "813",
+      "nimi": "Kemianteollisuuden ja valokuvatuotteiden valmistuksen prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 3569,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8131",
+      "nimi": "Kemianteollisuuden prosessityöntekijät ym.",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kemianteollisuuden ja valokuvatuotteiden valmistuksen prosessityöntekijät",
+      "mediaaniPalkka": 3585,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8132",
+      "nimi": "Valokuvatuotteiden valmistuksen prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kemianteollisuuden ja valokuvatuotteiden valmistuksen prosessityöntekijät",
+      "mediaaniPalkka": 2533,
+      "onRyhma": false
+    },
+    {
+      "koodi": "814",
+      "nimi": "Kumi-, muovi- ja paperituotteiden valmistuksen prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 3320,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8141",
+      "nimi": "Kumituoteteollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kumi-, muovi- ja paperituotteiden valmistuksen prosessityöntekijät",
+      "mediaaniPalkka": 4034,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8142",
+      "nimi": "Muovituoteteollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kumi-, muovi- ja paperituotteiden valmistuksen prosessityöntekijät",
+      "mediaaniPalkka": 3171,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8143",
+      "nimi": "Paperituoteteollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kumi-, muovi- ja paperituotteiden valmistuksen prosessityöntekijät",
+      "mediaaniPalkka": 3943,
+      "onRyhma": false
+    },
+    {
+      "koodi": "815",
+      "nimi": "Tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 2442,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8151",
+      "nimi": "Kuitujenkäsittely-, kehruu- ja puolauskoneiden hoitajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "mediaaniPalkka": 3160,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8152",
+      "nimi": "Kutoma- ja neulekoneiden hoitajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "mediaaniPalkka": 3066,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8153",
+      "nimi": "Teollisuusompelijat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "mediaaniPalkka": 2411,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8156",
+      "nimi": "Jalkine- ja laukkuteollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "mediaaniPalkka": 2757,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8157",
+      "nimi": "Pesulatyöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "mediaaniPalkka": 2366,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8159",
+      "nimi": "Muut tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Tekstiili-, turkis- ja nahkatuoteteollisuuden prosessityöntekijät",
+      "mediaaniPalkka": 2580,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8160",
+      "nimi": "Elintarviketeollisuuden prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 3088,
+      "onRyhma": false
+    },
+    {
+      "koodi": "817",
+      "nimi": "Sahatavaran sekä paperin ja kartongin valmistuksen prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 3965,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8171",
+      "nimi": "Paperimassan sekä paperin ja kartongin valmistuksen prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Sahatavaran sekä paperin ja kartongin valmistuksen prosessityöntekijät",
+      "mediaaniPalkka": 4973,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8172",
+      "nimi": "Puu- ja sahatavaran prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Sahatavaran sekä paperin ja kartongin valmistuksen prosessityöntekijät",
+      "mediaaniPalkka": 3194,
+      "onRyhma": false
+    },
+    {
+      "koodi": "818",
+      "nimi": "Muut prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Prosessityöntekijät",
+      "mediaaniPalkka": 3272,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8181",
+      "nimi": "Lasi- ja keramiikkateollisuuden uunienhoitajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Muut prosessityöntekijät",
+      "mediaaniPalkka": 3270,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8182",
+      "nimi": "Höyrykoneiden ja lämmityskattiloiden hoitajat, lämmittäjät ym.",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Muut prosessityöntekijät",
+      "mediaaniPalkka": 4092,
+      "onRyhma": true
+    },
+    {
+      "koodi": "81821",
+      "nimi": "Voima- ja jätteenkäsittelylaitosten laitosmiehet",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Höyrykoneiden ja lämmityskattiloiden hoitajat, lämmittäjät ym.",
+      "mediaaniPalkka": 4184,
+      "onRyhma": false
+    },
+    {
+      "koodi": "81822",
+      "nimi": "Muut laitosmiehet ym.",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Höyrykoneiden ja lämmityskattiloiden hoitajat, lämmittäjät ym.",
+      "mediaaniPalkka": 3617,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8183",
+      "nimi": "Pakkaus-, pullotus- ja etiketöintikoneiden hoitajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Muut prosessityöntekijät",
+      "mediaaniPalkka": 3098,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8189",
+      "nimi": "Muut muualla luokittelemattomat prosessityöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Muut prosessityöntekijät",
+      "mediaaniPalkka": 3266,
+      "onRyhma": false
+    },
+    {
+      "koodi": "821",
+      "nimi": "Teollisuustuotteiden kokoonpanijat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2994,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8211",
+      "nimi": "Konepaja- ja metallituotteiden kokoonpanijat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Teollisuustuotteiden kokoonpanijat",
+      "mediaaniPalkka": 3081,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8212",
+      "nimi": "Sähkö- ja elektroniikkalaitteiden kokoonpanijat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Teollisuustuotteiden kokoonpanijat",
+      "mediaaniPalkka": 2942,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8219",
+      "nimi": "Muut teollisuustuotteiden kokoonpanijat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Teollisuustuotteiden kokoonpanijat",
+      "mediaaniPalkka": 2847,
+      "onRyhma": false
+    },
+    {
+      "koodi": "83",
+      "nimi": "Kuljetustyöntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 3519,
+      "onRyhma": true
+    },
+    {
+      "koodi": "831",
+      "nimi": "Raideliikenteen kuljettajat ja työntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kuljetustyöntekijät",
+      "mediaaniPalkka": 4881,
+      "onRyhma": false
+    },
+    {
+      "koodi": "832",
+      "nimi": "Henkilö- ja pakettiauton- sekä moottoripyöränkuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kuljetustyöntekijät",
+      "mediaaniPalkka": 2760,
+      "onRyhma": false
+    },
+    {
+      "koodi": "833",
+      "nimi": "Raskaiden moottoriajoneuvojen kuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kuljetustyöntekijät",
+      "mediaaniPalkka": 3537,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8331",
+      "nimi": "Linja-auton- ja raitiovaununkuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Raskaiden moottoriajoneuvojen kuljettajat",
+      "mediaaniPalkka": 3503,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8332",
+      "nimi": "Kuorma-auton ja erikoisajoneuvojen kuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Raskaiden moottoriajoneuvojen kuljettajat",
+      "mediaaniPalkka": 3549,
+      "onRyhma": false
+    },
+    {
+      "koodi": "834",
+      "nimi": "Työkoneiden kuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kuljetustyöntekijät",
+      "mediaaniPalkka": 3621,
+      "onRyhma": true
+    },
+    {
+      "koodi": "8341",
+      "nimi": "Maa- ja metsätaloustyökoneiden kuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Työkoneiden kuljettajat",
+      "mediaaniPalkka": 3397,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8342",
+      "nimi": "Maansiirtokoneiden ym. kuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Työkoneiden kuljettajat",
+      "mediaaniPalkka": 3551,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8343",
+      "nimi": "Nosturinkuljettajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Työkoneiden kuljettajat",
+      "mediaaniPalkka": 4183,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8344",
+      "nimi": "Ahtaajat ja trukinkuljettajat ym.",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Työkoneiden kuljettajat",
+      "mediaaniPalkka": 4073,
+      "onRyhma": true
+    },
+    {
+      "koodi": "83441",
+      "nimi": "Ahtaajat",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Ahtaajat ja trukinkuljettajat ym.",
+      "mediaaniPalkka": 4789,
+      "onRyhma": false
+    },
+    {
+      "koodi": "83442",
+      "nimi": "Trukinkuljettajat ym.",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Ahtaajat ja trukinkuljettajat ym.",
+      "mediaaniPalkka": 3521,
+      "onRyhma": false
+    },
+    {
+      "koodi": "8350",
+      "nimi": "Kansimiehistö ym. vesiliikenteen työntekijät",
+      "paaryhma": "Prosessi- ja kuljetustyöntekijät",
+      "ylaryhma": "Kuljetustyöntekijät",
+      "mediaaniPalkka": 4065,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9",
+      "nimi": "Muut työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2540,
+      "onRyhma": true
+    },
+    {
+      "koodi": "91",
+      "nimi": "Siivoojat, kotiapulaiset ja muut puhdistustyöntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2364,
+      "onRyhma": true
+    },
+    {
+      "koodi": "911",
+      "nimi": "Koti-, hotelli- ja toimistosiivoojat ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Siivoojat, kotiapulaiset ja muut puhdistustyöntekijät",
+      "mediaaniPalkka": 2363,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9111",
+      "nimi": "Kotiapulaiset ja -siivoojat",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Koti-, hotelli- ja toimistosiivoojat ym.",
+      "mediaaniPalkka": 2060,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9112",
+      "nimi": "Toimisto- ja laitossiivoojat ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Koti-, hotelli- ja toimistosiivoojat ym.",
+      "mediaaniPalkka": 2365,
+      "onRyhma": true
+    },
+    {
+      "koodi": "91121",
+      "nimi": "Toimistosiivoojat ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Toimisto- ja laitossiivoojat ym.",
+      "mediaaniPalkka": 2279,
+      "onRyhma": false
+    },
+    {
+      "koodi": "91122",
+      "nimi": "Hotellisiivoojat",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Toimisto- ja laitossiivoojat ym.",
+      "mediaaniPalkka": 2398,
+      "onRyhma": false
+    },
+    {
+      "koodi": "91123",
+      "nimi": "Sairaala- ja laitosapulaiset",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Toimisto- ja laitossiivoojat ym.",
+      "mediaaniPalkka": 2613,
+      "onRyhma": false
+    },
+    {
+      "koodi": "91124",
+      "nimi": "Päiväkotiapulaiset",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Toimisto- ja laitossiivoojat ym.",
+      "mediaaniPalkka": 2258,
+      "onRyhma": false
+    },
+    {
+      "koodi": "91129",
+      "nimi": "Muut muualla luokittelemattomat siivoojat",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Toimisto- ja laitossiivoojat ym.",
+      "mediaaniPalkka": 2513,
+      "onRyhma": false
+    },
+    {
+      "koodi": "912",
+      "nimi": "Ajoneuvojen puhdistajat, ikkunanpesijät ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Siivoojat, kotiapulaiset ja muut puhdistustyöntekijät",
+      "mediaaniPalkka": 2537,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9122",
+      "nimi": "Ajoneuvojen pesijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Ajoneuvojen puhdistajat, ikkunanpesijät ym.",
+      "mediaaniPalkka": 2547,
+      "onRyhma": false
+    },
+    {
+      "koodi": "921",
+      "nimi": "Maa-, metsä- ja kalatalouden avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2112,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9211",
+      "nimi": "Maanviljelyn avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Maa-, metsä- ja kalatalouden avustavat työntekijät",
+      "mediaaniPalkka": 2000,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9213",
+      "nimi": "Yhdistetyn maanviljelyn ja karjankasvatuksen avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Maa-, metsä- ja kalatalouden avustavat työntekijät",
+      "mediaaniPalkka": 2155,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9214",
+      "nimi": "Avustavat puutarhatyöntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Maa-, metsä- ja kalatalouden avustavat työntekijät",
+      "mediaaniPalkka": 2109,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9215",
+      "nimi": "Metsätalouden avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Maa-, metsä- ja kalatalouden avustavat työntekijät",
+      "mediaaniPalkka": 2667,
+      "onRyhma": false
+    },
+    {
+      "koodi": "93",
+      "nimi": "Teollisuuden ja rakentamisen avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2965,
+      "onRyhma": true
+    },
+    {
+      "koodi": "931",
+      "nimi": "Avustavat kaivos- ja rakennustyöntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Teollisuuden ja rakentamisen avustavat työntekijät",
+      "mediaaniPalkka": 3205,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9312",
+      "nimi": "Maa- ja vesirakentamisen avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Avustavat kaivos- ja rakennustyöntekijät",
+      "mediaaniPalkka": 3384,
+      "onRyhma": false
+    },
+    {
+      "koodi": "932",
+      "nimi": "Valmistusalan avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Teollisuuden ja rakentamisen avustavat työntekijät",
+      "mediaaniPalkka": 3169,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9321",
+      "nimi": "Käsinpakkaajat",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Valmistusalan avustavat työntekijät",
+      "mediaaniPalkka": 2657,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9329",
+      "nimi": "Muut valmistusalan avustavat työntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Valmistusalan avustavat työntekijät",
+      "mediaaniPalkka": 3316,
+      "onRyhma": false
+    },
+    {
+      "koodi": "933",
+      "nimi": "Rahdinkäsittelijät ja varastotyöntekijät ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Teollisuuden ja rakentamisen avustavat työntekijät",
+      "mediaaniPalkka": 2903,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9333",
+      "nimi": "Rahdinkäsittelijät, varastotyöntekijät ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Rahdinkäsittelijät ja varastotyöntekijät ym.",
+      "mediaaniPalkka": 2908,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9334",
+      "nimi": "Hyllyjen täyttäjät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Rahdinkäsittelijät ja varastotyöntekijät ym.",
+      "mediaaniPalkka": 2559,
+      "onRyhma": false
+    },
+    {
+      "koodi": "941",
+      "nimi": "Avustavat keittiö- ja ruokatyöntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2392,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9411",
+      "nimi": "Pikaruokatyöntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Avustavat keittiö- ja ruokatyöntekijät",
+      "mediaaniPalkka": 2314,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9412",
+      "nimi": "Avustavat keittiötyöntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Avustavat keittiö- ja ruokatyöntekijät",
+      "mediaaniPalkka": 2400,
+      "onRyhma": false
+    },
+    {
+      "koodi": "95",
+      "nimi": "Katumyyjät, kengänkiillottajat ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2835,
+      "onRyhma": false
+    },
+    {
+      "koodi": "96",
+      "nimi": "Katujen puhtaanapidon ja jätehuollon työntekijät ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": null,
+      "mediaaniPalkka": 2700,
+      "onRyhma": true
+    },
+    {
+      "koodi": "961",
+      "nimi": "Jätehuoltotyöntekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Katujen puhtaanapidon ja jätehuollon työntekijät ym.",
+      "mediaaniPalkka": 2975,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9611",
+      "nimi": "Jätteiden kerääjät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Jätehuoltotyöntekijät",
+      "mediaaniPalkka": 3101,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9612",
+      "nimi": "Jätteiden lajittelijat",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Jätehuoltotyöntekijät",
+      "mediaaniPalkka": 2889,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9613",
+      "nimi": "Kadunlakaisijat ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Jätehuoltotyöntekijät",
+      "mediaaniPalkka": 2388,
+      "onRyhma": false
+    },
+    {
+      "koodi": "962",
+      "nimi": "Sanomalehtien jakajat, lähetit ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Katujen puhtaanapidon ja jätehuollon työntekijät ym.",
+      "mediaaniPalkka": 2554,
+      "onRyhma": true
+    },
+    {
+      "koodi": "9621",
+      "nimi": "Sanomalehtien jakajat, lähetit ja kantajat",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Sanomalehtien jakajat, lähetit ym.",
+      "mediaaniPalkka": 2699,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9622",
+      "nimi": "Satunnaistöiden tekijät",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Sanomalehtien jakajat, lähetit ym.",
+      "mediaaniPalkka": 2293,
+      "onRyhma": false
+    },
+    {
+      "koodi": "9623",
+      "nimi": "Mittareiden lukijat ym.",
+      "paaryhma": "Muut työntekijät",
+      "ylaryhma": "Sanomalehtien jakajat, lähetit ym.",
+      "mediaaniPalkka": 2426,
+      "onRyhma": false
+    }
+  ]
+}

@@ -37,7 +37,7 @@ test("shows toinen aste quick links by default", () => {
       .getAllByRole("link")
       .slice(0, 2)
       .map((link) => link.getAttribute("href")),
-  ).toEqual(["/lukiot/", "/hakijamaarat/toinen-aste/"]);
+  ).toEqual(["/lukiot/", "/yo-pisterajat/"]);
   expect(within(panel).getByRole("link", { name: /^lukiot(\s|$)/ })).toHaveAttribute("href", "/lukiot/");
   expect(within(panel).getByRole("link", { name: /^yo-kokeiden pisterajat(\s|$)/ })).toHaveAttribute(
     "href",

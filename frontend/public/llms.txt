@@ -31,6 +31,7 @@ Tietojen tulkinta:
 - [Trendit](https://yhteishaku.app/trendit/): Hakijamäärien vertailu vuosien välillä sekä suosituimmat alat, koulut ja sektorit
 - [Hakijaprofiili](https://yhteishaku.app/hakijaprofiili/): Sukupuoli- ja ikäjakaumat korkeakouluittain, aloittain ja tutkintonimikkeittäin
 - [Ennakointi](https://yhteishaku.app/ennakointi/): Alojen koulutustarve ja tutkintotuotos vuoteen 2045; ennakointia, ei toteutuneita hakutilastoja
+- [Työllistyminen ja palkat](https://yhteishaku.app/tyollistyminen/): Valmistuneiden työllistyminen kolmen vuoden kuluttua koulutusaloittain sekä kokoaikaisten palkansaajien mediaanipalkat aloittain ja ammateittain (2024)
 - [UKK](https://yhteishaku.app/ukk/): Aineistojen lähteet, päivitystahti ja tilastokäsitteiden selitykset
 - [Etusivu](https://yhteishaku.app/): Hakuajat ja palvelun keskeiset toiminnot
 
@@ -56,6 +57,9 @@ Tietojen tulkinta:
 - [AMK-opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/amk-palaute.json): AVOP-palautteen keskiarvot
 - [Yliopistojen opiskelijapalaute](https://yhteishaku.app/data/opiskelijapalaute/yliopisto-palaute.json): Kandipalaute
 - [Koulutustarpeet](https://yhteishaku.app/data/ennakointi/koulutustarpeet.json): Ennakoinnin lähdeaineisto
+- [Työllistyminen 2024](https://yhteishaku.app/data/tyollistyminen/tyollistyminen-2024.json): Valmistuneiden pääasiallinen toiminta 3 v valmistumisesta koulutusaloittain (Tilastokeskus 111l)
+- [Koulutusalojen palkat 2024](https://yhteishaku.app/data/tyollistyminen/koulutusalojen-palkat-2024.json): Kokoaikaisten palkansaajien mediaanipalkat koulutusasteittain ja -aloittain (Tilastokeskus 15aw)
+- [Ammattien palkat 2024](https://yhteishaku.app/data/tyollistyminen/ammattien-palkat-2024.json): Kokoaikaisten palkansaajien mediaanipalkat ammateittain (Tilastokeskus 15au)
 
 ## WebMCP työkalut
 

@@ -1,5 +1,5 @@
 const description =
-  "Katso kuinka moni valmistunut on töissä kolmen vuoden kuluttua valmistumisesta koulutusaloittain: AMK, YAMK, kandi ja maisteri.";
+  "Katso valmistuneiden työllistyminen kolmen vuoden kuluttua koulutusaloittain sekä kokoaikaisten palkansaajien mediaanipalkat aloittain ja ammateittain.";
 
 export function Head() {
   return (

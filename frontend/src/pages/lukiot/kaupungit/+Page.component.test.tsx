@@ -28,5 +28,5 @@ test("paginates municipalities and resets the page when searching", async () => 
 
   await user.clear(screen.getByRole("textbox", { name: "Hae kuntaa" }));
   await user.type(screen.getByRole("textbox", { name: "Hae kuntaa" }), "xyzxyz");
-  await waitFor(() => expect(screen.getByText("Ei tuloksia haulle.")).toBeInTheDocument());
+  await waitFor(() => expect(screen.getByText("Ei tuloksia valituilla hakuehdoilla.")).toBeInTheDocument());
 });

@@ -8,14 +8,11 @@ import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import { numberFormat } from "@/lib/statistics";
-import { COLORS } from "@/theme";
 import type { EnnakointiPageData } from "@/pages/ennakointi/+data";
 import { filterAndSortVajeRows, statusLabel, type SektoriFilter, type VajeSort } from "@/pages/ennakointi/lib/vaje";
 
 const PAGE_SIZE = 10;
 const BAR_H = "8";
-/** Ylituotos bar — appearance-tuned viz token */
-const YLITUOTOS_BAR = "var(--chakra-colors-viz-ylituotos)";
 /** Full-width bar track — follows appearance via bg.muted */
 const BAR_TRACK = "bg.muted";
 
@@ -97,6 +94,7 @@ export default function EnnakointiPage() {
                         href="https://vipunen.fi/fi-fi/ennakointi/Sivut/Ty%C3%B6voiman-koulutustarpeet.aspx"
                         rel="noopener noreferrer"
                         target="_blank"
+                        textDecoration="underline"
                       >
                         Opetushallituksen koulutustarve-ennuste 2045
                       </Link>
@@ -159,7 +157,7 @@ export default function EnnakointiPage() {
                     const tila = statusLabel(row.vaje);
                     const vajeText = numberFormat.format(row.vaje);
                     const barPct = (Math.abs(row.vaje) / maxAbsVaje) * 100;
-                    const barColor = row.vaje < 0 ? YLITUOTOS_BAR : COLORS.accent;
+                    const barColor = row.vaje < 0 ? "viz.ylituotos" : "accent";
                     const meterLabel = `${row.ala} (${row.sektori}): ${tila}, vaje ${vajeText}. Tarve ${numberFormat.format(row.tarve2045)}, tuotos ${numberFormat.format(row.tuotosNuoret)}.`;
 
                     return (

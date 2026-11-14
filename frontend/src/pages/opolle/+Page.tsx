@@ -10,37 +10,39 @@ export default function OpollePage() {
     <>
       <PageIntro description="Työkaluja toisen asteen ja korkeakoulutuksen opinto-ohjaukseen." title="Opolle" />
       <PageContainer align="flex-start">
-        <ToolsPage />
-        <Stack as="section" gap={4} mt={6}>
-          <Heading as="h2" size="md">
-            Tietoa tästä sivustosta
-          </Heading>
-          <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={6} listStyleType="none">
-            <li>
-              <QuickLinkCard
-                description="Tietojen lähteet ja päivittyminen"
-                href="/ukk/"
-                icon={HiOutlineQuestionMarkCircle}
-                label="usein kysytyt kysymykset"
-              />
-            </li>
-            <li>
-              <QuickLinkCard
-                description="Kerro virheestä tai lähetä kehitysehdotus"
-                href="/palaute/"
-                icon={HiOutlineChatAlt2}
-                label="anna palautetta"
-              />
-            </li>
-            <li>
-              <QuickLinkCard
-                description="Ota yhteyttä sivuston ylläpitäjään"
-                href="mailto:miko@kortelainen.dev"
-                icon={HiOutlineMail}
-                label="ota yhteyttä"
-              />
-            </li>
-          </SimpleGrid>
+        <Stack gap={6} width="full">
+          <ToolsPage hideOmaHakulista />
+          <Stack as="section" gap={4} width="full">
+            <Heading as="h2" size="md">
+              Tietoa tästä sivustosta
+            </Heading>
+            <SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={6} listStyleType="none">
+              <li>
+                <QuickLinkCard
+                  description="Tietojen lähteet ja päivittyminen"
+                  href="/ukk/"
+                  icon={HiOutlineQuestionMarkCircle}
+                  label="usein kysytyt kysymykset"
+                />
+              </li>
+              <li>
+                <QuickLinkCard
+                  description="Kerro virheestä tai lähetä kehitysehdotus"
+                  href="/palaute/"
+                  icon={HiOutlineChatAlt2}
+                  label="anna palautetta"
+                />
+              </li>
+              <li>
+                <QuickLinkCard
+                  description="Ota yhteyttä sivuston ylläpitäjään"
+                  href="mailto:miko@kortelainen.dev"
+                  icon={HiOutlineMail}
+                  label="ota yhteyttä"
+                />
+              </li>
+            </SimpleGrid>
+          </Stack>
         </Stack>
       </PageContainer>
     </>

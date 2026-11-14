@@ -95,7 +95,11 @@ export default function CutoffPage() {
       multiple
       width="full"
     >
-      {programmesByAla.length === 0 ? <Text as="li">Ei tuloksia valituilla rajauksilla.</Text> : null}
+      {programmesByAla.length === 0 ? (
+        <Text as="li" color="fg.muted" fontSize="sm">
+          Ei tuloksia valituilla hakuehdoilla.
+        </Text>
+      ) : null}
       {programmesByAla.map(([ala, alaProgrammes]) => (
         <Accordion.Item as="li" key={ala} value={ala}>
           <Heading as="h2" size="sm">

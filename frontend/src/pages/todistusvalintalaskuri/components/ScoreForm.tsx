@@ -180,10 +180,20 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
           </Text>
           <Tabs.List aria-label="Valintatapa" borderRadius="md" borderWidth="1px" width="full">
             {SCORE_TYPE_TABS.map(({ id, label }) => (
-              <Tabs.Trigger flex="1" fontSize="xs" justifyContent="center" key={id} value={id}>
+              <Tabs.Trigger
+                _selected={{ color: "fg.accent" }}
+                flex="1"
+                fontSize="xs"
+                fontWeight="semibold"
+                justifyContent="center"
+                key={id}
+                letterSpacing="wide"
+                value={id}
+              >
                 {label}
               </Tabs.Trigger>
             ))}
+            <Tabs.Indicator bg="bg.muted" />
           </Tabs.List>
         </Stack>
 

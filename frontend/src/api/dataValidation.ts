@@ -233,13 +233,20 @@ export const parseStudentFeedback = (
   return value as StudentFeedbackDataset;
 };
 
+export interface TyollistyminenBreakdown {
+  paatoimisetTyolliset: number | null;
+  tyollisetOpiskelijat: number | null;
+  paatoimisetOpiskelijat: number | null;
+  tyottomat: number | null;
+  muut: number | null;
+}
+
 export interface TyollistyminenItem {
   ala: string;
-  amk: number;
-  alempi: number;
-  ylempi: number;
-  /** Ylempi AMK; null when Tilastokeskus has no figure. */
-  yamk: number | null;
+  amk: TyollistyminenBreakdown | null;
+  alempi: TyollistyminenBreakdown | null;
+  ylempi: TyollistyminenBreakdown | null;
+  yamk: TyollistyminenBreakdown | null;
 }
 
 export interface TyollistyminenData {
@@ -247,16 +254,51 @@ export interface TyollistyminenData {
   items: TyollistyminenItem[];
 }
 
-const isPercent = (value: unknown) => isNumber(value) && value >= 0 && value <= 100;
+export interface KoulutusalaPalkkaItem {
+  ala: string;
+  toinenAste: number | null;
+  alempiKorkeakoulu: number | null;
+  ylempiKorkeakoulu: number | null;
+}
+
+export interface KoulutusalaPalkatData {
+  vuosi: number;
+  items: KoulutusalaPalkkaItem[];
+}
+
+export interface AmmattiPalkkaItem {
+  koodi: string;
+  nimi: string;
+  paaryhma: string;
+  ylaryhma: string | null;
+  mediaaniPalkka: number;
+  onRyhma: boolean;
+}
+
+export interface AmmattienPalkatData {
+  vuosi: number;
+  items: AmmattiPalkkaItem[];
+}
+
+const isNullablePercent = (value: unknown) => value === null || (isNumber(value) && value >= 0 && value <= 100);
+
+const isTyollistyminenBreakdown = (value: unknown): value is TyollistyminenBreakdown =>
+  isRecord(value) &&
+  isNullablePercent(value.paatoimisetTyolliset) &&
+  isNullablePercent(value.tyollisetOpiskelijat) &&
+  isNullablePercent(value.paatoimisetOpiskelijat) &&
+  isNullablePercent(value.tyottomat) &&
+  isNullablePercent(value.muut);
+
+const isNullableBreakdown = (value: unknown) => value === null || isTyollistyminenBreakdown(value);
 
 const isTyollistyminenItem = (value: unknown) =>
   isRecord(value) &&
-  isString(value.ala) &&
-  value.ala !== "" &&
-  isPercent(value.amk) &&
-  isPercent(value.alempi) &&
-  isPercent(value.ylempi) &&
-  (value.yamk === null || isPercent(value.yamk));
+  isNonEmptyString(value.ala) &&
+  isNullableBreakdown(value.amk) &&
+  isNullableBreakdown(value.alempi) &&
+  isNullableBreakdown(value.ylempi) &&
+  isNullableBreakdown(value.yamk);
 
 export const parseTyollistyminen = (value: unknown, source: string): TyollistyminenData => {
   if (
@@ -268,6 +310,48 @@ export const parseTyollistyminen = (value: unknown, source: string): Tyollistymi
     throw new Error(`Invalid data in ${source}`);
   }
   return value as unknown as TyollistyminenData;
+};
+
+const isNullableSalary = (value: unknown) => value === null || isNonNegativeInteger(value);
+
+const isKoulutusalaPalkkaItem = (value: unknown) =>
+  isRecord(value) &&
+  isNonEmptyString(value.ala) &&
+  isNullableSalary(value.toinenAste) &&
+  isNullableSalary(value.alempiKorkeakoulu) &&
+  isNullableSalary(value.ylempiKorkeakoulu);
+
+export const parseKoulutusalaPalkat = (value: unknown, source: string): KoulutusalaPalkatData => {
+  if (
+    !isRecord(value) ||
+    !isNonNegativeInteger(value.vuosi) ||
+    !Array.isArray(value.items) ||
+    !value.items.every(isKoulutusalaPalkkaItem)
+  ) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+  return value as unknown as KoulutusalaPalkatData;
+};
+
+const isAmmattiPalkkaItem = (value: unknown) =>
+  isRecord(value) &&
+  isNonEmptyString(value.koodi) &&
+  isNonEmptyString(value.nimi) &&
+  isNonEmptyString(value.paaryhma) &&
+  (value.ylaryhma === null || isNonEmptyString(value.ylaryhma)) &&
+  isNonNegativeInteger(value.mediaaniPalkka) &&
+  typeof value.onRyhma === "boolean";
+
+export const parseAmmattienPalkat = (value: unknown, source: string): AmmattienPalkatData => {
+  if (
+    !isRecord(value) ||
+    !isNonNegativeInteger(value.vuosi) ||
+    !Array.isArray(value.items) ||
+    !value.items.every(isAmmattiPalkkaItem)
+  ) {
+    throw new Error(`Invalid data in ${source}`);
+  }
+  return value as unknown as AmmattienPalkatData;
 };
 
 const isEnnakointiSektori = (value: unknown): value is EnnakointiSektori =>

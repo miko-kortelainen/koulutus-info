@@ -18,11 +18,13 @@ export default function ScopeControl({ value, onChange }: ScopeControlProps) {
       <Tabs.List aria-label="Kohteen tyyppi" borderRadius="md" borderWidth="1px" width="full">
         {SCOPES.map(({ value: scope, label }) => (
           <Tabs.Trigger
-            _selected={{ color: "fg.accent", fontWeight: "semibold" }}
+            _selected={{ color: "fg.accent" }}
             flex="1"
             fontSize="xs"
+            fontWeight="semibold"
             justifyContent="center"
             key={scope}
+            letterSpacing="wide"
             minH={9}
             value={scope}
           >

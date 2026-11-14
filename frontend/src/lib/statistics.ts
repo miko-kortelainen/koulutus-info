@@ -1,7 +1,7 @@
 const TIERS = [
-  { maxExclusive: 1, label: "Matala", bg: "oklch(0.376 0.077 159.44)", color: "oklch(1 0 0)" },
-  { maxExclusive: 2, label: "Keskiverto", bg: "oklch(0.476 0.128 39.44)", color: "oklch(1 0 0)" },
-  { maxExclusive: Infinity, label: "Korkea", bg: "oklch(0.376 0.113 13.636)", color: "oklch(1 0 0)" },
+  { maxExclusive: 1, label: "Matala", bg: "tier.lowBg", color: "tier.fg" },
+  { maxExclusive: 2, label: "Keskiverto", bg: "tier.mediumBg", color: "tier.fg" },
+  { maxExclusive: Infinity, label: "Korkea", bg: "tier.highBg", color: "tier.fg" },
 ] as const;
 
 export const getTier = (ratio: number) => TIERS.find((t) => ratio < t.maxExclusive) ?? TIERS[TIERS.length - 1];
