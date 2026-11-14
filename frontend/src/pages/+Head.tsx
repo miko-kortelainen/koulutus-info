@@ -27,6 +27,9 @@ export function Head() {
       <meta content={THEME_COLOR.dark} media="(prefers-color-scheme: dark)" name="theme-color" />
       <meta content="website" property="og:type" />
       <meta content="https://yhteishaku.app/images/og-img.png" property="og:image" />
+      <meta content="1200" property="og:image:width" />
+      <meta content="630" property="og:image:height" />
+      <meta content="yhteishaku.app – Kouluun hakevan paras työkalu." property="og:image:alt" />
       <meta content="summary_large_image" name="twitter:card" />
       <script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
     </>
