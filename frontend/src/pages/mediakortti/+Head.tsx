@@ -1,4 +1,4 @@
-const description = "Mainostajille ja sponsoreille: Yhteishaku.app-palvelun kävijämäärät, yleisö ja mainosyhteistyö.";
+const description = "Mainostajille ja sponsoreille: Yhteishaku.app-sivuston kävijämäärät, yleisö ja mainosyhteistyö.";
 
 export function Head() {
   return (

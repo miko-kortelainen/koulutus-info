@@ -11,7 +11,10 @@ const STATS = [
 export default function MediakorttiPage() {
   return (
     <>
-      <PageIntro title="Mediakortti" />
+      <PageIntro
+        description="Mainostajille ja sponsoreille: Yhteishaku.app-sivuston kävijämäärät, yleisö ja mainosyhteistyö."
+        title="Mediakortti"
+      />
       <PageContainer align="flex-start">
         <Stack gap={8} width="full">
           <Stack as="section" gap={4} width="full">
