@@ -6,7 +6,7 @@ import { COLORS } from "@/theme";
 
 interface PageIntroProps {
   title: ReactNode;
-  description: ReactNode;
+  description?: ReactNode;
 }
 
 export default function PageIntro({ title, description }: PageIntroProps) {
@@ -33,9 +33,11 @@ export default function PageIntro({ title, description }: PageIntroProps) {
         >
           {title}
         </Heading>
-        <Text color="fg.muted" fontSize={{ base: "14px", md: "18px" }} lineHeight="27px" textWrap="pretty" width="100%">
-          {description}
-        </Text>
+        {description ? (
+          <Text color="fg.muted" fontSize={{ base: "14px", md: "18px" }} lineHeight="27px" textWrap="pretty" width="100%">
+            {description}
+          </Text>
+        ) : null}
       </Stack>
     </Flex>
   );
