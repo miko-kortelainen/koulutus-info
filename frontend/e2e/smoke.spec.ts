@@ -122,7 +122,6 @@ test("homepage quick links point to their pages", async ({ page }) => {
     ["koulutukset", "/koulutukset/"],
     ["todistusvalintalaskuri", "/todistusvalintalaskuri/"],
     ["koulut", "/koulut/"],
-    ["trendit", "/trendit/"],
   ] as const) {
     await expect(
       page.getByRole("tabpanel").getByRole("link", { name: new RegExp(`^${label}(\\s|$)`) }),

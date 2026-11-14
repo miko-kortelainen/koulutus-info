@@ -11,7 +11,7 @@ export default function OpollePage() {
       <PageIntro description="Työkaluja toisen asteen ja korkeakoulutuksen opinto-ohjaukseen." title="Opolle" />
       <PageContainer align="flex-start">
         <Stack gap={6} width="full">
-          <ToolsPage />
+          <ToolsPage hideOmaHakulista />
           <Stack as="section" gap={4} width="full">
             <Heading as="h2" size="md">
               Tietoa tästä sivustosta

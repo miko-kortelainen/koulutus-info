@@ -72,8 +72,8 @@ export default function PalautePage() {
         description={
           <>
             Huomasitko virheen tai keksitkö kehitysidean? Kerro siitä alla tai laita sähköpostia{" "}
-            <Link color="fg.accent" href="mailto:miko@kortelainen.dev" textDecoration="underline">
-              miko@kortelainen.dev
+            <Link color="fg.accent" href="mailto:palaute@yhteishaku.app" textDecoration="underline">
+              palaute@yhteishaku.app
             </Link>
             .
           </>

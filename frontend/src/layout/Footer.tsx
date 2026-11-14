@@ -9,11 +9,10 @@ const FOOTER_LINKS = [
   ["Oppaat", "/oppaat/"],
   ["UKK", "/ukk/"],
   ["Ennakointi", "/ennakointi/"],
-  ["Työllistyminen ja palkat", "/tyollistyminen/"],
   ["Hakijaprofiili", "/hakijaprofiili/"],
-  ["Tietosuojaseloste", "/tietosuojaseloste/"],
   ["Koulut", "/koulut/"],
   ["Anna palautetta", "/palaute/"],
+  ["Tietosuojaseloste", "/tietosuojaseloste/"],
 ] as const;
 
 export default function Footer() {
