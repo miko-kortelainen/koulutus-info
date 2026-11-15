@@ -26,7 +26,7 @@ export default function CutoffIndexPage() {
                         <Icon />
                       </span>
                     ) : null}
-                    <Text fontSize="md" fontWeight="semibold">
+                    <Text fontSize={{ base: "sm", md: "md" }} fontWeight="semibold">
                       {name}
                     </Text>
                   </HStack>
