@@ -1,4 +1,7 @@
-import { AMM_AVERAGE_THRESHOLDS, AMM_SECTION_POINTS } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/constants";
+import {
+  AMM_AVERAGE_THRESHOLDS,
+  AMM_SECTION_POINTS,
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/constants";
 import { type GradeInput, normalizeGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/grades";
 import type {
   ScoreAssignment,

@@ -1,5 +1,5 @@
-import { CURRENT_STATISTICS_ROUND, HAKIJAPROFIILI_ROUNDS } from "@/generated/dataManifest";
 import { statisticsRoundLabel } from "@/config/yearOptions";
+import { CURRENT_STATISTICS_ROUND, HAKIJAPROFIILI_ROUNDS } from "@/generated/dataManifest";
 
 export type HakijaprofiiliRound = (typeof HAKIJAPROFIILI_ROUNDS)[number];
 

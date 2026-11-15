@@ -7,12 +7,12 @@ import {
   parseHakijaprofiili,
   parseKoulutusalaPalkat,
   parseKoulutustarpeet,
-  parseTyollistyminen,
   parseLukioKeskiarvot,
   parseMeta,
   parseSchoolCatalog,
   parseStatistics,
   parseStudentFeedback,
+  parseTyollistyminen,
   parseYoPisterajat,
 } from "@/api/dataValidation";
 import { PROGRAMME_ROUNDS } from "@/config/programmeRounds";

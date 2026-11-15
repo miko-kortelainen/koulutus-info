@@ -10,13 +10,13 @@ import { toaster } from "@/components/Toaster";
 import {
   CURRENT_PROGRAMME_ROUND,
   PROGRAMME_ROUND_OPTIONS,
-  programmeRoundIntro,
   type ProgrammeRound,
+  programmeRoundIntro,
 } from "@/config/programmeRounds";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import useFilteredDegrees from "@/pages/koulutukset/hooks/useFilteredDegrees";
 import type { KoulutuksetPageData } from "@/pages/koulutukset/+data";
+import useFilteredDegrees from "@/pages/koulutukset/hooks/useFilteredDegrees";
 import type { CurrentProgramsResponse } from "@/types.gen";
 
 const PAGE_SIZE = 10;
@@ -184,7 +184,7 @@ export default function SchoolsListPage() {
           {sortControls}
 
           <Stack flex={1} gap={4} minW={0} position="relative" width="100%">
-            <Text aria-live="polite" color="fg.muted" fontSize="xs" position="absolute" right={0} bottom="100%">
+            <Text aria-live="polite" bottom="100%" color="fg.muted" fontSize="xs" position="absolute" right={0}>
               {new Intl.NumberFormat("fi-FI").format(filteredData.length)}{" "}
               {filteredData.length === 1 ? "tulos" : "tulosta"}
             </Text>

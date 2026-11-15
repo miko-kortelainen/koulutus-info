@@ -1,7 +1,7 @@
 import { Badge, Card, Collapsible, Heading, Separator, Span, Stack, Table, Text } from "@chakra-ui/react";
 import { HiChevronDown } from "react-icons/hi";
-import { COLORS } from "@/theme";
 import type { ScoreResult } from "@/pages/todistusvalintalaskuri/lib/scoreResults";
+import { COLORS } from "@/theme";
 
 interface ScoreResultCardProps {
   headingLevel?: "h3" | "h4";

@@ -1,9 +1,9 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
+import CompareBar from "@/components/CompareBar";
 import { renderWithChakra } from "@/test/render";
 import type { StatisticsEntry } from "@/types.gen";
-import CompareBar from "@/components/CompareBar";
 
 const entry = (id: string, name: string): StatisticsEntry => ({
   kooditHakukohde: id,

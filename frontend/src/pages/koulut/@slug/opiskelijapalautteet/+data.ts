@@ -1,5 +1,5 @@
 import type { PageContextServer } from "vike/types";
-import { type StudentFeedbackEntry, feedbackSchoolNames, readStudentFeedback } from "@/api/serverData";
+import { feedbackSchoolNames, readStudentFeedback, type StudentFeedbackEntry } from "@/api/serverData";
 import { slugify } from "@/lib/slug";
 
 export type FeedbackPageData = StudentFeedbackEntry & { schoolName: string };

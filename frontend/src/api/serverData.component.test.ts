@@ -87,7 +87,7 @@ test("formats school names from the catalog", () => {
     "schools.json": [
       { name: "Yrkeshögskolan Arcada", shortName: "Arcada" },
       { name: "Yrkeshögskolan Novia", shortName: "Novia" },
-      { name: "Åbo Akademi", shortName: "ÅA" },
+      { name: "Åbo Akademi" },
       { name: "Svenska handelshögskolan", shortName: "Hanken" },
       { name: "Helsingin yliopisto" },
       { name: "Tampereen ammattikorkeakoulu", shortName: "TAMK" },
@@ -96,7 +96,7 @@ test("formats school names from the catalog", () => {
 
   expect(formatSchoolName("Yrkeshögskolan Arcada")).toBe("Yrkeshögskolan Arcada (Arcada)");
   expect(formatSchoolName("Yrkeshögskolan Novia")).toBe("Yrkeshögskolan Novia (Novia)");
-  expect(formatSchoolName("Åbo Akademi")).toBe("Åbo Akademi (ÅA)");
+  expect(formatSchoolName("Åbo Akademi")).toBe("Åbo Akademi");
   expect(formatSchoolName("Svenska handelshögskolan")).toBe("Svenska handelshögskolan (Hanken)");
   expect(formatSchoolName("Helsingin yliopisto")).toBe("Helsingin yliopisto");
   expect(formatSchoolName("Tampereen ammattikorkeakoulu")).toBe("Tampereen ammattikorkeakoulu (TAMK)");

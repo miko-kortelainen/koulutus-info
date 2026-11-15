@@ -1,5 +1,5 @@
-import { readKoulutustarpeet } from "@/api/serverData";
 import type { EnnakointiKoulutustarpeet } from "@/api/dataValidation";
+import { readKoulutustarpeet } from "@/api/serverData";
 
 export interface EnnakointiPageData {
   koulutustarpeet: EnnakointiKoulutustarpeet;

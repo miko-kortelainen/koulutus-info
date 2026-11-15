@@ -9,7 +9,7 @@ import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import { numberFormat } from "@/lib/statistics";
 import type { EnnakointiPageData } from "@/pages/ennakointi/+data";
-import { filterAndSortVajeRows, statusLabel, type SektoriFilter, type VajeSort } from "@/pages/ennakointi/lib/vaje";
+import { filterAndSortVajeRows, type SektoriFilter, statusLabel, type VajeSort } from "@/pages/ennakointi/lib/vaje";
 
 const PAGE_SIZE = 10;
 const BAR_H = "8";
@@ -66,7 +66,7 @@ export default function EnnakointiPage() {
               </Heading>
               <Accordion.ItemContent>
                 <Accordion.ItemBody pb={3} pt={1}>
-                  <Stack gap={2} fontSize="sm" lineHeight="1.5" maxW="65ch" textWrap="pretty">
+                  <Stack fontSize="sm" gap={2} lineHeight="1.5" maxW="65ch" textWrap="pretty">
                     <Text>
                       <Text as="span" fontWeight="medium">
                         Tarve:

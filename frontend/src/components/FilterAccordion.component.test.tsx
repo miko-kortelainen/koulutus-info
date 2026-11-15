@@ -2,8 +2,8 @@ import { Accordion } from "@chakra-ui/react";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
-import { renderWithChakra } from "@/test/render";
 import { FilterItem, toCollection } from "@/components/FilterAccordion";
+import { renderWithChakra } from "@/test/render";
 
 test("names the listbox and sorts Finnish labels", async () => {
   const user = userEvent.setup();

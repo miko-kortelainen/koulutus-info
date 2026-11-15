@@ -2,16 +2,16 @@ import { Accordion, Alert, Box, Group, Stack, Text } from "@chakra-ui/react";
 import { useEffect, useMemo, useState } from "react";
 import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
+import DegreeStatsCardSkeleton from "@/components/DegreeStatsCardSkeleton";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
-import { TOINEN_ASTE_YEARS } from "@/config/toinenAsteYears";
-import PageContainer from "@/layout/PageContainer";
-import PageIntro from "@/layout/PageIntro";
-import DegreeStatsCardSkeleton from "@/components/DegreeStatsCardSkeleton";
 import ResultCount from "@/components/ResultCount";
 import SortControl from "@/components/StatisticsSortControl";
+import { TOINEN_ASTE_YEARS } from "@/config/toinenAsteYears";
 import useFilteredStatistics from "@/hooks/useFilteredStatistics";
+import PageContainer from "@/layout/PageContainer";
+import PageIntro from "@/layout/PageIntro";
 import type { SortOption } from "@/lib/sortStatistics";
 import type { StatisticsEntry } from "@/types.gen";
 
@@ -76,8 +76,8 @@ export default function ToinenAsteHakijamaarat() {
   return (
     <>
       <PageIntro
-        title="Toisen asteen hakijamäärät"
         description="Selaa toisen asteen yhteishaun lukioiden ja ammattikoulujen hakijamääriä koulutuksittain."
+        title="Toisen asteen hakijamäärät"
       />
       <PageContainer align="flex-start">
         <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
@@ -117,16 +117,15 @@ export default function ToinenAsteHakijamaarat() {
           <Stack flex={1} gap={4} minW={0} width="100%">
             <Group gap={6} width="full" zIndex={10}>
               <SortControl
-                value={sort}
                 onChange={(value) => {
                   setSort(value);
                   resetPage();
                 }}
+                value={sort}
               />
               <OptionSelect
                 ariaLabel="Yhteishaku"
                 items={TOINEN_ASTE_YEARS.map((value) => ({ value, label: `Yhteishaku ${value}` }))}
-                value={year}
                 onChange={(value) => {
                   if (value === year) return;
                   setEntries(undefined);
@@ -138,6 +137,7 @@ export default function ToinenAsteHakijamaarat() {
                   setMunicipalities(new Set());
                   resetPage();
                 }}
+                value={year}
               />
             </Group>
             <ResultCount count={filtered.length} error={error} loading={!entries && !error} />
@@ -157,10 +157,10 @@ export default function ToinenAsteHakijamaarat() {
                 </Text>
               ) : null}
               {filtered.slice((page - 1) * 10, page * 10).map((entry) => (
-                <DegreeStatsCard key={entry.kooditHakukohde} degree={entry} schoolLink={false} />
+                <DegreeStatsCard degree={entry} key={entry.kooditHakukohde} schoolLink={false} />
               ))}
             </Stack>
-            {entries ? <Pagination count={filtered.length} page={page} pageSize={10} onPageChange={setPage} /> : null}
+            {entries ? <Pagination count={filtered.length} onPageChange={setPage} page={page} pageSize={10} /> : null}
           </Stack>
         </Stack>
         <Text color="fg.muted" fontSize="xs">

@@ -16,13 +16,6 @@ import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import {
-  getAmkPrograms,
-  getUniversityPrograms,
-  recalculateFromGrades,
-  type AmkProgramsResponse,
-  type UniversityProgramsResponse,
-} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/index";
-import {
   AMM_GRADES,
   type AmmFormState,
   type AmmGrade,
@@ -40,11 +33,18 @@ import {
   toCompactQualified,
 } from "@/pages/todistusvalintalaskuri/lib/scoreResults";
 import {
-  SUBJECT_OPTIONS,
+  type AmkProgramsResponse,
+  getAmkPrograms,
+  getUniversityPrograms,
+  recalculateFromGrades,
+  type UniversityProgramsResponse,
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/index";
+import {
   parseYoForm,
+  SUBJECT_OPTIONS,
   toUniversityGrades,
-  yoFormFromExamGrades,
   type YoFormState,
+  yoFormFromExamGrades,
 } from "@/pages/todistusvalintalaskuri/lib/yoForm";
 import { YO_GRADES, type YoGrade } from "@/pages/todistusvalintalaskuri/lib/yoScoring";
 import type { ScoreType } from "@/pages/todistusvalintalaskuri/scoreTypes";

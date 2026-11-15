@@ -1,9 +1,9 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
+import SchoolCard from "@/components/SchoolCard";
 import { renderWithChakra } from "@/test/render";
 import type { ToteutusEntry } from "@/types.gen";
-import SchoolCard from "@/components/SchoolCard";
 
 const toteutus: ToteutusEntry = {
   toteutusOid: "1.2.3",
@@ -27,4 +27,20 @@ test("tracks saving but not removing a degree", async () => {
   await user.click(screen.getByRole("button", { name: "Poista tallennetuista" }));
   expect(event).toHaveBeenCalledTimes(1);
   expect(onSaved).toHaveBeenCalledTimes(1);
+});
+
+test("links Katso alan pisterajat to the ala pisterajat page", () => {
+  renderWithChakra(
+    <SchoolCard
+      toteutus={{
+        ...toteutus,
+        koulutusalat: ["Kauppa, hallinto ja oikeustieteet"],
+      }}
+    />,
+  );
+
+  expect(screen.getByRole("link", { name: "Katso alan pisterajat" })).toHaveAttribute(
+    "href",
+    "/pisterajat/kauppa-hallinto-ja-oikeustieteet/",
+  );
 });

@@ -20,6 +20,9 @@ importers:
       fuse.js:
         specifier: ^7.4.2
         version: 7.4.2
+      iconoir-react:
+        specifier: ^7.12.2
+        version: 7.12.2(react@19.2.6)
       motion:
         specifier: ^13.2.0
         version: 13.2.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -1851,6 +1854,11 @@ packages:
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
+
+  iconoir-react@7.12.2:
+    resolution: {integrity: sha512-BDOIt6qcGY4pgJ+5et2ZjuWEbVKwnpRyTLq7viN3bF+BzpxVWCNDBkMd8iVeHx+QglqciiS8ftgU5Ddvz0Rn6A==}
+    peerDependencies:
+      react: 18 || 19
 
   immer@10.2.0:
     resolution: {integrity: sha512-d/+XTN3zfODyjr89gM3mPq1WNX2B8pYsu7eORitdwyA2sBubnTl3laYlBk4sXY5FUa5qTZGBDPJICVbvqzjlbw==}
@@ -4780,6 +4788,10 @@ snapshots:
       - '@noble/hashes'
 
   html-escaper@2.0.2: {}
+
+  iconoir-react@7.12.2(react@19.2.6):
+    dependencies:
+      react: 19.2.6
 
   immer@10.2.0: {}
 

@@ -3,8 +3,8 @@ import type { MDXComponents, MDXProps } from "mdx/types.js";
 import type { ComponentProps, ComponentType, ReactNode } from "react";
 import PageContainer from "@/layout/PageContainer";
 import { slugify } from "@/lib/slug";
-import { formatGuideDate, getGuide } from "@/pages/oppaat/guides";
 import GuideAccordion from "@/pages/oppaat/components/GuideAccordion";
+import { formatGuideDate, getGuide } from "@/pages/oppaat/guides";
 
 interface GuideLayoutProps {
   slug: string;

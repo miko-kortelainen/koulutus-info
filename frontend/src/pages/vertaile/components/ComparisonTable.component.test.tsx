@@ -1,8 +1,8 @@
 import { screen } from "@testing-library/react";
 import { expect, test } from "vitest";
+import ComparisonTable from "@/pages/vertaile/components/ComparisonTable";
 import { renderWithChakra } from "@/test/render";
 import type { StatisticsEntry } from "@/types.gen";
-import ComparisonTable from "@/pages/vertaile/components/ComparisonTable";
 
 const entry = (overrides: Partial<StatisticsEntry>): StatisticsEntry => ({
   kooditHakukohde: "test",
@@ -17,8 +17,6 @@ const entry = (overrides: Partial<StatisticsEntry>): StatisticsEntry => ({
 test("masks small counts and omits trends for masked, equal, and unavailable values", () => {
   renderWithChakra(
     <ComparisonTable
-      yearA="2026_kevat"
-      yearB="2025_syksy"
       a={entry({
         kooditHakukohde: "a",
         hakukohde: "Kohde A",
@@ -35,6 +33,8 @@ test("masks small counts and omits trends for masked, equal, and unavailable val
         kaikkiHakijatLkm: 10,
         ensisijaisetHakijatLkm: 10,
       })}
+      yearA="2026_kevat"
+      yearB="2025_syksy"
     />,
   );
 
@@ -50,8 +50,6 @@ test("masks small counts and omits trends for masked, equal, and unavailable val
 test("renders accessible trends, pressure values, and pressure tiers", () => {
   renderWithChakra(
     <ComparisonTable
-      yearA="2026_kevat"
-      yearB="2025_syksy"
       a={entry({
         kooditHakukohde: "a",
         hakukohde: "Kohde A",
@@ -66,6 +64,8 @@ test("renders accessible trends, pressure values, and pressure tiers", () => {
         kaikkiHakijatLkm: 80,
         ensisijaisetHakijatLkm: 10,
       })}
+      yearA="2026_kevat"
+      yearB="2025_syksy"
     />,
   );
 

@@ -1,8 +1,8 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
-import { renderWithChakra } from "@/test/render";
 import PistelaskuriCta from "@/components/PistelaskuriCta";
+import { renderWithChakra } from "@/test/render";
 
 test("links to pistelaskuri and tracks the click", async () => {
   const event = vi.fn();

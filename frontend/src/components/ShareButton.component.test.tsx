@@ -1,8 +1,8 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
-import { renderWithChakra } from "@/test/render";
 import ShareButton from "@/components/ShareButton";
+import { renderWithChakra } from "@/test/render";
 
 test("reports a completed share", async () => {
   const onShared = vi.fn();

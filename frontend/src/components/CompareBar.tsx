@@ -22,11 +22,7 @@ export default function CompareBar({ selected, onRemove }: CompareBarProps) {
     <ActionBar.Root open={selected.length > 0}>
       <Portal>
         <ActionBar.Positioner zIndex="popover">
-          <ActionBar.Content
-            bg="bg.muted"
-            minH={{ base: "3rem", md: "5rem" }}
-            w={{ base: "90%", md: "65rem" }}
-          >
+          <ActionBar.Content bg="bg.muted" minH={{ base: "3rem", md: "5rem" }} w={{ base: "90%", md: "65rem" }}>
             <HStack flex={1} gap={2} minW={0}>
               {selected.map((selection) => (
                 <Tag.Root

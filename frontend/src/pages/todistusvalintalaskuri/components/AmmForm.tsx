@@ -1,6 +1,6 @@
 import { Box, Input, Separator, Stack, Text, VStack } from "@chakra-ui/react";
-import type { AmkAmmGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/index";
 import FormSelect from "@/pages/todistusvalintalaskuri/components/FormSelect";
+import type { AmkAmmGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/index";
 
 type AmmScale = "1-5" | "1-3";
 export type AmmGrade = 1 | 2 | 3 | 4 | 5;

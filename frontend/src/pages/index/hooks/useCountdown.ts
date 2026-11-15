@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { type YhteishakuRound, nextCountdownTarget } from "@/config/season";
+import { nextCountdownTarget, type YhteishakuRound } from "@/config/season";
 
 interface TimeLeft {
   days: number;

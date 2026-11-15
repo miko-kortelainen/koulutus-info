@@ -1,9 +1,4 @@
-import {
-  HiOutlineBookOpen,
-  HiOutlineBriefcase,
-  HiOutlineChartBar,
-  HiOutlineTrendingUp,
-} from "react-icons/hi";
+import { HiOutlineBookOpen, HiOutlineBriefcase, HiOutlineChartBar, HiOutlineTrendingUp } from "react-icons/hi";
 import QuickLinkTabs from "@/components/quickLinks/QuickLinkTabs";
 import { quickLinkSections } from "@/components/quickLinks/quickLinks";
 import useEducationLevel from "@/components/quickLinks/useEducationLevel";
