@@ -598,30 +598,19 @@ test("/koulutukset: school listbox filter narrows results", async ({ page }) => 
   await expect(schoolLinks).toHaveCount(0);
 });
 
-test("/koulutukset: card link opens ala-filtered pisterajat history", async ({ page }) => {
+test("/koulutukset: card link opens ala pisterajat page", async ({ page }) => {
   await page.goto("/koulutukset/");
   const search = page.getByPlaceholder("Etsi koulutuksia");
-  // Aviation Business belongs to "Kauppa, hallinto ja oikeustieteet" — an ala whose
-  // name contains a comma, which the ?ala= param must survive
   await search.fill("Aviation Business");
   // every card shows the same link text, so wait for the filtered card before clicking
   const card = page.getByRole("listitem").filter({ hasText: "Aviation Business" });
   await expect(card.getByText("Katso alan pisterajat")).toBeVisible({ timeout: 10000 });
 
   await card.getByText("Katso alan pisterajat").click();
-  await expect(page).toHaveURL(/\/koulut\/[^/]+\/pisterajat\/\?ala=kauppa-hallinto-ja-oikeustieteet/);
-
-  // ala filter badge is active and scoped results exist
-  const dismissBadge = page.getByRole("button", { name: "Poista alarajaus" });
-  await expect(dismissBadge).toBeVisible({ timeout: 10000 });
-  await expect(page.getByRole("button", { name: "Kauppa, hallinto ja oikeustieteet" })).toBeVisible();
-  const programmeList = page.getByRole("list", { name: "Pisterajat koulutusaloittain" });
-  await expect(programmeList.getByRole("button").first()).toBeVisible();
-
-  // dismissing the badge widens to the school's full list
-  await dismissBadge.click();
-  await expect(dismissBadge).not.toBeVisible();
-  await expect(programmeList.getByRole("button").first()).toBeVisible();
+  await expect(page).toHaveURL("/pisterajat/kauppa-hallinto-ja-oikeustieteet/");
+  await expect(
+    page.getByRole("heading", { name: `Kauppa, hallinto ja oikeustieteet pisterajat ${DEFAULT_CUTOFF_YEAR}` }),
+  ).toBeVisible();
 });
 
 test("/koulutukset: saving a card lists it on /oma-hakulista and unsaving clears it", async ({ page }) => {

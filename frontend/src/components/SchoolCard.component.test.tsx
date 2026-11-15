@@ -28,3 +28,19 @@ test("tracks saving but not removing a degree", async () => {
   expect(event).toHaveBeenCalledTimes(1);
   expect(onSaved).toHaveBeenCalledTimes(1);
 });
+
+test("links Katso alan pisterajat to the ala pisterajat page", () => {
+  renderWithChakra(
+    <SchoolCard
+      toteutus={{
+        ...toteutus,
+        koulutusalat: ["Kauppa, hallinto ja oikeustieteet"],
+      }}
+    />,
+  );
+
+  expect(screen.getByRole("link", { name: "Katso alan pisterajat" })).toHaveAttribute(
+    "href",
+    "/pisterajat/kauppa-hallinto-ja-oikeustieteet/",
+  );
+});

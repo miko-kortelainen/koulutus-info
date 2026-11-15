@@ -5,6 +5,7 @@ import { useData } from "vike-react/useData";
 import BackLink from "@/components/BackLink";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
+import { CURRENT_PROGRAMME_ROUND } from "@/config/programmeRounds";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import { slugify } from "@/lib/slug";
@@ -68,7 +69,7 @@ export default function SchoolPage() {
   const tabs = [
     {
       value: "koulutukset",
-      label: "Yhteishaku",
+      label: `Yhteishaku ${CURRENT_PROGRAMME_ROUND.slice(0, 4)}`,
       content: programList,
       visible: toteutukset.length > 0,
     },
@@ -97,16 +98,15 @@ export default function SchoolPage() {
         {subLinks}
         {tabs.length > 0 ? (
           <Tabs.Root defaultValue={tabs[0].value} size="sm" width="full">
-            <Tabs.List aria-label={`${schoolName}: tiedot`} overflowX="auto">
+            <Tabs.List aria-label={`${schoolName}: tiedot`} width="full">
               {tabs.map(({ value, label }) => (
                 <Tabs.Trigger
-                  flex={{ base: "0 0 auto", md: 1 }}
+                  flex={1}
                   fontWeight="semibold"
                   justifyContent="center"
                   key={value}
                   letterSpacing="wide"
                   value={value}
-                  whiteSpace="nowrap"
                 >
                   {label}
                 </Tabs.Trigger>

@@ -1,7 +1,6 @@
 import { Badge, Card, HStack, IconButton, Link, Separator, Stack, Text, VStack } from "@chakra-ui/react";
 import { HiChevronDown, HiChevronUp, HiHeart, HiLocationMarker, HiOutlineHeart } from "react-icons/hi";
 import useFavorites from "@/hooks/useFavorites";
-import { alaSlugParam } from "@/lib/cutoffs";
 import { localizedText } from "@/lib/localizedText";
 import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
@@ -41,7 +40,7 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSa
 
   // koulutusalat is absent on favorites saved before the field existed
   const pisterajatURL = toteutus.koulutusalat?.length
-    ? `/koulut/${slugify(schoolName)}/pisterajat/?ala=${alaSlugParam(toteutus.koulutusalat)}`
+    ? `/pisterajat/${slugify(toteutus.koulutusalat[0])}/`
     : null;
 
   const footer = (
