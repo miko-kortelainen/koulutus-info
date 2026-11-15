@@ -1,7 +1,7 @@
 import { screen } from "@testing-library/react";
 import { expect, test } from "vitest";
-import { renderWithChakra } from "@/test/render";
 import TopBarList from "@/pages/trendit/components/TopBarList";
+import { renderWithChakra } from "@/test/render";
 
 test("renders a dual bar per category when comparing rounds", () => {
   renderWithChakra(

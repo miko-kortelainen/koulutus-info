@@ -1,5 +1,5 @@
-import { readLukioKeskiarvot } from "@/api/serverData";
 import type { LukioKeskiarvoEntry } from "@/api/dataValidation";
+import { readLukioKeskiarvot } from "@/api/serverData";
 
 export type LukiotPageData = LukioKeskiarvoEntry[];
 

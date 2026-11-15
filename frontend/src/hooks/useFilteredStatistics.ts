@@ -1,5 +1,6 @@
 import Fuse from "fuse.js";
 import { useMemo } from "react";
+import { type SortOption, sortStatistics } from "@/lib/sortStatistics";
 import {
   formatCount,
   formatSisaanpaasyprosentti,
@@ -8,7 +9,6 @@ import {
   ratioFormat,
 } from "@/lib/statistics";
 import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
-import { type SortOption, sortStatistics } from "@/lib/sortStatistics";
 
 const FUSE_OPTIONS = {
   keys: [{ name: "hakukohde", weight: 3 }, { name: "korkeakoulu", weight: 2 }, "sektori", "koulutusalaTaso1"],

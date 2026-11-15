@@ -1,8 +1,8 @@
 import { screen } from "@testing-library/react";
 import { expect, test } from "vitest";
+import CutoffCard from "@/components/CutoffCard";
 import type { ProgrammeWithRounds } from "@/lib/cutoffs";
 import { renderWithChakra } from "@/test/render";
-import CutoffCard from "@/components/CutoffCard";
 
 const programme: ProgrammeWithRounds = {
   name: "Kätilö (AMK), päivätoteutus",
@@ -45,4 +45,11 @@ test("formats scores with Finnish decimals and no forced trailing zeros", () => 
 
   expect(screen.getByText("69")).toBeInTheDocument();
   expect(screen.getByText("84,5")).toBeInTheDocument();
+});
+
+test("renders a school badge link when schoolName is provided", () => {
+  renderWithChakra(<CutoffCard programme={programme} schoolName="Turun ammattikorkeakoulu" />);
+
+  const link = screen.getByRole("link", { name: "Turun ammattikorkeakoulu" });
+  expect(link).toHaveAttribute("href", "/koulut/turun-ammattikorkeakoulu/");
 });

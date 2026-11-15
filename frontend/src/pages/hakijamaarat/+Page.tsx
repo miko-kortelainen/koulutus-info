@@ -4,21 +4,21 @@ import { useData } from "vike-react/useData";
 import CompareBar, { type CompareSelection } from "@/components/CompareBar";
 import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import DegreeStatsCard from "@/components/DegreeStatsCard";
+import DegreeStatsCardSkeleton from "@/components/DegreeStatsCardSkeleton";
 import { FilterItem, selectFilter, toCollection } from "@/components/FilterAccordion";
 import Pagination from "@/components/Pagination";
+import ResultCount from "@/components/ResultCount";
+import SortControl from "@/components/StatisticsSortControl";
 import YearControl from "@/components/YearControl";
 import { CURRENT_YEAR, type YearOption } from "@/config/yearOptions";
+import useFilteredStatistics from "@/hooks/useFilteredStatistics";
 import useStatisticsQuery from "@/hooks/useStatisticsQuery";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
-import type { StatisticsEntry } from "@/types.gen";
-import DegreeStatsCardSkeleton from "@/components/DegreeStatsCardSkeleton";
-import ResultCount from "@/components/ResultCount";
-import SortControl from "@/components/StatisticsSortControl";
-import useFilteredStatistics from "@/hooks/useFilteredStatistics";
+import type { SortOption } from "@/lib/sortStatistics";
 import type { HakijamaaratPageData } from "@/pages/hakijamaarat/+data";
 import { formatStatisticsUpdatedAt } from "@/pages/hakijamaarat/lib/formatStatisticsUpdatedAt";
-import type { SortOption } from "@/lib/sortStatistics";
+import type { StatisticsEntry } from "@/types.gen";
 
 const PAGE_SIZE = 10;
 

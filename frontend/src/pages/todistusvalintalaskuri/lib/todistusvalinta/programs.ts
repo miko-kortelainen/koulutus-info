@@ -17,8 +17,8 @@ import type {
   CrosswalkSourceIssue,
   CutoffProgramme,
   CutoffSchool,
-  ScoreBreakdown,
   ScorableUniversityProgram,
+  ScoreBreakdown,
   TodistusvalintaCatalogs,
   UniversityProgram,
 } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";

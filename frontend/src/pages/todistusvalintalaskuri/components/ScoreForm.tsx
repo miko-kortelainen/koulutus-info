@@ -2,6 +2,14 @@ import { Box, Button, Stack, Tabs, Text } from "@chakra-ui/react";
 import { type SubmitEvent, useEffect, useRef, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import type { CutoffRound } from "@/config/cutoffRounds";
+import AmmForm, {
+  type AmmFormErrors,
+  type AmmFormState,
+  emptyAmmFormState,
+  isAmmFormState,
+  parseAmmForm,
+} from "@/pages/todistusvalintalaskuri/components/AmmForm";
+import YoForm from "@/pages/todistusvalintalaskuri/components/YoForm";
 import type { Calculation } from "@/pages/todistusvalintalaskuri/lib/scoreResults";
 import { recalculateFromGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/index";
 import {
@@ -13,14 +21,6 @@ import {
   type YoFormState,
 } from "@/pages/todistusvalintalaskuri/lib/yoForm";
 import type { ScoreType } from "@/pages/todistusvalintalaskuri/scoreTypes";
-import AmmForm, {
-  type AmmFormErrors,
-  type AmmFormState,
-  emptyAmmFormState,
-  isAmmFormState,
-  parseAmmForm,
-} from "@/pages/todistusvalintalaskuri/components/AmmForm";
-import YoForm from "@/pages/todistusvalintalaskuri/components/YoForm";
 
 interface ScoreFormProps {
   applied?: { mode: ScoreType; yo?: YoFormState; amm?: AmmFormState };

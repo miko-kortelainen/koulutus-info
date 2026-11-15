@@ -1,8 +1,8 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
-import { renderWithChakra } from "@/test/render";
 import Pagination from "@/components/Pagination";
+import { renderWithChakra } from "@/test/render";
 
 test("uses Finnish accessible pagination labels", () => {
   renderWithChakra(<Pagination count={30} onPageChange={vi.fn()} page={1} pageSize={10} />);

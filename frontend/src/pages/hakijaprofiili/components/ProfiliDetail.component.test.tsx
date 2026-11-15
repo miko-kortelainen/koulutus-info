@@ -1,8 +1,8 @@
 import { screen, within } from "@testing-library/react";
 import { expect, test } from "vitest";
 import type { HakijaprofiiliEntity } from "@/api/dataValidation";
-import { renderWithChakra } from "@/test/render";
 import ProfiliDetail from "@/pages/hakijaprofiili/components/ProfiliDetail";
+import { renderWithChakra } from "@/test/render";
 
 const fullEntity: HakijaprofiiliEntity = {
   kohdeTyyppi: "koulu",

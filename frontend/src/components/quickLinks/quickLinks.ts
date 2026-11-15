@@ -1,4 +1,3 @@
-import { TOINEN_ASTE_ROUNDS, YHTEISHAKU_ROUNDS } from "@/config/season";
 import {
   HiOutlineAcademicCap,
   HiOutlineCalculator,
@@ -8,6 +7,7 @@ import {
   HiOutlineOfficeBuilding,
   HiOutlineSparkles,
 } from "react-icons/hi";
+import { TOINEN_ASTE_ROUNDS, YHTEISHAKU_ROUNDS } from "@/config/season";
 
 export const quickLinkSections = [
   {

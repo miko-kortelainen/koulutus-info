@@ -1,9 +1,9 @@
 import { fireEvent, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, expect, test, vi } from "vitest";
-import { renderWithChakra } from "@/test/render";
 import ScoreForm from "@/pages/todistusvalintalaskuri/components/ScoreForm";
 import type { YoFormState } from "@/pages/todistusvalintalaskuri/lib/yoForm";
+import { renderWithChakra } from "@/test/render";
 
 beforeEach(() => {
   vi.stubGlobal(

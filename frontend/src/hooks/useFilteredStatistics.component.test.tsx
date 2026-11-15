@@ -1,9 +1,9 @@
 import { renderHook } from "@testing-library/react";
 import Fuse from "fuse.js";
 import { expect, test, vi } from "vitest";
-import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
-import type { SortOption } from "@/lib/sortStatistics";
 import useFilteredStatistics, { toCompactStatistics } from "@/hooks/useFilteredStatistics";
+import type { SortOption } from "@/lib/sortStatistics";
+import type { StatisticsEntry, StatisticsResponse } from "@/types.gen";
 
 const statistics: StatisticsResponse = [
   {

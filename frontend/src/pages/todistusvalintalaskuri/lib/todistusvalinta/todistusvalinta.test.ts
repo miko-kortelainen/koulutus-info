@@ -4,10 +4,10 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { normalizeGrades } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/grades";
-import { thresholdPassed } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/thresholds";
-import { isYoFormState, parseYoForm, toUniversityGrades, yoFormFromExamGrades } from "@/pages/todistusvalintalaskuri/lib/yoForm";
-import { YO_GRADES } from "@/pages/todistusvalintalaskuri/lib/yoScoring";
-import { listUniversityPrograms, calculateUniversityPrograms } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/programs";
+import {
+  calculateUniversityPrograms,
+  listUniversityPrograms,
+} from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/programs";
 import {
   averageToHundredths,
   buildScoreBreakdown,
@@ -15,6 +15,7 @@ import {
   scoreAmkYo,
   scoreModel,
 } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/scoring";
+import { thresholdPassed } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/thresholds";
 import type {
   CutoffSchool,
   ProgramCrosswalk,
@@ -22,6 +23,13 @@ import type {
   ThresholdCatalog,
   TodistusvalintaCatalogs,
 } from "@/pages/todistusvalintalaskuri/lib/todistusvalinta/types";
+import {
+  isYoFormState,
+  parseYoForm,
+  toUniversityGrades,
+  yoFormFromExamGrades,
+} from "@/pages/todistusvalintalaskuri/lib/yoForm";
+import { YO_GRADES } from "@/pages/todistusvalintalaskuri/lib/yoScoring";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../../../../../public");
 const scoring = JSON.parse(

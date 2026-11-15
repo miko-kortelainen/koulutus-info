@@ -1,6 +1,4 @@
 import { expect, test } from "vitest";
-import type { School as CutoffSchool, Programme } from "@/types/pisterajat.gen";
-import type { CurrentProgramsResponse } from "@/types.gen";
 import {
   alaNamesForAlaParam,
   alaSlugParam,
@@ -9,6 +7,8 @@ import {
   mergeCutoffProgrammes,
   newestCutoffRoundForAlaParam,
 } from "@/lib/cutoffs";
+import type { School as CutoffSchool, Programme } from "@/types/pisterajat.gen";
+import type { CurrentProgramsResponse } from "@/types.gen";
 
 const programme = (name: string, koulutusala: string): Programme => ({
   name,

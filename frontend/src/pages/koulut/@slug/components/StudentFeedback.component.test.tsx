@@ -2,8 +2,8 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import type { StudentFeedback as StudentFeedbackData } from "@/api/dataValidation";
-import { renderWithChakra } from "@/test/render";
 import StudentFeedback from "@/pages/koulut/@slug/components/StudentFeedback";
+import { renderWithChakra } from "@/test/render";
 
 const feedback: StudentFeedbackData = {
   tilastot: {

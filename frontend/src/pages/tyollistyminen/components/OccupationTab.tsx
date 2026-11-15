@@ -48,12 +48,7 @@ export default function OccupationTab({
     <Stack gap={6} width="full">
       <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
         <Box flex={1}>
-          <SearchInput
-            label="Haku"
-            onChange={onSearchChange}
-            placeholder="Hae ammattia"
-            value={search}
-          />
+          <SearchInput label="Haku" onChange={onSearchChange} placeholder="Hae ammattia" value={search} />
         </Box>
         <Box flex={1} maxW={{ md: "16rem" }}>
           <OptionSelect<string> items={groupOptions} label="Ammattiryhmä" onChange={onGroupChange} value={group} />

@@ -1,5 +1,6 @@
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import type { HakijaprofiiliEntity } from "@/api/dataValidation";
+import ProfiliBarList from "@/pages/hakijaprofiili/components/ProfiliBarList";
 import {
   breakdownTotal,
   formatGenderCount,
@@ -8,7 +9,6 @@ import {
   publishableCounts,
   sortAgeBands,
 } from "@/pages/hakijaprofiili/lib/masking";
-import ProfiliBarList from "@/pages/hakijaprofiili/components/ProfiliBarList";
 
 interface ProfiliDetailProps {
   entity: HakijaprofiiliEntity;

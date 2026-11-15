@@ -1,6 +1,7 @@
 import { Badge, Card, Heading, HStack, Stat, Table, Text } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 import { HiOutlineArrowCircleDown, HiOutlineArrowCircleUp } from "react-icons/hi";
+import { statisticsRoundShortLabel, type YearOption } from "@/config/yearOptions";
 import {
   formatCount,
   formatSisaanpaasyprosentti,
@@ -10,7 +11,6 @@ import {
   ratioFormat,
 } from "@/lib/statistics";
 import type { StatisticsEntry } from "@/types.gen";
-import { statisticsRoundShortLabel, type YearOption } from "@/config/yearOptions";
 
 interface ComparisonTableProps {
   a: StatisticsEntry;

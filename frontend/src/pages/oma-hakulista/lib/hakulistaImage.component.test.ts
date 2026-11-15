@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
-import type { ToteutusEntry } from "@/types.gen";
 import { hakulistaShareItems, hakulistaShareItemTops, wrapCanvasText } from "@/pages/oma-hakulista/lib/hakulistaImage";
+import type { ToteutusEntry } from "@/types.gen";
 
 const entries: ToteutusEntry[] = [
   {

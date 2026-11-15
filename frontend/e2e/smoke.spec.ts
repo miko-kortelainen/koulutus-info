@@ -951,7 +951,7 @@ test("/koulut/:slug/pisterajat: switches which hakukierros is shown", async ({ p
   await expect(page.getByText("Insinööri (AMK), konetekniikka, päivätoteutus / Kokkola")).not.toBeVisible();
 });
 
-test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) => {
+test("/pisterajat: ala link lists programmes with school in the card", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/pisterajat/");
   await expect(page.getByRole("heading", { name: `Pisterajat ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
@@ -959,14 +959,11 @@ test("/pisterajat: ala link opens school cutoff accordions", async ({ page }) =>
   await page.getByRole("link", { name: "Lääketieteet" }).click();
   await expect(page).toHaveURL("/pisterajat/laaketieteet/");
   await expect(page.getByRole("heading", { name: `Lääketieteet pisterajat ${DEFAULT_CUTOFF_YEAR}` })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Korkeakoulut tällä alalla" })).toHaveCount(0);
-  await expect(page.getByRole("link", { exact: true, name: "Turun yliopisto" })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Turun yliopisto" })).toHaveCount(0);
 
-  await page.getByRole("button", { name: "Turun yliopisto" }).click();
-
-  const schoolAccordion = page.getByRole("region", { name: "Turun yliopisto" });
-  await expect(schoolAccordion.getByRole("article").first()).toBeVisible();
-  await expect(schoolAccordion.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
+  const card = page.getByRole("article").filter({ hasText: "Turun yliopisto" }).first();
+  await expect(card).toBeVisible();
+  await expect(card.getByText("Alin hyväksytty pistemäärä").first()).toBeVisible();
 });
 
 test("/yo-pisterajat: switches kirjoituskerta and shows that round's cutoff", async ({ page }) => {

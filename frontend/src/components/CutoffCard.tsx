@@ -1,6 +1,8 @@
-import { Card, Heading, HStack, Separator, Stack, Text } from "@chakra-ui/react";
+import { Badge, Card, Heading, HStack, Link, Separator, Stack, Text } from "@chakra-ui/react";
+import { HiLocationMarker } from "react-icons/hi";
 import { cutoffRoundShortLabel } from "@/config/cutoffRounds";
 import type { ProgrammeWithRounds } from "@/lib/cutoffs";
+import { slugify } from "@/lib/slug";
 import { COLORS } from "@/theme";
 
 interface CutoffCardProps {
@@ -8,6 +10,7 @@ interface CutoffCardProps {
   headingLevel?: "h2" | "h3";
   showHeading?: boolean;
   showRound?: boolean;
+  schoolName?: string;
 }
 
 const scoreFormatter = new Intl.NumberFormat("fi-FI", {
@@ -57,6 +60,7 @@ export default function CutoffCard({
   headingLevel = "h2",
   showHeading = true,
   showRound = false,
+  schoolName,
 }: CutoffCardProps) {
   const sorted = [...programme.cutoffs].sort(
     (a, b) => b.startYear - a.startYear || b.startSeason.localeCompare(a.startSeason, "fi"),
@@ -65,22 +69,45 @@ export default function CutoffCard({
   return (
     <Card.Root as="article" size="md">
       {showHeading ? (
-        <Card.Header pb={3}>
-          <Heading as={headingLevel} fontSize={{ base: "xs", md: "md" }} fontWeight="semibold" textWrap="pretty">
-            {programme.name}
-          </Heading>
-          <Separator />
+        <Card.Header pb={4}>
+          <Stack gap={2}>
+            {schoolName ? (
+              <Link
+                alignSelf="flex-start"
+                fontSize={{ base: "xs", md: "sm" }}
+                fontWeight="semibold"
+                href={`/koulut/${slugify(schoolName)}/`}
+                textDecor="none"
+              >
+                <Badge bg="accent" color="onAccent" size="sm">
+                  <HiLocationMarker aria-hidden="true" /> {schoolName}
+                </Badge>
+              </Link>
+            ) : null}
+            <Heading
+              as={headingLevel}
+              fontSize={{ base: "sm", md: "lg" }}
+              fontWeight="semibold"
+              lineHeight="moderate"
+              textWrap="pretty"
+            >
+              {programme.name}
+            </Heading>
+          </Stack>
         </Card.Header>
       ) : null}
       <Card.Body pt={showHeading ? 0 : undefined}>
-        <Stack gap={1}>
-          {sorted.map((cutoff) => (
-            <CutoffRow
-              cutoff={cutoff}
-              key={`${cutoff.selectionMethod}-${cutoff.round}-${cutoff.startYear}-${cutoff.startSeason}-${cutoff.score}`}
-              showRound={showRound}
-            />
-          ))}
+        <Stack>
+          {showHeading ? <Separator /> : null}
+          <Stack gap={1}>
+            {sorted.map((cutoff) => (
+              <CutoffRow
+                cutoff={cutoff}
+                key={`${cutoff.selectionMethod}-${cutoff.round}-${cutoff.startYear}-${cutoff.startSeason}-${cutoff.score}`}
+                showRound={showRound}
+              />
+            ))}
+          </Stack>
         </Stack>
       </Card.Body>
     </Card.Root>
