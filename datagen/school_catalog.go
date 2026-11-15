@@ -36,7 +36,6 @@ var schoolShortNames = map[string]string{
 	"Vaasan ammattikorkeakoulu":          "VAMK",
 	"Yrkeshögskolan Arcada":              "Arcada",
 	"Yrkeshögskolan Novia":               "Novia",
-	"Åbo Akademi":                        "ÅA",
 	"Svenska handelshögskolan":           "Hanken",
 }
 

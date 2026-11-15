@@ -2,8 +2,8 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test } from "vitest";
 import type { ProgrammeWithRounds } from "@/lib/cutoffs";
-import { renderWithChakra } from "@/test/render";
 import SchoolProgrammeList from "@/pages/pisterajat/@ala/components/SchoolProgrammeList";
+import { renderWithChakra } from "@/test/render";
 
 const programmes: ProgrammeWithRounds[] = Array.from({ length: 45 }, (_, index) => ({
   name: `Koulutus ${index + 1}`,
