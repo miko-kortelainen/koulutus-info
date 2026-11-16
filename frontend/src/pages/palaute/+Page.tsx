@@ -3,7 +3,7 @@ import { type SubmitEvent, useState } from "react";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 
-const FORMSUBMIT_URL = "https://formsubmit.co/834cceb5eea9f272c02b5e0b16c11f18";
+const FORMSUBMIT_URL = "https://formsubmit.co/palaute@yhteishaku.app";
 
 export default function PalautePage() {
   const [message, setMessage] = useState("");
