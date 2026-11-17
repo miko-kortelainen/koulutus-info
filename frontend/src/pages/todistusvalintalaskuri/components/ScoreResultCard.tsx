@@ -158,12 +158,7 @@ function ScoreBreakdownDisclosure({
   );
 }
 
-function ScoreResultCard({
-  headingLevel = "h3",
-  result,
-  roundLabel,
-  showKoulutusala,
-}: ScoreResultCardProps) {
+function ScoreResultCard({ headingLevel = "h3", result, roundLabel, showKoulutusala }: ScoreResultCardProps) {
   const displayedScore = result.applicantScore;
   const scorePasses = displayedScore !== undefined && result.score <= displayedScore;
   const isQualified = scorePasses && result.kynnysehtoPassed !== false;

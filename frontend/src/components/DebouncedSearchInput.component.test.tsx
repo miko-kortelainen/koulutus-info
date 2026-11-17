@@ -24,3 +24,15 @@ test("updates the input immediately and publishes only the latest debounced valu
   expect(onChange).toHaveBeenCalledTimes(1);
   await waitFor(() => expect(onChange).toHaveBeenLastCalledWith(""));
 });
+
+test("supports optional label without onInput", async () => {
+  const user = userEvent.setup();
+  const onChange = vi.fn();
+  renderWithChakra(<DebouncedSearchInput label="Haku" onChange={onChange} placeholder="Hae toteutusta" />);
+  onChange.mockClear();
+
+  const input = screen.getByRole("textbox", { name: "Haku" });
+  expect(screen.getByText("Haku")).toBeVisible();
+  await user.type(input, "Aalto");
+  await waitFor(() => expect(onChange).toHaveBeenCalledExactlyOnceWith("Aalto"));
+});

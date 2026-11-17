@@ -159,8 +159,7 @@ const readStoredFilters = (): StoredFilters => {
     if (!isRecord(parsed) || parsed.version !== 1) return {};
 
     return {
-      isFirstTimeApplicant:
-        typeof parsed.isFirstTimeApplicant === "boolean" ? parsed.isFirstTimeApplicant : undefined,
+      isFirstTimeApplicant: typeof parsed.isFirstTimeApplicant === "boolean" ? parsed.isFirstTimeApplicant : undefined,
       sectorFilter: isSectorFilter(parsed.sectorFilter) ? parsed.sectorFilter : undefined,
       showOnlyQualified: typeof parsed.showOnlyQualified === "boolean" ? parsed.showOnlyQualified : undefined,
     };
@@ -526,12 +525,7 @@ export default function ScoreCalculatorPage() {
         <Text aria-live="polite" color="fg.muted" fontSize="xs" mt={-3} textAlign="right">
           {searchResults.length} {searchResults.length === 1 ? "hakutulos" : "hakutulosta"}
         </Text>
-        <ScoreResultList
-          key={resultListKey}
-          results={searchResults}
-          roundLabel={roundLabel}
-          showKoulutusala
-        />
+        <ScoreResultList key={resultListKey} results={searchResults} roundLabel={roundLabel} showKoulutusala />
       </Stack>
     );
 
@@ -619,11 +613,7 @@ export default function ScoreCalculatorPage() {
           />
         </Box>
       </Stack>
-      <DebouncedSearchInput
-        label="Haku"
-        onChange={handleSearchChange}
-        placeholder="Hae toteutusta tai korkeakoulua"
-      />
+      <DebouncedSearchInput label="Haku" onChange={handleSearchChange} placeholder="Hae toteutusta tai korkeakoulua" />
       {resultContent}
     </Stack>
   );

@@ -72,6 +72,42 @@ test("university program with a failed threshold and enough points shows Kynnyse
   expect(screen.queryByText(/Kynnysehto ei täyty:/)).not.toBeInTheDocument();
 });
 
+test("before calculation shows kynnysehto label when threshold exists", () => {
+  renderWithChakra(
+    <ScoreResultCard result={result({ kynnysehtoLabel: "Hyväksytty englannin koe." })} roundLabel="kevät 2026" />,
+  );
+
+  expect(screen.getByText(/Kynnysehto:/)).toBeVisible();
+  expect(screen.getByText(/Hyväksytty englannin koe\./)).toBeVisible();
+});
+
+test("program meeting both cutoff and threshold shows Pisteet riittävät and threshold label", () => {
+  renderWithChakra(
+    <ScoreResultCard
+      result={result({
+        applicantScore: 120,
+        kynnysehtoLabel: "Hyväksytty englannin koe.",
+        kynnysehtoPassed: true,
+      })}
+      roundLabel="kevät 2026"
+    />,
+  );
+
+  expect(screen.getByText("Pisteet riittävät")).toBeVisible();
+  expect(screen.getByText("Hyväksytty englannin koe.")).toBeVisible();
+  expect(screen.queryByText(/Kynnysehto täyttyy/)).not.toBeInTheDocument();
+});
+
+test("omits koulutusala metadata when showKoulutusala is false", () => {
+  renderWithChakra(<ScoreResultCard result={result({})} roundLabel="kevät 2026" />);
+  expect(screen.queryByText("Tekniikan alat")).not.toBeInTheDocument();
+});
+
+test("shows koulutusala metadata when showKoulutusala is true", () => {
+  renderWithChakra(<ScoreResultCard result={result({})} roundLabel="kevät 2026" showKoulutusala />);
+  expect(screen.getByText("Tekniikan alat")).toBeVisible();
+});
+
 test("AMK program without a threshold shows no kynnysehto line", () => {
   renderWithChakra(
     <ScoreResultCard result={result({ sector: "Ammattikorkeakoulukoulutus" })} roundLabel="kevät 2026" />,
