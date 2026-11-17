@@ -88,10 +88,6 @@ const FUSE_OPTIONS = {
   useExtendedSearch: true,
 };
 
-const scoreFormatter = new Intl.NumberFormat("fi-FI", {
-  maximumFractionDigits: 2,
-});
-
 function compareNames(a: ScoreResult, b: ScoreResult) {
   return a.programmeName.localeCompare(b.programmeName, "fi") || a.schoolName.localeCompare(b.schoolName, "fi");
 }
@@ -197,6 +193,7 @@ export default function ScoreCalculatorPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sectorFilter, setSectorFilter] = useState<SectorFilter>("all");
   const [sortOrder, setSortOrder] = useState<SortOption>("lowest_cutoff");
+  const [showOnlyQualified, setShowOnlyQualified] = useState(false);
   const programsQuery = useQuery({
     queryKey: ["calculator-programs", cutoffRound],
     queryFn: () => getInitialPrograms(cutoffRound),
@@ -211,12 +208,17 @@ export default function ScoreCalculatorPage() {
     () => [...(university ? flattenUniversityPrograms(university) : []), ...(amk ? flattenAmkPrograms(amk) : [])],
     [amk, university],
   );
-  const filteredResults = useMemo(
+  const applicantResults = useMemo(
     () =>
       selectApplicantResults(results, selectionMethod, isFirstTimeApplicant)
         .filter((result) => matchesSector(result, sectorFilter))
         .sort((a, b) => compareResults(a, b, sortOrder)),
     [isFirstTimeApplicant, results, sectorFilter, selectionMethod, sortOrder],
+  );
+  const onlyQualified = Boolean(calculation) && showOnlyQualified;
+  const filteredResults = useMemo(
+    () => (onlyQualified ? applicantResults.filter(qualifies) : applicantResults),
+    [applicantResults, onlyQualified],
   );
   const groups = useMemo(() => {
     const byAla = new Map<string, ScoreResult[]>();
@@ -243,15 +245,17 @@ export default function ScoreCalculatorPage() {
     const matchingIds = new Set(resultFuse.search(normalizedSearchTerm).map(({ item }) => item.id));
     return filteredResults.filter((result) => matchingIds.has(result.id));
   }, [filteredResults, normalizedSearchTerm, resultFuse]);
-  const totalCount = filteredResults.length;
-  const qualifiedCount = calculation ? filteredResults.filter(qualifies).length : 0;
   const resultsPending = (!calculation && programsQuery.isPending) || isRejoining;
   const resultsError = (!calculation && programsQuery.isError) || Boolean(rejoinError);
-  const resultsSuccess = Boolean(calculation) || programsQuery.isSuccess;
   const roundLabel = cutoffRoundShortLabel(cutoffRound);
-  const resultListKey = [cutoffRound, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
-  const displayedQualifiedCount = resultsSuccess && calculation ? qualifiedCount : "–";
-  const displayedTotalCount = resultsSuccess ? totalCount : "–";
+  const resultListKey = [
+    cutoffRound,
+    selectionMethod,
+    isFirstTimeApplicant,
+    sectorFilter,
+    sortOrder,
+    onlyQualified,
+  ].join(":");
 
   useWebMCP({
     name: "calculate_todistuspisteet",
@@ -445,31 +449,6 @@ export default function ScoreCalculatorPage() {
 
   const resultList = (
     <Stack aria-busy={resultsPending} gap={4} mt={{ base: 6, md: 10 }}>
-      <Stack aria-live="polite" gap={1}>
-        <Box borderColor="fg.accent" borderRadius={8} borderWidth="1px" mb={{ base: 6, md: 10 }} p={4}>
-          <Heading as="h2" size="lg" textAlign="center">
-            {calculation?.amk.score !== undefined ? (
-              <>
-                <Text as="span" color="fg.accent">
-                  {calculation.selectionMethod === "Todistusvalinta (YO)" ? "~" : null}
-                  {scoreFormatter.format(calculation.amk.score)}
-                </Text>{" "}
-                /{" "}
-                <Text as="span" color="fg.muted">
-                  {scoreFormatter.format(calculation.amk.maximumScore)}
-                </Text>{" "}
-                pistettä
-              </>
-            ) : (
-              "Ei vielä laskettu"
-            )}{" "}
-          </Heading>
-          <Text color="fg.muted" fontSize="xs" textAlign="center">
-            Pisteesi riittää arviolta {displayedQualifiedCount} / {displayedTotalCount} toteutukseen
-          </Text>
-        </Box>
-      </Stack>
-
       <HStack id="vertaa-pisterajoihin">
         <Separator bg="fg.accent" flex={1} size="md" />
         <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" textAlign="center">
@@ -506,17 +485,31 @@ export default function ScoreCalculatorPage() {
         </Box>
       </Stack>
       <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta tai korkeakoulua" value={searchTerm} />
-      <Checkbox.Root
-        checked={isFirstTimeApplicant}
-        onCheckedChange={({ checked }) => setIsFirstTimeApplicant(checked === true)}
-        size="sm"
-      >
-        <Checkbox.HiddenInput />
-        <Checkbox.Control>
-          <Checkbox.Indicator />
-        </Checkbox.Control>
-        <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
-      </Checkbox.Root>
+      <HStack flexWrap="wrap" gap={6}>
+        <Checkbox.Root
+          checked={isFirstTimeApplicant}
+          onCheckedChange={({ checked }) => setIsFirstTimeApplicant(checked === true)}
+          size="sm"
+        >
+          <Checkbox.HiddenInput />
+          <Checkbox.Control>
+            <Checkbox.Indicator />
+          </Checkbox.Control>
+          <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
+        </Checkbox.Root>
+        <Checkbox.Root
+          checked={onlyQualified}
+          disabled={!calculation}
+          onCheckedChange={({ checked }) => setShowOnlyQualified(checked === true)}
+          size="sm"
+        >
+          <Checkbox.HiddenInput />
+          <Checkbox.Control>
+            <Checkbox.Indicator />
+          </Checkbox.Control>
+          <Checkbox.Label>Näytä vain riittävät</Checkbox.Label>
+        </Checkbox.Root>
+      </HStack>
       {resultContent}
     </Stack>
   );
@@ -539,6 +532,7 @@ export default function ScoreCalculatorPage() {
           onModeChange={(nextSelectionMethod) => {
             setSelectionMethod(nextSelectionMethod);
             setCalculation(null);
+            setShowOnlyQualified(false);
           }}
           onSubmit={(next) => {
             setCalculation(next);

@@ -344,7 +344,7 @@ test("/hakijamaarat: shows the update date and source below pagination", async (
 
 test("/todistusvalintalaskuri: searches active cutoffs", async ({ page }) => {
   await openCalculator(page);
-  await expect(page.getByText(/Pisteesi riittää arviolta – \/ \d+ toteutukseen/)).toBeVisible();
+  await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeDisabled();
   await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
 
   const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
@@ -413,9 +413,10 @@ test("/todistusvalintalaskuri: sorts grouped results", async ({ page }) => {
       const cutoffScores = (
         await tekniikkaAccordion
           .getByRole("article")
-          .getByText(/^– \/ /)
+          .getByText(/Pisteraja \(/)
+          .locator("..")
           .allTextContents()
-      ).map((text) => Number(text.split("/")[1].trim().replace(",", ".")));
+      ).map((text) => Number(text.replace(/^.*\)/, "").trim().replace(",", ".")));
       return (
         cutoffScores.length > 1 && cutoffScores.every((score, index) => index === 0 || cutoffScores[index - 1] >= score)
       );
@@ -467,15 +468,15 @@ test("/todistusvalintalaskuri: compares calculated YO points with cutoffs", asyn
 
   await page.getByRole("button", { name: "Laske pisteet" }).click();
 
-  await expect(page.getByText(/~106 \/ 198 pistettä/)).toBeVisible();
-  await expect(page.getByText(/Pisteesi riittää arviolta \d+ \/ \d+ toteutukseen/)).toBeVisible();
+  await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeEnabled();
 
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
-  await expect(tekniikkaAccordion.getByText(/Pisteesi \/ alin hyväksytty pistemäärä/).first()).toBeVisible();
+  await expect(tekniikkaAccordion.getByText(/Pisteraja \(/).first()).toBeVisible();
+  await expect(tekniikkaAccordion.getByRole("article").getByText("Pisteesi").first()).toBeVisible();
   await expect(
     tekniikkaAccordion
       .getByRole("article")
-      .getByText(/^106 \/ /)
+      .getByText(/^106$/)
       .first(),
   ).toBeVisible();
 });
@@ -489,14 +490,14 @@ for (const subject of ["Suomi toisena kielenä ja kirjallisuus (S2)", "Ruotsi to
       await page.getByRole("button", { name: `Poista aine ${row}` }).click();
     }
     await page.getByRole("button", { name: "Laske pisteet / näytä koulutukset" }).click();
-    await expect(page.getByText(/~34 \/ 198 pistettä/)).toBeVisible();
+    await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeEnabled();
 
     await page.reload();
     await waitForCalculatorHydration(page);
     await expectSelectedOption(page, "Aine 1", subject);
     await expectSelectedOption(page, "Aineen 1 arvosana", "M");
     await page.getByRole("button", { name: "Laske pisteet / näytä koulutukset" }).click();
-    await expect(page.getByText(/~34 \/ 198 pistettä/)).toBeVisible();
+    await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeEnabled();
   });
 }
 

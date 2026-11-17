@@ -16,45 +16,60 @@ const result = (overrides: Partial<ScoreResult>): ScoreResult => ({
   ...overrides,
 });
 
-test("university program without a threshold hides Ei kynnysehtoa until calculated", () => {
+test("before calculation shows cutoff without applicant score or status badge", () => {
   renderWithChakra(<ScoreResultCard result={result({})} roundLabel="kevät 2026" />);
 
-  expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
+  expect(screen.getByText("Pisteraja (kevät 2026)")).toBeVisible();
+  expect(screen.getByText("100")).toBeVisible();
+  expect(screen.queryByText("Pisteesi")).not.toBeInTheDocument();
+  expect(screen.queryByText(/Pisteet (riittävät|eivät riitä)/)).not.toBeInTheDocument();
+  expect(screen.queryByText(/Kynnysehto/)).not.toBeInTheDocument();
 });
 
-test("university program without a threshold shows Ei kynnysehtoa after calculation", () => {
+test("university program without a threshold shows no kynnysehto note after calculation", () => {
   renderWithChakra(<ScoreResultCard result={result({ applicantScore: 120 })} roundLabel="kevät 2026" />);
 
-  expect(screen.getByText("Ei kynnysehtoa.")).toBeVisible();
-  expect(screen.queryByText("Kynnysehto täyttyy.")).not.toBeInTheDocument();
-  expect(screen.queryByText("Kynnysehto ei täyty.")).not.toBeInTheDocument();
+  expect(screen.getByText("Pisteet riittävät")).toBeVisible();
+  expect(screen.getByText("Pisteesi")).toBeVisible();
+  expect(screen.getByText("120")).toBeVisible();
+  expect(screen.getByText("Pisteraja (kevät 2026)")).toBeVisible();
+  expect(screen.getByText("100")).toBeVisible();
+  expect(screen.queryByText(/Kynnysehto/)).not.toBeInTheDocument();
 });
 
-test("university program with a passed threshold shows the label and täyttyy", () => {
+test("program below cutoff shows Pisteesi eivät riitä even if kynnysehto passes", () => {
   renderWithChakra(
     <ScoreResultCard
-      result={result({ kynnysehtoLabel: "Hyväksytty englannin koe.", kynnysehtoPassed: true })}
+      result={result({
+        applicantScore: 80,
+        kynnysehtoLabel: "Hyväksytty englannin koe.",
+        kynnysehtoPassed: true,
+      })}
       roundLabel="kevät 2026"
     />,
   );
 
+  expect(screen.getByText("Pisteesi eivät riitä")).toBeVisible();
+  expect(screen.queryByText("Pisteet riittävät")).not.toBeInTheDocument();
   expect(screen.getByText("Hyväksytty englannin koe.")).toBeVisible();
-  expect(screen.getByText("Kynnysehto täyttyy.")).toBeVisible();
-  expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
+  expect(screen.queryByText(/Kynnysehto täyttyy/)).not.toBeInTheDocument();
 });
 
-test("university program with a failed threshold shows status before the label", () => {
+test("university program with a failed threshold and enough points shows Kynnysehto ei täyty", () => {
   renderWithChakra(
     <ScoreResultCard
-      result={result({ kynnysehtoLabel: "Hyväksytty englannin koe.", kynnysehtoPassed: false })}
+      result={result({
+        applicantScore: 120,
+        kynnysehtoLabel: "Hyväksytty englannin koe.",
+        kynnysehtoPassed: false,
+      })}
       roundLabel="kevät 2026"
     />,
   );
 
-  const status = screen.getByText("Kynnysehto ei täyty.");
-  const label = screen.getByText("Hyväksytty englannin koe.");
-  expect(status.compareDocumentPosition(label) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-  expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
+  expect(screen.getByText("Kynnysehto ei täyty", { selector: ".chakra-badge" })).toBeVisible();
+  expect(screen.getByText("Hyväksytty englannin koe.")).toBeVisible();
+  expect(screen.queryByText(/Kynnysehto ei täyty:/)).not.toBeInTheDocument();
 });
 
 test("AMK program without a threshold shows no kynnysehto line", () => {
@@ -62,7 +77,6 @@ test("AMK program without a threshold shows no kynnysehto line", () => {
     <ScoreResultCard result={result({ sector: "Ammattikorkeakoulukoulutus" })} roundLabel="kevät 2026" />,
   );
 
-  expect(screen.queryByText("Ei kynnysehtoa.")).not.toBeInTheDocument();
   expect(screen.queryByText(/Kynnysehto/)).not.toBeInTheDocument();
 });
 
