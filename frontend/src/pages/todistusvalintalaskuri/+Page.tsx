@@ -1,7 +1,8 @@
-import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Span, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
+import { HiOutlineFilter } from "react-icons/hi";
 import { useWebMCP } from "use-webmcp-tool";
 import OptionSelect from "@/components/OptionSelect";
 import SearchInput from "@/components/SearchInput";
@@ -52,12 +53,6 @@ import type { ScoreType } from "@/pages/todistusvalintalaskuri/scoreTypes";
 type SectorFilter = "all" | "university" | "amk";
 type SortOption = "lowest_cutoff" | "highest_cutoff" | "name_asc" | "name_desc";
 
-const SECTOR_OPTIONS: { label: string; value: SectorFilter }[] = [
-  { label: "Kaikki korkeakoulut", value: "all" },
-  { label: "Vain yliopistot", value: "university" },
-  { label: "Vain AMK", value: "amk" },
-];
-
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Alin pisteraja", value: "lowest_cutoff" },
   { label: "Korkein pisteraja", value: "highest_cutoff" },
@@ -66,7 +61,7 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
 ];
 
 const ROUND_OPTIONS = CALCULATOR_CUTOFF_ROUNDS.map((round) => ({
-  label: cutoffRoundLabel(round),
+  label: `${cutoffRoundLabel(round)} pisterajat`,
   value: round,
 }));
 
@@ -109,6 +104,33 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
   if (sectorFilter === "university") return result.sector === "Yliopistokoulutus";
   if (sectorFilter === "amk") return result.sector === "Ammattikorkeakoulukoulutus";
   return true;
+}
+
+function FilterCheckbox({
+  checked,
+  disabled,
+  label,
+  onChange,
+}: {
+  checked: boolean;
+  disabled?: boolean;
+  label: string;
+  onChange: (checked: boolean) => void;
+}) {
+  return (
+    <Checkbox.Root
+      checked={checked}
+      disabled={disabled}
+      onCheckedChange={({ checked: next }) => onChange(next === true)}
+      size={{ base: "md", md: "sm" }}
+    >
+      <Checkbox.HiddenInput />
+      <Checkbox.Control>
+        <Checkbox.Indicator />
+      </Checkbox.Control>
+      <Checkbox.Label>{label}</Checkbox.Label>
+    </Checkbox.Root>
+  );
 }
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
@@ -248,6 +270,7 @@ export default function ScoreCalculatorPage() {
   const resultsPending = (!calculation && programsQuery.isPending) || isRejoining;
   const resultsError = (!calculation && programsQuery.isError) || Boolean(rejoinError);
   const roundLabel = cutoffRoundShortLabel(cutoffRound);
+  const activeFilterCount = [isFirstTimeApplicant, onlyQualified, sectorFilter !== "all"].filter(Boolean).length;
   const resultListKey = [
     cutoffRound,
     selectionMethod,
@@ -457,21 +480,13 @@ export default function ScoreCalculatorPage() {
         <Separator bg="fg.accent" flex={1} size="md" />
       </HStack>
 
-      <Stack direction={{ base: "column", lg: "row" }} gap={6} width="full">
+      <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
         <Box flex={1}>
           <OptionSelect<CutoffRound>
             items={ROUND_OPTIONS}
             label="Yhteishaku"
             onChange={handleRoundChange}
             value={cutoffRound}
-          />
-        </Box>
-        <Box flex={1}>
-          <OptionSelect<SectorFilter>
-            items={SECTOR_OPTIONS}
-            label="Korkeakoulutyyppi"
-            onChange={setSectorFilter}
-            value={sectorFilter}
           />
         </Box>
         <Box flex={1}>
@@ -485,31 +500,44 @@ export default function ScoreCalculatorPage() {
         </Box>
       </Stack>
       <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta tai korkeakoulua" value={searchTerm} />
-      <HStack flexWrap="wrap" gap={6}>
-        <Checkbox.Root
-          checked={isFirstTimeApplicant}
-          onCheckedChange={({ checked }) => setIsFirstTimeApplicant(checked === true)}
-          size="sm"
-        >
-          <Checkbox.HiddenInput />
-          <Checkbox.Control>
-            <Checkbox.Indicator />
-          </Checkbox.Control>
-          <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
-        </Checkbox.Root>
-        <Checkbox.Root
-          checked={onlyQualified}
-          disabled={!calculation}
-          onCheckedChange={({ checked }) => setShowOnlyQualified(checked === true)}
-          size="sm"
-        >
-          <Checkbox.HiddenInput />
-          <Checkbox.Control>
-            <Checkbox.Indicator />
-          </Checkbox.Control>
-          <Checkbox.Label>Näytä vain riittävät</Checkbox.Label>
-        </Checkbox.Root>
-      </HStack>
+      <Accordion.Root collapsible size={{ base: "md", md: "sm" }}>
+        <Accordion.Item value="suodattimet">
+          <Accordion.ItemTrigger py={{ base: 3.5, md: 2 }}>
+            <HStack flex="1" gap={2}>
+              <HiOutlineFilter aria-hidden="true" />
+              <Span>Suodattimet{activeFilterCount > 0 ? ` (${activeFilterCount})` : ""}</Span>
+            </HStack>
+            <Accordion.ItemIndicator />
+          </Accordion.ItemTrigger>
+          <Accordion.ItemContent>
+            <Accordion.ItemBody>
+              <Stack gap={{ base: 4, md: 3 }}>
+                <FilterCheckbox
+                  checked={isFirstTimeApplicant}
+                  label="Olen ensikertalainen"
+                  onChange={setIsFirstTimeApplicant}
+                />
+                <FilterCheckbox
+                  checked={onlyQualified}
+                  disabled={!calculation}
+                  label="Vain kohteet, joihin pisteesi riittävät"
+                  onChange={setShowOnlyQualified}
+                />
+                <FilterCheckbox
+                  checked={sectorFilter === "amk"}
+                  label="Vain AMK"
+                  onChange={(checked) => setSectorFilter(checked ? "amk" : "all")}
+                />
+                <FilterCheckbox
+                  checked={sectorFilter === "university"}
+                  label="Vain yliopistot"
+                  onChange={(checked) => setSectorFilter(checked ? "university" : "all")}
+                />
+              </Stack>
+            </Accordion.ItemBody>
+          </Accordion.ItemContent>
+        </Accordion.Item>
+      </Accordion.Root>
       {resultContent}
     </Stack>
   );

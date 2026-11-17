@@ -344,8 +344,10 @@ test("/hakijamaarat: shows the update date and source below pagination", async (
 
 test("/todistusvalintalaskuri: searches active cutoffs", async ({ page }) => {
   await openCalculator(page);
-  await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeDisabled();
-  await expectSelectedOption(page, "Korkeakoulutyyppi", "Kaikki korkeakoulut");
+  await page.getByRole("button", { name: "Suodattimet" }).click();
+  await expect(page.getByRole("checkbox", { name: "Vain kohteet, joihin pisteesi riittävät" })).toBeDisabled();
+  await expect(page.getByRole("checkbox", { name: "Vain AMK" })).not.toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Vain yliopistot" })).not.toBeChecked();
 
   const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
   await resultSearch.fill("Turun yliopisto");
@@ -368,6 +370,7 @@ test("/todistusvalintalaskuri: searches active cutoffs", async ({ page }) => {
 
 test("/todistusvalintalaskuri: switches to first-time applicant cutoffs", async ({ page }) => {
   await openCalculator(page);
+  await page.getByRole("button", { name: "Suodattimet" }).click();
   const firstTimeApplicantCheckbox = page.getByRole("checkbox", {
     name: "Olen ensikertalainen",
   });
@@ -384,7 +387,8 @@ test("/todistusvalintalaskuri: switches to first-time applicant cutoffs", async 
 
 test("/todistusvalintalaskuri: filters university results and paginates a group", async ({ page }) => {
   await openCalculator(page);
-  await selectOption(page, "Korkeakoulutyyppi", "Vain yliopistot");
+  await page.getByRole("button", { name: "Suodattimet" }).click();
+  await page.getByRole("checkbox", { name: "Vain yliopistot" }).click();
   const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset alat/);
   await expect(humanistisetAccordion.getByRole("article")).toHaveCount(20);
   await expect(humanistisetAccordion.getByText(/Näytetään 20 \/ \d+/)).toBeVisible();
@@ -468,7 +472,8 @@ test("/todistusvalintalaskuri: compares calculated YO points with cutoffs", asyn
 
   await page.getByRole("button", { name: "Laske pisteet" }).click();
 
-  await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeEnabled();
+  await page.getByRole("button", { name: "Suodattimet" }).click();
+  await expect(page.getByRole("checkbox", { name: "Vain kohteet, joihin pisteesi riittävät" })).toBeEnabled();
 
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await expect(tekniikkaAccordion.getByText(/Pisteraja \(/).first()).toBeVisible();
@@ -490,14 +495,16 @@ for (const subject of ["Suomi toisena kielenä ja kirjallisuus (S2)", "Ruotsi to
       await page.getByRole("button", { name: `Poista aine ${row}` }).click();
     }
     await page.getByRole("button", { name: "Laske pisteet / näytä koulutukset" }).click();
-    await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeEnabled();
+    await page.getByRole("button", { name: "Suodattimet" }).click();
+    await expect(page.getByRole("checkbox", { name: "Vain kohteet, joihin pisteesi riittävät" })).toBeEnabled();
 
     await page.reload();
     await waitForCalculatorHydration(page);
     await expectSelectedOption(page, "Aine 1", subject);
     await expectSelectedOption(page, "Aineen 1 arvosana", "M");
     await page.getByRole("button", { name: "Laske pisteet / näytä koulutukset" }).click();
-    await expect(page.getByRole("checkbox", { name: "Näytä vain riittävät" })).toBeEnabled();
+    await page.getByRole("button", { name: "Suodattimet" }).click();
+    await expect(page.getByRole("checkbox", { name: "Vain kohteet, joihin pisteesi riittävät" })).toBeEnabled();
   });
 }
 
