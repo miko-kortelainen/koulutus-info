@@ -13,6 +13,7 @@ import {
   Table,
   Text,
 } from "@chakra-ui/react";
+import { memo } from "react";
 import { HiCheckCircle, HiChevronDown, HiExclamationCircle } from "react-icons/hi";
 import type { ScoreResult } from "@/pages/todistusvalintalaskuri/lib/scoreResults";
 import { COLORS } from "@/theme";
@@ -157,7 +158,7 @@ function ScoreBreakdownDisclosure({
   );
 }
 
-export default function ScoreResultCard({
+function ScoreResultCard({
   headingLevel = "h3",
   result,
   roundLabel,
@@ -245,3 +246,5 @@ export default function ScoreResultCard({
     </Card.Root>
   );
 }
+
+export default memo(ScoreResultCard);

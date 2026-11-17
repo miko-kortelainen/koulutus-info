@@ -5,7 +5,7 @@ import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import type { CutoffIndexData } from "@/pages/pisterajat/+data";
-import { alaIcon } from "@/pages/pisterajat/alaIcons";
+import { alaIcon } from "@/components/alaIcons";
 import { COLORS } from "@/theme";
 
 export default function CutoffIndexPage() {

@@ -349,7 +349,7 @@ test("/todistusvalintalaskuri: searches active cutoffs", async ({ page }) => {
   await expect(page.getByRole("checkbox", { name: "Vain AMK" })).not.toBeChecked();
   await expect(page.getByRole("checkbox", { name: "Vain yliopistot" })).not.toBeChecked();
 
-  const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
+  const resultSearch = page.getByRole("textbox", { name: "Haku" });
   await resultSearch.fill("Turun yliopisto");
   await expect(page.getByText(/\d+ hakutulosta/)).toBeVisible();
   await expect(page.getByRole("article").getByText("Turun yliopisto").first()).toBeVisible();
@@ -374,7 +374,7 @@ test("/todistusvalintalaskuri: switches to first-time applicant cutoffs", async 
   const firstTimeApplicantCheckbox = page.getByRole("checkbox", {
     name: "Olen ensikertalainen",
   });
-  const resultSearch = page.getByRole("textbox", { name: "Hae toteutusta tai korkeakoulua" });
+  const resultSearch = page.getByRole("textbox", { name: "Haku" });
   await resultSearch.fill("Pedagogik (undervisning på svenska), pedagogie kandidat");
 
   await expect(firstTimeApplicantCheckbox).toBeChecked();

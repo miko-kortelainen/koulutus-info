@@ -1,5 +1,5 @@
 import { Box, Button, Stack, Tabs, Text } from "@chakra-ui/react";
-import { type SubmitEvent, useEffect, useRef, useState } from "react";
+import { memo, type SubmitEvent, useEffect, useRef, useState } from "react";
 import { HiOutlineCalculator } from "react-icons/hi";
 import type { CutoffRound } from "@/config/cutoffRounds";
 import AmmForm, {
@@ -79,7 +79,7 @@ const writeStoredForms = (next: Omit<StoredForms, "version">) => {
   }
 };
 
-export default function ScoreForm({ applied, onModeChange, onSubmit, round }: ScoreFormProps) {
+function ScoreForm({ applied, onModeChange, onSubmit, round }: ScoreFormProps) {
   const [mode, setMode] = useState<ScoreType>("Todistusvalinta (YO)");
   const [yoState, setYoState] = useState(emptyYoFormState());
   const [yoErrors, setYoErrors] = useState<YoFormErrors>({});
@@ -244,3 +244,5 @@ export default function ScoreForm({ applied, onModeChange, onSubmit, round }: Sc
     </form>
   );
 }
+
+export default memo(ScoreForm);
