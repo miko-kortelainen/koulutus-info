@@ -1,10 +1,12 @@
-import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Alert, Box, Checkbox, Heading, HStack, Link, Separator, Span, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import Fuse from "fuse.js";
-import { useMemo, useState } from "react";
+import { startTransition, useCallback, useEffect, useMemo, useState } from "react";
+import { HiOutlineFilter } from "react-icons/hi";
 import { useWebMCP } from "use-webmcp-tool";
+import { alaIcon } from "@/components/alaIcons";
+import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import OptionSelect from "@/components/OptionSelect";
-import SearchInput from "@/components/SearchInput";
 import {
   CALCULATOR_CUTOFF_ROUNDS,
   type CutoffRound,
@@ -12,7 +14,6 @@ import {
   cutoffRoundShortLabel,
   DEFAULT_CUTOFF_ROUND,
 } from "@/config/cutoffRounds";
-import useDebounce from "@/hooks/useDebounce";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import {
@@ -48,15 +49,10 @@ import {
 } from "@/pages/todistusvalintalaskuri/lib/yoForm";
 import { YO_GRADES, type YoGrade } from "@/pages/todistusvalintalaskuri/lib/yoScoring";
 import type { ScoreType } from "@/pages/todistusvalintalaskuri/scoreTypes";
+import { COLORS } from "@/theme";
 
 type SectorFilter = "all" | "university" | "amk";
 type SortOption = "lowest_cutoff" | "highest_cutoff" | "name_asc" | "name_desc";
-
-const SECTOR_OPTIONS: { label: string; value: SectorFilter }[] = [
-  { label: "Kaikki korkeakoulut", value: "all" },
-  { label: "Vain yliopistot", value: "university" },
-  { label: "Vain AMK", value: "amk" },
-];
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
   { label: "Alin pisteraja", value: "lowest_cutoff" },
@@ -66,7 +62,7 @@ const SORT_OPTIONS: { label: string; value: SortOption }[] = [
 ];
 
 const ROUND_OPTIONS = CALCULATOR_CUTOFF_ROUNDS.map((round) => ({
-  label: cutoffRoundLabel(round),
+  label: `${cutoffRoundLabel(round)} pisterajat`,
   value: round,
 }));
 
@@ -87,10 +83,6 @@ const FUSE_OPTIONS = {
   minMatchCharLength: 2,
   useExtendedSearch: true,
 };
-
-const scoreFormatter = new Intl.NumberFormat("fi-FI", {
-  maximumFractionDigits: 2,
-});
 
 function compareNames(a: ScoreResult, b: ScoreResult) {
   return a.programmeName.localeCompare(b.programmeName, "fi") || a.schoolName.localeCompare(b.schoolName, "fi");
@@ -115,8 +107,76 @@ function matchesSector(result: ScoreResult, sectorFilter: SectorFilter) {
   return true;
 }
 
+function FilterCheckbox({
+  checked,
+  disabled,
+  label,
+  onChange,
+}: {
+  checked: boolean;
+  disabled?: boolean;
+  label: string;
+  onChange: (checked: boolean) => void;
+}) {
+  return (
+    <Checkbox.Root
+      checked={checked}
+      disabled={disabled}
+      onCheckedChange={({ checked: next }) => onChange(next === true)}
+      size="sm"
+    >
+      <Checkbox.HiddenInput />
+      <Checkbox.Control>
+        <Checkbox.Indicator />
+      </Checkbox.Control>
+      <Checkbox.Label>{label}</Checkbox.Label>
+    </Checkbox.Root>
+  );
+}
+
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
+
+const FILTERS_STORAGE_KEY = "yhteishaku:pistelaskuri-suodattimet";
+
+interface StoredFilters {
+  isFirstTimeApplicant?: boolean;
+  sectorFilter?: SectorFilter;
+  showOnlyQualified?: boolean;
+}
+
+const isSectorFilter = (value: unknown): value is SectorFilter =>
+  value === "all" || value === "university" || value === "amk";
+
+const readStoredFilters = (): StoredFilters => {
+  if (typeof window === "undefined") return {};
+
+  try {
+    const raw = window.localStorage.getItem(FILTERS_STORAGE_KEY);
+    if (!raw) return {};
+
+    const parsed: unknown = JSON.parse(raw);
+    if (!isRecord(parsed) || parsed.version !== 1) return {};
+
+    return {
+      isFirstTimeApplicant: typeof parsed.isFirstTimeApplicant === "boolean" ? parsed.isFirstTimeApplicant : undefined,
+      sectorFilter: isSectorFilter(parsed.sectorFilter) ? parsed.sectorFilter : undefined,
+      showOnlyQualified: typeof parsed.showOnlyQualified === "boolean" ? parsed.showOnlyQualified : undefined,
+    };
+  } catch {
+    return {};
+  }
+};
+
+const writeStoredFilters = (next: StoredFilters) => {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify({ version: 1, ...readStoredFilters(), ...next }));
+  } catch {
+    // Storage is an optional enhancement; filtering should still work if it is unavailable.
+  }
+};
 
 function isCutoffRound(value: unknown): value is CutoffRound {
   return typeof value === "string" && (CALCULATOR_CUTOFF_ROUNDS as readonly string[]).includes(value);
@@ -197,6 +257,14 @@ export default function ScoreCalculatorPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sectorFilter, setSectorFilter] = useState<SectorFilter>("all");
   const [sortOrder, setSortOrder] = useState<SortOption>("lowest_cutoff");
+  const [showOnlyQualified, setShowOnlyQualified] = useState(false);
+
+  useEffect(() => {
+    const storedFilters = readStoredFilters();
+    if (storedFilters.isFirstTimeApplicant !== undefined) setIsFirstTimeApplicant(storedFilters.isFirstTimeApplicant);
+    if (storedFilters.sectorFilter !== undefined) setSectorFilter(storedFilters.sectorFilter);
+    if (storedFilters.showOnlyQualified !== undefined) setShowOnlyQualified(storedFilters.showOnlyQualified);
+  }, []);
   const programsQuery = useQuery({
     queryKey: ["calculator-programs", cutoffRound],
     queryFn: () => getInitialPrograms(cutoffRound),
@@ -211,12 +279,17 @@ export default function ScoreCalculatorPage() {
     () => [...(university ? flattenUniversityPrograms(university) : []), ...(amk ? flattenAmkPrograms(amk) : [])],
     [amk, university],
   );
-  const filteredResults = useMemo(
+  const applicantResults = useMemo(
     () =>
       selectApplicantResults(results, selectionMethod, isFirstTimeApplicant)
         .filter((result) => matchesSector(result, sectorFilter))
         .sort((a, b) => compareResults(a, b, sortOrder)),
     [isFirstTimeApplicant, results, sectorFilter, selectionMethod, sortOrder],
+  );
+  const onlyQualified = Boolean(calculation) && showOnlyQualified;
+  const filteredResults = useMemo(
+    () => (onlyQualified ? applicantResults.filter(qualifies) : applicantResults),
+    [applicantResults, onlyQualified],
   );
   const groups = useMemo(() => {
     const byAla = new Map<string, ScoreResult[]>();
@@ -234,8 +307,7 @@ export default function ScoreCalculatorPage() {
         qualifiedCount: calculation ? alaResults.filter(qualifies).length : undefined,
       }));
   }, [calculation, filteredResults]);
-  const debouncedSearchTerm = useDebounce(searchTerm, 300);
-  const normalizedSearchTerm = debouncedSearchTerm.trim();
+  const normalizedSearchTerm = searchTerm.trim();
   const resultFuse = useMemo(() => new Fuse(filteredResults, FUSE_OPTIONS), [filteredResults]);
   const searchResults = useMemo(() => {
     if (!normalizedSearchTerm) return [];
@@ -243,15 +315,41 @@ export default function ScoreCalculatorPage() {
     const matchingIds = new Set(resultFuse.search(normalizedSearchTerm).map(({ item }) => item.id));
     return filteredResults.filter((result) => matchingIds.has(result.id));
   }, [filteredResults, normalizedSearchTerm, resultFuse]);
-  const totalCount = filteredResults.length;
-  const qualifiedCount = calculation ? filteredResults.filter(qualifies).length : 0;
+  const handleSearchChange = useCallback((value: string) => {
+    startTransition(() => setSearchTerm(value));
+  }, []);
+  const handleModeChange = useCallback((nextSelectionMethod: ScoreType) => {
+    setSelectionMethod(nextSelectionMethod);
+    setCalculation(null);
+  }, []);
+  const handleFirstTimeChange = useCallback((checked: boolean) => {
+    setIsFirstTimeApplicant(checked);
+    writeStoredFilters({ isFirstTimeApplicant: checked });
+  }, []);
+  const handleOnlyQualifiedChange = useCallback((checked: boolean) => {
+    setShowOnlyQualified(checked);
+    writeStoredFilters({ showOnlyQualified: checked });
+  }, []);
+  const handleSectorFilterChange = useCallback((next: SectorFilter) => {
+    setSectorFilter(next);
+    writeStoredFilters({ sectorFilter: next });
+  }, []);
+  const handleFormSubmit = useCallback((next: Calculation) => {
+    setCalculation(next);
+    document.getElementById("vertaa-pisterajoihin")?.scrollIntoView({ behavior: "smooth" });
+  }, []);
   const resultsPending = (!calculation && programsQuery.isPending) || isRejoining;
   const resultsError = (!calculation && programsQuery.isError) || Boolean(rejoinError);
-  const resultsSuccess = Boolean(calculation) || programsQuery.isSuccess;
   const roundLabel = cutoffRoundShortLabel(cutoffRound);
-  const resultListKey = [cutoffRound, selectionMethod, isFirstTimeApplicant, sectorFilter, sortOrder].join(":");
-  const displayedQualifiedCount = resultsSuccess && calculation ? qualifiedCount : "–";
-  const displayedTotalCount = resultsSuccess ? totalCount : "–";
+  const activeFilterCount = [isFirstTimeApplicant, onlyQualified, sectorFilter !== "all"].filter(Boolean).length;
+  const resultListKey = [
+    cutoffRound,
+    selectionMethod,
+    isFirstTimeApplicant,
+    sectorFilter,
+    sortOrder,
+    onlyQualified,
+  ].join(":");
 
   useWebMCP({
     name: "calculate_todistuspisteet",
@@ -367,43 +465,53 @@ export default function ScoreCalculatorPage() {
 
   const resultAccordion = (
     <Accordion.Root collapsible display="flex" flexDirection="column" gap={3} lazyMount multiple size="md">
-      {groups.map((group) => (
-        <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
-          <Heading as="h3" size="xs">
-            <Accordion.ItemTrigger py={4}>
-              <HStack gap={0} width="100%">
-                <Text flex={{ base: 4.5, md: 10 }} fontWeight="semibold" textAlign="start">
-                  {group.koulutusala}
-                </Text>
+      {groups.map((group) => {
+        const Icon = alaIcon(group.koulutusala);
+        return (
+          <Accordion.Item key={group.koulutusala} value={group.koulutusala}>
+            <Heading as="h3" size="xs">
+              <Accordion.ItemTrigger py={4}>
+                <HStack gap={2} width="100%">
+                  <HStack flex={{ base: 4.5, md: 10 }} gap={2.5} minW={0}>
+                    {Icon ? (
+                      <Span aria-hidden="true" color="fg.accent" display="inline-flex" flexShrink={0}>
+                        <Icon />
+                      </Span>
+                    ) : null}
+                    <Text fontWeight="semibold" textAlign="start">
+                      {group.koulutusala}
+                    </Text>
+                  </HStack>
 
-                <HStack flex={1} justifyContent="space-between">
-                  <Text
-                    color={(group.qualifiedCount ?? 0) > 0 ? "fg.accent" : "fg"}
-                    fontSize="sm"
-                    textDecor={(group.qualifiedCount ?? 0) > 0 ? "underline" : ""}
-                  >
-                    {group.qualifiedCount ?? "–"}
-                  </Text>
-                  <Text color="fg.muted" fontSize="sm" textWrap="nowrap">
-                    / {group.results.length}
-                  </Text>
+                  <HStack flex={1} justifyContent="space-between">
+                    <Text
+                      color={(group.qualifiedCount ?? 0) > 0 ? "fg.accent" : "fg"}
+                      fontSize="sm"
+                      textDecor={(group.qualifiedCount ?? 0) > 0 ? "underline" : ""}
+                    >
+                      {group.qualifiedCount ?? "–"}
+                    </Text>
+                    <Text color="fg.muted" fontSize="sm" textWrap="nowrap">
+                      / {group.results.length}
+                    </Text>
+                  </HStack>
                 </HStack>
-              </HStack>
-              <Accordion.ItemIndicator />
-            </Accordion.ItemTrigger>
-          </Heading>
-          <Accordion.ItemContent>
-            <Accordion.ItemBody aria-label={group.koulutusala} maxH="60vh" overflowY="auto" pb={6} role="region">
-              <ScoreResultList
-                headingLevel="h4"
-                key={`${resultListKey}:${group.koulutusala}`}
-                results={group.results}
-                roundLabel={roundLabel}
-              />
-            </Accordion.ItemBody>
-          </Accordion.ItemContent>
-        </Accordion.Item>
-      ))}
+                <Accordion.ItemIndicator />
+              </Accordion.ItemTrigger>
+            </Heading>
+            <Accordion.ItemContent>
+              <Accordion.ItemBody aria-label={group.koulutusala} maxH="60vh" overflowY="auto" pb={6} role="region">
+                <ScoreResultList
+                  headingLevel="h4"
+                  key={`${resultListKey}:${group.koulutusala}`}
+                  results={group.results}
+                  roundLabel={roundLabel}
+                />
+              </Accordion.ItemBody>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        );
+      })}
     </Accordion.Root>
   );
 
@@ -417,12 +525,7 @@ export default function ScoreCalculatorPage() {
         <Text aria-live="polite" color="fg.muted" fontSize="xs" mt={-3} textAlign="right">
           {searchResults.length} {searchResults.length === 1 ? "hakutulos" : "hakutulosta"}
         </Text>
-        <ScoreResultList
-          key={`${resultListKey}:${normalizedSearchTerm}`}
-          results={searchResults}
-          roundLabel={roundLabel}
-          showKoulutusala
-        />
+        <ScoreResultList key={resultListKey} results={searchResults} roundLabel={roundLabel} showKoulutusala />
       </Stack>
     );
 
@@ -445,31 +548,6 @@ export default function ScoreCalculatorPage() {
 
   const resultList = (
     <Stack aria-busy={resultsPending} gap={4} mt={{ base: 6, md: 10 }}>
-      <Stack aria-live="polite" gap={1}>
-        <Box borderColor="fg.accent" borderRadius={8} borderWidth="1px" mb={{ base: 6, md: 10 }} p={4}>
-          <Heading as="h2" size="lg" textAlign="center">
-            {calculation?.amk.score !== undefined ? (
-              <>
-                <Text as="span" color="fg.accent">
-                  {calculation.selectionMethod === "Todistusvalinta (YO)" ? "~" : null}
-                  {scoreFormatter.format(calculation.amk.score)}
-                </Text>{" "}
-                /{" "}
-                <Text as="span" color="fg.muted">
-                  {scoreFormatter.format(calculation.amk.maximumScore)}
-                </Text>{" "}
-                pistettä
-              </>
-            ) : (
-              "Ei vielä laskettu"
-            )}{" "}
-          </Heading>
-          <Text color="fg.muted" fontSize="xs" textAlign="center">
-            Pisteesi riittää arviolta {displayedQualifiedCount} / {displayedTotalCount} toteutukseen
-          </Text>
-        </Box>
-      </Stack>
-
       <HStack id="vertaa-pisterajoihin">
         <Separator bg="fg.accent" flex={1} size="md" />
         <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" textAlign="center">
@@ -478,21 +556,51 @@ export default function ScoreCalculatorPage() {
         <Separator bg="fg.accent" flex={1} size="md" />
       </HStack>
 
-      <Stack direction={{ base: "column", lg: "row" }} gap={6} width="full">
+      <Accordion.Root collapsible size="sm">
+        <Accordion.Item value="suodattimet">
+          <Accordion.ItemTrigger py={{ base: 3, md: 2 }}>
+            <HStack flex="1" gap={2}>
+              <HiOutlineFilter aria-hidden="true" color={COLORS.accentFg} />
+              <Span>Suodattimet{activeFilterCount > 0 ? ` (${activeFilterCount})` : ""}</Span>
+            </HStack>
+            <Accordion.ItemIndicator />
+          </Accordion.ItemTrigger>
+          <Accordion.ItemContent>
+            <Accordion.ItemBody>
+              <Stack gap={3}>
+                <FilterCheckbox
+                  checked={isFirstTimeApplicant}
+                  label="Olen ensikertalainen"
+                  onChange={handleFirstTimeChange}
+                />
+                <FilterCheckbox
+                  checked={onlyQualified}
+                  disabled={!calculation}
+                  label="Vain kohteet, joihin pisteesi riittävät"
+                  onChange={handleOnlyQualifiedChange}
+                />
+                <FilterCheckbox
+                  checked={sectorFilter === "amk"}
+                  label="Vain AMK"
+                  onChange={(checked) => handleSectorFilterChange(checked ? "amk" : "all")}
+                />
+                <FilterCheckbox
+                  checked={sectorFilter === "university"}
+                  label="Vain yliopistot"
+                  onChange={(checked) => handleSectorFilterChange(checked ? "university" : "all")}
+                />
+              </Stack>
+            </Accordion.ItemBody>
+          </Accordion.ItemContent>
+        </Accordion.Item>
+      </Accordion.Root>
+      <Stack direction={{ base: "column", md: "row" }} gap={6} width="full">
         <Box flex={1}>
           <OptionSelect<CutoffRound>
             items={ROUND_OPTIONS}
             label="Yhteishaku"
             onChange={handleRoundChange}
             value={cutoffRound}
-          />
-        </Box>
-        <Box flex={1}>
-          <OptionSelect<SectorFilter>
-            items={SECTOR_OPTIONS}
-            label="Korkeakoulutyyppi"
-            onChange={setSectorFilter}
-            value={sectorFilter}
           />
         </Box>
         <Box flex={1}>
@@ -505,18 +613,7 @@ export default function ScoreCalculatorPage() {
           />
         </Box>
       </Stack>
-      <SearchInput onChange={setSearchTerm} placeholder="Hae toteutusta tai korkeakoulua" value={searchTerm} />
-      <Checkbox.Root
-        checked={isFirstTimeApplicant}
-        onCheckedChange={({ checked }) => setIsFirstTimeApplicant(checked === true)}
-        size="sm"
-      >
-        <Checkbox.HiddenInput />
-        <Checkbox.Control>
-          <Checkbox.Indicator />
-        </Checkbox.Control>
-        <Checkbox.Label>Olen ensikertalainen</Checkbox.Label>
-      </Checkbox.Root>
+      <DebouncedSearchInput label="Haku" onChange={handleSearchChange} placeholder="Hae toteutusta tai korkeakoulua" />
       {resultContent}
     </Stack>
   );
@@ -536,14 +633,8 @@ export default function ScoreCalculatorPage() {
       <PageContainer align="flex-start">
         <ScoreForm
           applied={appliedForm}
-          onModeChange={(nextSelectionMethod) => {
-            setSelectionMethod(nextSelectionMethod);
-            setCalculation(null);
-          }}
-          onSubmit={(next) => {
-            setCalculation(next);
-            document.getElementById("vertaa-pisterajoihin")?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onModeChange={handleModeChange}
+          onSubmit={handleFormSubmit}
           round={cutoffRound}
         />
 

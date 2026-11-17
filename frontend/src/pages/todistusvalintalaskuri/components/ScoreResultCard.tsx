@@ -1,5 +1,20 @@
-import { Badge, Card, Collapsible, Heading, Separator, Span, Stack, Table, Text } from "@chakra-ui/react";
-import { HiChevronDown } from "react-icons/hi";
+import {
+  Badge,
+  Card,
+  Collapsible,
+  Flex,
+  Heading,
+  HStack,
+  Separator,
+  SimpleGrid,
+  Span,
+  Stack,
+  Stat,
+  Table,
+  Text,
+} from "@chakra-ui/react";
+import { memo } from "react";
+import { HiCheckCircle, HiChevronDown, HiExclamationCircle } from "react-icons/hi";
 import type { ScoreResult } from "@/pages/todistusvalintalaskuri/lib/scoreResults";
 import { COLORS } from "@/theme";
 
@@ -14,18 +29,18 @@ const scoreFormatter = new Intl.NumberFormat("fi-FI", {
   maximumFractionDigits: 2,
 });
 
-function KynnysehtoBadge({ passed }: { passed?: boolean }) {
-  if (passed === true) {
+function QualificationBadge({ kynnysehtoPassed, scorePasses }: { kynnysehtoPassed?: boolean; scorePasses: boolean }) {
+  if (scorePasses && kynnysehtoPassed !== false) {
     return (
-      <Badge alignSelf="flex-start" bg="accent" color="onAccent" size="sm">
-        Kynnysehto täyttyy.
+      <Badge alignSelf="flex-start" bg="accent" color="onAccent" flexShrink={0} size="sm">
+        Pisteet riittävät
       </Badge>
     );
   }
-  if (passed === false) {
+  if (scorePasses && kynnysehtoPassed === false) {
     return (
-      <Badge alignSelf="flex-start" colorPalette="red" size="sm" variant="subtle">
-        Kynnysehto ei täyty.
+      <Badge alignSelf="flex-start" colorPalette="red" flexShrink={0} size="sm" variant="subtle">
+        Kynnysehto ei täyty
       </Badge>
     );
   }
@@ -33,11 +48,35 @@ function KynnysehtoBadge({ passed }: { passed?: boolean }) {
     <Badge
       alignSelf="flex-start"
       bg={`color-mix(in srgb, ${COLORS.text} 14%, ${COLORS.bg})`}
-      color="fg.muted"
+      color="fg"
+      flexShrink={0}
       size="sm"
     >
-      Ei kynnysehtoa.
+      Pisteesi eivät riitä
     </Badge>
+  );
+}
+
+function ThresholdNote({ label, passed }: { label?: string; passed?: boolean }) {
+  if (passed === undefined) {
+    if (!label) return null;
+    return (
+      <Text color="fg.muted" fontSize="xs">
+        <Text as="span" color="fg" fontWeight="semibold">
+          Kynnysehto:{" "}
+        </Text>
+        {label}
+      </Text>
+    );
+  }
+
+  return (
+    <HStack align="center" color={passed ? "fg.accent" : "fg.error"} fontSize="xs" gap={1.5}>
+      <Span display="inline-flex" flexShrink={0} fontSize="sm">
+        {passed ? <HiCheckCircle aria-hidden="true" /> : <HiExclamationCircle aria-hidden="true" />}
+      </Span>
+      <Text>{label ?? (passed ? "Kynnysehto täyttyy." : "Kynnysehto ei täyty.")}</Text>
+    </HStack>
   );
 }
 
@@ -80,7 +119,7 @@ function ScoreBreakdownDisclosure({
       <Collapsible.Content pt={3}>
         <Table.Root aria-label="Pisteytyksen erittely aineittain" size="sm" variant="line">
           <Table.Header>
-            <Table.Row>
+            <Table.Row bg="transparent">
               <Table.ColumnHeader scope="col">Aine</Table.ColumnHeader>
               <Table.ColumnHeader scope="col">Arvosana</Table.ColumnHeader>
               <Table.ColumnHeader scope="col" textAlign="end">
@@ -90,21 +129,25 @@ function ScoreBreakdownDisclosure({
           </Table.Header>
           <Table.Body>
             {rows.map((row) => (
-              <Table.Row key={row.exam}>
+              <Table.Row bg="transparent" key={row.exam}>
                 <Table.Cell color={row.muted ? "fg.muted" : undefined}>{row.label}</Table.Cell>
                 <Table.Cell color={row.muted ? "fg.muted" : undefined}>{row.grade}</Table.Cell>
-                <Table.Cell color={row.muted ? "fg.muted" : undefined} textAlign="end">
+                <Table.Cell
+                  color={row.muted ? "fg.muted" : undefined}
+                  fontVariantNumeric="tabular-nums"
+                  textAlign="end"
+                >
                   {row.points}
                 </Table.Cell>
               </Table.Row>
             ))}
           </Table.Body>
           <Table.Footer>
-            <Table.Row>
+            <Table.Row bg="transparent">
               <Table.Cell colSpan={2} fontWeight="semibold">
                 Yhteensä
               </Table.Cell>
-              <Table.Cell fontWeight="semibold" textAlign="end">
+              <Table.Cell fontVariantNumeric="tabular-nums" fontWeight="semibold" textAlign="end">
                 {scoreFormatter.format(applicantScore)}
               </Table.Cell>
             </Table.Row>
@@ -115,15 +158,10 @@ function ScoreBreakdownDisclosure({
   );
 }
 
-export default function ScoreResultCard({
-  headingLevel = "h3",
-  result,
-  roundLabel,
-  showKoulutusala,
-}: ScoreResultCardProps) {
+function ScoreResultCard({ headingLevel = "h3", result, roundLabel, showKoulutusala }: ScoreResultCardProps) {
   const displayedScore = result.applicantScore;
-  const isQualified =
-    displayedScore !== undefined && result.score <= displayedScore && result.kynnysehtoPassed !== false;
+  const scorePasses = displayedScore !== undefined && result.score <= displayedScore;
+  const isQualified = scorePasses && result.kynnysehtoPassed !== false;
   const hasThreshold = result.kynnysehtoLabel !== undefined || result.kynnysehtoPassed !== undefined;
   const disclosureHeading = headingLevel === "h3" ? "h4" : "h5";
 
@@ -131,56 +169,77 @@ export default function ScoreResultCard({
     <Card.Root as="article" size="sm">
       <Card.Body>
         <Stack gap={3}>
-          <Stack>
-            <Heading as={headingLevel} fontSize={{ base: "xs", md: "md" }} textWrap="pretty">
-              {result.programmeName}
-            </Heading>
-            <Text color="fg.muted" fontSize="xs">
-              {result.schoolName}
-            </Text>
-            {showKoulutusala ? (
-              <Text color="fg.muted" fontSize="xs">
-                {result.koulutusala}
-              </Text>
+          <Flex align="flex-start" direction={{ base: "column", sm: "row" }} gap={2} justify="space-between">
+            <Stack flex={1} gap={1} minW={0}>
+              <Heading as={headingLevel} fontSize={{ base: "sm", md: "md" }} fontWeight="semibold" textWrap="pretty">
+                {result.programmeName}
+              </Heading>
+              <HStack color="fg.muted" flexWrap="wrap" fontSize="xs" gap={1.5}>
+                <Text>{result.schoolName}</Text>
+                <Span aria-hidden="true">·</Span>
+                <Text>{result.selectionMethod}</Text>
+                {showKoulutusala ? (
+                  <>
+                    <Span aria-hidden="true">·</Span>
+                    <Text>{result.koulutusala}</Text>
+                  </>
+                ) : null}
+              </HStack>
+            </Stack>
+            {displayedScore !== undefined ? (
+              <QualificationBadge kynnysehtoPassed={result.kynnysehtoPassed} scorePasses={scorePasses} />
             ) : null}
-            <Badge alignSelf="flex-start" border="1px solid" borderColor="fg.accent" size="sm" variant="surface">
-              {result.selectionMethod}
-            </Badge>
-          </Stack>
+          </Flex>
           <Separator />
-          <Stack direction={{ base: "column", md: "row" }} justify="space-between">
-            <Text color="fg.muted" fontSize="xs">
-              Pisteesi / alin hyväksytty pistemäärä ({roundLabel})
-            </Text>
-            <Text color={isQualified ? "fg.accent" : "fg.muted"} fontSize="lg" fontWeight="bold" letterSpacing="wide">
-              {displayedScore === undefined ? "–" : scoreFormatter.format(displayedScore)} /{" "}
-              {scoreFormatter.format(result.score)}
-            </Text>
-          </Stack>
-          {hasThreshold ? (
-            <>
-              {result.kynnysehtoPassed !== undefined ? <KynnysehtoBadge passed={result.kynnysehtoPassed} /> : null}
-              {result.kynnysehtoLabel ? (
-                <Text fontSize="xs">
-                  <Text as="span" fontWeight="semibold">
-                    Kynnysehto:{" "}
-                  </Text>
-                  {result.kynnysehtoLabel}
-                </Text>
-              ) : null}
-            </>
-          ) : displayedScore !== undefined && result.sector === "Yliopistokoulutus" ? (
-            <KynnysehtoBadge />
-          ) : null}
+          {displayedScore === undefined ? (
+            <HStack align="baseline" gap={4} justify="space-between">
+              <Text color="fg.muted" fontSize="xs">
+                Pisteraja ({roundLabel})
+              </Text>
+              <Text fontSize="lg" fontVariantNumeric="tabular-nums" fontWeight="bold" letterSpacing="wide">
+                {scoreFormatter.format(result.score)}
+              </Text>
+            </HStack>
+          ) : (
+            <SimpleGrid columns={2} gap={4}>
+              <Stat.Root gap={0.5} size="sm">
+                <Stat.Label color="fg.muted" fontSize="xs">
+                  Pisteesi
+                </Stat.Label>
+                <Stat.ValueText
+                  color={isQualified ? "fg.accent" : "fg"}
+                  fontSize="lg"
+                  fontVariantNumeric="tabular-nums"
+                  fontWeight="bold"
+                >
+                  {scoreFormatter.format(displayedScore)}
+                </Stat.ValueText>
+              </Stat.Root>
+              <Stat.Root gap={0.5} size="sm">
+                <Stat.Label color="fg.muted" fontSize="xs">
+                  Pisteraja ({roundLabel})
+                </Stat.Label>
+                <Stat.ValueText fontSize="lg" fontVariantNumeric="tabular-nums" fontWeight="bold">
+                  {scoreFormatter.format(result.score)}
+                </Stat.ValueText>
+              </Stat.Root>
+            </SimpleGrid>
+          )}
+          {hasThreshold ? <ThresholdNote label={result.kynnysehtoLabel} passed={result.kynnysehtoPassed} /> : null}
           {displayedScore !== undefined && result.scoreBreakdown ? (
-            <ScoreBreakdownDisclosure
-              applicantScore={displayedScore}
-              breakdown={result.scoreBreakdown}
-              disclosureHeading={disclosureHeading}
-            />
+            <>
+              <Separator />
+              <ScoreBreakdownDisclosure
+                applicantScore={displayedScore}
+                breakdown={result.scoreBreakdown}
+                disclosureHeading={disclosureHeading}
+              />
+            </>
           ) : null}
         </Stack>
       </Card.Body>
     </Card.Root>
   );
 }
+
+export default memo(ScoreResultCard);

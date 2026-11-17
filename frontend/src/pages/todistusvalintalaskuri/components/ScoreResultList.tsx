@@ -14,6 +14,11 @@ interface ScoreResultListProps {
 
 export default function ScoreResultList({ headingLevel, results, roundLabel, showKoulutusala }: ScoreResultListProps) {
   const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
+  const [prevResults, setPrevResults] = useState(results);
+  if (prevResults !== results) {
+    setPrevResults(results);
+    setVisibleCount(BATCH_SIZE);
+  }
   const visibleResults = results.slice(0, visibleCount);
   const hasMore = visibleResults.length < results.length;
 

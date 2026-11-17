@@ -3,12 +3,13 @@ import SearchInput from "@/components/SearchInput";
 import useDebounce from "@/hooks/useDebounce";
 
 interface DebouncedSearchInputProps {
+  label?: string;
   onChange: (value: string) => void;
-  onInput: () => void;
+  onInput?: () => void;
   placeholder: string;
 }
 
-export default function DebouncedSearchInput({ onChange, onInput, placeholder }: DebouncedSearchInputProps) {
+export default function DebouncedSearchInput({ label, onChange, onInput, placeholder }: DebouncedSearchInputProps) {
   const [value, setValue] = useState("");
   const debouncedValue = useDebounce(value, 300);
 
@@ -18,9 +19,10 @@ export default function DebouncedSearchInput({ onChange, onInput, placeholder }:
 
   return (
     <SearchInput
+      label={label}
       onChange={(nextValue) => {
         setValue(nextValue);
-        onInput();
+        onInput?.();
       }}
       placeholder={placeholder}
       value={value}

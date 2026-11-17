@@ -1,4 +1,5 @@
 import { createListCollection, Select } from "@chakra-ui/react";
+import { useMemo } from "react";
 
 interface SelectOption<T extends string> {
   label: string;
@@ -20,7 +21,7 @@ export default function FormSelect<T extends string>({
   placeholder,
   value,
 }: FormSelectProps<T>) {
-  const collection = createListCollection({ items: [...items] });
+  const collection = useMemo(() => createListCollection({ items: [...items] }), [items]);
 
   return (
     <Select.Root

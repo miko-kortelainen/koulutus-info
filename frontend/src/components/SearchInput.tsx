@@ -26,7 +26,7 @@ export default function SearchInput({ ariaLabel, label, onChange, placeholder, v
 
   return (
     <Field.Root gap={1} width="full">
-      <Field.Label color="fg.muted" fontSize="xs">
+      <Field.Label color="fg.muted" fontSize="xs" fontWeight="normal">
         {label}
       </Field.Label>
       {input}
