@@ -1274,17 +1274,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000003274",
+        "toteutusOid": "1.2.246.562.17.00000000000000002756",
         "toteutusNimi": {
-          "fi": "Maisterihaku, Biologia, filosofian maisteri (2v)"
+          "fi": "Biologia, maisteri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Oulun yliopisto",
-          "sv": "Uleåborgs universitet",
-          "en": "University of Oulu"
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
         },
         "kunnat": [
-          "Oulu"
+          "Turku"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -1302,17 +1302,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000002756",
+        "toteutusOid": "1.2.246.562.17.00000000000000003274",
         "toteutusNimi": {
-          "fi": "Biologia, maisteri (2 v)"
+          "fi": "Maisterihaku, Biologia, filosofian maisteri (2v)"
         },
         "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "sv": "Åbo universitet",
-          "en": "University of Turku"
+          "fi": "Oulun yliopisto",
+          "sv": "Uleåborgs universitet",
+          "en": "University of Oulu"
         },
         "kunnat": [
-          "Turku"
+          "Oulu"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -5608,7 +5608,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000043444",
         "toteutusNimi": {
-          "fi": "Design Factory: Tieto- ja viestintätekniikka, kiertotalous "
+          "fi": "Design Factory: Tieto- ja viestintätekniikka, kiertotalous, 240 op"
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
@@ -5627,7 +5627,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000043445",
         "toteutusNimi": {
-          "fi": "Design Factory: Bio- ja elintarviketekniikka "
+          "fi": "Design Factory: Bio- ja elintarviketekniikka, 240 op"
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
@@ -5646,7 +5646,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000043448",
         "toteutusNimi": {
-          "fi": "Design Factory: Liiketalous "
+          "fi": "Design Factory: Liiketalous, 210 op"
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
@@ -5665,7 +5665,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000043443",
         "toteutusNimi": {
-          "fi": "Design Factory: Konetekniikka "
+          "fi": "Design Factory: Konetekniikka, 240 op"
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
@@ -5684,7 +5684,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000043442",
         "toteutusNimi": {
-          "fi": "Design Factory: Älykkäät järjestelmät "
+          "fi": "Design Factory: Älykkäät järjestelmät, 240 op"
         },
         "oppilaitosNimi": {
           "fi": "Hämeen ammattikorkeakoulu",
@@ -8124,6 +8124,34 @@
     "tutkintotaso": "alempi",
     "toteutukset": [
       {
+        "toteutusOid": "1.2.246.562.17.00000000000000011540",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Tieto- ja viestintätekniikka, monimuotototeutus, Pori"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Pori"
+        ],
+        "koulutusalat": [
+          "Tietojenkäsittely ja tietoliikenne"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Insinööri (AMK), tietotekniikka",
+      "sv": "Ingenjör (YH), datateknik",
+      "en": "BEng (UAS), IT"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "alempi",
+    "toteutukset": [
+      {
         "toteutusOid": "1.2.246.562.17.00000000000000003329",
         "toteutusNimi": {
           "fi": "Insinööri (AMK), tieto- ja viestintätekniikka, ohjelmistokehitys tai XR- ja pelikehitys, verkko-opetus, Rovaniemi"
@@ -8594,34 +8622,6 @@
     "tutkintotaso": "alempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000011540",
-        "toteutusNimi": {
-          "fi": "Insinööri (AMK), Tieto- ja viestintätekniikka, monimuotototeutus, Pori"
-        },
-        "oppilaitosNimi": {
-          "fi": "Satakunnan ammattikorkeakoulu",
-          "sv": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK"
-        },
-        "kunnat": [
-          "Pori"
-        ],
-        "koulutusalat": [
-          "Tietojenkäsittely ja tietoliikenne"
-        ]
-      }
-    ]
-  },
-  {
-    "nimi": {
-      "fi": "Insinööri (AMK), tietotekniikka",
-      "sv": "Ingenjör (YH), datateknik",
-      "en": "BEng (UAS), IT"
-    },
-    "sektori": "amk",
-    "tutkintotaso": "alempi",
-    "toteutukset": [
-      {
         "toteutusOid": "1.2.246.562.17.00000000000000040652",
         "toteutusNimi": {
           "fi": "Älykkään liiketoiminnan ja tekoälyn johtaminen, insinööri (YAMK), verkkototeutus"
@@ -8755,6 +8755,23 @@
         "toteutusOid": "1.2.246.562.17.00000000000000043978",
         "toteutusNimi": {
           "fi": "Insinööri (AMK), Tuotantotekniikka ja tuotantotalous, meriteknologia, monimuotototeutus, Rauma"
+        },
+        "oppilaitosNimi": {
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
+        },
+        "kunnat": [
+          "Rauma"
+        ],
+        "koulutusalat": [
+          "Tekniikan alat"
+        ]
+      },
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000044091",
+        "toteutusNimi": {
+          "fi": "Insinööri (AMK), Tuotantotekniikka ja tuotantotalous, tuotannon johtaminen ja suunnittelu, monimuotototeutus, Rauma"
         },
         "oppilaitosNimi": {
           "fi": "Satakunnan ammattikorkeakoulu",
@@ -11307,34 +11324,6 @@
   },
   {
     "nimi": {
-      "fi": "Fil. maist., kemia",
-      "sv": "Fil. mag., kemi",
-      "en": "Master of Science, Chemistry"
-    },
-    "sektori": "yo",
-    "tutkintotaso": "ylempi",
-    "toteutukset": [
-      {
-        "toteutusOid": "1.2.246.562.17.00000000000000003001",
-        "toteutusNimi": {
-          "fi": "Kemia, kandidaatti ja maisteri (3 v + 2 v)"
-        },
-        "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "sv": "Åbo universitet",
-          "en": "University of Turku"
-        },
-        "kunnat": [
-          "Turku"
-        ],
-        "koulutusalat": [
-          "Luonnontieteet"
-        ]
-      }
-    ]
-  },
-  {
-    "nimi": {
       "fi": "Luonnont. kand., kemia",
       "sv": "Nat. kand., kemi",
       "en": "Bachelor of Science, Chemistry"
@@ -11354,6 +11343,34 @@
         },
         "kunnat": [
           "Joensuu"
+        ],
+        "koulutusalat": [
+          "Luonnontieteet"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Fil. maist., kemia",
+      "sv": "Fil. mag., kemi",
+      "en": "Master of Science, Chemistry"
+    },
+    "sektori": "yo",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
+        "toteutusOid": "1.2.246.562.17.00000000000000003001",
+        "toteutusNimi": {
+          "fi": "Kemia, kandidaatti ja maisteri (3 v + 2 v)"
+        },
+        "oppilaitosNimi": {
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
+        },
+        "kunnat": [
+          "Turku"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -12601,17 +12618,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000002378",
+        "toteutusOid": "1.2.246.562.17.00000000000000003293",
         "toteutusNimi": {
-          "fi": "Konetekniikka, diplomi-insinööri (2 v)"
+          "fi": "Maisterihaku, Konetekniikka, diplomi-insinööri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "sv": "Åbo universitet",
-          "en": "University of Turku"
+          "fi": "Oulun yliopisto",
+          "sv": "Uleåborgs universitet",
+          "en": "University of Oulu"
         },
         "kunnat": [
-          "Turku"
+          "Oulu"
         ],
         "koulutusalat": [
           "Tekniikan alat"
@@ -12629,17 +12646,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000003293",
+        "toteutusOid": "1.2.246.562.17.00000000000000002378",
         "toteutusNimi": {
-          "fi": "Maisterihaku, Konetekniikka, diplomi-insinööri (2 v)"
+          "fi": "Konetekniikka, diplomi-insinööri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Oulun yliopisto",
-          "sv": "Uleåborgs universitet",
-          "en": "University of Oulu"
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
         },
         "kunnat": [
-          "Oulu"
+          "Turku"
         ],
         "koulutusalat": [
           "Tekniikan alat"
@@ -16065,17 +16082,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000003547",
+        "toteutusOid": "1.2.246.562.17.00000000000000002494",
         "toteutusNimi": {
-          "fi": "Maisterihaku, Maantiede, filosofian maisteri (2 v)"
+          "fi": "Maantiede, maisteri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Oulun yliopisto",
-          "sv": "Uleåborgs universitet",
-          "en": "University of Oulu"
+          "fi": "Turun yliopisto",
+          "sv": "Åbo universitet",
+          "en": "University of Turku"
         },
         "kunnat": [
-          "Oulu"
+          "Turku"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -16093,17 +16110,17 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000002494",
+        "toteutusOid": "1.2.246.562.17.00000000000000003547",
         "toteutusNimi": {
-          "fi": "Maantiede, maisteri (2 v)"
+          "fi": "Maisterihaku, Maantiede, filosofian maisteri (2 v)"
         },
         "oppilaitosNimi": {
-          "fi": "Turun yliopisto",
-          "sv": "Åbo universitet",
-          "en": "University of Turku"
+          "fi": "Oulun yliopisto",
+          "sv": "Uleåborgs universitet",
+          "en": "University of Oulu"
         },
         "kunnat": [
-          "Turku"
+          "Oulu"
         ],
         "koulutusalat": [
           "Luonnontieteet"
@@ -23395,6 +23412,34 @@
     "tutkintotaso": "ylempi",
     "toteutukset": [
       {
+        "toteutusOid": "1.2.246.562.17.00000000000000043561",
+        "toteutusNimi": {
+          "fi": "Sosiaali- ja terveysala (ylempi AMK), Sosiaali- ja terveysalan digitaaliset palvelut ja prosessit"
+        },
+        "oppilaitosNimi": {
+          "fi": "Hämeen ammattikorkeakoulu",
+          "sv": "Hämeen ammattikorkeakoulu",
+          "en": "Häme University of Applied Sciences"
+        },
+        "kunnat": [
+          "Hämeenlinna"
+        ],
+        "koulutusalat": [
+          "Terveys- ja hyvinvointialat"
+        ]
+      }
+    ]
+  },
+  {
+    "nimi": {
+      "fi": "Muu tai tuntematon terveys- ja sosiaalialan ylempi ammattikorkeakoulututkinto",
+      "sv": "Annan eller okänd högre yrkeshögskoleexamen inom hälso- och socialvård",
+      "en": "Other or unknown Polytechnic Master's Degree in Health and Welfare"
+    },
+    "sektori": "amk",
+    "tutkintotaso": "ylempi",
+    "toteutukset": [
+      {
         "toteutusOid": "1.2.246.562.17.00000000000000002352",
         "toteutusNimi": {
           "fi": "Sosiaali- ja terveysala (ylempi AMK), sosiaali- ja terveysalan kehittäminen ja johtaminen, verkkototeutus"
@@ -26784,6 +26829,23 @@
         ]
       },
       {
+        "toteutusOid": "1.2.246.562.17.00000000000000044123",
+        "toteutusNimi": {
+          "fi": "Suuhygienisti (AMK), monimuotototeutus, Etelä-Savo"
+        },
+        "oppilaitosNimi": {
+          "fi": "Savonia-ammattikorkeakoulu",
+          "sv": "Savonia-ammattikorkeakoulu",
+          "en": "Savonia University of Applied Sciences"
+        },
+        "kunnat": [
+          "Kuopio"
+        ],
+        "koulutusalat": [
+          "Lääketieteet"
+        ]
+      },
+      {
         "toteutusOid": "1.2.246.562.17.00000000000000043862",
         "toteutusNimi": {
           "fi": "Suuhygienisti (AMK), monimuotototeutus, Satakunta"
@@ -28378,7 +28440,8 @@
           "Kuopio"
         ],
         "koulutusalat": [
-          "Terveys- ja hyvinvointialat"
+          "Terveys- ja hyvinvointialat",
+          "Yhteiskunnalliset alat"
         ]
       }
     ]
