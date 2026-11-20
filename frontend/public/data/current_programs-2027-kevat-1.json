@@ -4737,17 +4737,17 @@
     "tutkintotaso": "alempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000039300",
+        "toteutusOid": "1.2.246.562.17.00000000000000032510",
         "toteutusNimi": {
-          "en": "Bachelor of Engineering, Robotics, full-time studies, Pori"
+          "en": "Bachelor of Engineering, Robotics, blended studies"
         },
         "oppilaitosNimi": {
-          "fi": "Satakunnan ammattikorkeakoulu",
-          "sv": "Satakunnan ammattikorkeakoulu",
-          "en": "Satakunta University of Applied Sciences SAMK"
+          "fi": "Metropolia Ammattikorkeakoulu",
+          "sv": "Metropolia Ammattikorkeakoulu",
+          "en": "Metropolia University of Applied Sciences"
         },
         "kunnat": [
-          "Pori"
+          "Vantaa"
         ],
         "koulutusalat": [
           "Tietojenkäsittely ja tietoliikenne"
@@ -4765,17 +4765,17 @@
     "tutkintotaso": "alempi",
     "toteutukset": [
       {
-        "toteutusOid": "1.2.246.562.17.00000000000000032510",
+        "toteutusOid": "1.2.246.562.17.00000000000000039300",
         "toteutusNimi": {
-          "en": "Bachelor of Engineering, Robotics, blended studies"
+          "en": "Bachelor of Engineering, Robotics, full-time studies, Pori"
         },
         "oppilaitosNimi": {
-          "fi": "Metropolia Ammattikorkeakoulu",
-          "sv": "Metropolia Ammattikorkeakoulu",
-          "en": "Metropolia University of Applied Sciences"
+          "fi": "Satakunnan ammattikorkeakoulu",
+          "sv": "Satakunnan ammattikorkeakoulu",
+          "en": "Satakunta University of Applied Sciences SAMK"
         },
         "kunnat": [
-          "Vantaa"
+          "Pori"
         ],
         "koulutusalat": [
           "Tietojenkäsittely ja tietoliikenne"
@@ -9487,7 +9487,7 @@
       {
         "toteutusOid": "1.2.246.562.17.00000000000000042066",
         "toteutusNimi": {
-          "en": "Master of Culture and Arts, Leadership and Artistic Direction in Music "
+          "en": "Master´s Degree in Leadership and Artistic Direction in Music"
         },
         "oppilaitosNimi": {
           "fi": "Metropolia Ammattikorkeakoulu",
