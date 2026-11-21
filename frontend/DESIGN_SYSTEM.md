@@ -24,12 +24,12 @@ Jokainen sivu koostuu `PageIntro`-yläosiosta ja `PageContainer align="flex-star
 </>
 ```
 
-- **`PageIntro` sisältää sivun ainoan `h1`-otsikon.** Sivun sisällössä osiot alkavat aina `h2`-tasolta.
+- **`PageIntro` sisältää sivun ainoan `h1`-otsikon.** Sekä `title` että `description` ovat pakollisia propseja. Sivun sisällössä osiot alkavat aina `h2`-tasolta.
 - **Poikkeukset, joilla ei ole `PageIntro`-komponenttia:**
   1. Etusivu `/` ([src/pages/index/+Page.tsx](src/pages/index/+Page.tsx)) – käyttää koko näkymän Hero-osiota.
   2. Virhesivu (`404` / virhe, [src/pages/_error/+Page.tsx](src/pages/_error/+Page.tsx)) – keskitetty tilanäkymä.
   3. Yksittäiset opas-artikkelit `/oppaat/<slug>/` ([src/pages/oppaat/components/GuideLayout.tsx](src/pages/oppaat/components/GuideLayout.tsx)) – kapea (`42rem`) lukuleveys, päivämäärä ja TL;DR-nosto.
-- Kaikilla muilla sivuilla — mukaan lukien tukisivut (`/oppaat/`, `/ukk/`, `/palaute/`, `/asenna/`, `/tietosuojaseloste/`) ja dynaamiset alasivut (`/koulut/@slug/`, `/koulut/@slug/pisterajat/`, `/koulut/@slug/opiskelijapalautteet/`, `/pisterajat/@ala/`, `/lukiot/@slug/`, `/lukiot/kaupungit/@kunta/`) — käytetään `PageIntro`-komponenttia.
+- Kaikilla muilla sivuilla — mukaan lukien tukisivut (`/oppaat/`, `/ukk/`, `/palaute/`, `/asenna/`, `/mediakortti/`, `/tietosuojaseloste/`) ja dynaamiset alasivut (`/koulut/@slug/`, `/koulut/@slug/pisterajat/`, `/koulut/@slug/opiskelijapalautteet/`, `/pisterajat/@ala/`, `/lukiot/@slug/`, `/lukiot/kaupungit/@kunta/`) — käytetään `PageIntro`-komponenttia.
 
 ### 1.2 Alasivujen paluulinkki (`BackLink`)
 
@@ -41,7 +41,7 @@ Kun käyttäjä on hierarkkisella alasivulla (esim. `/koulut/@slug/`, `/koulut/@
 Valitse sivulle jokin näistä kolmesta asettelusta sen sijaan, että keksit uuden sijoittelun:
 
 #### Tyyppi A: Sivupalkki + tuloslista (monisuodatinhaku)
-Käyttökohteet: `/koulutukset/`, `/hakijamaarat/korkeakoulut/`.
+Käyttökohteet: `/koulutukset/`, `/hakijamaarat/korkeakoulut/`, `/hakijamaarat/toinen-aste/`.
 
 ```tsx
 <Stack align="start" direction={{ base: "column", md: "row" }} gap={6} width="full">
@@ -58,7 +58,7 @@ Käyttökohteet: `/koulutukset/`, `/hakijamaarat/korkeakoulut/`.
 ```
 
 #### Tyyppi B: Yläsuodattimet + tuloslista, haitari tai taulukko
-Käyttökohteet: `/lukiot/`, `/lukiot/kaupungit/`, `/koulut/`, `/koulut/@slug/pisterajat/`, `/yo-pisterajat/`, `/ennakointi/`, `/todistusvalintalaskuri/` (tulososio).
+Käyttökohteet: `/lukiot/`, `/lukiot/kaupungit/`, `/koulut/`, `/koulut/@slug/pisterajat/`, `/pisterajat/@ala/`, `/yo-pisterajat/`, `/ennakointi/`, `/tyollistyminen/`, `/todistusvalintalaskuri/` (tulososio).
 
 - Suodatinrivi sijoitetaan tuloslistan yläpuolelle:
   - Vierekkäiset kentät (`md`+): `<Stack direction={{ base: "column", md: "row" }} gap={6} width="full">`
@@ -66,7 +66,7 @@ Käyttökohteet: `/lukiot/`, `/lukiot/kaupungit/`, `/koulut/`, `/koulut/@slug/pi
 - Suodattimien alla esitetään tuloslaskuri (jos relevantti), tulokset (`gap={4}` korteille, `gap={3}` haitareille) ja `<Pagination />`.
 
 #### Tyyppi C: Sisältö-, hakemisto- ja työkalusivut
-Käyttökohteet: `/pisterajat/`, `/oppaat/`, `/ukk/`, `/palaute/`, `/tietosuojaseloste/`, `/asenna/`, `/oma-hakulista/`, `/vertaile/`, `/hakijalle/`, `/opolle/`.
+Käyttökohteet: `/pisterajat/`, `/oppaat/`, `/ukk/`, `/palaute/`, `/tietosuojaseloste/`, `/asenna/`, `/mediakortti/`, `/oma-hakulista/`, `/vertaile/`, `/hakijalle/`, `/opolle/`.
 
 - Sisältö rakentuu suoraan `PageContainer`in sisään.
 - Loogiset pääosiot ryhmitellään `<Stack as="section" gap={4} width="full">` (tai tiiviissä tekstikappaleissa `gap={2}`), joiden sisällä on `<Heading as="h2" size="md">`.
@@ -84,7 +84,7 @@ Käyttökohteet: `/pisterajat/`, `/oppaat/`, `/ukk/`, `/palaute/`, `/tietosuojas
 | **`PageIntro` alaväli** | `mb={{ base: 6, md: 10 }}` | `24px` / `40px` | Hoidetaan `PageIntro`-komponentissa. |
 | **Sivun perussisältöväli** | `gap={4}` | `1rem` (`16px`) | `PageContainer`in oletusväli lapsielementtien välillä. |
 | **Suurten osioiden väli** | `gap={6}` tai `gap={8}` | `24px` / `32px` | Kun erotetaan toisistaan erillisiä isoja sivulohkoja (esim. lomake ja tulokset). |
-| **Vierekkäiset syötekentät** | **`gap={6}`** (minimi) | **`1.5rem` (`24px`)** | **Pakollinen minimi** rinnakkaisille syötekentille ja valitsimille (`AGENTS.md`). |
+| **Vierekkäiset syötekentät** | **`gap={6}`** (minimi) | **`1.5rem` (`24px`)** | **Pakollinen minimi** rinnakkaisille syötekentille ja valitsimille. |
 | **Allekkaiset suodattimet** | `gap={4}` | `1rem` (`16px`) | Sivupalkin tai pystysuuntaisen suodatinlohkon kenttien väli. |
 | **Korttilista (`ul`)** | `gap={4}` | `1rem` (`16px`) | `<Stack as="ul" gap={4} listStyleType="none">` (`SchoolCard`, `DegreeStatsCard`, `CutoffCard`). |
 | **Sarakkeellinen grid (`ul`)** | `gap={6}` | `1.5rem` (`24px`) | `<SimpleGrid as="ul" columns={{ base: 1, md: 2 }} gap={6} listStyleType="none">`. |
@@ -120,33 +120,35 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
 | `bg` | Sivun ja korttien oletustausta. |
 | `bg.muted` / `bg.panel` | Vaimea pinta: pudotusvalikot, taulukon otsikkorivi, mittaripalkin tausta (`BAR_TRACK`), `Callout`-laatikko, valitun välilehden indikaattori (`Tabs.Indicator`). |
 | `fg` (tai `text`) | Ensisijainen tekstiväri. |
-| `fg.muted` | Toissijainen teksti, aputekstit, kuvaukset, lähteet ja otsokkeet (`Stat.Label`, `Field.Label`). |
+| `fg.muted` | Toissijainen teksti, aputekstit, kuvaukset, lähteet ja otsikot (`Stat.Label`, `Field.Label`). |
 | `fg.accent` | Korostusteksti, linkkien korostus, aktiiviset ikonit ja korostetut tilastoluvut (täyttää ≥ 4.5:1 kontrastin taustaa vasten). |
 | `accent` + `onAccent` | Korostetut täyttöpinnat: ensisijaiset CTA-painikkeet (`bg="accent" color="onAccent"`) ja koulubadget (`Badge bg="accent" color="onAccent"`). |
 | `border` | Korttien, syötekenttien ja valitsimien oletusreuna. |
 | `border.subtle` | Kevyemmät erottimet, taulukon solureunat ja lohkojen väliviivat. |
 | `viz.field`, `viz.school`, `viz.sector`, `viz.trend`, `viz.ylituotos` | Kaavioiden ja datapalkkien värit. |
+| `tier.lowBg`, `tier.mediumBg`, `tier.highBg`, `tier.fg` | Hakupaineen tasobadget (`DegreeStatsCard`). |
+| `toastBg`, `toastFg` | Toast-ilmoitusten tausta ja teksti (`Toaster`). |
 
 **Milloin käytetään `COLORS.*`-vakiota (`src/theme.ts`)?**
-- Käytä `COLORS.accent`, `COLORS.accentFg`, `COLORS.border`, `COLORS.surfaceMuted` **vain** silloin, kun arvo annetaan CSS-merkkijonon sisällä (esim. `linear-gradient(...)`, `borderBottom={`1px solid ${COLORS.accentFg}`}`) tai kolmannen osapuolen komponentille kuten `react-icons`-ikonin `color`-ominaisuudelle.
+- Käytä `COLORS.*`-vakioita (`bg`, `text`, `accent`, `accentFg`, `border`, `surfaceMuted`, `onAccent`) **vain** silloin, kun arvo annetaan CSS-merkkijonon sisällä (esim. `linear-gradient(...)`, `borderBottom={`1px solid ${COLORS.accentFg}`}`) tai kolmannen osapuolen komponentille kuten `react-icons`-ikonin `color`-ominaisuudelle.
 - Tavallisissa Chakra-propseissa (`bg`, `color`, `borderColor`, `textDecorationColor`) käytä aina suoraan token-nimeä (`bg="accent"`, `color="onAccent"`, `color="fg.accent"`, `bg="bg.muted"`).
 
 ---
 
 ## 5. Yhtenäiset komponentit (`src/components/`)
 
-### 5.1 Hakukenttä (`SearchInput`)
-- Käytä **aina** komponenttia `@/components/SearchInput` ([src/components/SearchInput.tsx](src/components/SearchInput.tsx)). Älä luo sivuille erillisiä `<Input type="search">`-virityksiä.
+### 5.1 Hakukenttä (`SearchInput` ja `DebouncedSearchInput`)
+- Käytä **aina** komponenttia `@/components/SearchInput` ([src/components/SearchInput.tsx](src/components/SearchInput.tsx)) tai 300 ms viivästettyyn hakuun `@/components/DebouncedSearchInput` ([src/components/DebouncedSearchInput.tsx](src/components/DebouncedSearchInput.tsx)). Älä luo sivuille erillisiä `<Input type="search">`-virityksiä.
 - Vakioitu ulkoasu: `size="sm"`, `minHeight={9}`, `width="full"`.
 - Jos hakukentän vieressä on muita kenttiä, joilla on näkyvä yläotsikko (`label`), anna `SearchInput`ille `label`-prop (esim. `label="Haku"`), jolloin se renderöi `Field.Root` + `Field.Label` (`color="fg.muted" fontSize="xs"`). Muussa tapauksessa se käyttää `placeholder`-tekstiä ja `aria-label`-nimeä.
 
 ### 5.2 Valitsin (`OptionSelect` ja `YearControl`)
 - Käytä **aina** komponenttia `@/components/OptionSelect` ([src/components/OptionSelect.tsx](src/components/OptionSelect.tsx)) tai yhteishaun vuosivalinnassa `@/components/YearControl` ([src/components/YearControl.tsx](src/components/YearControl.tsx)).
-- Älä käytä natiivia `<chakra.select>`-elementtiä tai sivukohtaisia kopioita (kuten erillistä `ResultSelect`-komponenttia suodatusrivillä).
+- Älä käytä natiivia `<chakra.select>`-elementtiä tai sivukohtaisia kopioita suodatusrivillä.
 - Vakioitu ulkoasu: `size="sm"`, `width="full"`.
 - **Näkyvä otsikko (`label?: string`):**
-  - Kun valitsin tarvitsee näkyvän yläotsikon (esim. `/todistusvalintalaskuri/`, `/trendit/`, `/ennakointi/`), anna `label`-prop: `<OptionSelect label="Järjestys" ... />`.
-  - Kun valitsimen arvo on itsessään selkeä ilman yläotsikkoa (esim. `/koulutukset/`, `/hakijamaarat/korkeakoulut/`, `/lukiot/`), jätä `label` pois ja anna kuvaava `ariaLabel`.
+  - Kun valitsin tarvitsee näkyvän yläotsikon (esim. `/todistusvalintalaskuri/`, `/trendit/`, `/ennakointi/`, `/tyollistyminen/`), anna `label`-prop: `<OptionSelect label="Järjestys" ... />`.
+  - Kun valitsimen arvo on itsessään selkeä ilman yläotsikkoa (esim. `/koulutukset/`, `/hakijamaarat/korkeakoulut/`, `/hakijamaarat/toinen-aste/`, `/lukiot/`), jätä `label` pois ja anna kuvaava `ariaLabel`.
 
 ### 5.3 Sivupalkin suodatinhaitari (`FilterAccordion`)
 - Käytä `@/components/FilterAccordion` ([src/components/FilterAccordion.tsx](src/components/FilterAccordion.tsx)) `FilterItem`-, `toCollection`- ja `selectFilter`-osia.
@@ -159,10 +161,10 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
 
 ### 5.5 Kortit (`Card.Root`) ja Haitarit (`Accordion.Root`)
 - **Sisältökortit** (`SchoolCard`, `DegreeStatsCard`, `CutoffCard`, `TrendCard`):
-  - Käytä `<Card.Root size="md">` (kompakteissa kuntakorteissa `size="sm"`).
+  - Käytä `<Card.Root size="md">` (kompakteissa hakemisto- ja kuntakorteissa `size="sm"`).
   - Kun kortti on osa tuloslistaa (`<Stack as="ul">`), kortin juuri on `as="li"` (tai kääritty `<li>`-elementtiin).
   - Korkeakoulun nimi merkitään yhtenäisellä badgella: `<Badge bg="accent" color="onAccent">` ja `<HiLocationMarker aria-hidden="true" />`.
-- **Sivun pääsisällön haitarilistat** (`/lukiot/`, `/pisterajat/@ala/`, `/koulut/@slug/pisterajat/`, `/todistusvalintalaskuri/`, `/ukk/`):
+- **Sivun pääsisällön haitarilistat** (`/lukiot/`, `/koulut/@slug/pisterajat/`, `/todistusvalintalaskuri/`, `/ukk/`):
   - Jokainen `Accordion.ItemTrigger` kääritään semanttiseen otsikkoon (`<Heading as="h2" size="sm">` tai `as="h3"`).
   - Triggerin pystytäyte on `py={4}` ja avautuvan `Accordion.ItemBody`n alatäyte `pb={6}`.
 
@@ -182,7 +184,8 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
 ## 6. Tilaviestit ja metatiedot
 
 ### 6.1 Tuloslaskuri
-- Sijoitetaan tuloslistan yläpuolelle oikeaan reunaan:
+- Asynkronisissa hakulistoissa käytä komponenttia `@/components/ResultCount` ([src/components/ResultCount.tsx](src/components/ResultCount.tsx)), joka huolehtii myös lataus-`Skeleton`ista ja virhetilan piilotuksesta.
+- Synkronisissa listoissa tuloslaskuri sijoitetaan tuloslistan yläpuolelle oikeaan reunaan:
   ```tsx
   <Text aria-live="polite" color="fg.muted" fontSize="xs" ml="auto">
     {new Intl.NumberFormat("fi-FI").format(count)} {count === 1 ? "hakutulos" : "hakutulosta"}
@@ -215,5 +218,5 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
     Lähde: Opetushallinnon tilastopalvelu Vipunen
   </Text>
   ```
-- Käytä Vipusesta aina muotoa `Opetushallinnon tilastopalvelu Vipunen`.
+- Käytä Vipusesta aina muotoa `Opetushallinnon tilastopalvelu Vipunen`. Muille lähteille käytetään vakiomuotoja `Tilastokeskus` (esim. `/tyollistyminen/`) ja `Ylioppilastutkintolautakunta` (`/yo-pisterajat/`).
 

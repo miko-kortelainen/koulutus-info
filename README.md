@@ -4,22 +4,24 @@
 
 ### Tietoa projektista
 
-Yhteishaku.app auttaa tutustumaan korkeakoulujen ja lukioiden yhteishaun tilastoihin. Sivusto sisältää:
+Yhteishaku.app auttaa tutustumaan korkeakoulujen ja toisen asteen yhteishaun tilastoihin. Sivusto sisältää:
 
-- Hakijamäärät ja hakijaprofiilit
+- Hakijamäärät (korkeakoulut ja toinen aste) sekä hakijaprofiilit
 - Valintojen pisterajat sekä ylioppilaskokeiden pisterajat
 - Lukioiden sisäänpääsyn keskiarvorajat
 - Koulutusohjelmat
 - Trendit ja koulutustarve-ennusteet
+- Työllistymis- ja palkkatiedot koulutusaloittain ja ammateittain
 - Opiskelijapalautteen
 - Todistusvalinnan pistelaskurin
 
 ### Kehitystyökalut
 
 - TypeScript
-- React
+- React ja Chakra UI
 - Vike staattisen sivuston esirenderöintiin
 - _pnpm_-paketinhallinta
+- Vitest komponentti- ja hook-testeihin
 - Playwright end-to-end-savutesteihin
 - Go tilasto-, koulutusohjelma- ja pisterajadatan muuntamiseen frontendin aineistoiksi
 
@@ -62,3 +64,5 @@ pnpm run test:e2e
 
 - [Opintopolku.fi](https://opintopolku.fi)
 - [Vipunen](https://vipunen.fi)
+- [Tilastokeskus](https://stat.fi)
+- [Ylioppilastutkintolautakunta](https://www.ylioppilastutkinto.fi)
