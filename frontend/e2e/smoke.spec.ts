@@ -981,14 +981,14 @@ test("/vertaile: compares hakukohteet from different yhteishaku rounds", async (
 test("/koulut: switches which yhteishaku hakijamäärät are shown", async ({ page }) => {
   await page.goto("/koulut/");
   const aalto = page.getByRole("tabpanel").getByRole("link", { name: /^Aalto-yliopisto(\s|$)/ });
-  await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Syksyn yhteishaku 2026");
-  await expect(aalto).toHaveAccessibleName(/Hakijat – Ensisijaiset hakijat –/);
-  await expect(aalto.getByText("alle 5")).toHaveCount(0);
-
-  await selectOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
-
+  await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Kevään yhteishaku 2026");
   await expect(aalto.getByText(numberFormat.format(23476))).toBeVisible();
   await expect(aalto.getByText(numberFormat.format(9742))).toBeVisible();
+
+  await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2026");
+
+  await expect(aalto).toHaveAccessibleName(/Hakijat – Ensisijaiset hakijat –/);
+  await expect(aalto.getByText("alle 5")).toHaveCount(0);
 });
 
 test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {

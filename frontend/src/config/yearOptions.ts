@@ -19,3 +19,4 @@ export const YEAR_OPTIONS = STATISTICS_ROUNDS.map((round) => ({
 }));
 
 export const CURRENT_YEAR = CURRENT_STATISTICS_ROUND;
+export const DEFAULT_SCHOOL_LIST_YEAR: YearOption = "2026_kevat";

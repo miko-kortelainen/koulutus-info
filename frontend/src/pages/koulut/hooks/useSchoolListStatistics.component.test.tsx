@@ -3,6 +3,7 @@ import { act, renderHook, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { expect, test, vi } from "vitest";
 import { getStatistics } from "@/api/browserData";
+import { DEFAULT_SCHOOL_LIST_YEAR } from "@/config/yearOptions";
 import type { SchoolListItem } from "@/pages/koulut/+data";
 import useSchoolListStatistics from "@/pages/koulut/hooks/useSchoolListStatistics";
 import type { StatisticsEntry } from "@/types.gen";
@@ -48,9 +49,10 @@ function createWrapper() {
   };
 }
 
-test("uses prerendered school totals for the current yhteishaku without fetching", () => {
+test("uses prerendered school totals for the default yhteishaku without fetching", () => {
   const { result } = renderHook(() => useSchoolListStatistics(ssrSchools), { wrapper: createWrapper() });
 
+  expect(result.current.selectedYear).toBe(DEFAULT_SCHOOL_LIST_YEAR);
   expect(result.current.yearSchools).toEqual(ssrSchools);
   expect(result.current.dataReady).toBe(true);
   expect(result.current.showLoading).toBe(false);
@@ -68,7 +70,7 @@ test("replaces prerendered totals after a yhteishaku switch", async () => {
   const { result } = renderHook(() => useSchoolListStatistics(ssrSchools), { wrapper: createWrapper() });
 
   act(() => {
-    result.current.setSelectedYear("2026_kevat");
+    result.current.setSelectedYear("2026_syksy");
   });
 
   await waitFor(() => expect(result.current.showLoading).toBe(true));
@@ -93,5 +95,5 @@ test("replaces prerendered totals after a yhteishaku switch", async () => {
     ensisijaisetHakijat: null,
   });
   expect(result.current.showLoading).toBe(false);
-  expect(getStatistics).toHaveBeenCalledWith("2026_kevat");
+  expect(getStatistics).toHaveBeenCalledWith("2026_syksy");
 });
