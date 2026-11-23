@@ -1,5 +1,4 @@
-const description =
-  "Yhteishaku 2027: korkeakoulujen kevään ja syksyn yhteishakujen sekä toisen asteen yhteishaun hakuajat, tulosten julkaisu ja paikan vastaanoton määräajat.";
+const description = "Korkeakoulujen ja toisen asteen yhteishaun hakuaikataulut vuonna 2027.";
 
 export function Head() {
   return (

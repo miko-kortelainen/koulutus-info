@@ -66,7 +66,7 @@ Käyttökohteet: `/lukiot/`, `/lukiot/kaupungit/`, `/koulut/`, `/koulut/@slug/pi
 - Suodattimien alla esitetään tuloslaskuri (jos relevantti), tulokset (`gap={4}` korteille, `gap={3}` haitareille) ja `<Pagination />`.
 
 #### Tyyppi C: Sisältö-, hakemisto- ja työkalusivut
-Käyttökohteet: `/pisterajat/`, `/oppaat/`, `/ukk/`, `/palaute/`, `/tietosuojaseloste/`, `/asenna/`, `/mediakortti/`, `/oma-hakulista/`, `/vertaile/`, `/hakijalle/`, `/opolle/`.
+Käyttökohteet: `/pisterajat/`, `/oppaat/`, `/ukk/`, `/palaute/`, `/tietosuojaseloste/`, `/asenna/`, `/mediakortti/`, `/oma-hakulista/`, `/vertaile/`, `/hakijalle/`, `/opolle/`, `/yhteishaku-2027/`.
 
 - Sisältö rakentuu suoraan `PageContainer`in sisään.
 - Loogiset pääosiot ryhmitellään `<Stack as="section" gap={4} width="full">` (tai tiiviissä tekstikappaleissa `gap={2}`), joiden sisällä on `<Heading as="h2" size="md">`.
