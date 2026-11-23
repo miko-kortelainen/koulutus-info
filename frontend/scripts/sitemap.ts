@@ -130,6 +130,7 @@ const paths = [
   "/koulut/",
   "/trendit/",
   "/ukk/",
+  "/yhteishaku-2027/",
   "/ennakointi/",
   "/tyollistyminen/",
   "/tietosuojaseloste/",
