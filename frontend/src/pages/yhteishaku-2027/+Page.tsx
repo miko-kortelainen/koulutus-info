@@ -1,5 +1,6 @@
 import { Accordion, Flex, Heading, Link, Separator, Stack, Text } from "@chakra-ui/react";
 import { Fragment } from "react";
+import LukiotCta from "@/components/LukiotCta";
 import PistelaskuriCta from "@/components/PistelaskuriCta";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
@@ -8,13 +9,14 @@ const SOURCE_URL = "https://opintopolku.fi/konfo/fi/sivu/hakuaikataulut";
 
 interface Haku {
   title: string;
-  pistelaskuriCta?: boolean;
+  cta?: "pistelaskuri" | "lukiot";
   rows: [label: string, value: string][];
 }
 
 const HAUT: Haku[] = [
   {
     title: "Toisen asteen yhteishaku",
+    cta: "lukiot",
     rows: [
       ["Haku alkaa", "16.2.2027 klo 8.00"],
       ["Haku loppuu", "16.3.2027 klo 15.00"],
@@ -25,7 +27,7 @@ const HAUT: Haku[] = [
   },
   {
     title: "Korkeakoulujen kevään 1. yhteishaku",
-    pistelaskuriCta: true,
+    cta: "pistelaskuri",
     rows: [
       ["Haku alkaa", "7.1.2027 klo 8.00"],
       ["Haku loppuu", "21.1.2027 klo 15.00"],
@@ -36,7 +38,7 @@ const HAUT: Haku[] = [
   },
   {
     title: "Korkeakoulujen kevään 2. yhteishaku",
-    pistelaskuriCta: true,
+    cta: "pistelaskuri",
     rows: [
       ["Haku alkaa", "9.3.2027 klo 8.00"],
       ["Haku loppuu", "23.3.2027 klo 15.00"],
@@ -47,7 +49,7 @@ const HAUT: Haku[] = [
   },
   {
     title: "Korkeakoulujen syksyn yhteishaku",
-    pistelaskuriCta: true,
+    cta: "pistelaskuri",
     rows: [
       ["Haku alkaa", "30.8.2027 klo 8.00"],
       ["Haku loppuu", "9.9.2027 klo 15.00"],
@@ -95,10 +97,8 @@ export default function Yhteishaku2027Page() {
                         </Fragment>
                       ))}
                     </Stack>
-                    {haku.pistelaskuriCta ? (
-                      <Stack mt={6}>
-                        <PistelaskuriCta />
-                      </Stack>
+                    {haku.cta ? (
+                      <Stack mt={6}>{haku.cta === "lukiot" ? <LukiotCta /> : <PistelaskuriCta />}</Stack>
                     ) : null}
                   </Accordion.ItemBody>
                 </Accordion.ItemContent>
