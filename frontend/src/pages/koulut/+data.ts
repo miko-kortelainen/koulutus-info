@@ -1,6 +1,6 @@
 import type { FeedbackMaxScore } from "@/api/dataValidation";
-import { readCurrentYearStatistics, readStatistics, readStudentFeedback, schoolNames } from "@/api/serverData";
-import { YEAR_OPTIONS } from "@/config/yearOptions";
+import { readStatistics, readStudentFeedback, schoolNames } from "@/api/serverData";
+import { DEFAULT_SCHOOL_LIST_YEAR, YEAR_OPTIONS } from "@/config/yearOptions";
 import { slugify } from "@/lib/slug";
 import { schoolStatisticTotals } from "@/pages/koulut/lib/applyYearStatistics";
 
@@ -17,7 +17,7 @@ export interface SchoolListItem {
 }
 
 export const data = (): SchoolListItem[] => {
-  const statistics = readCurrentYearStatistics();
+  const statistics = readStatistics(DEFAULT_SCHOOL_LIST_YEAR);
   const feedback = readStudentFeedback();
   // Autumn current rounds omit most universities; sector still comes from earlier statistics.
   const sektori = new Map(

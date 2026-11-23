@@ -282,11 +282,8 @@ test("nav links navigate to all pages", async ({ page }) => {
   const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
 
   for (const [label, url, heading] of [
-    ["hakijamäärät", "/hakijamaarat/korkeakoulut/", "Korkeakoulujen hakijamäärät"],
-    ["koulutukset", "/koulutukset/", "Koulutukset"],
-    ["pistelaskuri", "/todistusvalintalaskuri/", `Todistusvalintalaskuri ${DEFAULT_CUTOFF_YEAR}`],
-    ["pisterajat", "/pisterajat/", `Pisterajat ${DEFAULT_CUTOFF_YEAR}`],
-    ["koulut", "/koulut/", "Koulut"],
+    ["hakijalle", "/hakijalle/", "Hakijalle"],
+    ["opinto-ohjaajille", "/opolle/", "Opolle"],
     ["oma hakulista", "/oma-hakulista/", "Oma hakulista"],
     ["palaute", "/palaute/", "Palaute"],
     ["ukk", "/ukk/", "Usein kysytyt kysymykset"],
@@ -301,11 +298,17 @@ test("nav links navigate to all pages", async ({ page }) => {
     await expect(page.getByRole("heading", { exact: true, level: 1, name: heading })).toBeVisible();
   }
 
-  await page.getByRole("navigation", { name: "Alatunnisteen navigointi" }).getByRole("link", { name: "Mediakortti" }).click();
+  await page
+    .getByRole("navigation", { name: "Alatunnisteen navigointi" })
+    .getByRole("link", { name: "Mediakortti" })
+    .click();
   await expect(page).toHaveURL("/mediakortti/");
   await expect(page.getByRole("heading", { exact: true, level: 1, name: "Mediakortti" })).toBeVisible();
 
-  await page.getByRole("navigation", { name: "Alatunnisteen navigointi" }).getByRole("link", { name: "Tietosuojaseloste" }).click();
+  await page
+    .getByRole("navigation", { name: "Alatunnisteen navigointi" })
+    .getByRole("link", { name: "Tietosuojaseloste" })
+    .click();
   await expect(page).toHaveURL("/tietosuojaseloste/");
   await expect(page.getByRole("heading", { exact: true, level: 1, name: "Tietosuojaseloste" })).toBeVisible();
   await expect(page.getByText("Rekisterinpitäjä")).toBeVisible();
@@ -482,12 +485,7 @@ test("/todistusvalintalaskuri: compares calculated YO points with cutoffs", asyn
   const tekniikkaAccordion = await openResultsAccordion(page, /Tekniikan alat/);
   await expect(tekniikkaAccordion.getByText(/Pisteraja \(/).first()).toBeVisible();
   await expect(tekniikkaAccordion.getByRole("article").getByText("Pisteesi").first()).toBeVisible();
-  await expect(
-    tekniikkaAccordion
-      .getByRole("article")
-      .getByText(/^106$/)
-      .first(),
-  ).toBeVisible();
+  await expect(tekniikkaAccordion.getByRole("article").getByText(/^106$/).first()).toBeVisible();
 });
 
 test("/todistusvalintalaskuri: filters qualified and sector results and persists filters across reload", async ({
@@ -979,16 +977,18 @@ test("/vertaile: compares hakukohteet from different yhteishaku rounds", async (
 });
 
 test("/koulut: switches which yhteishaku hakijamäärät are shown", async ({ page }) => {
+  // the round list is long enough that on a short viewport the dropdown opens upward and its top is clipped
+  await page.setViewportSize({ width: 1280, height: 1200 });
   await page.goto("/koulut/");
   const aalto = page.getByRole("tabpanel").getByRole("link", { name: /^Aalto-yliopisto(\s|$)/ });
-  await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Syksyn yhteishaku 2026");
-  await expect(aalto).toHaveAccessibleName(/Hakijat – Ensisijaiset hakijat –/);
-  await expect(aalto.getByText("alle 5")).toHaveCount(0);
-
-  await selectOption(page, "Yhteishaku", "Kevään yhteishaku 2026");
-
+  await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Kevään yhteishaku 2026");
   await expect(aalto.getByText(numberFormat.format(23476))).toBeVisible();
   await expect(aalto.getByText(numberFormat.format(9742))).toBeVisible();
+
+  await selectOption(page, "Yhteishaku", "Syksyn yhteishaku 2026");
+
+  await expect(aalto).toHaveAccessibleName(/Hakijat – Ensisijaiset hakijat –/);
+  await expect(aalto.getByText("alle 5")).toHaveCount(0);
 });
 
 test("/koulut: lists schools by sector and switches tabs", async ({ page }) => {
@@ -1058,9 +1058,9 @@ test("/koulut/:slug: paginates Yhteishaku 2027 programmes", async ({ page }) => 
 
   await expect(async () => {
     await page.getByRole("button", { name: "Seuraava sivu" }).click();
-    await expect(
-      page.getByText(/Bachelor of Business Administration, Business Management and Marketing/),
-    ).toBeVisible({ timeout: 1000 });
+    await expect(page.getByText(/Bachelor of Business Administration, Business Management and Marketing/)).toBeVisible({
+      timeout: 1000,
+    });
   }).toPass();
 });
 
@@ -1459,7 +1459,9 @@ test("/hakijaprofiili: selects a school, switches scopes, sorts, switches round 
 });
 
 test("/hakijaprofiili: shows error alert when round fetch fails", async ({ page }) => {
-  await page.route("**/hakijaprofiili-2025-syksy.json", (route) => route.fulfill({ status: 500, body: "Server error" }));
+  await page.route("**/hakijaprofiili-2025-syksy.json", (route) =>
+    route.fulfill({ status: 500, body: "Server error" }),
+  );
   await page.goto("/hakijaprofiili/");
   await expect(page.getByRole("heading", { exact: true, level: 1, name: "Hakijaprofiili" })).toBeVisible();
 
@@ -1558,4 +1560,49 @@ test("/tyollistyminen: shows study field employment, salaries, and occupation se
   await selectOption(page, "Ammattiryhmä", "Muut työntekijät");
   await selectOption(page, "Järjestys", "Matalin palkka");
   await expect(page.getByText("Maanviljelyn avustavat työntekijät", { exact: true })).toBeVisible();
+});
+
+test("yhteishaku 2027 lists the application schedules with CTAs", async ({ page }) => {
+  await page.goto("/yhteishaku-2027/");
+  await expect(page.getByRole("heading", { exact: true, level: 1, name: "Yhteishaku 2027" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 2 })).toHaveText([
+    "Toisen asteen yhteishaku",
+    "Korkeakoulujen kevään 1. yhteishaku",
+    "Korkeakoulujen kevään 2. yhteishaku",
+    "Korkeakoulujen syksyn yhteishaku",
+  ]);
+  await expect(page.getByRole("link", { name: "Opintopolku.fi" })).toHaveAttribute(
+    "href",
+    "https://opintopolku.fi/konfo/fi/sivu/hakuaikataulut",
+  );
+
+  await openAccordion(page, "Toisen asteen yhteishaku");
+  await expect(page.getByText("16.2.2027 klo 8.00")).toBeVisible();
+  await expect(page.getByText("16.3.2027 klo 15.00")).toBeVisible();
+  await expect(page.getByText("17.6.2027")).toBeVisible();
+  await expect(page.getByText("13.8.2027")).toBeVisible();
+  await expect(page.getByRole("link", { name: /Katso lukioiden keskiarvorajat/ })).toHaveAttribute("href", "/lukiot/");
+
+  await openAccordion(page, "Korkeakoulujen kevään 2. yhteishaku");
+  // collapsed panels stay in the DOM, so only match the visible (open) ones
+  const kevat2 = page.locator("dd:visible");
+  await expect(kevat2.getByText("9.3.2027 klo 8.00")).toBeVisible();
+  await expect(kevat2.getByText("23.3.2027 klo 15.00")).toBeVisible();
+  await expect(kevat2.getByText("3.8.2027 klo 15.00")).toBeVisible();
+
+  await page.getByRole("link", { name: /Laske todistusvalintapisteesi/ }).click();
+  await expect(page).toHaveURL("/todistusvalintalaskuri/");
+});
+
+test("yhteishaku 2027 accordions toggle independently", async ({ page }) => {
+  await page.goto("/yhteishaku-2027/");
+  const first = await openAccordion(page, "Korkeakoulujen kevään 1. yhteishaku");
+  await expect(page.getByText("7.1.2027 klo 8.00")).toBeVisible();
+  const syksy = await openAccordion(page, "Korkeakoulujen syksyn yhteishaku");
+  await expect(page.getByText("30.8.2027 klo 8.00")).toBeVisible();
+  await expect(first).toHaveAttribute("aria-expanded", "true");
+
+  await syksy.click();
+  await expect(syksy).toHaveAttribute("aria-expanded", "false");
+  await expect(first).toHaveAttribute("aria-expanded", "true");
 });

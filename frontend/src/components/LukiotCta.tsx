@@ -1,0 +1,27 @@
+import { Button } from "@chakra-ui/react";
+import { HiOutlineAcademicCap, HiOutlineArrowRight } from "react-icons/hi";
+
+export default function LukiotCta() {
+  return (
+    <Button
+      _active={{ transform: "scale(0.96)" }}
+      _hover={{ bg: "accentFg", color: "bg" }}
+      alignSelf={{ md: "flex-start" }}
+      asChild
+      bg="accent"
+      color="onAccent"
+      size={{ base: "xs", md: "sm" }}
+      transitionDuration="0.15s"
+      transitionProperty="transform, background-color, color"
+      transitionTimingFunction="ease-out"
+      variant="solid"
+      width={{ base: "full", md: "auto" }}
+    >
+      <a href="/lukiot/">
+        <HiOutlineAcademicCap aria-hidden="true" />
+        Katso lukioiden keskiarvorajat
+        <HiOutlineArrowRight aria-hidden="true" />
+      </a>
+    </Button>
+  );
+}

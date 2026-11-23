@@ -16,8 +16,8 @@ separate CSV conversion command.
 - `vipunen.aineistoUrl`: Vipunen dataset endpoint.
 - `vipunen.tilastoVuosi`: programme start year. The generator fetches both start seasons for this year.
 - `vipunen.hakutapa`: application method included in the statistics, normally `Yhteishaku`.
-- `opintopolku.haut`: current joint-application waves. Each entry has `id` (`YYYY_kevat_N` or `YYYY_syksy`) and `oid`. The first entry is the default `/koulutukset` wave.
-- `opintopolku.alkamisajankohdat`: fallback start terms used only when a haku has an empty OID.
+- `opintopolku.haut`: current joint-application waves. Each entry requires `id` (`YYYY_kevat_N` or `YYYY_syksy`) and `oid`. The first entry is the default `/koulutukset` wave.
+- `opintopolku.alkamisajankohdat`: fallback start terms supported by the URL builder when no OID is provided.
 
 Joint-application OIDs are updated manually. Opintopolku does not expose a suitable endpoint for discovering the correct OID automatically.
 
@@ -45,15 +45,17 @@ go run . --programmes --yhteishaku-oid 1.2.246.562.29.00000000000000092075
 
 `PROGRAMME_ROUNDS` lists configured haut that already have a `current_programs-*.json` file, in config order. A targeted refresh does not advertise ungenerated waves.
 
-The generator writes one statistics file per joint application under `frontend/public/data/hakijamäärät/`. An autumn 2026 programme start is written to `hakijamaarat-2026-kevat.json`, and a spring 2026 programme start is written to `hakijamaarat-2025-syksy.json`. It also writes one `current_programs-<round>.json` file per configured haku, regenerates `schools.json` (institution catalog from all programme files ∪ all statistics rounds), and `meta.json`. `meta.json` records the available and current statistics rounds, source-specific refresh dates, and the programme haut. The generated `frontend/src/generated/dataManifest.ts` keeps the frontend joint-application selectors in sync. Existing `vipunen`, `opintopolku`, `catalog`, and `all` commands remain supported.
+The generator writes one statistics file per joint application under `frontend/public/data/hakijamäärät/`. An autumn 2026 programme start is written to `hakijamaarat-2026-kevat.json`, and a spring 2026 programme start is written to `hakijamaarat-2025-syksy.json`. It also writes one `current_programs-<round>.json` file per configured haku, regenerates `schools.json` (institution catalog with display short names from all programme files ∪ all statistics rounds), and updates `meta.json`. `meta.json` records the available and current statistics rounds, source-specific refresh dates, and the programme haut. The generated `frontend/src/generated/dataManifest.ts` keeps the frontend statistics, applicant-profile, and programme round selectors in sync. Existing `vipunen`, `opintopolku`, `catalog`, and `all` commands remain supported.
 
 Before replacing an existing dataset, the generator rejects a result with less than half of the previous record count. Review the generated files before deploying the frontend.
 
 The Vipunen statistics refresh also updates the second-degree joint-application
 statistics for the configured start year in `frontend/public/data/toinen-aste/`
-and regenerates the page's year selector. Years without published applicant
+and regenerates `frontend/src/generated/toinenAsteYears.ts`. Years without published applicant
 counts are skipped. Use `go run . --statistics --year 2025` to refresh an
 individual historical year alongside the corresponding higher-education data.
+A daily GitHub Actions workflow (`.github/workflows/vipunen-update.yml`) runs
+`go run . vipunen` and opens a pull request when Vipunen statistics change.
 
 Generate frontend TypeScript types after changing exported data models:
 

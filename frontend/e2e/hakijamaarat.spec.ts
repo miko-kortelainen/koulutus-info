@@ -64,10 +64,15 @@ test("toisen asteen hakijamäärät: searches, filters and switches year", async
   await expect(count).toContainText(/^(?!0000 )\d+ hakutulos/);
   expect(await page.evaluate<number>("document.documentElement.scrollWidth")).toBeLessThanOrEqual(390);
   await expect(page.getByRole("button", { name: "Koulu", exact: true })).toHaveCount(0);
-  await page.getByRole("button", { name: "Koulutusaste" }).click();
-  await expect(page.getByRole("option", { name: "TUVA", exact: true })).toBeVisible();
-  await page.getByRole("option", { name: "TELMA", exact: true }).click();
-  await expect(page.getByRole("button", { name: "Koulutusaste (1)" })).toBeVisible();
+  const koulutusaste = page.getByRole("button", { name: "Koulutusaste" });
+  const telma = page.getByRole("option", { name: "TELMA", exact: true });
+  // clicks can land before hydration or mid-render, so retry until the filter is applied
+  await expect(async () => {
+    if ((await koulutusaste.getAttribute("aria-expanded")) !== "true") await koulutusaste.click();
+    await expect(page.getByRole("option", { name: "TUVA", exact: true })).toBeVisible({ timeout: 1000 });
+    await telma.click({ timeout: 1000 });
+    await expect(page.getByRole("button", { name: "Koulutusaste (1)" })).toBeVisible({ timeout: 1000 });
+  }).toPass();
   await expect(page.getByText(/Työhön ja itsenäiseen elämään valmentava koulutus/).first()).toBeVisible();
   await page.getByRole("combobox", { name: "Yhteishaku" }).click();
   await page.getByRole("option", { name: "Yhteishaku 2020", exact: true }).click();

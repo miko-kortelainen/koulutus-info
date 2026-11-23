@@ -33,7 +33,7 @@ pnpm run deslop:fix              # Fix auto-fixable Deslop findings and format s
 pnpm run deslop:baseline         # Update the Deslop baseline
 ```
 
-The data generation tools in `datagen/` write the generated frontend datasets into `public/data/`. Tygo generates `src/types.gen.ts` and `src/types/pisterajat.gen.ts`, while the data generator updates `src/generated/dataManifest.ts`. Do not edit these files by hand.
+The data generation tools in `datagen/` write the generated frontend datasets into `public/data/`. Tygo generates `src/types.gen.ts` and `src/types/pisterajat.gen.ts`, while the data generator updates `src/generated/dataManifest.ts` and `src/generated/toinenAsteYears.ts`. Do not edit these files by hand.
 
 Additional static datasets in `public/data/` are maintained separately from the main Vipunen/Opintopolku generator:
 - `pisterajat/pisterajat-<year>-<season>-<sector>.json` – higher-education admission cutoffs (`amk` and `yliopisto`)
@@ -42,6 +42,7 @@ Additional static datasets in `public/data/` are maintained separately from the 
 - `todistusvalinta/*-2026.json` – scoring models, threshold rules and programme crosswalk for `/todistusvalintalaskuri/`
 - `hakijaprofiili/hakijaprofiili-*.json` – applicant age and gender distributions
 - `ennakointi/koulutustarpeet.json` – education-need forecasts
+- `tyollistyminen/{tyollistyminen,koulutusalojen-palkat,ammattien-palkat}-2024.json` – employment rates and median salaries by study field and occupation for `/tyollistyminen/`
 - `opiskelijapalaute/{yliopisto,amk}-palaute.json` – Kandipalaute and AVOP survey summaries
 
 ### WebMCP
@@ -61,9 +62,9 @@ flowchart LR
   subgraph generation["Offline generation & imports"]
     sources["Vipunen · Opintopolku"] --> generator["Go data generator"]
     generator --> json["public/data/*.json"]
-    generator --> manifest["generated/dataManifest.ts"]
+    generator --> manifest["generated/dataManifest.ts<br/>generated/toinenAsteYears.ts"]
     cutoffCsv["cutoff CSV"] --> cutoffConverter["Go cutoff converter"] --> json
-    staticImports["manual datasets<br/>lukio · YO · todistusvalinta<br/>hakijaprofiili · ennakointi · palaute"] --> json
+    staticImports["manual datasets<br/>lukio · YO · todistusvalinta<br/>hakijaprofiili · ennakointi<br/>työllistyminen · palaute"] --> json
   end
 
   subgraph prerender["Vike prerender"]
@@ -82,9 +83,10 @@ flowchart LR
   subgraph runtime["Browser runtime"]
     json --> clientApi["browserData.ts fetch<br/>+ dataValidation.ts"]
     clientApi --> queries["TanStack Query<br/>Hakijamäärät · Trendit · Vertailu<br/>Koulut · Hakijaprofiili"]
+    json --> toinenAsteFetch["fetch<br/>Toisen asteen hakijamäärät"]
     json --> calcCatalogs["loadCatalogs.ts fetch<br/>Pistelaskuri"]
-    manifest --> yearOptions["yearOptions.ts · programmeRounds.ts"]
-    localStorage["localStorage"] --> persisted["Favorites · ScoreForm"]
+    manifest --> yearOptions["yearOptions.ts · programmeRounds.ts<br/>toinenAsteYears.ts"]
+    localStorage["localStorage"] --> persisted["Favorites · ScoreForm & filters<br/>preferences"]
     urlState["URL query"] --> urlPages["Vertailu · school cutoffs"]
     feedback["PalautePage"] --> formSubmit["FormSubmit"]
   end
@@ -98,12 +100,14 @@ flowchart LR
 flowchart TB
   subgraph discovery["Browse and analyse"]
     home["/<br/>LandingPage"] --> homeParts["LandingHeadline · HeroButtons · useCountdown<br/>IosInstallTip · QuickLinkTabs · QuickLinkCard"]
-    degrees["/koulutukset/<br/>SchoolsListPage"] --> degreeParts["OptionSelect · SearchInput · FilterItem<br/>useFilteredDegrees · SchoolCard · Pagination"]
-    stats["/hakijamaarat/korkeakoulut/<br/>StatsListPage"] --> statsParts["Search and filters · YearControl · SortControl<br/>useFilteredStatistics · DegreeStatsCard · CompareBar · Pagination"]
+    degrees["/koulutukset/<br/>SchoolsListPage"] --> degreeParts["OptionSelect · DebouncedSearchInput · FilterItem<br/>useFilteredDegrees · SchoolCard · Pagination"]
+    stats["/hakijamaarat/korkeakoulut/<br/>StatsListPage"] --> statsParts["DebouncedSearchInput · FilterItem · YearControl · SortControl<br/>ResultCount · useFilteredStatistics · DegreeStatsCard · CompareBar · Pagination"]
     stats --> compare["/vertaile/<br/>ComparePage"] --> compareParts["ComparisonTable · ShareButton"]
-    trends["/trendit/<br/>TrendsPage"] --> trendParts["YearControl · useTrendsData · TrendCard<br/>TopBarList · ApplicantTotalsChart"]
+    secondDegreeStats["/hakijamaarat/toinen-aste/<br/>ToinenAsteHakijamaarat"] --> secondDegreeParts["DebouncedSearchInput · FilterItem · OptionSelect · SortControl<br/>ResultCount · useFilteredStatistics · DegreeStatsCard · Pagination"]
+    trends["/trendit/<br/>TrendsPage"] --> trendParts["YearControl · OptionSelect · useTrendsData<br/>TrendCard · TopBarList · ApplicantTotalsChart"]
     profile["/hakijaprofiili/<br/>HakijaprofiiliPage"] --> profileParts["OptionSelect · ScopeControl · SearchInput<br/>useHakijaprofiiliQuery · useFilteredEntities<br/>EntityList · ProfiliDetail"]
-    forecast["/ennakointi/<br/>EnnakointiPage"] --> forecastParts["filterAndSortVajeRows · Pagination"]
+    forecast["/ennakointi/<br/>EnnakointiPage"] --> forecastParts["SearchInput · OptionSelect · filterAndSortVajeRows · Pagination"]
+    employment["/tyollistyminen/<br/>TyollistyminenPage"] --> employmentParts["FieldTab · FieldList<br/>OccupationTab · OccupationSearchList · Pagination"]
   end
 
   subgraph schools["Schools and cutoff scores"]
@@ -111,11 +115,11 @@ flowchart TB
     schoolIndex --> school["/koulut/:slug/<br/>SchoolPage"] --> schoolParts["SchoolCard · SchoolStatistics<br/>DegreeStatsCard · Pagination"]
     school --> schoolCutoffs["/koulut/:slug/pisterajat/<br/>CutoffPage"]
     school --> schoolFeedback["/koulut/:slug/opiskelijapalautteet/<br/>FeedbackPage"] --> schoolFeedbackParts["StudentFeedback"]
-    schoolCutoffs --> schoolCutoffParts["SearchInput · OptionSelect · SortControl<br/>useFilteredProgrammes · CutoffCard · Pagination"]
+    schoolCutoffs --> schoolCutoffParts["PistelaskuriCta · SearchInput · OptionSelect<br/>useFilteredProgrammes · CutoffCard"]
     cutoffIndex["/pisterajat/<br/>CutoffIndexPage"] --> fieldCutoffs["/pisterajat/:ala/<br/>AlaCutoffPage"]
     cutoffIndex --> schoolCutoffs
-    fieldCutoffs --> fieldCutoffParts["PistelaskuriCta · SchoolProgrammeList"]
-    fieldCutoffs --> schoolCutoffs
+    fieldCutoffs --> fieldCutoffParts["PistelaskuriCta · SearchInput · OptionSelect<br/>SchoolProgrammeList · CutoffCard · Pagination"]
+    fieldCutoffs --> school
     lukioIndex["/lukiot/<br/>LukiotPage"] --> lukioIndexParts["SearchInput · OptionSelect · SortControl<br/>useFilteredLukioSchools · LukioSchoolCard · Pagination"]
     lukioIndex -. prerendered SEO pages .-> lukioSchool["/lukiot/:slug/<br/>LukioSchoolPage"]
     lukioIndex --> lukioCities["/lukiot/kaupungit/<br/>LukiotKaupungitPage"] --> lukioCity["/lukiot/kaupungit/:kunta/<br/>LukioKuntaPage"]
@@ -126,9 +130,9 @@ flowchart TB
 
   subgraph calculator["Score calculator"]
     scorePage["/todistusvalintalaskuri/<br/>ScoreCalculatorPage"] --> scoreForm["ScoreForm · calculate_todistuspisteet"]
-    scoreForm --> amm["AmmForm · todistusvalinta"]
-    scoreForm --> yo["YoForm · yoForm · yoScoring · todistusvalinta"]
-    scorePage --> scoreResults["ResultSelect · SearchInput<br/>ScoreResultList · ScoreResultCard"]
+    scoreForm --> amm["AmmForm · FormSelect · todistusvalinta"]
+    scoreForm --> yo["YoForm · FormSelect · yoForm · yoScoring · todistusvalinta"]
+    scorePage --> scoreResults["OptionSelect · DebouncedSearchInput<br/>ScoreResultList · ScoreResultCard"]
   end
 
   subgraph content["Content, saved items and support"]
@@ -143,6 +147,7 @@ flowchart TB
     amkGuide --> guideLayout
     guideLayout --> mdx["content.mdx<br/>Callout · GuideAccordion · Chakra Table"]
     install["/asenna/<br/>InstallGuidePage"]
+    mediakortti["/mediakortti/<br/>MediakorttiPage"]
     faq["/ukk/<br/>Accordion"]
     privacy["/tietosuojaseloste/"]
     feedbackPage["/palaute/<br/>PalautePage"]
