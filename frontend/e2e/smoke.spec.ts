@@ -977,6 +977,8 @@ test("/vertaile: compares hakukohteet from different yhteishaku rounds", async (
 });
 
 test("/koulut: switches which yhteishaku hakijamäärät are shown", async ({ page }) => {
+  // the round list is long enough that on a short viewport the dropdown opens upward and its top is clipped
+  await page.setViewportSize({ width: 1280, height: 1200 });
   await page.goto("/koulut/");
   const aalto = page.getByRole("tabpanel").getByRole("link", { name: /^Aalto-yliopisto(\s|$)/ });
   await expect(page.getByRole("combobox", { name: "Yhteishaku" })).toContainText("Kevään yhteishaku 2026");
