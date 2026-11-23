@@ -282,11 +282,8 @@ test("nav links navigate to all pages", async ({ page }) => {
   const nav = page.getByRole("navigation", { exact: true, name: NAV_LABEL });
 
   for (const [label, url, heading] of [
-    ["hakijamäärät", "/hakijamaarat/korkeakoulut/", "Korkeakoulujen hakijamäärät"],
-    ["koulutukset", "/koulutukset/", "Koulutukset"],
-    ["pistelaskuri", "/todistusvalintalaskuri/", `Todistusvalintalaskuri ${DEFAULT_CUTOFF_YEAR}`],
-    ["pisterajat", "/pisterajat/", `Pisterajat ${DEFAULT_CUTOFF_YEAR}`],
-    ["koulut", "/koulut/", "Koulut"],
+    ["hakijalle", "/hakijalle/", "Hakijalle"],
+    ["opinto-ohjaajille", "/opolle/", "Opolle"],
     ["oma hakulista", "/oma-hakulista/", "Oma hakulista"],
     ["palaute", "/palaute/", "Palaute"],
     ["ukk", "/ukk/", "Usein kysytyt kysymykset"],

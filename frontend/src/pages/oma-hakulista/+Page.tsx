@@ -37,8 +37,8 @@ export default function SavedListPage() {
             </Text>
           </Stack>
         ) : (
-          <Stack align="flex-start" gap={4}>
-            <Stack as="ul" direction="column" gap={4} listStyleType="none">
+          <Stack align="flex-start" gap={4} width="100%">
+            <Stack as="ul" direction="column" gap={4} listStyleType="none" width="100%">
               {favorites.map((t, i) => (
                 <SchoolCard
                   index={i + 1}

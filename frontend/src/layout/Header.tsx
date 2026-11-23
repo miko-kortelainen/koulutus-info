@@ -1,55 +1,18 @@
 import { Box, CloseButton, Drawer, HStack, IconButton, Image, Link, Portal, Stack, Text } from "@chakra-ui/react";
 import {
-  HiMenu,
+                                                                                                HiMenu,
   HiOutlineAcademicCap,
-  HiOutlineCalculator,
-  HiOutlineChartBar,
   HiOutlineChatAlt2,
   HiOutlineHeart,
-  HiOutlineLibrary,
   HiOutlineQuestionMarkCircle,
-  HiOutlineSparkles,
+  HiOutlineUserGroup,
 } from "react-icons/hi";
 import { ColorModeButton } from "@/components/color-mode";
 import { COLORS } from "@/theme";
 
 const links = [
-  {
-    href: "/hakijamaarat/korkeakoulut/",
-    label: "hakijamäärät",
-    description: "Katso hakijamäärät koulutuksittain",
-    icon: HiOutlineChartBar,
-  },
-  {
-    href: "/hakijamaarat/toinen-aste/",
-    label: "toisen asteen hakijamäärät",
-    description: "Selaa toisen asteen yhteishaun hakijamääriä",
-    icon: HiOutlineChartBar,
-  },
-  {
-    href: "/koulutukset/",
-    label: "koulutukset",
-    description: "Selaa yhteishaussa olevia koulutuksia",
-    icon: HiOutlineAcademicCap,
-  },
-  {
-    href: "/todistusvalintalaskuri/",
-    label: "pistelaskuri",
-    description: "Arvioi yhteishaun pistemääräsi",
-    icon: HiOutlineCalculator,
-  },
-  {
-    href: "/pisterajat/",
-    label: "pisterajat",
-    description: "Selaa korkeakoulujen pisterajoja",
-    icon: HiOutlineSparkles,
-  },
-  {
-    href: "/koulut/",
-    label: "koulut",
-    description: "Selaa korkeakouluja ja niiden tilastoja",
-    icon: HiOutlineLibrary,
-  },
+  { href: "/hakijalle/", label: "hakijalle", description: "Työkalut ja tiedot hakijalle", icon: HiOutlineAcademicCap },
+  { href: "/opolle/", label: "opinto-ohjaajille", description: "Materiaalit opinto-ohjaajille", icon: HiOutlineUserGroup },
   {
     href: "/oma-hakulista/",
     label: "oma hakulista",
