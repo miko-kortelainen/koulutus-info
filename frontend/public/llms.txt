@@ -33,6 +33,7 @@ Tietojen tulkinta:
 - [Ennakointi](https://yhteishaku.app/ennakointi/): Alojen koulutustarve ja tutkintotuotos vuoteen 2045; ennakointia, ei toteutuneita hakutilastoja
 - [Työllistyminen ja palkat](https://yhteishaku.app/tyollistyminen/): Valmistuneiden työllistyminen kolmen vuoden kuluttua koulutusaloittain sekä kokoaikaisten palkansaajien mediaanipalkat aloittain ja ammateittain (2024)
 - [UKK](https://yhteishaku.app/ukk/): Aineistojen lähteet, päivitystahti ja tilastokäsitteiden selitykset
+- [Yhteishaku 2027](https://yhteishaku.app/yhteishaku-2027/): Korkeakoulujen ja toisen asteen yhteishaun hakuaikataulut vuonna 2027
 - [Etusivu](https://yhteishaku.app/): Hakuajat ja palvelun keskeiset toiminnot
 
 ## Todistusvalinnan oppaat
