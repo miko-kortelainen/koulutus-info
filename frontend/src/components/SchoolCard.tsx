@@ -39,7 +39,9 @@ export default function SchoolCard({ toteutus, index, onMoveUp, onMoveDown, onSa
   );
 
   // koulutusalat is absent on favorites saved before the field existed
-  const pisterajatURL = toteutus.koulutusalat?.length ? `/pisterajat/${slugify(toteutus.koulutusalat[0])}/` : null;
+  const pisterajatURL = toteutus.koulutusalat?.length
+    ? `/pisterajat/${slugify(toteutus.koulutusalat[0])}/`
+    : null;
 
   const footer = (
     <HStack alignItems="center" justify="space-between">

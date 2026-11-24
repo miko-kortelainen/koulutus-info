@@ -1,8 +1,8 @@
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, test, vi } from "vitest";
-import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
 import AlaCutoffPage from "@/pages/pisterajat/@ala/+Page";
+import type { AlaPageData } from "@/pages/pisterajat/@ala/+data";
 import { renderWithChakra } from "@/test/render";
 
 const pageData: AlaPageData = {
