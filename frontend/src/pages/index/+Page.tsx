@@ -34,14 +34,7 @@ function LandingBackground() {
         src="/images/nature.avif"
         width="100%"
       />
-      <Box
-        backgroundImage={{
-          _light: landingOverlay(55, 8, "70%"),
-          _dark: landingOverlay(75, 42, "60%"),
-        }}
-        inset={0}
-        position="absolute"
-      />
+      <Box backgroundImage={landingOverlay(55, 8, "70%")} inset={0} position="absolute" />
     </Box>
   );
 }

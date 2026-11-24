@@ -13,7 +13,7 @@ import { filterAndSortVajeRows, type SektoriFilter, statusLabel, type VajeSort }
 
 const PAGE_SIZE = 10;
 const BAR_H = "8";
-/** Full-width bar track — follows appearance via bg.muted */
+/** Full-width bar track — bg.muted */
 const BAR_TRACK = "bg.muted";
 
 const SEKTORI_OPTIONS: { label: string; value: SektoriFilter }[] = [

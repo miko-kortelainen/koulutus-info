@@ -7,7 +7,6 @@ import {
   HiOutlineQuestionMarkCircle,
   HiOutlineUserGroup,
 } from "react-icons/hi";
-import { ColorModeButton } from "@/components/color-mode";
 import { COLORS } from "@/theme";
 
 const links = [
@@ -93,9 +92,6 @@ export default function Header() {
                           </Drawer.ActionTrigger>
                         </Box>
                       ))}
-                      <Box as="li">
-                        <ColorModeButton />
-                      </Box>
                     </Stack>
                   </Box>
                 </Drawer.Body>

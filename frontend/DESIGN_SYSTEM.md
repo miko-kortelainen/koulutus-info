@@ -25,7 +25,7 @@ Jokainen sivu koostuu `PageIntro`-yläosiosta ja `PageContainer align="flex-star
 ```
 
 - **`PageIntro` sisältää sivun ainoan `h1`-otsikon.** Sekä `title` että `description` ovat pakollisia propseja. Sivun sisällössä osiot alkavat aina `h2`-tasolta.
-- **`PageIntro`n väritys:** yksivärinen limetausta (`bg="heroButton.bg"`) ja tummanvihreä teksti (`color="heroButton.fg"`) sekä vaaleassa että tummassa teemassa.
+- **`PageIntro`n väritys:** yksivärinen limetausta (`bg="heroButton.bg"`) ja tummanvihreä teksti (`color="heroButton.fg"`).
 - **Poikkeukset, joilla ei ole `PageIntro`-komponenttia:**
   1. Etusivu `/` ([src/pages/index/+Page.tsx](src/pages/index/+Page.tsx)) – käyttää koko näkymän Hero-osiota.
   2. Virhesivu (`404` / virhe, [src/pages/_error/+Page.tsx](src/pages/_error/+Page.tsx)) – keskitetty tilanäkymä.
@@ -118,24 +118,24 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
 
 ### 4.1 Brändivärit
 
-Brändissä on kaksi pääväriä, jotka määritellään vain `src/theme.ts`-tiedostossa:
+Käytössä on vain vaalea teema; tummaa teemaa ei ole. Brändissä on kaksi pääväriä, jotka määritellään vain `src/theme.ts`-tiedostossa:
 
 | Vakio | Arvo |
 | --- | --- |
 | `LIME` | `#b5e45e` |
 | `DARK_GREEN` | `#0c2e16` |
 
-| Käyttö | Vaalea teema | Tumma teema |
-| --- | --- | --- |
-| Sivun tausta (`bg`) | Lähes valkoinen | `DARK_GREEN` |
-| Teksti (`fg`, `fg.accent`) | `DARK_GREEN` | `LIME` |
-| Korostettu täyttöpinta (`accent`) | `DARK_GREEN` | `LIME` |
-| Teksti ja ikonit täyttöpinnalla (`onAccent`) | `LIME` | `DARK_GREEN` |
-| Reunat ja vaimea teksti | `DARK_GREEN` läpikuultavana | `LIME` läpikuultavana |
-| Korttien ja vaimeiden pintojen tausta (`bg.panel`, `bg.muted`) | Neutraali vaaleanharmaa | Neutraali tummanharmaa |
+| Käyttö | Väri |
+| --- | --- |
+| Sivun tausta (`bg`) | Lähes valkoinen |
+| Teksti (`fg`, `fg.accent`) | `DARK_GREEN` |
+| Korostettu täyttöpinta (`accent`) | `DARK_GREEN` |
+| Teksti ja ikonit täyttöpinnalla (`onAccent`) | `LIME` |
+| Reunat ja vaimea teksti | `DARK_GREEN` läpikuultavana |
+| Korttien ja vaimeiden pintojen tausta (`bg.panel`, `bg.muted`) | Neutraali vaaleanharmaa |
 
-- `PageIntro` ja etusivun hero-painike ovat molemmissa teemoissa limeä `DARK_GREEN`-tekstillä (`heroButton.*`).
-- Älä käytä `LIME`ä tekstin tai ikonin värinä vaalealla taustalla, koska kontrasti ei riitä. Teemasta riippuvat tokenit (`fg.accent`, `accent`, `onAccent`) valitsevat oikean parin. Ne eivät kuitenkaan sovi aina limelle `heroButton.bg`-pinnalle (tummassa teemassa lime häviää taustaan), joten käytä sillä `heroButton.fg`-väriä.
+- `PageIntro` ja etusivun hero-painike ovat limeä `DARK_GREEN`-tekstillä (`heroButton.*`).
+- Älä käytä `LIME`ä tekstin tai ikonin värinä vaalealla taustalla, koska kontrasti ei riitä. Limellä `heroButton.bg`-pinnalla käytä `heroButton.fg`-väriä.
 - Kun Chakra-tokeneita ei voi käyttää (esim. jakokuvan canvas-piirto, [hakulistaImage.ts](src/pages/oma-hakulista/lib/hakulistaImage.ts)), tuo `LIME` ja `DARK_GREEN` teemasta.
 
 ### 4.2 Semanttiset tokenit
@@ -152,7 +152,7 @@ Brändissä on kaksi pääväriä, jotka määritellään vain `src/theme.ts`-ti
 | `border.subtle` | Kevyemmät erottimet, taulukon solureunat ja lohkojen väliviivat. |
 | `viz.field`, `viz.school`, `viz.sector`, `viz.trend`, `viz.ylituotos` | Kaavioiden ja datapalkkien värit. `viz.field` käyttää brändivärejä; muut ovat erillisiä värejä, jotta sarjat erottuvat toisistaan. |
 | `tier.lowBg`, `tier.mediumBg`, `tier.highBg`, `tier.fg` | Hakupaineen tasobadget (`DegreeStatsCard`). |
-| `toastBg`, `toastFg` | Toast-ilmoitusten tausta ja teksti (`Toaster`): `DARK_GREEN` ja `LIME` molemmissa teemoissa. |
+| `toastBg`, `toastFg` | Toast-ilmoitusten tausta ja teksti (`Toaster`): `DARK_GREEN` ja `LIME`. |
 | `heroButton.bg`, `heroButton.fg` | Etusivun hero-painikkeen ja `PageIntro`n tausta ja teksti. |
 
 **Milloin käytetään `COLORS.*`-vakiota (`src/theme.ts`)?**

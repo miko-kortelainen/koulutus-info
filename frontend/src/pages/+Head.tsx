@@ -23,8 +23,7 @@ export function Head() {
         rel="preload"
         type="font/woff2"
       />
-      <meta content={THEME_COLOR.light} media="(prefers-color-scheme: light)" name="theme-color" />
-      <meta content={THEME_COLOR.dark} media="(prefers-color-scheme: dark)" name="theme-color" />
+      <meta content={THEME_COLOR} name="theme-color" />
       <meta content="website" property="og:type" />
       <meta content="https://yhteishaku.app/images/og-img.png" property="og:image" />
       <meta content="1200" property="og:image:width" />
