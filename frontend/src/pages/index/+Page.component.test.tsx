@@ -5,9 +5,6 @@ import ToolsPage from "@/components/quickLinks/ToolsPage";
 import LandingPage from "@/pages/index/+Page";
 import { renderWithChakra } from "@/test/render";
 
-const TOINEN_ASTE_LABEL = "2027 toisen asteen yhteishakuun";
-const KORKEAKOULU_LABEL = "Kevään 2027 ensimmäiseen yhteishakuun";
-
 function stubResizeObserver() {
   vi.stubGlobal(
     "ResizeObserver",
@@ -18,27 +15,6 @@ function stubResizeObserver() {
     },
   );
 }
-
-test("shows the countdown for the selected education tab", async () => {
-  stubResizeObserver();
-  vi.useFakeTimers({ toFake: ["Date"] });
-  vi.setSystemTime(Date.parse("2026-09-29T12:00:00+03:00"));
-  const user = userEvent.setup();
-  renderWithChakra(<LandingPage />);
-
-  expect(screen.getByText(TOINEN_ASTE_LABEL)).toBeInTheDocument();
-  expect(screen.queryByText(KORKEAKOULU_LABEL)).not.toBeInTheDocument();
-
-  await user.click(screen.getByRole("tab", { name: "Korkeakoulutus" }));
-
-  expect(screen.getByText(KORKEAKOULU_LABEL)).toBeInTheDocument();
-  expect(screen.queryByText(TOINEN_ASTE_LABEL)).not.toBeInTheDocument();
-
-  await user.click(screen.getByRole("tab", { name: "Toinen aste" }));
-
-  expect(screen.getByText(TOINEN_ASTE_LABEL)).toBeInTheDocument();
-  expect(screen.queryByText(KORKEAKOULU_LABEL)).not.toBeInTheDocument();
-});
 
 test("shares the selected education level with Hakijalle", async () => {
   stubResizeObserver();
@@ -56,4 +32,14 @@ test("shares the selected education level with Hakijalle", async () => {
   renderWithChakra(<LandingPage />);
   expect(screen.getByRole("tab", { name: "Toinen aste" })).toHaveAttribute("aria-selected", "true");
   localStorage.removeItem("yhteishaku:hakijalle-education-level");
+});
+
+test("links to the 2027 joint application schedules", () => {
+  stubResizeObserver();
+  renderWithChakra(<LandingPage />);
+
+  expect(screen.getByRole("link", { name: "Katso 2027 yhteishaun hakuaikataulut" })).toHaveAttribute(
+    "href",
+    "/yhteishaku-2027/",
+  );
 });

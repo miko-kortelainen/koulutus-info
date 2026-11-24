@@ -1,11 +1,11 @@
 import { Card, Heading, HStack, Link, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { useData } from "vike-react/useData";
+import { alaIcon } from "@/components/alaIcons";
 import PistelaskuriCta from "@/components/PistelaskuriCta";
 import { DEFAULT_CUTOFF_YEAR } from "@/config/cutoffRounds";
 import PageContainer from "@/layout/PageContainer";
 import PageIntro from "@/layout/PageIntro";
 import type { CutoffIndexData } from "@/pages/pisterajat/+data";
-import { alaIcon } from "@/components/alaIcons";
 import { COLORS } from "@/theme";
 
 export default function CutoffIndexPage() {

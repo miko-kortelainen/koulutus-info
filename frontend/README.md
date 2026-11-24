@@ -99,7 +99,7 @@ flowchart LR
 ```mermaid
 flowchart TB
   subgraph discovery["Browse and analyse"]
-    home["/<br/>LandingPage"] --> homeParts["LandingHeadline · HeroButtons · useCountdown<br/>IosInstallTip · QuickLinkTabs · QuickLinkCard"]
+    home["/<br/>LandingPage"] --> homeParts["LandingHeadline · HeroButtons · Yhteishaku2027Cta<br/>IosInstallTip · QuickLinkTabs · QuickLinkCard"]
     degrees["/koulutukset/<br/>SchoolsListPage"] --> degreeParts["OptionSelect · DebouncedSearchInput · FilterItem<br/>useFilteredDegrees · SchoolCard · Pagination"]
     stats["/hakijamaarat/korkeakoulut/<br/>StatsListPage"] --> statsParts["DebouncedSearchInput · FilterItem · YearControl · SortControl<br/>ResultCount · useFilteredStatistics · DegreeStatsCard · CompareBar · Pagination"]
     stats --> compare["/vertaile/<br/>ComparePage"] --> compareParts["ComparisonTable · ShareButton"]

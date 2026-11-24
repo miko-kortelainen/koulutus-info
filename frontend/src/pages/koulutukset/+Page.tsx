@@ -1,4 +1,4 @@
-import { Accordion, Link, Stack, Text } from "@chakra-ui/react";
+import { Accordion, Flex, Link, Stack, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useData } from "vike-react/useData";
 import DebouncedSearchInput from "@/components/DebouncedSearchInput";
@@ -7,6 +7,7 @@ import OptionSelect from "@/components/OptionSelect";
 import Pagination from "@/components/Pagination";
 import SchoolCard from "@/components/SchoolCard";
 import { toaster } from "@/components/Toaster";
+import Yhteishaku2027Cta from "@/components/Yhteishaku2027Cta";
 import {
   CURRENT_PROGRAMME_ROUND,
   PROGRAMME_ROUND_OPTIONS,
@@ -85,6 +86,9 @@ export default function SchoolsListPage() {
 
   const sortControls = (
     <Stack gap={4} position={{ md: "sticky" }} width={{ base: "100%", md: "72" }}>
+      <Flex justify="center">
+        <Yhteishaku2027Cta />
+      </Flex>
       <OptionSelect
         ariaLabel="Yhteishaku"
         items={PROGRAMME_ROUND_OPTIONS}

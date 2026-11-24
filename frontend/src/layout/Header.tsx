@@ -1,6 +1,6 @@
 import { Box, CloseButton, Drawer, HStack, IconButton, Image, Link, Portal, Stack, Text } from "@chakra-ui/react";
 import {
-                                                                                                HiMenu,
+  HiMenu,
   HiOutlineAcademicCap,
   HiOutlineChatAlt2,
   HiOutlineHeart,
@@ -12,7 +12,12 @@ import { COLORS } from "@/theme";
 
 const links = [
   { href: "/hakijalle/", label: "hakijalle", description: "Työkalut ja tiedot hakijalle", icon: HiOutlineAcademicCap },
-  { href: "/opolle/", label: "opinto-ohjaajille", description: "Materiaalit opinto-ohjaajille", icon: HiOutlineUserGroup },
+  {
+    href: "/opolle/",
+    label: "opinto-ohjaajille",
+    description: "Materiaalit opinto-ohjaajille",
+    icon: HiOutlineUserGroup,
+  },
   {
     href: "/oma-hakulista/",
     label: "oma hakulista",

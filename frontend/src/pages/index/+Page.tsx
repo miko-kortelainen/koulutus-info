@@ -1,17 +1,13 @@
-import { Box, Heading, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
-import { motion } from "motion/react";
+import { Box, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import QuickLinkTabs from "@/components/quickLinks/QuickLinkTabs";
-import { quickLinkSections } from "@/components/quickLinks/quickLinks";
 import useEducationLevel from "@/components/quickLinks/useEducationLevel";
+import Yhteishaku2027Cta from "@/components/Yhteishaku2027Cta";
 import { HEADER_HEIGHT } from "@/layout/Header";
 import PageContainer from "@/layout/PageContainer";
 import HeroButtons from "@/pages/index/components/HeroButtons";
 import IosInstallTip from "@/pages/index/components/IosInstallTip";
 import LandingHeadline from "@/pages/index/components/LandingHeadline";
-import useCountdown from "@/pages/index/hooks/useCountdown";
 import { COLORS } from "@/theme";
-
-const MotionVStack = motion.create(VStack);
 
 function landingOverlay(headerMix: number, midMix: number, midUntil: string): string {
   const wash = (mix: number, stop: string) => `color-mix(in srgb, ${COLORS.bg} ${mix}%, transparent) ${stop}`;
@@ -52,16 +48,6 @@ function LandingBackground() {
 
 export default function LandingPage() {
   const [sectionId, setSectionId] = useEducationLevel();
-  const section = quickLinkSections.find((item) => item.id === sectionId) ?? quickLinkSections[0];
-  const timeLeft = useCountdown(section.rounds);
-
-  const countdownTiles = timeLeft
-    ? [
-        { value: timeLeft.days, label: "päivää" },
-        { value: timeLeft.hours, label: "tuntia" },
-        { value: timeLeft.minutes, label: "minuuttia" },
-      ]
-    : [];
 
   const hero = (
     <Box
@@ -102,36 +88,6 @@ export default function LandingPage() {
     </Box>
   );
 
-  const countdown = timeLeft && (
-    <MotionVStack
-      animate={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 16 }}
-      transition={{ duration: 0.6, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }} letterSpacing="wide">
-        {timeLeft.label}
-      </Text>
-      <SimpleGrid columns={3} gap={6} textAlign="center" width="100%">
-        {countdownTiles.map(({ value, label }, index) => (
-          <MotionVStack
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            gap={0}
-            initial={{ opacity: 0, scale: 0.95, y: 12 }}
-            key={label}
-            transition={{ duration: 0.5, delay: 0.7 + index * 0.12, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <Text color="fg.accent" fontSize="2xl" fontWeight="bold">
-              {value}
-            </Text>
-            <Text color="fg.muted" fontSize={{ base: "xs", md: "md" }}>
-              {label}
-            </Text>
-          </MotionVStack>
-        ))}
-      </SimpleGrid>
-    </MotionVStack>
-  );
-
   return (
     <>
       {hero}
@@ -146,7 +102,7 @@ export default function LandingPage() {
                 Laske pisteesi, tutki koulutuksia ja vertaa vaihtoehtoja yhdessä paikassa.
               </Text>
             </Stack>
-            {countdown}
+            <Yhteishaku2027Cta />
             <IosInstallTip />
             <QuickLinkTabs onValueChange={setSectionId} value={sectionId} />
           </VStack>
