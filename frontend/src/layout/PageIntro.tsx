@@ -2,7 +2,6 @@ import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 
 import { HEADER_HEIGHT } from "@/layout/Header";
-import { COLORS } from "@/theme";
 
 interface PageIntroProps {
   title: ReactNode;
@@ -14,7 +13,8 @@ export default function PageIntro({ title, description }: PageIntroProps) {
     <Flex
       alignItems="center"
       as="header"
-      backgroundImage={`linear-gradient(to top, color-mix(in srgb, ${COLORS.accent} 16%, ${COLORS.bg}), ${COLORS.bg})`}
+      bg="heroButton.bg"
+      color="heroButton.fg"
       justifyContent="center"
       mb={{ base: 6, md: 10 }}
       minH={{ base: `calc(184px + ${HEADER_HEIGHT})`, md: `calc(192px + ${HEADER_HEIGHT})` }}
@@ -33,7 +33,7 @@ export default function PageIntro({ title, description }: PageIntroProps) {
         >
           {title}
         </Heading>
-        <Text color="fg.muted" fontSize={{ base: "14px", md: "18px" }} lineHeight="27px" textWrap="pretty" width="100%">
+        <Text color="heroButton.fg" fontSize={{ base: "14px", md: "18px" }} lineHeight="27px" textWrap="pretty" width="100%">
           {description}
         </Text>
       </Stack>

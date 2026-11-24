@@ -1,4 +1,5 @@
 import { localizedText } from "@/lib/localizedText";
+import { DARK_GREEN, LIME } from "@/theme";
 import type { ToteutusEntry } from "@/types.gen";
 
 export const HAKULISTA_SHARE_FILENAME = "oma-hakulista.jpg";
@@ -24,11 +25,11 @@ const MAX_GAP = 220;
 const JPEG_QUALITY = 0.92;
 
 const COLOR = {
-  title: "oklch(0.99 0.01 126)",
-  program: "oklch(0.99 0.01 126)",
-  school: "oklch(0.97 0.02 126 / 0.88)",
-  number: "oklch(0.99 0.01 126)",
-  fallbackBg: "oklch(0.65 0.156 126)",
+  title: LIME,
+  program: LIME,
+  school: LIME,
+  number: LIME,
+  fallbackBg: DARK_GREEN,
 } as const;
 
 export interface HakulistaShareItem {
@@ -102,7 +103,7 @@ async function renderHakulistaImage(items: HakulistaShareItem[]): Promise<Blob> 
 
   ctx.setTransform(SCALE, 0, 0, SCALE, 0, 0);
   drawBackground(ctx, photo);
-  ctx.shadowColor = "oklch(0.28 0.08 126 / 0.35)";
+  ctx.shadowColor = DARK_GREEN;
   ctx.shadowBlur = 8;
   ctx.textBaseline = "top";
 
