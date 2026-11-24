@@ -91,6 +91,11 @@ const config = defineConfig({
         gray: {
           fg: { value: "{colors.text}" },
         },
+        // Landing hero CTA: leaf green with dark green text in both themes.
+        heroButton: {
+          bg: { value: "oklch(0.86 0.17 126)" },
+          fg: { value: "oklch(0.23 0.045 152)" },
+        },
         // Chart/status fills — appearance-tuned for ≥3:1 vs page bg.
         viz: {
           field: { value: { _light: "oklch(0.55 0.13 132)", _dark: "oklch(0.75 0.13 132)" } },

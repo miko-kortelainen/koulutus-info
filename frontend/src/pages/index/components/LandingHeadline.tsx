@@ -27,7 +27,7 @@ function TopicSwap() {
   const topic = HERO_TOPICS[index];
 
   return (
-    <Box as="span" display="inline-grid" justifyItems="center" pb="0.28em" position="relative" pt="0.1em">
+    <Box as="span" display="inline-grid" justifyItems="center" pb="0.12em" position="relative">
       {/* ponytail: first topic is the widest; extra sizers if a longer label lands */}
       <Box aria-hidden="true" as="span" gridArea="1 / 1" visibility="hidden" whiteSpace="nowrap">
         {HERO_TOPICS[0]}
@@ -53,8 +53,9 @@ export default function LandingHeadline() {
     <Heading
       as="h1"
       fontSize={{ base: "4xl", md: "5xl", lg: "56px" }}
-      fontWeight="medium"
-      lineHeight={1.25}
+      fontWeight="bold"
+      letterSpacing="-0.05em"
+      lineHeight={1.2}
       textWrap="balance"
     >
       <VisuallyHidden>{HERO_HEADING_NAME}</VisuallyHidden>

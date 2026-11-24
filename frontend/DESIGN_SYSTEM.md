@@ -128,6 +128,7 @@ Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH
 | `viz.field`, `viz.school`, `viz.sector`, `viz.trend`, `viz.ylituotos` | Kaavioiden ja datapalkkien värit. |
 | `tier.lowBg`, `tier.mediumBg`, `tier.highBg`, `tier.fg` | Hakupaineen tasobadget (`DegreeStatsCard`). |
 | `toastBg`, `toastFg` | Toast-ilmoitusten tausta ja teksti (`Toaster`). |
+| `heroButton.bg`, `heroButton.fg` | Etusivun hero-painikkeen tausta ja teksti. |
 
 **Milloin käytetään `COLORS.*`-vakiota (`src/theme.ts`)?**
 - Käytä `COLORS.*`-vakioita (`bg`, `text`, `accent`, `accentFg`, `border`, `surfaceMuted`, `onAccent`) **vain** silloin, kun arvo annetaan CSS-merkkijonon sisällä (esim. `linear-gradient(...)`, `borderBottom={`1px solid ${COLORS.accentFg}`}`) tai kolmannen osapuolen komponentille kuten `react-icons`-ikonin `color`-ominaisuudelle.

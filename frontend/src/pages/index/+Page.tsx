@@ -27,6 +27,7 @@ function LandingBackground() {
       <Image
         alt=""
         fetchPriority="high"
+        filter="brightness(0.82)"
         height="100%"
         loading="eager"
         objectFit="cover"

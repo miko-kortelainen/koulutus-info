@@ -12,21 +12,21 @@ export default function HeroButtons() {
 
   return (
     <Stack align="center" gap={8} maxW={{ md: "28rem" }} width="100%">
-      <div style={{ width: "100%" }}>
+      <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
         <Button
           _active={{ transform: "scale(0.96)" }}
           _hover={{ bg: "accentFg", color: "bg" }}
           asChild
-          bg="accent"
+          bg="heroButton.bg"
           borderWidth="0"
           boxShadow="0 3px 6px rgba(0, 0, 0, 0.2), 0 8px 18px rgba(0, 0, 0, 0.25)"
-          color="onAccent"
-          height="3rem"
+          color="heroButton.fg"
+          height={{ base: "2.5rem", md: "3rem" }}
           transitionDuration="0.15s"
           transitionProperty="transform, background-color, color"
           transitionTimingFunction="ease-out"
           variant="solid"
-          width="100%"
+          width={{ base: "auto", md: "100%" }}
         >
           <a
             aria-busy={isPending || undefined}
@@ -38,7 +38,7 @@ export default function HeroButtons() {
           >
             <HStack gap={2}>
               <PiStudent aria-hidden="true" style={{ width: "1.375rem", height: "1.375rem" }} />
-              <Text as="span" fontSize="0.9375rem" fontWeight="medium">
+              <Text as="span" fontSize={{ base: "0.875rem", md: "0.9375rem" }} fontWeight="medium">
                 Katso hakijan työkalut
               </Text>
               {isPending ? (
