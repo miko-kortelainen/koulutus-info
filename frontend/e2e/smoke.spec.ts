@@ -141,8 +141,10 @@ test("homepage quick links point to their pages", async ({ page }) => {
     "href",
     "/opolle/",
   );
-  await expect(page.getByText("2027 toisen asteen yhteishakuun")).toBeVisible();
-  await expect(page.getByText("Kevään 2027 ensimmäiseen yhteishakuun")).toHaveCount(0);
+  await expect(page.getByRole("link", { name: "Katso 2027 yhteishaun hakuaikataulut" })).toHaveAttribute(
+    "href",
+    "/yhteishaku-2027/",
+  );
 
   await expect(page.getByRole("tabpanel").getByRole("link", { name: /^lukiot(\s|$)/ })).toHaveAttribute(
     "href",
@@ -154,8 +156,6 @@ test("homepage quick links point to their pages", async ({ page }) => {
   );
 
   await selectTab(page, "Korkeakoulutus");
-  await expect(page.getByText("Kevään 2027 ensimmäiseen yhteishakuun")).toBeVisible();
-  await expect(page.getByText("2027 toisen asteen yhteishakuun")).toHaveCount(0);
   for (const [label, url] of [
     ["hakijamäärät", "/hakijamaarat/korkeakoulut/"],
     ["koulutukset", "/koulutukset/"],
