@@ -25,6 +25,7 @@ Jokainen sivu koostuu `PageIntro`-yläosiosta ja `PageContainer align="flex-star
 ```
 
 - **`PageIntro` sisältää sivun ainoan `h1`-otsikon.** Sekä `title` että `description` ovat pakollisia propseja. Sivun sisällössä osiot alkavat aina `h2`-tasolta.
+- **`PageIntro`n väritys:** yksivärinen limetausta (`bg="heroButton.bg"`) ja tummanvihreä teksti (`color="heroButton.fg"`) sekä vaaleassa että tummassa teemassa.
 - **Poikkeukset, joilla ei ole `PageIntro`-komponenttia:**
   1. Etusivu `/` ([src/pages/index/+Page.tsx](src/pages/index/+Page.tsx)) – käyttää koko näkymän Hero-osiota.
   2. Virhesivu (`404` / virhe, [src/pages/_error/+Page.tsx](src/pages/_error/+Page.tsx)) – keskitetty tilanäkymä.
@@ -101,7 +102,7 @@ Jokaisessa `<Heading>`-komponentissa on aina oltava eksplisiittinen `as`-prop (`
 | Rooli | Toteutus | Tyyli ja käyttö |
 | --- | --- | --- |
 | **Sivun pääotsikko (`h1`)** | `<PageIntro title="..." />` | `fontSize={{ base: "24px", md: "36px" }}`, `fontWeight="semibold"`, `textWrap="balance"`. Vain yksi per sivu. |
-| **Sivun kuvausteksti** | `<PageIntro description="..." />` | `color="fg.muted"`, `fontSize={{ base: "14px", md: "18px" }}`, `textWrap="pretty"`. |
+| **Sivun kuvausteksti** | `<PageIntro description="..." />` | `color="heroButton.fg"`, `fontSize={{ base: "14px", md: "18px" }}`, `textWrap="pretty"`. |
 | **Osion otsikko (`h2`)** | `<Heading as="h2" size="md">` | Sivun pääosiot (`PageContainer`in sisällä). |
 | **Kortti- tai haitariosion otsikko (`h2` / `h3`)** | `<Heading as="h2" size="sm">` (tai `as="h3"`) | `TrendCard`, haitaririvien otsikot (`Accordion.ItemTrigger`), alaotsikot. |
 | **Leipäteksti** | `<Text fontSize="sm">` tai oletus (`md`) | Työkalu- ja datasivuilla tiivis aputeksti on `fontSize="sm"`, oppaissa ja artikkeleissa `fontSize="md" lineHeight="tall"`. Käytä `textWrap="pretty"` monirivisissä teksteissä. |
@@ -115,20 +116,44 @@ Jokaisessa `<Heading>`-komponentissa on aina oltava eksplisiittinen `as`-prop (`
 
 Käytä Chakra-komponenteissa aina semanttisia tokeneita. Älä kovakoodaa OKLCH-, RGB- tai HEX-arvoja komponentteihin.
 
+### 4.1 Brändivärit
+
+Brändissä on kaksi pääväriä, jotka määritellään vain `src/theme.ts`-tiedostossa:
+
+| Vakio | Arvo |
+| --- | --- |
+| `LIME` | `#b5e45e` |
+| `DARK_GREEN` | `#0c2e16` |
+
+| Käyttö | Vaalea teema | Tumma teema |
+| --- | --- | --- |
+| Sivun tausta (`bg`) | Lähes valkoinen | `DARK_GREEN` |
+| Teksti (`fg`, `fg.accent`) | `DARK_GREEN` | `LIME` |
+| Korostettu täyttöpinta (`accent`) | `DARK_GREEN` | `LIME` |
+| Teksti ja ikonit täyttöpinnalla (`onAccent`) | `LIME` | `DARK_GREEN` |
+| Reunat ja vaimea teksti | `DARK_GREEN` läpikuultavana | `LIME` läpikuultavana |
+| Korttien ja vaimeiden pintojen tausta (`bg.panel`, `bg.muted`) | Neutraali vaaleanharmaa | Neutraali tummanharmaa |
+
+- `PageIntro` ja etusivun hero-painike ovat molemmissa teemoissa limeä `DARK_GREEN`-tekstillä (`heroButton.*`).
+- Älä käytä `LIME`ä tekstin tai ikonin värinä vaalealla taustalla, koska kontrasti ei riitä. Teemasta riippuvat tokenit (`fg.accent`, `accent`, `onAccent`) valitsevat oikean parin. Ne eivät kuitenkaan sovi aina limelle `heroButton.bg`-pinnalle (tummassa teemassa lime häviää taustaan), joten käytä sillä `heroButton.fg`-väriä.
+- Kun Chakra-tokeneita ei voi käyttää (esim. jakokuvan canvas-piirto, [hakulistaImage.ts](src/pages/oma-hakulista/lib/hakulistaImage.ts)), tuo `LIME` ja `DARK_GREEN` teemasta.
+
+### 4.2 Semanttiset tokenit
+
 | Semanttinen token | Käyttötarkoitus |
 | --- | --- |
-| `bg` | Sivun ja korttien oletustausta. |
-| `bg.muted` / `bg.panel` | Vaimea pinta: pudotusvalikot, taulukon otsikkorivi, mittaripalkin tausta (`BAR_TRACK`), `Callout`-laatikko, valitun välilehden indikaattori (`Tabs.Indicator`). |
+| `bg` | Sivun oletustausta. |
+| `bg.muted` / `bg.panel` | Neutraali vaimea pinta: korttien tausta, pudotusvalikot, taulukon otsikkorivi, mittaripalkin tausta (`BAR_TRACK`), `Callout`-laatikko, valitun välilehden indikaattori (`Tabs.Indicator`). |
 | `fg` (tai `text`) | Ensisijainen tekstiväri. |
 | `fg.muted` | Toissijainen teksti, aputekstit, kuvaukset, lähteet ja otsikot (`Stat.Label`, `Field.Label`). |
 | `fg.accent` | Korostusteksti, linkkien korostus, aktiiviset ikonit ja korostetut tilastoluvut (täyttää ≥ 4.5:1 kontrastin taustaa vasten). |
 | `accent` + `onAccent` | Korostetut täyttöpinnat: ensisijaiset CTA-painikkeet (`bg="accent" color="onAccent"`) ja koulubadget (`Badge bg="accent" color="onAccent"`). |
 | `border` | Korttien, syötekenttien ja valitsimien oletusreuna. |
 | `border.subtle` | Kevyemmät erottimet, taulukon solureunat ja lohkojen väliviivat. |
-| `viz.field`, `viz.school`, `viz.sector`, `viz.trend`, `viz.ylituotos` | Kaavioiden ja datapalkkien värit. |
+| `viz.field`, `viz.school`, `viz.sector`, `viz.trend`, `viz.ylituotos` | Kaavioiden ja datapalkkien värit. `viz.field` käyttää brändivärejä; muut ovat erillisiä värejä, jotta sarjat erottuvat toisistaan. |
 | `tier.lowBg`, `tier.mediumBg`, `tier.highBg`, `tier.fg` | Hakupaineen tasobadget (`DegreeStatsCard`). |
-| `toastBg`, `toastFg` | Toast-ilmoitusten tausta ja teksti (`Toaster`). |
-| `heroButton.bg`, `heroButton.fg` | Etusivun hero-painikkeen tausta ja teksti. |
+| `toastBg`, `toastFg` | Toast-ilmoitusten tausta ja teksti (`Toaster`): `DARK_GREEN` ja `LIME` molemmissa teemoissa. |
+| `heroButton.bg`, `heroButton.fg` | Etusivun hero-painikkeen ja `PageIntro`n tausta ja teksti. |
 
 **Milloin käytetään `COLORS.*`-vakiota (`src/theme.ts`)?**
 - Käytä `COLORS.*`-vakioita (`bg`, `text`, `accent`, `accentFg`, `border`, `surfaceMuted`, `onAccent`) **vain** silloin, kun arvo annetaan CSS-merkkijonon sisällä (esim. `linear-gradient(...)`, `borderBottom={`1px solid ${COLORS.accentFg}`}`) tai kolmannen osapuolen komponentille kuten `react-icons`-ikonin `color`-ominaisuudelle.

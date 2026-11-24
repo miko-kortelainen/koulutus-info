@@ -393,8 +393,14 @@ test("/todistusvalintalaskuri: switches to first-time applicant cutoffs", async 
 test("/todistusvalintalaskuri: filters university results and paginates a group", async ({ page }) => {
   await openCalculator(page);
   await openAccordion(page, /^Suodattimet/);
-  await page.getByText("Vain yliopistot", { exact: true }).click();
-  await expect(page.getByRole("checkbox", { name: "Vain yliopistot" })).toBeChecked();
+  const onlyUniversityCheckbox = page.getByRole("checkbox", { name: "Vain yliopistot" });
+  // the click can get lost right after the filter accordion opens; retry only while unchecked
+  await expect(async () => {
+    if (!(await onlyUniversityCheckbox.isChecked())) {
+      await page.getByText("Vain yliopistot", { exact: true }).click();
+    }
+    await expect(onlyUniversityCheckbox).toBeChecked({ timeout: 1000 });
+  }).toPass({ timeout: 10000 });
   await expect(page.getByRole("button", { name: "Suodattimet (2)" })).toBeVisible();
   const humanistisetAccordion = await openResultsAccordion(page, /Humanistiset alat/);
   await expect(humanistisetAccordion.getByRole("article")).toHaveCount(20);
